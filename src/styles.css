@@ -1,0 +1,1006 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #162033;
+  background:
+    radial-gradient(circle at top left, rgba(26, 122, 74, 0.15), transparent 34rem),
+    linear-gradient(135deg, #f6f7fb, #eef2f6);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+button {
+  font: inherit;
+}
+
+code {
+  background: #eef2f6;
+  border: 1px solid #d9dee8;
+  border-radius: 7px;
+  padding: 2px 6px;
+  color: #384152;
+}
+
+.app-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 48px;
+}
+
+.back-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 15px;
+  margin-bottom: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a7a4a;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(16, 24, 40, 0.08);
+}
+
+.home-screen {
+  display: grid;
+  gap: 22px;
+  min-height: calc(100vh - 80px);
+  align-content: center;
+}
+
+.hero-card,
+.empty-state,
+.fiche-zone,
+.qcm-panel,
+.subject-card,
+.course-card,
+.semester-choice {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(220, 226, 236, 0.9);
+  box-shadow: 0 18px 55px rgba(16, 24, 40, 0.08);
+}
+
+.hero-card {
+  border-radius: 34px;
+  padding: clamp(28px, 6vw, 58px);
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #1a7a4a;
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+h1, h2, p {
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  margin: 0;
+  color: #101828;
+  font-size: clamp(36px, 7vw, 72px);
+  letter-spacing: -0.065em;
+  line-height: 0.95;
+}
+
+h2 {
+  margin: 0;
+  color: #111827;
+}
+
+.hero-card p:not(.eyebrow) {
+  max-width: 720px;
+  margin: 18px auto 0;
+  color: #667085;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.semester-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.semester-choice,
+.subject-card,
+.course-card {
+  border-radius: 26px;
+  padding: 24px;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+.semester-choice:hover,
+.subject-card:hover,
+.course-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(26, 122, 74, 0.35);
+  box-shadow: 0 24px 70px rgba(16, 24, 40, 0.12);
+}
+
+.semester-choice span,
+.subject-card span {
+  display: block;
+  margin-bottom: 20px;
+  color: #1a7a4a;
+  font-size: 54px;
+  font-weight: 1000;
+  letter-spacing: -0.08em;
+}
+
+.semester-choice strong,
+.subject-card strong,
+.course-card strong {
+  display: block;
+  color: #111827;
+  font-size: 24px;
+  font-weight: 950;
+}
+
+.semester-choice small,
+.subject-card small,
+.course-card small {
+  display: block;
+  margin-top: 9px;
+  color: #667085;
+}
+
+.page-header,
+.course-header {
+  margin: 10px 0 24px;
+}
+
+.subject-grid,
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+
+.empty-state {
+  border-radius: 26px;
+  padding: 28px;
+  color: #667085;
+  line-height: 1.6;
+}
+
+.empty-state h2 {
+  margin-bottom: 10px;
+}
+
+.empty-state.compact {
+  box-shadow: none;
+  min-height: 60vh;
+}
+
+.course-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 420px);
+  gap: 18px;
+  align-items: start;
+}
+
+.fiche-zone {
+  border-radius: 28px;
+  padding: 12px;
+  min-height: 75vh;
+}
+
+.fiche-frame {
+  display: block;
+  width: 100%;
+  min-height: 78vh;
+  border: 0;
+  border-radius: 20px;
+  background: white;
+}
+
+.qcm-dock {
+  position: sticky;
+  top: 18px;
+}
+
+.qcm-panel {
+  border-radius: 28px;
+  padding: 20px;
+}
+
+.qcm-panel h2 {
+  font-size: 25px;
+  letter-spacing: -0.03em;
+}
+
+.qcm-panel p {
+  color: #667085;
+  line-height: 1.55;
+}
+
+.qcm-panel-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.q-counter {
+  flex-shrink: 0;
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: #eef8f1;
+  color: #1a7a4a;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.q-progress {
+  height: 7px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #e5e7eb;
+  margin: 14px 0 18px;
+}
+
+.q-progress div {
+  height: 100%;
+  background: #1a7a4a;
+  border-radius: 999px;
+  transition: width 0.2s ease;
+}
+
+.question-block {
+  margin-bottom: 14px;
+}
+
+.question-block p {
+  margin: 10px 0 4px;
+  color: #111827;
+  font-weight: 800;
+}
+
+.question-block small {
+  color: #6d28d9;
+  font-style: italic;
+}
+
+.type-badge {
+  display: inline-flex;
+  border-radius: 8px;
+  color: white;
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.type-badge.qcm {
+  background: #1a7a4a;
+}
+
+.type-badge.qrm {
+  background: #6d28d9;
+}
+
+.q-options {
+  display: grid;
+  gap: 9px;
+}
+
+.q-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid #d8dce8;
+  border-radius: 14px;
+  background: white;
+  color: #1f2937;
+  padding: 10px 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.q-option span {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: #f4f5f7;
+  border: 2px solid #d8dce8;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.q-option.selected {
+  background: #1a7a4a;
+  border-color: #1a7a4a;
+  color: white;
+}
+
+.q-option.selected span {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.65);
+}
+
+.q-option.good {
+  background: #dcfce7;
+  color: #166534;
+  border-color: #16a34a;
+}
+
+.q-option.bad {
+  background: #fee2e2;
+  color: #991b1b;
+  border-color: #dc2626;
+}
+
+.q-option.muted {
+  color: #9ca3af;
+}
+
+.correction {
+  margin: 14px 0;
+  border-radius: 16px;
+  padding: 13px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.correction p {
+  margin: 7px 0 0;
+  color: #374151;
+}
+
+.good-correction {
+  background: #f0fdf4;
+  border: 1.5px solid #16a34a;
+}
+
+.warn-correction {
+  background: #fff7ed;
+  border: 1.5px solid #f59e0b;
+}
+
+.primary-button {
+  width: 100%;
+  border: 0;
+  border-radius: 15px;
+  padding: 13px 15px;
+  background: #1a7a4a;
+  color: white;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.primary-button:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.score-line {
+  margin: 6px 0 0;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.result-label {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.mini-review {
+  display: grid;
+  gap: 7px;
+  max-height: 260px;
+  overflow: auto;
+  margin: 14px 0;
+  padding-right: 4px;
+}
+
+.mini-review-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #667085;
+}
+
+.ok-dot,
+.ko-dot {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.ok-dot {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.ko-dot {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+@media (max-width: 880px) {
+  .semester-choice-grid,
+  .course-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .qcm-dock {
+    position: static;
+  }
+}
+
+.course-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 430px);
+  gap: 18px;
+  align-items: start;
+}
+
+.fiche-zone {
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.fiche-frame {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 78vh;
+  border: 0;
+  border-radius: 20px;
+  background: white;
+}
+
+.qcm-dock {
+  position: sticky;
+  top: 18px;
+  z-index: 20;
+  min-width: 0;
+}
+
+.qcm-panel {
+  position: relative;
+  z-index: 30;
+  overflow: hidden;
+}
+
+.q-options {
+  position: relative;
+  z-index: 40;
+}
+
+.q-option {
+  position: relative;
+  z-index: 50;
+  width: 100%;
+  min-height: 48px;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.q-option * {
+  pointer-events: none;
+}
+
+.primary-button {
+  position: relative;
+  z-index: 60;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+@media (max-width: 880px) {
+  .course-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .qcm-dock {
+    position: static;
+  }
+}
+
+.q-options,
+.options {
+  margin-bottom: 18px;
+}
+
+.qcm-panel .primary-button,
+.qcm-card-box .primary-button {
+  margin-top: 18px;
+}
+.course-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.fiche-zone {
+  width: 100%;
+}
+
+.fiche-frame {
+  width: 100%;
+  min-height: 88vh;
+}
+
+.qcm-dock {
+  position: static;
+  width: min(900px, 100%);
+  margin: 0 auto;
+}
+
+.qcm-panel {
+  width: 100%;
+}
+
+.q-options {
+  margin-bottom: 16px;
+}
+
+.qcm-action-zone {
+  margin: 16px 0;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.annale-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 11px 16px;
+  background: #111827;
+  color: white;
+  font-weight: 950;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 12px 30px rgba(16, 24, 40, 0.14);
+}
+
+.annale-button:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .header-row {
+    flex-direction: column;
+  }
+
+  .annale-button {
+    width: 100%;
+  }
+}
+
+.annale-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.annale-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 11px 16px;
+  background: #111827;
+  color: white;
+  font-weight: 950;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 12px 30px rgba(16, 24, 40, 0.14);
+}
+
+.annale-button.secondary {
+  background: white;
+  color: #111827;
+  border: 1.5px solid #d0d5dd;
+}
+
+.annale-button:disabled {
+  background: #e5e7eb;
+  color: #98a2b3;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.page-subtitle {
+  margin-top: 10px;
+  color: #667085;
+  font-size: 16px;
+}
+
+.viewer-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 14px;
+  box-shadow: 0 14px 40px rgba(20, 28, 45, 0.06);
+}
+
+@media (max-width: 700px) {
+  .annale-actions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .annale-button {
+    width: 100%;
+  }
+}
+
+.q-option-wrapper {
+  display: grid;
+  gap: 6px;
+}
+
+.q-option-text {
+  pointer-events: none;
+}
+
+.item-correction {
+  margin: -2px 0 10px 44px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #475467;
+  background: #f8fafc;
+  border-left: 4px solid #d0d5dd;
+}
+
+.item-correction-good {
+  background: #f0fdf4;
+  border-left-color: #16a34a;
+  color: #166534;
+}
+
+.item-correction-bad {
+  background: #fff1f2;
+  border-left-color: #e11d48;
+  color: #991b1b;
+}
+
+@media (max-width: 700px) {
+  .item-correction {
+    margin-left: 0;
+  }
+}
+
+/* ========================= */
+/* FIX AFFICHAGE QCM ITEMS */
+/* ========================= */
+
+.q-options {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.q-option-wrapper {
+  display: grid;
+  gap: 8px;
+}
+
+.q-option {
+  width: 100%;
+  min-height: 58px;
+  border: 1.5px solid #d8dce8;
+  border-radius: 18px;
+  background: white;
+  color: #101828;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  cursor: pointer;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+/* Important : seul le rond A/B/C/D/E doit être stylé */
+.q-option .q-letter {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  flex: 0 0 34px;
+  border-radius: 50%;
+  background: #f4f5f7;
+  border: 2px solid #d8dce8;
+  color: #667085;
+  display: grid;
+  place-items: center;
+  font-weight: 950;
+}
+
+/* Important : le texte de l’item doit reprendre une largeur normale */
+.q-option .q-option-text {
+  width: auto !important;
+  height: auto !important;
+  min-width: 0;
+  max-width: none;
+  flex: 1;
+  display: block;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: inherit;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+/* États après sélection / validation */
+.q-option.selected {
+  background: #111827;
+  border-color: #111827;
+  color: white;
+}
+
+.q-option.selected .q-letter {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.7);
+  color: white;
+}
+
+.q-option.good {
+  background: #dcfce7;
+  border-color: #16a34a;
+  color: #166534;
+}
+
+.q-option.good .q-letter {
+  background: #f0fdf4;
+  border-color: #16a34a;
+  color: #166534;
+}
+
+.q-option.bad {
+  background: #fee2e2;
+  border-color: #dc2626;
+  color: #991b1b;
+}
+
+.q-option.bad .q-letter {
+  background: #fff1f2;
+  border-color: #dc2626;
+  color: #991b1b;
+}
+
+.q-option.muted {
+  background: white;
+  border-color: #d8dce8;
+  color: #98a2b3;
+}
+
+/* Mini-correction sous chaque item */
+.item-correction {
+  margin: 0 0 4px 48px;
+  padding: 11px 13px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 600;
+  background: #f8fafc;
+  border-left: 5px solid #d0d5dd;
+}
+
+.item-correction-good {
+  background: #ecfdf3;
+  border-left-color: #16a34a;
+  color: #166534;
+}
+
+.item-correction-bad {
+  background: #fff1f2;
+  border-left-color: #e11d48;
+  color: #991b1b;
+}
+
+.qcm-action-zone {
+  margin: 20px 0;
+}
+
+.qcm-action-zone .primary-button {
+  margin-top: 0;
+}
+
+/* Évite les clics foireux sur les spans internes */
+.q-option * {
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .q-option {
+    align-items: flex-start;
+  }
+
+  .item-correction {
+    margin-left: 0;
+  }
+}
+
+/* ========================= */
+/* QCM CLEAN DESIGN */
+/* ========================= */
+
+.q-options {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.q-option-wrapper {
+  background: white;
+  border: 1.5px solid #e4e7ec;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(16, 24, 40, 0.04);
+}
+
+.q-option {
+  width: 100%;
+  min-height: unset !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 14px 16px !important;
+  display: grid !important;
+  grid-template-columns: 38px 1fr;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  color: #101828;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15.5px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.q-option .q-letter {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #f8fafc;
+  border: 2px solid #d0d5dd;
+  color: #667085;
+  font-weight: 950;
+  font-size: 15px;
+}
+
+.q-option .q-option-text {
+  width: auto !important;
+  height: auto !important;
+  min-width: 0;
+  max-width: none;
+  display: block;
+  background: transparent !important;
+  border: 0 !important;
+  color: inherit;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.q-option.selected {
+  background: #eff6ff !important;
+  color: #1d4ed8;
+}
+
+.q-option.selected .q-letter {
+  background: #dbeafe;
+  border-color: #2563eb;
+  color: #1d4ed8;
+}
+
+.q-option.good {
+  background: #ecfdf3 !important;
+  color: #166534;
+}
+
+.q-option.good .q-letter {
+  background: #dcfce7;
+  border-color: #16a34a;
+  color: #166534;
+}
+
+.q-option.bad {
+  background: #fff1f2 !important;
+  color: #991b1b;
+}
+
+.q-option.bad .q-letter {
+  background: #fee2e2;
+  border-color: #dc2626;
+  color: #991b1b;
+}
+
+.q-option.muted {
+  background: white !important;
+  color: #475467;
+}
+
+.q-option.muted .q-letter {
+  background: #f8fafc;
+  border-color: #d0d5dd;
+  color: #98a2b3;
+}
+
+.item-correction {
+  margin: 0;
+  padding: 10px 16px 13px 66px;
+  border-radius: 0;
+  border-left: 0 !important;
+  border-top: 1px solid #eef0f4;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.item-correction-good {
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.item-correction-bad {
+  background: #fff1f2;
+  color: #991b1b;
+}
+
+.item-correction-neutral {
+  background: #f8fafc;
+  color: #475467;
+}
+
+.qcm-action-zone {
+  margin: 18px 0;
+}
+
+.qcm-action-zone .primary-button {
+  margin-top: 0;
+}
+
+.q-option * {
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .q-option {
+    grid-template-columns: 34px 1fr;
+    padding: 13px 14px !important;
+  }
+
+  .item-correction {
+    padding-left: 14px;
+  }
+}
