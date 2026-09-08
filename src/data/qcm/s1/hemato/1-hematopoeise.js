@@ -991,3 +991,4 @@ correction: 'Non frérot 😭 Auto-greffe = propres cellules du patient, et on c
 explanation: 'Les progéniteurs peuvent former des colonies après 7 à 14 jours de culture à 37 °C avec facteurs de croissance. Ces cultures servent notamment à évaluer les greffons utilisés lors des autogreffes de cellules souches hématopoïétiques.'
 }
 ];
+

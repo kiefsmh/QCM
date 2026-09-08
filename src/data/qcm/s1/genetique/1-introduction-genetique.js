@@ -1,39 +1,6 @@
 // Source du cours : 
 export const introductionGenetiqueQuestions = [
 {
-id: 1,
-type: "QCM",
-question: "À propos de l’organisation de l’UE de génétique médicale en DFGSM3, quelle proposition est exacte ?",
-options: [
-{
-text: "L’UE comporte 20 heures de CM, vaut 4 ECTS et possède un coefficient 1",
-correct: true,
-correction: "Oui chef 🧠 20 h de CM, 4 ECTS, coefficient 1 : le petit trio administratif à connaître si jamais ils décident vraiment de nous interroger là-dessus 😭."
-},
-{
-text: "L’UE comporte 11 heures de CM pour les étudiants de DFGSM3",
-correct: false,
-correction: "Non frérot 😭 Les 11 h concernent les L2 maïeutique. En DFGSM3, c’est 20 h."
-},
-{
-text: "L’examen terminal écrit dure 2 heures",
-correct: false,
-correction: "Non chef ⏱️ L’examen terminal écrit dure 1 heure, avec des QRM ou QRU."
-},
-{
-text: "La session de rattrapage consiste en un examen oral",
-correct: false,
-correction: "Raté 💀 Le rattrapage est également un examen écrit, sous forme de QRM, pendant 1 heure."
-},
-{
-text: "L’UE est assurée exclusivement par une seule enseignante",
-correct: false,
-correction: "Non 😭 Sept enseignantes interviennent dans cette UE, avec des activités cliniques, biologiques ou de conseil génétique."
-}
-],
-explanation: "En DFGSM3, l’UE de génétique médicale comporte 20 h de CM, 4 ECTS et un coefficient 1. L’examen terminal dure 1 h et comporte des QRM ou QRU."
-},
-{
 id: 2,
 type: "QCM",
 question: "Concernant le génome humain, quelle proposition est exacte ?",

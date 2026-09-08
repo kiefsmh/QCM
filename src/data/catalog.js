@@ -1,7 +1,7 @@
 import { structureBacterienneQuestions } from './qcm/s1/infectio/1-structure-bacterienne.js'
 import { introductionParasitologieMycologieQuestions } from './qcm/s1/infectio/2-introduction-parasitologie-mycologie.js'
 import { introductionGenetiqueQuestions } from './qcm/s1/genetique/1-introduction-genetique.js'
-import { hematopoeiseQuestions } from './qcm/s1/hemato/1-hematopoeise.js'
+import { hematopoieseQuestions } from './qcm/s1/hemato/1-hematopoeise.js'
 
 export const catalog = {
   semesters: [
@@ -18,13 +18,13 @@ export const catalog = {
           courses: [
             {
               id: 'structure-bacterienne',
-              title: '1 - Structure bactérienne',
+              title: 'Structure bactérienne',
               fichePath: '/fiches/s1/infectio/1-structure-bacterienne.html',
               questions: structureBacterienneQuestions,
             },
             {
-              id: '2-introduction-parasitologie-mycologie',
-              title: '2 - Introduction à la parasitologie et à la mycologie',
+              id: 'introduction-parasitologie-mycologie',
+              title: 'Introduction à la parasitologie et à la mycologie',
               fichePath: '/fiches/s1/infectio/2-introduction-parasitologie-mycologie.html',
               questions: introductionParasitologieMycologieQuestions,
             },
@@ -38,9 +38,9 @@ export const catalog = {
           courses: [
             {
               id: 'hematopoeise',
-              title: '1 - HEMATOPÉOÏÈSE',
+              title: '1 - HÉMATOPOÉÏSE',
               fichePath: '/fiches/s1/hemato/1-hematopoeise.html',
-              questions: hematopoeiseQuestions,
+              questions: hematopoieseQuestions,
             },
           ],
         },
@@ -52,10 +52,10 @@ export const catalog = {
           courses: [
             {
               id: 'introduction-genetique',
-              title: '1 - INTRODUCTION À LA GÉNÉTIQUE',
-              fichePath: '/fiches/s1/genetique/1-introduction-genetique.html',
+              title: 'Introduction à la génétique',
+              fichePath: '/fiches/s1/genetique/introduction-genetique.html',
               questions: introductionGenetiqueQuestions,
-            }, 
+            },
           ],
         },
       ],
