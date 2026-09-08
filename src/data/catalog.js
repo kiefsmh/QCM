@@ -23,11 +23,11 @@ export const catalog = {
               questions: structureBacterienneQuestions,
             },
             {
-  id: '2-introduction-parasitologie-mycologie',
-  title: '2 - Introduction à la parasitologie et à la mycologie',
-  fichePath: '/fiches/s1/infectio/2-introduction-parasitologie-mycologie.html',
-  questions: introductionParasitologieMycologieQuestions,
-},
+              id: '2-introduction-parasitologie-mycologie',
+              title: '2 - Introduction à la parasitologie et à la mycologie',
+              fichePath: '/fiches/s1/infectio/2-introduction-parasitologie-mycologie.html',
+              questions: introductionParasitologieMycologieQuestions,
+            },
           ],
         },
         {
@@ -37,10 +37,10 @@ export const catalog = {
           profAnnales: [],
           courses: [
             {
-  id: '1-hematopoeise',
-  title: '1 - HEMATOPÉOÏÈSE',
-  fichePath: '/fiches/s1/hemato/1-hematopoeise.html',
-  questions: hematopoeiseQuestions,
+              id: 'hematopoeise',
+              title: '1 - HEMATOPÉOÏÈSE',
+              fichePath: '/fiches/s1/hemato/1-hematopoeise.html',
+              questions: hematopoeiseQuestions,
             },
           ],
         },
@@ -51,11 +51,11 @@ export const catalog = {
           profAnnales: [],
           courses: [
             {
-  id: '1-introduction-genetique',
-  title: '1 - INTRODUCTION À LA GÉNÉTIQUE',
-  fichePath: '/fiches/s1/genetique/1-introduction-genetique.html',
-  questions: introductionGenetiqueQuestions,
-},
+              id: 'introduction-genetique',
+              title: '1 - INTRODUCTION À LA GÉNÉTIQUE',
+              fichePath: '/fiches/s1/genetique/1-introduction-genetique.html',
+              questions: introductionGenetiqueQuestions,
+            }, 
           ],
         },
       ],
