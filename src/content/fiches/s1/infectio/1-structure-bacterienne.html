@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche - Structure bactérienne</title>
+<style>
+:root{--g:#1a7a4a;--gs:#eaf7ef;--r:#dc2626;--rs:#fee2e2;--o:#d97706;--os:#fff7ed;--b:#2563eb;--bs:#eff6ff;--p:#6d28d9;--ps:#f2ecff;--ink:#1c1c2e;--line:#d8dce8;--bg:#f6f7fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.58}.page{max-width:1100px;margin:auto;padding:32px 18px 64px}.hero,section,nav{background:white;border:1.5px solid var(--line);border-radius:18px}.hero{padding:30px;background:linear-gradient(135deg,#fff 0%,#f0fdf4 60%,#ecfeff 100%)}section{padding:24px;margin:18px 0}nav{padding:18px;margin:18px 0 26px}nav ol{columns:2;padding-left:20px;margin:0;font-size:14px}nav a{color:var(--ink);text-decoration:none}
+.kicker{color:var(--g);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px}h1{font-size:38px;line-height:1.08;margin:8px 0 12px}h2{font-size:25px;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}.subtitle{color:#374151;max-width:950px}.tags,.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:12px;font-weight:800;padding:4px 9px;border-radius:999px}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.green{background:var(--gs);color:#166534}.purple{background:var(--ps);color:#4c1d95}.blue{background:var(--bs);color:#1d4ed8}
+button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;font-size:13px}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}.card h4{margin-top:0}.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,Consolas,monospace;font-size:13px;color:#374151;white-space:pre-wrap;overflow-x:auto}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}.flash .q{background:#f9fafb;padding:10px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:10px 12px;color:#374151}.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}}@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}}
+</style></head><body><main class="page">
+<header class="hero"><div class="kicker">Infectiologie — Microbiologie</div><h1>Structure bactérienne</h1>
+<p class="subtitle">Fiche de cours orientée compréhension et QCM : procaryotes, morphologie, structures obligatoires et facultatives, paroi Gram +/Gram −, coloration de Gram, capsule, flagelles, pili, croissance bactérienne, besoins nutritifs et conditions physico-chimiques.</p>
+<div class="tags"><span class="tag red">🔴 Très important</span><span class="tag orange">🟠 Pièges Gram / culture</span><span class="tag green">🟢 Diagnostic bactério</span><span class="tag purple">🧠 QCM-friendly</span></div>
+<div class="actions"><button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button><button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button></div></header>
+<nav><h2>Plan rapide</h2><ol><li><a href="#intro">Introduction</a></li><li><a href="#morpho">Morphologie</a></li><li><a href="#anatomie">Anatomie fonctionnelle</a></li><li><a href="#membrane">Membrane cytoplasmique</a></li><li><a href="#paroi">Paroi et Gram</a></li><li><a href="#capsule">Capsule</a></li><li><a href="#flagelles">Flagelles</a></li><li><a href="#pili">Pili</a></li><li><a href="#formes">Formes bactériennes</a></li><li><a href="#croissance">Croissance</a></li><li><a href="#nutriments">Besoins nutritifs</a></li><li><a href="#energie">Énergie</a></li><li><a href="#conditions">Conditions physico-chimiques</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#flashcards">Flashcards</a></li></ol></nav>
+
+<section id="intro"><h2>1. Introduction : bactérie = procaryote</h2>
+<div class="callout"><strong>Bactérie :</strong> être procaryote, unicellulaire, de petite taille, à morphologie variable, sans noyau entouré d’une membrane.</div>
+<table><tr><th>Caractéristique</th><th>Procaryotes</th><th>Eucaryotes</th></tr><tr><td>Noyau avec membrane</td><td>Non</td><td>Oui</td></tr><tr><td>Nombre de chromosomes</td><td>1</td><td>&gt; 1</td></tr><tr><td>Position de l’ADN</td><td>Nucléoïde ou plasmide</td><td>Noyau et organites intracellulaires</td></tr></table>
+<ul><li>L’ADN bactérien est libre dans le cytoplasme.</li><li>Les plasmides sont des fragments d’ADN extrachromosomiques facultatifs.</li><li>Les plasmides peuvent porter des résistances aux antibiotiques et s’échanger entre bactéries.</li><li>La paroi protège la bactérie contre les agressions extérieures, notamment le système immunitaire.</li></ul>
+<div class="callout warn"><strong>Piège :</strong> plasmide ≠ chromosome principal ; facultatif mais parfois très avantageux.</div></section>
+
+<section id="morpho"><h2>2. Morphologie</h2><ul><li>Taille habituelle : <strong>1 à 10 µm</strong>.</li><li>Observation au microscope optique, car invisible à l’œil nu.</li><li>Formes les plus fréquentes : rondes et bâtonnets.</li><li><em>Chlamydiae</em> et mycoplasmes peuvent mesurer <strong>0,3 à 1 µm</strong>.</li></ul>
+<table><tr><th>Morphologie</th><th>Nom</th><th>À retenir</th></tr><tr><td>Rondes / sphères</td><td>Cocci</td><td>Très fréquent.</td></tr><tr><td>Bâtonnets</td><td>Bacilles</td><td>Très fréquent.</td></tr><tr><td>Spirilles / autres</td><td>Pas de nom unique utile</td><td>On retient genre et espèce.</td></tr></table></section>
+
+<section id="anatomie"><h2>3. Anatomie fonctionnelle</h2>
+<table><tr><th>Structures obligatoires</th><th>Structures facultatives</th></tr><tr><td>Membrane cytoplasmique</td><td>Capsule</td></tr><tr><td>Paroi</td><td>Flagelle</td></tr><tr><td>Ribosomes</td><td>Pili / fimbriae</td></tr><tr><td>Cytoplasme</td><td>—</td></tr><tr><td>Acides nucléiques</td><td>—</td></tr></table>
+<div class="callout">Obligatoire = présent chez toutes les bactéries ; facultatif = présent chez certaines espèces et souvent impliqué dans virulence, mobilité ou adhésion.</div></section>
+
+<section id="membrane"><h2>4. Membrane cytoplasmique</h2>
+<ul><li>Interface entre le cytoplasme et les structures externes.</li><li>Double couche de phospholipides.</li><li>Protéines de transport permettant l’entrée des nutriments.</li><li>Passage possible par diffusion simple ou transport spécifique.</li><li>Certains antibiotiques utilisent aussi des protéines de transport pour entrer.</li><li>Protéines de structure souvent antigéniques, reconnues par le système immunitaire.</li></ul></section>
+
+<section id="paroi"><h2>5. Paroi bactérienne, peptidoglycane et Gram</h2>
+<div class="callout"><strong>Peptidoglycane :</strong> partie commune de la paroi bactérienne, cible de nombreux antibiotiques.</div>
+<div class="schema">Peptidoglycane
+= chaînes de glycanes alternant N-acétyl-glucosamine et acide N-acétyl-muramique
++ chaînes latérales peptidiques fixées à l’acide muramique
++ ponts interpeptidiques</div>
+<table><tr><th></th><th>Gram +</th><th>Gram −</th></tr><tr><td>Peptidoglycane</td><td>Très épais, 100 Å, 50–90 % de la paroi</td><td>Très fin, 5–10 % de la paroi</td></tr><tr><td>Membrane externe</td><td>Non décrite pour Gram +</td><td>Oui : lipoprotéines, phospholipides, protéines</td></tr><tr><td>Molécules clés</td><td>Acides teichoïques et lipoteichoïques</td><td>LPS</td></tr><tr><td>Couleur</td><td>Violet</td><td>Rose</td></tr><tr><td>Toxicité</td><td>Acides lipoteichoïques toxiques</td><td>LPS endotoxine ; lipide A toxique</td></tr></table>
+<div class="schema">Coloration de Gram :
+1. Cristal violet
+2. Iode
+3. Alcool/acétone
+4. Safranine
+
+Gram + : garde le violet grâce au peptidoglycane épais.
+Gram − : décoloré puis recoloré en rose par la safranine.</div>
+<div class="callout warn"><strong>Piège :</strong> LPS = Gram − ; acides teichoïques/lipoteichoïques = Gram +.</div>
+<h3>Rôles de la paroi</h3><ul><li>Squelette : détermine la forme.</li><li>Résistance à la pression osmotique.</li><li>Pathogénicité via éléments toxiques.</li><li>Molécules reconnues par le système immunitaire.</li></ul></section>
+
+<section id="capsule"><h2>6. Capsule</h2>
+<ul><li>Structure facultative située au-dessus de la paroi.</li><li>Constituée surtout de polysaccharides ; parfois polypeptide, exemple <em>Bacillus anthracis</em>.</li><li>Au laboratoire : peut apparaître comme un halo clair.</li><li>Facteur de virulence : résistance à la phagocytose.</li><li>Cible vaccinale : vaccins dirigés contre des sucres capsulaires.</li></ul>
+<table><tr><th>Bactérie</th><th>À retenir</th></tr><tr><td><em>Haemophilus influenzae</em></td><td>6 types capsulaires.</td></tr><tr><td><em>Streptococcus pneumoniae</em></td><td>&gt; 90 types capsulaires ; vaccin contre 23 types cité.</td></tr><tr><td><em>Salmonella Typhi</em></td><td>Antigène Vi capsulaire utilisé pour le vaccin.</td></tr><tr><td><em>Neisseria meningitidis</em></td><td>13 groupes capsulaires.</td></tr></table></section>
+
+<section id="flagelles"><h2>7. Flagelles</h2>
+<ul><li>Structures facultatives, non systématiques.</li><li>Grands filaments ancrés dans la membrane.</li><li>Nombre et localisation variables.</li><li>Rôle : mobilité dans l’environnement, notamment milieux liquides.</li><li>Exemples : <em>Legionella pneumophila</em>, <em>Pseudomonas aeruginosa</em>, <em>Vibrio cholerae</em>.</li></ul>
+<table><tr><th>Disposition</th><th>Définition</th></tr><tr><td>Monotriche</td><td>Un seul flagelle.</td></tr><tr><td>Amphitriche</td><td>Un flagelle à chaque extrémité.</td></tr><tr><td>Céphalotriche</td><td>Touffes de flagelles de deux côtés opposés.</td></tr><tr><td>Péritriche</td><td>Flagelles tout autour de la cellule.</td></tr><tr><td>Lophotriche</td><td>Touffe de flagelles d’un côté.</td></tr></table></section>
+
+<section id="pili"><h2>8. Fimbriae ou pili</h2>
+<ul><li>Plus petits et plus nombreux que les flagelles.</li><li>Ancrés dans la membrane cytoplasmique.</li><li>Constitués de protéines.</li><li>Adhésine terminale : adhésion aux cellules de l’hôte.</li><li>Rôles : adhérence, échange génétique, colonisation.</li></ul>
+<div class="schema">Flagelles → mobilité
+Pili / fimbriae → adhésion + échange génétique + colonisation</div></section>
+
+<section id="formes"><h2>9. Forme végétative vs forme sporulée</h2>
+<table><tr><th>Forme végétative</th><th>Forme sporulée</th></tr><tr><td>Forme de multiplication.</td><td>Forme de résistance en milieu hostile.</td></tr><tr><td>Active et vivante.</td><td>Incapable de se multiplier.</td></tr><tr><td>Synthétise des toxines.</td><td>Incapable de produire des toxines.</td></tr><tr><td>Forme retrouvée lors des infections.</td><td>Non pathogène sous cette forme mais ultra résistante.</td></tr><tr><td>—</td><td>Résiste chaleur, UV, désinfectant, dessiccation.</td></tr></table></section>
+
+<section id="croissance"><h2>10. Dynamique de croissance</h2>
+<ul><li>Multiplication par <strong>division binaire non sexuelle</strong>.</li><li>La bactérie mère duplique son chromosome puis donne deux bactéries filles.</li><li>In vivo : souvent 2 à 5 h ; en laboratoire : parfois 20 à 40 min.</li><li><em>Mycobacterium tuberculosis</em> est beaucoup plus lente, ce qui allonge le délai de culture.</li></ul>
+<div class="schema">Courbe de croissance :
+latence → croissance exponentielle → stationnaire → mortalité</div>
+<table><tr><th>Phase</th><th>Explication</th></tr><tr><td>Latence</td><td>Adaptation au milieu.</td></tr><tr><td>Exponentielle</td><td>Multiplication rapide.</td></tr><tr><td>Stationnaire</td><td>Appauvrissement en nutriments + déchets toxiques.</td></tr><tr><td>Mortalité</td><td>Mort si le milieu ne change pas.</td></tr></table>
+<div class="callout warn"><strong>Piège labo :</strong> si tuberculose suspectée, il faut prévenir le laboratoire pour conserver le milieu plus longtemps.</div></section>
+
+<section id="nutriments"><h2>11. Observer et nourrir les bactéries</h2>
+<table><tr><th>Milieu</th><th>Signe de croissance</th></tr><tr><td>Liquide</td><td>Trouble, par exemple hémoculture.</td></tr><tr><td>Solide</td><td>Colonies, sous forme de points.</td></tr></table>
+<h3>Besoins des bactéries prototrophes</h3>
+<ul><li>Eau.</li><li>Oxygène selon type respiratoire.</li><li>Source principale d’énergie : glucose.</li><li>Source principale de carbone : glucose, autres sucres, etc.</li><li>Ions et vitamines.</li></ul>
+<h3>Bactéries auxotrophes</h3>
+<ul><li>Exigent des facteurs supplémentaires, souvent présents dans le sang.</li><li><em>Haemophilus</em>, gonocoque, méningocoque : sang cuit / gélose chocolat.</li><li>Streptocoques, pneumocoque : gélose au sang frais.</li><li>Légionelle : milieu particulier avec charbon.</li></ul>
+<div class="callout orangebox"><strong>Très important :</strong> un résultat négatif ne suffit pas toujours. Il faut se demander si les bonnes conditions de culture ont été utilisées.</div></section>
+
+<section id="energie"><h2>12. Sources de carbone et production d’énergie</h2>
+<table><tr><th>Type</th><th>Source / mécanisme</th><th>Intérêt</th></tr><tr><td>Autotrophes</td><td>Carbone minéral : CO₂ ou méthane.</td><td>Peu impliquées en pathologie humaine dans le cours.</td></tr><tr><td>Hétérotrophes</td><td>Carbone organique : glucides, AA, alcool, acides organiques.</td><td>Principales pathologies humaines.</td></tr><tr><td>Phototrophes</td><td>Lumière.</td><td>Rares en pathologie humaine.</td></tr><tr><td>Chimio-organotrophes</td><td>Chaînes d’oxydo-réduction avec donneur d’électrons organique.</td><td>Majorité des bactéries pathogènes humaines.</td></tr></table>
+<div class="schema">Glucose → glycolyse → pyruvate + 2 ATP
+Puis :
+- fermentation chez certaines anaérobies
+- respiration chez les bactéries qui supportent l’oxygène</div></section>
+
+<section id="conditions"><h2>13. Conditions physico-chimiques</h2>
+<h3>Oxygène</h3>
+<table><tr><th>Type</th><th>Définition</th><th>Exemple</th></tr><tr><td>Aérobie stricte</td><td>Besoin d’oxygène ; sans O₂, meurt.</td><td><em>Pseudomonas</em></td></tr><tr><td>Microaérophile</td><td>Besoin de très peu d’oxygène.</td><td><em>Campylobacter</em></td></tr><tr><td>Aéro-anaérobie facultative</td><td>Peut vivre avec ou sans O₂.</td><td>Entérobactéries</td></tr><tr><td>Anaérobie</td><td>Ne supporte pas l’oxygène.</td><td><em>Bacteroides</em>, <em>Clostridium</em></td></tr></table>
+<h3>Température, pH, sel, eau</h3>
+<ul><li>Température de prédilection fréquente : <strong>37°C</strong>.</li><li><em>Listeria monocytogenes</em> peut pousser à <strong>+4°C</strong>.</li><li>Le méningocoque meurt sous 30°C : ne pas mettre un LCR suspect au frigo.</li><li>Légionelles : eau, jusqu’à environ 65°C selon le cours.</li><li>pH neutre en général, exceptions : Lactobacilles pH 4,5 ; <em>H. pylori</em> pH 2 ; <em>V. cholerae</em> pH 9.</li><li>Pression osmotique : staphylocoque doré aime les zones humides salées ; <em>V. cholerae</em> aime l’eau de mer.</li><li>Sans eau : pas de multiplication ; certaines bactéries restent viables, notamment sous forme sporulée.</li></ul></section>
+
+<section id="diagnostic"><h2>14. Applications diagnostiques</h2>
+<div class="callout warn"><strong>Message majeur :</strong> il n’existe pas de méthode unique pour faire pousser toutes les bactéries au laboratoire.</div>
+<ul><li>La classification s’appuie sur morphologie, Gram, type respiratoire, enzymes comme catalase/oxydase.</li><li>Le diagnostic dépend du bon milieu, de la bonne atmosphère, de la température et du temps de culture.</li><li>Les renseignements cliniques aident le laboratoire à choisir la bonne stratégie.</li><li>Identifier la bactérie permet ensuite de choisir les antibiotiques adaptés.</li></ul></section>
+
+<section id="flashcards"><h2>15. Flashcards express</h2><div class="flashgrid">
+<div class="flash"><div class="q">Procaryote ?</div><div class="a">Unicellulaire, sans noyau membrané, ADN libre.</div></div>
+<div class="flash"><div class="q">Plasmide ?</div><div class="a">ADN extrachromosomique facultatif, souvent utile pour résistance aux ATB.</div></div>
+<div class="flash"><div class="q">Cocci / bacille ?</div><div class="a">Cocci = rond ; bacille = bâtonnet.</div></div>
+<div class="flash"><div class="q">Structures obligatoires ?</div><div class="a">Membrane, paroi, ribosomes, cytoplasme, acides nucléiques.</div></div>
+<div class="flash"><div class="q">Structures facultatives ?</div><div class="a">Capsule, flagelles, pili/fimbriae.</div></div>
+<div class="flash"><div class="q">Peptidoglycane ?</div><div class="a">Glycanes + peptides + ponts interpeptidiques.</div></div>
+<div class="flash"><div class="q">Gram + ?</div><div class="a">Peptidoglycane épais, violet, acides teichoïques/lipoteichoïques.</div></div>
+<div class="flash"><div class="q">Gram − ?</div><div class="a">Peptidoglycane fin, membrane externe, LPS, rose.</div></div>
+<div class="flash"><div class="q">Lipide A ?</div><div class="a">Partie toxique du LPS.</div></div>
+<div class="flash"><div class="q">Étapes Gram ?</div><div class="a">Cristal violet → iode → alcool/acétone → safranine.</div></div>
+<div class="flash"><div class="q">Capsule ?</div><div class="a">Résistance à phagocytose, virulence, cible vaccinale.</div></div>
+<div class="flash"><div class="q">Flagelles ?</div><div class="a">Mobilité bactérienne.</div></div>
+<div class="flash"><div class="q">Pili ?</div><div class="a">Adhérence, échange génétique, colonisation.</div></div>
+<div class="flash"><div class="q">Forme végétative ?</div><div class="a">Multiplication, toxines, forme des infections.</div></div>
+<div class="flash"><div class="q">Forme sporulée ?</div><div class="a">Résistance, non multiplication, non pathogène sous cette forme.</div></div>
+<div class="flash"><div class="q">Croissance ?</div><div class="a">Latence → exponentielle → stationnaire → mortalité.</div></div>
+<div class="flash"><div class="q">Milieu liquide positif ?</div><div class="a">Trouble.</div></div>
+<div class="flash"><div class="q">Milieu solide positif ?</div><div class="a">Colonies.</div></div>
+<div class="flash"><div class="q">Microaérophile ?</div><div class="a">Besoin de très peu d’oxygène.</div></div>
+<div class="flash"><div class="q">Anaérobie ?</div><div class="a">Ne supporte pas l’oxygène.</div></div>
+<div class="flash"><div class="q">Listeria ?</div><div class="a">Peut pousser à +4°C.</div></div>
+<div class="flash"><div class="q">Méningocoque et LCR ?</div><div class="a">Ne pas mettre au frigo si suspicion.</div></div>
+</div></section>
+
+<section class="recap"><h2>Mini-récap ultra rentable</h2>
+<p><strong>Bactérie = procaryote</strong>, sans noyau, avec ADN libre et parfois plasmides. Les structures obligatoires sont membrane, paroi, ribosomes, cytoplasme et acides nucléiques ; les facultatives sont capsule, flagelles et pili. La paroi contient le <strong>peptidoglycane</strong> : épais chez les <strong>Gram + violets</strong>, fin avec membrane externe et <strong>LPS</strong> chez les <strong>Gram − roses</strong>. Capsule = anti-phagocytose et vaccins ; flagelle = mobilité ; pili = adhésion. La croissance suit latence → exponentielle → stationnaire → mortalité. Au labo, <strong>pas de méthode universelle</strong> : il faut adapter milieu, atmosphère, température et durée à la bactérie suspectée.</p>
+</section>
+</main></body></html>

@@ -222,15 +222,15 @@ function CourseView({ semester, subject, course }) {
 
       <div className="course-layout">
         <article className="fiche-zone">
-          {course.fichePath ? (
-            <iframe className="fiche-frame" title={course.title} src={course.fichePath} />
-          ) : (
-            <div className="empty-state compact">
-              <h2>Pas encore de fiche</h2>
-              <p></p>
-            </div>
-          )}
-        </article>
+  {course.ficheHtml ? (
+    <iframe className="fiche-frame" title={course.title} srcDoc={course.ficheHtml} />
+  ) : (
+    <div className="empty-state compact">
+      <h2>Pas encore de fiche</h2>
+      <p>Ajoute une fiche HTML avec le même nom que le fichier QCM.</p>
+    </div>
+  )}
+</article>
 
         <aside className="qcm-dock">
           <QcmPanel questions={course.questions ?? []} courseTitle={course.title} />
