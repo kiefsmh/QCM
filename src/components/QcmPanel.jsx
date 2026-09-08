@@ -274,16 +274,18 @@ export default function QcmPanel({ questions = [], courseTitle = 'QCM', maxQuest
               </button>
 
               {submitted && option.correction && (
-                <div
-                  className={
-                    option.correct
-                      ? 'item-correction item-correction-good'
-                      : 'item-correction item-correction-bad'
-                  }
-                >
-                  {option.correction}
-                </div>
-              )}
+  <div
+    className={
+      option.correct
+        ? 'item-correction item-correction-good'
+        : selectedAnswers.includes(option.letter)
+          ? 'item-correction item-correction-bad'
+          : 'item-correction item-correction-neutral'
+    }
+  >
+    {option.correction}
+  </div>
+)}  
             </div>
           ))}
         </div>

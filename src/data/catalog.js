@@ -1,6 +1,7 @@
 import { structureBacterienneQuestions } from './qcm/s1/infectio/1-structure-bacterienne.js'
 import { introductionParasitologieMycologieQuestions } from './qcm/s1/infectio/2-introduction-parasitologie-mycologie.js'
 import { introductionGenetiqueQuestions } from './qcm/s1/genetique/1-introduction-genetique.js'
+import { hematopoeiseQuestions } from './qcm/s1/hemato/1-hematopoeise.js'
 
 export const catalog = {
   semesters: [
@@ -34,7 +35,14 @@ export const catalog = {
           title: 'HEMATO',
           icon: '🩸',
           profAnnales: [],
-          courses: [],
+          courses: [
+            {
+  id: '1-hematopoeise',
+  title: '1 - HEMATOPÉOÏÈSE',
+  fichePath: '/fiches/s1/hemato/1-hematopoeise.html',
+  questions: hematopoeiseQuestions,
+            },
+          ],
         },
         {
           id: 'genetique',
@@ -45,7 +53,7 @@ export const catalog = {
             {
   id: '1-introduction-genetique',
   title: '1 - INTRODUCTION À LA GÉNÉTIQUE',
-  fichePath: '/fiches/s1/infectio/1-introduction-genetique.html',
+  fichePath: '/fiches/s1/genetique/1-introduction-genetique.html',
   questions: introductionGenetiqueQuestions,
 },
           ],
