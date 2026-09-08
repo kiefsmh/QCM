@@ -2,6 +2,94 @@ import { useMemo, useState } from 'react'
 import { catalog } from './data/catalog.js'
 import QcmPanel from './components/QcmPanel.jsx'
 
+function makeResponsiveFicheHtml(html) {
+  if (!html) return ''
+
+  const responsiveStyle = `
+    <style>
+      html {
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      img, video, iframe {
+        max-width: 100%;
+        height: auto;
+      }
+
+      table {
+        border-collapse: collapse;
+        max-width: 100%;
+      }
+
+      th, td {
+        word-break: normal;
+        overflow-wrap: normal;
+      }
+
+      @media (max-width: 700px) {
+        body {
+          padding-left: 12px !important;
+          padding-right: 12px !important;
+        }
+
+        table {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          overflow-x: auto !important;
+          -webkit-overflow-scrolling: touch;
+          white-space: nowrap;
+          border-radius: 12px;
+        }
+
+        th, td {
+          min-width: 110px;
+          padding: 8px 10px !important;
+          font-size: 13px !important;
+          line-height: 1.35 !important;
+        }
+
+        p, li {
+          font-size: 15px;
+          line-height: 1.55;
+        }
+
+        h1 {
+          font-size: 28px !important;
+        }
+
+        h2 {
+          font-size: 22px !important;
+        }
+
+        h3 {
+          font-size: 18px !important;
+        }
+      }
+    </style>
+  `
+
+  const viewport = `<meta name="viewport" content="width=device-width, initial-scale=1.0" />`
+
+  let nextHtml = html
+
+  if (!nextHtml.includes('name="viewport"')) {
+    nextHtml = nextHtml.replace(/<head[^>]*>/i, (match) => `${match}\n${viewport}`)
+  }
+
+  if (nextHtml.includes('</head>')) {
+    return nextHtml.replace('</head>', `${responsiveStyle}</head>`)
+  }
+
+  return `${viewport}${responsiveStyle}${nextHtml}`
+}
+
 function findSemester(semesterId) {
   return catalog.semesters.find((semester) => semester.id === semesterId)
 }
@@ -223,7 +311,11 @@ function CourseView({ semester, subject, course }) {
       <div className="course-layout">
         <article className="fiche-zone">
   {course.ficheHtml ? (
-    <iframe className="fiche-frame" title={course.title} srcDoc={course.ficheHtml} />
+    <iframe
+  className="fiche-frame"
+  title={course.title}
+  srcDoc={makeResponsiveFicheHtml(course.ficheHtml)}
+/>
   ) : (
     <div className="empty-state compact">
       <h2>Pas encore de fiche</h2>
