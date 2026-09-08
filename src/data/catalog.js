@@ -1,6 +1,6 @@
 import { structureBacterienneQuestions } from './qcm/s1/infectio/1-structure-bacterienne.js'
 import { introductionParasitologieMycologieQuestions } from './qcm/s1/infectio/2-introduction-parasitologie-mycologie.js'
-
+import { introductionGenetiqueQuestions } from './qcm/s1/infectio/1-introduction-genetique.js'
 
 export const catalog = {
   semesters: [
@@ -41,7 +41,14 @@ export const catalog = {
           title: 'GÉNÉTIQUE',
           icon: '🧬',
           profAnnales: [],
-          courses: [],
+          courses: [
+            {
+  id: '1-introduction-genetique',
+  title: '1 - INTRODUCTION À LA GÉNÉTIQUE',
+  fichePath: '/fiches/s1/infectio/1-introduction-genetique.html',
+  questions: introductionGenetiqueQuestions,
+},
+          ],
         },
       ],
     },
