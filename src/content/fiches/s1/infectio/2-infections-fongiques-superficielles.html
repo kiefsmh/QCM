@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche - Infections fongiques superficielles</title>
+<style>
+:root{--g:#1a7a4a;--gs:#eaf7ef;--r:#dc2626;--rs:#fee2e2;--o:#d97706;--os:#fff7ed;--b:#2563eb;--bs:#eff6ff;--p:#6d28d9;--ps:#f2ecff;--ink:#1c1c2e;--line:#d8dce8;--bg:#f6f7fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}.page{max-width:1120px;margin:auto;padding:32px 18px 64px}
+.hero{background:linear-gradient(135deg,#fff 0%,#f0fdf4 58%,#ecfeff 100%);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 40px rgba(27,38,49,.06)}
+.kicker{color:var(--g);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px}h1{font-size:38px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}.subtitle{max-width:950px;margin:0;color:#374151}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;font-size:13px}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:12px;font-weight:800;padding:4px 9px;border-radius:999px}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.green{background:var(--gs);color:#166534}.purple{background:var(--ps);color:#4c1d95}.blue{background:var(--bs);color:#1d4ed8}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav a{color:var(--ink);text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(27,38,49,.035)}h2{font-size:25px;margin:0 0 16px;letter-spacing:-.02em}h3{font-size:18px;margin:22px 0 10px;color:var(--g)}h4{font-size:15px;margin:16px 0 8px}p{margin:8px 0}ul{margin:8px 0 12px;padding-left:22px}li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}.card h4{margin-top:0}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:#374151;overflow-x:auto;white-space:pre-wrap}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left;color:#111827}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}.flash .q{background:#f9fafb;padding:10px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:10px 12px;color:#374151}
+.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}}
+@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<main class="page">
+
+<header class="hero">
+<div class="kicker">Agent infectieux — Pr. Desoubeaux</div>
+<h1>Infections fongiques superficielles</h1>
+<p class="subtitle">Fiche de cours orientée QCM : parasitologie, taxonomie des parasites, dermatophytoses, teignes, diagnostic mycologique, dermatophytes anthropophiles/zoophiles/géophiles, candidose vulvo-vaginale, examen direct, culture et traitements locaux/systémiques.</p>
+<div class="tags">
+<span class="tag red">🔴 Très tombable</span>
+<span class="tag orange">🟠 Pièges dermatophytes / Candida</span>
+<span class="tag green">🟢 Cas cliniques</span>
+<span class="tag purple">🧠 QCM-ready</span>
+</div>
+<div class="actions">
+<button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+<button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+</div>
+</header>
+
+<nav><h2>Plan rapide</h2><ol>
+<li><a href="#parasito">Parasitologie</a></li>
+<li><a href="#relations">Parasitisme / mutualisme / commensalisme</a></li>
+<li><a href="#taxonomie">Données taxonomiques</a></li>
+<li><a href="#nomenclature">Nomenclature scientifique</a></li>
+<li><a href="#derm-def">Dermatophytoses</a></li>
+<li><a href="#lesion">Lésion dermatophytique</a></li>
+<li><a href="#diagnostic-derm">Diagnostic mycologique</a></li>
+<li><a href="#pied">Cas clinique : pied / ongle</a></li>
+<li><a href="#tricho">Trichophyton interdigitale</a></li>
+<li><a href="#teigne">Teigne du cuir chevelu</a></li>
+<li><a href="#microsporum">Microsporum canis</a></li>
+<li><a href="#derm-points">Points clés dermatophytoses</a></li>
+<li><a href="#levures">Infections à levures</a></li>
+<li><a href="#candida">Candida albicans</a></li>
+<li><a href="#vaginale">Mycose vulvo-vaginale</a></li>
+<li><a href="#diag-candida">Diagnostic Candida</a></li>
+<li><a href="#ttt-candida">Traitement Candida</a></li>
+<li><a href="#pieges">Pièges du cours</a></li>
+<li><a href="#flashcards">Flashcards</a></li>
+</ol></nav>
+
+<section id="parasito">
+<h2>1. Parasitologie : définition</h2>
+<div class="callout"><strong>Parasitologie :</strong> discipline qui étudie les parasites.</div>
+<ul>
+<li>Un parasite est un être vivant qui vit aux dépens d’un autre être vivant.</li>
+<li>Il peut vivre à l’intérieur ou à la surface de son hôte.</li>
+<li>Dans le parasitisme, le parasite cause un tort à l’hôte.</li>
+<li>Le cours rattache les champignons étudiés à la parasitologie au sens large des agents eucaryotes.</li>
+</ul>
+</section>
+
+<section id="relations">
+<h2>2. Parasitisme, mutualisme, commensalisme</h2>
+<table>
+<thead><tr><th>Interaction</th><th>Définition</th><th>Exemple / image mentale</th></tr></thead>
+<tbody>
+<tr><td>Mutualisme</td><td>Les deux êtres vivants tirent bénéfice de l’interaction.</td><td>Abeilles et fleurs : pollinisation contre nourriture.</td></tr>
+<tr><td>Commensalisme</td><td>Un organisme profite de l’autre sans lui nuire ni lui apporter de bénéfice.</td><td>Exemple du cours : coquillages à la surface des baleines.</td></tr>
+<tr><td>Parasitisme</td><td>Un organisme profite de l’autre en lui causant du tort.</td><td>Relation parasite-hôte pathogène.</td></tr>
+</tbody>
+</table>
+<div class="callout warn"><strong>Piège QCM :</strong> commensalisme ≠ mutualisme. Dans le commensalisme, il n’y a pas de bénéfice réciproque.</div>
+</section>
+
+<section id="taxonomie">
+<h2>3. Données taxonomiques</h2>
+<div class="callout"><strong>En parasitologie, le cours s’intéresse aux eucaryotes :</strong> organismes unicellulaires ou pluricellulaires dont les cellules possèdent un vrai noyau délimité par une membrane nucléaire.</div>
+<table>
+<thead><tr><th>Groupe</th><th>Sous-groupes / exemples</th><th>À retenir</th></tr></thead>
+<tbody>
+<tr><td>Champignons = fungi = micromycètes</td><td>Levures et moisissures</td><td>Groupe central du cours.</td></tr>
+<tr><td>Protistes</td><td>Microorganismes unicellulaires</td><td>Invisibles à l’œil nu.</td></tr>
+<tr><td>Métazoaires</td><td>Vers ronds et vers plats</td><td>Multicellulaires, souvent observables à l’œil nu.</td></tr>
+<tr><td>Arthropodes</td><td>Insectes et acariens</td><td>Groupe distinct des protistes.</td></tr>
+</tbody>
+</table>
+<div class="schema">Parasites étudiés = eucaryotes
+├─ fungi / champignons → levures + moisissures
+├─ protistes → unicellulaires
+├─ métazoaires → vers ronds + vers plats
+└─ arthropodes → insectes + acariens</div>
+<div class="callout orangebox"><strong>Intérêt diagnostique :</strong> si l’agent est multicellulaire ou arthropode, la démarche n’est pas la même qu’avec un parasite unicellulaire invisible à l’œil nu.</div>
+</section>
+
+<section id="nomenclature">
+<h2>4. Écriture des noms scientifiques</h2>
+<table>
+<thead><tr><th>Nom</th><th>Règle d’écriture</th><th>Exemple</th></tr></thead>
+<tbody>
+<tr><td>Nom commun</td><td>Écriture normale, sans majuscule obligatoire, sans italique.</td><td>être humain</td></tr>
+<tr><td>Nom scientifique</td><td>Italique, majuscule au genre, minuscule à l’espèce.</td><td><em>Homo sapiens</em></td></tr>
+</tbody>
+</table>
+<div class="callout warn"><strong>Piège QCM :</strong> dans le nom scientifique, le genre prend une majuscule, mais l’espèce ne prend pas de majuscule.</div>
+</section>
+
+<section id="derm-def">
+<h2>5. Dermatophytoses ou dermatophyties</h2>
+<div class="callout"><strong>Dermatophytose = dermatophytie :</strong> infection fongique superficielle causée par un champignon dermatophyte.</div>
+<ul>
+<li>Les infections fongiques superficielles sont aussi appelées mycoses.</li>
+<li>Elles sont très courantes.</li>
+<li>Les dermatophytoses sont souvent chroniques.</li>
+<li>Les dermatophytes sont des micromycètes spécialisés dans la peau et les phanères.</li>
+<li>Genres impliqués : <em>Trichophyton</em>, <em>Microsporum</em>, <em>Epidermophyton</em>.</li>
+</ul>
+<table>
+<thead><tr><th>Origine / réservoir</th><th>Signification</th></tr></thead>
+<tbody>
+<tr><td>Anthropophile</td><td>Origine humaine.</td></tr>
+<tr><td>Zoophile</td><td>Origine animale.</td></tr>
+<tr><td>Géophile</td><td>Origine tellurique / sol.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="lesion">
+<h2>6. Lésion dermatophytique : logique clinique</h2>
+<div class="schema">Point d’attaque central
+→ croissance centrifuge
+→ extension loco-régionale chronique
+→ lésion qui s’agrandit en périphérie</div>
+<ul>
+<li>Le dermatophyte attaque d’abord un point central.</li>
+<li>La croissance se fait ensuite de manière centrifuge autour.</li>
+<li>La partie la plus récente et active est donc en périphérie.</li>
+<li>Les lésions touchent la peau glabre et les phanères.</li>
+<li>Les zones de plis sont favorisées par le frottement et la macération.</li>
+<li>Les dermatophytoses entraînent rarement des complications graves, mais peuvent causer gêne esthétique, gêne au chaussage et surinfection bactérienne.</li>
+</ul>
+<div class="callout warn"><strong>Très tombable :</strong> prélèvement en périphérie de la lésion, sur le front actif, pas au centre où le champignon est souvent moins présent.</div>
+</section>
+
+<section id="diagnostic-derm">
+<h2>7. Diagnostic mycologique des dermatophytoses</h2>
+<table>
+<thead><tr><th>Étape</th><th>Rôle</th><th>Délai</th></tr></thead>
+<tbody>
+<tr><td>Prélèvement</td><td>Récupérer les éléments atteints : squames, peau, ongles, cheveux selon la localisation.</td><td>Immédiat.</td></tr>
+<tr><td>Examen direct</td><td>Recherche de filaments ou éléments fongiques, parfois avec agent fluorescent.</td><td>Rapide.</td></tr>
+<tr><td>Culture mycologique</td><td>Identifier le genre et l’espèce responsables.</td><td>Quelques semaines pour les dermatophytes.</td></tr>
+</tbody>
+</table>
+<div class="callout orangebox"><strong>Piège :</strong> l’examen direct dit si l’échantillon est compatible avec une mycose ; la culture identifie l’agent infectieux précis.</div>
+</section>
+
+<section id="pied">
+<h2>8. Cas clinique : mycose du pied et de l’ongle</h2>
+<h3>Présentation</h3>
+<ul>
+<li>Sportif de haut niveau pratiquant course à pied et football.</li>
+<li>Gêne au niveau de l’orteil.</li>
+<li>Hypertrophie de la plaque unguéale.</li>
+<li>Atteinte latéro-distale.</li>
+<li>Pas de paronychie / périonyxis.</li>
+<li>Ongle décollé, blanc, friable, qui s’effrite.</li>
+<li>Intertrigo entre le 1er et le 2e orteil : atteinte érythémateuse des plis, non suintante, avec nombreuses squames.</li>
+</ul>
+<div class="callout"><strong>Orientation :</strong> dermatophytose du pied et de l’ongle, compatible avec une infection par dermatophyte.</div>
+</section>
+
+<section id="tricho">
+<h2>9. <em>Trichophyton interdigitale</em></h2>
+<ul>
+<li>Espèce communément retrouvée dans les mycoses des ongles ou des pieds.</li>
+<li>Dans le cas du cours, l’examen direct est positif avec filaments dans l’ongle.</li>
+<li>La culture montre des colonies au recto ocre et poudreuses, avec coloration brune centrale au verso.</li>
+<li>Réservoir principal : <strong>anthropophile</strong>.</li>
+</ul>
+<h3>Transmission</h3>
+<table>
+<thead><tr><th>Mode</th><th>Exemples</th></tr></thead>
+<tbody>
+<tr><td>Directe</td><td>Contact cutané avec une personne contaminée.</td></tr>
+<tr><td>Indirecte</td><td>Squames laissées dans l’environnement : salle de bain commune, pédiluve, piscine.</td></tr>
+</tbody>
+</table>
+
+<h3>Traitement du cas</h3>
+<table>
+<thead><tr><th>Voie</th><th>Traitement cité</th><th>Durée / rythme</th></tr></thead>
+<tbody>
+<tr><td>Orale</td><td>Terbinafine comprimé</td><td>1 comprimé par jour pendant 3 mois.</td></tr>
+<tr><td>Locale ongle</td><td>Amorolfine solution filmogène / vernis</td><td>1 application par semaine sur l’ongle.</td></tr>
+<tr><td>Locale inter-orteil</td><td>Terbinafine crème</td><td>1 application par jour dans l’espace inter-orteil bien séché.</td></tr>
+</tbody>
+</table>
+<div class="callout orangebox"><strong>Traitement laborieux :</strong> atteinte de l’ongle = traitement long, environ 6 mois à 1 an selon l’évolution.</div>
+
+<h3>Conseils prophylactiques</h3>
+<ul>
+<li>Éviter de marcher pieds nus dans les lieux communs et salles de bain.</li>
+<li>Bien se sécher les pieds après la douche.</li>
+<li>Limiter les zones de friction dans les chaussures.</li>
+</ul>
+<div class="callout warn"><strong>Piège du Wooclap :</strong> diminuer les apports alimentaires en sucre et laisser pousser ses ongles ne sont pas les conseils validés ici.</div>
+</section>
+
+<section id="teigne">
+<h2>10. Dermatophytose du cuir chevelu : teigne</h2>
+<h3>Cas clinique</h3>
+<ul>
+<li>Enfant de 7 ans.</li>
+<li>Lésion unique, de grande taille, de plusieurs centimètres.</li>
+<li>Localisation : cuir chevelu.</li>
+<li>Alopécie localisée.</li>
+<li>Lumière de Wood : fluorescence bleu-vert.</li>
+<li>Présence d’un chien au domicile.</li>
+</ul>
+<div class="callout"><strong>Orientation forte :</strong> teigne du cuir chevelu à <em>Microsporum canis</em>.</div>
+<table>
+<thead><tr><th>Argument</th><th>Interprétation</th></tr></thead>
+<tbody>
+<tr><td>Zone alopécique chez l’enfant</td><td>Faire évoquer une teigne.</td></tr>
+<tr><td>Fluorescence bleu-vert à la lampe de Wood</td><td>Évocatrice de certaines espèces de <em>Microsporum</em>.</td></tr>
+<tr><td>Contact avec chien / chat</td><td>Oriente vers une contamination zoophile.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="microsporum">
+<h2>11. <em>Microsporum canis</em></h2>
+<ul>
+<li>Dermatophyte zoophile.</li>
+<li>Principalement associé aux chiens et aux chats.</li>
+<li>Transmission humaine par contact direct avec un animal infecté.</li>
+<li>Les lésions de l’animal peuvent être difficiles à voir sous le pelage.</li>
+<li>Le diagnostic repose sur prélèvement mycologique, examen direct puis culture.</li>
+<li>Colonies pouvant avoir une coloration jaune à orangée, notamment au revers.</li>
+</ul>
+
+<h3>Traitement de la teigne à <em>Microsporum canis</em></h3>
+<table>
+<thead><tr><th>Traitement</th><th>Modalité citée</th><th>Objectif</th></tr></thead>
+<tbody>
+<tr><td>Itraconazole systémique</td><td>100 mg : 1 gélule par jour pendant 6 semaines.</td><td>Atteindre le dermatophyte au niveau du cuir chevelu et des cheveux.</td></tr>
+<tr><td>Ciclopiroxolamine locale</td><td>Lotion ou shampooing : 1 à 2 applications par jour pendant environ 4 semaines.</td><td>Réduire la charge fongique et limiter la dissémination des spores.</td></tr>
+<tr><td>Prise en charge vétérinaire</td><td>Faire examiner et traiter le chien ou le chat.</td><td>Contrôler la source et éviter réinfection/transmission familiale.</td></tr>
+</tbody>
+</table>
+<div class="callout warn"><strong>Piège QCM :</strong> <em>Microsporum canis</em> ne se transmet pas principalement par contact humain dans le cas du cours : c’est un réservoir zoophile.</div>
+</section>
+
+<section id="derm-points">
+<h2>12. Points clés sur les dermatophytoses</h2>
+<ul>
+<li>Dermatophytoses = dermatophyties = mycoses superficielles cutanées très fréquentes.</li>
+<li>Dermatophytes = champignons filamenteux.</li>
+<li>Genres : <em>Microsporum</em>, <em>Trichophyton</em>, <em>Epidermophyton</em>.</li>
+<li>Origine : sol, animal ou Homme = géophile, zoophile, anthropophile.</li>
+<li>Ils parasitent la kératine humaine de la peau glabre et des phanères.</li>
+<li>Ils produisent des lésions cliniques variées.</li>
+<li>Prélèvement mycologique avec examen direct + culture fortement recommandé avant traitement antifongique.</li>
+<li>Traitement local dans tous les cas.</li>
+<li>Traitement général prolongé possible en cas d’atteinte des phanères.</li>
+</ul>
+</section>
+
+<section id="levures">
+<h2>13. Infections fongiques superficielles à levures</h2>
+<div class="callout"><strong>Définition de la mycose vulvo-vaginale :</strong> infection opportuniste superficielle de la muqueuse et de la vulve due à des champignons levuriformes commensaux.</div>
+<ul>
+<li>Les levures du genre <em>Candida</em> sont opportunistes.</li>
+<li>Leur pouvoir pathogène dépend du terrain et des facteurs favorisants.</li>
+<li>Les formes localisées reposent surtout sur l’éradication des facteurs favorisants et les topiques antifongiques.</li>
+</ul>
+</section>
+
+<section id="candida">
+<h2>14. <em>Candida albicans</em></h2>
+<ul>
+<li>Levure habituellement commensale.</li>
+<li>Espèce principale retrouvée dans les pathologies humaines, superficielles comme profondes.</li>
+<li>Présente sur les muqueuses buccales, digestives ou génitales.</li>
+<li>Sa simple présence ne signe pas une infection.</li>
+<li>Elle devient pathogène quand elle profite de conditions favorables à sa prolifération.</li>
+</ul>
+<table>
+<thead><tr><th>Terme</th><th>Définition</th></tr></thead>
+<tbody>
+<tr><td>Opportuniste</td><td>Profite d’un déséquilibre local ou d’une baisse de défense de l’hôte pour agresser la muqueuse.</td></tr>
+<tr><td>Commensale</td><td>Vit habituellement dans/sur l’organisme sans provoquer de maladie ni symptôme.</td></tr>
+</tbody>
+</table>
+<div class="callout warn"><strong>Piège majeur :</strong> culture positive à <em>Candida</em> ≠ preuve automatique d’infection. Il faut interpréter avec les symptômes et le dossier.</div>
+</section>
+
+<section id="vaginale">
+<h2>15. Cas clinique : mycose vaginale / candidose vulvo-vaginale</h2>
+<h3>Interrogatoire</h3>
+<ul>
+<li>Femme de 48 ans sans antécédent pathologique particulier.</li>
+<li>Prurit vulvaire intense.</li>
+<li>Sensations de brûlure et irritation.</li>
+<li>Dyspareunie.</li>
+<li>Leucorrhées blanchâtres, épaisses, grumeleuses, aspect « lait caillé ».</li>
+<li>Sécrétions vaginales inodores dans le résumé du cours.</li>
+</ul>
+
+<h3>Examen clinique</h3>
+<table>
+<thead><tr><th>Signe</th><th>Signification</th></tr></thead>
+<tbody>
+<tr><td>Vulve érythémateuse</td><td>Rougeur importante de la muqueuse.</td></tr>
+<tr><td>Vulve œdématiée</td><td>Gonflement.</td></tr>
+<tr><td>Excoriations / fissures</td><td>Souvent secondaires au grattage.</td></tr>
+<tr><td>Leucorrhées blanches grumeleuses</td><td>Très évocatrices de candidose.</td></tr>
+</tbody>
+</table>
+<div class="callout"><strong>Orientation diagnostique :</strong> prurit + brûlures + dyspareunie + leucorrhées blanches épaisses/grumeleuses + érythème/œdème vulvaire = candidose vulvo-vaginale probable, souvent à <em>Candida albicans</em>.</div>
+<div class="callout orangebox"><strong>Piège :</strong> le cours insiste sur des sécrétions inodores ; des sécrétions odorantes orientent plutôt vers autre chose.</div>
+</section>
+
+<section id="diag-candida">
+<h2>16. Diagnostic mycologique de la candidose vaginale</h2>
+<table>
+<thead><tr><th>Étape</th><th>Résultat attendu</th><th>Intérêt</th></tr></thead>
+<tbody>
+<tr><td>Prélèvement vaginal</td><td>Écouvillonnage vaginal.</td><td>Récupérer les éléments à analyser.</td></tr>
+<tr><td>Examen direct</td><td>Levures ovalaires ou arrondies, souvent bourgeonnantes, notamment après coloration de Gram.</td><td>Compatible avec une infection à <em>Candida</em>.</td></tr>
+<tr><td>Culture</td><td>Milieu de Sabouraud, incubation à 35°C pendant environ 48 h.</td><td>Confirmer la présence et parfois préciser l’espèce.</td></tr>
+<tr><td>Colonies</td><td>Blanchâtres, crémeuses, lisses, arrondies.</td><td>Aspect caractéristique d’une levure du genre <em>Candida</em>.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="ttt-candida">
+<h2>17. Prise en charge de la mycose vaginale</h2>
+<table>
+<thead><tr><th>Traitement</th><th>Modalité citée</th></tr></thead>
+<tbody>
+<tr><td>Éconazole</td><td>1 ovule gynécologique par voie vaginale, à libération prolongée.</td></tr>
+<tr><td>Sertaconazole crème 2 %</td><td>Application locale 1 à 2 fois par jour pendant 7 à 14 jours sur la vulve et les organes génitaux externes.</td></tr>
+</tbody>
+</table>
+<ul>
+<li>Amélioration généralement rapide en quelques jours.</li>
+<li>Disparition complète des signes parfois en plusieurs jours à quelques semaines.</li>
+</ul>
+<h3>Conseils pour favoriser la guérison</h3>
+<ul>
+<li>Rester allongée après l’administration de l’ovule vaginal, surtout au coucher.</li>
+<li>Privilégier des sous-vêtements en coton, amples et respirants.</li>
+<li>Éviter les matières synthétiques ou irritantes comme l’acrylique.</li>
+<li>Éviter les savons agressifs ; le cours mentionne de privilégier des savons alcalins.</li>
+<li>Éviter temporairement les tampons et privilégier les protections externes pendant le traitement.</li>
+</ul>
+<div class="callout warn"><strong>Très tombable :</strong> les candidoses uro-génitales / mycoses vaginales ne sont pas des IST dans le cours.</div>
+</section>
+
+<section id="pieges">
+<h2>18. Pièges du cours</h2>
+<table>
+<thead><tr><th>Item piège</th><th>Correction</th></tr></thead>
+<tbody>
+<tr><td>Le commensalisme bénéficie aux deux êtres vivants</td><td>Faux : cela correspond au mutualisme.</td></tr>
+<tr><td>Les protistes sont pluricellulaires</td><td>Faux : ce sont des microorganismes unicellulaires.</td></tr>
+<tr><td>Les acariens font partie des protistes</td><td>Faux : acariens et insectes = arthropodes.</td></tr>
+<tr><td>Le nom d’espèce prend une majuscule</td><td>Faux : majuscule au genre seulement.</td></tr>
+<tr><td>Examen direct = identification de l’espèce</td><td>Faux : la culture permet l’identification de genre/espèce.</td></tr>
+<tr><td>Dermatophytose = atteinte grave</td><td>Faux : généralement pas grave, mais gênante et potentiellement favorise des surinfections.</td></tr>
+<tr><td><em>Trichophyton interdigitale</em> traité uniquement localement</td><td>Faux : atteinte unguéale = oral + local dans le cas.</td></tr>
+<tr><td><em>Microsporum canis</em> = réservoir humain</td><td>Faux : zoophile, chiens/chats.</td></tr>
+<tr><td>Candidose vaginale = IST</td><td>Faux dans le cours.</td></tr>
+<tr><td>Présence de <em>Candida</em> = infection certaine</td><td>Faux : <em>Candida</em> peut être commensal.</td></tr>
+<tr><td>Sécrétions odorantes dans candidose typique</td><td>Faux : le résumé indique sécrétions inodores.</td></tr>
+<tr><td>Sous-vêtements acryliques recommandés</td><td>Faux : privilégier coton, ample, respirant.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="flashcards">
+<h2>19. Flashcards express</h2>
+<div class="flashgrid">
+<div class="flash"><div class="q">1. Parasitologie ?</div><div class="a">Discipline qui étudie les parasites.</div></div>
+<div class="flash"><div class="q">2. Parasite ?</div><div class="a">Être vivant vivant aux dépens d’un autre et lui causant du tort.</div></div>
+<div class="flash"><div class="q">3. Mutualisme ?</div><div class="a">Les deux êtres vivants bénéficient de l’interaction.</div></div>
+<div class="flash"><div class="q">4. Commensalisme ?</div><div class="a">Un organisme profite de l’autre sans préjudice ni bénéfice pour l’autre.</div></div>
+<div class="flash"><div class="q">5. Parasitisme ?</div><div class="a">Un organisme profite en causant du tort à l’autre.</div></div>
+<div class="flash"><div class="q">6. Parasites étudiés en parasitologie ?</div><div class="a">Eucaryotes.</div></div>
+<div class="flash"><div class="q">7. Fungi ?</div><div class="a">Champignons / micromycètes : levures et moisissures.</div></div>
+<div class="flash"><div class="q">8. Protistes ?</div><div class="a">Microorganismes unicellulaires.</div></div>
+<div class="flash"><div class="q">9. Métazoaires ?</div><div class="a">Microorganismes multicellulaires, vers ronds et vers plats.</div></div>
+<div class="flash"><div class="q">10. Arthropodes ?</div><div class="a">Insectes et acariens.</div></div>
+<div class="flash"><div class="q">11. Nom scientifique ?</div><div class="a">Italique, majuscule au genre, minuscule à l’espèce.</div></div>
+<div class="flash"><div class="q">12. Dermatophytose = ?</div><div class="a">Dermatophytie, mycose superficielle à dermatophyte.</div></div>
+<div class="flash"><div class="q">13. Genres de dermatophytes ?</div><div class="a"><em>Trichophyton</em>, <em>Microsporum</em>, <em>Epidermophyton</em>.</div></div>
+<div class="flash"><div class="q">14. Origines des dermatophytes ?</div><div class="a">Géophile, zoophile, anthropophile.</div></div>
+<div class="flash"><div class="q">15. Dermatophytes parasitent quoi ?</div><div class="a">Kératine de la peau glabre et des phanères.</div></div>
+<div class="flash"><div class="q">16. Lésion dermatophytique ?</div><div class="a">Point central puis croissance centrifuge.</div></div>
+<div class="flash"><div class="q">17. Où prélever ?</div><div class="a">En périphérie de la lésion, sur le front actif.</div></div>
+<div class="flash"><div class="q">18. Examen direct dermatophyte ?</div><div class="a">Recherche de filaments / éléments fongiques.</div></div>
+<div class="flash"><div class="q">19. Culture dermatophyte ?</div><div class="a">Permet d’identifier genre et espèce, après quelques semaines.</div></div>
+<div class="flash"><div class="q">20. <em>T. interdigitale</em> réservoir ?</div><div class="a">Anthropophile.</div></div>
+<div class="flash"><div class="q">21. <em>T. interdigitale</em> localisation typique ?</div><div class="a">Pieds et ongles.</div></div>
+<div class="flash"><div class="q">22. Traitement ongle/pied du cas ?</div><div class="a">Terbinafine orale + amorolfine vernis + terbinafine crème inter-orteil.</div></div>
+<div class="flash"><div class="q">23. Conseils pied ?</div><div class="a">Pas pieds nus lieux communs, bien sécher, limiter friction chaussures.</div></div>
+<div class="flash"><div class="q">24. Teigne ?</div><div class="a">Dermatophytose du cuir chevelu.</div></div>
+<div class="flash"><div class="q">25. Teigne chez l’enfant : signe ?</div><div class="a">Zone alopécique du cuir chevelu.</div></div>
+<div class="flash"><div class="q">26. Wood bleu-vert ?</div><div class="a">Évocateur de certaines espèces de <em>Microsporum</em>.</div></div>
+<div class="flash"><div class="q">27. <em>Microsporum canis</em> réservoir ?</div><div class="a">Zoophile, chiens et chats.</div></div>
+<div class="flash"><div class="q">28. Traitement teigne du cas ?</div><div class="a">Itraconazole 100 mg 6 semaines + ciclopiroxolamine locale.</div></div>
+<div class="flash"><div class="q">29. Mesure source <em>M. canis</em> ?</div><div class="a">Faire examiner et traiter l’animal par vétérinaire.</div></div>
+<div class="flash"><div class="q">30. Levure opportuniste ?</div><div class="a">Devient pathogène si conditions favorables / déséquilibre local.</div></div>
+<div class="flash"><div class="q">31. Levure commensale ?</div><div class="a">Présente sans provoquer maladie ni symptôme.</div></div>
+<div class="flash"><div class="q">32. Espèce Candida principale ?</div><div class="a"><em>Candida albicans</em>.</div></div>
+<div class="flash"><div class="q">33. Présence de Candida = infection ?</div><div class="a">Non, simple présence ne signe pas la pathogénicité.</div></div>
+<div class="flash"><div class="q">34. Candidose vaginale : interrogatoire ?</div><div class="a">Prurit, irritation, brûlures, dyspareunie, sécrétions inodores.</div></div>
+<div class="flash"><div class="q">35. Candidose vaginale : examen ?</div><div class="a">Œdème/érythème, excoriations/fissures, leucorrhées blanches grumeleuses.</div></div>
+<div class="flash"><div class="q">36. Examen direct Candida ?</div><div class="a">Levures ovalaires/arrondies souvent bourgeonnantes.</div></div>
+<div class="flash"><div class="q">37. Culture Candida ?</div><div class="a">Sabouraud, 35°C, environ 48 h.</div></div>
+<div class="flash"><div class="q">38. Colonies Candida ?</div><div class="a">Blanches, crémeuses, lisses, arrondies.</div></div>
+<div class="flash"><div class="q">39. Traitement candidose du cas ?</div><div class="a">Ovule d’éconazole + crème sertaconazole 2 %.</div></div>
+<div class="flash"><div class="q">40. Mycose vaginale = IST ?</div><div class="a">Non, pas une IST dans le cours.</div></div>
+</div>
+</section>
+
+<section class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>Les dermatophytoses</strong> sont des mycoses superficielles très fréquentes dues à des dermatophytes : <em>Trichophyton</em>, <em>Microsporum</em>, <em>Epidermophyton</em>. Ils parasitent la kératine de la peau glabre et des phanères. La lésion part d’un point central et s’étend en périphérie : on prélève donc sur le <strong>front actif</strong>. Diagnostic = examen direct rapide + culture pour identifier l’espèce. <em>Trichophyton interdigitale</em> est surtout anthropophile et touche pieds/ongles ; <em>Microsporum canis</em> est zoophile et donne typiquement une teigne après contact chien/chat. <strong>Candida albicans</strong> est une levure commensale opportuniste : sa présence seule ne suffit pas. Candidose vaginale = prurit, brûlures, dyspareunie, leucorrhées blanches grumeleuses inodores ; ce n’est pas une IST dans le cours.</p>
+</section>
+
+</main>
+</body>
+</html>

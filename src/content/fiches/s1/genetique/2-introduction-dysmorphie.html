@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche - Introduction à la dysmorphie</title>
+<style>
+:root{--g:#1a7a4a;--gs:#eaf7ef;--r:#dc2626;--rs:#fee2e2;--o:#d97706;--os:#fff7ed;--b:#2563eb;--bs:#eff6ff;--p:#6d28d9;--ps:#f2ecff;--ink:#1c1c2e;--line:#d8dce8;--bg:#f6f7fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}.page{max-width:1120px;margin:auto;padding:32px 18px 64px}
+.hero{background:linear-gradient(135deg,#fff 0%,#f0fdf4 58%,#ecfeff 100%);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 40px rgba(27,38,49,.06)}
+.kicker{color:var(--g);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px}h1{font-size:38px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}.subtitle{max-width:950px;margin:0;color:#374151}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;font-size:13px}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:12px;font-weight:800;padding:4px 9px;border-radius:999px}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.green{background:var(--gs);color:#166534}.purple{background:var(--ps);color:#4c1d95}.blue{background:var(--bs);color:#1d4ed8}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav a{color:var(--ink);text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(27,38,49,.035)}h2{font-size:25px;margin:0 0 16px;letter-spacing:-.02em}h3{font-size:18px;margin:22px 0 10px;color:var(--g)}h4{font-size:15px;margin:16px 0 8px}p{margin:8px 0}ul{margin:8px 0 12px;padding-left:22px}li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}.card h4{margin-top:0}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:#374151;overflow-x:auto;white-space:pre-wrap}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left;color:#111827}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}.flash .q{background:#f9fafb;padding:10px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:10px 12px;color:#374151}
+.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}}
+@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="hero">
+<div class="kicker">UE 05 — Génétique</div>
+<h1>Introduction à la dysmorphie</h1>
+<p class="subtitle">Fiche de cours orientée QCM : définitions de dysmorphologie, anomalies majeures/mineures, primaires/secondaires, examen morphologique, auxologie, membres, extrémités, crâne, face, yeux, fentes, oreilles, peau, phanères, trisomie 21 et syndrome de l’X fragile.</p>
+<div class="tags">
+<span class="tag red">🔴 Définitions à connaître</span>
+<span class="tag orange">🟠 Pièges télécanthus / hypertélorisme</span>
+<span class="tag green">🟢 Examen morphologique</span>
+<span class="tag purple">🧠 QCM-friendly</span>
+</div>
+<div class="actions">
+<button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+<button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+</div>
+</header>
+
+<nav><h2>Plan rapide</h2><ol>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#classification">Classification des anomalies</a></li>
+<li><a href="#association">Association / séquence / syndrome</a></li>
+<li><a href="#examen">Examen morphologique</a></li>
+<li><a href="#auxologie">Auxologie</a></li>
+<li><a href="#silhouette">Silhouette et proportions</a></li>
+<li><a href="#membres">Membres</a></li>
+<li><a href="#extremites">Extrémités</a></li>
+<li><a href="#crane">Crâne</a></li>
+<li><a href="#face">Face</a></li>
+<li><a href="#yeux">Yeux</a></li>
+<li><a href="#periorbitaire">Région périorbitaire</a></li>
+<li><a href="#nez-bouche">Nez, bouche et fentes</a></li>
+<li><a href="#oreilles">Oreilles</a></li>
+<li><a href="#peau">Peau</a></li>
+<li><a href="#phaneres">Phanères</a></li>
+<li><a href="#t21">Trisomie 21</a></li>
+<li><a href="#xfragile">Syndrome de l’X fragile</a></li>
+<li><a href="#flashcards">Flashcards</a></li>
+</ol></nav>
+
+<section id="intro">
+<h2>1. Introduction : dysmorphologie</h2>
+<div class="callout"><strong>Dysmorphologie :</strong> étude des anomalies morphologiques du développement embryonnaire. Le terme a été défini en 1966 par David Smith.</div>
+<ul>
+<li>Le but n’est pas de “juger” un visage ou un corps, mais de <strong>décrire précisément</strong> des variations morphologiques.</li>
+<li>L’association de plusieurs signes morphologiques peut orienter vers un diagnostic syndromique.</li>
+<li>Un signe isolé, surtout mineur, n’est pas forcément pathologique.</li>
+<li>La dysmorphie peut se modifier avec l’âge : il est utile d’avoir des photos à différents âges.</li>
+</ul>
+<div class="callout warn"><strong>Point éthique :</strong> pendant l’examen, on limite les commentaires à haute voix pour respecter la vie privée du patient.</div>
+</section>
+
+<section id="classification">
+<h2>2. Classification des anomalies de développement</h2>
+<table>
+<thead><tr><th>Type</th><th>Définition / conséquence</th><th>Exemples ou remarques</th></tr></thead>
+<tbody>
+<tr><td>Anomalies majeures</td><td>Environ 5 %. Entraînent gestes thérapeutiques à risque, séquelles persistantes, impact fonctionnel, personnel ou social.</td><td>Fort impact clinique.</td></tr>
+<tr><td>Anomalies mineures</td><td>Environ 10–15 %. Pas ou peu de conséquence hors esthétique.</td><td>Utile si elles s’associent entre elles.</td></tr>
+<tr><td>Anomalies primaires</td><td>Problème intrinsèque du développement.</td><td>Malformations + dysplasies.</td></tr>
+<tr><td>Anomalies secondaires</td><td>Conséquence d’un événement ou trouble secondaire.</td><td>Déformations + disruptions.</td></tr>
+</tbody>
+</table>
+
+<h3>Primaires vs secondaires</h3>
+<table>
+<thead><tr><th>Catégorie</th><th>Définition simple</th><th>Échelle</th></tr></thead>
+<tbody>
+<tr><td>Malformation</td><td>Conformation macroscopique anormale d’un organe ou d’une région.</td><td>Macroscopique.</td></tr>
+<tr><td>Dysplasie</td><td>Structure microscopique anormale d’un tissu.</td><td>Microscopique.</td></tr>
+<tr><td>Déformation</td><td>Cause mécanique extrinsèque ou intrinsèque.</td><td>Ex : contrainte mécanique.</td></tr>
+<tr><td>Disruption</td><td>Destruction d’une structure embryonnaire initialement normale.</td><td>Souvent par manque d’apport en oxygène.</td></tr>
+</tbody>
+</table>
+<div class="callout warn"><strong>Piège QCM :</strong> malformations et dysplasies = anomalies primaires ; déformations et disruptions = anomalies secondaires.</div>
+</section>
+
+<section id="association">
+<h2>3. Association, séquence, syndrome</h2>
+<table>
+<thead><tr><th>Terme</th><th>Définition</th><th>Exemples du cours</th></tr></thead>
+<tbody>
+<tr><td>Association</td><td>Combinaison récurrente d’anomalies de développement sans cause connue.</td><td>VACTERL, MURCS, Moebius.</td></tr>
+<tr><td>Séquence</td><td>Combinaison d’anomalies secondaires à un trouble primitif du développement.</td><td>Pierre Robin, akinésie fœtale, Potter.</td></tr>
+<tr><td>Syndrome</td><td>Combinaison d’anomalies de développement dont les manifestations pléiotropiques ont une cause identifiée.</td><td>Trisomie 21, Noonan, Angelman, SAF.</td></tr>
+</tbody>
+</table>
+<ul>
+<li>Les anomalies de développement peuvent être <strong>isolées</strong> si elles concernent un seul territoire embryonnaire.</li>
+<li>Elles sont <strong>multiples</strong> si elles touchent plusieurs territoires embryonnaires.</li>
+<li>Des anomalies symétriques d’organes pairs peuvent être considérées comme isolées si elles ne touchent qu’un seul organe ou territoire.</li>
+</ul>
+<div class="callout orangebox"><strong>Piège :</strong> attention aux “faux syndromes” : combinaison fortuite de signes sans lien entre eux, ou superposition de traits familiaux avec un vrai syndrome.</div>
+</section>
+
+<section id="examen">
+<h2>4. Examen morphologique : méthode</h2>
+<div class="callout"><strong>Objectif :</strong> décrire les aspects du corps du patient, pas poser un diagnostic au premier regard.</div>
+<table>
+<thead><tr><th>Étape</th><th>Ce qu’on fait</th></tr></thead>
+<tbody>
+<tr><td>Observation / inspection</td><td>Analyse globale et segmentaire, en limitant les commentaires à haute voix.</td></tr>
+<tr><td>Palpation</td><td>Protubérances osseuses, texture cutanée, élasticité, dureté.</td></tr>
+<tr><td>Photographies avec accord</td><td>Visage de face, deux profils, quatre extrémités, corps entier, taches cutanées ou variations morphologiques.</td></tr>
+<tr><td>Comparaison familiale</td><td>Examen ou photographies des parents et de la fratrie si utile.</td></tr>
+</tbody>
+</table>
+<div class="callout bluebox"><strong>Pourquoi photographier ?</strong> Pour documenter, comparer dans le temps et discuter avec des collègues sans réexaminer constamment le patient.</div>
+</section>
+
+<section id="auxologie">
+<h2>5. Auxologie</h2>
+<div class="callout"><strong>Auxologie :</strong> science qui étudie la croissance physique et le développement de l’être humain.</div>
+<ul>
+<li>On analyse taille, poids, IMC, périmètre crânien et évolution dans le temps.</li>
+<li>Les courbes retranscrivent le caractère évolutif des paramètres.</li>
+<li>On recherche : retard de croissance pré- ou post-natal, cassure, rattrapage, excès de croissance.</li>
+<li>Le poids et l’IMC permettent de repérer maigreur, surpoids, obésité, rebond d’adiposité.</li>
+<li>Les mensurations parentales sont importantes pour interpréter une petite taille ou un petit périmètre crânien familial.</li>
+</ul>
+<div class="schema">Taille cible garçon = (taille mère + taille père + 13) / 2
+Taille cible fille = (taille mère + taille père - 13) / 2</div>
+</section>
+
+<section id="silhouette">
+<h2>6. Silhouette, proportions corporelles, posture et rachis</h2>
+<h3>A. Silhouette</h3>
+<ul>
+<li>Analyse du morphotype.</li>
+<li>Recherche d’asymétries.</li>
+<li>Analyse de la répartition des masses musculaires et graisseuses : harmonieuse, amyotrophie, hypertrophie.</li>
+<li>Il existe une part de subjectivité selon le praticien.</li>
+</ul>
+
+<h3>B. Proportions corporelles</h3>
+<table>
+<thead><tr><th>Terme</th><th>Définition</th></tr></thead>
+<tbody>
+<tr><td>Rhizomélie</td><td>Raccourcissement de la portion proximale du membre.</td></tr>
+<tr><td>Mésomélie</td><td>Raccourcissement de la portion moyenne du membre.</td></tr>
+<tr><td>Acromélie</td><td>Raccourcissement de la portion distale du membre.</td></tr>
+<tr><td>Micromélie</td><td>Raccourcissement de toutes les portions du membre.</td></tr>
+</tbody>
+</table>
+<div class="callout warn"><strong>Piège :</strong> acromélie ≠ acromégalie. Ici, acromélie = raccourcissement distal.</div>
+
+<h3>C. Posture et rachis</h3>
+<ul>
+<li>Rachis cervical : lordose.</li>
+<li>Rachis dorsal : cyphose.</li>
+<li>Rachis lombaire : lordose.</li>
+<li>De dos, une scoliose peut être repérée par une gibbosité lorsque le patient se penche en avant.</li>
+</ul>
+</section>
+
+<section id="membres">
+<h2>7. Membres</h2>
+<table>
+<thead><tr><th>Terme</th><th>Définition</th></tr></thead>
+<tbody>
+<tr><td>Amélie</td><td>Absence d’un ou plusieurs membres.</td></tr>
+<tr><td>Hémimélie transversale</td><td>Absence d’une extrémité ou d’un segment terminal, ex : absence de main ou de pied.</td></tr>
+<tr><td>Hémimélie longitudinale</td><td>Absence d’un os sur l’axe longitudinal, ex : absence d’un os de l’avant-bras.</td></tr>
+<tr><td>Phocomélie</td><td>Présence des extrémités mains/pieds, mais absence du segment en amont.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="extremites">
+<h2>8. Extrémités : mains et pieds</h2>
+<h3>Types d’anomalies</h3>
+<table>
+<thead><tr><th>Type</th><th>Exemples</th><th>À retenir</th></tr></thead>
+<tbody>
+<tr><td>Structures surnuméraires</td><td>Polydactylie, hexadactylie.</td><td>Pré-axiale côté pouce ou post-axiale côté auriculaire.</td></tr>
+<tr><td>Anomalies déficitaires</td><td>Oligodactylie, ectrodactylie, brides amniotiques.</td><td>Ectrodactylie : aspect de pince de homard.</td></tr>
+<tr><td>Anomalies de fusion</td><td>Syndactylie.</td><td>Syndactylie 2-3 des pieds fréquente dans la population.</td></tr>
+<tr><td>Déformations</td><td>Camptodactylie, clinodactylie.</td><td>Pas toujours génétique ou syndromique.</td></tr>
+<tr><td>Anomalies de longueur</td><td>Brachymésophalangie, brachymétacarpie, arachnodactylie, acromélie.</td><td>Bien connaître les définitions.</td></tr>
+</tbody>
+</table>
+
+<h3>Anomalies de longueur</h3>
+<table>
+<thead><tr><th>Terme</th><th>Définition</th></tr></thead>
+<tbody>
+<tr><td>Brachymésophalangie</td><td>Absence ou anomalie de la 2e phalange.</td></tr>
+<tr><td>Brachymétacarpie</td><td>Absence ou raccourcissement des métacarpes.</td></tr>
+<tr><td>Arachnodactylie</td><td>Allongement des doigts.</td></tr>
+<tr><td>Acromélie</td><td>Raccourcissement de la taille des doigts et des mains.</td></tr>
+</tbody>
+</table>
+
+<h3>Plis et pieds</h3>
+<ul>
+<li>Pli palmaire transverse unique : communément retrouvé dans la trisomie 21, mais aussi chez environ 5 % de la population générale.</li>
+<li>Hyperlinéarité palmaire : plis surnuméraires.</li>
+<li>Foetal pads : coussinets pouvant orienter vers certains syndromes.</li>
+<li>Autres : pieds creux, pieds plats, pieds varus équin.</li>
+</ul>
+</section>
+
+<section id="crane">
+<h2>9. Crâne</h2>
+<ul>
+<li>Le développement du crâne de l’enfant se suit par sa forme et sa taille.</li>
+<li>La fusion prématurée des sutures entraîne une <strong>craniosténose</strong>.</li>
+<li>Risque : hypertension intracrânienne, retentissement visuel, atteinte du nerf optique.</li>
+<li>La taille du crâne s’interprète avec les courbes et le périmètre crânien parental.</li>
+</ul>
+<table>
+<thead><tr><th>Suture fermée prématurément</th><th>Conséquence</th></tr></thead>
+<tbody>
+<tr><td>Suture sagittale</td><td>Scaphocéphalie.</td></tr>
+<tr><td>Suture métopique</td><td>Trigonocéphalie.</td></tr>
+<tr><td>Suture coronale</td><td>Brachycéphalie.</td></tr>
+<tr><td>Toutes les sutures</td><td>Oxycéphalie.</td></tr>
+</tbody>
+</table>
+<div class="callout orangebox"><strong>À noter :</strong> une brachycéphalie s’observe notamment dans la trisomie 21.</div>
+</section>
+
+<section id="face">
+<h2>10. Face : forme et proportions</h2>
+<ul>
+<li>La face peut être décrite comme allongée, large, étroite, ovale, ronde, triangulaire, plate, asymétrique, avec traits épais, etc.</li>
+<li>On divise le visage en trois étages.</li>
+<li>Les proportions évoluent avec l’âge : l’étage inférieur change peu, l’étage supérieur s’affine, l’étage moyen s’allonge.</li>
+</ul>
+<table>
+<thead><tr><th>Étage</th><th>Limites</th></tr></thead>
+<tbody>
+<tr><td>Supérieur</td><td>Du haut du crâne à la glabelle.</td></tr>
+<tr><td>Moyen</td><td>De la glabelle au philtrum.</td></tr>
+<tr><td>Inférieur</td><td>Du philtrum au menton.</td></tr>
+</tbody>
+</table>
+<div class="callout bluebox"><strong>Profil :</strong> une ligne entre front, philtrum et menton aide à repérer front fuyant/bombé, prognathie ou micrognathie.</div>
+</section>
+
+<section id="yeux">
+<h2>11. Yeux</h2>
+<div class="callout"><strong>Repères :</strong> canthus interne = coin de l’œil côté nez ; canthus externe = coin de l’œil côté tempe.</div>
+<table>
+<thead><tr><th>Terme</th><th>Définition</th></tr></thead>
+<tbody>
+<tr><td>Hypertélorisme</td><td>Écart interpupillaire excessif.</td></tr>
+<tr><td>Télécanthus</td><td>Écart excessif entre les canthi internes.</td></tr>
+<tr><td>Hypotélorisme</td><td>Yeux rapprochés.</td></tr>
+<tr><td>Microphtalmie</td><td>Yeux trop petits.</td></tr>
+<tr><td>Enophtalmie</td><td>Yeux rentrés dans les orbites.</td></tr>
+<tr><td>Exophtalmie</td><td>Yeux ressortant des orbites.</td></tr>
+<tr><td>Colobome irien / palpébral / rétinien</td><td>Aspect en trou de serrure.</td></tr>
+<tr><td>Hétérochromie irienne / iris stellaire</td><td>Anomalie de coloration de l’iris.</td></tr>
+</tbody>
+</table>
+<div class="callout warn"><strong>Piège majeur :</strong> hypertélorisme = distance interpupillaire augmentée ; télécanthus = distance entre canthi internes augmentée, sans forcément augmenter la distance entre pupilles.</div>
+
+<h3>Fentes palpébrales et ptosis</h3>
+<ul>
+<li>On trace une ligne virtuelle entre les canthi.</li>
+<li>Normalement, la ligne est horizontale et passe par les canthi internes et externes.</li>
+<li>Les fentes peuvent être obliques en bas et en dehors ou en haut et en dehors.</li>
+<li><strong>Ptosis :</strong> chute de la paupière supérieure ; il faut que la paupière cache une partie de la pupille.</li>
+</ul>
+</section>
+
+<section id="periorbitaire">
+<h2>12. Région périorbitaire : épicanthus</h2>
+<div class="callout"><strong>Épicanthus :</strong> repli cutané vertical entre les deux paupières masquant le point lacrymal interne.</div>
+<table>
+<thead><tr><th>Type</th><th>Point de départ</th></tr></thead>
+<tbody>
+<tr><td>Palpebralis</td><td>Paupière supérieure.</td></tr>
+<tr><td>Tarsalis</td><td>Un peu plus haut / paupière supérieure selon le corrigé.</td></tr>
+<tr><td>Inversus</td><td>Paupière inférieure.</td></tr>
+</tbody>
+</table>
+<div class="callout warn"><strong>Piège :</strong> l’épicanthus ne doit pas être confondu avec un hypertélorisme.</div>
+</section>
+
+<section id="nez-bouche">
+<h2>13. Nez, bouche, fentes, palais et dents</h2>
+<h3>Nez</h3>
+<ul>
+<li>Parties à décrire : racine, arête, pointe, narines, columelle, ailes du nez.</li>
+<li>En génétique, on décrit précisément l’apparence pour pouvoir associer certains traits à un syndrome.</li>
+</ul>
+
+<h3>Bouche</h3>
+<ul>
+<li>L’écart entre les deux angles de la bouche correspond physiologiquement à l’écart interpupillaire.</li>
+<li><strong>Microstomie :</strong> bouche très petite.</li>
+<li><strong>Macrostomie :</strong> bouche très grande.</li>
+</ul>
+
+<h3>Fentes</h3>
+<table>
+<thead><tr><th>Type</th><th>Remarque</th></tr></thead>
+<tbody>
+<tr><td>Fente labiale</td><td>Uni- ou bilatérale, rarement médiale.</td></tr>
+<tr><td>Fente labio-palatine</td><td>Uni- ou bilatérale.</td></tr>
+<tr><td>Fente palatine</td><td>Défaut de fermeture médiale du palais.</td></tr>
+<tr><td>Luette bifide</td><td>Pas d’impact particulier dans le cours.</td></tr>
+</tbody>
+</table>
+
+<h3>Cavité buccale : palais et dents</h3>
+<ul>
+<li>Palais étroit : manque de place pour les dents, avec désorganisation dentaire.</li>
+<li>Diastème interincisif : espace important entre les dents.</li>
+<li>Anomalies de l’émail : peuvent être liées à des carences.</li>
+<li>Incisive centrale unique.</li>
+<li>Macrodontie : dents trop grosses.</li>
+</ul>
+</section>
+
+<section id="oreilles">
+<h2>14. Oreilles</h2>
+<ul>
+<li>L’oreille normale est légèrement inclinée vers l’arrière.</li>
+<li>Repère : une ligne horizontale depuis les canthi externes tombe physiologiquement au niveau du début de la branche montante de l’hélix.</li>
+<li>Oreille basse implantée : située sous ce repère.</li>
+<li>Oreille basse implantée souvent associée à une grande rotation postérieure.</li>
+<li>Fistules pré-hélicéennes : peuvent parfois s’infecter.</li>
+</ul>
+<div class="callout warn"><strong>Piège QCM :</strong> le repère horizontal arrive normalement sur la branche montante de l’hélix, pas sur le tragus.</div>
+</section>
+
+<section id="peau">
+<h2>15. Peau</h2>
+<table>
+<thead><tr><th>Élément</th><th>À observer</th></tr></thead>
+<tbody>
+<tr><td>Pigmentation</td><td>Comparer avec les autres membres de la famille.</td></tr>
+<tr><td>Mosaïcisme cutané</td><td>Hyperpigmentation suivant les lignes de Blaschko ; élément quasi certain d’une pathologie génétique dans le cours.</td></tr>
+<tr><td>Taches cutanées</td><td>Hyperpigmentées type café au lait ou hypopigmentées/blanches/achromiques ; valeur selon le nombre.</td></tr>
+<tr><td>Anomalies vasculaires</td><td>Angiome plan, livedo.</td></tr>
+<tr><td>Texture</td><td>Appréciée par la palpation : élasticité, dureté, relâchement.</td></tr>
+</tbody>
+</table>
+<ul>
+<li>Angiome plan : valeur pathologique selon la localisation.</li>
+<li>Livedo : marbrure ou réseau violet en maille, parfois physiologique chez les personnes frileuses.</li>
+<li>Cutis laxa : pathologie rare du tissu conjonctif avec relâchement excessif de la peau.</li>
+</ul>
+</section>
+
+<section id="phaneres">
+<h2>16. Phanères</h2>
+<table>
+<thead><tr><th>Structure</th><th>Ce qu’on décrit</th><th>Exemples</th></tr></thead>
+<tbody>
+<tr><td>Cheveux</td><td>Implantation, texture, couleur.</td><td>Turner : cou large + implantation basse ; Waardenburg : mèche blanche.</td></tr>
+<tr><td>Sourcils</td><td>Arquées, fournis, droits, fins, interrompus.</td><td>Synophris = monosourcil rejoignant la glabelle.</td></tr>
+<tr><td>Cils</td><td>Sens et implantation.</td><td>Trichiasis = cils poussant dans le mauvais sens ou au mauvais endroit.</td></tr>
+<tr><td>Ongles</td><td>Forme, stries, ponctuations, fragilité.</td><td>Koïlonychie, hippocratisme digital.</td></tr>
+</tbody>
+</table>
+<div class="callout orangebox"><strong>Piège :</strong> télécanthus + mèche blanche + couleur particulière des yeux = syndrome de Waardenburg ; implantation capillaire basse + cou large = Turner.</div>
+</section>
+
+<section id="t21">
+<h2>17. Syndrome de la trisomie 21</h2>
+<div class="callout"><strong>À connaître :</strong> dans 100 % des cas de trisomie 21, il existe une dysmorphie et une déficience intellectuelle, même si les signes dysmorphiques sont variables.</div>
+<table>
+<thead><tr><th>Zone</th><th>Dysmorphismes cités</th></tr></thead>
+<tbody>
+<tr><td>Général</td><td>Retard de croissance intra-utérin, petite taille autour de -2 DS, petite taille persistante.</td></tr>
+<tr><td>Crâne</td><td>Brachycéphalie.</td></tr>
+<tr><td>Visage</td><td>Visage rond et plat, hypoplasie des os propres du nez.</td></tr>
+<tr><td>Cou</td><td>Cou court avec excès de peau nucale, secondaire à hyperclarté nucale anténatale.</td></tr>
+<tr><td>Yeux</td><td>Fentes palpébrales en haut et en dehors, épicanthus.</td></tr>
+<tr><td>Nez</td><td>Racine du nez plate et déprimée, petit nez.</td></tr>
+<tr><td>Bouche</td><td>Protrusion de la langue liée à l’hypotonie faciale, lèvres épaissies.</td></tr>
+<tr><td>Oreilles</td><td>Petites et rondes.</td></tr>
+<tr><td>Mains/pieds</td><td>Mains carrées, trapues, petites ; clinodactylie du 5e doigt ; pli palmaire transverse unique ; sandal gap.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="xfragile">
+<h2>18. Syndrome de l’X fragile</h2>
+<div class="callout"><strong>Point clé :</strong> le syndrome de l’X fragile présente une grande variabilité clinique.</div>
+<table>
+<thead><tr><th>Zone</th><th>Caractéristiques principales</th></tr></thead>
+<tbody>
+<tr><td>Silhouette générale</td><td>Grande taille.</td></tr>
+<tr><td>Visage</td><td>Front haut et large, visage allongé et étroit, grandes oreilles décollées, menton proéminent.</td></tr>
+<tr><td>Cavité buccale</td><td>Palais ogival.</td></tr>
+<tr><td>Appareils génitaux externes</td><td>Macroorchidie post-pubertaire.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="flashcards">
+<h2>19. Flashcards express</h2>
+<div class="flashgrid">
+<div class="flash"><div class="q">1. Dysmorphologie ?</div><div class="a">Étude des anomalies morphologiques du développement embryonnaire.</div></div>
+<div class="flash"><div class="q">2. Anomalies majeures ?</div><div class="a">Environ 5 %, avec impact fonctionnel/social ou gestes thérapeutiques à risque.</div></div>
+<div class="flash"><div class="q">3. Anomalies mineures ?</div><div class="a">10–15 %, peu ou pas de conséquence hors esthétique.</div></div>
+<div class="flash"><div class="q">4. Anomalies primaires ?</div><div class="a">Malformations + dysplasies.</div></div>
+<div class="flash"><div class="q">5. Anomalies secondaires ?</div><div class="a">Déformations + disruptions.</div></div>
+<div class="flash"><div class="q">6. Association ?</div><div class="a">Combinaison récurrente d’AD sans cause connue.</div></div>
+<div class="flash"><div class="q">7. Séquence ?</div><div class="a">Combinaison d’AD secondaire à un trouble primitif.</div></div>
+<div class="flash"><div class="q">8. Syndrome ?</div><div class="a">Combinaison d’AD avec cause identifiée.</div></div>
+<div class="flash"><div class="q">9. Photos à prendre ?</div><div class="a">Face, profils, 4 extrémités, corps entier, signes particuliers, avec accord.</div></div>
+<div class="flash"><div class="q">10. Taille cible garçon ?</div><div class="a">(taille mère + taille père + 13) / 2.</div></div>
+<div class="flash"><div class="q">11. Taille cible fille ?</div><div class="a">(taille mère + taille père - 13) / 2.</div></div>
+<div class="flash"><div class="q">12. Rhizomélie ?</div><div class="a">Raccourcissement proximal.</div></div>
+<div class="flash"><div class="q">13. Mésomélie ?</div><div class="a">Raccourcissement moyen.</div></div>
+<div class="flash"><div class="q">14. Acromélie ?</div><div class="a">Raccourcissement distal.</div></div>
+<div class="flash"><div class="q">15. Micromélie ?</div><div class="a">Raccourcissement de toutes les portions.</div></div>
+<div class="flash"><div class="q">16. Phocomélie ?</div><div class="a">Extrémités présentes mais segment en amont absent.</div></div>
+<div class="flash"><div class="q">17. Syndactylie ?</div><div class="a">Anomalie de fusion des doigts ou orteils.</div></div>
+<div class="flash"><div class="q">18. Clinodactylie ?</div><div class="a">Courbure anormale, souvent du 5e doigt.</div></div>
+<div class="flash"><div class="q">19. Scaphocéphalie ?</div><div class="a">Fermeture prématurée de la suture sagittale.</div></div>
+<div class="flash"><div class="q">20. Trigonocéphalie ?</div><div class="a">Fermeture prématurée de la suture métopique.</div></div>
+<div class="flash"><div class="q">21. Brachycéphalie ?</div><div class="a">Fermeture prématurée de la suture coronale.</div></div>
+<div class="flash"><div class="q">22. Oxycéphalie ?</div><div class="a">Fermeture prématurée de toutes les sutures.</div></div>
+<div class="flash"><div class="q">23. Glabelle ?</div><div class="a">Repère entre les sourcils, à la racine du nez.</div></div>
+<div class="flash"><div class="q">24. Hypertélorisme ?</div><div class="a">Écart interpupillaire excessif.</div></div>
+<div class="flash"><div class="q">25. Télécanthus ?</div><div class="a">Écart excessif entre les canthi internes.</div></div>
+<div class="flash"><div class="q">26. Ptosis ?</div><div class="a">Chute de la paupière supérieure couvrant une partie de la pupille.</div></div>
+<div class="flash"><div class="q">27. Épicanthus ?</div><div class="a">Repli cutané vertical masquant le point lacrymal interne.</div></div>
+<div class="flash"><div class="q">28. Microstomie ?</div><div class="a">Bouche très petite.</div></div>
+<div class="flash"><div class="q">29. Macrostomie ?</div><div class="a">Bouche très grande.</div></div>
+<div class="flash"><div class="q">30. Luette bifide ?</div><div class="a">Pas d’impact particulier dans le cours.</div></div>
+<div class="flash"><div class="q">31. Oreille basse : repère ?</div><div class="a">Ligne depuis les canthi externes vers la branche montante de l’hélix.</div></div>
+<div class="flash"><div class="q">32. Lignes de Blaschko ?</div><div class="a">Mosaïcisme cutané, élément très évocateur de pathologie génétique.</div></div>
+<div class="flash"><div class="q">33. Cutis laxa ?</div><div class="a">Relâchement excessif de la peau.</div></div>
+<div class="flash"><div class="q">34. Turner : phanères ?</div><div class="a">Cou large + implantation capillaire basse.</div></div>
+<div class="flash"><div class="q">35. Waardenburg ?</div><div class="a">Mèche blanche + télécanthus marqué + couleur particulière des yeux.</div></div>
+<div class="flash"><div class="q">36. Trisomie 21 : crâne ?</div><div class="a">Brachycéphalie.</div></div>
+<div class="flash"><div class="q">37. Trisomie 21 : mains/pieds ?</div><div class="a">Mains carrées, clinodactylie V, pli palmaire unique, sandal gap.</div></div>
+<div class="flash"><div class="q">38. X fragile : visage ?</div><div class="a">Front haut, visage allongé, grandes oreilles décollées, menton proéminent.</div></div>
+<div class="flash"><div class="q">39. X fragile : taille ?</div><div class="a">Grande taille.</div></div>
+<div class="flash"><div class="q">40. X fragile : OGE ?</div><div class="a">Macroorchidie post-pubertaire.</div></div>
+</div>
+</section>
+
+<section class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>Dysmorphologie = description des anomalies morphologiques du développement embryonnaire.</strong> Les anomalies sont majeures ou mineures, primaires ou secondaires. Primaires = <strong>malformations/dysplasies</strong>, secondaires = <strong>déformations/disruptions</strong>. L’examen morphologique décrit sans conclure trop vite : auxologie, silhouette, proportions, rachis, membres, extrémités, crâne, face, yeux, oreilles, peau et phanères. Les gros pièges : <strong>hypertélorisme ≠ télécanthus</strong>, <strong>rhizomélie/mésomélie/acromélie/micromélie</strong>, et les sutures crâniennes. Deux syndromes à connaître : <strong>trisomie 21</strong> et <strong>X fragile</strong>.</p>
+</section>
+
+</main>
+</body>
+</html>
