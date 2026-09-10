@@ -1,960 +1,998 @@
+export const meta = {
+title: 'Introduction à la génétique',
+}
+
 // Source du cours : 
-export const introductionGenetiqueQuestions = [
+
+export default [
 {
-id: 2,
-type: "QCM",
-question: "Concernant le génome humain, quelle proposition est exacte ?",
+id: 1,
+type: 'QCM',
+question: "Concernant l’organisation de l’UE de génétique médicale en DFGSM3, quelle proposition est exacte ?",
 options: [
 {
-text: "Le génome humain représente environ 3,2 Mb",
-correct: false,
-correction: "Aïe frérot 😭 T’as perdu trois zéros en route. Le génome humain fait environ 3,2 Gb, soit 3,2 milliards de nucléotides."
-},
-{
-text: "Environ 1 à 2 % du génome humain est codant pour des protéines",
+text: "L’UE comporte 20 heures de CM, vaut 4 ECTS et possède un coefficient 1",
 correct: true,
-correction: "Oui chef 🧠 Seulement 1 à 2 % du génome code pour des protéines. Tout ce bazar pour si peu de séquences codantes, magnifique."
+correction: "Oui boss 🧠 20 h de CM, 4 ECTS, coeff 1 : le petit package administratif du cours."
 },
 {
-text: "Environ 80 % du génome humain est codant pour des protéines",
+text: "L’UE comporte 13 heures de CM en DFGSM3",
 correct: false,
-correction: "Non 💀 80 % du génome est transcrit, pas codant. Le codant, c’est seulement 1 à 2 %."
+correction: "Non chef 😭 Les 13 heures concernent les étudiants de L2 maïeutique."
 },
 {
-text: "La majorité du génome humain n’est ni transcrite ni codante",
+text: "L’examen terminal dure 2 heures",
 correct: false,
-correction: "Non chef. Le cours précise qu’environ 80 % du génome est quand même transcrit, même si seulement 1 à 2 % code des protéines."
+correction: "Non frérot ⏱️ L’examen terminal écrit dure 1 heure."
 },
 {
-text: "1 Gb correspond à un million de nucléotides",
+text: "La session de rattrapage est obligatoirement orale",
 correct: false,
-correction: "Non frérot 😭 1 Gb = 1 milliard de nucléotides. Un million, c’est 1 Mb."
+correction: "Non chef. Le rattrapage est également un examen écrit sous forme de QRM pendant 1 heure."
+},
+{
+text: "L’UE est évaluée exclusivement par des questions rédactionnelles longues",
+correct: false,
+correction: "Non 😭 Le cours indique un examen terminal écrit sous forme de QRM."
 }
 ],
-explanation: "Le génome humain contient environ 3,2 milliards de nucléotides. Seuls 1 à 2 % sont codants pour des protéines, alors qu’environ 80 % du génome est transcrit."
+explanation: "En DFGSM3, l’UE comprend 20 heures de CM, 4 ECTS et un coefficient 1. L’examen terminal et le rattrapage sont des épreuves écrites de QRM d’une durée d’une heure."
+},
+{
+id: 2,
+type: 'QCM',
+question: "Quelle valeur correspond à la taille du génome humain haploïde donnée dans le cours ?",
+options: [
+{
+text: "Environ 3,2 millions de nucléotides",
+correct: false,
+correction: "Non chef 😭 Là t’as perdu trois ordres de grandeur en chemin."
+},
+{
+text: "Environ 3,2 milliards de nucléotides",
+correct: true,
+correction: "Oui boss 🧠 Le cours donne 3,2 milliards de nucléotides pour un ADN humain haploïde."
+},
+{
+text: "Environ 32 milliards de nucléotides",
+correct: false,
+correction: "Non frérot. Tu viens de rajouter un zéro gratuit."
+},
+{
+text: "Environ 320 000 nucléotides",
+correct: false,
+correction: "Non chef 💀 Beaucoup, beaucoup trop petit."
+},
+{
+text: "Environ 3,2 milliers de nucléotides",
+correct: false,
+correction: "Non 😭 À ce stade ton génome tient sur un ticket de caisse."
+}
+],
+explanation: "Le génome humain haploïde contient environ 3,2 milliards de nucléotides, soit un ordre de grandeur de 3,2 Gb."
 },
 {
 id: 3,
-type: "QCM",
-question: "À propos des anomalies chromosomiques de nombre, quelle proposition est exacte ?",
+type: 'QCM',
+question: "Quelle proportion du génome humain correspond approximativement à des séquences codantes pour des protéines ?",
 options: [
 {
-text: "La formule chromosomique reste obligatoirement à 46 chromosomes",
-correct: false,
-correction: "Non chef 😭 Ça correspond plutôt aux anomalies de structure. Dans une anomalie de nombre, un ou plusieurs chromosomes sont perdus ou gagnés."
-},
-{
-text: "Elles correspondent uniquement à des substitutions de nucléotides",
-correct: false,
-correction: "Non 💀 Là tu zoomes beaucoup trop : les substitutions sont des variations nucléotidiques."
-},
-{
-text: "Un ou plusieurs chromosomes peuvent être perdus ou gagnés",
+text: "1 à 2 %",
 correct: true,
-correction: "Oui 🧠 C’est exactement le principe : la formule chromosomique n’est plus équilibrée."
+correction: "Oui boss 🧠 Seulement 1 à 2 % du génome est codant pour des protéines."
 },
 {
-text: "Elles correspondent uniquement aux inversions chromosomiques",
+text: "10 à 15 %",
 correct: false,
-correction: "Non chef. Une inversion modifie la structure d’un chromosome sans nécessairement modifier leur nombre."
+correction: "Non chef 😭 C’est déjà beaucoup trop."
 },
 {
-text: "Elles sont toujours invisibles au caryotype",
+text: "Environ 50 %",
 correct: false,
-correction: "Non frérot 😭 Le caryotype sert justement notamment à dénombrer les chromosomes et repérer des anomalies chromosomiques."
+correction: "Non frérot 💀 Le génome codant est vraiment une toute petite fraction."
+},
+{
+text: "Environ 80 %",
+correct: false,
+correction: "Non chef. Environ 80 % est transcrit en ARN, mais pas forcément codant."
+},
+{
+text: "Environ 98 %",
+correct: false,
+correction: "Non 😭 C’est pratiquement l’inverse de ce qu’il faut retenir."
 }
 ],
-explanation: "Les anomalies chromosomiques de nombre correspondent à un gain ou à une perte d’un ou plusieurs chromosomes, contrairement aux anomalies de structure où le nombre total peut rester à 46."
+explanation: "Seulement 1 à 2 % des séquences nucléotidiques codent pour des protéines. En revanche, environ 80 % du génome est transcrit en ARN."
 },
 {
 id: 4,
-type: "QCM",
+type: 'QCM',
+question: "À propos des variations du génome humain, quelle proposition est exacte ?",
+options: [
+{
+text: "Toute variation génétique entraîne obligatoirement un phénotype pathologique",
+correct: false,
+correction: "Non chef 😭 Variation ne veut pas dire maladie. C’est justement un point sur lequel le cours insiste."
+},
+{
+text: "Un polymorphisme est une variation du génome qui n’entraîne pas forcément un phénotype pathologique",
+correct: true,
+correction: "Oui boss 🧠 Une variation peut parfaitement participer à la diversité humaine sans rendre malade."
+},
+{
+text: "Le génome humain est identique chez tous les individus",
+correct: false,
+correction: "Non frérot 💀 Sa variabilité est justement à l’origine d’une partie de la diversité de l’espèce humaine."
+},
+{
+text: "Les variations génétiques ne peuvent exister qu’à l’échelle des chromosomes",
+correct: false,
+correction: "Non chef. Elles peuvent être grossières au niveau chromosomique ou beaucoup plus fines au niveau de la séquence d’ADN."
+},
+{
+text: "Les variations de quelques nucléotides sont toujours visibles au microscope optique",
+correct: false,
+correction: "Non 😭 Le microscope optique sert aux anomalies beaucoup plus grandes."
+}
+],
+explanation: "Le génome humain est variable. Une variation n’est pas nécessairement pathogène et peut être observée à différentes échelles, du chromosome au nucléotide."
+},
+{
+id: 5,
+type: 'QCM',
+question: "Parmi les anomalies chromosomiques suivantes, laquelle correspond à un Structural Variant équilibré selon le cours ?",
+options: [
+{
+text: "Une délétion",
+correct: false,
+correction: "Non chef 😭 Une délétion entraîne une perte de matériel chromosomique, donc elle est déséquilibrée."
+},
+{
+text: "Une duplication",
+correct: false,
+correction: "Non frérot. Une duplication ajoute du matériel, donc déséquilibrée."
+},
+{
+text: "Une translocation sans perte ni gain de matériel",
+correct: true,
+correction: "Oui boss 🧠 Un déplacement sans perte ni gain correspond à un SV équilibré."
+},
+{
+text: "Une microdélétion",
+correct: false,
+correction: "Non chef 💀 Perte de matériel = déséquilibré."
+},
+{
+text: "Une microduplication",
+correct: false,
+correction: "Non. Gain de matériel = déséquilibré."
+}
+],
+explanation: "Les SV équilibrés correspondent à des déplacements de matériel sans perte ni gain, comme les translocations ou inversions. Les délétions et duplications sont déséquilibrées."
+},
+{
+id: 6,
+type: 'QCM',
+question: "Combien de variations ponctuelles ou SNV sont retrouvées approximativement par individu selon le cours ?",
+options: [
+{
+text: "Entre 3 et 4 milliers",
+correct: false,
+correction: "Non chef 😭 Là t’es beaucoup trop bas."
+},
+{
+text: "Entre 30 000 et 40 000",
+correct: false,
+correction: "Non frérot. Toujours pas assez."
+},
+{
+text: "Entre 300 000 et 400 000",
+correct: false,
+correction: "Non chef. Encore un zéro à trouver."
+},
+{
+text: "Entre 3 et 4 millions",
+correct: true,
+correction: "Oui boss 🧬 On porte chacun environ 3 à 4 millions de variations ponctuelles ou SNV."
+},
+{
+text: "Plus de 300 millions",
+correct: false,
+correction: "Non 💀 Là tu transformes toute ta séquence en festival de variants."
+}
+],
+explanation: "Le cours indique environ 3 à 4 millions de variations ponctuelles ou SNV par individu."
+},
+{
+id: 7,
+type: 'QCM',
 question: "Quelle est approximativement la résolution du caryotype indiquée dans le cours ?",
 options: [
 {
-text: "5 à 10 nucléotides",
+text: "5 à 10 paires de bases",
 correct: false,
-correction: "Mais frr 😭 Là tu demandes au caryotype de voir quasiment une mutation ponctuelle. Il n’a absolument pas cette résolution."
-},
-{
-text: "500 à 1000 nucléotides",
-correct: false,
-correction: "Non chef. Toujours beaucoup trop fin pour un caryotype."
+correction: "Non chef 😭 Le caryotype est très loin d’avoir une résolution nucléotidique."
 },
 {
 text: "5 à 10 kb",
 correct: false,
-correction: "Non 💀 On est encore mille fois trop petit."
+correction: "Non frérot. Toujours beaucoup trop petit."
 },
 {
 text: "5 à 10 Mb",
 correct: true,
-correction: "Oui chef 🧠 La résolution du caryotype est de l’ordre de 5 à 10 Mb, soit environ la taille d’une bande chromosomique."
+correction: "Oui boss 🧠 La résolution du caryotype est de l’ordre d’une bande chromosomique, soit environ 5 à 10 Mb."
 },
 {
-text: "500 à 1000 Mb",
+text: "50 à 100 pb",
 correct: false,
-correction: "Non frérot 😭 Là ton caryotype verrait à peine un chromosome entier."
+correction: "Non chef 💀 On n’est pas sur du séquençage."
+},
+{
+text: "500 à 1000 Gb",
+correct: false,
+correction: "Non 😭 Là ton examen voit à peine la planète entière."
 }
 ],
-explanation: "Le caryotype est une technique relativement peu résolutive : sa résolution est de l’ordre de 5 à 10 Mb, correspondant approximativement à la taille d’une bande chromosomique."
+explanation: "Le caryotype permet d’observer des anomalies chromosomiques de grande taille. Sa résolution est de l’ordre de 5 à 10 Mb."
 },
 {
-id: 5,
-type: "QCM",
-question: "Parmi les chromosomes suivants, lequel est réellement le plus petit selon le cours ?",
+id: 8,
+type: 'QCM',
+question: "Concernant la taille réelle des autosomes humains, quelle proposition est exacte ?",
 options: [
 {
-text: "Le chromosome 1",
+text: "Le chromosome 22 est plus petit que le chromosome 21",
 correct: false,
-correction: "Non chef 😭 Le chromosome 1 est au contraire le plus grand, avec environ 250 millions de nucléotides."
+correction: "Non chef 😭 C’est précisément l’un des pièges historiques : le chromosome 21 est plus petit."
 },
 {
-text: "Le chromosome 10",
-correct: false,
-correction: "Non. Le cours précise seulement que le chromosome 10 est plus petit que le 11."
-},
-{
-text: "Le chromosome 19",
-correct: false,
-correction: "Non frérot. Il est bien plus petit que le 20, mais ce n’est toujours pas le plus petit."
-},
-{
-text: "Le chromosome 21",
+text: "Le chromosome 21 est le plus petit autosome, autour de 47 Mb",
 correct: true,
-correction: "Oui chef 🧠 Piège relou classique : le plus petit chromosome n’est pas le 22 mais le 21."
+correction: "Oui boss 🧠 Le chromosome 21 est donné comme le plus petit autosome, autour de 47 Mb."
 },
 {
-text: "Le chromosome 22",
+text: "Le chromosome 1 est plus petit que le chromosome 21",
 correct: false,
-correction: "Aïe 😭 C’est précisément l’erreur historique à retenir : le chromosome 21 est en réalité plus petit que le 22."
+correction: "Non frérot 💀 Le chromosome 1 est au contraire le plus grand, autour de 250 Mb."
+},
+{
+text: "Le chromosome 10 est réellement plus grand que le chromosome 11",
+correct: false,
+correction: "Non chef. Le séquençage a montré que le chromosome 10 est en réalité plus petit que le 11."
+},
+{
+text: "Le chromosome 19 est réellement plus grand que le chromosome 20",
+correct: false,
+correction: "Non 😭 Même piège : le 19 est en réalité plus petit que le 20."
 }
 ],
-explanation: "Même si les chromosomes ont historiquement été classés par taille, quelques erreurs persistent dans la numérotation : notamment, le chromosome 21 est plus petit que le chromosome 22."
+explanation: "Le classement historique par taille comporte quelques exceptions. Le chromosome 21 est notamment plus petit que le 22 et mesure environ 47 Mb."
 },
 {
-id: 6,
-type: "QCM",
-question: "Quelle définition correspond au locus d’un gène ?",
+id: 9,
+type: 'QCM',
+question: "Quelle définition correspond au locus ?",
 options: [
 {
-text: "La totalité du matériel génétique d’un individu",
+text: "Une version particulière d’un gène",
 correct: false,
-correction: "Non chef 😭 Ça, c’est le génome."
+correction: "Non chef 😭 Ça, c’est un allèle."
 },
 {
-text: "L’unité d’information génétique",
-correct: false,
-correction: "Presque, mais non 🧠 Ça correspond au gène lui-même."
-},
-{
-text: "La position d’un gène sur un chromosome, définie par une coordonnée génomique",
+text: "La position connue d’un gène sur un chromosome",
 correct: true,
-correction: "Oui chef 🎯 Locus = l’adresse du gène sur le chromosome. En gros, son GPS génomique."
+correction: "Oui boss 🎯 Locus = l’adresse du gène sur le chromosome."
 },
 {
 text: "L’ensemble des caractères observés chez un individu",
 correct: false,
-correction: "Non frérot. Ça, c’est le phénotype."
+correction: "Non frérot. Ça correspond au phénotype."
 },
 {
-text: "Une version pathologique obligatoire d’un gène",
+text: "La constitution génétique complète d’un individu uniquement",
 correct: false,
-correction: "Non 😭 Ça se rapproche d’un allèle mutant ou morbide, pas du locus."
+correction: "Non chef. Ça se rapproche du génotype, pas du locus."
+},
+{
+text: "Un chromosome sexuel",
+correct: false,
+correction: "Non 💀 Les chromosomes sexuels sont les gonosomes."
 }
 ],
-explanation: "Le locus correspond à la position précise d’un gène sur un chromosome, déterminée par une coordonnée génomique."
-},
-{
-id: 7,
-type: "QCM",
-question: "Quelle proposition définit correctement le génotype ?",
-options: [
-{
-text: "Il correspond exclusivement aux symptômes visibles d’un individu",
-correct: false,
-correction: "Non frérot 😭 Ça, c’est le phénotype."
-},
-{
-text: "Il correspond à la constitution génétique de la cellule ou de l’individu, notamment à la configuration des allèles à un locus donné",
-correct: true,
-correction: "Oui chef 🧠 Le génotype, c’est la configuration génétique. Le phénotype, c’est ce que ça donne concrètement chez l’individu."
-},
-{
-text: "Il correspond uniquement aux anomalies génétiques pathogènes",
-correct: false,
-correction: "Non. Un génotype ne désigne pas uniquement les mutations pathologiques."
-},
-{
-text: "Il correspond à la position d’un gène sur un chromosome",
-correct: false,
-correction: "Non chef 😭 Ça, c’est le locus. Faut arrêter de mélanger tout le vocabulaire maintenant."
-},
-{
-text: "Il correspond uniquement aux caractères observables dus à l’environnement",
-correct: false,
-correction: "Non 💀 Le cours définit bien le génotype comme la constitution génétique."
-}
-],
-explanation: "Le génotype est la constitution génétique de l’individu ou de la cellule, notamment la configuration des allèles à un locus donné. Le phénotype correspond aux caractères observés."
-},
-{
-id: 8,
-type: "QCM",
-question: "Quelle situation correspond à un hétérozygote composite ?",
-options: [
-{
-text: "Deux allèles sauvages identiques",
-correct: false,
-correction: "Non frérot 😭 Ça, c’est un homozygote sauvage."
-},
-{
-text: "Deux mutations identiques sur les deux chromosomes",
-correct: false,
-correction: "Non chef. Là tu décris plutôt un homozygote mutant."
-},
-{
-text: "Un allèle sauvage et un allèle mutant",
-correct: false,
-correction: "Non 🧠 Ça correspond à un hétérozygote simple."
-},
-{
-text: "Deux allèles mutants différents dans le même gène, portés en trans",
-correct: true,
-correction: "Oui chef 🔥 Deux mutations différentes du même gène, chacune sur un allèle différent : ça, c’est l’hétérozygotie composite."
-},
-{
-text: "Deux mutations différentes portées obligatoirement en cis sur le même allèle",
-correct: false,
-correction: "Non frérot 😭 En composite, elles sont en trans. En cis = les deux mutations sont sur le même allèle."
-}
-],
-explanation: "Un hétérozygote composite porte deux mutations différentes dans le même gène, en trans. La mucoviscidose est donnée dans le cours comme exemple possible de cette situation."
-},
-{
-id: 9,
-type: "QCM",
-question: "Quelle définition correspond à un individu hémizygote ?",
-options: [
-{
-text: "Il possède deux allèles identiques à un locus donné",
-correct: false,
-correction: "Non chef 😭 Ça, c’est un homozygote."
-},
-{
-text: "Il possède deux allèles différents à un locus donné",
-correct: false,
-correction: "Non frérot. Ça correspond à un hétérozygote."
-},
-{
-text: "Il possède un seul allèle à un locus donné",
-correct: true,
-correction: "Oui chef 🧠 Hémizygote = un seul allèle. Le grand classique, c’est un gène porté par le chromosome X chez un garçon."
-},
-{
-text: "Il possède nécessairement trois copies d’un gène",
-correct: false,
-correction: "Non 💀 On vient littéralement de dire un seul allèle, pas trois."
-},
-{
-text: "Il ne possède aucun chromosome sexuel",
-correct: false,
-correction: "Non chef 😭 L’hémizygotie n’a absolument pas cette définition."
-}
-],
-explanation: "Un individu hémizygote ne possède qu’un seul allèle à un locus donné. Le cours cite notamment le chromosome X chez le garçon et certaines hémizygoties fonctionnelles."
+explanation: "Le locus correspond à la position d’un gène sur un chromosome. Les allèles représentent différentes versions de la séquence d’ADN à ce locus."
 },
 {
 id: 10,
-type: "QCM",
-question: "Si le phénotype d’un individu AB est intermédiaire entre les phénotypes AA et BB, comment les allèles A et B sont-ils qualifiés ?",
+type: 'QCM',
+question: "Quelle situation correspond à un hétérozygote composite ?",
 options: [
 {
-text: "Dominants tous les deux",
+text: "Deux allèles strictement identiques",
 correct: false,
-correction: "Non chef. La dominance implique que l’hétérozygote ressemble à l’un des homozygotes."
+correction: "Non chef 😭 Deux allèles identiques = homozygote."
 },
 {
-text: "Récessifs tous les deux",
+text: "Un allèle normal et un allèle muté",
 correct: false,
-correction: "Non frérot 😭 Ça ne décrit pas la situation intermédiaire."
+correction: "Non frérot. Ça correspond à un hétérozygote simple."
+},
+{
+text: "Deux allèles différents et anormaux au même locus",
+correct: true,
+correction: "Oui boss 🧠 Hétérozygote composite = deux allèles mutés différents."
+},
+{
+text: "Un seul allèle présent au locus",
+correct: false,
+correction: "Non chef. Un seul allèle = hémizygote."
+},
+{
+text: "Deux allèles sauvages identiques obligatoirement",
+correct: false,
+correction: "Non 💀 Ça décrit plutôt un homozygote sain."
+}
+],
+explanation: "Un hétérozygote composite possède deux allèles anormaux différents. Le cours cite notamment la mucoviscidose comme exemple."
+},
+{
+id: 11,
+type: 'QCM',
+question: "Quelle situation correspond à une hémizygotie ?",
+options: [
+{
+text: "La présence de deux allèles différents à un locus",
+correct: false,
+correction: "Non chef 😭 Ça, c’est une hétérozygotie."
+},
+{
+text: "La présence de deux allèles strictement identiques",
+correct: false,
+correction: "Non frérot. Ça, c’est l’homozygotie."
+},
+{
+text: "La présence d’un seul allèle à un locus donné",
+correct: true,
+correction: "Oui boss 🧠 Hémizygote = un seul allèle disponible au locus."
+},
+{
+text: "La présence obligatoire de trois copies d’un gène",
+correct: false,
+correction: "Non chef 💀 C’est littéralement l’inverse de la définition."
+},
+{
+text: "La présence de deux chromosomes X chez un garçon",
+correct: false,
+correction: "Non. Le cours cite justement le chromosome X du garçon comme situation classique d’hémizygotie."
+}
+],
+explanation: "L’hémizygotie correspond à la présence d’un seul allèle à un locus. Le chromosome X chez le garçon en est un exemple classique."
+},
+{
+id: 12,
+type: 'QCM',
+question: "Si le phénotype d’un individu AB est intermédiaire entre les phénotypes AA et BB, comment sont qualifiés les allèles A et B ?",
+options: [
+{
+text: "Dominants",
+correct: false,
+correction: "Non chef. En dominance, l’hétérozygote ressemble à l’un des homozygotes."
+},
+{
+text: "Récessifs",
+correct: false,
+correction: "Non frérot 😭 Ce n’est pas ce que décrit un phénotype intermédiaire."
 },
 {
 text: "Semi-dominants",
 correct: true,
-correction: "Oui chef 🌹 Rouge + blanc = rose dans l’exemple du cours. Phénotype intermédiaire = semi-dominance."
+correction: "Oui boss 🌸 Phénotype intermédiaire = semi-dominance."
 },
 {
-text: "Co-dominants",
+text: "Codominants",
 correct: false,
-correction: "Non 🧠 En co-dominance, les deux phénotypes coexistent simultanément, ils ne fusionnent pas en un intermédiaire."
+correction: "Non chef. En codominance, les deux phénotypes s’expriment en même temps."
 },
 {
 text: "Hémizygotes",
 correct: false,
-correction: "Non frérot 💀 Là tu mélanges un mode d’expression allélique avec un nombre d’allèles."
+correction: "Non 💀 Là tu mélanges statut allélique et relation de dominance."
 }
 ],
-explanation: "Lorsque l’hétérozygote AB présente un phénotype intermédiaire entre AA et BB, les allèles sont dits semi-dominants. En co-dominance, les deux phénotypes coexistent."
-},
-{
-id: 11,
-type: "QCM",
-question: "Quelle définition correspond à la pénétrance d’une anomalie génétique ?",
-options: [
-{
-text: "Le degré de sévérité de la maladie chez un individu",
-correct: false,
-correction: "Non chef 😭 Ça correspond plutôt à l’expressivité."
-},
-{
-text: "Le pourcentage d’individus malades porteurs de l’anomalie parmi l’ensemble des individus porteurs de cette anomalie",
-correct: true,
-correction: "Oui chef 🧠 C’est exactement la formule du cours. Porteurs malades / tous les porteurs × 100."
-},
-{
-text: "Le nombre de mutations différentes présentes dans un gène",
-correct: false,
-correction: "Non frérot. Rien à voir avec la pénétrance."
-},
-{
-text: "Le nombre de chromosomes présents dans une cellule",
-correct: false,
-correction: "Non 💀 Là on est revenu au caryotype sans prévenir."
-},
-{
-text: "La proportion d’individus non porteurs qui développent la maladie",
-correct: false,
-correction: "Non chef. La pénétrance se calcule parmi les individus porteurs du génotype morbide."
-}
-],
-explanation: "La pénétrance correspond au pourcentage d’individus malades parmi les individus porteurs de l’anomalie génétique. À 100 %, elle est complète ; en dessous de 100 %, elle est incomplète."
-},
-{
-id: 12,
-type: "QCM",
-question: "Quelle proposition décrit correctement l’expressivité variable ?",
-options: [
-{
-text: "Aucun porteur de l’anomalie ne présente de symptôme",
-correct: false,
-correction: "Non frérot 😭 Là la maladie ne s’exprime juste pas."
-},
-{
-text: "Tous les individus porteurs présentent exactement les mêmes symptômes avec la même sévérité",
-correct: false,
-correction: "Non chef. C’est précisément l’inverse de l’expressivité variable."
-},
-{
-text: "La maladie s’exprime chez les individus porteurs, mais avec un degré de sévérité ou des signes variables",
-correct: true,
-correction: "Oui chef 🧠 Même anomalie, mais pas forcément le même tableau clinique ni la même sévérité."
-},
-{
-text: "Elle correspond obligatoirement à une pénétrance incomplète",
-correct: false,
-correction: "Non 💀 Le cours donne même l’ostéogenèse imparfaite comme exemple d’expressivité variable avec pénétrance complète."
-},
-{
-text: "Elle signifie que l’anomalie génétique est absente chez certains individus malades",
-correct: false,
-correction: "Non chef 😭 Ça n’a rien à voir avec la définition."
-}
-],
-explanation: "L’expressivité variable signifie que l’anomalie génétique s’exprime avec des manifestations ou une sévérité différentes selon les individus. Elle peut coexister avec une pénétrance complète ou incomplète."
+explanation: "La semi-dominance produit un phénotype intermédiaire chez l’hétérozygote. En codominance, les deux caractères associés aux homozygotes sont exprimés simultanément."
 },
 {
 id: 13,
-type: "QCM",
-question: "Quel est le premier geste à réaliser lors d’une consultation de génétique médicale selon le cours ?",
+type: 'QCM',
+question: "Quelle définition correspond à la pénétrance d’un génotype morbide ?",
 options: [
 {
-text: "Prescrire immédiatement un séquençage du génome entier",
+text: "La sévérité des symptômes chez un individu atteint",
 correct: false,
-correction: "Non frérot 😭 On ne balance pas directement 3,2 milliards de bases dans la machine avant même de parler au patient."
+correction: "Non chef 😭 Ça correspond davantage à l’expressivité."
 },
 {
-text: "Établir un arbre généalogique",
+text: "La proportion d’individus malades parmi les individus porteurs du même génotype morbide",
 correct: true,
-correction: "Oui chef 🌳 Premier réflexe : construire l’arbre généalogique pour étudier la transmission de la maladie dans la famille."
+correction: "Oui boss 🧠 Porteurs malades divisés par tous les porteurs, exprimé en pourcentage."
 },
 {
-text: "Réaliser systématiquement un caryotype chez tous les apparentés",
+text: "Le nombre total de mutations portées par un patient",
 correct: false,
-correction: "Non chef. Les analyses viennent après la formulation d’hypothèses à partir notamment de l’histoire familiale."
+correction: "Non frérot. Aucun rapport avec la pénétrance."
 },
 {
-text: "Prescrire obligatoirement un diagnostic préimplantatoire",
+text: "La fréquence d’un chromosome dans la population",
 correct: false,
-correction: "Non 💀 Le diagnostic préimplantatoire peut faire partie du conseil génétique dans certaines situations, ce n’est pas le premier geste universel."
+correction: "Non chef 💀 On a complètement quitté le sujet."
 },
 {
-text: "Commencer immédiatement un traitement génétique",
+text: "La proportion de patients porteurs d’une anomalie parmi les individus non porteurs",
 correct: false,
-correction: "Non frérot 😭 Le cours précise justement que les possibilités thérapeutiques restent limitées pour de nombreuses anomalies constitutionnelles."
+correction: "Non. La pénétrance se calcule bien parmi les porteurs du génotype concerné."
 }
 ],
-explanation: "La première étape d’une consultation génétique est l’établissement d’un arbre généalogique afin d’étudier le mode de transmission et d’orienter ensuite les analyses génétiques."
+explanation: "La pénétrance exprime la proportion de personnes malades parmi les personnes porteuses du même génotype morbide. Elle est complète à 100 % et incomplète en dessous."
 },
 {
 id: 14,
-type: "QCM",
-question: "Quelle activité de génétique biologique s’intéresse principalement aux anomalies à l’échelle du chromosome ?",
+type: 'QCM',
+question: "Quelle proposition décrit correctement l’expressivité variable ?",
 options: [
 {
-text: "La génétique moléculaire",
+text: "Tous les porteurs d’un allèle morbide présentent obligatoirement exactement les mêmes signes",
 correct: false,
-correction: "Non chef 😭 La génétique moléculaire zoome plutôt sur la séquence de l’ADN et les anomalies à l’échelle des gènes."
+correction: "Non chef 😭 C’est justement l’inverse de l’expressivité variable."
 },
 {
-text: "La cytogénétique",
+text: "Un même allèle morbide peut se manifester par des signes différents selon les individus",
 correct: true,
-correction: "Oui chef 🧠 Cytogénétique = anomalies chromosomiques, avec notamment des pratiques de culture cellulaire."
+correction: "Oui boss 🧠 Même anomalie, mais tableau clinique différent d’une personne à l’autre."
 },
 {
-text: "L’oncologie médicale uniquement",
+text: "Elle signifie qu’aucun porteur du génotype ne développe la maladie",
 correct: false,
-correction: "Non frérot. L’oncogénétique est évoquée dans le cours, mais ce n’est pas la définition de la cytogénétique."
+correction: "Non frérot. Là tu parles plutôt d’absence de pénétrance."
 },
 {
-text: "La fœtopathologie exclusivement",
+text: "Elle correspond uniquement à une variation du nombre de chromosomes",
 correct: false,
-correction: "Non chef. La fœtopathologie est citée comme une FST possible."
+correction: "Non chef 💀 Rien à voir avec la définition."
 },
 {
-text: "La bio-informatique médicale exclusivement",
+text: "Elle est obligatoirement liée à l’âge",
 correct: false,
-correction: "Non 💀 La bio-informatique médicale est aussi citée parmi les FST, pas comme le champ étudiant directement les anomalies chromosomiques."
+correction: "Non. L’âge est surtout cité comme facteur pouvant modifier la pénétrance."
 }
 ],
-explanation: "La cytogénétique étudie les anomalies à l’échelle du chromosome. La génétique moléculaire s’intéresse davantage aux anomalies de séquence à l’échelle des gènes."
+explanation: "L’expressivité variable signifie qu’une même anomalie peut provoquer des manifestations différentes selon les individus. Le cours cite notamment l’ostéogenèse imparfaite."
 },
 {
 id: 15,
-type: "QCM",
-question: "À quel moment est réalisé le dépistage néonatal par test de Guthrie selon le cours ?",
+type: 'QCM',
+question: "Quelle proposition concernant la génétique médicale est exacte ?",
 options: [
 {
-text: "Immédiatement pendant l’accouchement",
+text: "Il s’agit d’une spécialité uniquement biologique",
 correct: false,
-correction: "Non chef 😭 Le bébé a quand même deux minutes pour arriver avant qu’on commence les QCM."
+correction: "Non chef 😭 La génétique médicale est une spécialité clinico-biologique."
 },
 {
-text: "Vers J2-J3 de vie",
+text: "Elle a été créée comme spécialité médicale en 1994",
 correct: true,
-correction: "Oui chef 👶🩸 Le dépistage est réalisé vers le deuxième ou troisième jour de vie."
+correction: "Oui boss 📅 Le cours indique 1994 pour la création de la spécialité."
 },
 {
-text: "Vers l’âge de 6 mois",
+text: "La cytogénétique étudie uniquement les protéines plasmatiques",
 correct: false,
-correction: "Non frérot. Beaucoup trop tard par rapport au dépistage néonatal décrit."
+correction: "Non frérot. La cytogénétique étudie les anomalies à l’échelle des chromosomes."
 },
 {
-text: "Uniquement à l’adolescence",
+text: "La génétique moléculaire étudie exclusivement l’architecture des chromosomes au microscope",
 correct: false,
-correction: "Non 💀 Le mot néonatal avait pourtant donné un indice assez massif."
+correction: "Non chef. Elle travaille à l’échelle des gènes."
 },
 {
-text: "Uniquement si des symptômes apparaissent",
+text: "La génétique médicale ne s’intéresse pas à la transmission familiale des maladies",
 correct: false,
-correction: "Non chef. Le principe est justement de dépister précocement certaines maladies graves mais traitables avant leurs conséquences."
+correction: "Non 💀 C’est justement un de ses grands objectifs."
 }
 ],
-explanation: "Le test de Guthrie est réalisé vers J2-J3 de vie. Le traitement précoce de certaines maladies dépistées peut considérablement améliorer leur pronostic."
+explanation: "La génétique médicale est une spécialité clinico-biologique créée en 1994. Elle associe activité clinique et laboratoire, notamment cytogénétique et génétique moléculaire."
 },
 {
 id: 16,
-type: "QRM",
-question: "À propos du génome humain, quelles propositions sont exactes ?",
+type: 'QRM',
+question: "Concernant l’organisation générale du génome humain, quelles propositions sont exactes ?",
 options: [
 {
-text: "Sa taille est d’environ 3,2 Gb",
+text: "Les nucléotides sont compactés dans les chromosomes grâce notamment aux histones",
 correct: true,
-correction: "Oui chef 🧠 3,2 Gb = environ 3,2 milliards de nucléotides."
+correction: "Oui boss 🧠 ADN + histones = nucléosomes, puis organisation chromosomique."
 },
 {
-text: "Environ 80 % du génome est transcrit",
+text: "Environ 80 % des séquences nucléotidiques sont transcrites en ARN",
 correct: true,
-correction: "Exact 🧬 Et pourtant seulement 1 à 2 % code des protéines. Beaucoup de transcription pour peu de protéines, quel rendement 😭."
+correction: "Exact chef 🧬 Transcrit ne veut pas dire codant : voilà le piège."
 },
 {
-text: "Environ 80 % du génome est codant pour des protéines",
+text: "Environ 80 % du génome code directement pour des protéines",
 correct: false,
-correction: "Non frérot 😭 80 % est transcrit. Le codant ne représente que 1 à 2 %."
+correction: "Non frérot 😭 Seulement 1 à 2 % est codant pour les protéines."
 },
 {
-text: "Seulement 1 à 2 % du génome est transcrit",
+text: "Le génome non codant n’est jamais transcrit",
 correct: false,
-correction: "Non chef. 1 à 2 %, c’est la partie codante pour les protéines."
+correction: "Non chef. Environ 78 % de l’ADN est justement décrit comme transcrit en ARN non codant."
 },
 {
-text: "Le génome humain mesure environ 3,2 Mb",
+text: "Une variation génétique entraîne forcément une maladie",
 correct: false,
-correction: "Non 💀 3,2 Gb, pas Mb. Trois ordres de grandeur dans la tronche."
+correction: "Non 💀 Variation et pathogénicité, ce n’est absolument pas synonyme."
 }
 ],
-explanation: "Le génome humain mesure environ 3,2 Gb. Environ 80 % est transcrit mais seulement 1 à 2 % est codant pour des protéines."
+explanation: "L’ADN humain est compacté grâce aux histones. Une grande partie du génome est transcrite en ARN, mais seulement 1 à 2 % est codante pour les protéines."
 },
 {
 id: 17,
-type: "QRM",
-question: "À propos des anomalies chromosomiques, quelles propositions sont exactes ?",
+type: 'QRM',
+question: "Concernant les Structural Variants, quelles propositions sont exactes ?",
 options: [
 {
-text: "Une anomalie chromosomique de nombre peut correspondre à la perte ou au gain d’un chromosome",
+text: "Une inversion peut être un SV équilibré",
 correct: true,
-correction: "Oui chef 🧠 Gain ou perte de chromosome = anomalie de nombre."
+correction: "Oui boss 🔄 Pas de perte ni de gain obligatoire : l’inversion peut être équilibrée."
 },
 {
-text: "Lors d’une anomalie chromosomique de structure, la formule chromosomique peut rester à 46 chromosomes",
+text: "Une duplication est un SV déséquilibré",
 correct: true,
-correction: "Oui 👌 La structure change, mais le nombre total de chromosomes peut rester normal."
+correction: "Exact chef 🧠 Duplication = gain de matériel chromosomique."
 },
 {
-text: "Une microduplication correspond à une petite perte de matériel chromosomique",
+text: "Une délétion est toujours classée parmi les SV équilibrés",
 correct: false,
-correction: "Non frérot 😭 Microduplication = petit gain. Microdélétion = petite perte."
+correction: "Non frérot 😭 Délétion = perte de matériel, donc déséquilibré."
 },
 {
-text: "Une translocation est classée parmi les anomalies nucléotidiques ponctuelles",
+text: "Une translocation implique obligatoirement une perte de matériel chromosomique",
 correct: false,
-correction: "Non chef 💀 Une translocation est une anomalie chromosomique de structure."
+correction: "Non chef. Une translocation peut être équilibrée."
 },
 {
-text: "Toutes les variations chromosomiques de structure sont forcément pathogènes",
+text: "Il existe moins de dix variations structurales par individu",
 correct: false,
-correction: "Non. Le cours précise que les nombreuses variations structurales observées ne sont pas forcément pathogènes."
+correction: "Non 💀 Le cours parle de plus de 1000 SV par individu."
 }
 ],
-explanation: "Les anomalies chromosomiques peuvent être de nombre, avec gain ou perte de chromosomes, ou de structure, avec par exemple translocation, inversion, microdélétion ou microduplication."
+explanation: "Les SV équilibrés comprennent notamment translocations et inversions sans perte ni gain. Les délétions et duplications entraînent respectivement perte ou gain de matériel."
 },
 {
 id: 18,
-type: "QRM",
-question: "Concernant les notions d’homozygotie et d’hétérozygotie, quelles propositions sont exactes ?",
+type: 'QRM',
+question: "Concernant le génotype, le phénotype et les allèles, quelles propositions sont exactes ?",
 options: [
 {
-text: "Un individu homozygote possède deux allèles identiques à un locus donné",
+text: "Le génotype correspond notamment à la configuration des allèles à un locus donné",
 correct: true,
-correction: "Oui chef 🧠 Homozygote = même allèle des deux côtés."
+correction: "Oui boss 🧠 Le génotype décrit la constitution génétique de l’individu ou de la cellule."
 },
 {
-text: "Un hétérozygote simple possède un allèle sauvage et un allèle mutant",
+text: "Le phénotype correspond aux caractères observés chez l’individu",
 correct: true,
-correction: "Exact 👌 Un sauvage + un mutant = hétérozygote simple."
+correction: "Exact chef 👀 Le phénotype, c’est ce qui s’exprime et qu’on peut observer."
 },
 {
-text: "Un hétérozygote composite possède nécessairement ses deux mutations en cis",
+text: "Un allèle sauvage contient obligatoirement une variation pathologique",
 correct: false,
-correction: "Non frérot 😭 Dans l’hétérozygotie composite décrite, les deux mutations sont en trans, donc sur des allèles différents."
+correction: "Non frérot 😭 L’allèle sauvage est justement décrit comme normal, sans variation pathologique."
 },
 {
-text: "Un homozygote mutant possède obligatoirement deux mutations différentes",
+text: "Un allèle morbide est obligatoirement dépourvu de toute variation",
 correct: false,
-correction: "Non chef. L’homozygote mutant possède une mutation identique sur les deux chromosomes."
+correction: "Non chef 💀 C’est exactement l’inverse : il contient une variation pathologique responsable de la maladie."
 },
 {
-text: "Un individu hétérozygote possède deux allèles identiques",
+text: "Deux allèles correspondent nécessairement à deux gènes différents",
 correct: false,
-correction: "Non 💀 Deux allèles différents = hétérozygote. Deux identiques = homozygote."
+correction: "Non. Les allèles sont différentes versions de la séquence d’un même locus."
 }
 ],
-explanation: "L’homozygote possède deux allèles identiques. L’hétérozygote possède deux allèles différents ; il peut être simple ou composite selon la nature des allèles."
+explanation: "Le génotype décrit la constitution génétique et la configuration allélique. Le phénotype correspond au résultat observable. Les allèles sont différentes versions d’une séquence à un même locus."
 },
 {
 id: 19,
-type: "QRM",
-question: "À propos des maladies génétiques, quelles propositions sont exactes selon le cours ?",
+type: 'QRM',
+question: "Concernant la dominance, la pénétrance et l’expressivité, quelles propositions sont exactes ?",
 options: [
 {
-text: "Une maladie génétique n’est pas forcément héréditaire",
+text: "Une pénétrance complète correspond à 100 % des porteurs du génotype morbide malades",
 correct: true,
-correction: "Oui chef 🧠 Les mutations de novo sont l’exemple parfait : génétique, mais pas forcément héritée d’un parent."
+correction: "Oui boss 🧠 100 % des porteurs expriment la maladie."
 },
 {
-text: "Une maladie génétique n’est pas forcément congénitale",
+text: "La pénétrance peut varier avec l’âge",
 correct: true,
-correction: "Exact 👌 Certaines maladies génétiques apparaissent plus tardivement, notamment certaines maladies neurodégénératives."
+correction: "Exact chef ⏳ Huntington et BRCA1/BRCA2 sont utilisés dans le cours pour illustrer ce phénomène."
 },
 {
-text: "Toute malformation congénitale est nécessairement causée par une anomalie génétique",
+text: "Une pénétrance incomplète signifie que tous les porteurs sont symptomatiques",
 correct: false,
-correction: "Non frérot 😭 Des facteurs environnementaux, des médicaments ou une infection materno-fœtale peuvent aussi être responsables."
+correction: "Non frérot 😭 C’est justement parce que certains porteurs restent asymptomatiques qu’elle est incomplète."
 },
 {
-text: "Une mutation de novo est toujours héritée de la mère",
+text: "La codominance produit toujours un phénotype intermédiaire",
 correct: false,
-correction: "Non chef 💀 De novo signifie justement qu’elle apparaît lors d’un nouvel événement et n’était pas héritée comme telle."
+correction: "Non chef. Le phénotype intermédiaire correspond à la semi-dominance."
 },
 {
-text: "Les trois quarts des maladies génétiques débutent après l’âge de 2 ans",
+text: "L’expressivité variable signifie nécessairement qu’une partie des porteurs n’est jamais malade",
 correct: false,
-correction: "Non 😭 C’est l’inverse : les trois quarts apparaissent avant l’âge de 2 ans."
+correction: "Non 💀 Ça concerne la nature ou la sévérité des signes chez les personnes exprimant la maladie."
 }
 ],
-explanation: "Génétique ne signifie ni systématiquement héréditaire ni systématiquement congénital. Certaines mutations apparaissent de novo et certaines maladies ne se manifestent que tardivement."
+explanation: "La pénétrance répond à la question « la maladie s’exprime-t-elle ? », tandis que l’expressivité décrit comment elle s’exprime. La pénétrance peut notamment varier avec l’âge."
 },
 {
 id: 20,
-type: "QRM",
-question: "Concernant les maladies monogéniques et multifactorielles, quelles propositions sont exactes ?",
+type: 'QRM',
+question: "Concernant la génétique médicale en tant que discipline, quelles propositions sont exactes ?",
 options: [
 {
-text: "Les maladies monogéniques correspondent à des anomalies situées à l’échelle des gènes",
+text: "Elle étudie notamment la transmission héréditaire des maladies au sein des familles",
 correct: true,
-correction: "Oui chef 🧠 Monogénique = anomalie intra-génique, on est à l’échelle du gène."
+correction: "Oui boss 🌳 L’étude familiale fait partie du cœur de la discipline."
 },
 {
-text: "Les maladies multifactorielles associent des facteurs génétiques et environnementaux",
+text: "Elle cherche à identifier les mécanismes moléculaires ou chromosomiques responsables des maladies",
 correct: true,
-correction: "Exact 👌 C’est le principe même des maladies multifactorielles comme le diabète ou l’obésité dans le cours."
+correction: "Exact chef 🧬 On cherche la cause à l’échelle du gène ou du chromosome."
 },
 {
-text: "La trisomie 21 est une maladie multifactorielle",
+text: "Le conseil génétique exclut toute information sur le pronostic",
 correct: false,
-correction: "Non frérot 😭 La trisomie 21 est classée parmi les maladies chromosomiques."
+correction: "Non frérot 😭 Le conseil génétique inclut justement risques, pronostic et traitement."
 },
 {
-text: "Une maladie multifactorielle dépend uniquement d’un seul facteur génétique",
+text: "La cytogénétique correspond à l’étude des anomalies à l’échelle des gènes",
 correct: false,
-correction: "Non chef. Le cours parle d’une addition de plusieurs facteurs de susceptibilité génétique, en plus de l’environnement."
+correction: "Non chef. Cytogénétique = chromosomes ; génétique moléculaire = gènes."
 },
 {
-text: "Une maladie monogénique correspond obligatoirement à une anomalie du nombre de chromosomes",
+text: "La spécialité est exclusivement exercée en dehors de l’hôpital",
 correct: false,
-correction: "Non 💀 Une anomalie du nombre de chromosomes relève des maladies chromosomiques."
+correction: "Non 💀 Le cours précise qu’elle est majoritairement hospitalière."
 }
 ],
-explanation: "Les maladies monogéniques sont liées à des anomalies touchant un gène. Les maladies multifactorielles résultent de l’association de facteurs génétiques de susceptibilité et de facteurs environnementaux."
+explanation: "La génétique médicale étudie les transmissions familiales, identifie les mécanismes en cause et assure le conseil génétique. C’est une discipline clinico-biologique majoritairement hospitalière."
 },
 {
 id: 21,
-type: "QRM",
-question: "Concernant le classement des chromosomes humains sur le caryotype, quelles propositions sont exactes ?",
+type: 'QRM',
+question: "À propos des maladies génétiques, quelles propositions sont exactes ?",
 options: [
-{
-text: "Le chromosome 10 est en réalité plus petit que le chromosome 11",
-correct: true,
-correction: "Oui chef 🧠 Première petite anomalie historique du classement : 10 < 11 en taille réelle."
-},
-{
-text: "Le chromosome 19 est en réalité plus petit que le chromosome 20",
-correct: true,
-correction: "Exact 👌 Deuxième inversion à retenir : le 19 est plus petit que le 20."
-},
-{
-text: "Le chromosome 21 est plus petit que le chromosome 22",
-correct: true,
-correction: "Oui chef 💀 Et pourtant il s’appelle 21. L’Histoire a décidé de nous compliquer les QCM."
-},
-{
-text: "Le chromosome 1 est le plus petit chromosome humain",
-correct: false,
-correction: "Non frérot 😭 Le chromosome 1 est au contraire le plus grand, environ 250 millions de nucléotides."
-},
-{
-text: "Les chromosomes X et Y sont classés au début du caryotype",
-correct: false,
-correction: "Non chef. Les chromosomes sexuels X et Y sont classés à la fin."
-}
-],
-explanation: "Le classement historique comporte plusieurs exceptions : le chromosome 10 est plus petit que le 11, le 19 plus petit que le 20, et le 21 plus petit que le 22."
-},
-{
-id: 22,
-type: "QRM",
-question: "Quelles situations peuvent correspondre à une hémizygotie selon le cours ?",
-options: [
-{
-text: "Un gène porté par le chromosome X chez un garçon",
-correct: true,
-correction: "Oui chef 🧠 Le garçon n’a qu’un seul chromosome X : c’est l’exemple classique."
-},
-{
-text: "Un allèle muté sur un autosome avec délétion de la région correspondante sur l’autre chromosome",
-correct: true,
-correction: "Exact 👌 Là, il ne reste fonctionnellement qu’un seul allèle sur cette région."
-},
-{
-text: "Un mécanisme d’empreinte parentale éteignant l’expression de l’allèle opposé",
-correct: true,
-correction: "Oui chef 🧬 Le cours parle alors d’hémizygotie fonctionnelle."
-},
-{
-text: "Deux allèles identiques sur un autosome",
-correct: false,
-correction: "Non frérot 😭 Ça, c’est juste de l’homozygotie."
-},
-{
-text: "Deux allèles mutants différents en trans",
-correct: false,
-correction: "Non chef. Là tu décris une hétérozygotie composite."
-}
-],
-explanation: "L’hémizygotie correspond à la présence d’un seul allèle à un locus. Elle peut être réelle, comme pour le chromosome X chez le garçon, ou fonctionnelle en cas de délétion ou d’empreinte parentale."
-},
-{
-id: 23,
-type: "QRM",
-question: "À propos des symboles utilisés dans les arbres généalogiques, quelles propositions sont exactes ?",
-options: [
-{
-text: "Les hommes sont représentés par des carrés",
-correct: true,
-correction: "Oui chef ⬛ Carré = homme. Celui-là faut vraiment qu’il soit gratuit."
-},
-{
-text: "Les femmes sont représentées par des cercles",
-correct: true,
-correction: "Exact ⚪ Cercle = femme."
-},
-{
-text: "Le proposidus est indiqué par une flèche noire",
-correct: true,
-correction: "Oui chef ➡️ Le proposidus est le premier patient étudié, celui à partir duquel débute l’analyse génétique."
-},
-{
-text: "La consanguinité est représentée par une seule barre horizontale",
-correct: false,
-correction: "Non frérot 😭 La consanguinité est représentée par une double barre horizontale."
-},
-{
-text: "Une femme conductrice d’une maladie récessive liée à l’X est représentée par un carré noir",
-correct: false,
-correction: "Non chef 💀 Le cours décrit un cercle avec un point noir au centre."
-}
-],
-explanation: "Dans un arbre généalogique, les hommes sont des carrés, les femmes des cercles et le proposidus est désigné par une flèche. La consanguinité utilise une double barre horizontale."
-},
-{
-id: 24,
-type: "QRM",
-question: "Concernant les données chiffrées sur les maladies génétiques, quelles propositions sont exactes ?",
-options: [
-{
-text: "Plus de 7000 phénotypes génétiques sont actuellement connus dans la base de référence citée dans le cours",
-correct: true,
-correction: "Oui chef 🧠 Le cours indique plus de 7000 phénotypes connus."
-},
-{
-text: "Presque 5000 gènes sont impliqués dans des maladies génétiques",
-correct: true,
-correction: "Exact 👌 Et il y a donc plus de phénotypes que de gènes, car un même gène peut être associé à plusieurs phénotypes."
-},
-{
-text: "Environ 3 millions de personnes sont touchées par une maladie rare en France",
-correct: true,
-correction: "Oui chef 🇫🇷 Les maladies sont individuellement rares mais collectivement fréquentes."
-},
-{
-text: "La définition européenne d’une maladie rare correspond à une maladie touchant plus d’une personne sur 2000",
-correct: false,
-correction: "Non frérot 😭 C’est moins d’une personne sur 2000."
-},
-{
-text: "Le nombre de gènes impliqués dans les maladies génétiques est supérieur au nombre de phénotypes connus",
-correct: false,
-correction: "Non chef. C’est l’inverse : plus de 7000 phénotypes pour presque 5000 gènes."
-}
-],
-explanation: "Le cours indique plus de 7000 phénotypes connus pour presque 5000 gènes impliqués. Les maladies rares touchent individuellement moins d’une personne sur 2000 mais concernent collectivement environ 3 millions de personnes en France."
-},
-{
-id: 25,
-type: "QRM",
-question: "À propos de la spécialité de génétique médicale, quelles propositions sont exactes ?",
-options: [
-{
-text: "La spécialité de génétique médicale a été créée en 1994",
-correct: true,
-correction: "Oui chef 📅 1994, date donnée dans le cours."
-},
-{
-text: "Elle comprend une composante de génétique clinique et une composante de génétique biologique",
-correct: true,
-correction: "Exact 🧠 C’est une spécialité mixte avec des passerelles entre clinique et laboratoire."
-},
-{
-text: "Le DES de génétique médicale dure 4 ans après l’externat",
-correct: true,
-correction: "Oui chef 🎓 Quatre ans avec phase socle, approfondissement puis consolidation en docteur junior."
-},
-{
-text: "L’activité biologique ne peut s’exercer que dans les hôpitaux publics",
-correct: false,
-correction: "Non frérot 😭 Le cours précise qu’elle peut aussi s’exercer dans des laboratoires privés."
-},
-{
-text: "La génétique clinique s’exerce principalement dans des laboratoires privés",
-correct: false,
-correction: "Non chef. La génétique clinique s’exerce surtout à l’hôpital."
-}
-],
-explanation: "Créée en 1994, la spécialité de génétique médicale comporte une composante clinique et une composante biologique. Le DES dure quatre ans après l’externat."
-},
-{
-id: 26,
-type: "QRM",
-question: "Parmi les anomalies suivantes, lesquelles sont des anomalies chromosomiques de structure citées dans le cours ?",
-options: [
-{
-text: "Une translocation",
-correct: true,
-correction: "Oui chef 🧠 Déplacement de matériel d’un chromosome à un autre : anomalie de structure."
-},
-{
-text: "Une inversion",
-correct: true,
-correction: "Exact 🔄 Une inversion au sein d’un chromosome modifie sa structure."
-},
-{
-text: "Une microdélétion",
-correct: true,
-correction: "Oui chef ✂️ Petite perte de matériel chromosomique."
-},
-{
-text: "Une microduplication",
-correct: true,
-correction: "Exact 🧬 Petit gain de matériel chromosomique."
-},
-{
-text: "Une polyploïdie",
-correct: false,
-correction: "Non frérot 😭 La polyploïdie est citée parmi les anomalies chromosomiques de nombre, pas de structure."
-}
-],
-explanation: "Les anomalies chromosomiques de structure comprennent notamment translocations, inversions, microdélétions et microduplications. Le nombre total de chromosomes peut rester à 46."
-},
-{
-id: 27,
-type: "QRM",
-question: "Quelles caractéristiques générales des maladies génétiques sont citées dans le cours ?",
-options: [
-{
-text: "Elles sont très nombreuses",
-correct: true,
-correction: "Oui chef 🧠 Il existe plusieurs milliers de phénotypes génétiques différents."
-},
 {
 text: "Elles sont individuellement rares",
 correct: true,
-correction: "Exact 👌 Une maladie rare touche moins d’une personne sur 2000 selon la définition européenne citée."
+correction: "Oui boss 🧠 La définition européenne d’une maladie rare est moins d’une personne sur 2000."
 },
 {
 text: "Elles sont collectivement fréquentes",
 correct: true,
-correction: "Oui chef. Individuellement rares, mais mises toutes ensemble ça fait du monde : environ 3 millions de personnes en France."
+correction: "Exact chef 🇫🇷 Le cours évoque environ 3 millions de personnes concernées en France."
 },
 {
-text: "Elles sont extrêmement hétérogènes sur le plan clinique et/ou génétique",
+text: "Elles sont extrêmement hétérogènes sur les plans clinique et/ou génétique",
 correct: true,
-correction: "Exact 🧬 Même grande catégorie, mais des présentations et mécanismes très variés."
+correction: "Oui boss 🧬 Même grande catégorie, mais énormément de mécanismes et de tableaux différents."
+},
+{
+text: "Elles apparaissent habituellement uniquement après 60 ans",
+correct: false,
+correction: "Non frérot 😭 Elles se manifestent souvent à la naissance ou pendant l’enfance, même si l’âge de début est variable."
 },
 {
 text: "Elles sont toujours bénignes",
 correct: false,
-correction: "Non frérot 😭 Le cours précise au contraire qu’elles sont souvent sévères."
+correction: "Non chef. Le cours précise qu’elles sont souvent sévères."
 }
 ],
-explanation: "Les maladies génétiques sont nombreuses, individuellement rares mais collectivement fréquentes, et très hétérogènes sur les plans clinique et génétique."
+explanation: "Les maladies génétiques sont nombreuses, individuellement rares mais collectivement fréquentes, très hétérogènes et souvent sévères."
+},
+{
+id: 22,
+type: 'QRM',
+question: "Concernant le dépistage néonatal présenté dans le cours, quelles propositions sont exactes ?",
+options: [
+{
+text: "Le prélèvement est réalisé vers J2-J3 de vie",
+correct: true,
+correction: "Oui boss 👶 J2-J3, timing à retenir pour le test de Guthrie."
+},
+{
+text: "Le sang peut être prélevé au niveau de la main ou du talon puis déposé sur un papier buvard",
+correct: true,
+correction: "Exact chef 🩸 Petite quantité de sang sur papier buvard."
+},
+{
+text: "Le dépistage concerne les maladies pour lesquelles un traitement est disponible",
+correct: true,
+correction: "Oui boss 🧠 Le cours insiste : le dépistage néonatal concerne les maladies traitables."
+},
+{
+text: "Le dépistage est réservé uniquement aux nouveau-nés ayant déjà des symptômes",
+correct: false,
+correction: "Non frérot 😭 Il est proposé systématiquement aux nouveau-nés."
+},
+{
+text: "Le test de Guthrie est réalisé uniquement à l’âge de 6 mois",
+correct: false,
+correction: "Non chef 💀 Là t’as raté le mot « néonatal » de quelques mois."
+}
+],
+explanation: "Le dépistage néonatal repose sur un prélèvement vers J2-J3, déposé sur papier buvard. Il vise des maladies traitables afin de permettre une prise en charge précoce."
+},
+{
+id: 23,
+type: 'QRM',
+question: "Concernant les maladies chromosomiques, quelles propositions sont exactes ?",
+options: [
+{
+text: "Elles peuvent résulter d’anomalies de nombre comme les aneuploïdies ou les polyploïdies",
+correct: true,
+correction: "Oui boss 🧠 Gain ou perte de chromosomes, voire modification globale du nombre de jeux chromosomiques."
+},
+{
+text: "Elles peuvent résulter d’anomalies de structure comme les inversions, translocations, délétions ou duplications",
+correct: true,
+correction: "Exact chef 🧬 Les anomalies de structure font bien partie des maladies chromosomiques."
+},
+{
+text: "Les anomalies supérieures à environ 5-10 Mb peuvent être visibles en microscopie optique",
+correct: true,
+correction: "Oui boss 🔬 C’est l’ordre de grandeur de résolution du caryotype."
+},
+{
+text: "Toute anomalie chromosomique mesure moins d’une paire de bases",
+correct: false,
+correction: "Non frérot 😭 Une anomalie chromosomique, c’est justement du lourd en taille."
+},
+{
+text: "Les microremaniements sont les anomalies les plus facilement visibles au caryotype",
+correct: false,
+correction: "Non chef. Ils sont trop petits pour être observés par microscopie optique."
+}
+],
+explanation: "Les maladies chromosomiques peuvent être liées à des anomalies de nombre ou de structure. Le caryotype détecte surtout celles dépassant environ 5 à 10 Mb."
+},
+{
+id: 24,
+type: 'QRM',
+question: "Concernant les maladies monogéniques mendéliennes, quelles propositions sont exactes ?",
+options: [
+{
+text: "Une maladie autosomique dominante peut s’exprimer à l’état hétérozygote",
+correct: true,
+correction: "Oui boss 🧠 Un seul allèle muté suffit dans le modèle autosomique dominant."
+},
+{
+text: "Avec un parent atteint d’une maladie autosomique dominante, le cours retient un risque de 50 % pour les enfants",
+correct: true,
+correction: "Exact chef 🎯 Le fameux 1 chance sur 2."
+},
+{
+text: "Avec deux parents hétérozygotes pour une maladie autosomique récessive, le risque d’enfant malade est de 25 %",
+correct: true,
+correction: "Oui boss 🧬 25 % malade, 50 % conducteur, 25 % homozygote sain."
+},
+{
+text: "Dans une maladie autosomique récessive, un seul allèle muté suffit toujours pour être malade",
+correct: false,
+correction: "Non frérot 😭 Il faut que les deux allèles soient mutés."
+},
+{
+text: "Les maladies récessives liées à l’X ne concernent jamais les garçons",
+correct: false,
+correction: "Non chef 💀 C’est justement chez le garçon hémizygote que l’allèle muté peut s’exprimer."
+}
+],
+explanation: "Autosomique dominante : maladie possible à l’état hétérozygote. Autosomique récessive : deux allèles mutés nécessaires. Récessive liée à l’X : l’hémizygotie masculine joue un rôle majeur."
+},
+{
+id: 25,
+type: 'QRM',
+question: "Concernant les maladies multifactorielles et la notion de maladie génétique, quelles propositions sont exactes ?",
+options: [
+{
+text: "Les maladies multifactorielles associent plusieurs facteurs génétiques et des facteurs environnementaux",
+correct: true,
+correction: "Oui boss 🧠 C’est exactement la définition donnée dans le cours."
+},
+{
+text: "Une maladie génétique n’est pas forcément héréditaire",
+correct: true,
+correction: "Exact chef 🧬 Une mutation de novo peut provoquer une maladie sans avoir été héritée."
+},
+{
+text: "L’âge de début d’une maladie génétique peut aller de la période fœtale jusqu’à un âge avancé",
+correct: true,
+correction: "Oui boss ⏳ Le cours insiste sur cette très grande variabilité."
+},
+{
+text: "Toutes les maladies multifactorielles sont purement environnementales",
+correct: false,
+correction: "Non frérot 😭 Justement, elles combinent environnement et susceptibilité génétique."
+},
+{
+text: "Une maladie génétique est obligatoirement transmissible à la descendance",
+correct: false,
+correction: "Non chef. Génétique ne veut pas dire systématiquement héréditaire ni transmissible."
+}
+],
+explanation: "Les maladies multifactorielles résultent d’une combinaison de susceptibilités génétiques et de facteurs environnementaux. Par ailleurs, une maladie génétique n’est pas nécessairement héréditaire."
+},
+{
+id: 26,
+type: 'QRM',
+question: "Concernant les variations génétiques décrites dans le cours, quelles propositions sont exactes ?",
+options: [
+{
+text: "Il existe plus de 1000 variations structurales par individu",
+correct: true,
+correction: "Oui boss 🧠 Le cours donne plus de 1000 SV par individu."
+},
+{
+text: "Les variations structurales peuvent mesurer environ 500 à 1,3 million de paires de bases",
+correct: true,
+correction: "Exact chef 📏 C’est l’ordre de grandeur indiqué pour les SV."
+},
+{
+text: "Il existe environ 3 à 4 millions de variations ponctuelles par individu",
+correct: true,
+correction: "Oui boss 🧬 Les SNV sont beaucoup plus nombreuses."
+},
+{
+text: "Le chromosome 1 mesure environ 250 millions de nucléotides",
+correct: true,
+correction: "Exact chef 🧠 Cette valeur est utilisée pour donner un ordre de grandeur par rapport aux SV."
+},
+{
+text: "Les SNV correspondent uniquement à des anomalies toujours visibles au microscope optique",
+correct: false,
+correction: "Non frérot 😭 C’est tout l’inverse : elles sont à l’échelle de la séquence d’ADN."
+}
+],
+explanation: "Le génome humain comporte de nombreuses variations : plus de 1000 SV et environ 3 à 4 millions de SNV par individu. Leur taille explique les techniques nécessaires pour les détecter."
+},
+{
+id: 27,
+type: 'QRM',
+question: "Concernant l’homozygotie, l’hétérozygotie et l’hémizygotie, quelles propositions sont exactes ?",
+options: [
+{
+text: "Un homozygote possède deux allèles strictement identiques à un locus donné",
+correct: true,
+correction: "Oui boss 🧠 Deux fois le même allèle = homozygote."
+},
+{
+text: "Un hétérozygote simple possède un allèle normal et un allèle muté",
+correct: true,
+correction: "Exact chef 👌 Un sauvage + un muté."
+},
+{
+text: "Un hétérozygote composite possède deux allèles anormaux différents",
+correct: true,
+correction: "Oui boss 🧬 Deux mutations différentes sur les deux allèles."
+},
+{
+text: "Un mécanisme d’empreinte parentale peut conduire à une hémizygotie fonctionnelle",
+correct: true,
+correction: "Exact chef 🧠 Si un seul des deux allèles est exprimé, l’autre peut être fonctionnellement absent."
+},
+{
+text: "Un hémizygote possède obligatoirement deux allèles identiques",
+correct: false,
+correction: "Non frérot 😭 Hémizygote = un seul allèle au locus considéré."
+}
+],
+explanation: "Homozygote = deux allèles identiques ; hétérozygote = deux allèles différents ; hémizygote = un seul allèle fonctionnel ou présent au locus."
 },
 {
 id: 28,
-type: "QRM",
-question: "Concernant le dépistage néonatal décrit dans le cours, quelles propositions sont exactes ?",
+type: 'QRM',
+question: "Concernant l’organisation territoriale française des maladies rares, quelles propositions sont exactes ?",
 options: [
 {
-text: "Il est réalisé vers J2-J3 de vie",
+text: "Le premier Plan National Maladies Rares a débuté en 2005",
 correct: true,
-correction: "Oui chef 👶 Le timing à retenir : deuxième ou troisième jour de vie."
+correction: "Oui boss 🇫🇷 Le PNMR1 couvre la période 2005-2008."
 },
 {
-text: "Le programme national comporte actuellement 16 maladies accessibles au dépistage",
+text: "Le PNMR1 a permis la labellisation des centres de référence et de compétences",
 correct: true,
-correction: "Exact 🧠 Le cours indique actuellement 16 maladies dépistables."
+correction: "Exact chef 🧠 C’est l’un des grands apports du premier plan."
 },
 {
-text: "Le test de Guthrie utilise une goutte de sang prélevée au talon et déposée sur un papier buvard",
+text: "Le PNMR2 a permis la création et la labellisation des filières de santé maladies rares",
 correct: true,
-correction: "Oui chef 🩸 Petit coup au talon, goutte sur papier buvard, et c’est parti pour les analyses."
+correction: "Oui boss 👌 Le PNMR2 structure notamment ces filières."
 },
 {
-text: "Le résultat est annoncé dans un délai d’environ 3 semaines",
+text: "Il existe 23 filières de Santé Maladies Rares en France selon le cours",
 correct: true,
-correction: "Exact ⏱️ Le cours donne un délai d’environ trois semaines."
+correction: "Exact chef 🎯 23 filières, valeur explicitement donnée."
 },
 {
-text: "Le prélèvement ne peut permettre que des tests génétiques et jamais de tests biochimiques",
+text: "Les filières de santé regroupent uniquement les laboratoires privés",
 correct: false,
-correction: "Non frérot 😭 Le cours précise que l’échantillon peut servir à des tests génétiques mais aussi biochimiques."
+correction: "Non frérot 😭 Elles rassemblent centres, associations, sociétés savantes, équipes de recherche, laboratoires et autres acteurs."
 }
 ],
-explanation: "Le dépistage néonatal est réalisé vers J2-J3 grâce au test de Guthrie. Une goutte de sang du talon est déposée sur papier buvard et peut servir à différentes analyses. Le programme compte 16 maladies dans le cours."
+explanation: "Les PNMR ont structuré progressivement la prise en charge des maladies rares. Les filières de santé maladies rares facilitent la collaboration entre les nombreux acteurs du parcours de soins."
 },
 {
 id: 29,
-type: "QRM",
-question: "Quels rôles de l’arbre généalogique et du conseil génétique sont décrits dans le cours ?",
+type: 'QRM',
+question: "Concernant le Plan France Médecine Génomique et les plateformes de séquençage décrites dans le cours, quelles propositions sont exactes ?",
 options: [
 {
-text: "Étudier la transmission héréditaire de la maladie au sein de la famille",
+text: "Le Plan France Médecine Génomique 2025 a été mis en place en 2015",
 correct: true,
-correction: "Oui chef 🌳 Le pedigree sert d’abord à comprendre comment la maladie circule dans la famille."
+correction: "Oui boss 🧬 Le cours date sa mise en place de 2015."
 },
 {
-text: "Aider à formuler des hypothèses sur le mode de transmission",
+text: "Il vise notamment à favoriser un accès équitable à la médecine génomique",
 correct: true,
-correction: "Exact 🧠 La forme de l’arbre peut orienter vers un mode de transmission donné."
+correction: "Exact chef 🧠 L’objectif est justement d’éviter que l’accès dépende du CHU où tu tombes."
 },
 {
-text: "Orienter la prescription d’analyses génétiques pour identifier le mécanisme moléculaire ou chromosomique",
+text: "SeQOIA est la plateforme parisienne couvrant principalement la moitié nord de la France",
 correct: true,
-correction: "Oui chef 🧬 Une fois les hypothèses posées, on peut choisir les analyses de laboratoire adaptées."
+correction: "Oui boss 🗺️ SeQOIA = Paris = moitié nord."
 },
 {
-text: "Informer le patient et sa famille sur le risque de transmission, le pronostic et certaines possibilités de diagnostic prénatal ou préimplantatoire",
+text: "Auragen est basée à Lyon et couvre principalement la moitié sud de la France",
 correct: true,
-correction: "Exact 👌 C’est tout le cœur du conseil génétique : expliquer les risques et les options."
+correction: "Exact chef 🧬 Auragen = Lyon = moitié sud."
 },
 {
-text: "Garantir qu’une anomalie génétique constitutionnelle dispose toujours d’un traitement curatif",
+text: "Tous les CHU français réalisent eux-mêmes l’intégralité du séquençage du génome entier",
 correct: false,
-correction: "Non frérot 😭 Le cours dit justement que les possibilités thérapeutiques restent encore limitées pour les anomalies constitutionnelles."
+correction: "Non frérot 😭 Le coût et les infrastructures nécessaires expliquent justement l’existence de plateformes nationales."
 }
 ],
-explanation: "L’arbre généalogique aide à déterminer le mode de transmission et à orienter les analyses. Le conseil génétique informe ensuite sur les risques familiaux, le pronostic et les options diagnostiques ou reproductives."
+explanation: "Le Plan France Médecine Génomique 2025 vise un accès équitable au séquençage. Deux plateformes principales sont décrites : SeQOIA à Paris pour le nord et Auragen à Lyon pour le sud."
 },
 {
 id: 30,
-type: "QRM",
-question: "Concernant l’organisation territoriale française des maladies rares et l’accès au séquençage, quelles propositions sont exactes ?",
+type: 'QRM',
+question: "Concernant la prise en charge génomique et les maladies rares présentées en fin de cours, quelles propositions sont exactes ?",
 options: [
 {
-text: "Le premier Plan National Maladies Rares a été mis en place en 2005",
+text: "Les patients peuvent être examinés dans leur CHU avant prescription éventuelle d’analyses génomiques",
 correct: true,
-correction: "Oui chef 🇫🇷 Le premier PNMR date de 2005, et la France est décrite comme pionnière dans ce domaine."
+correction: "Oui boss 🧠 Le parcours commence localement avec l’équipe clinique."
 },
 {
-text: "Le PNMR1 a permis la labellisation des centres de référence et des centres de compétences",
+text: "Les échantillons peuvent être envoyés sur les plateformes génomiques pour le séquençage",
 correct: true,
-correction: "Exact 🧠 PNMR1 = structuration des CRCM et CCMR."
+correction: "Exact chef 🧬 Les plateformes assurent l’infrastructure lourde nécessaire au séquençage."
 },
 {
-text: "Le PNMR2 a conduit à la création et à la labellisation des filières de santé maladies rares",
+text: "Les données séquencées peuvent ensuite être interprétées localement dans les CHU par les biologistes",
 correct: true,
-correction: "Oui chef 👌 Et le cours indique actuellement 23 filières de santé maladies rares."
+correction: "Oui boss 💻 Séquençage centralisé ne veut pas dire que toute l’interprétation quitte le CHU."
 },
 {
-text: "Seqoia à Paris et Auragen à Lyon sont les deux plateformes françaises citées pour le séquençage du génome entier",
+text: "Chez les patients atteints de maladies rares, le rendement diagnostique du séquençage du génome est donné à 31,2 %",
 correct: true,
-correction: "Exact 🧬 Paris avec Seqoia, Lyon avec Auragen : les deux plateformes se partagent le territoire."
+correction: "Exact chef 🎯 31,2 %, chiffre bien précis donc évidemment parfait pour venir voler un point."
 },
 {
-text: "Tous les CHU français réalisent eux-mêmes le séquençage du génome entier",
+text: "Le séquençage du génome permet d’obtenir un diagnostic chez 100 % des patients atteints de maladie rare",
 correct: false,
-correction: "Non frérot 😭 Justement, le coût est trop élevé pour que tous les CHU disposent de cette capacité, d’où les plateformes nationales."
+correction: "Non frérot 😭 Si le rendement est de 31,2 %, on est quand même très loin des 100 %."
 }
 ],
-explanation: "La France a organisé la prise en charge des maladies rares à travers plusieurs PNMR. Le PNMR1 structure les centres, le PNMR2 les filières, et l’accès au séquençage du génome entier repose notamment sur les plateformes Seqoia et Auragen."
+explanation: "Le parcours associe évaluation clinique locale, séquençage sur des plateformes spécialisées et interprétation par les équipes biologiques. Le rendement diagnostique indiqué pour les maladies rares est de 31,2 %."
 }
-];
+]
