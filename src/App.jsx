@@ -325,7 +325,11 @@ function CourseView({ semester, subject, course }) {
 </article>
 
         <aside className="qcm-dock">
-          <QcmPanel questions={course.questions ?? []} courseTitle={course.title} />
+          <QcmPanel
+  questions={course.questions ?? []}
+  courseTitle={course.title}
+  maxQuestions={25}
+/>
         </aside>
       </div>
     </section>
@@ -396,8 +400,8 @@ function SiteAnnaleView({ semester, subject }) {
       <div className="qcm-dock">
         <QcmPanel
   questions={questions}
-  courseTitle={`MIX N TWIST · ${subject.title}`}
-  maxQuestions={30}
+  courseTitle={`Annales QCM · ${subject.title}`}
+  maxQuestions={60}
 />
       </div>
     </section>

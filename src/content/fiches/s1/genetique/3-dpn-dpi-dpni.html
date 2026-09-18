@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche - DPN, DPI et DPNI</title>
+<style>
+:root{
+  --g:#1a7a4a;--gs:#eaf7ef;--r:#dc2626;--rs:#fee2e2;--o:#d97706;--os:#fff7ed;
+  --b:#2563eb;--bs:#eff6ff;--p:#6d28d9;--ps:#f2ecff;--ink:#1c1c2e;--line:#d8dce8;--bg:#f6f7fb;
+  --teal:#0f766e;--teals:#ecfeff
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}
+.page{max-width:1120px;margin:auto;padding:32px 18px 64px}
+.hero{background:linear-gradient(135deg,#fff 0%,#f0fdf4 58%,#ecfeff 100%);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 40px rgba(27,38,49,.06)}
+.kicker{color:var(--g);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px}
+h1{font-size:38px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}
+.subtitle{max-width:950px;margin:0;color:#374151}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;font-size:13px}
+.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:12px;font-weight:800;padding:4px 9px;border-radius:999px}
+.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.green{background:var(--gs);color:#166534}.purple{background:var(--ps);color:#4c1d95}.blue{background:var(--bs);color:#1d4ed8}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}
+nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}
+nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav a{color:var(--ink);text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(27,38,49,.035)}
+h2{font-size:25px;margin:0 0 16px;letter-spacing:-.02em}h3{font-size:18px;margin:22px 0 10px;color:var(--g)}
+p{margin:8px 0}ul{margin:8px 0 12px;padding-left:22px}li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}
+.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}
+.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}
+.tealbox{border-left-color:var(--teal);background:var(--teals)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:#374151;overflow-x:auto;white-space:pre-wrap}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px;min-width:620px}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left;color:#111827}
+.badge{display:inline-block;padding:2px 7px;border-radius:999px;font-size:11px;font-weight:800;background:#eef2ff;color:#3730a3}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}.flash .q{background:#f9fafb;padding:10px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:10px 12px;color:#374151}
+.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+.small{font-size:12.5px;color:#4b5563}
+@media(max-width:780px){
+  h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}
+  table{font-size:12.5px;min-width:560px}
+}
+@media print{
+  body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body><main class="page">
+
+<header class="hero">
+  <div class="kicker">UE Génétique médicale</div>
+  <h1>Diagnostic prénatal, diagnostic préimplantatoire & dépistage prénatal non invasif</h1>
+  <p class="subtitle">Fiche D1/externat orientée QCM : DPN, prélèvements fœtaux, imagerie, DPI, marqueurs sériques, échographies de dépistage et DPNI.</p>
+  <div class="tags">
+    <span class="tag red">🔴 Seuils & délais</span>
+    <span class="tag orange">🟠 Pièges DPN vs dépistage</span>
+    <span class="tag green">🟢 Gestes invasifs</span>
+    <span class="tag purple">🧠 QCM-friendly</span>
+    <span class="tag blue">🧬 DPNI / DPI</span>
+  </div>
+  <div class="actions">
+    <button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+    <button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+  </div>
+</header>
+
+<nav>
+<h2>Plan rapide</h2>
+<ol>
+  <li><a href="#distinction">DPN vs dépistage</a></li>
+  <li><a href="#dpn">DPN : principes</a></li>
+  <li><a href="#amniocentese">Amniocentèse</a></li>
+  <li><a href="#trophoblaste">Biopsie de trophoblaste</a></li>
+  <li><a href="#sang">Sang fœtal</a></li>
+  <li><a href="#peau">Biopsie cutanée</a></li>
+  <li><a href="#foetopath">Fœtopathologie</a></li>
+  <li><a href="#imagerie">Imagerie</a></li>
+  <li><a href="#dpi">DPI</a></li>
+  <li><a href="#msm">Marqueurs sériques</a></li>
+  <li><a href="#echo_dep">Échographie de dépistage</a></li>
+  <li><a href="#dpni">DPNI</a></li>
+  <li><a href="#limites">Limites DPNI</a></li>
+  <li><a href="#pieges">Pièges / incohérences</a></li>
+  <li><a href="#flashcards">Flashcards</a></li>
+</ol>
+</nav>
+
+<section id="distinction">
+<h2>1. DPN ≠ dépistage prénatal</h2>
+<div class="grid2">
+  <div class="card">
+    <h3>Diagnostic prénatal (DPN)</h3>
+    <ul>
+      <li>Recherche chez l’embryon ou le fœtus <strong>in utero</strong> de maladies particulièrement graves : génétiques, infectieuses ou autres.</li>
+      <li>Peut comporter des gestes <strong>invasifs</strong>.</li>
+      <li>Peut conduire à un <strong>diagnostic de certitude</strong> selon la technique.</li>
+      <li>Encadrement par le <strong>CPDPN</strong> et l’Agence de la biomédecine.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Dépistage prénatal</h3>
+    <ul>
+      <li>S’adresse à la <strong>population générale</strong>.</li>
+      <li>Recherche un <strong>risque</strong>, pas une certitude diagnostique.</li>
+      <li>Pas de geste invasif fœtal dans le cadre du dépistage.</li>
+      <li>En France, le cours insiste sur le dépistage de la <strong>trisomie 21</strong>.</li>
+    </ul>
+  </div>
+</div>
+<div class="callout warn"><strong>Piège QCM majeur :</strong> un DPNI reste un <strong>dépistage</strong>, même avec une sensibilité/spécificité &gt; 99 % pour la T21. Pour passer au diagnostic, il faut un geste diagnostique invasif.</div>
+</section>
+
+<section id="dpn">
+<h2>2. Diagnostic prénatal : définition, cadre, consentement</h2>
+<ul>
+  <li>Objectifs : permettre, si possible, de <strong>soigner l’enfant à naître</strong>, préparer les parents à l’accueil de l’enfant et informer sur les situations graves/incurables.</li>
+  <li>Le <strong>CPDPN</strong> regroupe médecins, généticiens, gynécologues, échographistes, sages-femmes.</li>
+  <li>Le CPDPN est présenté dans le support comme le comité compétent pour discuter la prise en charge et délivrer une <strong>attestation de gravité</strong> permettant une IMG.</li>
+  <li>La décision de poursuivre ou non la grossesse appartient <strong>au couple</strong>.</li>
+  <li>Deux notions fondamentales : <strong>gravité</strong> + <strong>balance bénéfice/risque</strong>.</li>
+  <li>Activité réglementée, avec agréments ABM pour praticiens et centres, pour <strong>5 ans renouvelables</strong>.</li>
+</ul>
+<div class="callout"><strong>Obligatoire avant analyse génétique :</strong> prescription médicale, consultation d’information, consentement libre et éclairé, attestation de consultation signée.</div>
+<div class="schema">DPN → prescription médicale → information détaillée → consentement + attestation → validation / discussion CPDPN → examen adapté</div>
+</section>
+
+<section id="amniocentese">
+<h2>3. Amniocentèse (PLA)</h2>
+<div class="callout bluebox"><strong>Seuil à retenir :</strong> à partir de <strong>15 SA</strong>, jamais avant selon le support.</div>
+<div class="tablewrap"><table>
+<tr><th>Point</th><th>À retenir</th></tr>
+<tr><td>Principe</td><td>Ponction de liquide amniotique sous contrôle échographique.</td></tr>
+<tr><td>Anesthésie</td><td>Texte : généralement pas d’anesthésie. La correction QCM parle d’anesthésie locale → voir section « incohérences ».</td></tr>
+<tr><td>Risque de FCS</td><td>&lt; 0,5 %, avec mention d’environ <strong>0,2 %</strong> dans le support.</td></tr>
+<tr><td>Inconvénient</td><td>Geste relativement tardif ; culture parfois nécessaire.</td></tr>
+<tr><td>Caryotype</td><td>Direct : 24–48 h ; après culture : <strong>15 jours à 3 semaines</strong> selon le support.</td></tr>
+</table></div>
+
+<h3>Liquide amniotique : chiffres</h3>
+<ul>
+  <li>Renouvellement : environ toutes les <strong>3 heures</strong>.</li>
+  <li>Pic de volume : autour de <strong>22 SA</strong>.</li>
+  <li>Eau : <strong>94,6 %</strong>.</li>
+  <li>Quantité prélevée mentionnée : environ <strong>20 à 50 cc</strong>.</li>
+  <li>Quantité cellulaire maximale : entre <strong>16 et 20 SA</strong>.</li>
+</ul>
+
+<h3>Analyses possibles</h3>
+<div class="grid2">
+  <div class="card"><strong>Avant centrifugation</strong><ul><li>Aspect macroscopique</li><li>Couleur claire attendue</li><li>Brun/jaunâtre = signe d’alerte</li></ul></div>
+  <div class="card"><strong>Après centrifugation</strong><ul><li>Surnageant : biochimie, infectieux</li><li>Culot d’amniocytes : caryotype, FISH, enzymologie, ADN moléculaire</li></ul></div>
+</div>
+<div class="callout orangebox"><strong>Très tombable :</strong> enzymes digestives → sténoses/atrésies duodénales, intestin hyperéchogène ; recherche infectieuse dont CMV ; extraction d’ADN possible pour mucoviscidose.</div>
+</section>
+
+<section id="trophoblaste">
+<h2>4. Biopsie de trophoblaste (villosités choriales)</h2>
+<div class="callout"><strong>Très tombable :</strong> réalisable dès <strong>11 SA</strong> → plus précoce que l’amniocentèse.</div>
+<div class="tablewrap"><table>
+<tr><th>Point</th><th>À retenir</th></tr>
+<tr><td>Principe</td><td>Prélèvement sous échographie à l’interface fœto-placentaire.</td></tr>
+<tr><td>Anesthésie</td><td>Locale.</td></tr>
+<tr><td>Risque FCS</td><td><strong>0,5 à 1 %</strong>.</td></tr>
+<tr><td>Atout</td><td>Très riche en cellules, analyses directes possibles, cultures plus rapides.</td></tr>
+<tr><td>Piège</td><td>Risque de contamination maternelle : nécessité de trier les villosités pour sélectionner le versant fœtal.</td></tr>
+</table></div>
+<h3>Analyse directe vs culture</h3>
+<ul>
+  <li><strong>Cytotrophoblaste :</strong> mitoses spontanées → caryotype, FISH, enzymologie/biochimie, ADN, réparation ADN, immunomarquage.</li>
+  <li><strong>Mésenchyme après culture :</strong> caryotype et analyses ADN.</li>
+  <li>Caryotype direct : <strong>24–48 h</strong>.</li>
+  <li>Culture trophoblaste : <strong>4–5 jours</strong>, plus rapide que le liquide amniotique.</li>
+</ul>
+</section>
+
+<section id="sang">
+<h2>5. Prélèvement de sang fœtal</h2>
+<ul>
+  <li>À partir de <strong>22 SA</strong>.</li>
+  <li>Ponction de la <strong>veine ombilicale</strong> du cordon, sous échographie.</li>
+  <li>Anesthésie locale.</li>
+  <li>Examen rare et tardif.</li>
+  <li>Peut être proposé si PLA impossible (ex : <strong>oligoamnios</strong>), pathologie découverte tardivement ou surcharge pondérale importante.</li>
+  <li>Peu de matériel ; culture parfois nécessaire pour la cytogénétique.</li>
+</ul>
+<div class="callout warn"><strong>Piège QCM :</strong> ce n’est pas un examen de diagnostic précoce du 1er trimestre.</div>
+</section>
+
+<section id="peau">
+<h2>6. Biopsie cutanée fœtale</h2>
+<ul>
+  <li>À partir du <strong>2e trimestre</strong>, avec mention de <strong>20 SA</strong>.</li>
+  <li>Sous contrôle fœtoscopique ou trocart, anesthésie locale.</li>
+  <li>Examen extrêmement rare.</li>
+  <li>Permet étude morphologique, immunomarquages et études enzymatiques.</li>
+</ul>
+<div class="callout orangebox"><strong>Exemples cités :</strong> néoplasies endocrines multiples ou « kystes multiples » dans le support.</div>
+</section>
+
+<section id="foetopath">
+<h2>7. Fœtopathologie</h2>
+<ul>
+  <li>Analyse d’un fœtus après aspiration, FCS ou IMG.</li>
+  <li>Étude morphologique + prélèvements sur cordon, placenta, peau, muscle…</li>
+  <li>Analyses cytogénétiques, histologiques et autres examens complémentaires possibles.</li>
+  <li>Limites : <strong>macération</strong>, contamination maternelle/bactérienne, délai d’analyses.</li>
+</ul>
+<div class="callout warn"><strong>À retenir :</strong> le support indique qu’on ne fait plus de caryotype sur produits de fausse couche en raison des échecs et contaminations maternelles ; l’ADN est privilégié.</div>
+</section>
+
+<section id="imagerie">
+<h2>8. Imagerie pendant la grossesse</h2>
+<div class="callout warn"><strong>Position du cours :</strong> l’échographie est présentée comme un <strong>outil de dépistage</strong>, alors que scanner et IRM sont présentés comme diagnostiques.</div>
+<div class="tablewrap"><table>
+<tr><th>Examen</th><th>Terme</th><th>Rôle principal</th></tr>
+<tr><td>Écho T1</td><td>11–14 SA, idéalement ~12 SA</td><td>Datation (LCC), malformations majeures, clarté nucale.</td></tr>
+<tr><td>Écho T2</td><td>22–24 SA dans la première partie du cours ; 21–23 SA dans la seconde</td><td>Morphologie détaillée, signes d’appel chromosomiques.</td></tr>
+<tr><td>Écho T3</td><td>~32 SA</td><td>Croissance, flux, bien-être, anomalies tardives.</td></tr>
+<tr><td>Écho 3D</td><td>À partir du 2e trimestre</td><td>Complément de la 2D, caractérisation d’anomalies.</td></tr>
+<tr><td>Scanner osseux</td><td>~32 SA</td><td>Achondroplasie, ostéogenèse imparfaite, anomalies osseuses tardives.</td></tr>
+<tr><td>IRM fœtale</td><td>À partir de 20 SA</td><td>Complément échographique, surtout cerveau, thorax, tumeurs.</td></tr>
+</table></div>
+<div class="callout bluebox"><strong>Exemples échographiques du support :</strong> syndrome de Pierre Robin (profil avec menton en retrait), omphalocèle, anomalies de face.</div>
+</section>
+
+<section id="dpi">
+<h2>9. Diagnostic préimplantatoire (DPI)</h2>
+<div class="callout"><strong>Définition ABM :</strong> recherche sur des embryons conçus in vitro d’une maladie génétique grave et incurable susceptible d’être transmise par les parents.</div>
+<h3>Bénéficiaires depuis la loi de bioéthique 2021</h3>
+<ul>
+  <li>Couples hétérosexuels.</li>
+  <li>Couples de femmes.</li>
+  <li>Femmes célibataires.</li>
+  <li>Une anomalie génétique, chromosomique ou moléculaire doit avoir été identifiée au préalable chez l’un des membres du couple ou chez la femme seule.</li>
+</ul>
+<h3>Centres cités</h3>
+<p>Paris-Clamart, Strasbourg, Nantes, Montpellier, Grenoble ; le support mentionne « bientôt Bordeaux ».</p>
+
+<h3>Parcours type</h3>
+<div class="schema">Avis / dossier DPI
+→ validation CPDPN-DPI + évaluation génétique et gynécologique
+→ stimulation ovarienne
+→ ponction folliculaire + recueil spermatozoïdes
+→ FIV / ICSI
+→ embryon J3 ou J5/J6
+→ biopsie embryonnaire
+→ analyse génétique ciblée
+→ sélection / conservation selon résultat
+→ transfert embryonnaire
+→ suivi de grossesse ± DPN</div>
+
+<h3>Étapes et chiffres</h3>
+<ul>
+  <li>Objectif : obtenir le plus grand nombre d’ovocytes possible.</li>
+  <li>Biopsie à <strong>J3 ou J5/J6</strong>.</li>
+  <li>À J2/J3 : seulement <strong>1 à 2 cellules sur 8</strong> biopsiées selon le support.</li>
+  <li>Résultat : environ <strong>24 h</strong>.</li>
+  <li>Taux de grossesse : <strong>20 à 30 % par cycle de FIV</strong>.</li>
+  <li>Limite d’âge citée : <strong>37 ans</strong>, avec réserve ovarienne/qualité ovocytaire jugées plus importantes dans le commentaire du cours.</li>
+</ul>
+<div class="callout warn"><strong>Piège majeur :</strong> le DPI est une analyse <strong>ciblée</strong> sur l’anomalie recherchée. Exemple du support : rechercher une trisomie 15 ne signifie pas qu’on recherche automatiquement une trisomie 21.</div>
+<h3>Difficultés</h3>
+<ul>
+  <li>Échec de stimulation.</li>
+  <li>Prélèvement ovocytaire désagréable.</li>
+  <li>Peu de matériel biologique.</li>
+  <li>Risque de mosaïcisme embryonnaire / cellule non représentative.</li>
+  <li>Allèle dropout en génétique moléculaire.</li>
+  <li>Qualité/dégénérescence des embryons.</li>
+  <li>Contamination.</li>
+  <li>Contraintes temporelles et logistiques.</li>
+</ul>
+</section>
+
+<section id="msm">
+<h2>10. Marqueurs sériques maternels (MSM)</h2>
+<div class="callout orangebox"><strong>Le cours insiste sur les normes :</strong> elles sont à connaître pour interpréter les QCM.</div>
+<div class="tablewrap"><table>
+<tr><th>Marqueur</th><th>Trimestre</th><th>Bas</th><th>Normal</th><th>Élevé</th></tr>
+<tr><td>AFP</td><td>T2</td><td>&lt; 0,50 MoM</td><td>0,5 à 2,5 MoM</td><td>&gt; 2,50 MoM</td></tr>
+<tr><td>βHCG</td><td>T1/T2</td><td>&lt; 0,25 MoM</td><td>0,25 à 5 MoM</td><td>&gt; 5 MoM</td></tr>
+<tr><td>PAPP-A</td><td>T1</td><td>&lt; 0,25 MoM</td><td>0,25 à 2,50 MoM</td><td>&gt; 2,50 MoM</td></tr>
+</table></div>
+
+<h3>Profils du 1er trimestre</h3>
+<div class="tablewrap"><table>
+<tr><th>PAPP-A</th><th>βHCG</th><th>Interprétation du support</th></tr>
+<tr><td>↓</td><td>N</td><td>Suspicion T13, T18, T21 ou triploïdie.</td></tr>
+<tr><td>N</td><td>↓</td><td>FCS ou MFIU → échographie pour vérifier activité cardiaque.</td></tr>
+<tr><td>N</td><td>↑↑ &gt; 5 MoM</td><td>Suspicion T21 ; possibilité de problème placentaire.</td></tr>
+<tr><td>↑</td><td>↑</td><td>T21 possible mais surtout anomalie placentaire selon le support.</td></tr>
+<tr><td>↑</td><td>N</td><td>Aucune pathologie fœtale rapportée.</td></tr>
+</table></div>
+
+<h3>Profils du 2e trimestre</h3>
+<div class="tablewrap"><table>
+<tr><th>AFP</th><th>βHCG</th><th>Interprétation du support</th></tr>
+<tr><td>↓</td><td>N</td><td>Suspicion T18 ou T21.</td></tr>
+<tr><td>N</td><td>↓</td><td>FCS ou MFIU.</td></tr>
+<tr><td>N</td><td>↑↑ &gt; 5 MoM</td><td>Suspicion T21 / problème placentaire.</td></tr>
+<tr><td>↑</td><td>N</td><td>Défaut de fermeture du tube neural ou paroi abdominale.</td></tr>
+<tr><td>↑</td><td>↑</td><td>Suspicion de pathologie placentaire.</td></tr>
+</table></div>
+
+<div class="callout warn"><strong>Très tombable :</strong> AFP &gt; 2,5 MoM → penser anomalie de fermeture du tube neural. βHCG &gt; 5 MoM → penser T21 selon le cours.</div>
+<div class="callout bluebox"><strong>Calcul de risque intégré :</strong> les MSM ou l’échographie pris isolément « ne servent à rien » selon l’insistance du cours ; on parle de risque avec l’intégration des différents paramètres.</div>
+</section>
+
+<section id="echo_dep">
+<h2>11. Échographies de dépistage</h2>
+<h3>T1</h3>
+<ul>
+  <li>Entre <strong>11 SA et 13 SA + 6 j</strong>.</li>
+  <li>Voie abdominale ou vaginale ; indolore.</li>
+  <li>Datation, biométrie, vitalité fœtale.</li>
+  <li>Biométrie citée : clarté nucale, LCC, PA, fémur, OPN.</li>
+  <li>Signes évocateurs T21 : <strong>clarté nucale épaisse</strong>, <strong>LCC rétrécie</strong>, <strong>absence de l’os du nez</strong>.</li>
+</ul>
+<div class="callout orangebox"><strong>Piège :</strong> l’absence/hypoplasie de l’os propre du nez peut être observée sans trisomie selon l’origine ethnique ; le support cite notamment certaines populations africaines.</div>
+
+<h3>T2</h3>
+<ul>
+  <li>Entre <strong>21 et 23 SA</strong> dans cette partie du support.</li>
+  <li>Morphologie complète, placenta, fréquences cardiaques, biométrie/courbe de croissance, sexe fœtal.</li>
+</ul>
+
+<h3>T3</h3>
+<ul>
+  <li>Mêmes grands objectifs que T2.</li>
+  <li>Ajout du <strong>Doppler</strong> des artères ombilicales et utérines dans le cours.</li>
+</ul>
+
+<h3>Score de Herman</h3>
+<p>Score sur <strong>9 points</strong> évaluant la qualité des images de clarté nucale. Le support le relie au calcul de risque intégré.</p>
+</section>
+
+<section id="dpni">
+<h2>12. DPNI / TGNI</h2>
+<div class="callout"><strong>Principe :</strong> dépistage non invasif à partir du <strong>sang maternel</strong>, via analyse de matériel génétique fœto-placentaire / ADN libre circulant décrit dans le support.</div>
+
+<h3>Repères historiques cités</h3>
+<ul>
+  <li>1969 : cellules fœtales décrites dans le sang maternel dès la 14e semaine.</li>
+  <li>1989 : détermination du sexe fœtal par ADN chez fœtus masculin.</li>
+  <li>1993 : premiers DPNI T21/T18 et détermination du Rhésus fœtal par PCR.</li>
+  <li>1997 : découverte d’ADN libre circulant dans plasma/sérum maternel.</li>
+  <li>1998 : « premier véritable DPNI / NIPT » avec quantification de l’ADN fœtal selon le support.</li>
+</ul>
+
+<h3>NGS / WGS : logique</h3>
+<div class="schema">ADN → fragmentation
+→ ajout d’adaptateurs
+→ constitution d’une librairie
+→ séquençage massif parallèle
+→ assemblage / comptage
+→ recherche de sur-représentation chromosomique</div>
+
+<h3>Conditions pratiques</h3>
+<ul>
+  <li>Dès la <strong>10e semaine de grossesse</strong> ou <strong>12 SA</strong> selon la formulation du support.</li>
+  <li>Simple prise de sang maternelle.</li>
+  <li>Tube <strong>Streck</strong> : conservation <strong>5 jours max à température ambiante</strong>, puis centrifugation/plasma/congélation.</li>
+  <li>Prescription obligatoire.</li>
+  <li>Consentement + attestation de consultation pour analyse chromosomique/ADN.</li>
+</ul>
+
+<h3>Indications citées</h3>
+<ul>
+  <li><strong>MSM &gt; 1/1000</strong>.</li>
+  <li>MSM atypiques.</li>
+  <li>Grossesse gémellaire, voire triple : DPNI sans MSM car les marqueurs sériques sont présentés comme non interprétables.</li>
+  <li>Autres motifs : validation CPDPN.</li>
+</ul>
+
+<h3>Ce qui peut être recherché en France selon le support</h3>
+<ul>
+  <li>Trisomies 21, 18, 13.</li>
+  <li>CNV.</li>
+  <li>Certains remaniements &gt; <strong>7 Mb</strong>.</li>
+  <li>Autres trisomies possibles citées : 2, 8, 9, 14, 15, 16, 22 si option consentie.</li>
+  <li><strong>Jamais les gonosomes</strong> selon le cours.</li>
+</ul>
+</section>
+
+<section id="limites">
+<h2>13. Limites du DPNI</h2>
+<div class="callout warn"><strong>Point clé :</strong> sensibilité/spécificité &gt; 99 % pour T21, mais faux positifs et faux négatifs existent → ce n’est jamais un diagnostic.</div>
+<div class="grid2">
+  <div class="card">
+    <strong>Non dépistés selon le support</strong>
+    <ul>
+      <li>Polyploïdies.</li>
+      <li>Anomalies cytogénétiques équilibrées.</li>
+      <li>Mosaïques si &lt; seuil d’environ <strong>15 %</strong>.</li>
+      <li>Anomalies de fermeture du tube neural.</li>
+      <li>Anomalies monogéniques.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <strong>Situations problématiques / non réalisables</strong>
+    <ul>
+      <li>Mère porteuse d’une T21.</li>
+      <li>Antécédents de chimiothérapie ou cancer, selon le contexte décrit.</li>
+      <li>Greffe de moelle osseuse.</li>
+      <li>ADN insuffisant → reprise du prélèvement.</li>
+    </ul>
+  </div>
+</div>
+<ul>
+  <li>Seuil de fraction ADN évoqué : environ <strong>1 à 2 %</strong> comme quantité suffisante dans le support.</li>
+  <li>Trisomie 16 placentaire : surveillance obstétricale citée sans IMG dans le cours.</li>
+</ul>
+</section>
+
+<section id="pieges">
+<h2>14. Pièges et incohérences du support</h2>
+<div class="callout warn"><strong>1. Amniocentèse / anesthésie :</strong> le texte dit qu’elle ne nécessite généralement pas d’anesthésie, mais la correction du QRM 2 affirme « anesthésie locale ». À signaler comme contradiction du support.</div>
+<div class="callout warn"><strong>2. Échographie = diagnostic ou dépistage :</strong> elle figure d’abord dans les moyens du DPN, puis le cours précise explicitement qu’« une échographie n’est pas un diagnostic mais un dépistage » et qu’elle doit être confirmée par un autre examen.</div>
+<div class="callout warn"><strong>3. Échographie T2 :</strong> première partie = <strong>22–24 SA</strong> ; seconde partie = <strong>21–23 SA</strong>. Les deux valeurs figurent dans le PDF.</div>
+<div class="callout warn"><strong>4. DPNI et « cellules fœtales » :</strong> le support mélange par moments cellules fœtales/fœto-placentaires et ADN libre circulant ; pour réviser le QCM local, retenir la logique et le vocabulaire du cours.</div>
+<div class="callout warn"><strong>5. DPI : « embryons équilibrés » :</strong> ce terme est utilisé dans le support pour les embryons retenus pour transfert. Il faut suivre la terminologie du cours sans la généraliser à toutes les situations.</div>
+</section>
+
+<section id="flashcards">
+<h2>15. Flashcards express</h2>
+<div class="flashgrid">
+<div class="flash"><div class="q">1. DPN : 2 notions fondamentales ?</div><div class="a">Gravité + balance bénéfice/risque.</div></div>
+<div class="flash"><div class="q">2. Qui décide de poursuivre la grossesse ?</div><div class="a">Le couple.</div></div>
+<div class="flash"><div class="q">3. Durée agréments ABM ?</div><div class="a">5 ans renouvelables.</div></div>
+<div class="flash"><div class="q">4. Amniocentèse à partir de ?</div><div class="a">15 SA.</div></div>
+<div class="flash"><div class="q">5. Risque FCS amniocentèse ?</div><div class="a">&lt; 0,5 %, environ 0,2 % cité.</div></div>
+<div class="flash"><div class="q">6. BT à partir de ?</div><div class="a">11 SA.</div></div>
+<div class="flash"><div class="q">7. Risque FCS BT ?</div><div class="a">0,5–1 %.</div></div>
+<div class="flash"><div class="q">8. Sang fœtal à partir de ?</div><div class="a">22 SA.</div></div>
+<div class="flash"><div class="q">9. Biopsie peau à partir de ?</div><div class="a">20 SA / 2e trimestre.</div></div>
+<div class="flash"><div class="q">10. IRM fœtale à partir de ?</div><div class="a">20 SA.</div></div>
+<div class="flash"><div class="q">11. Scanner osseux vers ?</div><div class="a">32 SA.</div></div>
+<div class="flash"><div class="q">12. T1 échographique ?</div><div class="a">11–14 SA, idéal ~12 SA ; autre section : 11–13 SA + 6 j.</div></div>
+<div class="flash"><div class="q">13. AFP normale ?</div><div class="a">0,5–2,5 MoM.</div></div>
+<div class="flash"><div class="q">14. βHCG normale ?</div><div class="a">0,25–5 MoM.</div></div>
+<div class="flash"><div class="q">15. PAPP-A normale ?</div><div class="a">0,25–2,5 MoM.</div></div>
+<div class="flash"><div class="q">16. AFP &gt; 2,5 MoM ?</div><div class="a">Penser défaut fermeture tube neural.</div></div>
+<div class="flash"><div class="q">17. βHCG &gt; 5 MoM ?</div><div class="a">Suspicion T21 selon le cours.</div></div>
+<div class="flash"><div class="q">18. Signes écho T21 ?</div><div class="a">Clarté nucale épaisse, LCC rétrécie, absence os du nez.</div></div>
+<div class="flash"><div class="q">19. DPNI = diagnostic ?</div><div class="a">Non, dépistage.</div></div>
+<div class="flash"><div class="q">20. DPNI dès quand ?</div><div class="a">10e semaine de grossesse / 12 SA dans le support.</div></div>
+<div class="flash"><div class="q">21. Tube DPNI ?</div><div class="a">Tube Streck.</div></div>
+<div class="flash"><div class="q">22. Seuil MSM cité pour DPNI ?</div><div class="a">&gt; 1/1000.</div></div>
+<div class="flash"><div class="q">23. DPNI gonosomes en France ?</div><div class="a">Jamais selon le cours.</div></div>
+<div class="flash"><div class="q">24. Sensibilité/spécificité T21 DPNI ?</div><div class="a">&gt; 99 %, mais faux + / faux − possibles.</div></div>
+<div class="flash"><div class="q">25. Mosaïque : seuil cité ?</div><div class="a">15 %.</div></div>
+<div class="flash"><div class="q">26. Taille remaniements DPNI ?</div><div class="a">&gt; 7 Mb cités.</div></div>
+<div class="flash"><div class="q">27. DPI : biopsie quand ?</div><div class="a">J3 ou J5/J6.</div></div>
+<div class="flash"><div class="q">28. DPI : taux grossesse par cycle ?</div><div class="a">20–30 %.</div></div>
+<div class="flash"><div class="q">29. DPI : cellules biopsiées à J2/J3 ?</div><div class="a">1 à 2 sur 8 selon le support.</div></div>
+<div class="flash"><div class="q">30. DPI : délai résultat ?</div><div class="a">Environ 24 h.</div></div>
+</div>
+</section>
+
+<section class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>DPN = diagnostic</strong> potentiellement invasif, encadré par le <strong>CPDPN</strong> ; <strong>dépistage = estimation de risque</strong>. Amniocentèse dès <strong>15 SA</strong>, trophoblaste dès <strong>11 SA</strong>, sang fœtal dès <strong>22 SA</strong>, IRM dès <strong>20 SA</strong>. Pour les MSM : <strong>AFP 0,5–2,5 MoM</strong>, <strong>βHCG 0,25–5 MoM</strong>, <strong>PAPP-A 0,25–2,5 MoM</strong>. AFP &gt; 2,5 MoM → penser tube neural ; βHCG &gt; 5 MoM → T21 possible. Le <strong>DPNI reste un dépistage</strong>, réalisé sur sang maternel, avec prescription + consentement ; T21/T18/T13 au premier plan, mais aucune certitude à 100 %. Le <strong>DPI</strong> repose sur FIV/ICSI, biopsie embryonnaire J3 ou J5/J6 et analyse ciblée de l’anomalie familiale.</p>
+</section>
+
+</main></body></html>
