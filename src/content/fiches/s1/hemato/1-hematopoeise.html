@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche - Hématopoïèse et exploration</title>
+<style>
+:root{
+  --g:#1a7a4a;--gs:#eaf7ef;--r:#dc2626;--rs:#fee2e2;--o:#d97706;--os:#fff7ed;
+  --b:#2563eb;--bs:#eff6ff;--p:#6d28d9;--ps:#f2ecff;--ink:#1c1c2e;--line:#d8dce8;
+  --bg:#f6f7fb;--teal:#0f766e;--teals:#ecfeff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}
+.page{max-width:1160px;margin:auto;padding:32px 18px 64px}
+.hero{background:linear-gradient(135deg,#fff 0%,#f0fdf4 58%,#ecfeff 100%);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 40px rgba(27,38,49,.06)}
+.kicker{color:var(--g);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px}
+h1{font-size:38px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}
+.subtitle{max-width:980px;margin:0;color:#374151}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;font-size:13px}
+.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:12px;font-weight:800;padding:4px 9px;border-radius:999px}
+.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.green{background:var(--gs);color:#166534}.purple{background:var(--ps);color:#4c1d95}.blue{background:var(--bs);color:#1d4ed8}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}
+nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}
+nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav a{color:var(--ink);text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(27,38,49,.035)}
+h2{font-size:25px;margin:0 0 16px;letter-spacing:-.02em}h3{font-size:18px;margin:22px 0 10px;color:var(--g)}
+p{margin:8px 0}ul{margin:8px 0 12px;padding-left:22px}li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}
+.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}
+.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}
+.tealbox{border-left-color:var(--teal);background:var(--teals)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:#374151;overflow-x:auto;white-space:pre-wrap}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px;min-width:650px}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left;color:#111827}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}.flash .q{background:#f9fafb;padding:10px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:10px 12px;color:#374151}
+.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+.small{font-size:12.5px;color:#4b5563}
+@media(max-width:780px){
+  h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}
+  table{font-size:12.5px;min-width:590px}
+}
+@media print{
+  body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body><main class="page">
+
+<header class="hero">
+  <div class="kicker">UE13 — Tissu sanguin</div>
+  <h1>Hématopoïèse & exploration de l’hématopoïèse</h1>
+  <p class="subtitle">Fiche D1/externat complète sur les deux parties du support : sang, lignées cellulaires, cellules souches hématopoïétiques, niches, différenciation, facteurs de croissance, NFS, paramètres érythrocytaires, réticulocytes, leucocytes, plaquettes, myélogramme, BOM, immunophénotypage et culture de progéniteurs.</p>
+  <div class="tags">
+    <span class="tag red">🔴 Valeurs normales à apprendre</span>
+    <span class="tag orange">🟠 Artéfacts / pièges NFS</span>
+    <span class="tag green">🟢 CSH → cellules matures</span>
+    <span class="tag purple">🧠 Très QCM</span>
+    <span class="tag blue">🩸 Exploration médullaire</span>
+  </div>
+  <div class="actions">
+    <button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+    <button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+  </div>
+</header>
+
+<nav>
+<h2>Plan rapide</h2>
+<ol>
+  <li><a href="#sang">Généralités sur le sang</a></li>
+  <li><a href="#cellules">Cellules sanguines</a></li>
+  <li><a href="#hemato">Définition de l’hématopoïèse</a></li>
+  <li><a href="#developpement">Localisation au cours de la vie</a></li>
+  <li><a href="#stades">CSH → progéniteurs → précurseurs</a></li>
+  <li><a href="#besoins">Besoins de l’hématopoïèse</a></li>
+  <li><a href="#csh">CSH / progéniteurs / précurseurs</a></li>
+  <li><a href="#regulation">Facteurs de régulation</a></li>
+  <li><a href="#exploration">Stratégie d’exploration</a></li>
+  <li><a href="#nfs">NFS / hémogramme</a></li>
+  <li><a href="#automate">Automate et impédancemétrie</a></li>
+  <li><a href="#erythro">Paramètres érythrocytaires</a></li>
+  <li><a href="#artefacts">Artéfacts</a></li>
+  <li><a href="#reticulocytes">Réticulocytes</a></li>
+  <li><a href="#plaquettes">Plaquettes</a></li>
+  <li><a href="#leucocytes">Leucocytes</a></li>
+  <li><a href="#myelogramme">Ponction médullaire / myélogramme</a></li>
+  <li><a href="#bom">BOM</a></li>
+  <li><a href="#immunopheno">Immunophénotypage</a></li>
+  <li><a href="#culture">Culture de progéniteurs</a></li>
+  <li><a href="#pieges">Pièges / incohérences</a></li>
+  <li><a href="#flashcards">Flashcards</a></li>
+</ol>
+</nav>
+
+<section id="sang">
+<h2>1. Généralités sur le sang</h2>
+<div class="grid2">
+<div class="card">
+<h3>Volumes</h3>
+<ul>
+<li><strong>70 mL/kg</strong> chez l’humain.</li>
+<li>Homme : environ <strong>5–6 L</strong>.</li>
+<li>Femme : environ <strong>4–5 L</strong>.</li>
+<li>Nouveau-né : environ <strong>0,25 L</strong>.</li>
+</ul>
+</div>
+<div class="card">
+<h3>pH et fonctions</h3>
+<ul>
+<li>pH sanguin : <strong>7,35–7,45</strong>.</li>
+<li>Transport : O₂, nutriments, éléments immunitaires, messagers chimiques.</li>
+<li>Participation à l’élimination des déchets.</li>
+</ul>
+</div>
+</div>
+
+<h3>Composition</h3>
+<div class="tablewrap"><table>
+<tr><th>Compartiment</th><th>Part du sang</th><th>Composition</th></tr>
+<tr><td>Plasma</td><td><strong>55 %</strong></td><td>Eau 91,5 % ; protéines 7 % ; autres solutés 1,5 %.</td></tr>
+<tr><td>Cellules en suspension</td><td><strong>45 %</strong></td><td>GR, plaquettes, GB/leucocytes.</td></tr>
+</table></div>
+
+<h3>Plasma vs sérum</h3>
+<div class="grid2">
+<div class="card"><strong>Plasma</strong><ul><li>Tube avec anticoagulant.</li><li>Pas de caillot.</li><li>Conserve les facteurs de coagulation, dont le <strong>fibrinogène</strong>.</li></ul></div>
+<div class="card"><strong>Sérum</strong><ul><li>Tube sans anticoagulant.</li><li>Le sang coagule.</li><li>Liquide jaunâtre restant.</li><li>Fibrinogène consommé pendant la coagulation.</li></ul></div>
+</div>
+<div class="callout warn"><strong>Piège QCM :</strong> plasma = facteurs de coagulation présents ; sérum = facteurs consommés par le caillot.</div>
+</section>
+
+<section id="cellules">
+<h2>2. Cellules sanguines</h2>
+<div class="tablewrap"><table>
+<tr><th>Cellule</th><th>Durée de vie</th><th>Fonction principale</th></tr>
+<tr><td>GR = hématies = érythrocytes</td><td><strong>120 jours</strong></td><td>Transport de l’oxygène.</td></tr>
+<tr><td>GB = leucocytes</td><td>&lt; 1 jour à plusieurs années</td><td>Défense de l’organisme.</td></tr>
+<tr><td>Plaquettes</td><td><strong>7 jours</strong></td><td>Hémostase primaire.</td></tr>
+</table></div>
+
+<h3>Polynucléaires</h3>
+<ul>
+<li>Noyau <strong>polylobé</strong> + granulations cytoplasmiques.</li>
+<li><strong>PNN :</strong> ~10 h dans le sang, puis ~24 h dans les tissus, maximum ~48 h ; défense antibactérienne.</li>
+<li><strong>PNE :</strong> défense antiparasitaire + réactions immuno-allergiques ; excès possible en parasitose.</li>
+<li><strong>PNB :</strong> réactions immuno-allergiques.</li>
+</ul>
+
+<h3>Cellules mononucléées</h3>
+<ul>
+<li><strong>Monocyte :</strong> 24–48 h dans le sang ; devient macrophage dans les tissus ; durée tissulaire de plusieurs mois.</li>
+<li><strong>Lymphocyte :</strong> recirculation sang/tissus/organes lymphoïdes ; durée de vie de plusieurs mois à années.</li>
+<li>Lymphocyte B → immunité <strong>humorale</strong>.</li>
+<li>Lymphocyte T → immunité <strong>tissulaire/cellulaire</strong>, notamment antivirale dans le support.</li>
+</ul>
+</section>
+
+<section id="hemato">
+<h2>3. Hématopoïèse : définition</h2>
+<div class="callout"><strong>Hématopoïèse :</strong> processus de fabrication et de renouvellement de toutes les cellules du sang, débutant dans la <strong>moelle osseuse</strong> à partir des <strong>cellules souches hématopoïétiques (CSH)</strong>.</div>
+<ul>
+<li>Les CSH sont <strong>indifférenciées</strong>.</li>
+<li>Elles sont <strong>multipotentes</strong>, pas totipotentes.</li>
+<li>Les cellules deviennent progressivement matures puis quittent la moelle pour le sang périphérique.</li>
+<li>Les CSH dépendent d’un microenvironnement appelé <strong>niche hématopoïétique</strong>.</li>
+</ul>
+<div class="schema">CSH
+→ progéniteurs
+→ précurseurs
+→ cellules matures
+→ sang périphérique</div>
+</section>
+
+<section id="developpement">
+<h2>4. Localisation de l’hématopoïèse au cours du développement</h2>
+<div class="tablewrap"><table>
+<tr><th>Période</th><th>Site principal</th></tr>
+<tr><td>Deux premiers mois</td><td>Région <strong>para-aortique</strong>.</td></tr>
+<tr><td>2e–7e mois</td><td><strong>Foie + rate</strong>.</td></tr>
+<tr><td>À partir du 5e mois</td><td>Début progressif dans la <strong>moelle osseuse</strong>.</td></tr>
+<tr><td>Avant 5 ans</td><td>Activité hématopoïétique dans <strong>tous les os</strong>.</td></tr>
+<tr><td>Après 5 ans</td><td>Moelle des os courts/plats : sternum, bassin, vertèbres, crêtes iliaques, côtes, crâne.</td></tr>
+</table></div>
+
+<h3>Autorenouvellement</h3>
+<div class="grid2">
+<div class="card"><strong>Avant la naissance</strong><p>Division <strong>symétrique</strong> : 1 CSH → 2 CSH = autorenouvellement d’expansion.</p></div>
+<div class="card"><strong>Après la naissance</strong><p>Division <strong>asymétrique</strong> : 1 CSH → 1 CSH + 1 progéniteur = autorenouvellement de maintien.</p></div>
+</div>
+</section>
+
+<section id="stades">
+<h2>5. Les stades de différenciation</h2>
+<div class="schema">CSH multipotente
+↓
+Progéniteur
+↓
+Précurseur
+↓
+Cellule mature</div>
+<p>Plus on avance, plus la cellule est différenciée.</p>
+
+<div class="tablewrap"><table>
+<tr><th>Processus</th><th>Cellule mature obtenue</th></tr>
+<tr><td>Érythropoïèse</td><td>Globules rouges.</td></tr>
+<tr><td>Granulopoïèse</td><td>Polynucléaires.</td></tr>
+<tr><td>Monocytopoïèse</td><td>Monocytes.</td></tr>
+<tr><td>Lymphopoïèse</td><td>Lymphocytes.</td></tr>
+<tr><td>Mégacaryocytopoïèse</td><td>Plaquettes.</td></tr>
+</table></div>
+
+<div class="callout orangebox"><strong>Très tombable :</strong> les progéniteurs restent trop immatures pour être différenciés morphologiquement ; à partir des <strong>précurseurs</strong>, la morphologie devient exploitable.</div>
+</section>
+
+<section id="besoins">
+<h2>6. Besoins de l’hématopoïèse</h2>
+<h3>Microenvironnement médullaire</h3>
+<ul>
+<li>Matrice.</li>
+<li>Cellules stromales.</li>
+<li>Facteurs de croissance et cytokines.</li>
+<li>Innervation sympathique.</li>
+<li>Niches hématopoïétiques.</li>
+</ul>
+
+<h3>Vitamines et oligoéléments</h3>
+<div class="tablewrap"><table>
+<tr><th>Élément</th><th>Rôle</th></tr>
+<tr><td>Fer</td><td>Érythropoïèse, synthèse de l’hémoglobine.</td></tr>
+<tr><td>Vitamine B6</td><td>Synthèse de l’hème.</td></tr>
+<tr><td>Vitamines B9 + B12</td><td>Synthèse de l’ADN + division cellulaire ; action sur <strong>toutes les lignées</strong> ; dites vitamines anti-mégaloblastiques.</td></tr>
+</table></div>
+<div class="callout warn"><strong>Le support dit explicitement : « tombe TOUJOURS en QCM »</strong> pour B9/B12.</div>
+
+<h3>Conditions physico-chimiques</h3>
+<ul><li>Hypoxie au fond des niches : environ <strong>1,5 % d’O₂</strong> dans le support.</li></ul>
+</section>
+
+<section id="csh">
+<h2>7. CSH vs progéniteurs vs précurseurs</h2>
+<div class="tablewrap"><table>
+<tr><th>Caractéristique</th><th>CSH</th><th>Progéniteur</th><th>Précurseur</th></tr>
+<tr><td>Potentiel</td><td>Multipotent</td><td>Restreint à 1–2 lignées</td><td>Une seule lignée</td></tr>
+<tr><td>Autorenouvellement</td><td>Oui</td><td>Diminué</td><td>Perdu</td></tr>
+<tr><td>Identifiable morphologiquement</td><td>Non</td><td>Non</td><td><strong>Oui</strong></td></tr>
+<tr><td>Cycle cellulaire</td><td>90 % en quiescence</td><td>% en cycle augmente</td><td>Différenciation terminale</td></tr>
+<tr><td>Phénotype</td><td><strong>CD34+ CD38−</strong></td><td><strong>CD34+ CD38+</strong> + Ag de lignée</td><td>Morphologie identifiable</td></tr>
+<tr><td>Culture</td><td>—</td><td>Capable de former des colonies in vitro</td><td>—</td></tr>
+</table></div>
+
+<ul>
+<li>CSH : reconstitution complète myéloïde + lymphoïde à long terme après greffe.</li>
+<li>CSH mobilisables dans le sang par certains traitements.</li>
+<li>Conservation citée : <strong>−196 °C</strong>.</li>
+</ul>
+
+<div class="callout bluebox"><strong>Myéloïde :</strong> GR, plaquettes, monocytes, polynucléaires. <strong>Lymphoïde :</strong> lymphocytes.</div>
+</section>
+
+<section id="regulation">
+<h2>8. Régulation de l’hématopoïèse</h2>
+<div class="tablewrap"><table>
+<tr><th>Type de facteur</th><th>Exemples</th><th>Action</th></tr>
+<tr><td>Promotion</td><td><strong>SCF, Flt3-L</strong></td><td>Très en amont, CSH/progéniteurs précoces ; autorenouvellement + avancée dans la différenciation, sans imposer une lignée précise.</td></tr>
+<tr><td>Multipotents</td><td><strong>IL-3, IL-7</strong>, GM-CSF</td><td>Progéniteurs ; IL-7 → lymphoïde, IL-3 → myéloïde ; GM-CSF → granulocytes.</td></tr>
+<tr><td>Restreints / spécifiques</td><td><strong>TPO, EPO, G-CSF, M-CSF</strong></td><td>Fin de différenciation ; stimulation d’une lignée précise.</td></tr>
+</table></div>
+<div class="callout orangebox"><strong>Exemples ultra-rentables :</strong> TPO → plaquettes ; EPO → lignée érythroïde ; G-CSF/M-CSF → lignées spécifiques citées dans le cours.</div>
+</section>
+
+<section id="exploration">
+<h2>9. Comment explorer l’hématopoïèse ?</h2>
+<div class="tablewrap"><table>
+<tr><th>Ce qu’on veut explorer</th><th>Où ?</th><th>Examen</th></tr>
+<tr><td>Cellules matures</td><td>Sang</td><td><strong>NFS / hémogramme</strong>.</td></tr>
+<tr><td>Précurseurs</td><td>Moelle</td><td><strong>Myélogramme / BOM</strong> grâce à la morphologie.</td></tr>
+<tr><td>CSH / progéniteurs</td><td>Moelle</td><td><strong>Immunophénotypage</strong> et/ou <strong>culture de progéniteurs</strong>.</td></tr>
+</table></div>
+<div class="callout warn"><strong>Piège :</strong> myélogramme et BOM n’identifient pas morphologiquement les CSH/progéniteurs.</div>
+</section>
+
+<section id="nfs">
+<h2>10. NFS / hémogramme</h2>
+<ul>
+<li>Exploration des <strong>cellules matures</strong>.</li>
+<li>Prélèvement veineux ou capillaire.</li>
+<li>Tube violet avec <strong>EDTA</strong>.</li>
+<li>EDTA = chélateur du calcium → empêche la coagulation.</li>
+<li>Indispensable notamment pour pouvoir compter correctement les plaquettes.</li>
+</ul>
+
+<div class="callout"><strong>Réflexe :</strong> automate en 1re intention ; si anomalie → frottis sanguin selon le contexte.</div>
+
+<h3>Formule leucocytaire</h3>
+<ul>
+<li>Les érythroblastes ne font <strong>pas</strong> partie de la formule leucocytaire.</li>
+<li>Les pourcentages des leucocytes doivent totaliser 100 % sans les érythroblastes.</li>
+<li>On interprète les leucocytes en <strong>valeurs absolues G/L</strong>, pas en pourcentage.</li>
+</ul>
+</section>
+
+<section id="automate">
+<h2>11. Automate : techniques principales</h2>
+<h3>Impédancemétrie</h3>
+<ul>
+<li>Chaque cellule traversant un orifice provoque une impulsion.</li>
+<li><strong>Nombre d’impulsions = nombre de cellules.</strong></li>
+<li><strong>Hauteur de l’impulsion ∝ volume cellulaire.</strong></li>
+<li>Taille : <strong>plaquettes &lt; hématies &lt; leucocytes</strong>.</li>
+</ul>
+
+<h3>Mesure de l’hémoglobine</h3>
+<ul>
+<li>Lyse sélective des GR.</li>
+<li>Libération de l’Hb.</li>
+<li>Conversion en pigment stable.</li>
+<li>Absorbance proportionnelle à la concentration → <strong>spectrophotométrie</strong>.</li>
+</ul>
+
+<h3>Différenciation des leucocytes</h3>
+<ul>
+<li>Volume.</li>
+<li>Rapport N/C.</li>
+<li>Structure.</li>
+<li>Caractéristiques cytochimiques.</li>
+<li>Lyse différentielle.</li>
+<li>Marquage par anticorps-fluorochrome.</li>
+</ul>
+</section>
+
+<section id="erythro">
+<h2>12. Paramètres érythrocytaires — valeurs à connaître</h2>
+<div class="tablewrap"><table>
+<tr><th>Paramètre</th><th>Valeurs de référence du support</th><th>Interprétation</th></tr>
+<tr><td>Hémoglobine</td><td>Homme : <strong>130–180 g/L</strong><br>Femme : <strong>120–160 g/L</strong><br>Nouveau-né : <strong>140–230 g/L</strong></td><td>↓ anémie ; ↑ polyglobulie.</td></tr>
+<tr><td>VGM</td><td><strong>80–100 fL</strong></td><td>↓ microcytose ; ↑ macrocytose.</td></tr>
+<tr><td>CCMH</td><td><strong>32–36</strong> (table du support)</td><td>↓ hypochromie. Une valeur &gt; 36 % doit faire rechercher un artéfact.</td></tr>
+<tr><td>TCMH</td><td><strong>27–32 pg/cellule</strong></td><td>Quantité d’Hb par GR.</td></tr>
+</table></div>
+
+<h3>Formules du cours</h3>
+<div class="schema">Hte = GR × VGM
+VGM = (Hématocrite × 10) / nombre d'hématies   [formule affichée sur le support]
+CCMH = Hb / Hte
+TCMH = Hb / GR</div>
+
+<div class="callout orangebox"><strong>Réflexe devant une anémie :</strong> 1) Hb → confirmer l’anémie ; 2) VGM → micro/normo/macrocytaire ; 3) CCMH/TCMH → hypochromie ou non ; 4) réticulocytes → régénérative ou arégénérative.</div>
+<div class="callout warn"><strong>Piège :</strong> le support dit qu’on ne parle pas d’« hyperchromie » ; une CCMH très élevée est souvent artéfactuelle.</div>
+</section>
+
+<section id="artefacts">
+<h2>13. Artéfacts de l’hémogramme</h2>
+
+<h3>Lignée érythrocytaire</h3>
+<ul>
+<li>Prélèvement sur perfusion → dilution → Hb faussement basse.</li>
+<li><strong>Grossesse :</strong> hémodilution physiologique à partir du 3e trimestre ; seuils modifiés, le cours cite une vigilance autour de 110 voire 100 g/L plutôt que 120 g/L.</li>
+<li>Hyperprotidémies, insuffisance cardiaque, hypersplénisme → hémodilution possible.</li>
+<li>Déshydratation / diurétiques → hémoconcentration → fausse polyglobulie.</li>
+<li>Fausse microcytose exceptionnelle : hyponatrémie.</li>
+<li>Fausses macrocytoses : agglutinines froides, hyperglycémie, hyperleucocytose majeure.</li>
+</ul>
+
+<h3>Table « pièges » du support</h3>
+<div class="tablewrap"><table>
+<tr><th>Résultat / contexte</th><th>À vérifier</th></tr>
+<tr><td>Grossesse</td><td>Hémodilution.</td></tr>
+<tr><td>Origine africaine</td><td>Neutropénie constitutionnelle possible dans le support.</td></tr>
+<tr><td>CCMH &gt; 36 %</td><td>Erreur analytique +++ / agglutinines froides.</td></tr>
+<tr><td>Thrombopénie isolée</td><td>Agrégats plaquettaires ?</td></tr>
+<tr><td>Hyperplaquettose</td><td>Vérifier VGM / microcytose importante ?</td></tr>
+<tr><td>Hyperlymphocytose</td><td>Cellules lymphomateuses ? blastes ?</td></tr>
+</table></div>
+</section>
+
+<section id="reticulocytes">
+<h2>14. Réticulocytes</h2>
+<ul>
+<li>Stade légèrement plus immature que le GR, mais <strong>circule dans le sang</strong>.</li>
+<li>Reflet de la production médullaire sans ponction de moelle.</li>
+<li>Pas inclus dans l’hémogramme standard → demander <strong>NFS + réticulocytes</strong>.</li>
+<li>Coloration spécifique : <strong>Bleu de Crésyl</strong>.</li>
+</ul>
+
+<div class="grid2">
+<div class="card"><strong>&gt; 120 G/L</strong><p>Anémie <strong>régénérative</strong> → origine périphérique (hémolyse, hémorragie, etc.).</p></div>
+<div class="card"><strong>&lt; 120 G/L</strong><p>Anémie <strong>arégénérative</strong> → origine centrale/médullaire dans le schéma du cours.</p></div>
+</div>
+<p>Le support précise que la normale haute est autour de <strong>80–100 G/L</strong>, mais qu’on utilise <strong>120 G/L</strong> comme seuil de régénération.</p>
+</section>
+
+<section id="plaquettes">
+<h2>15. Plaquettes</h2>
+<div class="callout bluebox"><strong>Norme adulte :</strong> <strong>150–400 G/L</strong>, identique chez l’adulte quel que soit le sexe dans le support.</div>
+<ul>
+<li>&lt; norme → <strong>thrombopénie</strong>.</li>
+<li>&gt; norme → <strong>thrombocytose / hyperplaquettose</strong>.</li>
+<li>Comptage par <strong>impédancemétrie</strong>.</li>
+</ul>
+
+<h3>Artéfacts</h3>
+<ul>
+<li>Fausse thrombopénie par agrégation plaquettaire, notamment phénomène lié à l’EDTA.</li>
+<li>Si suspicion : refaire NFS avec <strong>citrate de sodium</strong> (tube bleu).</li>
+<li>Fausse thrombocytose : fragments cellulaires, cryoglobulines ou micro-organismes comptés comme plaquettes.</li>
+</ul>
+</section>
+
+<section id="leucocytes">
+<h2>16. Leucocytes — valeurs absolues à connaître</h2>
+<div class="tablewrap"><table>
+<tr><th>Cellule</th><th>Valeur de référence (G/L)</th><th>Si bas / si haut</th></tr>
+<tr><td>Leucocytes totaux</td><td><strong>4–10</strong></td><td>Leucopénie / hyperleucocytose.</td></tr>
+<tr><td>PN neutrophiles</td><td><strong>1,5–7</strong></td><td>Neutropénie / polynucléose neutrophile.</td></tr>
+<tr><td>PN éosinophiles</td><td><strong>0,05–0,5</strong></td><td>↑ hyperéosinophilie.</td></tr>
+<tr><td>PN basophiles</td><td><strong>0,01–0,05</strong></td><td>↑ basophilie.</td></tr>
+<tr><td>Lymphocytes</td><td><strong>1,5–4</strong></td><td>Lymphopénie / hyperlymphocytose.</td></tr>
+<tr><td>Monocytes</td><td><strong>0,1–1</strong></td><td>↑ hypermonocytose.</td></tr>
+</table></div>
+<div class="callout warn"><strong>Très tombable :</strong> interprétation en <strong>valeur absolue</strong>, pas en pourcentage. Les normes peuvent varier avec l’âge.</div>
+<p>Frottis sanguin : coloration <strong>MGG</strong>, à ne pas confondre avec le Bleu de Crésyl des réticulocytes.</p>
+</section>
+
+<section id="myelogramme">
+<h2>17. Ponction médullaire et myélogramme</h2>
+<ul>
+<li>Sites : <strong>sternum</strong> ou <strong>crêtes iliaques</strong> postérieures/antérieures.</li>
+<li>Prélèvement au trocart.</li>
+<li>On commence par un <strong>frottis</strong> pour observer les cellules.</li>
+<li>Analyse surtout des <strong>précurseurs</strong>, identifiables morphologiquement.</li>
+<li>CSH et progéniteurs : non identifiables par la morphologie seule.</li>
+</ul>
+</section>
+
+<section id="bom">
+<h2>18. Biopsie ostéo-médullaire (BOM)</h2>
+<ul>
+<li>Plus invasive que la ponction médullaire.</li>
+<li>Prélèvement d’une <strong>carotte de moelle osseuse</strong>.</li>
+<li>Permet l’étude de la <strong>morphologie et de l’architecture</strong> de la moelle.</li>
+<li>Analyse par l’<strong>anatomopathologie</strong> → délai plus long.</li>
+</ul>
+
+<div class="tablewrap"><table>
+<tr><th>Critère</th><th>Myélogramme / cytologie</th><th>BOM / histologie</th></tr>
+<tr><td>Facilité</td><td>+++</td><td>+</td></tr>
+<tr><td>Étude des cellules</td><td>+++</td><td>+</td></tr>
+<tr><td>Délai résultats</td><td>+++</td><td>+</td></tr>
+<tr><td>Richesse médullaire</td><td>+</td><td>+++</td></tr>
+<tr><td>Fibrose</td><td>−</td><td>+++</td></tr>
+<tr><td>Architecture</td><td>−</td><td>+++</td></tr>
+<tr><td>Cellules souches</td><td>−</td><td>−</td></tr>
+</table></div>
+</section>
+
+<section id="immunopheno">
+<h2>19. Immunophénotypage</h2>
+<ul>
+<li>Utilise des anticorps dirigés contre des <strong>antigènes de surface</strong>.</li>
+<li>La spécificité des marqueurs permet d’identifier différentes populations cellulaires.</li>
+<li>Le support insiste sur <strong>CD34</strong> pour les cellules immatures / CSH.</li>
+<li>Lecture au <strong>cytomètre</strong> grâce à l’excitation des fluorochromes par laser.</li>
+<li>Peut également différencier des cellules matures.</li>
+</ul>
+<div class="callout"><strong>Intérêt :</strong> explorer les cellules non reconnaissables morphologiquement, notamment CSH et progéniteurs.</div>
+</section>
+
+<section id="culture">
+<h2>20. Culture de progéniteurs</h2>
+<ul>
+<li>Particularité : les <strong>progéniteurs</strong> sont décrits comme le stade capable de former des colonies in vitro.</li>
+<li>Culture sur gélose avec facteurs de croissance adaptés.</li>
+<li>Exemple : colonies érythropoïétiques → facteurs spécifiques dont <strong>EPO</strong> + facteurs multipotents.</li>
+<li>Intérêt possible pour l’évaluation d’un greffon.</li>
+<li>Le support signale un intérêt particulier historiquement pour l’autogreffe.</li>
+<li>Technique « plus vraiment pratiquée aujourd’hui » selon la professeure.</li>
+</ul>
+</section>
+
+<section id="pieges">
+<h2>21. Pièges et incohérences du support</h2>
+<div class="callout warn"><strong>1. Fréquence des CSH :</strong> page 4, le texte dit <strong>0,1 %</strong> de la moelle ; page 6 et la correction QCM retiennent <strong>0,01 %</strong>. Pour les QCM du document, le corrigé valide <strong>0,01 %</strong>.</div>
+<div class="callout warn"><strong>2. QCM 3 de la partie 1 :</strong> la correction annonce « BCE », mais le texte de correction comporte un item D décrit comme vrai avec une explication correspondant en réalité à l’item E (fonction des GR). Le jeu de réponses cohérent avec les énoncés reste <strong>B, C et E</strong>.</div>
+<div class="callout warn"><strong>3. QCM 4 :</strong> l’énoncé parle des <strong>basophiles</strong> pour l’item B, mais la correction écrit « polynucléaires éosinophiles » tout en parlant de réaction immuno-allergique. Le libellé du QCM est donc plus cohérent que le texte de correction sur le type cellulaire.</div>
+<div class="callout warn"><strong>4. « Précurseurs réticulocytes » :</strong> la deuxième partie les décrit comme précurseurs des GR circulant dans le sang ; retenir surtout leur rôle pratique : reflet de la production médullaire et seuil de régénération à <strong>120 G/L</strong> dans le support.</div>
+<div class="callout warn"><strong>5. Valeurs biologiques :</strong> le cours précise que certaines normes varient avec l’âge, le sexe ou le contexte. Utiliser ici les valeurs exactes du support pour le partiel.</div>
+</section>
+
+<section id="flashcards">
+<h2>22. Flashcards express</h2>
+<div class="flashgrid">
+<div class="flash"><div class="q">1. Volume sanguin moyen ?</div><div class="a">70 mL/kg.</div></div>
+<div class="flash"><div class="q">2. pH sanguin ?</div><div class="a">7,35–7,45.</div></div>
+<div class="flash"><div class="q">3. Plasma vs sérum ?</div><div class="a">Plasma = facteurs de coagulation conservés ; sérum = après coagulation, fibrinogène consommé.</div></div>
+<div class="flash"><div class="q">4. Durée de vie GR ?</div><div class="a">120 jours.</div></div>
+<div class="flash"><div class="q">5. Durée de vie plaquettes ?</div><div class="a">7 jours.</div></div>
+<div class="flash"><div class="q">6. PNN dans le sang ?</div><div class="a">Environ 10 h.</div></div>
+<div class="flash"><div class="q">7. CSH : multipotente ou totipotente ?</div><div class="a">Multipotente.</div></div>
+<div class="flash"><div class="q">8. Avant naissance : division CSH ?</div><div class="a">Symétrique, expansion.</div></div>
+<div class="flash"><div class="q">9. Après naissance ?</div><div class="a">Asymétrique, maintien.</div></div>
+<div class="flash"><div class="q">10. Après 5 ans : principaux sites ?</div><div class="a">Sternum, bassin, vertèbres, crêtes iliaques, côtes, crâne.</div></div>
+<div class="flash"><div class="q">11. B9/B12 ?</div><div class="a">Synthèse ADN + division cellulaire, toutes lignées.</div></div>
+<div class="flash"><div class="q">12. Hypoxie niche ?</div><div class="a">≈ 1,5 % O₂ dans le support.</div></div>
+<div class="flash"><div class="q">13. CSH phénotype ?</div><div class="a">CD34+ CD38−.</div></div>
+<div class="flash"><div class="q">14. Progéniteur phénotype ?</div><div class="a">CD34+ CD38+ + Ag de lignée.</div></div>
+<div class="flash"><div class="q">15. Quiescence CSH ?</div><div class="a">90 %.</div></div>
+<div class="flash"><div class="q">16. CSH visibles morphologiquement ?</div><div class="a">Non.</div></div>
+<div class="flash"><div class="q">17. Précurseurs visibles ?</div><div class="a">Oui.</div></div>
+<div class="flash"><div class="q">18. Facteurs promotion ?</div><div class="a">SCF, Flt3-L.</div></div>
+<div class="flash"><div class="q">19. IL-7 ?</div><div class="a">Orientation lymphoïde.</div></div>
+<div class="flash"><div class="q">20. IL-3 ?</div><div class="a">Orientation myéloïde.</div></div>
+<div class="flash"><div class="q">21. TPO ?</div><div class="a">Lignée plaquettaire.</div></div>
+<div class="flash"><div class="q">22. Tube NFS ?</div><div class="a">Tube violet EDTA.</div></div>
+<div class="flash"><div class="q">23. Taille cellules ?</div><div class="a">Plaquettes &lt; hématies &lt; leucocytes.</div></div>
+<div class="flash"><div class="q">24. Hb homme ?</div><div class="a">130–180 g/L.</div></div>
+<div class="flash"><div class="q">25. Hb femme ?</div><div class="a">120–160 g/L.</div></div>
+<div class="flash"><div class="q">26. VGM normal ?</div><div class="a">80–100 fL.</div></div>
+<div class="flash"><div class="q">27. CCMH ?</div><div class="a">32–36 dans le tableau du support.</div></div>
+<div class="flash"><div class="q">28. TCMH ?</div><div class="a">27–32 pg/cellule.</div></div>
+<div class="flash"><div class="q">29. Seuil anémie régénérative ?</div><div class="a">&gt; 120 G/L de réticulocytes.</div></div>
+<div class="flash"><div class="q">30. Coloration réticulocytes ?</div><div class="a">Bleu de Crésyl.</div></div>
+<div class="flash"><div class="q">31. Plaquettes normales ?</div><div class="a">150–400 G/L.</div></div>
+<div class="flash"><div class="q">32. Fausse thrombopénie EDTA : solution ?</div><div class="a">Refaire avec citrate de sodium, tube bleu.</div></div>
+<div class="flash"><div class="q">33. Leucocytes totaux ?</div><div class="a">4–10 G/L.</div></div>
+<div class="flash"><div class="q">34. PNN ?</div><div class="a">1,5–7 G/L.</div></div>
+<div class="flash"><div class="q">35. Lymphocytes ?</div><div class="a">1,5–4 G/L.</div></div>
+<div class="flash"><div class="q">36. Monocytes ?</div><div class="a">0,1–1 G/L.</div></div>
+<div class="flash"><div class="q">37. Coloration frottis sanguin ?</div><div class="a">MGG.</div></div>
+<div class="flash"><div class="q">38. Myélogramme : sites ?</div><div class="a">Sternum ou crêtes iliaques.</div></div>
+<div class="flash"><div class="q">39. BOM : grand avantage ?</div><div class="a">Architecture, richesse médullaire et fibrose.</div></div>
+<div class="flash"><div class="q">40. Technique pour CSH/progéniteurs ?</div><div class="a">Immunophénotypage ; culture de progéniteurs.</div></div>
+</div>
+</section>
+
+<section class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>Hématopoïèse = CSH → progéniteurs → précurseurs → cellules matures.</strong> Les CSH sont <strong>multipotentes, CD34+ CD38−, 90 % quiescentes</strong> et non reconnaissables morphologiquement ; les précurseurs le deviennent. B9/B12 agissent sur toutes les lignées et tombent typiquement en QCM. Exploration : <strong>NFS pour cellules matures</strong>, myélogramme/BOM pour morphologie médullaire, immunophénotypage/culture pour CSH-progéniteurs. NFS : tube EDTA. Valeurs clés : Hb H <strong>130–180</strong>, F <strong>120–160 g/L</strong>, VGM <strong>80–100 fL</strong>, plaquettes <strong>150–400 G/L</strong>, leucocytes <strong>4–10 G/L</strong>, PNN <strong>1,5–7</strong>, lymphocytes <strong>1,5–4</strong>. Réticulocytes <strong>&gt;120 G/L = anémie régénérative</strong>. Toujours traquer les artéfacts avant d’interpréter une anomalie isolée.</p>
+</section>
+
+</main></body></html>

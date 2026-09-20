@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche - Variabilité génétique bactérienne</title>
+<style>
+:root{
+  --g:#1a7a4a;--gs:#eaf7ef;--r:#dc2626;--rs:#fee2e2;--o:#d97706;--os:#fff7ed;
+  --b:#2563eb;--bs:#eff6ff;--p:#6d28d9;--ps:#f2ecff;--ink:#1c1c2e;--line:#d8dce8;
+  --bg:#f6f7fb;--teal:#0f766e;--teals:#ecfeff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}
+.page{max-width:1120px;margin:auto;padding:32px 18px 64px}
+.hero{background:linear-gradient(135deg,#fff 0%,#f0fdf4 58%,#ecfeff 100%);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 40px rgba(27,38,49,.06)}
+.kicker{color:var(--g);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px}
+h1{font-size:38px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}
+.subtitle{max-width:950px;margin:0;color:#374151}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;font-size:13px}
+.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:12px;font-weight:800;padding:4px 9px;border-radius:999px}
+.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.green{background:var(--gs);color:#166534}.purple{background:var(--ps);color:#4c1d95}.blue{background:var(--bs);color:#1d4ed8}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}
+nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}
+nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav a{color:var(--ink);text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(27,38,49,.035)}
+h2{font-size:25px;margin:0 0 16px;letter-spacing:-.02em}h3{font-size:18px;margin:22px 0 10px;color:var(--g)}
+p{margin:8px 0}ul{margin:8px 0 12px;padding-left:22px}li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}
+.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}
+.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}
+.tealbox{border-left-color:var(--teal);background:var(--teals)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:#374151;overflow-x:auto;white-space:pre-wrap}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px;min-width:620px}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left;color:#111827}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}.flash .q{background:#f9fafb;padding:10px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:10px 12px;color:#374151}
+.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+.small{font-size:12.5px;color:#4b5563}
+@media(max-width:780px){
+  h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}
+  table{font-size:12.5px;min-width:560px}
+}
+@media print{
+  body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body><main class="page">
+
+<header class="hero">
+  <div class="kicker">UE Agents infectieux</div>
+  <h1>Variabilité génétique bactérienne</h1>
+  <p class="subtitle">Fiche D1/externat orientée QCM : réplication bactérienne, classification par ARN 16S, core/accessory genome, mutations, flux verticaux et horizontaux, conjugaison, transduction, transformation et conséquences cliniques sur la résistance aux antibiotiques.</p>
+  <div class="tags">
+    <span class="tag red">🔴 Chiffres à retenir</span>
+    <span class="tag orange">🟠 Pièges transfert H/V</span>
+    <span class="tag green">🟢 Résistance aux antibiotiques</span>
+    <span class="tag purple">🧠 QCM-friendly</span>
+    <span class="tag blue">🧬 Génétique bactérienne</span>
+  </div>
+  <div class="actions">
+    <button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+    <button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+  </div>
+</header>
+
+<nav>
+<h2>Plan rapide</h2>
+<ol>
+  <li><a href="#replication">Réplication de l’ADN</a></li>
+  <li><a href="#classification">Classification / ARN 16S</a></li>
+  <li><a href="#core">Core et génome accessoire</a></li>
+  <li><a href="#flux">Flux vertical vs horizontal</a></li>
+  <li><a href="#mutations">Mutations</a></li>
+  <li><a href="#resistance">Résistance et sélection</a></li>
+  <li><a href="#tuberculose">Exemple tuberculose</a></li>
+  <li><a href="#conjugaison">Conjugaison</a></li>
+  <li><a href="#transduction">Transduction</a></li>
+  <li><a href="#transformation">Transformation</a></li>
+  <li><a href="#comparatif">Comparatif des transferts</a></li>
+  <li><a href="#consequences">Conséquences</a></li>
+  <li><a href="#stress">Stress bactérien / système SOS</a></li>
+  <li><a href="#pieges">Pièges & incohérences</a></li>
+  <li><a href="#flashcards">Flashcards</a></li>
+</ol>
+</nav>
+
+<section id="replication">
+<h2>1. Réplication de l’ADN bactérien</h2>
+<ul>
+  <li>Les bactéries comportent <strong>généralement un chromosome</strong>.</li>
+  <li>Ce chromosome est formé d’une <strong>double hélice d’ADN</strong> à brins complémentaires.</li>
+  <li>Lors de la division, les brins se séparent puis une machinerie de réplication maintient l’ADN écarté et corrige les erreurs.</li>
+  <li>Objectif théorique : produire <strong>deux molécules d’ADN identiques</strong> destinées aux deux cellules filles.</li>
+</ul>
+<div class="callout orangebox"><strong>Logique du cours :</strong> la réplication tend vers une copie stricte, mais mutations et transferts génétiques font qu’au fil des générations les descendants peuvent diverger génétiquement.</div>
+</section>
+
+<section id="classification">
+<h2>2. Classification bactérienne et ARN 16S</h2>
+<div class="callout"><strong>Carl Woese :</strong> classification basée sur les séquences d’<strong>ARN ribosomal 16S</strong>, considérées comme suffisamment conservées pour comparer les bactéries.</div>
+<ul>
+  <li>Comparaison des séquences d’ARN 16S → regroupement en espèces/groupes microbiens.</li>
+  <li>Le niveau de ressemblance permet la construction d’<strong>arbres phylogénétiques</strong>.</li>
+  <li>Les techniques modernes séquencent le génome complet après fragmentation de l’ADN, alignement et assemblage des fragments.</li>
+  <li>Les cartes génomiques circulaires permettent de comparer plusieurs souches d’une même espèce.</li>
+</ul>
+<div class="callout bluebox"><strong>Exemple du support :</strong> comparaison de <strong>11 souches de pneumocoque</strong>, dont une souche de référence ; certaines régions sont identiques, d’autres variables.</div>
+</section>
+
+<section id="core">
+<h2>3. Core genome et génome accessoire</h2>
+<div class="grid2">
+  <div class="card">
+    <h3>Core genome</h3>
+    <ul>
+      <li>Partie conservée du génome.</li>
+      <li>Caractérise l’identité biologique de l’espèce.</li>
+      <li>Indispensable à la viabilité.</li>
+      <li>Contient les <strong>housekeeping genes</strong>.</li>
+      <li>Ces gènes codent les fonctions cellulaires basales et vitales.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Génome accessoire</h3>
+    <ul>
+      <li>Partie variable d’une souche à l’autre.</li>
+      <li>Non indispensable à la survie de base.</li>
+      <li>Acquise notamment par transfert génétique.</li>
+      <li>Peut conférer un <strong>avantage sélectif</strong>.</li>
+    </ul>
+  </div>
+</div>
+<div class="callout warn"><strong>Chiffres du support :</strong> une partie du cours parle d’environ <strong>70 % de génome commun / 30 % variable</strong> ; la conclusion parle plutôt de <strong>70–80 % de core</strong> et d’environ <strong>20 % de génome accessoire</strong>. Les deux formulations figurent dans le PDF.</div>
+</section>
+
+<section id="flux">
+<h2>4. Flux génétiques : vertical vs horizontal</h2>
+<div class="grid2">
+  <div class="card">
+    <h3>Flux vertical</h3>
+    <p>Le cours le relie à la modification/transmission du chromosome au fil des divisions et à la <strong>descendance</strong>.</p>
+    <p>Exemple majeur : <strong>mutation</strong>.</p>
+  </div>
+  <div class="card">
+    <h3>Flux horizontal</h3>
+    <p>Acquisition d’ADN provenant d’une <strong>autre bactérie contemporaine</strong>.</p>
+    <p>Mécanismes : <strong>conjugaison, transduction, transformation</strong>.</p>
+  </div>
+</div>
+<div class="schema">VARIABILITÉ BACTÉRIENNE
+├─ Flux vertical → mutation → transmise à la descendance
+└─ Flux horizontal
+   ├─ Conjugaison → contact direct / pilus / plasmide
+   ├─ Transduction → bactériophage
+   └─ Transformation → ADN libre du milieu</div>
+</section>
+
+<section id="mutations">
+<h2>5. Mutations</h2>
+<div class="callout"><strong>Définition :</strong> altération de l’ADN ayant échappé aux systèmes de réparation cellulaires et modifiant la séquence nucléotidique.</div>
+<ul>
+  <li>La plupart n’ont pas d’effet visible → <strong>mutation silencieuse</strong>.</li>
+  <li>Si la mutation modifie structure/fonction d’une protéine, elle peut faire apparaître un nouveau phénotype.</li>
+</ul>
+
+<div class="tablewrap"><table>
+<tr><th>Type</th><th>Définition / conséquence du support</th></tr>
+<tr><td>Délétion</td><td>Perte d’un nucléotide → décalage du cadre de lecture → modification majeure de la séquence protéique ; conséquence la plus probable donnée : <strong>mort de la bactérie</strong>.</td></tr>
+<tr><td>Insertion</td><td>Ajout d’un ou plusieurs nucléotides → augmentation du nombre total de bases.</td></tr>
+<tr><td>Substitution</td><td>Remplacement d’un nucléotide par un autre, sans modifier le nombre total de nucléotides.</td></tr>
+</table></div>
+
+<p>La majorité des mutations décrites sont des <strong>substitutions</strong>. Elles peuvent :</p>
+<ul>
+  <li>coder le même acide aminé → mutation silencieuse ;</li>
+  <li>changer un acide aminé sans modifier la fonction, par exemple loin du site actif ;</li>
+  <li>devenir avantageuses pour la descendance au cours de l’évolution.</li>
+</ul>
+<div class="callout orangebox"><strong>Très tombable :</strong> les mutations sont un phénomène <strong>naturel et constant</strong>. Elles peuvent être spontanées ou induites par des agents mutagènes chimiques/physiques.</div>
+</section>
+
+<section id="resistance">
+<h2>6. Résistance aux antibiotiques : mutation ≠ adaptation dirigée</h2>
+<div class="callout warn"><strong>Piège central du cours :</strong> l’antibiotique ne « crée » pas la résistance. Il <strong>sélectionne</strong> des bactéries déjà résistantes apparues spontanément.</div>
+<div class="schema">Avant antibiotique :
+Population majoritairement sensible + rares mutants résistants
+
+Antibiotique :
+↓ élimination des sensibles
+↑ survie des résistants
+
+Après sélection :
+clone résistant → prolifération → échec possible du traitement</div>
+<p>Le support insiste sur l’existence naturelle de bactéries résistantes, y compris à des antibiotiques encore non découverts.</p>
+</section>
+
+<section id="tuberculose">
+<h2>7. Exemple clinique : tuberculose et multithérapie</h2>
+<ul>
+  <li>Charge bactérienne donnée : environ <strong>10⁹ bacilles de Koch par gramme de crachat</strong>.</li>
+  <li>Exemple de fréquence naturelle de résistance au premier antibiotique : <strong>1 / 10⁷</strong>.</li>
+  <li>Pour un second antibiotique comme l’éthambutol : <strong>1 / 10⁵</strong>.</li>
+  <li>Probabilité conjointe théorique d’une double résistance : <strong>1 / 10¹²</strong>.</li>
+</ul>
+
+<div class="callout"><strong>Conséquence thérapeutique :</strong> la stratégie clinique du cours repose sur une <strong>multithérapie de 3 à 4 antituberculeux</strong>.</div>
+
+<p>Le but est de réduire suffisamment la charge bactérienne pour permettre au système immunitaire de terminer l’élimination des bacilles persistants. Chez l’immunodéprimé, ce relais immunitaire est moins efficace → prise en charge plus exigeante.</p>
+
+<div class="callout warn"><strong>Piège QCM :</strong> monothérapie = forte pression de sélection et risque d’échec rapide ; multiplier les antibiotiques fait chuter la probabilité qu’une même bactérie soit résistante à tous simultanément.</div>
+</section>
+
+<section id="conjugaison">
+<h2>8. Conjugaison</h2>
+<h3>Expérience de Lederberg et Tatum</h3>
+<p>Deux souches de <em>Salmonella</em> ayant des capacités métaboliques différentes sont mélangées. Une nouvelle souche capable de métaboliser les cinq composés apparaît → preuve d’un échange génétique.</p>
+
+<h3>Mécanisme</h3>
+<ul>
+  <li><strong>Contact direct</strong> entre deux bactéries.</li>
+  <li>Bactérie donneuse porte un <strong>facteur F</strong> sur un plasmide.</li>
+  <li>Le facteur F permet notamment la synthèse d’un <strong>pilus sexuel</strong>.</li>
+  <li>Le plasmide se réplique puis une copie passe à la bactérie receveuse.</li>
+</ul>
+<div class="callout bluebox"><strong>Selon le support :</strong> ce mécanisme nécessite des bactéries de la <strong>même espèce</strong> et vivant dans des régions proches.</div>
+<div class="callout warn"><strong>Piège QCM :</strong> pilus synthétisé par la <strong>donneuse</strong>, pas la receveuse.</div>
+</section>
+
+<section id="transduction">
+<h2>9. Transduction</h2>
+<h3>Expérience de Zinder et Lederberg</h3>
+<p>Deux souches bactériennes sont séparées par un filtre laissant passer le liquide mais pas les bactéries. Malgré l’absence de contact direct, un caractère génétique est transféré → existence d’un vecteur plus petit que la bactérie.</p>
+
+<h3>Mécanisme</h3>
+<ul>
+  <li>Vecteur = <strong>bactériophage</strong>, virus des bactéries.</li>
+  <li>Pas de contact direct bactérie-bactérie.</li>
+  <li>Le phage infecte une bactérie donneuse et peut intégrer son ADN au génome bactérien → <strong>cycle lysogénique</strong>.</li>
+  <li>En situation de stress, le cours décrit un passage au <strong>cycle lytique</strong>.</li>
+  <li>Lors de l’assemblage, un fragment d’<strong>ADN bactérien</strong> peut être empaqueté par erreur dans une capside.</li>
+  <li>Ce phage infecte ensuite une bactérie receveuse et lui injecte ce fragment.</li>
+  <li>Le fragment peut s’intégrer et apporter résistance, virulence ou capacités métaboliques.</li>
+</ul>
+<div class="callout warn"><strong>Piège QCM :</strong> le fragment empaqueté par erreur est un morceau d’<strong>ADN bactérien</strong>, pas de l’ADN du phage.</div>
+<div class="callout orangebox"><strong>Milieux cités :</strong> environnements liquides (océan, mer…) favorisant la dissémination.</div>
+</section>
+
+<section id="transformation">
+<h2>10. Transformation</h2>
+<h3>Expérience de Griffith, 1928</h3>
+<ul>
+  <li>Pneumocoque capsulé = virulent.</li>
+  <li>Pneumocoque non capsulé = non virulent dans le modèle du cours.</li>
+  <li>Bactéries capsulées tuées par chauffage : souris vivantes.</li>
+  <li>Bactéries capsulées mortes + bactéries non capsulées vivantes : souris meurent et on retrouve des pneumocoques capsulés.</li>
+</ul>
+<div class="callout"><strong>Conclusion :</strong> un matériel génétique libéré dans le milieu peut être incorporé par une bactérie vivante et lui transmettre un nouveau caractère.</div>
+
+<h3>Mécanisme</h3>
+<ul>
+  <li>Pas de contact direct.</li>
+  <li>La bactérie donneuse meurt et libère son ADN.</li>
+  <li>L’ADN se fragmente dans le milieu.</li>
+  <li>La bactérie receveuse doit être dans un état <strong>compétent</strong>.</li>
+  <li>Elle capte un fragment d’ADN et l’intègre à son patrimoine.</li>
+  <li>Exemple de caractère acquis : résistance à un antibiotique.</li>
+</ul>
+<div class="callout orangebox"><strong>Stress :</strong> selon le cours, le stress favorise l’état de compétence et donc la transformation.</div>
+</section>
+
+<section id="comparatif">
+<h2>11. Les 3 transferts horizontaux — tableau de QCM</h2>
+<div class="tablewrap"><table>
+<tr><th>Mécanisme</th><th>Contact direct ?</th><th>Intermédiaire / support</th><th>Point clé</th></tr>
+<tr><td>Conjugaison</td><td><strong>Oui</strong></td><td>Pilus + plasmide, facteur F</td><td>Donneuse → receveuse ; réplication et transfert du plasmide.</td></tr>
+<tr><td>Transduction</td><td><strong>Non</strong></td><td>Bactériophage</td><td>Transfert d’ADN bactérien empaqueté par un phage.</td></tr>
+<tr><td>Transformation</td><td><strong>Non</strong></td><td>ADN libre extracellulaire</td><td>Nécessite une bactérie receveuse compétente.</td></tr>
+</table></div>
+<div class="callout warn"><strong>Raccourci rentable :</strong> Conjugaison = <strong>contact</strong> ; Transduction = <strong>phage</strong> ; Transformation = <strong>ADN libre</strong>.</div>
+</section>
+
+<section id="consequences">
+<h2>12. Conséquences de la variabilité génétique</h2>
+<ul>
+  <li>Diversité des souches.</li>
+  <li>Apparition de nouvelles <strong>virulences</strong>.</li>
+  <li>Apparition / diffusion de <strong>résistances aux antibiotiques</strong>.</li>
+  <li>Adaptation à l’être humain et aux environnements.</li>
+</ul>
+<div class="callout warn"><strong>Terme exact du support :</strong> bactéries « <strong>totorésistantes</strong> » = insensibles à la totalité des antibiotiques disponibles.</div>
+<p>Le cours insiste sur le rôle de l’usage excessif des antibiotiques, notamment en agriculture, dans la sélection et la diffusion des résistances.</p>
+<div class="callout bluebox"><strong>Exemple historique donné :</strong> mortalité post-chirurgicale annoncée à <strong>80–90 %</strong> dans la première école de médecine chirurgicale française au XIXe siècle, puis chute après l’arrivée des antibiotiques selon le récit du support.</div>
+</section>
+
+<section id="stress">
+<h2>13. Stress bactérien et système SOS</h2>
+<p>À une question d’étudiant sur le fait que les bactéries puissent à la fois relarguer et acquérir de l’ADN en situation de stress, l’enseignante répond que :</p>
+<ul>
+  <li>le stress déclenche naturellement des mécanismes automatiques ;</li>
+  <li>les bactéries disposent d’un <strong>système SOS</strong> décrit comme une réponse au stress ;</li>
+  <li>les systèmes d’acquisition et de relargage d’ADN peuvent être activés simultanément.</li>
+</ul>
+
+<h3>Exemples cliniques / épidémiologiques cités</h3>
+<ul>
+  <li>Voyage dans une zone avec germes résistants → acquisition transitoire dans la flore, puis disparition après quelques semaines dans l’exemple cité.</li>
+  <li>Hospitalisation à l’étranger + antibiotiques → modification de la flore et acquisition de bactéries résistantes.</li>
+  <li>Diffusion de plasmides conjugatifs → émergence de nouvelles souches résistantes.</li>
+  <li>En réanimation : isolement technique pour éviter la dissémination de souches pandémiques.</li>
+</ul>
+</section>
+
+<section id="pieges">
+<h2>14. Pièges et incohérences du support</h2>
+<div class="callout warn"><strong>1. Proportion du génome :</strong> page 3, le support retient <strong>70 % commun / 30 % variable</strong>. Page 4, il retient <strong>70–80 % de core</strong> et « les 20 % restants » pour l’accessoire. Il s’agit donc d’une approximation variable dans le même cours.</div>
+<div class="callout warn"><strong>2. Définition du flux vertical :</strong> le texte de cours parle de « modification du chromosome bactérien au cours de la vie », tandis que la correction QCM le définit comme la <strong>transmission du chromosome de la cellule mère aux cellules filles</strong>. Pour le QCM local, la correction du cours est la formulation la plus directement exploitable.</div>
+<div class="callout warn"><strong>3. QCM tuberculose :</strong> l’item « bithérapie → apparition de bactéries triples résistantes » est corrigé VRAI. Le texte explicatif dit plus prudemment que, sur un temps long, des doubles ou triples mutants peuvent émerger et mener à l’échec.</div>
+<div class="callout warn"><strong>4. Certaines notions historiques :</strong> plusieurs éléments de contexte sur l’histoire de la classification sont explicitement signalés comme « non-dits » ou ajoutés à partir de la ronéo précédente.</div>
+</section>
+
+<section id="flashcards">
+<h2>15. Flashcards express</h2>
+<div class="flashgrid">
+<div class="flash"><div class="q">1. Chromosomes bactériens ?</div><div class="a">Généralement un chromosome.</div></div>
+<div class="flash"><div class="q">2. Molécule de classification de Woese ?</div><div class="a">ARN ribosomal 16S.</div></div>
+<div class="flash"><div class="q">3. Core genome ?</div><div class="a">Partie conservée et indispensable.</div></div>
+<div class="flash"><div class="q">4. Housekeeping genes ?</div><div class="a">Gènes constitutifs des fonctions cellulaires basales/vitales.</div></div>
+<div class="flash"><div class="q">5. Génome accessoire ?</div><div class="a">Partie variable, non essentielle, avantage adaptatif possible.</div></div>
+<div class="flash"><div class="q">6. Core : ordre de grandeur ?</div><div class="a">70–80 % dans la conclusion du cours.</div></div>
+<div class="flash"><div class="q">7. Flux vertical ?</div><div class="a">Transmission/modification génétique vers la descendance ; mutation = exemple.</div></div>
+<div class="flash"><div class="q">8. Flux horizontal ?</div><div class="a">Acquisition d’ADN d’une autre bactérie contemporaine.</div></div>
+<div class="flash"><div class="q">9. 3 transferts horizontaux ?</div><div class="a">Conjugaison, transduction, transformation.</div></div>
+<div class="flash"><div class="q">10. Mutation silencieuse ?</div><div class="a">Mutation sans conséquence phénotypique/fonctionnelle notable.</div></div>
+<div class="flash"><div class="q">11. Délétion d’un nucléotide ?</div><div class="a">Décalage du cadre de lecture, effet majeur.</div></div>
+<div class="flash"><div class="q">12. Mutation la plus fréquente dans le cours ?</div><div class="a">Substitution.</div></div>
+<div class="flash"><div class="q">13. Antibiotique crée la résistance ?</div><div class="a">Non, il sélectionne les mutants préexistants.</div></div>
+<div class="flash"><div class="q">14. Charge TB de l’exemple ?</div><div class="a">10⁹ bacilles/g de crachat.</div></div>
+<div class="flash"><div class="q">15. Fréquence résistance exemple 1 ?</div><div class="a">1/10⁷.</div></div>
+<div class="flash"><div class="q">16. Fréquence éthambutol ?</div><div class="a">1/10⁵.</div></div>
+<div class="flash"><div class="q">17. Double résistance théorique ?</div><div class="a">1/10¹².</div></div>
+<div class="flash"><div class="q">18. Traitement TB du cours ?</div><div class="a">3 à 4 antituberculeux.</div></div>
+<div class="flash"><div class="q">19. Conjugaison : contact ?</div><div class="a">Direct.</div></div>
+<div class="flash"><div class="q">20. Facteur F ?</div><div class="a">Facteur fertile porté sur un plasmide, permettant notamment le pilus.</div></div>
+<div class="flash"><div class="q">21. Pilus synthétisé par ?</div><div class="a">Bactérie donneuse.</div></div>
+<div class="flash"><div class="q">22. Transduction : vecteur ?</div><div class="a">Bactériophage.</div></div>
+<div class="flash"><div class="q">23. Stress en transduction ?</div><div class="a">Passage au cycle lytique dans le cours.</div></div>
+<div class="flash"><div class="q">24. ADN empaqueté par erreur ?</div><div class="a">Fragment d’ADN bactérien.</div></div>
+<div class="flash"><div class="q">25. Transformation : contact ?</div><div class="a">Non.</div></div>
+<div class="flash"><div class="q">26. Transformation : condition receveuse ?</div><div class="a">Être compétente.</div></div>
+<div class="flash"><div class="q">27. Transformation : source ADN ?</div><div class="a">ADN libre relâché après mort de la donneuse.</div></div>
+<div class="flash"><div class="q">28. Griffith ?</div><div class="a">Transformation chez le pneumocoque, 1928.</div></div>
+<div class="flash"><div class="q">29. Système SOS ?</div><div class="a">Réponse bactérienne au stress selon le cours.</div></div>
+<div class="flash"><div class="q">30. Totorésistance ?</div><div class="a">Insensibilité à tous les antibiotiques disponibles.</div></div>
+</div>
+</section>
+
+<section class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>Core genome</strong> = partie conservée, indispensable, avec housekeeping genes ; <strong>génome accessoire</strong> = partie variable acquise notamment par transfert et pouvant donner un avantage sélectif. La variabilité vient des <strong>mutations</strong> (flux vertical) et des transferts horizontaux : <strong>conjugaison = contact/pilus/plasmide</strong>, <strong>transduction = phage</strong>, <strong>transformation = ADN libre + compétence</strong>. Les antibiotiques ne créent pas la résistance : ils <strong>sélectionnent des mutants déjà présents</strong>. Dans l’exemple TB : 10⁹ bacilles/g, résistances 1/10⁷ et 1/10⁵ → double résistance théorique 1/10¹² → intérêt d’une multithérapie de 3–4 molécules. La variabilité génétique favorise adaptation, virulence et antibiorésistance.</p>
+</section>
+
+</main></body></html>
