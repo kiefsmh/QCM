@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche - Les leucocytes</title>
+<style>
+:root{
+  --g:#1a7a4a;--gs:#eaf7ef;--r:#dc2626;--rs:#fee2e2;--o:#d97706;--os:#fff7ed;
+  --b:#2563eb;--bs:#eff6ff;--p:#6d28d9;--ps:#f2ecff;--ink:#1c1c2e;--line:#d8dce8;
+  --bg:#f6f7fb;--teal:#0f766e;--teals:#ecfeff;--slate:#111827;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}
+.page{max-width:1160px;margin:auto;padding:32px 18px 64px}
+.hero{background:linear-gradient(135deg,#fff 0%,#f0fdf4 58%,#ecfeff 100%);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 40px rgba(27,38,49,.06)}
+.kicker{color:var(--g);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px}
+h1{font-size:38px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}
+.subtitle{max-width:1000px;margin:0;color:#374151}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;font-size:13px}
+.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:12px;font-weight:800;padding:4px 9px;border-radius:999px}
+.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.green{background:var(--gs);color:#166534}.purple{background:var(--ps);color:#4c1d95}.blue{background:var(--bs);color:#1d4ed8}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}
+nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}
+nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav a{color:var(--ink);text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(27,38,49,.035)}
+h2{font-size:25px;margin:0 0 16px;letter-spacing:-.02em}
+h3{font-size:18px;margin:22px 0 10px;color:var(--g)}
+p{margin:8px 0}ul,ol{margin:8px 0 12px;padding-left:22px}li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}
+.warn{border-left-color:var(--r);background:var(--rs)}
+.orangebox{border-left-color:var(--o);background:var(--os)}
+.bluebox{border-left-color:var(--b);background:var(--bs)}
+.purplebox{border-left-color:var(--p);background:var(--ps)}
+.tealbox{border-left-color:var(--teal);background:var(--teals)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:#374151;overflow-x:auto;white-space:pre-wrap}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px;min-width:700px}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}
+th{background:#f3f4f6;text-align:left;color:#111827}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.flash .q{background:#f9fafb;padding:10px 12px;font-weight:800;border-bottom:1px solid var(--line)}
+.flash .a{padding:10px 12px;color:#374151}
+.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+.small{font-size:12.5px;color:#4b5563}
+@media(max-width:780px){
+  h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}
+  nav ol{columns:1}section,.hero{padding:18px}
+  table{font-size:12.5px;min-width:600px}
+}
+@media print{
+  body{background:#fff}.page{max-width:none;padding:0}
+  nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body><main class="page">
+
+<header class="hero">
+  <div class="kicker">Hématologie — tissu sanguin</div>
+  <h1>Les leucocytes</h1>
+  <p class="subtitle">Fiche D1/externat orientée QCM : granulopoïèse, morphologie des précurseurs, polynucléaires neutrophiles/éosinophiles/basophiles, monocytopoïèse, macrophages, lymphopoïèse B et T, organes lymphoïdes, NFS et formule leucocytaire.</p>
+  <div class="tags">
+    <span class="tag red">🔴 Valeurs absolues / agranulocytose</span>
+    <span class="tag orange">🟠 Pièges granulopoïèse</span>
+    <span class="tag green">🟢 PNN / monocytes</span>
+    <span class="tag purple">🧠 Lymphopoïèse B & T</span>
+    <span class="tag blue">🩸 NFS / formule leucocytaire</span>
+  </div>
+  <div class="actions">
+    <button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+    <button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+  </div>
+</header>
+
+<nav>
+<h2>Plan rapide</h2>
+<ol>
+  <li><a href="#classification">Classification des leucocytes</a></li>
+  <li><a href="#granulo">Granulopoïèse</a></li>
+  <li><a href="#marqueurs">Marqueurs de maturation</a></li>
+  <li><a href="#morpho-granulo">Morphologie des précurseurs</a></li>
+  <li><a href="#regulation">Régulation granulopoïèse</a></li>
+  <li><a href="#pools">Compartiments PNN</a></li>
+  <li><a href="#pnn">PNN : mécanismes effecteurs</a></li>
+  <li><a href="#burst">Burst & granulations</a></li>
+  <li><a href="#netose">Nétose</a></li>
+  <li><a href="#pne-pnb">PNE / PNB</a></li>
+  <li><a href="#monocytes">Monocytopoïèse</a></li>
+  <li><a href="#macrophages">Macrophages</a></li>
+  <li><a href="#lymphopoiese">Lymphopoïèse générale</a></li>
+  <li><a href="#organes">Organes lymphoïdes</a></li>
+  <li><a href="#lb">Lymphopoïèse B</a></li>
+  <li><a href="#lt">Lymphopoïèse T</a></li>
+  <li><a href="#roles-t">Rôles CD4 / CD8</a></li>
+  <li><a href="#morpho-ly">Morphologie lymphocytaire</a></li>
+  <li><a href="#patho">Lymphoproliférations</a></li>
+  <li><a href="#nfs">NFS / formule leucocytaire</a></li>
+  <li><a href="#normes">Valeurs normales</a></li>
+  <li><a href="#absolu">Valeurs absolues</a></li>
+  <li><a href="#cas">Cas cliniques</a></li>
+  <li><a href="#pieges">Pièges / incohérences</a></li>
+  <li><a href="#flashcards">Flashcards</a></li>
+</ol>
+</nav>
+
+<section id="classification">
+<h2>1. Classification générale</h2>
+<p>Le cours distingue <strong>5 types principaux de leucocytes</strong>.</p>
+<div class="grid2">
+  <div class="card"><strong>Polynucléaires</strong><p>PNN, PNE, PNB.</p></div>
+  <div class="card"><strong>Cellules mononucléées</strong><p>Monocytes et lymphocytes.</p></div>
+</div>
+<div class="callout warn"><strong>Piège de vocabulaire :</strong> un « polynucléaire » n’a pas plusieurs noyaux : il possède <strong>un seul noyau polylobé</strong>, chaque lobe étant relié par un fin filet de chromatine.</div>
+<p>Les <strong>PNN sont les leucocytes les plus nombreux</strong> dans le sang selon le support.</p>
+</section>
+
+<section id="granulo">
+<h2>2. Granulopoïèse</h2>
+<div class="schema">CSH
+→ CFU-GEMM
+→ CFU-GM
+→ CFU-G
+→ myéloblaste
+→ promyélocyte
+→ myélocyte
+→ métamyélocyte
+→ PNN</div>
+
+<ul>
+  <li>CFU-GEMM = progéniteur myéloïde commun dans le cours.</li>
+  <li>CFU-GM = potentiel granulocytaire + monocytaire.</li>
+  <li>CFU-G = progéniteur spécialisé de la lignée neutrophile.</li>
+  <li><strong>Myéloblaste = premier précurseur reconnaissable morphologiquement.</strong></li>
+  <li><strong>Métamyélocyte = arrêt des divisions</strong> ; la maturation se poursuit par modification/pincement du noyau et synthèse de granulations tertiaires.</li>
+</ul>
+
+<h3>Délais en culture</h3>
+<div class="tablewrap"><table>
+<tr><th>Progéniteur</th><th>Délai cité</th></tr>
+<tr><td>CFU-GM</td><td><strong>14–21 jours</strong></td></tr>
+<tr><td>CFU-G</td><td><strong>7–10 jours</strong></td></tr>
+<tr><td>Du myéloblaste au PNN</td><td>Environ <strong>5–7 jours</strong></td></tr>
+</table></div>
+<div class="callout orangebox"><strong>À retenir :</strong> la monocytopoïèse est décrite comme <strong>plus courte</strong> que la granulopoïèse.</div>
+</section>
+
+<section id="marqueurs">
+<h2>3. Marqueurs de différenciation granulocytaire</h2>
+<div class="tablewrap"><table>
+<tr><th>Marqueur</th><th>Ce que dit le support</th></tr>
+<tr><td>CD34</td><td>Immaturité ; disparaît précocement.</td></tr>
+<tr><td>HLA-DR</td><td>Immaturité ; disparaît assez précocement.</td></tr>
+<tr><td>CD33</td><td>Reste au cours de la maturation, disparaît tardivement.</td></tr>
+<tr><td>CD117</td><td>Marqueur d’immaturité cité.</td></tr>
+<tr><td>CD38</td><td>Marqueur d’immaturité cité.</td></tr>
+<tr><td>CD13</td><td>Reste tout au long de la maturation.</td></tr>
+<tr><td>CD15</td><td>Marqueur de maturité ; apparaît tardivement.</td></tr>
+<tr><td>MPO</td><td>Marqueur intracytoplasmique des cellules plus matures ; enzyme importante des PNN.</td></tr>
+</table></div>
+<div class="callout bluebox"><strong>Technique :</strong> ces marqueurs peuvent être étudiés par <strong>cytométrie en flux</strong>, notamment quand les progéniteurs ne sont pas reconnaissables au microscope.</div>
+</section>
+
+<section id="morpho-granulo">
+<h2>4. Morphologie des précurseurs granulocytaires</h2>
+<div class="tablewrap"><table>
+<tr><th>Stade</th><th>Morphologie / particularités</th></tr>
+<tr><td>Myéloblaste</td><td>Noyau rond/ovale, chromatine fine, cytoplasme basophile, nucléoles, granulations primaires.</td></tr>
+<tr><td>Promyélocyte</td><td>Appareil de Golgi visible comme zone blanche ; forte synthèse granulaire ; 2–3 divisions.</td></tr>
+<tr><td>Myélocyte</td><td>Noyau ovalaire aplati, cytoplasme rose ; 2–3 divisions.</td></tr>
+<tr><td>Métamyélocyte</td><td>Noyau pincé ; ne se divise plus ; poursuit la maturation.</td></tr>
+<tr><td>PNN</td><td>2–5 lobes, le plus souvent 3–4 ; cytoplasme rosé avec granulations.</td></tr>
+</table></div>
+
+<h3>Tendances de maturation</h3>
+<ul>
+  <li>Diminution de la taille.</li>
+  <li>Condensation progressive de la chromatine.</li>
+  <li>Modification du noyau jusqu’à la polylobulation.</li>
+</ul>
+</section>
+
+<section id="regulation">
+<h2>5. Régulation de la granulopoïèse</h2>
+<div class="tablewrap"><table>
+<tr><th>Facteur</th><th>Orientation décrite</th></tr>
+<tr><td><strong>GM-CSF</strong></td><td>CFU-GEMM → CFU-GM.</td></tr>
+<tr><td><strong>G-CSF</strong></td><td>Orientation vers la granulopoïèse neutrophile / CFU-G.</td></tr>
+<tr><td><strong>IL-5</strong></td><td>Granulopoïèse éosinophile.</td></tr>
+<tr><td><strong>SCF</strong></td><td>Granulopoïèse basophile.</td></tr>
+<tr><td><strong>M-CSF</strong></td><td>Orientation de CFU-GM vers la lignée monocytaire.</td></tr>
+</table></div>
+
+<ul>
+  <li>Le G-CSF peut être utilisé après chimiothérapie pour stimuler la granulopoïèse.</li>
+  <li>Le support indique aussi son utilisation pour favoriser le passage de CSH dans le sang avant recueil.</li>
+  <li>À partir d’un myéloblaste : <strong>16 à 32 PNN</strong> selon le nombre de divisions des myélocytes.</li>
+</ul>
+</section>
+
+<section id="pools">
+<h2>6. Compartiments médullaires et sanguins des PNN</h2>
+<h3>Dans la moelle</h3>
+<div class="grid2">
+  <div class="card"><strong>Secteur mitotique / prolifératif</strong><p>Myéloblastes, promyélocytes, myélocytes.</p></div>
+  <div class="card"><strong>Secteur de réserve</strong><p>Métamyélocytes + PNN ; séjour médullaire <strong>1 à 8 jours</strong>.</p></div>
+</div>
+<ul>
+  <li>Le secteur de réserve est décrit comme environ <strong>10× plus important</strong> que le compartiment sanguin.</li>
+  <li>Mobilisation favorisée par IL-8, toxines bactériennes et corticoïdes.</li>
+</ul>
+
+<h3>Dans le sang</h3>
+<div class="grid2">
+  <div class="card"><strong>Pool circulant</strong><p><strong>45 %</strong> des PNN.</p></div>
+  <div class="card"><strong>Pool marginé</strong><p><strong>55 %</strong>, adhérents à l’endothélium.</p></div>
+</div>
+<ul>
+  <li>Adrénaline, stress, exercice et digestion favorisent la <strong>démargination</strong>.</li>
+  <li>Une NFS ne mesure que le pool circulant.</li>
+</ul>
+<div class="callout warn"><strong>Piège clinique du support :</strong> certains sujets noirs ont un pool marginé plus important ; une valeur autour de <strong>1 G/L</strong> peut être observée sans signifier nécessairement une neutropénie pathologique dans la logique du cours.</div>
+</section>
+
+<section id="pnn">
+<h2>7. Polynucléaires neutrophiles : mécanismes effecteurs</h2>
+<div class="schema">Sang
+→ adhésion / roulage endothélial
+→ adhésion forte
+→ diapédèse
+→ chimiotactisme
+→ site infectieux
+→ phagocytose
+→ burst oxydatif
+→ dégranulation / phagolysosome
+± NETs</div>
+
+<h3>Adhésion, diapédèse, migration</h3>
+<ul>
+  <li><strong>Sélectines</strong> : liaisons faibles → roulage.</li>
+  <li>Facteurs chimiotactiques / toxines → augmentation d’adhésion.</li>
+  <li><strong>Intégrines</strong> : adhésion forte ; exemples du support : LFA-1 sur PNN, ICAM côté endothélial.</li>
+  <li>Passage entre cellules endothéliales = <strong>diapédèse</strong>.</li>
+  <li>Pseudopodes + chimiotactisme pour rejoindre le site infectieux.</li>
+</ul>
+
+<h3>Phagocytose</h3>
+<ul>
+  <li>Fixation à une bactérie opsonisée.</li>
+  <li>Expansion cytoplasmique autour du microbe.</li>
+  <li>Formation du <strong>phagosome</strong>.</li>
+  <li>Fusion avec lysosome → <strong>phagolysosome</strong>.</li>
+</ul>
+</section>
+
+<section id="burst">
+<h2>8. Burst oxydatif & granulations</h2>
+<h3>Explosion oxydative</h3>
+<div class="schema">O2
+-- NADPH oxydase -->
+anion superoxyde
+-- superoxyde dismutase -->
+H2O2
+-- MPO -->
+radicaux halogénés
+→ action bactéricide
+± lésions tissulaires</div>
+
+<div class="callout warn"><strong>Très tombable :</strong> <strong>NADPH oxydase</strong> forme l’anion superoxyde ; <strong>superoxyde dismutase</strong> forme H₂O₂ ; <strong>MPO</strong> intervient ensuite sur les radicaux halogénés.</div>
+<p>Le support cite la <strong>granulomatose septique chronique</strong> comme exemple de déficit en NADPH oxydase avec risque infectieux important.</p>
+
+<h3>Granulations</h3>
+<div class="tablewrap"><table>
+<tr><th>Type</th><th>Contenu / rôle</th></tr>
+<tr><td>Primaires / azurophiles</td><td>MPO, lysozymes, molécules bactéricides, éléments participant à migration/cicatrisation.</td></tr>
+<tr><td>Secondaires</td><td>Lysozyme, lactoferrine, collagénases → bactéricidie + migration tissulaire.</td></tr>
+<tr><td>Tertiaires</td><td>Gélatinases → migration tissulaire.</td></tr>
+<tr><td>Vésicules sécrétoires</td><td>Formées au stade métamyélocyte par invagination membranaire ; riches en récepteurs.</td></tr>
+</table></div>
+</section>
+
+<section id="netose">
+<h2>9. Nétose</h2>
+<ul>
+  <li>Production de <strong>NETs = Neutrophil Extracellular Traps</strong>.</li>
+  <li>Grands filaments extracellulaires formant un filet.</li>
+  <li>Capture de microorganismes volumineux, notamment champignons.</li>
+  <li>NETs recouverts de composants microbicides et de granulations.</li>
+  <li>L’accumulation de PNN sur le site infectieux participe à la formation du <strong>pus</strong>.</li>
+</ul>
+</section>
+
+<section id="pne-pnb">
+<h2>10. PNE & PNB</h2>
+<div class="tablewrap"><table>
+<tr><th></th><th>PNE</th><th>PNB</th></tr>
+<tr><td>Granulations</td><td>Grosses, nombreuses, rose-orangées</td><td>Grosses, moins nombreuses, violet foncé/noires</td></tr>
+<tr><td>Rôle majeur</td><td>Parasites + allergies</td><td>Réactions allergiques / inflammatoires</td></tr>
+<tr><td>IgE</td><td>Récepteurs de haute affinité</td><td>Participation aux réactions d’hypersensibilité dans le cours</td></tr>
+<tr><td>Facteur clé</td><td><strong>IL-5</strong></td><td><strong>SCF</strong> pour la granulopoïèse</td></tr>
+<tr><td>Contenu particulier</td><td>—</td><td>Histamine +++, héparine, enzymes lysosomales</td></tr>
+</table></div>
+
+<div class="callout orangebox"><strong>Chimiotactisme :</strong> le recrutement des PNE est favorisé par l’IL-5 et par des médiateurs libérés lors des réactions allergiques, notamment l’histamine selon le support.</div>
+</section>
+
+<section id="monocytes">
+<h2>11. Monocytopoïèse</h2>
+<div class="schema">CSH
+→ CFU-GEMM
+→ CFU-GM
+→ CFU-M
+→ monoblaste
+→ promonocyte
+→ monocyte
+→ tissus
+→ macrophage / histiocyte</div>
+
+<ul>
+  <li>Monocytopoïèse plus courte que la granulopoïèse.</li>
+  <li>Après chimiothérapie, les monocytes peuvent réapparaître avant les PNN.</li>
+  <li>Marqueur membranaire cité : <strong>CD14</strong>.</li>
+  <li><strong>M-CSF</strong> favorise l’orientation monocytaire.</li>
+</ul>
+
+<h3>Morphologie</h3>
+<div class="tablewrap"><table>
+<tr><th>Stade</th><th>Aspect</th></tr>
+<tr><td>Monoblaste</td><td>Grande cellule, chromatine fine, noyau rond/ovale, petite dépression possible, nucléole visible.</td></tr>
+<tr><td>Promonocyte</td><td>Taille proche du monoblaste, noyau plus irrégulier et replié.</td></tr>
+<tr><td>Monocyte</td><td>Noyau réniforme non segmenté, cytoplasme gris-violacé « ciel d’orage », fines granulations + vacuoles.</td></tr>
+</table></div>
+
+<ul>
+  <li>Durée sanguine : <strong>1 à 3 jours</strong>.</li>
+  <li>Environ <strong>¾ marginés</strong> et <strong>¼ circulants</strong>.</li>
+  <li>Dans les tissus, les macrophages peuvent vivre plusieurs mois à plusieurs années.</li>
+</ul>
+</section>
+
+<section id="macrophages">
+<h2>12. Fonctions des macrophages</h2>
+<div class="grid3">
+  <div class="card"><strong>Défense innée</strong><p>Phagocytose particules étrangères, cellules altérées, débris ; participation antitumorale.</p></div>
+  <div class="card"><strong>Présentation antigénique</strong><p>Présentation aux lymphocytes → activation de la réponse adaptative.</p></div>
+  <div class="card"><strong>Sécrétion</strong><p>Cytokines pro-inflammatoires, facteurs de croissance, médiateurs de réparation.</p></div>
+</div>
+<p>Les monocytes représentent environ <strong>5 à 10 %</strong> des leucocytes sanguins dans le support.</p>
+</section>
+
+<section id="lymphopoiese">
+<h2>13. Lymphopoïèse : vue générale</h2>
+<ul>
+  <li>Immunité <strong>spécifique / adaptative</strong>.</li>
+  <li>Chaque lymphocyte possède un récepteur reconnaissant un antigène particulier.</li>
+  <li>Populations citées : <strong>LB, LT, NK, plasmocytes</strong>.</li>
+  <li>Le plasmocyte correspond à un LB différencié.</li>
+</ul>
+
+<div class="schema">CSH médullaire
+├─ progéniteur myéloïde commun (CMP / CFU-GEMM)
+└─ progéniteur lymphoïde commun (CLP)
+   ├─ CFU-LB → LB
+   ├─ CFU-NK → NK
+   └─ migration thymus → CFU-LT → LT CD4 / CD8</div>
+
+<div class="callout bluebox"><strong>Chiffre du support :</strong> environ <strong>90 % des CSH sont quiescentes</strong> et <strong>10 % entrent en cycle</strong>.</div>
+</section>
+
+<section id="organes">
+<h2>14. Organes lymphoïdes & circulation lymphatique</h2>
+<div class="tablewrap"><table>
+<tr><th>Type</th><th>Organes</th><th>Rôle</th></tr>
+<tr><td>Primaires / centraux</td><td>Moelle osseuse, thymus</td><td>Lymphopoïèse indépendante de l’antigène.</td></tr>
+<tr><td>Secondaires / périphériques</td><td>Ganglions, rate, GALT, BALT…</td><td>Rencontre antigène-lymphocyte, réponse spécifique.</td></tr>
+<tr><td>Tertiaires</td><td>Structures apparaissant dans certains tissus inflammatoires</td><td>Organisation lymphoïde acquise.</td></tr>
+</table></div>
+
+<h3>Rate</h3>
+<ul>
+  <li>Hypochondre gauche, richement vascularisée.</li>
+  <li>Chez le fœtus : fonction hématopoïétique majeure.</li>
+  <li>Chez l’enfant/adulte : rôle lymphoïde, phagocytaire, réserve de sang et de plaquettes.</li>
+  <li>Élimination des GR sénescents.</li>
+</ul>
+
+<h3>Ganglions</h3>
+<ul>
+  <li><strong>200 à 300</strong> dans l’organisme.</li>
+  <li>Filtrent la lymphe d’un territoire anatomique.</li>
+  <li>Lieu de rencontre antigène-lymphocyte.</li>
+  <li>Adénopathie = augmentation pathologique du volume d’un ganglion, > <strong>1 cm</strong> dans la partie 2.</li>
+  <li>Causes citées : infectieuse ou tumorale.</li>
+</ul>
+
+<h3>Recirculation</h3>
+<ul>
+  <li>Les lymphocytes circulent continuellement sang ↔ tissus ↔ lymphe ↔ sang.</li>
+  <li>La lymphe rejoint la circulation au niveau des <strong>veines sous-clavières</strong>.</li>
+  <li>La rencontre avec l’antigène spécifique peut prendre plusieurs années.</li>
+</ul>
+</section>
+
+<section id="lb">
+<h2>15. Lymphopoïèse B</h2>
+<h3>Moelle osseuse — indépendante de l’antigène</h3>
+<div class="schema">Cellule souche
+→ Pré-Pro B
+→ Pro B
+→ Pré B
+→ B immature
+→ B mature naïf</div>
+
+<ul>
+  <li><strong>Pro B :</strong> début recombinaison VDJ de la chaîne lourde des immunoglobulines.</li>
+  <li>BCR = immunoglobuline de surface + chaînes de transduction comme <strong>CD79</strong>.</li>
+  <li><strong>Pré B :</strong> synthèse chaîne légère ; avec chaîne lourde → pré-BCR.</li>
+  <li><strong>B immature :</strong> tolérance centrale ; si forte autoréactivité → apoptose ou nouveau remaniement du BCR.</li>
+  <li><strong>B mature :</strong> encore naïf, car n’a pas rencontré l’antigène.</li>
+</ul>
+
+<h3>Périphérie — dépendante de l’antigène</h3>
+<ul>
+  <li>Différenciation en <strong>plasmocytes</strong> producteurs d’anticorps.</li>
+  <li>Différenciation en <strong>LB mémoire</strong>.</li>
+  <li><strong>Hypermutation somatique</strong> : modification de régions variables pour ajuster l’affinité.</li>
+  <li><strong>Commutation de classe</strong> : IgM initiale → IgG / IgA / IgE…</li>
+  <li><strong>Tolérance périphérique</strong>.</li>
+</ul>
+</section>
+
+<section id="lt">
+<h2>16. Lymphopoïèse T</h2>
+<p>Elle se déroule dans le <strong>thymus</strong>.</p>
+
+<h3>1. Prothymocyte / thymocyte triple négatif</h3>
+<ul>
+  <li>Zone corticale.</li>
+  <li>Réarrangement des gènes du TCR.</li>
+  <li>Pas de CD4, pas de CD8, pas de CD3 membranaire.</li>
+  <li>CD3 seulement intracytoplasmique dans le support.</li>
+</ul>
+
+<h3>2. Préthymocyte / thymocyte double positif</h3>
+<ul>
+  <li>CD4+ et CD8+.</li>
+  <li><strong>Sélection positive</strong>.</li>
+  <li>CMH I → orientation vers <strong>CD8</strong>.</li>
+  <li>CMH II → orientation vers <strong>CD4</strong>.</li>
+</ul>
+<div class="callout orangebox"><strong>Mnémo de la prof :</strong> <strong>4×2 = 8</strong> → CD4 ↔ CMH II ; <strong>8×1 = 8</strong> → CD8 ↔ CMH I.</div>
+
+<h3>3. Thymocyte simple positif / mature</h3>
+<ul>
+  <li>Médullaire thymique.</li>
+  <li>CD4 ou CD8 uniquement + CD3 de surface.</li>
+  <li>Interaction trop forte avec soi → apoptose.</li>
+  <li>Interaction faible → survie.</li>
+  <li>Objectif : éliminer les cellules fortement réactives vis-à-vis du soi.</li>
+</ul>
+</section>
+
+<section id="roles-t">
+<h2>17. Rôles des lymphocytes T</h2>
+<div class="grid2">
+  <div class="card">
+    <strong>LT CD8</strong>
+    <ul>
+      <li>Reconnaissent antigène présenté par <strong>CMH I</strong>.</li>
+      <li>Cytotoxicité directe.</li>
+      <li>Détruisent la cellule infectée.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <strong>LT CD4</strong>
+    <ul>
+      <li>Reconnaissent peptide sur <strong>CMH II</strong>.</li>
+      <li>Activation des LB → plasmocytes / immunoglobulines.</li>
+      <li>Activation de polynucléaires et macrophages.</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<section id="morpho-ly">
+<h2>18. Répartition & morphologie lymphocytaire</h2>
+<h3>Répartition sanguine</h3>
+<ul>
+  <li>Lymphocytes adultes : <strong>1–4 G/L</strong> dans la partie 2.</li>
+  <li>LB : <strong>20 %</strong>.</li>
+  <li>LT : <strong>70 %</strong>.</li>
+  <li>NK : <strong>10 %</strong>.</li>
+  <li>Parmi les LT : <strong>2/3 CD4</strong> et <strong>1/3 CD8</strong>.</li>
+  <li>Physiologiquement, pas ou très peu de plasmocytes circulants ; le texte indique « moins de 5 % ».</li>
+</ul>
+
+<h3>Âge</h3>
+<ul>
+  <li>Chez l’enfant, lymphocytose physiologiquement plus élevée.</li>
+  <li>Vers <strong>1 an : 7–8 G/L</strong>.</li>
+  <li>Puis diminution progressive vers les valeurs adultes.</li>
+</ul>
+
+<h3>Petit lymphocyte normal</h3>
+<ul>
+  <li>≈ <strong>1,5× la taille d’un GR</strong>.</li>
+  <li>Noyau rond occupant presque toute la cellule.</li>
+  <li>Haut rapport nucléo-cytoplasmique.</li>
+  <li>Cytoplasme peu abondant.</li>
+</ul>
+
+<h3>Lymphocytes hyperbasophiles</h3>
+<ul>
+  <li>Cytoplasme bleu à intensément bleu.</li>
+  <li>Nucléoles parfois visibles.</li>
+  <li>Lymphocytes activés.</li>
+  <li>Infections virales, notamment mononucléose infectieuse.</li>
+  <li><strong>&gt;10 %</strong> oriente fortement vers ce diagnostic dans le support.</li>
+</ul>
+</section>
+
+<section id="patho">
+<h2>19. Pathologies lymphoïdes : penser au stade de maturation</h2>
+<div class="tablewrap"><table>
+<tr><th>Cellule / stade</th><th>Pathologie citée</th><th>Morphologie</th></tr>
+<tr><td>Lymphoblaste immature</td><td>Leucémie aiguë lymphoblastique</td><td>Grande cellule, cytoplasme basophile, chromatine fine, nucléoles.</td></tr>
+<tr><td>Lymphocyte mature</td><td>Leucémie lymphoïde chronique</td><td>Petite cellule, chromatine très condensée en mottes / « carapace de tortue ».</td></tr>
+<tr><td>Lymphoplasmocyte</td><td>Maladie de Waldenström</td><td>Intermédiaire, difficile à distinguer de lymphocytes normaux.</td></tr>
+<tr><td>Plasmocyte</td><td>Myélome multiple / maladie de Kahler</td><td>Aspect « œuf au plat », noyau rond excentré, zone blanchâtre cytoplasmique.</td></tr>
+</table></div>
+
+<div class="callout bluebox"><strong>Règle :</strong> syndromes lymphoprolifératifs = prolifération de cellules <strong>matures</strong> ; leucémies aiguës = prolifération de cellules <strong>immatures</strong>.</div>
+</section>
+
+<section id="nfs">
+<h2>20. NFS & formule leucocytaire</h2>
+<p>La NFS / hémogramme quantifie notamment :</p>
+<ul>
+  <li>Hémoglobine.</li>
+  <li>Plaquettes.</li>
+  <li>Globules rouges.</li>
+  <li>Leucocytes totaux puis formule leucocytaire.</li>
+</ul>
+
+<h3>Comment obtient-on la formule ?</h3>
+<div class="tablewrap"><table>
+<tr><th>Méthode</th><th>Rôle</th></tr>
+<tr><td>Automate</td><td>Différencie PNN, PNE, PNB, lymphocytes et monocytes grâce à leurs propriétés optiques.</td></tr>
+<tr><td>Microscope</td><td>Nécessaire pour repérer / analyser les cellules pathologiques.</td></tr>
+<tr><td>Analyseur de lames</td><td>Photographie les lames et propose un compte validé/corrigé par biologiste.</td></tr>
+</table></div>
+<div class="callout warn"><strong>Toujours :</strong> validation humaine avant rendu du résultat, quelle que soit la méthode.</div>
+</section>
+
+<section id="normes">
+<h2>21. Valeurs normales de la formule leucocytaire chez l’adulte</h2>
+<div class="tablewrap"><table>
+<tr><th>Type cellulaire</th><th>Norme du support</th><th>Bas</th><th>Haut</th></tr>
+<tr><td>Leucocytes totaux</td><td><strong>4–10 G/L</strong></td><td>Leucopénie</td><td>Hyperleucocytose</td></tr>
+<tr><td>PNN</td><td><strong>1,5–7 G/L</strong></td><td>Neutropénie ; <strong>&lt;0,5 = agranulocytose</strong></td><td>Polynucléose neutrophile</td></tr>
+<tr><td>PNE</td><td><strong>0,05–0,5 G/L</strong></td><td>—</td><td>Hyperéosinophilie</td></tr>
+<tr><td>PNB</td><td><strong>0,01–0,05 G/L</strong></td><td>—</td><td>Basophilie</td></tr>
+<tr><td>Lymphocytes</td><td><strong>1 à 1,5 – 4 G/L</strong></td><td>Lymphopénie</td><td>Hyperlymphocytose</td></tr>
+<tr><td>Monocytes</td><td><strong>0,1–1 G/L</strong></td><td>Monocytopénie</td><td>Hypermonocytose</td></tr>
+</table></div>
+
+<div class="callout orangebox"><strong>Nuance du cours :</strong> la borne inférieure des lymphocytes varie selon les sources : <strong>1 ou 1,5 G/L</strong>. La prof dit de vérifier le référentiel EDN utilisé.</div>
+</section>
+
+<section id="absolu">
+<h2>22. Interpréter en valeur absolue, jamais juste en %</h2>
+<div class="callout warn"><strong>Point clé du cours :</strong> l’interprétation d’une formule leucocytaire se fait <strong>toujours en valeurs absolues</strong>, jamais en pourcentages seuls.</div>
+
+<div class="schema">Valeur absolue d'une lignée =
+Leucocytes totaux (G/L) × pourcentage de la lignée</div>
+
+<h3>Exemple du support : même formule 40 % PNN / 60 % lymphocytes</h3>
+<div class="tablewrap"><table>
+<tr><th>Patient</th><th>GB totaux</th><th>PNN</th><th>Interprétation PNN</th><th>Lymphocytes</th><th>Interprétation Ly</th></tr>
+<tr><td>1</td><td>3 G/L</td><td>1,2 G/L</td><td>Neutropénie</td><td>1,8 G/L</td><td>Normal</td></tr>
+<tr><td>2</td><td>6 G/L</td><td>2,4 G/L</td><td>Normal</td><td>3,6 G/L</td><td>Normal</td></tr>
+<tr><td>3</td><td>15 G/L</td><td>6 G/L</td><td>Normal</td><td>9 G/L</td><td>Hyperlymphocytose</td></tr>
+</table></div>
+
+<div class="callout bluebox"><strong>Conclusion :</strong> un même pourcentage peut correspondre à trois situations cliniques totalement différentes.</div>
+<p>Le terme <strong>« inversion de formule »</strong> n’est pas recommandé dans le support.</p>
+</section>
+
+<section id="cas">
+<h2>23. Cas cliniques du cours</h2>
+<h3>Cas 1 — Femme 20 ans, angine sévère</h3>
+<ul>
+  <li>GB = <strong>3,2 G/L</strong>.</li>
+  <li>PNN = <strong>5 %</strong>.</li>
+  <li>PNN absolus = 0,05 × 3,2 = <strong>0,16 G/L</strong>.</li>
+  <li>Donc <strong>&lt;0,5 G/L → agranulocytose</strong>.</li>
+  <li>Les autres lignées leucocytaires sont décrites comme dans les normes.</li>
+</ul>
+<div class="callout orangebox"><strong>Remarque de la prof :</strong> la cause la plus fréquente d’agranulocytose est indiquée comme <strong>médicamenteuse</strong>, pouvant secondairement favoriser une infection.</div>
+
+<h3>Cas 2 — Homme 65 ans asymptomatique</h3>
+<ul>
+  <li>GB = <strong>30 G/L</strong>.</li>
+  <li>Lymphocytes = <strong>88 %</strong>.</li>
+  <li>Valeur absolue = 0,88 × 30 = <strong>26,4 G/L</strong>.</li>
+  <li>Conclusion : <strong>hyperlymphocytose majeure</strong>.</li>
+  <li>Le support évoque une suspicion de <strong>LLC</strong> ou autre syndrome lymphoprolifératif.</li>
+</ul>
+</section>
+
+<section id="pieges">
+<h2>24. Pièges et incohérences du support</h2>
+
+<div class="callout warn"><strong>1. Maturation granulocytaire :</strong> une phrase de la page 4 indique que le cytoplasme « devient basophile » au cours de la maturation, alors que les descriptions morphologiques passent d’un myéloblaste basophile à un myélocyte/PNN au cytoplasme rose. C’est une contradiction interne du ronéo.</div>
+
+<div class="callout warn"><strong>2. QCM granulopoïèse :</strong> l’item « CFU-G se différencie en progéniteur spécialisé » est corrigé VRAI, alors que le texte présente <strong>CFU-G lui-même comme le progéniteur spécialisé</strong> avant le précurseur. À retenir comme formulation imprécise du QCM.</div>
+
+<div class="callout warn"><strong>3. Granulations :</strong> le support dit « myéloblaste = granulations primaires » puis « promyélocyte = granulations secondaires majoritairement ». La correction QCM reprend cette logique ; la fiche la conserve telle quelle.</div>
+
+<div class="callout warn"><strong>4. Basophiles → mastocytes :</strong> le support affirme qu’une fois dans les tissus, les PNB prennent le nom de mastocytes, et le Wooclap reprend cette formulation. La fiche la laisse comme donnée du cours sans l’étendre au-delà.</div>
+
+<div class="callout warn"><strong>5. Lymphocytes normaux :</strong> la borne basse adulte est donnée comme <strong>1 ou 1,5 G/L</strong> selon les sources. La prof demande explicitement de vérifier le référentiel EDN.</div>
+
+<div class="callout warn"><strong>6. Plasmocytes circulants :</strong> le texte dit « physiologiquement, il n’y a pas de plasmocytes dans le sang (moins de 5 %) ». La formulation est ambiguë ; la fiche la restitue sans la corriger silencieusement.</div>
+
+<div class="callout warn"><strong>7. Terminologie lymphopoïèse T :</strong> le prothymocyte est d’abord décrit comme « double négatif », puis « triple négatif » par ajout de l’absence de CD3 de surface. Le support emploie donc les deux termes selon le niveau de précision.</div>
+</section>
+
+<section id="flashcards">
+<h2>25. Flashcards express</h2>
+<div class="flashgrid">
+<div class="flash"><div class="q">1. 5 leucocytes principaux ?</div><div class="a">PNN, PNE, PNB, monocytes, lymphocytes.</div></div>
+<div class="flash"><div class="q">2. Polynucléaire = plusieurs noyaux ?</div><div class="a">Non, un seul noyau polylobé.</div></div>
+<div class="flash"><div class="q">3. Leucocyte le plus nombreux ?</div><div class="a">PNN.</div></div>
+<div class="flash"><div class="q">4. Ordre granulopoïèse ?</div><div class="a">CSH → CFU-GEMM → CFU-GM → CFU-G → myéloblaste → promyélocyte → myélocyte → métamyélocyte → PNN.</div></div>
+<div class="flash"><div class="q">5. Premier précurseur reconnaissable ?</div><div class="a">Myéloblaste.</div></div>
+<div class="flash"><div class="q">6. Arrêt des divisions ?</div><div class="a">Métamyélocyte.</div></div>
+<div class="flash"><div class="q">7. CFU-GM en culture ?</div><div class="a">14–21 jours.</div></div>
+<div class="flash"><div class="q">8. CFU-G en culture ?</div><div class="a">7–10 jours.</div></div>
+<div class="flash"><div class="q">9. Myéloblaste → PNN ?</div><div class="a">5–7 jours.</div></div>
+<div class="flash"><div class="q">10. CD34 ?</div><div class="a">Marqueur d’immaturité, disparaît tôt.</div></div>
+<div class="flash"><div class="q">11. CD15 ?</div><div class="a">Marqueur tardif de maturité.</div></div>
+<div class="flash"><div class="q">12. MPO ?</div><div class="a">Marqueur intracytoplasmique, enzyme des PNN.</div></div>
+<div class="flash"><div class="q">13. G-CSF ?</div><div class="a">Granulopoïèse neutrophile.</div></div>
+<div class="flash"><div class="q">14. IL-5 ?</div><div class="a">Granulopoïèse / activation éosinophile.</div></div>
+<div class="flash"><div class="q">15. M-CSF ?</div><div class="a">Lignée monocytaire.</div></div>
+<div class="flash"><div class="q">16. 1 myéloblaste donne ?</div><div class="a">16 à 32 PNN.</div></div>
+<div class="flash"><div class="q">17. Réserve médullaire PNN ?</div><div class="a">Métamyélocytes + PNN ; 1–8 jours.</div></div>
+<div class="flash"><div class="q">18. Pool circulant PNN ?</div><div class="a">45 %.</div></div>
+<div class="flash"><div class="q">19. Pool marginé PNN ?</div><div class="a">55 %.</div></div>
+<div class="flash"><div class="q">20. Sélectines ?</div><div class="a">Roulage / adhésion faible.</div></div>
+<div class="flash"><div class="q">21. Intégrines ?</div><div class="a">Adhésion forte / diapédèse.</div></div>
+<div class="flash"><div class="q">22. Burst : 1re enzyme ?</div><div class="a">NADPH oxydase.</div></div>
+<div class="flash"><div class="q">23. H2O2 formé par ?</div><div class="a">Superoxyde dismutase.</div></div>
+<div class="flash"><div class="q">24. MPO ?</div><div class="a">Intervient ensuite sur les radicaux halogénés.</div></div>
+<div class="flash"><div class="q">25. Déficit NADPH oxydase ?</div><div class="a">Granulomatose septique chronique.</div></div>
+<div class="flash"><div class="q">26. NETs ?</div><div class="a">Neutrophil Extracellular Traps.</div></div>
+<div class="flash"><div class="q">27. PNE : couleur granulations ?</div><div class="a">Grosses, rose-orangées.</div></div>
+<div class="flash"><div class="q">28. PNE : rôle ?</div><div class="a">Parasites + allergies.</div></div>
+<div class="flash"><div class="q">29. PNB : contenu ?</div><div class="a">Histamine, héparine, enzymes lysosomales.</div></div>
+<div class="flash"><div class="q">30. Ordre monocytopoïèse ?</div><div class="a">Monoblaste → promonocyte → monocyte.</div></div>
+<div class="flash"><div class="q">31. Monocyte : noyau ?</div><div class="a">Réniforme.</div></div>
+<div class="flash"><div class="q">32. Monocyte : cytoplasme ?</div><div class="a">Gris-violacé « ciel d’orage ».</div></div>
+<div class="flash"><div class="q">33. Durée sanguine monocyte ?</div><div class="a">1–3 jours.</div></div>
+<div class="flash"><div class="q">34. Marqueur monocytaire ?</div><div class="a">CD14.</div></div>
+<div class="flash"><div class="q">35. Organes lymphoïdes primaires ?</div><div class="a">Moelle osseuse + thymus.</div></div>
+<div class="flash"><div class="q">36. Organes secondaires ?</div><div class="a">Ganglions, rate, GALT/BALT…</div></div>
+<div class="flash"><div class="q">37. Ganglions dans l’organisme ?</div><div class="a">200–300.</div></div>
+<div class="flash"><div class="q">38. Lymphe rejoint où le sang ?</div><div class="a">Veines sous-clavières.</div></div>
+<div class="flash"><div class="q">39. LB : recombinaison VDJ commence à quel stade ?</div><div class="a">Pro B.</div></div>
+<div class="flash"><div class="q">40. Tolérance centrale LB ?</div><div class="a">Stade B immature.</div></div>
+<div class="flash"><div class="q">41. Commutation de classe ?</div><div class="a">Dans organes lymphoïdes secondaires après rencontre antigénique.</div></div>
+<div class="flash"><div class="q">42. Prothymocyte ?</div><div class="a">Triple négatif dans le cours.</div></div>
+<div class="flash"><div class="q">43. Préthymocyte ?</div><div class="a">Double positif CD4+ CD8+.</div></div>
+<div class="flash"><div class="q">44. CMH I ↔ ?</div><div class="a">CD8.</div></div>
+<div class="flash"><div class="q">45. CMH II ↔ ?</div><div class="a">CD4.</div></div>
+<div class="flash"><div class="q">46. LT sanguins ?</div><div class="a">70 % des lymphocytes.</div></div>
+<div class="flash"><div class="q">47. LB sanguins ?</div><div class="a">20 %.</div></div>
+<div class="flash"><div class="q">48. NK sanguins ?</div><div class="a">10 %.</div></div>
+<div class="flash"><div class="q">49. Parmi LT : CD4/CD8 ?</div><div class="a">2/3 CD4, 1/3 CD8.</div></div>
+<div class="flash"><div class="q">50. Lymphocytes adulte ?</div><div class="a">1–4 G/L dans la partie 2 ; borne basse discutée 1 ou 1,5.</div></div>
+<div class="flash"><div class="q">51. Lymphocytes à 1 an ?</div><div class="a">≈7–8 G/L.</div></div>
+<div class="flash"><div class="q">52. Hyperbasophiles >10 % ?</div><div class="a">Oriente fortement vers mononucléose infectieuse.</div></div>
+<div class="flash"><div class="q">53. Leucocytes totaux adultes ?</div><div class="a">4–10 G/L.</div></div>
+<div class="flash"><div class="q">54. PNN normaux ?</div><div class="a">1,5–7 G/L.</div></div>
+<div class="flash"><div class="q">55. Agranulocytose ?</div><div class="a">PNN &lt;0,5 G/L.</div></div>
+<div class="flash"><div class="q">56. PNE normaux ?</div><div class="a">0,05–0,5 G/L.</div></div>
+<div class="flash"><div class="q">57. PNB normaux ?</div><div class="a">0,01–0,05 G/L.</div></div>
+<div class="flash"><div class="q">58. Monocytes normaux ?</div><div class="a">0,1–1 G/L.</div></div>
+<div class="flash"><div class="q">59. Formule leucocytaire : % ou absolu ?</div><div class="a">Toujours interpréter en valeur absolue.</div></div>
+<div class="flash"><div class="q">60. 5 % de PNN avec GB 3,2 G/L ?</div><div class="a">0,16 G/L → agranulocytose.</div></div>
+</div>
+</section>
+
+<section class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>Granulopoïèse :</strong> CSH → CFU-GEMM → CFU-GM → CFU-G → myéloblaste → promyélocyte → myélocyte → métamyélocyte → PNN. <strong>Myéloblaste = 1er stade reconnaissable</strong>, <strong>métamyélocyte = arrêt des divisions</strong>. G-CSF → neutrophiles, IL-5 → éosinophiles, M-CSF → monocytes. Sang : <strong>45 % PNN circulants / 55 % marginés</strong>. PNN : sélectines = roulage, intégrines = adhésion forte/diapédèse, puis phagocytose, burst, dégranulation, NETs. Burst : NADPH oxydase → superoxyde → SOD → H₂O₂ → MPO. Monocyte : noyau réniforme, 1–3 jours dans le sang, macrophage dans les tissus. Organes lymphoïdes primaires = <strong>moelle + thymus</strong>, secondaires = ganglions/rate/GALT/BALT. LB : VDJ + tolérance centrale en moelle, puis hypermutation/commutation en périphérie. LT : triple négatif → double positif → simple positif ; <strong>CMH I/CD8, CMH II/CD4</strong>. NFS adulte : GB <strong>4–10 G/L</strong>, PNN <strong>1,5–7</strong>, agranulocytose <strong>&lt;0,5</strong>, PNE <strong>0,05–0,5</strong>, PNB <strong>0,01–0,05</strong>, lymphocytes <strong>≈1–4</strong>, monocytes <strong>0,1–1</strong>. Et surtout : <strong>toujours interpréter la formule en valeurs absolues, jamais en pourcentages seuls.</strong></p>
+</section>
+
+<section>
+<h2>Source</h2>
+<p class="small">Fiche construite uniquement à partir du PDF « 3 - LEUCOCYTES.pdf » fourni par l’utilisateur. Les chiffres, valeurs normales, marqueurs, mécanismes, schémas et pièges proviennent du support ; les incohérences internes ont été signalées sans être corrigées silencieusement.</p>
+</section>
+
+</main></body></html>

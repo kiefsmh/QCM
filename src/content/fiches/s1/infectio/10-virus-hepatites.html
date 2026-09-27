@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche - Virus des hépatites</title>
+<style>
+:root{
+  --g:#1a7a4a;--gs:#eaf7ef;--r:#dc2626;--rs:#fee2e2;--o:#d97706;--os:#fff7ed;
+  --b:#2563eb;--bs:#eff6ff;--p:#6d28d9;--ps:#f2ecff;--ink:#1c1c2e;--line:#d8dce8;
+  --bg:#f6f7fb;--teal:#0f766e;--teals:#ecfeff;--slate:#111827;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}
+.page{max-width:1180px;margin:auto;padding:32px 18px 64px}
+.hero{background:linear-gradient(135deg,#fff 0%,#f0fdf4 55%,#eff6ff 100%);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 40px rgba(27,38,49,.06)}
+.kicker{color:var(--g);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px}
+h1{font-size:38px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}
+.subtitle{max-width:1050px;margin:0;color:#374151}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;font-size:13px}
+.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:12px;font-weight:800;padding:4px 9px;border-radius:999px}
+.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.green{background:var(--gs);color:#166534}.purple{background:var(--ps);color:#4c1d95}.blue{background:var(--bs);color:#1d4ed8}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}
+nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}
+nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav a{color:var(--ink);text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(27,38,49,.035)}
+h2{font-size:25px;margin:0 0 16px;letter-spacing:-.02em}
+h3{font-size:18px;margin:22px 0 10px;color:var(--g)}
+p{margin:8px 0}ul,ol{margin:8px 0 12px;padding-left:22px}li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}
+.warn{border-left-color:var(--r);background:var(--rs)}
+.orangebox{border-left-color:var(--o);background:var(--os)}
+.bluebox{border-left-color:var(--b);background:var(--bs)}
+.purplebox{border-left-color:var(--p);background:var(--ps)}
+.tealbox{border-left-color:var(--teal);background:var(--teals)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:#374151;overflow-x:auto;white-space:pre-wrap}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px;min-width:760px}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}
+th{background:#f3f4f6;text-align:left;color:#111827}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.flash .q{background:#f9fafb;padding:10px 12px;font-weight:800;border-bottom:1px solid var(--line)}
+.flash .a{padding:10px 12px;color:#374151}
+.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+.small{font-size:12.5px;color:#4b5563}
+@media(max-width:780px){
+  h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}
+  nav ol{columns:1}section,.hero{padding:18px}
+  table{font-size:12.3px;min-width:660px}
+}
+@media print{
+  body{background:#fff}.page{max-width:none;padding:0}
+  nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body><main class="page">
+
+<header class="hero">
+  <div class="kicker">Agents infectieux — Hépatites virales</div>
+  <h1>Virus des hépatites</h1>
+  <p class="subtitle">Fiche D1/externat orientée QCM : VHA, VHE, VHC et VHB — structure, transmission, clinique, biologie, sérologies, chronicité, populations à risque, complications, diagnostic, traitement et prévention.</p>
+  <div class="tags">
+    <span class="tag red">🔴 Sérologies VHB</span>
+    <span class="tag orange">🟠 Chronicité / transmission</span>
+    <span class="tag green">🟢 Diagnostic & prévention</span>
+    <span class="tag purple">🧠 QCM/EDN</span>
+    <span class="tag blue">🦠 A • E • C • B</span>
+  </div>
+  <div class="actions">
+    <button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+    <button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+  </div>
+</header>
+
+<nav>
+<h2>Plan rapide</h2>
+<ol>
+  <li><a href="#general">Généralités</a></li>
+  <li><a href="#compare">Comparatif A/E/C/B</a></li>
+  <li><a href="#vha-trans">VHA : transmission</a></li>
+  <li><a href="#vha-clin">VHA : clinique / biologie</a></li>
+  <li><a href="#vha-sero">VHA : sérologie / chronicité</a></li>
+  <li><a href="#vha-prev">VHA : prévention</a></li>
+  <li><a href="#vhe-trans">VHE : transmission</a></li>
+  <li><a href="#vhe-clin">VHE : clinique / terrains</a></li>
+  <li><a href="#vhe-diag">VHE : diagnostic / chronicité</a></li>
+  <li><a href="#vhc-struct">VHC : structure / évolution</a></li>
+  <li><a href="#vhc-trans">VHC : transmission</a></li>
+  <li><a href="#vhc-diag">VHC : diagnostic</a></li>
+  <li><a href="#vhc-chron">VHC : chronicité / complications</a></li>
+  <li><a href="#vhc-trait">VHC : traitement</a></li>
+  <li><a href="#vhb-struct">VHB : structure</a></li>
+  <li><a href="#vhb-trans">VHB : transmission / prévention</a></li>
+  <li><a href="#vhb-evol">VHB : évolution / chronicité</a></li>
+  <li><a href="#vhb-marq">VHB : marqueurs</a></li>
+  <li><a href="#vhb-sero">VHB : profils sérologiques</a></li>
+  <li><a href="#vhb-pcr">VHB : PCR / traitement</a></li>
+  <li><a href="#vaccin">Vaccination VHB</a></li>
+  <li><a href="#pieges">Pièges / incohérences</a></li>
+  <li><a href="#flashcards">Flashcards</a></li>
+</ol>
+</nav>
+
+<section id="general">
+<h2>1. Généralités</h2>
+<div class="callout"><strong>Hépatite :</strong> le cours la définit comme une <strong>lyse des hépatocytes</strong>.</div>
+<p>Les causes citées sont : alcoolique, auto-immune, toxique, médicamenteuse, métabolique et virale.</p>
+<ul>
+  <li>Virus hépatotropes principaux : <strong>VHA, VHE, VHB, VHC</strong>.</li>
+  <li>Autres virus pouvant donner des hépatites : <strong>EBV, CMV, HSV</strong>.</li>
+  <li>Le foie synthétise des facteurs de coagulation ; une lyse hépatique majeure peut donc provoquer un syndrome hémorragique et conduire à discuter une greffe.</li>
+  <li>Découvertes citées : VHB <strong>1965</strong>, VHA <strong>1973</strong>, VHC <strong>1989</strong>.</li>
+  <li>VHA et VHE sont présentés comme les plus proches sur le plan structural.</li>
+</ul>
+</section>
+
+<section id="compare">
+<h2>2. Comparatif ultra-rentable A / E / C / B</h2>
+<div class="tablewrap"><table>
+<tr><th>Virus</th><th>Enveloppe</th><th>Génome</th><th>Transmission dominante du cours</th><th>Chronicité</th><th>Marqueur / idée clé</th></tr>
+<tr><td><strong>VHA</strong></td><td>Non enveloppé, résistant</td><td>ARN</td><td>Oro-fécale, manuportée, eau/coquillages</td><td><strong>Jamais</strong></td><td>IgM anti-VHA = aigu ; IgG = immunité</td></tr>
+<tr><td><strong>VHE</strong></td><td>Non enveloppé, résistant</td><td>ARN</td><td>Oro-fécale selon zones ; zoonose dans pays développés ; sang ; vertical</td><td>Possible chez immunodéprimé</td><td>IgM/IgG ELISA + ARN PCR, selles utiles</td></tr>
+<tr><td><strong>VHC</strong></td><td>Enveloppé, fragile</td><td>ARN</td><td><strong>Sang</strong></td><td>≈ <strong>70 %</strong></td><td>ARN = marqueur le plus précoce</td></tr>
+<tr><td><strong>VHB</strong></td><td>Enveloppé</td><td><strong>ADN</strong></td><td>Sang + sexuelle + mère-enfant</td><td>≈10 % adulte dans le cours, beaucoup plus si infection jeune</td><td>Ag HBs, anti-HBs, anti-HBc, ADN VHB</td></tr>
+</table></div>
+<div class="callout warn"><strong>Grand découpage du support :</strong> A et E sont surtout enseignées comme hépatites aiguës ; B et C sont les grandes hépatites chroniques.</div>
+</section>
+
+<section id="vha-trans">
+<h2>3. VHA — transmission</h2>
+<div class="callout"><strong>« Hépatite du voyageur »</strong> : particulièrement associée aux zones sans traitement efficace des eaux usées.</div>
+<ul>
+  <li>Virus <strong>non enveloppé</strong> → forte résistance environnementale.</li>
+  <li>Survie : plusieurs mois dans eau/sol ; environ <strong>4 h sur les mains</strong>.</li>
+  <li>Congélation : peu d’effet dans le support.</li>
+  <li>Inactivation citée : alcool 70°, chlore, Javel, iode.</li>
+</ul>
+
+<h3>Modes de contamination</h3>
+<div class="tablewrap"><table>
+<tr><th>Mode</th><th>Exemple</th><th>Type</th></tr>
+<tr><td>Oro-fécal environnemental</td><td>Eau, poissons, fruits de mer concentrant le virus</td><td><strong>Indirecte</strong></td></tr>
+<tr><td>Interhumaine « mains sales »</td><td>Personnel de restauration, collectivités</td><td><strong>Directe</strong></td></tr>
+<tr><td>Matériel souillé</td><td>Aiguilles dans contexte de mauvaises pratiques</td><td>Manque d’asepsie ; le cours précise que « ce n’est pas le sang qui est le vecteur » dans ce contexte</td></tr>
+</table></div>
+
+<h3>Populations à risque citées</h3>
+<ul>
+  <li>Voyageurs.</li>
+  <li>Enfants/personnel de crèche.</li>
+  <li>Éboueurs, personnel de stations d’épuration.</li>
+  <li>Personnel soignant.</li>
+  <li>Hommes ayant des rapports sexuels avec des hommes.</li>
+  <li>Sujets contacts.</li>
+  <li>Consommateurs de coquillages.</li>
+</ul>
+</section>
+
+<section id="vha-clin">
+<h2>4. VHA — clinique & biologie</h2>
+<div class="callout warn"><strong>Piège temporel :</strong> diarrhée/troubles digestifs <strong>3 jours</strong> après coquillages = délai non compatible avec le VHA dans le cours. Incubation compatible : <strong>15–45 jours</strong>.</div>
+
+<h3>Clinique</h3>
+<ul>
+  <li>Phase pseudo-grippale puis phase d’état et convalescence.</li>
+  <li>Asthénie pouvant durer <strong>6 à 12 mois</strong>.</li>
+  <li>Ictère parfois très marqué, conjonctives jaunes.</li>
+  <li>Douleurs de l’hypochondre droit.</li>
+  <li>Selles décolorées, urines foncées, prurit.</li>
+</ul>
+
+<h3>Deux phases symptomatiques</h3>
+<div class="tablewrap"><table>
+<tr><th>Phase</th><th>Durée / signes</th></tr>
+<tr><td>Pré-ictérique</td><td><strong>1–3 semaines</strong> : asthénie, état pseudo-grippal sans signes respiratoires, arthralgies.</td></tr>
+<tr><td>Ictérique</td><td>Ictère, selles décolorées, urines foncées, prurit, conjonctives jaunes.</td></tr>
+</table></div>
+
+<h3>Biologie</h3>
+<ul>
+  <li>Transaminases = marqueurs de cytolyse.</li>
+  <li>Dans les hépatites virales : <strong>ALAT &gt; ASAT</strong> dans le cours.</li>
+  <li>Bilirubine ↑ → ictère.</li>
+  <li>Cholestase possible.</li>
+  <li>Syndrome mononucléosique possible mais plus rare.</li>
+  <li>Surveillance de gravité : <strong>TP + facteur V</strong>.</li>
+</ul>
+<div class="callout orangebox"><strong>Urgence :</strong> chute du TP et du facteur V → problème majeur de synthèse hépatique → discussion de greffe.</div>
+</section>
+
+<section id="vha-sero">
+<h2>5. VHA — marqueurs, contagiosité, chronicité</h2>
+<div class="schema">Début infection
+→ virus présent sang + selles
+→ IgM anti-VHA
+→ ictère / cytolyse
+→ convalescence
+→ IgG anti-VHA protectrices</div>
+
+<ul>
+  <li><strong>IgM anti-VHA = marqueur essentiel de l’hépatite A aiguë.</strong></li>
+  <li>La PCR est jugée peu utile car la virémie est trop fugace.</li>
+  <li>IgG anti-VHA = immunité après infection ou vaccination.</li>
+  <li>Le virus est présent dans le sang et les selles <strong>avant l’ictère</strong> → contagiosité précoce.</li>
+</ul>
+
+<div class="callout warn"><strong>Chronicité :</strong> le VHA <strong>ne donne jamais d’hépatite chronique</strong>, y compris chez l’immunodéprimé dans le support. Une infection virale chronique est définie par une réplication &gt;6 mois ; cette situation ne s’applique pas au VHA.</div>
+</section>
+
+<section id="vha-prev">
+<h2>6. VHA — prévention</h2>
+<ul>
+  <li>Traitement/désinfection de l’eau.</li>
+  <li>Hygiène des mains et chaîne alimentaire.</li>
+  <li>Vaccination décrite comme très efficace.</li>
+  <li>Le cours indique qu’elle peut être administrée aux enfants et aux femmes enceintes voyageant en zone à risque.</li>
+  <li>Le support indique un rappel vaccinal tous les <strong>10 ans</strong>.</li>
+  <li>Hépatite A = maladie faisant l’objet d’une <strong>notification immédiate</strong> et d’enquêtes par l’ARS.</li>
+</ul>
+</section>
+
+<section id="vhe-trans">
+<h2>7. VHE — transmission</h2>
+<ul>
+  <li>Virus <strong>non enveloppé</strong>, résistant au milieu extérieur.</li>
+  <li>Environ <strong>20 millions d’infections/an</strong> dans le monde selon le support.</li>
+</ul>
+
+<h3>Deux profils géographiques</h3>
+<div class="tablewrap"><table>
+<tr><th>Contexte</th><th>Transmission</th><th>Détails</th></tr>
+<tr><td>Pays à ressources limitées</td><td>Oro-fécale par eau/aliments souillés</td><td>Génotypes <strong>1 et 2</strong> impliqués dans les épidémies.</td></tr>
+<tr><td>Pays développés</td><td><strong>Zoonotique</strong></td><td>Porc, cerf, sanglier, rat ; contamination alimentaire.</td></tr>
+<tr><td>Tous pays</td><td>Sanguine</td><td>Cas post-transfusionnels ; contrôle des dons.</td></tr>
+<tr><td>Grossesse</td><td>Verticale transplacentaire</td><td>Risque surtout fœtal/périnatal décrit comme mort in utero plutôt que malformations.</td></tr>
+</table></div>
+
+<ul>
+  <li>Dans les élevages porcins : <strong>30–80 %</strong> des animaux peuvent être contaminés dans le support.</li>
+  <li>Profil cité : homme &gt;60 ans, consommateur de charcuterie.</li>
+</ul>
+<div class="callout warn"><strong>Piège du cours :</strong> après ingestion de viande contaminée, le support affirme qu’il n’y a pas de <strong>transmission secondaire</strong> à l’entourage dans ce contexte.</div>
+</section>
+
+<section id="vhe-clin">
+<h2>8. VHE — clinique & terrains particuliers</h2>
+<h3>Clinique</h3>
+<ul>
+  <li>Peut être <strong>asymptomatique</strong>.</li>
+  <li>Ictère possible, généralement moins franc que pour le VHA.</li>
+  <li>Hépatite fulminante possible.</li>
+</ul>
+
+<h3>Manifestations extra-hépatiques</h3>
+<div class="grid3">
+  <div class="card"><strong>Neurologiques</strong><p>Guillain-Barré, myélite.</p></div>
+  <div class="card"><strong>Rénales</strong><p>Glomérulonéphrite.</p></div>
+  <div class="card"><strong>Hématologiques</strong><p>Thrombopénie.</p></div>
+</div>
+<div class="callout orangebox"><strong>Réflexe QCM :</strong> cytolyse + troubles neurologiques → penser au VHE dans le cadre du support.</div>
+
+<h3>Terrains à risque</h3>
+<ul>
+  <li><strong>Grossesse :</strong> mortalité maternelle accrue aux 2e–3e trimestres, prématurité, mortalité périnatale.</li>
+  <li><strong>Immunodépression :</strong> possible chronicisation.</li>
+  <li><strong>Hépatopathie préexistante :</strong> formes plus sévères et risque de décès augmenté.</li>
+</ul>
+</section>
+
+<section id="vhe-diag">
+<h2>9. VHE — diagnostic, chronicité, traitement</h2>
+<div class="tablewrap"><table>
+<tr><th>Type</th><th>Examen</th><th>Point clé</th></tr>
+<tr><td>Indirect</td><td>IgM + IgG anti-VHE par ELISA</td><td>IgM surtout pour infection aiguë ; spécificité limitée → faux positifs possibles.</td></tr>
+<tr><td>Direct</td><td>ARN VHE par PCR</td><td>Sang ou selles ; la recherche dans les selles est privilégiée en cas de doute.</td></tr>
+</table></div>
+
+<ul>
+  <li>ARN présent dans sang + selles ; persiste plus longtemps dans les selles.</li>
+  <li>Chez l’immunodéprimé : suivi du virus dans sang et selles jusqu’à négativation des deux.</li>
+  <li>Traitement de l’hépatite E chronique : <strong>ribavirine</strong> citée, avec risque de rechute.</li>
+</ul>
+</section>
+
+<section id="vhc-struct">
+<h2>10. VHC — structure & évolution naturelle</h2>
+<ul>
+  <li>Famille <strong>Flaviviridae</strong>, genre <strong>Hepacivirus</strong>.</li>
+  <li>Virus <strong>enveloppé</strong> à génome <strong>ARN</strong>.</li>
+  <li>Dans le sang, associé à des lipides / lipoprotéines → <strong>lipo-viro-particules (LVP)</strong>.</li>
+  <li>Interaction étroite avec métabolisme lipidique → stéatose hépatique possible.</li>
+  <li>Enveloppe → virus relativement fragile aux solvants/détergents.</li>
+  <li>Peut persister quelques jours dans du sang séché.</li>
+</ul>
+
+<h3>Évolution</h3>
+<div class="grid2">
+  <div class="card"><strong>≈30 %</strong><p>Élimination spontanée du virus.</p></div>
+  <div class="card"><strong>≈70 %</strong><p>Évolution vers infection chronique.</p></div>
+</div>
+<div class="callout warn"><strong>Différence VHB/VHC dans le support :</strong> après guérison spontanée du VHC, pas de latence hépatique résiduelle décrite ; le VHB peut persister dans le foie.</div>
+</section>
+
+<section id="vhc-trans">
+<h2>11. VHC — transmission</h2>
+<div class="callout"><strong>Transmission principale : exposition au sang.</strong></div>
+
+<h3>Facteurs de risque</h3>
+<ul>
+  <li><strong>Toxicomanie</strong> = facteur de risque majeur actuel.</li>
+  <li>Dans la 1re année d’usage de drogues sans hygiène : risque de contamination <strong>&gt;90 %</strong> dans le cours.</li>
+  <li>&gt;<strong>70 %</strong> des usagers de drogues seraient porteurs ou auraient déjà été infectés dans le support.</li>
+  <li>Transfusion avant <strong>1991</strong> = ancien facteur de risque majeur.</li>
+  <li>Risque nosocomial : endoscopie, hémodialyse, actes médicaux/chirurgicaux, soins dentaires.</li>
+  <li>Tatouage, piercing, acupuncture.</li>
+  <li>Objets coupants personnels : rasoirs, brosses à dents électriques…</li>
+  <li>Échange de paille lors de consommation de cocaïne avec épistaxis.</li>
+</ul>
+
+<h3>Sexuelle / materno-fœtale</h3>
+<ul>
+  <li>Le support dit que la transmission sexuelle « n’existe normalement pas » et que le VHC n’est pas considéré comme MST dans le cadre enseigné.</li>
+  <li>Transmission mère-enfant possible, surtout par exposition au sang lors de l’accouchement, pas décrite comme transplacentaire.</li>
+  <li>Risque augmenté si charge virale maternelle élevée, notamment en co-infection VIH.</li>
+</ul>
+</section>
+
+<section id="vhc-diag">
+<h2>12. VHC — diagnostic</h2>
+<div class="schema">Prise de risque récente
+→ sérologie anti-VHC
+→ si négative mais exposition récente : rechercher ARN
+→ fenêtre sérologique possible
+
+Ac anti-VHC positifs
+→ témoigne d'un contact
+→ ne prouve pas à lui seul une réplication active
+→ rechercher ARN VHC</div>
+
+<ul>
+  <li><strong>ARN = marqueur le plus précoce.</strong></li>
+  <li>Anticorps apparaissent entre <strong>20 et 150 jours</strong>, moyenne ≈ <strong>50 jours</strong>.</li>
+  <li>Les anticorps peuvent persister des dizaines d’années voire à vie.</li>
+  <li>Ils <strong>ne sont pas protecteurs</strong> → possibilité de réinfection/surinfection.</li>
+  <li>Le support cite ELISA indirecte, RT-PCR et ALAT.</li>
+  <li>TROD salive/sang capillaire : augmente l’offre de dépistage ; résultat positif à confirmer au laboratoire.</li>
+</ul>
+<div class="callout orangebox"><strong>Fenêtre sérologique :</strong> si prise de risque récente et sérologie négative, l’ARN doit être envisagé ; ce raisonnement n’est pas celui du dépistage standard sans exposition récente.</div>
+</section>
+
+<section id="vhc-chron">
+<h2>13. VHC — chronicité & complications</h2>
+<ul>
+  <li>Chronicité = persistance de l’<strong>ARN &gt;6 mois</strong> dans le sang.</li>
+  <li>Après pic aigu, transaminases pouvant devenir subnormales, autour de <strong>100–200</strong> dans le support.</li>
+  <li>Évaluation du foie : marqueurs sanguins, élastométrie / FibroScan ; biopsie moins utilisée.</li>
+</ul>
+
+<div class="schema">Hépatite aiguë
+→ infection chronique
+→ inflammation chronique
+→ cirrhose (~20 ans dans le support)
+→ hépatocarcinome (~25–30 ans)</div>
+
+<div class="callout warn"><strong>Point mécanistique :</strong> le cours oppose VHC et VHB : les protéines du VHC ne sont pas présentées comme directement oncogènes ; le cancer est surtout relié à l’<strong>inflammation chronique</strong>.</div>
+
+<h3>Données citées</h3>
+<ul>
+  <li>≈ <strong>2 %</strong> de la population mondiale porteuse d’une infection chronique dans le support.</li>
+  <li>Égypte historiquement à très forte prévalence, notamment génotype 4.</li>
+  <li>France : ≈ <strong>5000</strong> nouvelles infections/an dans le support.</li>
+  <li>≈ <strong>400 000</strong> personnes porteuses d’Ac anti-VHC ; environ 2/3 auraient encore une infection active.</li>
+</ul>
+</section>
+
+<section id="vhc-trait">
+<h2>14. VHC — traitement</h2>
+<ul>
+  <li>Traitements actuels décrits comme très performants : <strong>&gt;90 % de réponses</strong>.</li>
+  <li>Durée : <strong>8 à 12 semaines</strong>.</li>
+  <li>Traitement oral quotidien, plutôt bien toléré.</li>
+  <li>Objectif : rendre la charge virale indétectable et prévenir cirrhose/cancer.</li>
+  <li>Guérison dans le support : PCR sans signal <strong>12 semaines après l’arrêt</strong> du traitement.</li>
+  <li>Valeur &lt;<strong>15 UI/mL</strong> mentionnée comme non dite par la prof.</li>
+  <li>Traitement délivrable en ville depuis <strong>2018</strong>.</li>
+  <li>Coût cité : environ <strong>28 000 €</strong>.</li>
+</ul>
+</section>
+
+<section id="vhb-struct">
+<h2>15. VHB — structure & oncogénicité</h2>
+<ul>
+  <li>Virus <strong>enveloppé</strong>.</li>
+  <li>Virus à <strong>ADN</strong>, génome circulaire et partiellement double brin.</li>
+  <li>Persistance hépatique sous forme d’ADN « super-enroulé » dans le cours.</li>
+  <li>Possibilité de réactivation lors d’une chimiothérapie même après évolution favorable.</li>
+  <li>L’enveloppe contient l’<strong>Ag HBs</strong>, utilisé dans le vaccin.</li>
+</ul>
+
+<h3>Particules virales</h3>
+<ul>
+  <li>Particules complètes = infectieuses.</li>
+  <li>Bâtonnets/billes = particules vides contenant uniquement Ag HBs, non infectieuses.</li>
+  <li>Les particules d’enveloppe sont bien plus nombreuses que les virions complets.</li>
+</ul>
+
+<h3>Épidémiologie / cancer</h3>
+<ul>
+  <li>Prévalence mondiale chronique : <strong>3,5 %</strong>, ≈ <strong>257 millions</strong> de porteurs.</li>
+  <li>Zones fortes : Asie et Afrique.</li>
+  <li>Zones de forte prévalence : <strong>8–20 %</strong> ; faible : <strong>&lt;2 %</strong>.</li>
+  <li>Le cours présente le VHB comme <strong>oncogène</strong>, avec capacité d’intégration au génome.</li>
+  <li>Marqueurs VHB retrouvés chez <strong>45 %</strong> des patients ayant un cancer du foie selon le support.</li>
+</ul>
+</section>
+
+<section id="vhb-trans">
+<h2>16. VHB — transmission & prévention</h2>
+<h3>Transmission</h3>
+<ul>
+  <li><strong>Sang</strong>.</li>
+  <li><strong>Sécrétions sexuelles</strong> → IST dans le cours.</li>
+  <li>Lait maternel, petites quantités dans larmes/salive mentionnées.</li>
+  <li>Transmission mère-enfant majeure dans certaines régions.</li>
+</ul>
+
+<div class="callout warn"><strong>Risque d’exposition au sang :</strong> environ <strong>30 %</strong> dans le support ; présenté comme 10× supérieur au VHC et 100× au VIH.</div>
+<p>Une autre valeur de risque de transmission du VHB est donnée dans le cours : <strong>30 à 80 %</strong>.</p>
+
+<h3>Mère-enfant</h3>
+<ul>
+  <li>Au moment de l’accouchement : exposition aux liquides biologiques.</li>
+  <li>In utero : voie hématogène via capillaires placentaires, décrite comme rare mais possible.</li>
+</ul>
+
+<h3>Prévention</h3>
+<ul>
+  <li>Dépistage donneurs : Ag HBs depuis 1970 + PCR.</li>
+  <li>Vaccination obligatoire pour les professionnels de santé dans le support.</li>
+  <li>Contrôle du statut vaccinal / taux d’anticorps chez les étudiants en santé cité.</li>
+  <li><strong>Dépistage Ag HBs chez toute femme enceinte en début de grossesse</strong>.</li>
+  <li>Vaccination universelle du nourrisson.</li>
+</ul>
+</section>
+
+<section id="vhb-evol">
+<h2>17. VHB — évolution & chronicité</h2>
+<h3>Chez l’adulte</h3>
+<ul>
+  <li>Seulement <strong>10 % symptomatiques</strong> dans le support ; 90 % initialement asymptomatiques.</li>
+  <li>≈ <strong>10 %</strong> évoluent vers l’hépatite chronique dans la partie principale.</li>
+  <li>Chez l’adulte : évolution favorable dans <strong>90 %</strong> des cas.</li>
+</ul>
+
+<h3>Complications</h3>
+<ul>
+  <li>Parmi les hépatites B chroniques : <strong>20 %</strong> évoluent vers la cirrhose.</li>
+  <li>La cirrhose peut évoluer vers HCC dans <strong>4 %</strong> des cas selon cette séquence du support.</li>
+  <li>HCC décrit comme mortel dans <strong>95 %</strong> des cas dans le cours.</li>
+  <li><strong>20 % des HCC</strong> peuvent survenir sans passer par la cirrhose.</li>
+</ul>
+
+<h3>Plus l’infection est précoce, plus la chronicité est fréquente</h3>
+<ul>
+  <li>Nouveau-né : <strong>90 %</strong> de chronicisation dans le cours.</li>
+  <li>Enfant : <strong>20–30 %</strong>.</li>
+  <li>Adulte : <strong>5–10 %</strong> dans cette partie.</li>
+</ul>
+<div class="callout orangebox"><strong>Logique clinique :</strong> contamination très jeune = risque majeur de chronicité → importance de la vaccination du nourrisson et de la prévention mère-enfant.</div>
+</section>
+
+<section id="vhb-marq">
+<h2>18. VHB — marqueurs à maîtriser</h2>
+<div class="tablewrap"><table>
+<tr><th>Marqueur</th><th>Signification dans le support</th></tr>
+<tr><td><strong>Ag HBs</strong></td><td>Présence du virus / infection en cours ; persistance &gt;6 mois = chronicité.</td></tr>
+<tr><td><strong>Anti-HBs</strong></td><td>Protection / réponse mémoire ; seuls positifs après vaccination.</td></tr>
+<tr><td><strong>Anti-HBc totaux</strong></td><td><strong>Marqueur de contact naturel</strong> avec le VHB ; infection passée ou présente ; persistent à vie.</td></tr>
+<tr><td><strong>IgM anti-HBc</strong></td><td>Marqueur de phase aiguë ; si Ag HBs+ + IgM anti-HBc+ → infection aiguë.</td></tr>
+<tr><td><strong>Ag HBe</strong></td><td>Présent au début du portage chronique dans le schéma du cours ; importance moindre selon la prof.</td></tr>
+<tr><td><strong>Anti-HBe</strong></td><td>Apparaissent après perte de l’Ag HBe selon le support.</td></tr>
+<tr><td><strong>ADN VHB</strong></td><td>Mesuré par PCR quantitative → charge virale / intensité de réplication.</td></tr>
+</table></div>
+
+<div class="callout warn"><strong>Piège béton :</strong> <strong>Ag HBs positif + anti-HBc négatifs</strong> = résultat incohérent dans le cadre enseigné → rechercher une erreur.</div>
+</section>
+
+<section id="vhb-sero">
+<h2>19. VHB — profils sérologiques QCM</h2>
+<div class="tablewrap"><table>
+<tr><th>Situation</th><th>Ag HBs</th><th>IgM anti-HBc</th><th>Anti-HBc totaux</th><th>Anti-HBs</th><th>Lecture</th></tr>
+<tr><td><strong>Vacciné</strong></td><td>−</td><td>−</td><td>−</td><td><strong>+</strong></td><td>Vaccination seule</td></tr>
+<tr><td><strong>Infection aiguë</strong></td><td><strong>+</strong></td><td><strong>+</strong></td><td>+</td><td>− au début</td><td>Infection récente / aiguë</td></tr>
+<tr><td><strong>Infection chronique</strong></td><td><strong>+ &gt;6 mois</strong></td><td>−</td><td><strong>+</strong></td><td>−</td><td>Portage chronique</td></tr>
+<tr><td><strong>Infection ancienne guérie</strong></td><td>−</td><td>−</td><td><strong>+</strong></td><td><strong>+</strong></td><td>Contact naturel ancien + immunité</td></tr>
+</table></div>
+
+<h3>Devant Ag HBs positif</h3>
+<ol>
+  <li>Test de neutralisation pour confirmer.</li>
+  <li>IgM anti-HBc :
+    <ul>
+      <li>positif → <strong>aigu</strong> → déclaration à l’ARS ;</li>
+      <li>négatif → <strong>chronicité</strong> selon le support.</li>
+    </ul>
+  </li>
+  <li>ADN VHB → intensité de réplication.</li>
+</ol>
+</section>
+
+<section id="vhb-pcr">
+<h2>20. VHB — PCR quantitative, surveillance & traitement</h2>
+<ul>
+  <li>PCR quantitative = mesure de l’<strong>ADN VHB</strong>.</li>
+  <li>Évalue la charge virale, reflet de l’intensité de réplication.</li>
+  <li>Indications : bilan pré-thérapeutique + suivi sous traitement.</li>
+  <li>Échappement virologique = remontée de charge virale sous traitement.</li>
+  <li>Résistances plus fréquentes avec anciennes molécules, notamment <strong>lamivudine</strong>.</li>
+  <li>Plus rares avec nouvelles molécules citées : <strong>ténofovir, entécavir</strong>.</li>
+  <li>Négativation Ag HBs difficile, obtenue dans <strong>&lt;20 %</strong> des cas dans le support.</li>
+  <li>Objectif principal : diminuer fortement la charge virale pour réduire le risque de cancer.</li>
+</ul>
+
+<h3>Surveillance hépatique chronique</h3>
+<ul>
+  <li>Bilan sanguin / marqueurs de fibrose.</li>
+  <li>Élastométrie.</li>
+  <li>Échographie hépatique.</li>
+</ul>
+</section>
+
+<section id="vaccin">
+<h2>21. Vaccination VHB</h2>
+<ul>
+  <li>Vaccin actuel : <strong>recombinant</strong> contenant Ag HBs, notamment protéines S et M dans le support.</li>
+  <li>Après vaccination → production d’<strong>anti-HBs</strong>.</li>
+  <li><strong>Anti-HBs seuls positifs = sujet vacciné.</strong></li>
+  <li><strong>Anti-HBc positifs = contact naturel</strong>, jamais simple vaccination.</li>
+  <li>Vaccination VHB obligatoire pour le nourrisson dans le cours.</li>
+</ul>
+</section>
+
+<section id="pieges">
+<h2>22. Pièges & incohérences internes du support</h2>
+
+<div class="callout warn"><strong>1. VHE :</strong> la page traitement dit « il n’y a PAS d’antiviraux contre le VHE », puis indique juste après que l’hépatite E chronique peut être traitée par <strong>ribavirine</strong>. Contradiction de formulation interne à repérer.</div>
+
+<div class="callout warn"><strong>2. VHB — chronicité :</strong> le cours donne plusieurs chiffres selon l’âge et la section : environ <strong>10 %</strong> chez l’adulte dans l’évolution générale, puis <strong>5–10 %</strong> chez l’adulte, <strong>20–30 %</strong> chez l’enfant et <strong>90 %</strong> chez le nouveau-né. Ces valeurs doivent être rattachées au terrain et à l’âge.</div>
+
+<div class="callout warn"><strong>3. VHB — transmission :</strong> le support donne un risque d’exposition au sang d’environ <strong>30 %</strong>, puis une fourchette de transmission de <strong>30–80 %</strong>. Ne pas fusionner automatiquement ces deux chiffres hors contexte.</div>
+
+<div class="callout warn"><strong>4. VHC :</strong> une phrase de la partie diagnostic dit « lors d’une guérison, l’allergène va diminuer » ; au vu du contexte, il s’agit manifestement d’un terme erroné dans le ronéo. La fiche n’en déduit pas une donnée supplémentaire.</div>
+
+<div class="callout warn"><strong>5. VHA :</strong> le support indique un rappel vaccinal tous les <strong>10 ans</strong>. C’est une donnée du cours reproduite ici telle quelle, sans actualisation externe.</div>
+
+<div class="callout warn"><strong>6. VHC — transmission sexuelle :</strong> le support formule qu’elle « n’existe normalement pas » et que le VHC n’est pas une MST. Cette formulation est conservée comme donnée du cours, sans être élargie au-delà.</div>
+
+<div class="callout warn"><strong>7. VHB — HBe :</strong> le cours décrit l’Ag HBe comme « la capside qui est maturée », puis précise qu’il n’est « pas très important ». La fiche garde uniquement la logique sérologique enseignée et signale la formulation.</div>
+
+<div class="callout warn"><strong>8. VHB — cancer :</strong> le support donne plusieurs chaînes de risque (20 % cirrhose, puis 4 % HCC depuis la cirrhose ; 20 % des HCC sans cirrhose). Il faut apprendre ces chiffres comme données distinctes du ronéo.</div>
+</section>
+
+<section id="flashcards">
+<h2>23. Flashcards express</h2>
+<div class="flashgrid">
+<div class="flash"><div class="q">1. Hépatite = ?</div><div class="a">Lyse des hépatocytes dans le cours.</div></div>
+<div class="flash"><div class="q">2. Principaux virus hépatotropes ?</div><div class="a">A, E, B, C.</div></div>
+<div class="flash"><div class="q">3. VHA enveloppé ?</div><div class="a">Non.</div></div>
+<div class="flash"><div class="q">4. VHE enveloppé ?</div><div class="a">Non.</div></div>
+<div class="flash"><div class="q">5. VHC enveloppé ?</div><div class="a">Oui.</div></div>
+<div class="flash"><div class="q">6. VHB génome ?</div><div class="a">ADN circulaire partiellement double brin.</div></div>
+<div class="flash"><div class="q">7. VHA incubation ?</div><div class="a">15–45 jours.</div></div>
+<div class="flash"><div class="q">8. VHA phase pré-ictérique ?</div><div class="a">1–3 semaines.</div></div>
+<div class="flash"><div class="q">9. Hépatites virales : ALAT ou ASAT ?</div><div class="a">ALAT prédominent sur ASAT dans le support.</div></div>
+<div class="flash"><div class="q">10. Gravité VHA : quels dosages ?</div><div class="a">TP + facteur V.</div></div>
+<div class="flash"><div class="q">11. Marqueur VHA aigu ?</div><div class="a">IgM anti-VHA.</div></div>
+<div class="flash"><div class="q">12. IgG anti-VHA ?</div><div class="a">Immunité après infection ou vaccination.</div></div>
+<div class="flash"><div class="q">13. VHA chronique ?</div><div class="a">Jamais dans le cours.</div></div>
+<div class="flash"><div class="q">14. VHE : infections/an monde ?</div><div class="a">≈20 millions.</div></div>
+<div class="flash"><div class="q">15. VHE pays à ressources limitées ?</div><div class="a">Oro-fécal, génotypes 1–2.</div></div>
+<div class="flash"><div class="q">16. Réservoirs zoonotiques VHE ?</div><div class="a">Porc, cerf, sanglier, rat.</div></div>
+<div class="flash"><div class="q">17. VHE grossesse ?</div><div class="a">Risque maternel 2e–3e trimestre + prématurité/mortalité périnatale.</div></div>
+<div class="flash"><div class="q">18. VHE chronique chez qui ?</div><div class="a">Immunodéprimés.</div></div>
+<div class="flash"><div class="q">19. Diagnostic indirect VHE ?</div><div class="a">IgM/IgG par ELISA.</div></div>
+<div class="flash"><div class="q">20. Diagnostic direct VHE ?</div><div class="a">ARN par PCR, sang ou selles.</div></div>
+<div class="flash"><div class="q">21. Traitement VHE chronique cité ?</div><div class="a">Ribavirine.</div></div>
+<div class="flash"><div class="q">22. Famille VHC ?</div><div class="a">Flaviviridae, Hepacivirus.</div></div>
+<div class="flash"><div class="q">23. VHC génome ?</div><div class="a">ARN.</div></div>
+<div class="flash"><div class="q">24. VHC dans le sang ?</div><div class="a">Associé à des lipoprotéines = lipo-viro-particules.</div></div>
+<div class="flash"><div class="q">25. VHC : guérison spontanée ?</div><div class="a">≈30 %.</div></div>
+<div class="flash"><div class="q">26. VHC : chronicité ?</div><div class="a">≈70 %.</div></div>
+<div class="flash"><div class="q">27. Risque VHC actuel majeur ?</div><div class="a">Toxicomanie / exposition au sang.</div></div>
+<div class="flash"><div class="q">28. Avant 1991, risque VHC majeur ?</div><div class="a">Transfusion.</div></div>
+<div class="flash"><div class="q">29. Marqueur VHC le plus précoce ?</div><div class="a">ARN.</div></div>
+<div class="flash"><div class="q">30. Ac anti-VHC : délai ?</div><div class="a">20–150 jours, moyenne ~50 jours.</div></div>
+<div class="flash"><div class="q">31. Ac anti-VHC protecteurs ?</div><div class="a">Non.</div></div>
+<div class="flash"><div class="q">32. VHC chronique ?</div><div class="a">ARN persistant >6 mois.</div></div>
+<div class="flash"><div class="q">33. Traitement VHC durée ?</div><div class="a">8–12 semaines.</div></div>
+<div class="flash"><div class="q">34. Guérison VHC sous traitement ?</div><div class="a">PCR indétectable 12 semaines après arrêt dans le cours.</div></div>
+<div class="flash"><div class="q">35. VHB enveloppé ?</div><div class="a">Oui.</div></div>
+<div class="flash"><div class="q">36. Ag vaccinal VHB ?</div><div class="a">Ag HBs.</div></div>
+<div class="flash"><div class="q">37. Prévalence chronique VHB mondiale ?</div><div class="a">3,5 %, ~257 millions.</div></div>
+<div class="flash"><div class="q">38. VHB transmission ?</div><div class="a">Sang + sexuelle + mère-enfant.</div></div>
+<div class="flash"><div class="q">39. Dépistage grossesse VHB ?</div><div class="a">Ag HBs en début de grossesse.</div></div>
+<div class="flash"><div class="q">40. VHB symptomatique adulte ?</div><div class="a">≈10 % dans le support.</div></div>
+<div class="flash"><div class="q">41. Chronicité VHB nouveau-né ?</div><div class="a">≈90 %.</div></div>
+<div class="flash"><div class="q">42. Chronicité VHB enfant ?</div><div class="a">20–30 %.</div></div>
+<div class="flash"><div class="q">43. Chronicité VHB adulte ?</div><div class="a">5–10 % dans la partie âge.</div></div>
+<div class="flash"><div class="q">44. Ag HBs ?</div><div class="a">Marqueur de présence virale ; >6 mois = chronicité.</div></div>
+<div class="flash"><div class="q">45. Anti-HBs ?</div><div class="a">Anticorps protecteurs / vaccination ou guérison.</div></div>
+<div class="flash"><div class="q">46. Anti-HBc ?</div><div class="a">Marqueur de contact naturel avec le VHB.</div></div>
+<div class="flash"><div class="q">47. IgM anti-HBc ?</div><div class="a">Phase aiguë.</div></div>
+<div class="flash"><div class="q">48. Sujet vacciné VHB ?</div><div class="a">Anti-HBs seuls positifs.</div></div>
+<div class="flash"><div class="q">49. Infection naturelle ancienne guérie ?</div><div class="a">Anti-HBc + et anti-HBs +, Ag HBs −.</div></div>
+<div class="flash"><div class="q">50. VHB chronique classique ?</div><div class="a">Ag HBs + >6 mois, anti-HBc +, IgM anti-HBc −.</div></div>
+<div class="flash"><div class="q">51. PCR quantitative VHB ?</div><div class="a">Mesure ADN / charge virale.</div></div>
+<div class="flash"><div class="q">52. Ancienne molécule à résistance VHB ?</div><div class="a">Lamivudine.</div></div>
+<div class="flash"><div class="q">53. Nouvelles molécules citées ?</div><div class="a">Ténofovir, entécavir.</div></div>
+<div class="flash"><div class="q">54. Négativation Ag HBs sous traitement ?</div><div class="a">&lt;20 % dans le support.</div></div>
+<div class="flash"><div class="q">55. Anti-HBc après vaccination seule ?</div><div class="a">Non.</div></div>
+<div class="flash"><div class="q">56. Ag HBs + / anti-HBc − ?</div><div class="a">Profil incohérent dans le cadre du cours : chercher une erreur.</div></div>
+</div>
+</section>
+
+<section class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>VHA :</strong> non enveloppé, oro-fécal, incubation 15–45 j, IgM = aigu, IgG = immunité, jamais chronique. <strong>VHE :</strong> non enveloppé, oro-fécal ou zoonotique selon zones, sang + vertical possibles, grossesse et immunodépression = terrains à risque, IgM/IgG + PCR, chronicité possible chez immunodéprimé, ribavirine citée. <strong>VHC :</strong> enveloppé ARN, transmission sanguine, toxicomanie = risque actuel majeur, 30 % guérison spontanée / 70 % chronicité, ARN = marqueur le plus précoce, Ac non protecteurs, traitement 8–12 sem avec PCR indétectable à 12 sem = guérison dans le cours. <strong>VHB :</strong> enveloppé ADN, sang + sexe + mère-enfant, oncogène et persistant dans le foie. Sérologie à verrouiller : <strong>vacciné = anti-HBs seuls</strong> ; <strong>contact naturel = anti-HBc+</strong> ; <strong>aigu = Ag HBs+ + IgM anti-HBc+</strong> ; <strong>chronique = Ag HBs+ >6 mois + anti-HBc+ + IgM−</strong>. PCR ADN = charge virale. Plus l’infection VHB est précoce, plus le risque de chronicité est élevé.</p>
+</section>
+
+<section>
+<h2>Source</h2>
+<p class="small">Fiche construite uniquement à partir du PDF « 11 - VIRUS DES HÉPATITES.pdf » fourni par l’utilisateur. Les chiffres, formulations, sérologies, traitements, QCM et points d’alerte sont repris du support ; les incohérences internes sont signalées explicitement et aucun complément externe n’a été ajouté.</p>
+</section>
+
+</main></body></html>

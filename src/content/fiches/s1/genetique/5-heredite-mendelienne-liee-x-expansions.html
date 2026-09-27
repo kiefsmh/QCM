@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche - Hérédité mendélienne liée à l’X & maladies par expansion</title>
+<style>
+:root{
+  --g:#1a7a4a;--gs:#eaf7ef;--r:#dc2626;--rs:#fee2e2;--o:#d97706;--os:#fff7ed;
+  --b:#2563eb;--bs:#eff6ff;--p:#6d28d9;--ps:#f2ecff;--ink:#1c1c2e;--line:#d8dce8;
+  --bg:#f6f7fb;--teal:#0f766e;--teals:#ecfeff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}
+.page{max-width:1160px;margin:auto;padding:32px 18px 64px}
+.hero{background:linear-gradient(135deg,#fff 0%,#f0fdf4 58%,#ecfeff 100%);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 40px rgba(27,38,49,.06)}
+.kicker{color:var(--g);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px}
+h1{font-size:38px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}
+.subtitle{max-width:1000px;margin:0;color:#374151}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;font-size:13px}
+.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:12px;font-weight:800;padding:4px 9px;border-radius:999px}
+.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.green{background:var(--gs);color:#166534}.purple{background:var(--ps);color:#4c1d95}.blue{background:var(--bs);color:#1d4ed8}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}
+nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}
+nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav a{color:var(--ink);text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(27,38,49,.035)}
+h2{font-size:25px;margin:0 0 16px;letter-spacing:-.02em}h3{font-size:18px;margin:22px 0 10px;color:var(--g)}
+p{margin:8px 0}ul,ol{margin:8px 0 12px;padding-left:22px}li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}
+.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}
+.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:#374151;overflow-x:auto;white-space:pre-wrap}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px;min-width:700px}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left;color:#111827}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}.flash .q{background:#f9fafb;padding:10px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:10px 12px;color:#374151}
+.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+.small{font-size:12.5px;color:#4b5563}
+@media(max-width:780px){
+  h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}
+  table{font-size:12.5px;min-width:600px}
+}
+@media print{
+  body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body><main class="page">
+
+<header class="hero">
+  <div class="kicker">UE Génétique</div>
+  <h1>Hérédité mendélienne liée à l’X & maladies par expansion</h1>
+  <p class="subtitle">Fiche D1/externat orientée QCM : transmission récessive et dominante liée à l’X, inactivation de l’X, hérédité liée au Y, hémophilie A, Duchenne/Becker, hypophosphatémie liée à l’X, Incontinentia Pigmenti, PCDH19, mutations dynamiques, syndrome de l’X fragile, FXTAS et FXPOI.</p>
+  <div class="tags">
+    <span class="tag red">🔴 Risques de transmission</span>
+    <span class="tag orange">🟠 Pièges arbres / inactivation X</span>
+    <span class="tag green">🟢 DMD / hémophilie</span>
+    <span class="tag purple">🧠 X fragile EDN</span>
+    <span class="tag blue">🧬 Expansions CGG</span>
+  </div>
+  <div class="actions">
+    <button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+    <button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+  </div>
+</header>
+
+<nav>
+<h2>Plan rapide</h2>
+<ol>
+  <li><a href="#xlr">Récessif lié à l’X</a></li>
+  <li><a href="#xld">Dominant lié à l’X</a></li>
+  <li><a href="#inactivation">Inactivation de l’X</a></li>
+  <li><a href="#exceptions">Létalité / hétérozygotes</a></li>
+  <li><a href="#y">Transmission liée au Y</a></li>
+  <li><a href="#hemophilie">Hémophilie A</a></li>
+  <li><a href="#duchenne">Duchenne</a></li>
+  <li><a href="#becker">Becker & cadre de lecture</a></li>
+  <li><a href="#femmes-dmd">Femmes conductrices DMD</a></li>
+  <li><a href="#hypophos">Hypophosphatémie liée à l’X</a></li>
+  <li><a href="#ip">Incontinentia Pigmenti</a></li>
+  <li><a href="#pcdh19">PCDH19</a></li>
+  <li><a href="#expansions">Maladies par expansion</a></li>
+  <li><a href="#regles-exp">Règles des mutations dynamiques</a></li>
+  <li><a href="#xfragile">Syndrome de l’X fragile</a></li>
+  <li><a href="#sherman">Paradoxe de Sherman</a></li>
+  <li><a href="#fmr1">Seuils FMR1</a></li>
+  <li><a href="#fxtas">FXTAS</a></li>
+  <li><a href="#fxpoi">FXPOI</a></li>
+  <li><a href="#comparatif">Tableaux comparatifs</a></li>
+  <li><a href="#pieges">Pièges / incohérences</a></li>
+  <li><a href="#flashcards">Flashcards</a></li>
+</ol>
+</nav>
+
+<section id="xlr">
+<h2>1. Transmission récessive liée à l’X</h2>
+<ul>
+  <li>L’allèle pathogène se comporte comme un caractère <strong>récessif</strong>.</li>
+  <li>Dans le modèle classique, les femmes hétérozygotes sont <strong>conductrices</strong> et non atteintes.</li>
+  <li>Les garçons XY sont <strong>hémizygotes</strong> : une seule copie du gène porté par X.</li>
+  <li>Les femmes avec syndrome de Turner sont également dites hémizygotes dans le cours car elles n’ont qu’un chromosome X.</li>
+  <li><strong>Aucune transmission père → fils</strong>.</li>
+</ul>
+
+<h3>Femme conductrice</h3>
+<div class="grid3">
+  <div class="card"><strong>½ des filles</strong><p>Conductrices.</p></div>
+  <div class="card"><strong>½ des fils</strong><p>Malades.</p></div>
+  <div class="card"><strong>¼ de tous les enfants</strong><p>Malades, en raisonnant sur les deux sexes.</p></div>
+</div>
+
+<h3>Homme malade</h3>
+<ul>
+  <li><strong>Aucun fils malade</strong> par transmission paternelle : il leur transmet Y.</li>
+  <li><strong>Toutes les filles reçoivent l’X muté</strong> et sont conductrices dans le modèle récessif classique.</li>
+</ul>
+<div class="callout warn"><strong>Piège QCM :</strong> dire « seules les femmes transmettent » est faux : un homme atteint transmet son allèle pathogène à toutes ses filles, même si elles ne sont pas forcément malades.</div>
+</section>
+
+<section id="xld">
+<h2>2. Transmission dominante liée à l’X</h2>
+<ul>
+  <li>L’allèle morbide se comporte comme un caractère <strong>dominant</strong>.</li>
+  <li>Il se manifeste chez les garçons hémizygotes et les filles hétérozygotes.</li>
+  <li>Les femmes sont souvent <strong>moins sévèrement atteintes</strong>.</li>
+</ul>
+<div class="grid2">
+  <div class="card"><strong>Homme malade</strong><p><strong>Toutes ses filles</strong> sont malades ; <strong>aucun fils</strong> n’est atteint par transmission paternelle.</p></div>
+  <div class="card"><strong>Femme malade</strong><p><strong>1 enfant sur 2</strong> est malade, fille ou garçon.</p></div>
+</div>
+<div class="callout orangebox"><strong>Réflexe arbre :</strong> homme atteint + toutes les filles atteintes + aucun fils atteint = signature classique d’une transmission dominante liée à l’X.</div>
+</section>
+
+<section id="inactivation">
+<h2>3. Inactivation du chromosome X</h2>
+<ul>
+  <li>Dans chaque cellule somatique féminine, un seul chromosome X reste fonctionnel pour éviter un déséquilibre de dosage génique.</li>
+  <li>L’inactivation est décrite comme <strong>aléatoire</strong> et variable selon les tissus.</li>
+  <li>Les régions pseudo-autosomiques <strong>PAR-1 et PAR-2</strong> restent actives dans le support.</li>
+  <li>La mosaïque d’inactivation explique une <strong>variabilité phénotypique</strong> entre femmes et entre tissus.</li>
+</ul>
+
+<h3>Biais d’inactivation</h3>
+<ul>
+  <li>La méthylation empêche l’expression de l’allèle concerné.</li>
+  <li>Un biais d’inactivation peut favoriser l’expression de l’allèle muté ou, au contraire, de l’allèle sain.</li>
+  <li>Cela explique que certaines femmes puissent être symptomatiques dans une maladie habituellement récessive liée à l’X.</li>
+</ul>
+<div class="callout warn"><strong>Très tombable :</strong> l’inactivation de l’X ne rend pas le phénotype homogène ; elle crée au contraire une <strong>mosaïque cellulaire</strong>.</div>
+</section>
+
+<section id="exceptions">
+<h2>4. Exceptions : létalité de l’hémizygote & atteinte restreinte aux hétérozygotes</h2>
+
+<h3>Létalité chez l’hémizygote</h3>
+<p>Dans certaines maladies dominantes liées à l’X, la mutation est tellement sévère chez le garçon hémizygote qu’elle devient <strong>létale in utero</strong>. L’arbre montre alors essentiellement des filles atteintes et des fausses couches masculines.</p>
+
+<h3>Atteinte restreinte aux hétérozygotes</h3>
+<p>Mécanisme extrêmement rare : les femmes hétérozygotes sont atteintes alors que les hommes hémizygotes sont généralement sains. L’exemple majeur du cours est <strong>PCDH19</strong>.</p>
+</section>
+
+<section id="y">
+<h2>5. Transmission liée au chromosome Y</h2>
+<div class="callout"><strong>Hérédité holandrique :</strong> caractère porté par Y et transmis uniquement aux garçons.</div>
+<ul>
+  <li>Le cours indique qu’il n’existe pas de pathologie classique reconnue par ce mécanisme, hormis la discussion de délétions de régions de Y entraînant une infertilité.</li>
+  <li>Paradoxe pratique : une infertilité est difficilement transmissible naturellement.</li>
+  <li>Une transmission peut devenir observable grâce à la <strong>procréation médicalement assistée</strong>.</li>
+</ul>
+</section>
+
+<section id="hemophilie">
+<h2>6. Hémophilie A</h2>
+<div class="callout"><strong>Cause :</strong> déficit en facteur VIII, transmission <strong>récessive liée à l’X</strong>, gène <strong>F8</strong> en <strong>Xq28</strong>.</div>
+
+<h3>Épidémiologie & sévérité</h3>
+<div class="tablewrap"><table>
+<tr><th>Forme</th><th>FVIII</th><th>Part des cas dans le support</th></tr>
+<tr><td>Légère</td><td><strong>6–30 %</strong></td><td>40 %</td></tr>
+<tr><td>Modérée</td><td><strong>2–5 %</strong></td><td>10 %</td></tr>
+<tr><td>Sévère</td><td><strong>≤ 1 %</strong></td><td>50 %</td></tr>
+</table></div>
+<ul>
+  <li>Fréquence : environ <strong>1/5000 hommes</strong>.</li>
+  <li>Deux variations importantes citées : inversion de l’<strong>intron 22</strong> et inversion de l’<strong>intron 1</strong>.</li>
+  <li><strong>50 % des formes sévères</strong> sont attribuées à l’inversion de l’intron 22.</li>
+  <li>Mécanisme : recombinaison intrachromosomique sur mésappariement → rupture du gène.</li>
+</ul>
+
+<h3>Diagnostic</h3>
+<ul>
+  <li>Le diagnostic est posé par <strong>dosage du facteur VIII</strong>, pas par test génétique seul.</li>
+  <li>L’étude génétique reste indispensable pour identifier les conductrices et orienter le traitement en fonction du variant.</li>
+</ul>
+<div class="callout warn"><strong>Piège QCM :</strong> hémophilie A ≠ gène F10 ; le cours retient <strong>F8</strong>.</div>
+</section>
+
+<section id="duchenne">
+<h2>7. Dystrophie musculaire de Duchenne (DMD)</h2>
+<ul>
+  <li>Dystrophie musculaire progressive de l’enfant.</li>
+  <li>Début dès les premiers pas.</li>
+  <li>Perte de la marche vers <strong>12 ans</strong> dans le support.</li>
+  <li>Déficit musculaire d’abord <strong>proximal</strong>, puis généralisé.</li>
+  <li>Amyotrophie ± pseudohypertrophie des mollets, reliée dans le cours à une inflammation/œdème initial.</li>
+  <li>Macroglossie.</li>
+  <li>Hyperlordose lombaire.</li>
+  <li>Atteinte cardiaque souvent responsable du décès.</li>
+  <li>Atteinte cognitive dans environ <strong>50 %</strong> des cas.</li>
+  <li>CPK <strong>&gt; 10 N</strong>.</li>
+  <li>Biopsie musculaire de type dystrophique.</li>
+</ul>
+
+<h3>Base moléculaire</h3>
+<ul>
+  <li>Le schéma du support présente le gène de la dystrophine avec <strong>79 exons</strong>.</li>
+  <li>Le résumé du cours insiste sur des <strong>grands réarrangements</strong> du gène DMD.</li>
+  <li>Dans Duchenne, le cadre de lecture est rompu → pas de dystrophine fonctionnelle produite dans le modèle enseigné.</li>
+  <li>Environ <strong>1/3 de néomutations</strong> dans le résumé du cours.</li>
+</ul>
+</section>
+
+<section id="becker">
+<h2>8. Becker & théorie du cadre de lecture</h2>
+<h3>Dystrophie musculaire de Becker</h3>
+<ul>
+  <li>Faiblesse musculaire symétrique progressive, proximale &gt; distale.</li>
+  <li>Hypertrophie des mollets fréquente.</li>
+  <li>Crampes à l’activité possibles.</li>
+  <li>Atteinte cardiaque.</li>
+  <li>Moins sévère que Duchenne.</li>
+  <li>Fauteuil roulant généralement <strong>après 16 ans</strong> ; certains restent mobiles dans la trentaine voire plus.</li>
+  <li>Atteinte cognitive moins fréquente et moins sévère.</li>
+  <li>CPK <strong>&gt; 5 N</strong>.</li>
+  <li>Cardiomyopathie dilatée parfois isolée.</li>
+</ul>
+
+<h3>Règle du cadre de lecture</h3>
+<div class="schema">Délétion multiple de 3
+→ cadre de lecture conservé
+→ traduction se poursuit
+→ dystrophine incomplète / tronquée mais produite
+→ phénotype type BECKER
+
+Délétion non multiple de 3
+→ rupture du cadre de lecture
+→ arrêt de traduction / absence de protéine dans le modèle
+→ phénotype type DUCHENNE</div>
+
+<h3>Saut d’exon</h3>
+<p>Le support décrit des thérapeutiques visant à <strong>forcer l’épissage</strong> pour sauter un exon et restaurer le cadre de lecture : l’objectif est de transformer un phénotype Duchenne en phénotype plus proche de Becker, sans prétendre guérir totalement.</p>
+</section>
+
+<section id="femmes-dmd">
+<h2>9. Femmes conductrices de DMD</h2>
+<ul>
+  <li>Phénotype très hétérogène : asymptomatique → authentique tableau DMD.</li>
+  <li><strong>5 à 22 %</strong> des femmes conductrices sont symptomatiques selon les études citées.</li>
+  <li>Atteinte musculaire, cardiaque et/ou cognitive possible.</li>
+  <li>Surveillance cardiaque après <strong>40 ans</strong> chez les conductrices asymptomatiques dans le support.</li>
+</ul>
+</section>
+
+<section id="hypophos">
+<h2>10. Hypophosphatémie liée à l’X</h2>
+<div class="callout"><strong>Transmission :</strong> dominante liée à l’X. Autre nom du support : <strong>rachitisme vitamine D-résistant</strong>.</div>
+<ul>
+  <li>Forme la plus fréquente d’hypophosphatémie héréditaire.</li>
+  <li>Atteinte osseuse, dentaire et musculaire.</li>
+  <li>Rachitisme.</li>
+  <li>Abcès dentaires.</li>
+  <li>Déficit musculaire.</li>
+  <li><strong>1500–2000 patients en France</strong>.</li>
+  <li>Atteinte moins sévère chez les femmes.</li>
+  <li>Variants pathogènes dans <strong>PHEX</strong> → hyperphosphaturie → hypophosphatémie.</li>
+</ul>
+</section>
+
+<section id="ip">
+<h2>11. Incontinentia Pigmenti (IP2)</h2>
+<div class="callout"><strong>Transmission :</strong> dominante liée à l’X avec <strong>létalité de l’hémizygote masculin</strong> au 1er trimestre.</div>
+<p>Le cours relie cette létalité aux antécédents de fausses couches répétées observées dans certaines familles.</p>
+
+<h3>Évolution cutanée en 4 phases</h3>
+<div class="tablewrap"><table>
+<tr><th>Phase</th><th>Moment</th><th>Lésion</th></tr>
+<tr><td>1</td><td>Premières semaines</td><td>Lésions inflammatoires <strong>bulleuses</strong>, non généralisées, suivant les <strong>lignes de Blaschko</strong>.</td></tr>
+<tr><td>2</td><td><strong>2–6 semaines</strong></td><td>Lésions <strong>verruqueuses</strong> au même endroit.</td></tr>
+<tr><td>3</td><td>Phase ultérieure</td><td>Lésions <strong>hyperpigmentées</strong>, réticulées.</td></tr>
+<tr><td>4</td><td>Dernière phase</td><td>Lésions <strong>hypopigmentées</strong>.</td></tr>
+</table></div>
+
+<h3>Atteintes associées</h3>
+<ul>
+  <li>Ongles dysplasiques / malformés.</li>
+  <li>Anomalies dentaires de forme et d’implantation.</li>
+  <li>Anomalies ophtalmologiques → <strong>fond d’œil systématique</strong>.</li>
+  <li>Atteinte neurologique : développement intellectuel / épilepsie.</li>
+  <li>Atteintes squelettiques : syndactylie, hypoplasie ou absence de phalanges.</li>
+</ul>
+
+<h3>Génétique</h3>
+<ul>
+  <li>Gène <strong>IKBKG</strong>.</li>
+  <li>Variant récurrent : délétion de <strong>11,7 kb</strong> englobant les exons <strong>4 à 10</strong>.</li>
+  <li><strong>50 % de néomutations</strong>.</li>
+</ul>
+</section>
+
+<section id="pcdh19">
+<h2>12. Encéphalopathie épileptique liée à PCDH19</h2>
+<div class="callout"><strong>Paradoxe :</strong> maladie dominante liée à l’X touchant surtout les <strong>hétérozygotes</strong> ; les hommes hémizygotes sont généralement sains.</div>
+
+<h3>Clinique</h3>
+<ul>
+  <li>Épilepsie débutant dans les premières années.</li>
+  <li>Crises précoces, récurrentes, réfractaires.</li>
+  <li>Fréquence des crises diminuant avec l’âge.</li>
+  <li>Retard du développement et déficience intellectuelle dans la quasi-totalité des cas selon la correction QCM.</li>
+</ul>
+
+<h3>Garçons exceptionnellement atteints</h3>
+<ol>
+  <li>Klinefelter avec deux chromosomes X.</li>
+  <li>Mosaïsme post-zygotique : coexistence de cellules saines et mutées.</li>
+</ol>
+
+<h3>Interférence cellulaire</h3>
+<div class="schema">PCDH19 → protocadhérine 19 → adhésion neuronale / connexions
+
+Femme hétérozygote
+→ inactivation aléatoire de X
+→ mosaïque de neurones normaux + mutés
+→ protéines d’adhésion différentes
+→ mauvaise connexion entre populations neuronales
+→ désorganisation cérébrale
+→ épilepsie</div>
+<div class="callout orangebox"><strong>Pourquoi l’homme hémizygote peut être sain ?</strong> Dans le modèle du cours, tous ses neurones sont homogènes pour le même état ; c’est la coexistence de deux populations cellulaires différentes qui crée le problème.</div>
+</section>
+
+<section id="expansions">
+<h2>13. Maladies par expansion / mutations dynamiques</h2>
+<div class="callout"><strong>Expansion :</strong> augmentation du nombre de répétitions d’un motif génétique au-delà d’un certain seuil, pouvant faire apparaître une pathologie.</div>
+
+<h3>Classification</h3>
+<div class="tablewrap"><table>
+<tr><th>Axe</th><th>Catégories du support</th></tr>
+<tr><td>Localisation</td><td>Séquence codante ; région 5’ non traduite ; région 3’ non traduite.</td></tr>
+<tr><td>Stabilité</td><td>Stable ou instable.</td></tr>
+<tr><td>Effet fonctionnel</td><td>Perte de fonction ; gain de propriété toxique de la protéine ou de l’ARN.</td></tr>
+<tr><td>Transmission</td><td>Liée à l’X ; autosomique dominante ; autosomique récessive.</td></tr>
+</table></div>
+
+<h3>Exemples de motifs</h3>
+<div class="tablewrap"><table>
+<tr><th>Taille</th><th>Motif</th><th>Gène / maladie dans le support</th></tr>
+<tr><td>Triplet</td><td><strong>CGG</strong></td><td>FMR1, syndrome de l’X fragile.</td></tr>
+<tr><td>Quadruplé</td><td><strong>CCTG</strong></td><td>ZNF9, dystrophie myotonique type 2.</td></tr>
+<tr><td>Quintuplé</td><td><strong>ATTCT</strong></td><td>« E46L », SCA10 dans le ronéo.</td></tr>
+<tr><td>12 pb</td><td><strong>CCCCGCCCCGCG</strong></td><td>CSTB, épilepsie myoclonique d’Unverricht-Lundborg.</td></tr>
+</table></div>
+</section>
+
+<section id="regles-exp">
+<h2>14. Les 4 règles des maladies par amplification</h2>
+<ol>
+  <li><strong>Seuil :</strong> le nombre de répétitions est polymorphe en population générale ; sous le seuil pathologique, la transmission reste stable.</li>
+  <li><strong>Amplification / instabilité :</strong> au-delà du seuil, le nombre de répétitions augmente au fil des générations, notamment lors de la réplication préméiotique.</li>
+  <li><strong>Prémutation vs mutation complète :</strong> la prémutation dépasse le seuil de stabilité mais ne donne pas encore le phénotype classique ; la mutation complète franchit le seuil supérieur pathologique.</li>
+  <li><strong>Anticipation :</strong> tendance à une apparition plus précoce et une sévérité plus importante au fil des générations.</li>
+</ol>
+<div class="callout warn"><strong>Très tombable :</strong> anticipation ≠ capacité à prédire exactement le nombre de répétitions chez le nouveau-né.</div>
+
+<h3>Pathogénicité</h3>
+<ul>
+  <li>Expansion codante : effet qualitatif, motifs polyGlu/polyAla dans le support, souvent gain de fonction toxique.</li>
+  <li>Expansion non codante : effet quantitatif, perte de fonction possible.</li>
+  <li>Effet direct en cis : baisse de transcription → déficit protéique.</li>
+  <li>Effet indirect en trans : perturbation de la régulation d’autres gènes.</li>
+</ul>
+</section>
+
+<section id="xfragile">
+<h2>15. Syndrome de l’X fragile — à connaître pour les EDN</h2>
+<div class="callout"><strong>Le support le présente comme la cause la plus fréquente de déficience intellectuelle héréditaire connue.</strong></div>
+
+<h3>Épidémiologie</h3>
+<ul>
+  <li>Garçons : environ <strong>1/4000</strong>.</li>
+  <li>Filles : environ <strong>1/8000</strong>.</li>
+</ul>
+
+<h3>Triade de Martin-Bell</h3>
+<ol>
+  <li>Déficience intellectuelle.</li>
+  <li>Dysmorphie faciale : visage allongé, grand menton, grandes oreilles décollées, surtout avec l’âge.</li>
+  <li><strong>Macroorchidie</strong> après la puberté.</li>
+</ol>
+
+<h3>Chez le garçon</h3>
+<ul>
+  <li>Retard psychomoteur.</li>
+  <li>Déficience intellectuelle constante, souvent modérée.</li>
+  <li>Retard de langage important, vocabulaire pauvre, écholalies.</li>
+  <li>Retard moteur modéré.</li>
+  <li>Épilepsie <strong>20 %</strong> : présente sur le diapo mais indiquée « non-dit ».</li>
+  <li>Agitation, anxiété, parfois traits autistiques.</li>
+  <li>Troubles constants de la communication avec évitement du regard.</li>
+  <li>Macrocrânie.</li>
+  <li>Strabisme : non-dit mais sur diapo.</li>
+  <li>Hyperlaxité articulaire.</li>
+  <li>Prolapsus de valve mitrale.</li>
+  <li>RGO.</li>
+</ul>
+
+<h3>Chez la fille</h3>
+<ul>
+  <li>Phénotype beaucoup moins sévère.</li>
+  <li>Déficience intellectuelle dans environ <strong>50 %</strong> des cas.</li>
+  <li>Troubles des apprentissages / langage.</li>
+  <li>Timidité, anxiété.</li>
+  <li>Dysmorphie faciale atténuée.</li>
+</ul>
+
+<h3>Base moléculaire</h3>
+<ul>
+  <li>Gène <strong>FMR1</strong>, <strong>17 exons</strong>.</li>
+  <li>Code FMRP, régulant d’autres gènes impliqués dans la croissance des circuits neuronaux.</li>
+  <li>Motif répété : <strong>CGG</strong> en région <strong>5’ non traduite</strong>.</li>
+  <li>Site fragile historique : <strong>FRAXA</strong>.</li>
+</ul>
+</section>
+
+<section id="sherman">
+<h2>16. Paradoxe de Sherman</h2>
+<p>L’arbre généalogique montre que le risque de déficience intellectuelle augmente au fil des générations.</p>
+<div class="schema">Homme transmetteur sain avec prémutation
+→ transmet son X prémuté à ses filles
+→ chez une fille, expansion possible lors de la méiose féminine
+→ mutation complète
+→ enfant atteint
+
+Donc :
+hommes sains peuvent sembler "transmettre" une maladie liée à l’X
+sans être eux-mêmes atteints du syndrome classique.</div>
+<div class="callout warn"><strong>Particularité capitale :</strong> le passage <strong>prémutation → mutation complète</strong> se fait uniquement lors de la <strong>méiose féminine</strong> dans le support.</div>
+</section>
+
+<section id="fmr1">
+<h2>17. FMR1 : seuils CGG et mécanismes</h2>
+<div class="tablewrap"><table>
+<tr><th>État</th><th>Répétitions CGG</th><th>Mécanisme / phénotype du cours</th></tr>
+<tr><td>Allèle normal</td><td><strong>5–55</strong></td><td>Transcription/traduction normales.</td></tr>
+<tr><td>Prémutation</td><td><strong>56–200</strong></td><td>ARN anormal à effet toxique → FXTAS / FXPOI possibles.</td></tr>
+<tr><td>Mutation complète</td><td><strong>&gt; 200</strong></td><td>Méthylation du promoteur → blocage transcription/traduction → perte de fonction → syndrome de l’X fragile.</td></tr>
+</table></div>
+<div class="callout orangebox"><strong>Ne pas mélanger :</strong> prémutation et mutation complète n’ont pas le même mécanisme ni les mêmes manifestations cliniques.</div>
+</section>
+
+<section id="fxtas">
+<h2>18. FXTAS</h2>
+<p><strong>Fragile X-associated Tremor/Ataxia Syndrome</strong> : manifestation de prémutation FMR1.</p>
+<ul>
+  <li>Ataxie cérébelleuse.</li>
+  <li>Tremblement d’action.</li>
+  <li>Apparition tardive et progressive chez le sujet âgé.</li>
+  <li>Possibles troubles cognitifs / démence.</li>
+</ul>
+
+<h3>Pénétrance liée à l’âge</h3>
+<ul>
+  <li>Hommes symptomatiques : <strong>17 % entre 50–59 ans</strong>.</li>
+  <li><strong>75 % après 80 ans</strong>.</li>
+  <li>Représente <strong>2–4 %</strong> des ataxies cérébelleuses chez l’homme dans le support.</li>
+  <li>Touche aussi <strong>8–16 %</strong> des femmes porteuses de la prémutation.</li>
+</ul>
+
+<div class="callout bluebox"><strong>IRM :</strong> hypersignaux T2 des <strong>pédoncules cérébelleux moyens</strong>.</div>
+<p>Le cours insiste sur le profil familial classique : grand-père d’un enfant atteint d’X fragile présentant une symptomatologie neurologique tardive.</p>
+</section>
+
+<section id="fxpoi">
+<h2>19. FXPOI / POF</h2>
+<p><strong>Premature Ovarian Failure / insuffisance ovarienne précoce</strong>, manifestation féminine de prémutation FMR1.</p>
+<ul>
+  <li>Environ <strong>20 %</strong> des femmes porteuses d’une prémutation développent une ménopause précoce avant <strong>40 ans</strong>.</li>
+  <li>Le support indique qu’environ <strong>1 femme sur 7</strong> ayant une ménopause précoce est porteuse d’une prémutation FMR1.</li>
+  <li>L’exploration de <strong>FMR1</strong> est présentée comme systématique devant une insuffisance ovarienne précoce.</li>
+</ul>
+<div class="callout purplebox"><strong>Poids familial :</strong> dans une même famille, on peut retrouver un enfant avec X fragile, une mère avec insuffisance ovarienne précoce et un grand-père avec FXTAS.</div>
+</section>
+
+<section id="comparatif">
+<h2>20. Tableaux comparatifs de synthèse</h2>
+
+<h3>Récessif vs dominant lié à l’X</h3>
+<div class="tablewrap"><table>
+<tr><th>Critère</th><th>Récessif lié à l’X</th><th>Dominant lié à l’X</th></tr>
+<tr><td>Garçons</td><td>Souvent atteints car hémizygotes</td><td>Atteints si l’allèle pathogène est viable</td></tr>
+<tr><td>Femmes</td><td>Souvent conductrices ; exceptions possibles</td><td>Atteintes, souvent moins sévères</td></tr>
+<tr><td>Père → fils</td><td>Jamais</td><td>Jamais</td></tr>
+<tr><td>Père atteint → filles</td><td>Toutes reçoivent l’allèle, généralement conductrices</td><td>Toutes atteintes</td></tr>
+<tr><td>Mère hétérozygote → fils</td><td>½ malades</td><td>½ malades</td></tr>
+<tr><td>Mère hétérozygote → filles</td><td>½ conductrices</td><td>½ malades</td></tr>
+</table></div>
+
+<h3>Maladies majeures du cours</h3>
+<div class="tablewrap"><table>
+<tr><th>Maladie</th><th>Transmission / mécanisme</th><th>Gène</th><th>Point QCM</th></tr>
+<tr><td>Hémophilie A</td><td>Récessive liée à l’X</td><td>F8</td><td>FVIII ; intron 22 = 50 % formes sévères.</td></tr>
+<tr><td>Duchenne</td><td>Récessive liée à l’X</td><td>DMD</td><td>Cadre rompu, CPK &gt;10N, perte marche ~12 ans.</td></tr>
+<tr><td>Becker</td><td>Récessive liée à l’X</td><td>DMD</td><td>Cadre respecté, dystrophine incomplète, CPK &gt;5N.</td></tr>
+<tr><td>Hypophosphatémie liée à l’X</td><td>Dominante liée à l’X</td><td>PHEX</td><td>Hyperphosphaturie → hypophosphatémie.</td></tr>
+<tr><td>Incontinentia Pigmenti</td><td>Dominante liée à l’X, létalité masculine</td><td>IKBKG</td><td>4 phases cutanées, 50 % néomutations.</td></tr>
+<tr><td>Encéphalopathie PCDH19</td><td>Dominante liée à l’X, hétérozygotes atteintes</td><td>PCDH19</td><td>Interférence cellulaire / mosaïque neuronale.</td></tr>
+<tr><td>X fragile</td><td>Expansion liée à l’X</td><td>FMR1</td><td>CGG 5’ UTR, &gt;200 = mutation complète.</td></tr>
+</table></div>
+</section>
+
+<section id="pieges">
+<h2>21. Pièges et incohérences internes du support</h2>
+
+<div class="callout warn"><strong>1. Klinefelter :</strong> le texte cite « 48, XXY ou 47, XXY ». Ces deux écritures ne sont pas cohérentes entre elles ; la fiche conserve uniquement l’idée utile du cours : <strong>présence de deux chromosomes X</strong> permettant exceptionnellement l’atteinte masculine dans PCDH19.</div>
+
+<div class="callout warn"><strong>2. Maladies par expansion :</strong> la page 16 cite la « dystrophie de Duchenne » comme exemple d’expansion en région 3’ non traduite, alors que le reste du cours traite DMD comme une maladie de grands réarrangements/délétions avec théorie du cadre de lecture. Contradiction interne à ne pas fusionner.</div>
+
+<div class="callout warn"><strong>3. SCA10 :</strong> le ronéo attribue le motif ATTCT à un gène noté « E46L ». Cette dénomination est conservée telle quelle comme donnée du support, sans correction externe.</div>
+
+<div class="callout warn"><strong>4. “Prémunition” :</strong> la page 21 utilise ce mot à la place de <strong>prémutation</strong> dans la partie FMR1. Le contexte et le corrigé QCM emploient bien la notion de prémutation.</div>
+
+<div class="callout warn"><strong>5. DMD / protéines tronquées :</strong> le texte page 9 dit qu’une délétion non multiple de 3 stoppe la traduction et « on ne retrouve aucune protéine », tandis que la page 11 parle d’une protéine « plus tronquée » dans Duchenne. Les deux formulations apparaissent dans le support ; retenir surtout le couple QCM <strong>cadre rompu = Duchenne / cadre respecté = Becker</strong>.</div>
+
+<div class="callout warn"><strong>6. Hémophilie A, correction “AD” :</strong> dans le corrigé QCM, « AD » désigne les réponses A et D, pas une transmission autosomique dominante. L’hémophilie A reste récessive liée à l’X dans tout le cours.</div>
+
+<div class="callout warn"><strong>7. Inactivation de l’X :</strong> le cours emploie parfois des formulations maladroites comme « un seul allèle chromosomique fonctionnel ». La notion structurante est l’inactivation aléatoire d’un des deux <strong>chromosomes X</strong>, avec mosaïque tissulaire.</div>
+</section>
+
+<section id="flashcards">
+<h2>22. Flashcards express</h2>
+<div class="flashgrid">
+<div class="flash"><div class="q">1. Récessif lié à l’X : père → fils ?</div><div class="a">Jamais.</div></div>
+<div class="flash"><div class="q">2. Femme conductrice : fils malade ?</div><div class="a">1/2 des fils.</div></div>
+<div class="flash"><div class="q">3. Femme conductrice : enfant malade tous sexes ?</div><div class="a">1/4.</div></div>
+<div class="flash"><div class="q">4. Homme malade X-récessif : filles ?</div><div class="a">Toutes reçoivent l’X muté, donc conductrices dans le modèle classique.</div></div>
+<div class="flash"><div class="q">5. Homme malade X-dominant : filles ?</div><div class="a">Toutes atteintes.</div></div>
+<div class="flash"><div class="q">6. Homme malade X-dominant : fils ?</div><div class="a">Aucun.</div></div>
+<div class="flash"><div class="q">7. Régions échappant à l’inactivation X ?</div><div class="a">PAR-1 et PAR-2 dans le cours.</div></div>
+<div class="flash"><div class="q">8. Inactivation X = phénotype homogène ?</div><div class="a">Non, mosaïque et variabilité tissulaire.</div></div>
+<div class="flash"><div class="q">9. Hérédité liée à Y ?</div><div class="a">Holandrique.</div></div>
+<div class="flash"><div class="q">10. Hémophilie A : facteur ?</div><div class="a">Facteur VIII.</div></div>
+<div class="flash"><div class="q">11. Hémophilie A : gène ?</div><div class="a">F8, Xq28.</div></div>
+<div class="flash"><div class="q">12. Hémophilie sévère ?</div><div class="a">FVIII ≤1 %.</div></div>
+<div class="flash"><div class="q">13. Intron 22 ?</div><div class="a">≈50 % des formes sévères d’hémophilie A.</div></div>
+<div class="flash"><div class="q">14. Diagnostic hémophilie A ?</div><div class="a">Dosage du FVIII.</div></div>
+<div class="flash"><div class="q">15. DMD : perte de marche ?</div><div class="a">Vers 12 ans dans le support.</div></div>
+<div class="flash"><div class="q">16. DMD : CPK ?</div><div class="a">&gt;10N.</div></div>
+<div class="flash"><div class="q">17. Becker : CPK ?</div><div class="a">&gt;5N.</div></div>
+<div class="flash"><div class="q">18. DMD : cadre de lecture ?</div><div class="a">Rompu.</div></div>
+<div class="flash"><div class="q">19. Becker : cadre ?</div><div class="a">Respecté.</div></div>
+<div class="flash"><div class="q">20. Délétion multiple de 3 ?</div><div class="a">Cadre conservé → phénotype type Becker.</div></div>
+<div class="flash"><div class="q">21. Saut d’exon ?</div><div class="a">Restaurer le cadre de lecture pour obtenir un phénotype plus proche de Becker.</div></div>
+<div class="flash"><div class="q">22. Femmes conductrices DMD symptomatiques ?</div><div class="a">5–22 %.</div></div>
+<div class="flash"><div class="q">23. Hypophosphatémie liée à X : gène ?</div><div class="a">PHEX.</div></div>
+<div class="flash"><div class="q">24. PHEX : conséquence ?</div><div class="a">Hyperphosphaturie → hypophosphatémie.</div></div>
+<div class="flash"><div class="q">25. Incontinentia Pigmenti : transmission ?</div><div class="a">Dominante liée à l’X avec létalité des garçons hémizygotes.</div></div>
+<div class="flash"><div class="q">26. IP : phase 1 ?</div><div class="a">Bulles inflammatoires suivant les lignes de Blaschko.</div></div>
+<div class="flash"><div class="q">27. IP : phase 2 ?</div><div class="a">Verruqueuse à 2–6 semaines.</div></div>
+<div class="flash"><div class="q">28. IP : phase 3 / 4 ?</div><div class="a">Hyperpigmentée puis hypopigmentée.</div></div>
+<div class="flash"><div class="q">29. IP : gène ?</div><div class="a">IKBKG.</div></div>
+<div class="flash"><div class="q">30. IP : délétion fréquente ?</div><div class="a">11,7 kb, exons 4 à 10.</div></div>
+<div class="flash"><div class="q">31. IP : néomutations ?</div><div class="a">50 %.</div></div>
+<div class="flash"><div class="q">32. PCDH19 : qui est typiquement atteint ?</div><div class="a">Femmes hétérozygotes.</div></div>
+<div class="flash"><div class="q">33. PCDH19 : mécanisme ?</div><div class="a">Interférence cellulaire liée à la mosaïque neuronale.</div></div>
+<div class="flash"><div class="q">34. Garçons PCDH19 atteints ?</div><div class="a">Klinefelter à deux X ou mosaïsme post-zygotique.</div></div>
+<div class="flash"><div class="q">35. Expansion : prémutation ?</div><div class="a">Au-dessus du seuil de stabilité, sans phénotype classique complet.</div></div>
+<div class="flash"><div class="q">36. Anticipation ?</div><div class="a">Symptômes plus précoces et plus sévères au fil des générations.</div></div>
+<div class="flash"><div class="q">37. X fragile : motif ?</div><div class="a">CGG.</div></div>
+<div class="flash"><div class="q">38. X fragile : gène ?</div><div class="a">FMR1.</div></div>
+<div class="flash"><div class="q">39. X fragile : région ?</div><div class="a">5’ non traduite.</div></div>
+<div class="flash"><div class="q">40. FMR1 normal ?</div><div class="a">5–55 CGG.</div></div>
+<div class="flash"><div class="q">41. FMR1 prémutation ?</div><div class="a">56–200 CGG.</div></div>
+<div class="flash"><div class="q">42. FMR1 mutation complète ?</div><div class="a">&gt;200 CGG.</div></div>
+<div class="flash"><div class="q">43. Mutation complète FMR1 : mécanisme ?</div><div class="a">Méthylation du promoteur → perte de fonction.</div></div>
+<div class="flash"><div class="q">44. Prémutation FMR1 : mécanisme ?</div><div class="a">ARN toxique / gain de fonction dans le support.</div></div>
+<div class="flash"><div class="q">45. Triade Martin-Bell ?</div><div class="a">Déficience intellectuelle + dysmorphie faciale + macroorchidie.</div></div>
+<div class="flash"><div class="q">46. X fragile garçons / filles ?</div><div class="a">≈1/4000 vs 1/8000.</div></div>
+<div class="flash"><div class="q">47. Passage prémutation → mutation complète ?</div><div class="a">Uniquement lors de la méiose féminine dans le cours.</div></div>
+<div class="flash"><div class="q">48. FXTAS ?</div><div class="a">Ataxie cérébelleuse + tremblement d’action tardif.</div></div>
+<div class="flash"><div class="q">49. FXTAS IRM ?</div><div class="a">Hypersignaux T2 des pédoncules cérébelleux moyens.</div></div>
+<div class="flash"><div class="q">50. FXPOI ?</div><div class="a">Insuffisance ovarienne précoce chez femmes porteuses de prémutation.</div></div>
+<div class="flash"><div class="q">51. FXPOI chez porteuses ?</div><div class="a">≈20 % avant 40 ans dans le support.</div></div>
+<div class="flash"><div class="q">52. Famille X fragile : trio typique ?</div><div class="a">Enfant X fragile + mère FXPOI potentielle + grand-père FXTAS potentiel.</div></div>
+</div>
+</section>
+
+<section class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>Récessif lié à l’X :</strong> garçons hémizygotes atteints, femmes conductrices, jamais père→fils ; mère conductrice = ½ fils malades et ½ filles conductrices. <strong>Dominant lié à l’X :</strong> père atteint → toutes les filles atteintes, aucun fils ; mère atteinte → 1/2 de chaque sexe. L’inactivation aléatoire de X crée une <strong>mosaïque</strong> et explique des femmes symptomatiques. Hémophilie A = <strong>F8/FVIII</strong>, intron 22 dans 50 % des formes sévères. Duchenne = cadre rompu, CPK &gt;10N, perte marche ~12 ans ; Becker = cadre conservé, protéine incomplète, CPK &gt;5N. IP = <strong>IKBKG</strong>, garçons non viables, 4 phases cutanées. PCDH19 = atteinte des hétérozygotes par <strong>interférence cellulaire</strong>. Maladies par expansion : seuil + instabilité + prémutation + anticipation. X fragile = <strong>FMR1, CGG 5’ UTR</strong> : 5–55 normal, 56–200 prémutation, &gt;200 mutation complète avec méthylation. Prémutation → <strong>FXTAS / FXPOI</strong> ; passage à mutation complète uniquement en <strong>méiose féminine</strong> dans le cours.</p>
+</section>
+
+<section>
+<h2>Source</h2>
+<p class="small">Fiche construite uniquement à partir du PDF « 5 - HÉRÉDITÉ MENDÉLIENNE LIÉE À L'X.pdf » fourni par l’utilisateur. Les chiffres, exemples, formulations, schémas et incohérences signalées proviennent du support ; aucun complément externe n’a été ajouté.</p>
+</section>
+
+</main></body></html>

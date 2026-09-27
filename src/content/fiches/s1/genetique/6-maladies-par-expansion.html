@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche - Maladies par expansion</title>
+<style>
+:root{
+  --g:#1a7a4a;--gs:#eaf7ef;--r:#dc2626;--rs:#fee2e2;--o:#d97706;--os:#fff7ed;
+  --b:#2563eb;--bs:#eff6ff;--p:#6d28d9;--ps:#f2ecff;--ink:#1c1c2e;--line:#d8dce8;
+  --bg:#f6f7fb;--teal:#0f766e;--teals:#ecfeff;--slate:#111827;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}
+.page{max-width:1160px;margin:auto;padding:32px 18px 64px}
+.hero{background:linear-gradient(135deg,#fff 0%,#f0fdf4 58%,#ecfeff 100%);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 40px rgba(27,38,49,.06)}
+.kicker{color:var(--g);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px}
+h1{font-size:38px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}
+.subtitle{max-width:1000px;margin:0;color:#374151}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;font-size:13px}
+.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:12px;font-weight:800;padding:4px 9px;border-radius:999px}
+.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.green{background:var(--gs);color:#166534}.purple{background:var(--ps);color:#4c1d95}.blue{background:var(--bs);color:#1d4ed8}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}
+nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}
+nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav a{color:var(--ink);text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(27,38,49,.035)}
+h2{font-size:25px;margin:0 0 16px;letter-spacing:-.02em}
+h3{font-size:18px;margin:22px 0 10px;color:var(--g)}
+p{margin:8px 0}ul,ol{margin:8px 0 12px;padding-left:22px}li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}
+.warn{border-left-color:var(--r);background:var(--rs)}
+.orangebox{border-left-color:var(--o);background:var(--os)}
+.bluebox{border-left-color:var(--b);background:var(--bs)}
+.purplebox{border-left-color:var(--p);background:var(--ps)}
+.tealbox{border-left-color:var(--teal);background:var(--teals)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:#374151;overflow-x:auto;white-space:pre-wrap}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px;min-width:700px}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}
+th{background:#f3f4f6;text-align:left;color:#111827}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.flash .q{background:#f9fafb;padding:10px 12px;font-weight:800;border-bottom:1px solid var(--line)}
+.flash .a{padding:10px 12px;color:#374151}
+.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+.small{font-size:12.5px;color:#4b5563}
+@media(max-width:780px){
+  h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}
+  nav ol{columns:1}section,.hero{padding:18px}
+  table{font-size:12.5px;min-width:600px}
+}
+@media print{
+  body{background:#fff}.page{max-width:none;padding:0}
+  nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body><main class="page">
+
+<header class="hero">
+  <div class="kicker">UE05 — Génétique</div>
+  <h1>Maladies par expansion</h1>
+  <p class="subtitle">Fiche D1/externat orientée QCM : dystrophie myotonique de Steinert (DM1), Huntington, ataxies cérébelleuses dominantes, Friedreich, expansions poly-alanine, dystrophie musculaire oculopharyngée, DM2, maladie d’Unverricht-Lundborg et anticipation dans les téloméropathies.</p>
+  <div class="tags">
+    <span class="tag red">🔴 Seuils de répétitions</span>
+    <span class="tag orange">🟠 Anticipation / instabilité</span>
+    <span class="tag green">🟢 DM1 + Huntington</span>
+    <span class="tag purple">🧠 QCM EDN</span>
+    <span class="tag blue">🧬 Mécanismes moléculaires</span>
+  </div>
+  <div class="actions">
+    <button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+    <button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+  </div>
+</header>
+
+<nav>
+<h2>Plan rapide</h2>
+<ol>
+  <li><a href="#principes">Principes des expansions</a></li>
+  <li><a href="#dm1">DM1 / Steinert</a></li>
+  <li><a href="#dm1-seuils">DM1 : seuils & anticipation</a></li>
+  <li><a href="#dm1-formes">DM1 : 4 formes cliniques</a></li>
+  <li><a href="#dm1-congenitale">Forme congénitale</a></li>
+  <li><a href="#dm1-classique">Formes infantile / classique / paucisymptomatique</a></li>
+  <li><a href="#huntington">Huntington</a></li>
+  <li><a href="#scad">Ataxies cérébelleuses dominantes</a></li>
+  <li><a href="#friedreich">Ataxie de Friedreich</a></li>
+  <li><a href="#polyala">Expansions poly-alanine</a></li>
+  <li><a href="#opmd">Dystrophie oculopharyngée</a></li>
+  <li><a href="#dm2">Dystrophie myotonique type 2</a></li>
+  <li><a href="#ul">Unverricht-Lundborg</a></li>
+  <li><a href="#comparatif">Tableau comparatif global</a></li>
+  <li><a href="#anticipation">Anticipation & téloméropathies</a></li>
+  <li><a href="#qcm">Pièges QCM du support</a></li>
+  <li><a href="#incoherences">Incohérences / points à surveiller</a></li>
+  <li><a href="#flashcards">Flashcards</a></li>
+</ol>
+</nav>
+
+<section id="principes">
+<h2>1. Principes généraux des maladies par expansion</h2>
+<div class="callout"><strong>Expansion :</strong> augmentation du nombre de répétitions d’un motif nucléotidique. Le caractère pathogène dépend du motif, du nombre de répétitions et de la localisation génomique.</div>
+
+<div class="tablewrap"><table>
+<tr><th>Caractéristique</th><th>Possibilités dans le cours</th><th>Conséquence</th></tr>
+<tr><td>Localisation</td><td>Séquence codante ou non codante</td><td>Peut modifier une protéine ou la quantité/fonction d’un ARN</td></tr>
+<tr><td>Stabilité</td><td>Stable ou instable</td><td>Une expansion instable peut augmenter au fil des générations</td></tr>
+<tr><td>Anticipation</td><td>Présente dans certaines maladies</td><td>Début plus précoce et/ou maladie plus sévère au fil des générations</td></tr>
+<tr><td>Mécanisme</td><td>Gain de fonction toxique, perte de fonction, effet transdominant</td><td>Variable selon la maladie</td></tr>
+</table></div>
+
+<div class="callout orangebox"><strong>À retenir :</strong> « expansion » ne veut pas automatiquement dire « instable » ni « anticipation ». Friedreich et les expansions poly-alanine sont explicitement décrites comme <strong>stables</strong> dans le support.</div>
+</section>
+
+<section id="dm1">
+<h2>2. Dystrophie myotonique de Steinert / DM1</h2>
+<ul>
+  <li>Maladie musculaire <strong>dystrophique et multisystémique</strong>.</li>
+  <li>Transmission <strong>autosomique dominante</strong>.</li>
+  <li>Fréquence en France : environ <strong>1/8000</strong>.</li>
+  <li>Gène : <strong>DMPK</strong>, en <strong>19q13</strong>.</li>
+  <li>DMPK code la <strong>myotonine</strong>, décrite comme une tyrosine kinase.</li>
+  <li>Mutation : expansion de triplets <strong>CTG</strong> dans la région <strong>3’ non codante</strong>.</li>
+</ul>
+
+<h3>Mécanisme physiopathologique</h3>
+<div class="schema">Expansion CTG dans DMPK
+→ ARNm anormal
+→ accumulation nucléaire
+→ agrégation avec des facteurs d’épissage
+→ altération de l’épissage alternatif de plusieurs transcrits
+→ maladie multisystémique</div>
+
+<div class="callout bluebox"><strong>Mécanisme central :</strong> <strong>gain de fonction toxique de l’ARNm</strong>, avec effet transdominant dans le cours. Les transcrits cités sur le diapo incluent notamment troponine T cardiaque, récepteur de l’insuline et canal chlore.</div>
+</section>
+
+<section id="dm1-seuils">
+<h2>3. DM1 : seuils CTG & anticipation</h2>
+<div class="tablewrap"><table>
+<tr><th>Nombre de CTG</th><th>Interprétation du support</th></tr>
+<tr><td><strong>5–35</strong></td><td>Allèle normal</td></tr>
+<tr><td><strong>36–49 environ</strong></td><td>Zone intermédiaire / prémutation déduite du texte : pas de phénotype mais instabilité possible</td></tr>
+<tr><td><strong>50–3000</strong></td><td>Intervalle symptomatique global cité</td></tr>
+</table></div>
+
+<ul>
+  <li>Plus l’expansion est grande, plus le phénotype est <strong>statistiquement sévère</strong>.</li>
+  <li>Mais on <strong>ne peut pas prédire exactement</strong> l’âge de début ni le degré de sévérité par étude moléculaire.</li>
+  <li>L’anticipation dépend de la taille initiale et du sexe du parent transmetteur.</li>
+  <li>Le support précise qu’il existe souvent au moins <strong>2 générations</strong> entre une forme paucisymptomatique et une forme congénitale.</li>
+</ul>
+
+<div class="callout warn"><strong>Piège QCM :</strong> seuil symptomatique du cours = <strong>50 CTG</strong>, pas 35. Entre normal et symptomatique, le support parle de prémutation.</div>
+</section>
+
+<section id="dm1-formes">
+<h2>4. DM1 : les 4 formes cliniques</h2>
+<div class="tablewrap"><table>
+<tr><th>Forme</th><th>Âge de début</th><th>Nombre de CTG cité</th><th>Profil</th></tr>
+<tr><td>Congénitale</td><td>In utero / naissance</td><td><strong>&gt;1000</strong></td><td>La plus sévère</td></tr>
+<tr><td>Infantile</td><td><strong>1–10 ans</strong></td><td>Non précisé</td><td>Développement / apprentissage + atteintes multisystémiques</td></tr>
+<tr><td>Classique</td><td>Adolescent / adulte</td><td><strong>100–1000</strong></td><td>Myotonie + atteinte multisystémique</td></tr>
+<tr><td>Paucisymptomatique</td><td>Sujet âgé</td><td><strong>50–150</strong></td><td>Cataracte ± très peu de signes musculaires</td></tr>
+</table></div>
+</section>
+
+<section id="dm1-congenitale">
+<h2>5. DM1 — forme congénitale</h2>
+<ul>
+  <li>Début in utero ou à la naissance.</li>
+  <li>Transmission <strong>majoritairement maternelle</strong> ; le support mentionne aussi une transmission paternelle dans <strong>16 %</strong>.</li>
+  <li>Expansion généralement <strong>&gt;1000 CTG</strong>.</li>
+  <li>In utero : excès de liquide amniotique + mouvements fœtaux faibles.</li>
+</ul>
+
+<h3>À la naissance</h3>
+<div class="tablewrap"><table>
+<tr><th>Signe</th><th>Fréquence du support</th></tr>
+<tr><td>Diplégie faciale</td><td><strong>80–90 %</strong></td></tr>
+<tr><td>Hypotonie / pauvreté motricité spontanée</td><td><strong>70–90 %</strong></td></tr>
+<tr><td>Difficultés d’alimentation</td><td><strong>70 %</strong></td></tr>
+<tr><td>Détresse respiratoire néonatale</td><td><strong>50 %</strong></td></tr>
+<tr><td>Pieds bots / équins</td><td><strong>50 %</strong></td></tr>
+</table></div>
+
+<ul>
+  <li>Déficience intellectuelle : <strong>70 %</strong>.</li>
+  <li>Retard moteur, marche tardive.</li>
+  <li>Dysmorphie faciale : hypotonie, ptosis, bouche bée.</li>
+  <li>Décès néonatal : <strong>20 %</strong> dans le support.</li>
+</ul>
+
+<div class="callout warn"><strong>Pronostic :</strong> d’abord vital dans les premières semaines par atteinte respiratoire, puis fonctionnel musculaire et intellectuel.</div>
+</section>
+
+<section id="dm1-classique">
+<h2>6. DM1 — formes infantile, classique et paucisymptomatique</h2>
+
+<h3>Forme infantile — 1 à 10 ans</h3>
+<ul>
+  <li>Hypotonie, retard moteur, lenteur, passivité.</li>
+  <li>Visage allongé et peu expressif.</li>
+  <li>Retard mental / difficultés scolaires.</li>
+  <li>Signes musculaires plus tardifs.</li>
+  <li>Atteintes cardiaque et ophtalmologique, notamment cataracte.</li>
+</ul>
+
+<h3>Forme classique — adolescent / adulte</h3>
+<ul>
+  <li>Visage allongé, peu expressif et fatigué.</li>
+  <li>Ptosis, bouche bée, épaules affaissées.</li>
+  <li><strong>Déficit musculaire distal</strong>.</li>
+  <li><strong>Myotonie</strong> = décontraction lente et difficile après contraction volontaire ; recherche à l’EMG.</li>
+  <li>Cataracte précoce.</li>
+  <li>Troubles de conduction / troubles du rythme.</li>
+  <li>Hypofertilité, diabète, calvitie.</li>
+  <li>Constipation ± diarrhée.</li>
+  <li>Hypersomnie diurne.</li>
+</ul>
+
+<h3>Forme paucisymptomatique</h3>
+<ul>
+  <li>Début chez le sujet âgé.</li>
+  <li>Expansion <strong>50–150 CTG</strong>.</li>
+  <li>Cataracte.</li>
+  <li>Peu ou pas de signes musculaires.</li>
+  <li>Calvitie précoce.</li>
+  <li>Forme décrite comme <strong>sous-diagnostiquée</strong>.</li>
+</ul>
+</section>
+
+<section id="huntington">
+<h2>7. Maladie de Huntington</h2>
+<ul>
+  <li>Maladie neurodégénérative <strong>autosomique dominante</strong>.</li>
+  <li>Atteinte du cortex + noyaux gris centraux : noyau caudé et putamen.</li>
+  <li>Fréquence en France : <strong>1/10 000</strong>.</li>
+  <li>Pas de phénomène de <strong>néomutation</strong> dans le cours.</li>
+  <li>Âge moyen de début : environ <strong>50 ans</strong>.</li>
+</ul>
+
+<h3>Clinique</h3>
+<ul>
+  <li>Mouvements choréiques.</li>
+  <li>Troubles de l’équilibre.</li>
+  <li>Dysarthrie.</li>
+  <li>Anxiété, dépression, irritabilité.</li>
+  <li>Démence progressive.</li>
+  <li>Évolution vers état grabataire puis décès.</li>
+</ul>
+
+<h3>Génétique</h3>
+<ul>
+  <li>Gène : <strong>HTT</strong>.</li>
+  <li>Expansion <strong>CAG</strong> dans la <strong>séquence codante</strong>.</li>
+  <li>Produit une expansion de <strong>polyglutamine</strong>.</li>
+  <li>Allèle normal : <strong>&lt;26 CAG</strong>.</li>
+  <li>Allèle muté : <strong>&gt;35 CAG</strong>.</li>
+</ul>
+
+<h3>Instabilité somatique selon le support</h3>
+<div class="schema">>35 CAG dès la conception
+→ instabilité somatique
+→ expansion progressive au fil des divisions
+→ >150 CAG : dérégulation d'autres gènes
+→ >500 CAG : dérépression de gènes apoptotiques
+→ apoptose neuronale</div>
+
+<div class="callout orangebox"><strong>Très tombable :</strong> nombre de CAG ↑ → début plus précoce et maladie plus sévère statistiquement ; pénétrance ↑ avec l’âge.</div>
+</section>
+
+<section id="scad">
+<h2>8. Ataxies cérébelleuses dominantes (SCAD)</h2>
+<ul>
+  <li>Groupe de maladies neurologiques <strong>cliniquement et génétiquement hétérogènes</strong>.</li>
+  <li>Transmission <strong>autosomique dominante</strong>.</li>
+  <li>Début typique : adulte entre <strong>30 et 50 ans</strong>.</li>
+  <li>Point commun clinique : dégénérescence cérébelleuse + <strong>ataxie progressive</strong>.</li>
+  <li>Gènes cités : <strong>SCA1, SCA2, SCA3, SCA6, SCA7, SCA8, SCA17</strong>.</li>
+  <li>Expansion majoritairement de motifs <strong>CAG</strong>.</li>
+  <li>Certaines expansions sont stables, d’autres instables.</li>
+</ul>
+<div class="callout warn"><strong>Piège :</strong> il n’existe pas un gène unique responsable de toutes les SCAD.</div>
+</section>
+
+<section id="friedreich">
+<h2>9. Ataxie de Friedreich</h2>
+<ul>
+  <li>Maladie neurodégénérative <strong>autosomique récessive</strong>.</li>
+  <li>Expansion décrite comme <strong>stable</strong> → pas de phénomène d’anticipation.</li>
+  <li>Fréquence des hétérozygotes : environ <strong>1/100</strong>.</li>
+  <li>Parmi les malades : <strong>96 % d’homozygotes</strong> dans le support.</li>
+</ul>
+
+<h3>Clinique</h3>
+<ul>
+  <li>Syndrome cérébelleux.</li>
+  <li>Atteinte pyramidale.</li>
+  <li>Atteinte sensitive profonde.</li>
+  <li>Pieds creux, scoliose.</li>
+  <li>Myocardiopathie dilatée.</li>
+  <li>Diabète, surdité, atrophie optique.</li>
+  <li>Perte de la marche vers <strong>15 ans</strong> dans le support.</li>
+  <li>Difficultés d’alimentation et décès précoce.</li>
+</ul>
+
+<h3>Génétique</h3>
+<ul>
+  <li>Gène : <strong>FXN</strong>, codant la <strong>frataxine</strong>.</li>
+  <li>Rôle attribué : métabolisme cellulaire du fer.</li>
+  <li>Expansion <strong>GAA</strong> dans l’<strong>intron 1</strong> dans <strong>98 %</strong> des cas.</li>
+  <li>Mécanisme : <strong>perte de fonction</strong>.</li>
+  <li>Allèle normal : <strong>5–33 GAA</strong>.</li>
+  <li>Allèle pathologique : <strong>66–1300 GAA</strong>.</li>
+  <li>Âge de début et sévérité déterminés par le plus petit allèle, inversement corrélés au nombre de triplets selon le cours.</li>
+</ul>
+</section>
+
+<section id="polyala">
+<h2>10. Maladies par expansion de poly-alanine</h2>
+<div class="callout"><strong>Règle du support :</strong> expansions <strong>stables</strong> et <strong>sans anticipation</strong>.</div>
+<p>Le cours les relie à des dysfonctionnements du système nerveux autonome chez l’enfant, notamment la commande de la respiration pendant le sommeil.</p>
+
+<div class="tablewrap"><table>
+<tr><th>Gène</th><th>Expansion</th><th>Phénotype</th></tr>
+<tr><td><strong>ARX</strong></td><td>Expansion <strong>GCG</strong> ajoutant 27 alanines aux 16 déjà présentes</td><td>Encéphalopathie épileptique + déficience intellectuelle</td></tr>
+<tr><td><strong>PHOX2B</strong></td><td>Ajout de triplets <strong>GCN</strong> → 24 à 33 alanines dans un stretch de 20</td><td>Syndrome d’Ondine / hypoventilation centrale congénitale</td></tr>
+</table></div>
+
+<div class="callout warn"><strong>Piège QCM :</strong> ARX n’est pas l’unique gène cité : <strong>ARX et PHOX2B</strong>.</div>
+</section>
+
+<section id="opmd">
+<h2>11. Dystrophie musculaire oculopharyngée</h2>
+<ul>
+  <li>Transmission <strong>autosomique dominante</strong>.</li>
+  <li>Mutation <strong>stable</strong>.</li>
+  <li>Pas d’anticipation.</li>
+  <li>Gène : <strong>PABPN1</strong>.</li>
+  <li>Expansion <strong>GCG</strong> dans la séquence codante.</li>
+  <li><strong>8–13 répétitions</strong> au lieu de <strong>6</strong>.</li>
+  <li>Production d’une séquence poly-alanine.</li>
+</ul>
+<h3>Clinique</h3>
+<ul>
+  <li>Ptosis.</li>
+  <li>Difficulté à s’alimenter.</li>
+  <li>Difficulté à parler.</li>
+</ul>
+</section>
+
+<section id="dm2">
+<h2>12. Dystrophie myotonique de type 2 (DM2)</h2>
+<ul>
+  <li>Transmission <strong>autosomique dominante</strong>.</li>
+  <li>Mutation <strong>instable</strong>.</li>
+  <li>Phénomène d’<strong>anticipation</strong>.</li>
+  <li>Gène : <strong>ZNF9</strong>.</li>
+  <li>Répétition d’un <strong>quadruplet CCTG</strong> dans le <strong>1er intron</strong>.</li>
+  <li><strong>75 à 11 000 répétitions</strong> au lieu d’environ <strong>30</strong>.</li>
+  <li>Effet qualifié de <strong>transdominant négatif</strong> dans le support.</li>
+</ul>
+</section>
+
+<section id="ul">
+<h2>13. Maladie d’Unverricht-Lundborg</h2>
+<ul>
+  <li>Transmission <strong>autosomique récessive</strong>.</li>
+  <li>Tableau : <strong>épilepsie myoclonique</strong>.</li>
+  <li>Motif de <strong>12 pb</strong> : <strong>CCCCGCCCCGCG</strong>.</li>
+  <li>Répété <strong>50 fois</strong> au lieu de <strong>3</strong>.</li>
+  <li>Localisation : en amont du gène de la <strong>cystatine B</strong>.</li>
+  <li>Mécanisme : <strong>perte de fonction</strong>.</li>
+</ul>
+<div class="callout orangebox"><strong>Piège :</strong> ce n’est pas ZNF9 ; ZNF9 appartient à la DM2.</div>
+</section>
+
+<section id="comparatif">
+<h2>14. Tableau comparatif global</h2>
+<div class="tablewrap"><table>
+<tr><th>Maladie</th><th>Transmission</th><th>Gène</th><th>Motif / localisation</th><th>Stable ?</th><th>Mécanisme phare</th></tr>
+<tr><td>DM1 / Steinert</td><td>AD</td><td>DMPK</td><td>CTG, 3’ non codante</td><td>Instable</td><td>ARNm toxique / épissage</td></tr>
+<tr><td>Huntington</td><td>AD</td><td>HTT</td><td>CAG, codante</td><td>Instabilité somatique</td><td>Polyglutamine / toxicité</td></tr>
+<tr><td>SCAD</td><td>AD</td><td>SCA1,2,3,6,7,8,17…</td><td>Surtout CAG</td><td>Variable</td><td>Dégénérescence cérébelleuse</td></tr>
+<tr><td>Friedreich</td><td>AR</td><td>FXN</td><td>GAA, intron 1</td><td><strong>Stable</strong></td><td>Perte de fonction / frataxine</td></tr>
+<tr><td>Poly-alanine</td><td>Variable selon gène</td><td>ARX / PHOX2B</td><td>GCG / GCN, codante</td><td><strong>Stable</strong></td><td>Poly-alanine</td></tr>
+<tr><td>Dystrophie oculopharyngée</td><td>AD</td><td>PABPN1</td><td>GCG, codante</td><td><strong>Stable</strong></td><td>Poly-alanine</td></tr>
+<tr><td>DM2</td><td>AD</td><td>ZNF9</td><td>CCTG, intron 1</td><td>Instable</td><td>Effet transdominant négatif</td></tr>
+<tr><td>Unverricht-Lundborg</td><td>AR</td><td>CSTB / cystatine B</td><td>Dodécamère en amont</td><td>Non précisé ici</td><td>Perte de fonction</td></tr>
+</table></div>
+</section>
+
+<section id="anticipation">
+<h2>15. Aparté : anticipation dans les téloméropathies</h2>
+<p>Le cours élargit le phénomène d’anticipation aux maladies liées au <strong>raccourcissement des télomères</strong>.</p>
+
+<div class="schema">Défaut d'une enzyme maintenant les télomères
+→ télomères raccourcis au fil des divisions
+→ si atteinte germinale : descendant conçu avec télomères déjà plus courts
+→ aggravation du raccourcissement au fil des générations
+→ symptômes de plus en plus précoces</div>
+
+<h3>Spectre clinique cité</h3>
+<ul>
+  <li>Canitie précoce.</li>
+  <li>Fibrose pulmonaire.</li>
+  <li>Insuffisance médullaire.</li>
+  <li>Cirrhose.</li>
+  <li>Cancers.</li>
+  <li>Anomalies de pigmentation cutanée.</li>
+</ul>
+
+<div class="callout bluebox"><strong>Transmission :</strong> le support précise qu’elle peut être dominante ou récessive, liée à l’X ou aux autosomes.</div>
+</section>
+
+<section id="qcm">
+<h2>16. Pièges QCM explicitement corrigés dans le support</h2>
+<div class="grid2">
+  <div class="card">
+    <h3>DM1</h3>
+    <ul>
+      <li>AD, pas AR.</li>
+      <li>Prémutation = pas de phénotype classique.</li>
+      <li>Seuil symptomatique retenu : <strong>50 CTG</strong>.</li>
+      <li>Forme congénitale surtout transmise par la mère.</li>
+      <li>Forme paucisymptomatique = la plus tardive et la moins symptomatique.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Huntington</h3>
+    <ul>
+      <li>Pas de néomutation dans le cours.</li>
+      <li>Gène <strong>HTT</strong>.</li>
+      <li>Expansion <strong>CAG</strong>.</li>
+      <li>L’expansion somatique ne concerne pas uniquement les cellules germinales.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Ataxies</h3>
+    <ul>
+      <li>SCAD = plusieurs gènes, pas un seul.</li>
+      <li>Friedreich = AR.</li>
+      <li>Friedreich = expansion stable.</li>
+      <li>Allèle pathologique GAA : le cours donne <strong>66–1300</strong>.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Autres expansions</h3>
+    <ul>
+      <li>Poly-alanine = stable, sans anticipation.</li>
+      <li>DM2 = AD.</li>
+      <li>Unverricht-Lundborg = cystatine B, pas ZNF9.</li>
+      <li>Les expansions ne sont pas obligatoirement dans une région codante.</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<section id="incoherences">
+<h2>17. Incohérences / formulations à surveiller</h2>
+
+<div class="callout warn"><strong>1. DM1 — seuils :</strong> le texte donne <strong>5–35 CTG normal</strong> puis <strong>50–3000 symptomatique</strong>, donc une zone intermédiaire existe mais n’est pas chiffrée explicitement dans le corps du cours. La correction QCM confirme seulement que 35 n’est pas le seuil symptomatique.</div>
+
+<div class="callout warn"><strong>2. Huntington — zone intermédiaire :</strong> le support indique <strong>&lt;26 normal</strong> et <strong>&gt;35 muté</strong>, mais ne décrit pas précisément la zone 26–35. La fiche ne la complète pas avec des données extérieures.</div>
+
+<div class="callout warn"><strong>3. Huntington — seuils somatiques 150 / 500 CAG :</strong> ils sont repris tels quels du ronéo comme éléments du mécanisme enseigné, sans correction externe.</div>
+
+<div class="callout warn"><strong>4. DM2 :</strong> le cours qualifie le mécanisme de « transdominant négatif » puis l’explique comme une « perte de fonction si un des gènes est muté ». Cette formulation est conservée telle qu’enseignée.</div>
+
+<div class="callout warn"><strong>5. QCM Friedreich :</strong> l’énoncé parle d’un allèle pathologique « plus de 66 » alors que le texte donne <strong>66 à 1300</strong>. Pour le cours, retiens surtout cet intervalle textuel.</div>
+
+<div class="callout warn"><strong>6. Téloméropathies :</strong> le support parle de « mutations de télomères » dans une correction, mais le mécanisme décrit est celui d’une anomalie d’un gène impliqué dans leur maintien. La fiche garde la logique du cours sans reformuler au-delà.</div>
+</section>
+
+<section id="flashcards">
+<h2>18. Flashcards express</h2>
+<div class="flashgrid">
+<div class="flash"><div class="q">1. DM1 : transmission ?</div><div class="a">Autosomique dominante.</div></div>
+<div class="flash"><div class="q">2. DM1 : gène ?</div><div class="a">DMPK, 19q13.</div></div>
+<div class="flash"><div class="q">3. DM1 : motif ?</div><div class="a">CTG.</div></div>
+<div class="flash"><div class="q">4. DM1 : localisation ?</div><div class="a">Région 3’ non codante.</div></div>
+<div class="flash"><div class="q">5. DM1 : mécanisme ?</div><div class="a">ARNm toxique → anomalies d’épissage.</div></div>
+<div class="flash"><div class="q">6. DM1 : fréquence France ?</div><div class="a">≈1/8000.</div></div>
+<div class="flash"><div class="q">7. DM1 normal ?</div><div class="a">5–35 CTG.</div></div>
+<div class="flash"><div class="q">8. DM1 symptomatique ?</div><div class="a">50–3000 CTG dans le cours.</div></div>
+<div class="flash"><div class="q">9. DM1 congénitale ?</div><div class="a">&gt;1000 CTG.</div></div>
+<div class="flash"><div class="q">10. DM1 congénitale : transmission ?</div><div class="a">Majoritairement maternelle ; père cité à 16 %.</div></div>
+<div class="flash"><div class="q">11. Diplégie faciale congénitale ?</div><div class="a">80–90 %.</div></div>
+<div class="flash"><div class="q">12. Hypotonie congénitale ?</div><div class="a">70–90 %.</div></div>
+<div class="flash"><div class="q">13. Détresse respiratoire néonatale ?</div><div class="a">50 %.</div></div>
+<div class="flash"><div class="q">14. Décès néonatal DM1 congénitale ?</div><div class="a">20 %.</div></div>
+<div class="flash"><div class="q">15. Forme infantile DM1 ?</div><div class="a">1–10 ans.</div></div>
+<div class="flash"><div class="q">16. Forme classique DM1 ?</div><div class="a">100–1000 CTG.</div></div>
+<div class="flash"><div class="q">17. Paucisymptomatique DM1 ?</div><div class="a">50–150 CTG, sujet âgé.</div></div>
+<div class="flash"><div class="q">18. Myotonie ?</div><div class="a">Décontraction lente après contraction volontaire.</div></div>
+<div class="flash"><div class="q">19. Huntington : transmission ?</div><div class="a">Autosomique dominante.</div></div>
+<div class="flash"><div class="q">20. Huntington : fréquence ?</div><div class="a">1/10 000 en France.</div></div>
+<div class="flash"><div class="q">21. Huntington : gène ?</div><div class="a">HTT.</div></div>
+<div class="flash"><div class="q">22. Huntington : motif ?</div><div class="a">CAG.</div></div>
+<div class="flash"><div class="q">23. Huntington : localisation ?</div><div class="a">Séquence codante.</div></div>
+<div class="flash"><div class="q">24. Huntington : produit ?</div><div class="a">Polyglutamine.</div></div>
+<div class="flash"><div class="q">25. Huntington normal ?</div><div class="a">&lt;26 CAG.</div></div>
+<div class="flash"><div class="q">26. Huntington muté ?</div><div class="a">&gt;35 CAG.</div></div>
+<div class="flash"><div class="q">27. Huntington : début moyen ?</div><div class="a">≈50 ans.</div></div>
+<div class="flash"><div class="q">28. Huntington : néomutation ?</div><div class="a">Non dans le support.</div></div>
+<div class="flash"><div class="q">29. SCAD : transmission ?</div><div class="a">Autosomique dominante.</div></div>
+<div class="flash"><div class="q">30. SCAD : motif fréquent ?</div><div class="a">CAG.</div></div>
+<div class="flash"><div class="q">31. Friedreich : transmission ?</div><div class="a">Autosomique récessive.</div></div>
+<div class="flash"><div class="q">32. Friedreich : gène ?</div><div class="a">FXN.</div></div>
+<div class="flash"><div class="q">33. Friedreich : motif ?</div><div class="a">GAA dans l’intron 1.</div></div>
+<div class="flash"><div class="q">34. Friedreich : stable ?</div><div class="a">Oui, sans anticipation.</div></div>
+<div class="flash"><div class="q">35. Friedreich normal ?</div><div class="a">5–33 GAA.</div></div>
+<div class="flash"><div class="q">36. Friedreich pathologique ?</div><div class="a">66–1300 GAA.</div></div>
+<div class="flash"><div class="q">37. Friedreich : 96 % ?</div><div class="a">96 % d’homozygotes parmi les malades dans le support.</div></div>
+<div class="flash"><div class="q">38. Poly-alanine : stabilité ?</div><div class="a">Stable, sans anticipation.</div></div>
+<div class="flash"><div class="q">39. Poly-alanine : 2 gènes ?</div><div class="a">ARX et PHOX2B.</div></div>
+<div class="flash"><div class="q">40. PHOX2B ?</div><div class="a">Syndrome d’Ondine / hypoventilation centrale congénitale.</div></div>
+<div class="flash"><div class="q">41. Oculopharyngée : gène ?</div><div class="a">PABPN1.</div></div>
+<div class="flash"><div class="q">42. Oculopharyngée : motif ?</div><div class="a">GCG 8–13 fois au lieu de 6.</div></div>
+<div class="flash"><div class="q">43. DM2 : transmission ?</div><div class="a">Autosomique dominante.</div></div>
+<div class="flash"><div class="q">44. DM2 : gène ?</div><div class="a">ZNF9.</div></div>
+<div class="flash"><div class="q">45. DM2 : motif ?</div><div class="a">CCTG, quadruplet.</div></div>
+<div class="flash"><div class="q">46. DM2 : nombre ?</div><div class="a">75–11 000 au lieu de 30.</div></div>
+<div class="flash"><div class="q">47. Unverricht-Lundborg : transmission ?</div><div class="a">Autosomique récessive.</div></div>
+<div class="flash"><div class="q">48. Unverricht-Lundborg : motif ?</div><div class="a">CCCCGCCCCGCG, 12 pb.</div></div>
+<div class="flash"><div class="q">49. Unverricht-Lundborg : répétitions ?</div><div class="a">50 au lieu de 3.</div></div>
+<div class="flash"><div class="q">50. Unverricht-Lundborg : gène ?</div><div class="a">Cystatine B.</div></div>
+<div class="flash"><div class="q">51. Anticipation ?</div><div class="a">Symptômes de plus en plus précoces au fil des générations.</div></div>
+<div class="flash"><div class="q">52. Téloméropathies : 3 signes à retenir ?</div><div class="a">Canitie précoce, fibrose pulmonaire, insuffisance médullaire — entre autres.</div></div>
+</div>
+</section>
+
+<section class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>DM1 = DMPK + CTG + 3’ non codante + ARNm toxique + AD + anticipation.</strong> Normal 5–35, symptomatique 50–3000 ; congénitale &gt;1000 et surtout maternelle. Forme classique : déficit distal + myotonie + cataracte + cœur + endocrino + digestif + hypersomnie. <strong>Huntington = HTT + CAG codant + polyglutamine + AD</strong>, normal &lt;26, muté &gt;35, début moyen ~50 ans. <strong>SCAD = AD, plusieurs gènes, souvent CAG.</strong> <strong>Friedreich = AR + FXN + GAA intron 1 + stable + perte de fonction</strong>, 5–33 normal, 66–1300 pathologique, pas d’anticipation. Poly-alanine = stable sans anticipation, ARX/PHOX2B. Oculopharyngée = PABPN1, GCG, AD. DM2 = ZNF9, CCTG, AD, instable avec anticipation. Unverricht-Lundborg = AR, cystatine B, dodécamère ×50. Enfin, l’anticipation peut aussi exister dans les <strong>téloméropathies</strong> par raccourcissement progressif des télomères.</p>
+</section>
+
+<section>
+<h2>Source</h2>
+<p class="small">Fiche construite uniquement à partir du PDF « 6 - MALADIES PAR EXPANSION.pdf » fourni par l’utilisateur. Les chiffres, seuils, mécanismes, corrections de QCM et formulations ont été repris du support ; les zones non précisées ou incohérentes sont signalées explicitement plutôt que complétées avec des connaissances extérieures.</p>
+</section>
+
+</main></body></html>
