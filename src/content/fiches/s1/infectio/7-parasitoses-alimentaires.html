@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche - Parasitoses alimentaires</title>
+<style>
+:root{
+  --g:#1a7a4a;--gs:#eaf7ef;--r:#dc2626;--rs:#fee2e2;--o:#d97706;--os:#fff7ed;
+  --b:#2563eb;--bs:#eff6ff;--p:#6d28d9;--ps:#f2ecff;--ink:#1c1c2e;--line:#d8dce8;
+  --bg:#f6f7fb;--teal:#0f766e;--teals:#ecfeff;--slate:#111827;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}
+.page{max-width:1160px;margin:auto;padding:32px 18px 64px}
+.hero{background:linear-gradient(135deg,#fff 0%,#f0fdf4 58%,#ecfeff 100%);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 40px rgba(27,38,49,.06)}
+.kicker{color:var(--g);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px}
+h1{font-size:38px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}
+.subtitle{max-width:1000px;margin:0;color:#374151}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;font-size:13px}
+.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:12px;font-weight:800;padding:4px 9px;border-radius:999px}
+.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.green{background:var(--gs);color:#166534}.purple{background:var(--ps);color:#4c1d95}.blue{background:var(--bs);color:#1d4ed8}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}
+nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}
+nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav a{color:var(--ink);text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(27,38,49,.035)}
+h2{font-size:25px;margin:0 0 16px;letter-spacing:-.02em}h3{font-size:18px;margin:22px 0 10px;color:var(--g)}
+p{margin:8px 0}ul{margin:8px 0 12px;padding-left:22px}li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}
+.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}
+.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}
+.tealbox{border-left-color:var(--teal);background:var(--teals)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:#374151;overflow-x:auto;white-space:pre-wrap}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px;min-width:680px}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left;color:#111827}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}.flash .q{background:#f9fafb;padding:10px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:10px 12px;color:#374151}
+.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+.small{font-size:12.5px;color:#4b5563}
+@media(max-width:780px){
+  h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}
+  table{font-size:12.5px;min-width:600px}
+}
+@media print{
+  body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body><main class="page">
+
+<header class="hero">
+  <div class="kicker">UE Agents infectieux</div>
+  <h1>Parasitoses alimentaires</h1>
+  <p class="subtitle">Fiche D1/externat orientée QCM : oxyurose, ascaridiose, téniasis, cysticercose, giardiose et coccidioses digestives, avec cycles, transmissions, diagnostics, traitements, prévention et pièges du support.</p>
+  <div class="tags">
+    <span class="tag red">🔴 Cycles à connaître</span>
+    <span class="tag orange">🟠 Pièges transmission</span>
+    <span class="tag green">🟢 Diagnostic / traitement</span>
+    <span class="tag purple">🧠 QCM du ronéo</span>
+    <span class="tag blue">🦠 Protozoaires & helminthes</span>
+  </div>
+  <div class="actions">
+    <button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+    <button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+  </div>
+</header>
+
+<nav>
+<h2>Plan rapide</h2>
+<ol>
+  <li><a href="#vueensemble">Vue d’ensemble</a></li>
+  <li><a href="#oxyurose">Oxyurose</a></li>
+  <li><a href="#oxyurose-diag">Diagnostic / traitement oxyurose</a></li>
+  <li><a href="#ascaridiose">Ascaridiose</a></li>
+  <li><a href="#ascaris-cycle">Cycle de l’ascaris</a></li>
+  <li><a href="#ascaris-comp">Complications ascaridiose</a></li>
+  <li><a href="#teniasis">Téniasis</a></li>
+  <li><a href="#saginata">Taenia saginata</a></li>
+  <li><a href="#solium">Taenia solium / cysticercose</a></li>
+  <li><a href="#giardiose">Giardiose</a></li>
+  <li><a href="#giardia-clinique">Clinique giardiose</a></li>
+  <li><a href="#giardia-pec">PEC / prévention giardiose</a></li>
+  <li><a href="#coccidioses">Coccidioses digestives</a></li>
+  <li><a href="#cocci-immunite">Immunité & gravité</a></li>
+  <li><a href="#cocci-diag">Diagnostic / PEC coccidioses</a></li>
+  <li><a href="#comparatif">Tableau comparatif</a></li>
+  <li><a href="#pieges">Pièges du support</a></li>
+  <li><a href="#flashcards">Flashcards</a></li>
+</ol>
+</nav>
+
+<section id="vueensemble">
+<h2>1. Vue d’ensemble ultra-rentable</h2>
+<div class="tablewrap"><table>
+<tr><th>Parasitose</th><th>Agent</th><th>Type</th><th>Transmission clé</th><th>Diagnostic clé</th></tr>
+<tr><td>Oxyurose</td><td><em>Enterobius vermicularis</em></td><td>Helminthe / nématode</td><td>Interhumaine orale directe ou indirecte</td><td>Scotch-test anal</td></tr>
+<tr><td>Ascaridiose</td><td><em>Ascaris lumbricoides</em></td><td>Helminthe / nématode</td><td>Orale indirecte via environnement / aliments</td><td>Examen parasitologique des selles</td></tr>
+<tr><td>Téniasis</td><td><em>Taenia saginata</em> / <em>T. solium</em></td><td>Helminthe / cestode</td><td>Viande contaminée insuffisamment cuite</td><td>Anneaux / examen parasitologique</td></tr>
+<tr><td>Giardiose</td><td><em>Giardia</em></td><td>Protozoaire</td><td>Féco-orale directe ou indirecte</td><td>Examen parasitologique des selles</td></tr>
+<tr><td>Coccidioses</td><td><em>Cryptosporidium</em>, <em>Cyclospora</em>, <em>Cystoisospora</em></td><td>Protozoaires</td><td>Féco-orale, eau / mains / aliments</td><td>Selles : PCR, microscopie ± Ziehl-Neelsen</td></tr>
+</table></div>
+</section>
+
+<section id="oxyurose">
+<h2>2. Oxyurose</h2>
+<div class="callout"><strong>Agent :</strong> <em>Enterobius vermicularis</em>, ver d’environ <strong>1 cm</strong>.</div>
+<ul>
+  <li>Helminthose digestive <strong>cosmopolite</strong>.</li>
+  <li>Transmission interhumaine <strong>orale</strong>, directe ou indirecte.</li>
+  <li>Très fréquente chez l’enfant, favorisée par la vie en collectivité.</li>
+  <li>Habituellement bénigne.</li>
+</ul>
+
+<h3>Clinique typique</h3>
+<ul>
+  <li><strong>Prurit périanal vespéral/nocturne</strong>.</li>
+  <li>Irritabilité, notamment chez l’enfant.</li>
+  <li>Épisodes diarrhéiques possibles dans le cas clinique.</li>
+</ul>
+<div class="callout warn"><strong>Pourquoi le soir ?</strong> Les femelles viennent pondre leurs œufs dans la région péri-anale le soir.</div>
+</section>
+
+<section id="oxyurose-diag">
+<h2>3. Oxyurose : diagnostic, traitement, prévention</h2>
+<h3>Diagnostic de choix</h3>
+<ul>
+  <li><strong>Scotch-test anal</strong>.</li>
+  <li>À réaliser <strong>le matin</strong>.</li>
+  <li><strong>Avant</strong> toilette/douche et avant défécation.</li>
+  <li>Ruban adhésif péri-anal → microscopie → recherche d’œufs ± femelles adultes.</li>
+</ul>
+
+<h3>Traitement</h3>
+<ul>
+  <li><strong>Flubendazole</strong>.</li>
+  <li>Prise unique.</li>
+  <li>Deuxième prise <strong>2 à 3 semaines plus tard</strong>.</li>
+  <li>Cycle parasitaire : <strong>2 à 3 semaines</strong>.</li>
+</ul>
+<div class="callout orangebox"><strong>Logique :</strong> la 2e prise casse le cycle d’auto-infection.</div>
+
+<h3>Prévention</h3>
+<ul>
+  <li>Couper les ongles courts.</li>
+  <li>Pyjama une pièce chez l’enfant.</li>
+  <li>Laver draps, pyjamas, doudous à température élevée.</li>
+  <li>Nettoyer les chambres, aspirateur +++.</li>
+  <li>Mesures prophylactiques <strong>collectives</strong> en plus du traitement individuel.</li>
+</ul>
+</section>
+
+<section id="ascaridiose">
+<h2>4. Ascaridiose</h2>
+<div class="callout"><strong>Agent :</strong> <em>Ascaris lumbricoides</em>, grand ver rond blanc de <strong>10 à 25 cm</strong>.</div>
+<ul>
+  <li>Nématode digestif.</li>
+  <li>Surtout zones <strong>tropicales et subtropicales</strong>.</li>
+  <li>Transmission interhumaine <strong>orale indirecte</strong> : passage environnemental obligatoire.</li>
+  <li>Les œufs ne sont <strong>pas directement infectieux au moment de la ponte</strong>.</li>
+  <li>Contamination souvent alimentaire.</li>
+</ul>
+<h3>Biologie</h3>
+<div class="callout bluebox"><strong>NFS :</strong> attendre une <strong>éosinophilie</strong>, liée à la migration larvaire tissulaire.</div>
+</section>
+
+<section id="ascaris-cycle">
+<h2>5. Ascaridiose : cycle parasitaire</h2>
+<div class="schema">Ingestion d’œufs depuis l’environnement
+→ éclosion digestive
+→ larves
+→ migration tissulaire pendant plusieurs semaines
+→ forte réaction toxico-allergique
+→ retour au tube digestif
+→ vers adultes
+→ reproduction / ponte
+→ œufs dans l’environnement</div>
+
+<h3>Phase 1 — migration larvaire tissulaire</h3>
+<ul>
+  <li>Larves quittent le tube digestif et migrent dans l’organisme.</li>
+  <li>Action <strong>toxico-allergique</strong> marquée.</li>
+  <li>Cuticule riche en protéines allergisantes.</li>
+  <li>Éosinophiles pouvant atteindre <strong>10 à 20 fois la normale</strong> dans le cours.</li>
+</ul>
+
+<div class="callout warn"><strong>Très tombable :</strong> cette éosinophilie est liée au <strong>trajet tissulaire</strong> du ver. Le support précise qu’on ne retrouve pas ce mécanisme pour les parasites strictement digestifs ni pour les parasites unicellulaires.</div>
+
+<h3>Phase 2 — phase adulte / phase d’état</h3>
+<p>Le ver adulte retourne dans le tube digestif, où il vit, se reproduit et pond des œufs.</p>
+</section>
+
+<section id="ascaris-comp">
+<h2>6. Ascaridiose : complications</h2>
+<p>Deux propriétés expliquent les complications : <strong>les vers sont gros et ils se déplacent</strong>.</p>
+<div class="grid2">
+  <div class="card">
+    <strong>Ils sont gros</strong>
+    <ul>
+      <li>Pelotes d’ascaris.</li>
+      <li>Obstruction digestive.</li>
+      <li>Jusqu’à l’<strong>occlusion intestinale</strong>.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <strong>Ils se déplacent</strong>
+    <ul>
+      <li>Pancréas.</li>
+      <li>Appendice.</li>
+      <li>Canaux biliaires.</li>
+      <li>Sortie orale ou nasale si charge massive.</li>
+    </ul>
+  </div>
+</div>
+<div class="callout orangebox"><strong>Migration erratique :</strong> déplacement anormal des adultes hors de leur localisation digestive habituelle.</div>
+<p>Le cours indique que l’ascaridiose peut être traitée par des antiparasitaires comme le <strong>flubendazole</strong>.</p>
+</section>
+
+<section id="teniasis">
+<h2>7. Téniasis — généralités</h2>
+<div class="callout"><strong>Téniasis :</strong> helminthose digestive due à un ver plat appartenant aux <strong>cestodes</strong>.</div>
+<ul>
+  <li>Ver adulte pouvant atteindre plusieurs mètres, parfois <strong>&gt;5 à 10 m</strong>.</li>
+  <li>Partie antérieure = <strong>scolex</strong>, fixation au tube digestif.</li>
+  <li>Succession d’anneaux = <strong>proglottis</strong>.</li>
+  <li>Anneaux jeunes près du scolex, de plus en plus matures vers l’extrémité distale.</li>
+  <li>Les anneaux anciens se détachent et sont éliminés.</li>
+</ul>
+<div class="callout bluebox"><strong>Indice diagnostique :</strong> éléments blanchâtres, aplatis et mobiles dans les selles.</div>
+
+<h3>Clinique</h3>
+<ul>
+  <li>Souvent asymptomatique ou peu symptomatique.</li>
+  <li>Douleurs abdominales.</li>
+  <li>Diarrhée ou constipation.</li>
+  <li>Fatigue, perte de poids, troubles de l’appétit.</li>
+  <li>Le ver peut persister <strong>8, 10 voire 15 ans</strong> dans l’intestin.</li>
+</ul>
+</section>
+
+<section id="saginata">
+<h2>8. Taenia saginata = ténia du bœuf</h2>
+<ul>
+  <li>Transmission <strong>orale indirecte</strong>.</li>
+  <li>Homme = hôte de la <strong>forme adulte</strong>.</li>
+  <li>Bovin = <strong>hôte intermédiaire</strong> avec larves dans les muscles.</li>
+  <li>Contamination humaine par viande bovine <strong>crue ou insuffisamment cuite</strong>.</li>
+</ul>
+
+<div class="schema">Homme : ténia adulte intestinal
+→ anneaux / œufs dans environnement
+→ pâturage contaminé
+→ bovin ingère les œufs
+→ larves dans les muscles du bovin
+→ viande bovine contaminée
+→ Homme</div>
+
+<h3>Prévention</h3>
+<ul>
+  <li>Cuisson à cœur de la viande.</li>
+  <li>Congélation appropriée pouvant détruire/inactiver les larves.</li>
+</ul>
+
+<div class="callout warn"><strong>Piège :</strong> dans le cycle classique de <em>T. saginata</em>, ce n’est pas le poisson cru ni les crudités qui constituent la source principale, mais la <strong>viande bovine</strong>.</div>
+</section>
+
+<section id="solium">
+<h2>9. Taenia solium & cysticercose</h2>
+<ul>
+  <li><em>Taenia solium</em> = <strong>ténia du porc</strong>.</li>
+  <li>Cycle habituel : porc = formes larvaires ; Homme = ver adulte intestinal.</li>
+  <li>Particularité : l’Homme peut devenir <strong>hôte intermédiaire accidentel</strong>.</li>
+  <li>Présence de larves dans les tissus humains = <strong>cysticercose</strong>.</li>
+</ul>
+
+<h3>Neurocysticercose</h3>
+<ul>
+  <li>Larves dans le parenchyme cérébral.</li>
+  <li>Crises d’épilepsie.</li>
+  <li>Pertes de connaissance.</li>
+  <li>Troubles neurologiques.</li>
+  <li>Atteintes cognitives dans les formes sévères.</li>
+</ul>
+<div class="callout orangebox"><strong>Géographie :</strong> rare en France métropolitaine, mais possible chez des patients ayant vécu/séjourné dans des zones où <em>T. solium</em> est plus fréquent : régions tropicales d’Asie, d’Amérique latine et d’Afrique citées.</div>
+</section>
+
+<section id="giardiose">
+<h2>10. Giardiose / lambliose</h2>
+<div class="callout"><strong>Agent :</strong> <em>Giardia</em>, protozoaire unicellulaire digestif.</div>
+<ul>
+  <li>Protozoose zoonotique digestive <strong>cosmopolite</strong>.</li>
+  <li>Réservoirs : humains + animaux + environnement.</li>
+  <li>Transmission <strong>féco-orale</strong>, directe ou indirecte.</li>
+  <li>Épidémies possibles en collectivité, notamment chez les enfants.</li>
+</ul>
+
+<h3>Deux formes</h3>
+<div class="grid2">
+  <div class="card"><strong>Trophozoïtes</strong><p>Formes végétatives <strong>mobiles</strong>, vivent dans le tube digestif, morphologie en cerf-volant/poire aplatie.</p></div>
+  <div class="card"><strong>Kystes</strong><p>Formes <strong>immobiles et résistantes</strong>, survivent dans l’environnement et assurent la transmission.</p></div>
+</div>
+
+<h3>Sources de contamination</h3>
+<ul>
+  <li>Eau souillée.</li>
+  <li>Crudités / aliments contaminés.</li>
+  <li>Mains sales portées à la bouche.</li>
+  <li>Animaux sauvages et domestiques.</li>
+</ul>
+</section>
+
+<section id="giardia-clinique">
+<h2>11. Giardiose : clinique = irritation + spoliation</h2>
+<div class="grid2">
+  <div class="card">
+    <strong>Action irritative</strong>
+    <ul>
+      <li>Adhérence des trophozoïtes à la muqueuse.</li>
+      <li>Douleurs abdominales.</li>
+      <li>Ballonnements.</li>
+      <li>Spasmes intestinaux.</li>
+      <li>Irritation digestive.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <strong>Action spoliatrice</strong>
+    <ul>
+      <li>Charge parasitaire élevée.</li>
+      <li>« Nappe » parasitaire sur la muqueuse.</li>
+      <li>Perturbation de l’absorption.</li>
+      <li>Carences.</li>
+      <li>Amaigrissement.</li>
+    </ul>
+  </div>
+</div>
+<div class="callout bluebox"><strong>Cas clinique typique :</strong> diarrhées <strong>mousseuses</strong> sans fièvre, bactéries/virus négatifs, kystes d’environ <strong>15 µm</strong> dans les selles.</div>
+</section>
+
+<section id="giardia-pec">
+<h2>12. Giardiose : traitement & prévention</h2>
+<h3>Traitement</h3>
+<ul>
+  <li><strong>Métronidazole</strong>.</li>
+  <li>Comprimés ou sirop, pendant plusieurs jours.</li>
+  <li>Contrôle parasitologique des selles possible <strong>2 à 4 semaines</strong> après la fin du traitement.</li>
+</ul>
+
+<h3>Prévention</h3>
+<ul>
+  <li>Lavage des mains avant repas et après toilettes.</li>
+  <li>Eau en bouteille ou eau du réseau garantie conforme.</li>
+  <li>Éviter l’eau souillée.</li>
+  <li>Lavage des mains après contact avec chien/chat avant de les porter à la bouche.</li>
+  <li>Nettoyage des sanitaires, Javel citée en collectivité.</li>
+</ul>
+<div class="callout"><strong>À retenir :</strong> le cours présente la giardiose comme probablement l’une des parasitoses les plus communes en France métropolitaine.</div>
+</section>
+
+<section id="coccidioses">
+<h2>13. Coccidioses digestives</h2>
+<div class="callout"><strong>Protozooses digestives opportunistes</strong>, cosmopolites à subtropicales, à transmission orale directe ou indirecte.</div>
+<div class="tablewrap"><table>
+<tr><th>Genre</th><th>Importance dans le cours</th><th>Taille illustrée</th></tr>
+<tr><td><em>Cryptosporidium</em></td><td><strong>Le plus fréquent</strong></td><td>~5 µm sur l’illustration</td></tr>
+<tr><td><em>Cyclospora</em></td><td>Beaucoup plus rare</td><td>~10 µm sur l’illustration</td></tr>
+<tr><td><em>Cystoisospora</em></td><td>Beaucoup plus rare</td><td>~15–20 µm sur l’illustration</td></tr>
+</table></div>
+
+<h3>Terrains à risque</h3>
+<ul>
+  <li>VIH.</li>
+  <li>Greffe d’organe.</li>
+  <li>Traitements immunosuppresseurs.</li>
+  <li>Corticoïdes pour maladie inflammatoire.</li>
+  <li>Plus largement : toute immunodépression.</li>
+</ul>
+</section>
+
+<section id="cocci-immunite">
+<h2>14. Coccidioses : le statut immunitaire change tout</h2>
+<div class="grid2">
+  <div class="card">
+    <strong>Immunocompétent</strong>
+    <ul>
+      <li>Infection généralement limitée.</li>
+      <li>Petite diarrhée / troubles digestifs possibles.</li>
+      <li>Guérison spontanée en environ <strong>2–3 semaines</strong>.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <strong>Immunodéprimé</strong>
+    <ul>
+      <li>Infection persistante / chronique.</li>
+      <li>Diarrhées majeures.</li>
+      <li>Déshydratation.</li>
+      <li>Crampes abdominales.</li>
+      <li>Malabsorption.</li>
+      <li>Amaigrissement important.</li>
+    </ul>
+  </div>
+</div>
+<div class="callout warn"><strong>Très tombable :</strong> plus l’immunodépression est profonde, plus la coccidiose peut être durable et sévère.</div>
+</section>
+
+<section id="cocci-diag">
+<h2>15. Coccidioses : diagnostic, traitement, prévention</h2>
+<h3>Diagnostic</h3>
+<ul>
+  <li><strong>Examen parasitologique des selles</strong>.</li>
+  <li>PCR possible.</li>
+  <li>Microscopie directe.</li>
+  <li>Colorations spéciales, notamment <strong>Ziehl-Neelsen</strong>.</li>
+</ul>
+
+<h3>Prise en charge</h3>
+<div class="grid2">
+  <div class="card">
+    <strong>Immunocompétent</strong>
+    <p>Peu d’intervention ; traitement symptomatique éventuel diarrhée/spasmes.</p>
+  </div>
+  <div class="card">
+    <strong>Immunodéprimé</strong>
+    <p>Objectif principal : <strong>restaurer l’immunité</strong> si possible.</p>
+    <ul>
+      <li>VIH → traiter l’infection pour restaurer l’immunité.</li>
+      <li>Greffé → diminuer immunosuppression si possible.</li>
+      <li>Antiparasitaires : efficacité parfois limitée, réduction de charge sans éradication garantie.</li>
+    </ul>
+  </div>
+</div>
+
+<h3>Prévention</h3>
+<ul>
+  <li>Lavage des mains.</li>
+  <li>Cuisson des aliments.</li>
+  <li>Épluchage lorsque possible.</li>
+  <li>Faire bouillir l’eau si qualité non garantie.</li>
+  <li>Eau en bouteille si nécessaire.</li>
+</ul>
+</section>
+
+<section id="comparatif">
+<h2>16. Tableau comparatif des parasitoses du cours</h2>
+<div class="tablewrap"><table>
+<tr><th>Maladie</th><th>Agent</th><th>Transmission</th><th>Clinique / biologie phare</th><th>Traitement / PEC</th></tr>
+<tr><td>Oxyurose</td><td><em>E. vermicularis</em></td><td>Interhumaine orale directe/indirecte</td><td>Prurit anal nocturne</td><td>Flubendazole, 2 prises espacées 2–3 sem + hygiène</td></tr>
+<tr><td>Ascaridiose</td><td><em>A. lumbricoides</em></td><td>Orale indirecte via environnement</td><td>Éosinophilie lors migration ; occlusion possible</td><td>Antiparasitaire type flubendazole cité</td></tr>
+<tr><td>Téniasis</td><td><em>T. saginata</em></td><td>Viande bovine contaminée</td><td>Souvent discret ; anneaux dans selles</td><td>Prévention cuisson/congélation</td></tr>
+<tr><td>Cysticercose</td><td><em>T. solium</em></td><td>Homme hôte intermédiaire accidentel</td><td>Neurocysticercose : épilepsie, troubles neuro</td><td>Non détaillé dans ce support</td></tr>
+<tr><td>Giardiose</td><td><em>Giardia</em></td><td>Féco-orale directe/indirecte</td><td>Diarrhée, irritation + malabsorption</td><td>Métronidazole + hygiène</td></tr>
+<tr><td>Coccidioses</td><td><em>Cryptosporidium</em> etc.</td><td>Féco-orale, eau/mains/aliments</td><td>Opportunistes ; diarrhées chroniques si immunodépression</td><td>Restaurer immunité + symptomatique ± antiparasitaires</td></tr>
+</table></div>
+</section>
+
+<section id="pieges">
+<h2>17. Pièges et formulations du support à ne pas mélanger</h2>
+<div class="callout warn"><strong>1. Oxyurose :</strong> le symptôme typique est le <strong>prurit le soir / la nuit</strong>, mais le scotch-test se fait <strong>le matin</strong> avant toilette et défécation.</div>
+<div class="callout warn"><strong>2. Ascaris :</strong> l’éosinophilie est rattachée à la <strong>migration larvaire tissulaire</strong>, pas à la simple présence du ver adulte dans l’intestin.</div>
+<div class="callout warn"><strong>3. Ascaris :</strong> les larves migrent dans les tissus ; les adultes sont dans le tube digestif et c’est à l’âge adulte qu’ils pondent.</div>
+<div class="callout warn"><strong>4. T. saginata :</strong> Homme = adulte intestinal, bovin = larves musculaires. Ne pas inverser hôte définitif/intermédiaire.</div>
+<div class="callout warn"><strong>5. T. solium :</strong> cysticercose = <strong>formes larvaires dans les tissus</strong>, pas ver adulte dans l’intestin.</div>
+<div class="callout warn"><strong>6. Giardia :</strong> trophozoïte = mobile et digestif ; kyste = résistant et environnemental.</div>
+<div class="callout warn"><strong>7. Coccidioses :</strong> le support insiste sur <strong>Cryptosporidium</strong> comme le plus fréquent des trois genres cités.</div>
+<div class="callout warn"><strong>8. Résistance antiparasitaire :</strong> le cours dit qu’elle existe et augmente, mais reste plus rare que la résistance bactérienne ; cette explication est conservée telle qu’enseignée.</div>
+<div class="callout orangebox"><strong>9. Traitements non détaillés :</strong> le support développe précisément flubendazole pour oxyurose et métronidazole pour giardiose, mais ne fournit pas une stratégie thérapeutique détaillée pour chaque autre parasitose. La fiche n’ajoute donc pas de molécules extérieures.</div>
+</section>
+
+<section id="flashcards">
+<h2>18. Flashcards express</h2>
+<div class="flashgrid">
+<div class="flash"><div class="q">1. Agent oxyurose ?</div><div class="a"><em>Enterobius vermicularis</em>.</div></div>
+<div class="flash"><div class="q">2. Taille oxyure ?</div><div class="a">≈ 1 cm.</div></div>
+<div class="flash"><div class="q">3. Signe typique oxyurose ?</div><div class="a">Prurit périanal vespéral/nocturne.</div></div>
+<div class="flash"><div class="q">4. Diagnostic oxyurose ?</div><div class="a">Scotch-test anal.</div></div>
+<div class="flash"><div class="q">5. Quand faire le scotch-test ?</div><div class="a">Le matin avant toilette et défécation.</div></div>
+<div class="flash"><div class="q">6. Traitement oxyurose ?</div><div class="a">Flubendazole.</div></div>
+<div class="flash"><div class="q">7. Répétition traitement oxyurose ?</div><div class="a">2–3 semaines plus tard.</div></div>
+<div class="flash"><div class="q">8. Cycle oxyurose ?</div><div class="a">2–3 semaines.</div></div>
+<div class="flash"><div class="q">9. Agent ascaridiose ?</div><div class="a"><em>Ascaris lumbricoides</em>.</div></div>
+<div class="flash"><div class="q">10. Taille ascaris ?</div><div class="a">10–25 cm.</div></div>
+<div class="flash"><div class="q">11. NFS ascaridiose ?</div><div class="a">Éosinophilie.</div></div>
+<div class="flash"><div class="q">12. Éosinophilie ascaris à quel moment ?</div><div class="a">Migration larvaire tissulaire.</div></div>
+<div class="flash"><div class="q">13. Amplitude éosinophilie du cours ?</div><div class="a">10 à 20× la normale.</div></div>
+<div class="flash"><div class="q">14. Complication mécanique ascaris ?</div><div class="a">Occlusion intestinale par pelote.</div></div>
+<div class="flash"><div class="q">15. Migration erratique ?</div><div class="a">Déplacement des adultes vers pancréas, appendice, voies biliaires, voire bouche/nez.</div></div>
+<div class="flash"><div class="q">16. Ténia = quel type de ver ?</div><div class="a">Ver plat / cestode.</div></div>
+<div class="flash"><div class="q">17. Partie d’attache du ténia ?</div><div class="a">Scolex.</div></div>
+<div class="flash"><div class="q">18. Segments du ténia ?</div><div class="a">Proglottis.</div></div>
+<div class="flash"><div class="q">19. Taille ténia adulte ?</div><div class="a">Plusieurs mètres, parfois >5–10 m.</div></div>
+<div class="flash"><div class="q">20. T. saginata : hôte intermédiaire ?</div><div class="a">Bovin.</div></div>
+<div class="flash"><div class="q">21. T. saginata : contamination Homme ?</div><div class="a">Viande bovine crue/insuffisamment cuite.</div></div>
+<div class="flash"><div class="q">22. Homme héberge quelle forme de T. saginata ?</div><div class="a">Forme adulte intestinale.</div></div>
+<div class="flash"><div class="q">23. T. solium ?</div><div class="a">Ténia du porc.</div></div>
+<div class="flash"><div class="q">24. Cysticercose ?</div><div class="a">Larves de T. solium dans les tissus humains.</div></div>
+<div class="flash"><div class="q">25. Neurocysticercose : signe majeur ?</div><div class="a">Crises d’épilepsie possibles.</div></div>
+<div class="flash"><div class="q">26. Giardiose : agent ?</div><div class="a"><em>Giardia</em>.</div></div>
+<div class="flash"><div class="q">27. Giardia trophozoïte ?</div><div class="a">Forme mobile, digestive.</div></div>
+<div class="flash"><div class="q">28. Giardia kyste ?</div><div class="a">Forme résistante dans l’environnement.</div></div>
+<div class="flash"><div class="q">29. Transmission Giardia ?</div><div class="a">Féco-orale directe ou indirecte.</div></div>
+<div class="flash"><div class="q">30. Taille des kystes dans le cas clinique ?</div><div class="a">≈15 µm.</div></div>
+<div class="flash"><div class="q">31. Deux mécanismes cliniques Giardia ?</div><div class="a">Action irritative + spoliatrice.</div></div>
+<div class="flash"><div class="q">32. Traitement giardiose ?</div><div class="a">Métronidazole.</div></div>
+<div class="flash"><div class="q">33. Contrôle selles après traitement Giardia ?</div><div class="a">2–4 semaines après la fin.</div></div>
+<div class="flash"><div class="q">34. Coccidiose la plus fréquente ?</div><div class="a"><em>Cryptosporidium</em>.</div></div>
+<div class="flash"><div class="q">35. Autres coccidies citées ?</div><div class="a"><em>Cyclospora</em>, <em>Cystoisospora</em>.</div></div>
+<div class="flash"><div class="q">36. Immunocompétent : durée coccidiose ?</div><div class="a">Souvent résolution spontanée en 2–3 semaines.</div></div>
+<div class="flash"><div class="q">37. Immunodéprimé : risque ?</div><div class="a">Infection chronique sévère, diarrhée, malabsorption, amaigrissement.</div></div>
+<div class="flash"><div class="q">38. Diagnostic coccidioses ?</div><div class="a">Selles : PCR / microscopie ± Ziehl-Neelsen.</div></div>
+<div class="flash"><div class="q">39. Priorité thérapeutique immunodéprimé ?</div><div class="a">Restaurer l’immunité si possible.</div></div>
+<div class="flash"><div class="q">40. Prévention coccidioses ?</div><div class="a">Mains, eau sûre, cuisson/épluchage, éviter eau contaminée.</div></div>
+</div>
+</section>
+
+<section class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>Oxyurose :</strong> <em>Enterobius</em>, prurit anal nocturne, scotch-test le matin, flubendazole à répéter à 2–3 semaines. <strong>Ascaridiose :</strong> <em>Ascaris</em> 10–25 cm, contamination orale indirecte, migration larvaire → éosinophilie, adulte intestinal, risque d’occlusion et migration erratique. <strong>Téniasis :</strong> cestode à scolex + proglottis ; <em>T. saginata</em> = bovin intermédiaire + viande bovine crue, Homme = adulte intestinal. <strong>T. solium</strong> peut donner une cysticercose si l’Homme devient hôte intermédiaire, avec risque de neurocysticercose. <strong>Giardia :</strong> trophozoïte mobile + kyste résistant, transmission féco-orale, action irritative + spoliatrice, traitement par métronidazole. <strong>Coccidioses :</strong> surtout <em>Cryptosporidium</em>, opportunistes chez immunodéprimés ; diagnostic selles/PCR/microscopie, et restauration de l’immunité au centre de la prise en charge.</p>
+</section>
+
+<section>
+<h2>Source</h2>
+<p class="small">Fiche construite uniquement à partir du PDF « 7 - Parasitoses alimentaires.pdf » fourni par l’utilisateur. Les chiffres, traitements et formulations sont repris du support ; les points non détaillés dans le cours n’ont pas été complétés par des connaissances extérieures.</p>
+</section>
+
+</main></body></html>
