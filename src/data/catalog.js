@@ -28,7 +28,7 @@ const SEMESTERS = [
 ]
 
 const DEFAULT_SUBJECTS = {
-  s1: ['infectio', 'hemato', 'genetique'],
+  s1: ['infectio', 'hemato', 'genetique', 'uerb'],
   s2: [],
 }
 
@@ -44,6 +44,10 @@ const SUBJECT_META = {
   genetique: {
     title: 'GÉNÉTIQUE',
     icon: '🧬',
+  },
+  uerb: {
+    title: 'UERB',
+    icon: '📘',
   },
 }
 
