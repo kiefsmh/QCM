@@ -330,3 +330,134 @@
     min-height: 82vh;
   }
 }
+.training-zone {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 22px;
+  align-items: start;
+  margin-top: 24px;
+}
+
+.flashcards-panel {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 26px;
+  padding: 22px;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+}
+
+.flashcards-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.flashcards-top h2 {
+  margin: 0;
+  font-size: clamp(23px, 3vw, 32px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #111827;
+}
+
+.flashcard-card {
+  width: 100%;
+  min-height: 240px;
+  border: 2px solid #d8dce8;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #f8fafc, #ffffff);
+  padding: 22px;
+  color: #111827;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.flashcard-card:hover {
+  transform: translateY(-2px);
+  border-color: #111827;
+}
+
+.flashcard-card.flipped {
+  background: #111827;
+  border-color: #111827;
+  color: white;
+}
+
+.flashcard-label {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: #e5e7eb;
+  color: #111827;
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.flashcard-card.flipped .flashcard-label {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.flashcard-card strong {
+  display: block;
+  margin: 24px 0;
+  font-size: clamp(20px, 2.5vw, 28px);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.flashcard-card small {
+  color: #667085;
+  font-weight: 700;
+}
+
+.flashcard-card.flipped small {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.flashcards-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.secondary-button {
+  border: 0;
+  border-radius: 16px;
+  padding: 14px 16px;
+  background: #f3f4f6;
+  color: #111827;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+@media (max-width: 980px) {
+  .training-zone {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .flashcards-panel {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .flashcards-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .flashcard-card {
+    min-height: 210px;
+  }
+}
