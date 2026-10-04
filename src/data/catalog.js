@@ -200,8 +200,8 @@ export const catalog = {
         const subject = createSubject(subjectId)
 
         subject.courses = [...courseMap.values()]
-          .filter((course) => course.semesterId === semester.id && course.subjectId === subjectId)
-          .sort((a, b) => a.title.localeCompare(b.title, 'fr'))
+  .filter((course) => course.semesterId === semester.id && course.subjectId === subjectId)
+  .sort((a, b) => a.id.localeCompare(b.id, 'fr', { numeric: true }))
 
         subject.profAnnales = profAnnalesBySubject
           .get(subjectKey(semester.id, subjectId))
