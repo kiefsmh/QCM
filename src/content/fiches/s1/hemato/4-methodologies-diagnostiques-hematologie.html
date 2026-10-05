@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche - Méthodologies diagnostiques en hématologie cellulaire</title>
+<style>
+:root{
+ --g:#1a7a4a;--gs:#eaf7ef;--r:#dc2626;--rs:#fee2e2;--o:#d97706;--os:#fff7ed;
+ --b:#2563eb;--bs:#eff6ff;--p:#6d28d9;--ps:#f2ecff;--ink:#1c1c2e;--line:#d8dce8;
+ --bg:#f6f7fb;--teal:#0f766e;--teals:#ecfeff
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}
+.page{max-width:1180px;margin:auto;padding:32px 18px 64px}
+.hero{background:linear-gradient(135deg,#fff,#f0fdf4 55%,#eff6ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 40px rgba(27,38,49,.06)}
+.kicker{color:var(--g);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px}
+h1{font-size:38px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}
+.subtitle{max-width:1050px;margin:0;color:#374151}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer;font-size:13px}
+.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:12px;font-weight:800;padding:4px 9px;border-radius:999px}
+.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.green{background:var(--gs);color:#166534}.purple{background:var(--ps);color:#4c1d95}.blue{background:var(--bs);color:#1d4ed8}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}
+nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}
+nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav a{color:var(--ink);text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(27,38,49,.035)}
+h2{font-size:25px;margin:0 0 16px;letter-spacing:-.02em}h3{font-size:18px;margin:22px 0 10px;color:var(--g)}
+p{margin:8px 0}ul,ol{margin:8px 0 12px;padding-left:22px}li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}
+.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}
+.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}.tealbox{border-left-color:var(--teal);background:var(--teals)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:#374151;overflow-x:auto;white-space:pre-wrap}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px;min-width:760px}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left;color:#111827}
+.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+.flash .q{background:#f9fafb;padding:11px 12px;font-weight:800;border-bottom:1px solid var(--line)}
+.flash .a{padding:11px 12px;color:#374151}
+.source-note{font-size:12.5px;color:#4b5563;margin:18px 4px}
+@media(max-width:780px){
+ h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{font-size:12.4px;min-width:650px}
+}
+@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<main class="page">
+
+<header class="hero">
+<div class="kicker">UE3 — Tissu sanguin</div>
+<h1>Méthodologies diagnostiques en hématologie cellulaire</h1>
+<p class="subtitle">Fiche complète orientée D1/EDN/QCM : principales hémopathies, NFS, biochimie, analyse de l’hémoglobine, Coombs, électrophorèse des protéines, myélogramme, BOM, cytométrie en flux, cytogénétique, biologie moléculaire et conduite à tenir devant les principales anomalies de l’hémogramme.</p>
+<div class="tags">
+<span class="tag red">🔴 Algorithmes d’anémie</span>
+<span class="tag orange">🟠 Myélogramme / BOM</span>
+<span class="tag green">🟢 Cytométrie</span>
+<span class="tag purple">🧬 Cytogénétique / biologie moléculaire</span>
+<span class="tag blue">📊 Anomalies de NFS</span>
+</div>
+<div class="actions">
+<button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+<button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+</div>
+</header>
+
+<nav>
+<h2>Plan rapide</h2>
+<ol>
+<li><a href="#hemo">Grandes hémopathies</a></li>
+<li><a href="#gr">Anomalies du globule rouge</a></li>
+<li><a href="#nfs">NFS / frottis</a></li>
+<li><a href="#biochimie">Biochimie</a></li>
+<li><a href="#hb">Analyse de l’hémoglobine</a></li>
+<li><a href="#immuno">Coombs / électrophorèse</a></li>
+<li><a href="#myelo">Myélogramme</a></li>
+<li><a href="#bom">Biopsie ostéo-médullaire</a></li>
+<li><a href="#cyto">Immunophénotypage</a></li>
+<li><a href="#cytogen">Cytogénétique</a></li>
+<li><a href="#molec">Biologie moléculaire</a></li>
+<li><a href="#autres">Culture / biopsie / imagerie</a></li>
+<li><a href="#anemie">Démarche devant une anémie</a></li>
+<li><a href="#plaquettes">Plaquettes</a></li>
+<li><a href="#neutro">Neutropénie / agranulocytose</a></li>
+<li><a href="#pancyto">Bicytopénie / pancytopénie</a></li>
+<li><a href="#polyglob">Polyglobulie</a></li>
+<li><a href="#thrombocytose">Thrombocytose</a></li>
+<li><a href="#pn">Polynucléose neutrophile</a></li>
+<li><a href="#lympho">Hyperlymphocytose</a></li>
+<li><a href="#blastes">Leucoblastes</a></li>
+<li><a href="#pieges">Pièges du support</a></li>
+<li><a href="#recap">Mini-récap</a></li>
+<li><a href="#flashcards">Flashcards express</a></li>
+</ol>
+</nav>
+
+<section id="hemo">
+<h2>1. Présentation schématique des principales hémopathies</h2>
+<div class="callout"><strong>Cadre du cours :</strong> la moelle produit GR, GB et plaquettes. Ses dysfonctionnements sont classés en <strong>excès de production</strong>, <strong>défauts de production</strong> et <strong>maladies génétiques du globule rouge</strong>.</div>
+
+<h3>Excès de production</h3>
+<div class="tablewrap"><table>
+<tr><th>Situation</th><th>Mécanisme / lignée</th><th>Exemples du cours</th></tr>
+<tr><td><strong>Leucémie aiguë</strong></td><td>Blocage de différenciation + poursuite de prolifération → envahissement par blastes</td><td>LAM si branche myéloïde ; LAL si branche lymphoïde</td></tr>
+<tr><td><strong>Leucémies chroniques / syndromes prolifératifs</strong></td><td>Hyperproduction dérégulée de cellules plus matures</td><td>Vaquez = GR ; thrombocytémie essentielle = plaquettes ; LMC = granulocytaires</td></tr>
+<tr><td><strong>Syndromes lymphoprolifératifs</strong></td><td>Expansion lymphoïde mature</td><td>Lymphomes B/T, LLC dans le cadre du cours</td></tr>
+</table></div>
+<div class="callout orangebox"><strong>À retenir :</strong> « aiguë » = blastes/immaturité ; « chronique » = cellules plus matures. Le cours décrit aussi une possible transformation aiguë d’une hémopathie chronique.</div>
+
+<h3>Défauts de production</h3>
+<ul>
+<li>CSH absentes / moelle défaillante → <strong>aplasie médullaire</strong>.</li>
+<li>CSH présentes mais anormales → <strong>myélodysplasie</strong>.</li>
+<li>Moelle envahie ou fibrosée → perte d’espace pour l’hématopoïèse normale.</li>
+<li>Carences : fer surtout pour la lignée rouge ; B9/B12 peuvent toucher plusieurs lignées.</li>
+</ul>
+</section>
+
+<section id="gr">
+<h2>2. Anomalies du globule rouge</h2>
+<p>Le GR est biconcave, mesure environ <strong>7–8 µm</strong> et doit franchir des capillaires d’environ <strong>3 µm</strong>. Sa survie dépend de sa membrane, de son hémoglobine et de sa production d’énergie.</p>
+<div class="grid3">
+<div class="card"><strong>Membrane</strong><p>Rigidité → perte de déformabilité → hémolyse. Exemple : sphérocytose héréditaire (ankyrine, bande 3, spectrine…).</p></div>
+<div class="card"><strong>Énergie</strong><p>Déficits enzymatiques glycolytiques / G6PD / pyruvate kinase → défaut ATP ou défense anti-oxydante → hémolyse.</p></div>
+<div class="card"><strong>Hémoglobine</strong><p>Thalassémie = quantité insuffisante d’une chaîne ; drépanocytose = Hb anormale par mutation de la chaîne β.</p></div>
+</div>
+</section>
+
+<section id="nfs">
+<h2>3. NFS et frottis sanguin</h2>
+<ul>
+<li>La NFS/hémogramme est l’examen le plus prescrit ; elle apporte une première analyse quantitative.</li>
+<li>Le frottis sanguin coloré au <strong>May-Grünwald Giemsa (MGG)</strong> étudie la morphologie.</li>
+<li>Les <strong>réticulocytes</strong> doivent être prescrits spécifiquement ; ils augmentent en cas de régénération, hémorragie ou hémolyse.</li>
+<li>Prélèvement avec anticoagulant chélateur du calcium.</li>
+<li>Suffixe <strong>-blaste</strong> = cellule immature.</li>
+</ul>
+
+<h3>Quatre questions cliniques avant l’hémogramme</h3>
+<div class="grid2">
+<div class="card"><strong>Syndrome anémique</strong><p>Pâleur, tachycardie, vertiges, dyspnée, fatigue.</p></div>
+<div class="card"><strong>Syndrome hémorragique</strong><p>Pétéchies notamment en cas de thrombopénie.</p></div>
+<div class="card"><strong>Syndrome infectieux</strong><p>Persistant, récidivant, sévère ou inexpliqué.</p></div>
+<div class="card"><strong>Syndrome tumoral</strong><p>Splénomégalie, adénopathie, hépatomégalie.</p></div>
+</div>
+</section>
+
+<section id="biochimie">
+<h2>4. Biochimie : quel examen dans quelle situation ?</h2>
+<div class="tablewrap"><table>
+<tr><th>Examen</th><th>Situation clinique citée</th></tr>
+<tr><td>Bilirubines, haptoglobine, LDH</td><td>Anémie hémolytique</td></tr>
+<tr><td>Fer sérique, ferritine, transferrine / récepteur soluble</td><td>Anémie microcytaire</td></tr>
+<tr><td>B9 sérique/érythrocytaire, B12</td><td>Anémie macrocytaire et/ou cytopénies</td></tr>
+<tr><td>CRP, fibrinogène</td><td>Syndrome inflammatoire</td></tr>
+<tr><td>Créatinine</td><td>Myélome, bilan pré-thérapeutique</td></tr>
+<tr><td>Calcémie</td><td>Myélome</td></tr>
+<tr><td>EPO</td><td>Polyglobulie</td></tr>
+<tr><td>Acide urique</td><td>Syndromes myéloprolifératifs, syndrome de lyse</td></tr>
+<tr><td>GGT, ASAT/ALAT</td><td>Anémie macrocytaire, pré-thérapeutique</td></tr>
+<tr><td>Ionogramme</td><td>Systématique dans le tableau du cours</td></tr>
+</table></div>
+</section>
+
+<section id="hb">
+<h2>5. Analyse de l’hémoglobine</h2>
+<div class="schema">Suspicion d'hémoglobinopathie
+→ isoélectrofocalisation / électrophorèse
+→ identification des fractions Hb
+→ HPLC
+→ quantification précise des fractions anormales</div>
+<ul>
+<li>Recherche notamment de drépanocytose et thalassémie.</li>
+<li>Le nouveau-né possède une forte proportion d’<strong>Hb F</strong>.</li>
+<li>Dans l’exemple du cours, une <strong>Hb S ≈ 40 %</strong> est interprétée comme profil hétérozygote.</li>
+<li>En HPLC, la taille du pic est proportionnelle à la concentration.</li>
+</ul>
+</section>
+
+<section id="immuno">
+<h2>6. Analyses immunologiques</h2>
+<h3>Test de Coombs direct</h3>
+<p>Il met en évidence des <strong>anticorps ou du complément fixés sur les GR</strong>, notamment dans une anémie hémolytique auto-immune.</p>
+
+<h3>Électrophorèse des protéines sériques</h3>
+<ul>
+<li>Hypogammaglobulinémie : notamment LLC / hémopathies lymphoïdes.</li>
+<li>Pic monoclonal : myélome (IgG, IgA) ou Waldenström (IgM).</li>
+<li>Le grand pic principal correspond à l’albumine.</li>
+</ul>
+</section>
+
+<section id="myelo">
+<h2>7. Myélogramme</h2>
+<p>Prélèvement médullaire sternum ou crêtes/épines iliaques, sous anesthésie locale, analysé en cytologie après coloration MGG.</p>
+<div class="callout"><strong>Lecture structurée :</strong> 1) richesse ; 2) mégacaryocytes ; 3) répartition des populations ; 4) anomalies morphologiques ; 5) cellules malignes.</div>
+
+<div class="tablewrap"><table>
+<tr><th>Anomalie</th><th>Orientation du cours</th></tr>
+<tr><td>Mégaloblastes</td><td>Carence B9/B12</td></tr>
+<tr><td>PNN hypogranulés / hyposegmentés</td><td>Syndrome myélodysplasique</td></tr>
+<tr><td>Blocage de maturation granulocytaire</td><td>Agranulocytose médicamenteuse</td></tr>
+<tr><td>Sidéroblastes en couronne à Perls</td><td>Syndrome myélodysplasique</td></tr>
+<tr><td>Blastes nombreux, homogènes</td><td>Leucémie aiguë</td></tr>
+</table></div>
+</section>
+
+<section id="bom">
+<h2>8. Biopsie ostéo-médullaire (BOM)</h2>
+<p>La BOM récupère une <strong>carotte osseuse médullaire</strong> au niveau iliaque postérieur et permet une analyse histologique de l’architecture et de la richesse.</p>
+<div class="callout orangebox"><strong>Indications clés :</strong> échec du myélogramme, recherche de myélofibrose, leucémie à tricholeucocytes, cancer métastatique osseux, envahissement nodulaire.</div>
+<p>La myélofibrose n’est pas correctement évaluée par simple myélogramme : la BOM est l’examen adapté.</p>
+</section>
+
+<section id="cyto">
+<h2>9. Immunophénotypage par cytométrie en flux</h2>
+<p>Des cellules en suspension sont marquées par des anticorps fluorescents puis analysées une à une devant un laser. Le système comprend un volet <strong>fluidique</strong>, <strong>optique</strong> et <strong>électronique</strong>.</p>
+<div class="tablewrap"><table>
+<tr><th>Lignée</th><th>Marqueur(s)</th></tr>
+<tr><td>Progéniteurs</td><td>CD34</td></tr>
+<tr><td>Lymphoïde B</td><td>CD19, CD20</td></tr>
+<tr><td>Lymphoïde T</td><td>CD3</td></tr>
+<tr><td>Érythroïde</td><td>CD235a, CD36</td></tr>
+<tr><td>Plaquettaire</td><td>CD41a, CD61a</td></tr>
+<tr><td>Granulocytaire</td><td>CD15</td></tr>
+<tr><td>Monocytaire</td><td>CD14</td></tr>
+</table></div>
+<div class="callout warn"><strong>LLC :</strong> l’exemple du cours montre une population B CD19+ exprimant aberramment CD5, normalement surtout T. Le score de Matutes utilise notamment CD5, CD23, CD79b, FMC7 et l’intensité des Ig de surface.</div>
+</section>
+
+<section id="cytogen">
+<h2>10. Cytogénétique</h2>
+<h3>Caryotype</h3>
+<p>Cellules immatures capables de mitose → culture → blocage en métaphase par colchicine → coloration et étude du nombre/structure des chromosomes.</p>
+<h3>FISH</h3>
+<p>Sondes fluorescentes complémentaires d’un gène ou d’un locus ; signal lorsqu’elles s’hybrident à la cible.</p>
+<div class="tablewrap"><table>
+<tr><th>Anomalie</th><th>Pathologie associée dans le cours</th></tr>
+<tr><td>t(9;22)</td><td>LMC ; chromosome 22 = Philadelphie ; BCR-ABL</td></tr>
+<tr><td>t(15;17)</td><td>Leucémie aiguë promyélocytaire (LAM3) ; PML-RARA</td></tr>
+<tr><td>t(14;18)</td><td>Lymphome folliculaire</td></tr>
+<tr><td>t(8;14)</td><td>Lymphome de Burkitt</td></tr>
+<tr><td>t(11;14)</td><td>Lymphome du manteau</td></tr>
+</table></div>
+</section>
+
+<section id="molec">
+<h2>11. Biologie moléculaire</h2>
+<ul>
+<li>PCR classique, PCR quantitative en temps réel, NGS.</li>
+<li>ARN : transcrits de fusion <strong>BCR-ABL</strong>, <strong>PML-RARA</strong>.</li>
+<li>ADN : <strong>JAK2 V617F</strong>, <strong>CALR</strong>, <strong>FLT3-ITD</strong>...</li>
+<li>NGS : panel d’environ <strong>50 gènes</strong> dans le support, notamment dans les leucémies aiguës.</li>
+</ul>
+<div class="callout bluebox"><strong>LMC :</strong> BCR-ABL est recherché au diagnostic puis quantifié au cours du traitement, notamment tous les 3 mois au début.</div>
+</section>
+
+<section id="autres">
+<h2>12. Autres outils</h2>
+<div class="grid3">
+<div class="card"><strong>Culture de progéniteurs</strong><p>Moins utilisée aujourd’hui. Dans Vaquez : pousse spontanée des progéniteurs érythroïdes sans EPO = argument diagnostique.</p></div>
+<div class="card"><strong>Biopsie ganglionnaire</strong><p>Anatomopathologie, cytologie, immunophénotypage, cytogénétique, biologie moléculaire, bactériologie.</p></div>
+<div class="card"><strong>Imagerie</strong><p>Échographie, radiographie, scanner, IRM, TEP-scan ; écho pour splénomégalie, TEP pour zones métaboliquement actives.</p></div>
+</div>
+</section>
+
+<section id="anemie">
+<h2>13. Démarche devant une anémie</h2>
+<div class="callout"><strong>Seuils d’Hb :</strong> femme &lt;120 g/L ; homme &lt;130 g/L ; nourrisson &lt;140 g/L ; femme enceinte &lt;105 g/L.</div>
+<div class="schema">ANÉMIE
+→ regarder VGM
+
+VGM < 80 fL adulte (<72 fL enfant)
+→ microcytaire
+→ ferritine + CRP
+   • ferritine basse → carence martiale
+   • ferritine haute + CRP haute → inflammation
+   • ferritine normale + CRP normale → thalassémie → étude Hb
+
+VGM 80–100 ou >100 fL
+→ réticulocytes
+   • >120 G/L → régénérative → cause périphérique : hémorragie / hémolyse
+   • <120 G/L → arégénérative → cause centrale → myélogramme ± BOM</div>
+<h3>Pièges de concentration</h3>
+<ul>
+<li>Hémodilution : fausse anémie possible.</li>
+<li>Déshydratation/diurétiques : hémoconcentration pouvant masquer la sévérité d’une anémie.</li>
+</ul>
+</section>
+
+<section id="plaquettes">
+<h2>14. Thrombopénie</h2>
+<p>Norme plaquettaire : <strong>150–400 G/L</strong>. Thrombopénie &lt;150 G/L.</p>
+<div class="callout warn"><strong>Première étape :</strong> éliminer une fausse thrombopénie par agrégation sur EDTA : vérifier le frottis puis répéter sur tube citraté si besoin.</div>
+<ul>
+<li>Destruction périphérique immunologique.</li>
+<li>Séquestration splénique.</li>
+<li>Défaut de production médullaire.</li>
+<li>Consommation excessive : MAT, CIVD.</li>
+</ul>
+<p>Suspicion de MAT → rechercher rapidement des <strong>schizocytes</strong>.</p>
+</section>
+
+<section id="neutro">
+<h2>15. Neutropénie / agranulocytose</h2>
+<div class="callout warn"><strong>Agranulocytose = PNN &lt;0,5 G/L</strong>. Fièvre + agranulocytose = urgence infectieuse.</div>
+<ul>
+<li>Cause médicamenteuse à rechercher en priorité.</li>
+<li>Rechercher foyer infectieux et réaliser prélèvements adaptés.</li>
+<li>Myélogramme possible pour éliminer/confirmer leucémie aiguë.</li>
+<li>Autres causes : infections virales, B9/B12, myélodysplasie, envahissement, causes congénitales.</li>
+<li>Cas clinique du cours : clozapine.</li>
+</ul>
+</section>
+
+<section id="pancyto">
+<h2>16. Bicytopénie / pancytopénie</h2>
+<p><strong>Bicytopénie</strong> = deux cytopénies. <strong>Pancytopénie</strong> = anémie + neutropénie + thrombopénie.</p>
+<div class="tablewrap"><table>
+<tr><th>Aspect médullaire</th><th>Orientation</th></tr>
+<tr><td>Moelle riche / envahie</td><td>Blastes, plasmocytes, cellules lymphoïdes pathologiques, métastases</td></tr>
+<tr><td>Richesse normale mais morphologie anormale</td><td>B9/B12, myélodysplasie</td></tr>
+<tr><td>Myélogramme pauvre/non informatif</td><td>BOM pour fibrose ; sans fibrose → aplasie possible</td></tr>
+</table></div>
+</section>
+
+<section id="polyglob">
+<h2>17. Polyglobulie</h2>
+<div class="grid2">
+<div class="card"><strong>Primitive</strong><p>Maladie de Vaquez ; JAK2 V617F ; activation constitutive de la voie du récepteur EPO.</p></div>
+<div class="card"><strong>Secondaire</strong><p>Hypoxie → EPO rénale (SAOS, BPCO, altitude) ou production tumorale d’EPO.</p></div>
+</div>
+<div class="callout warn"><strong>Cas Vaquez :</strong> Hb ~200 g/L, Ht ~60 %, thrombocytose, érythrose, acouphènes, prurit aquagénique. <strong>Ht &gt;60 %</strong> = hyperviscosité et risque thrombotique majeur ; saignée citée pour diminuer rapidement l’Ht.</div>
+</section>
+
+<section id="thrombocytose">
+<h2>18. Thrombocytose</h2>
+<p>Thrombocytose : <strong>plaquettes &gt;400 G/L</strong>.</p>
+<div class="schema">Thrombocytose
+→ éliminer fausse thrombocytose
+→ rechercher cause réactionnelle : infection / inflammation / carence martiale
+→ contexte + CRP + ferritine
+→ si aucune cause secondaire
+→ rechercher syndrome myéloprolifératif : JAK2 V617F + CALR + MPL</div>
+</section>
+
+<section id="pn">
+<h2>19. Polynucléose neutrophile</h2>
+<p>Seuil donné dans la partie 2 : <strong>PNN &gt;7,5 G/L</strong>.</p>
+<div class="schema">Polynucléose neutrophile
+→ rechercher infection/inflammation
+→ CRP/fibrinogène + prélèvements microbiologiques selon point d'appel
+→ si non réactionnelle
+→ rechercher hémopathie
+→ si myélémie + splénomégalie : penser LMC
+→ BCR-ABL / t(9;22)</div>
+</section>
+
+<section id="lympho">
+<h2>20. Hyperlymphocytose</h2>
+<ul>
+<li>Examiner le frottis et surtout exclure des lymphoblastes.</li>
+<li>Enfant : cause infectieuse/virale en premier.</li>
+<li>Adolescent : lymphocytes hyperbasophiles → syndrome mononucléosique.</li>
+<li>Adulte, surtout &gt;40 ans : rechercher syndrome lymphoprolifératif, notamment LLC.</li>
+</ul>
+<div class="callout"><strong>Examen clé chez l’adulte :</strong> immunophénotypage des lymphocytes sanguins.</div>
+</section>
+
+<section id="blastes">
+<h2>21. Présence de leucoblastes</h2>
+<div class="callout warn"><strong>Leucoblastes dans le sang périphérique = suspicion de leucémie aiguë.</strong></div>
+<p>Bilan cité : immunophénotypage, myélogramme, cytogénétique, biologie moléculaire, TP/TCK/fibrinogène, bilan de lyse (acide urique, K+, Ca2+) et bilan pré-thérapeutique.</p>
+</section>
+
+<section id="pieges">
+<h2>22. Pièges et incohérences internes du support</h2>
+<div class="callout warn"><strong>1. Partie « leucémie chronique lymphoïde » :</strong> une ligne indique « trop de PN : leucémie lymphoïde chronique », alors que le reste du cours et l’immunophénotypage décrivent la LLC comme une prolifération lymphocytaire B. Formulation incohérente du ronéo.</div>
+<div class="callout warn"><strong>2. QRU sur la thalassémie :</strong> le corrigé écrit « Faux. L’hémoglobine est anormale dans le cas d’une thalassémie », ce qui contredit à la fois l’item et la partie de cours qui décrit surtout une quantité insuffisante de chaîne. À ne pas corriger silencieusement.</div>
+<div class="callout warn"><strong>3. QRM neutropénie :</strong> les propositions parlent de PNE &lt;1,5 ou &lt;0,5 G/L, puis le corrigé précise que ces seuils concernent les <strong>PNN</strong>. Le piège est explicitement signalé dans la correction.</div>
+<div class="callout warn"><strong>4. QRM anémie normocytaire :</strong> le corrigé associe la TSH à l’« hyperthyroïdie », tandis que le tableau de démarche diagnostique associe l’anémie normo/macrocytaire arégénérative à l’<strong>hypothyroïdie</strong>. Incohérence interne à retenir comme telle.</div>
+<div class="callout warn"><strong>5. « Syndrome néodysplasique » :</strong> la partie NFS emploie cette formulation pour des PNN à 1–2 lobes, alors que le reste du support parle de syndrome myélodysplasique.</div>
+</section>
+
+<section id="recap" class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>Anémie :</strong> VGM d’abord ; microcytaire → ferritine/CRP ; normo-macrocytaire → réticulocytes, seuil <strong>120 G/L</strong>. <strong>Thrombopénie :</strong> vérifier faux résultat EDTA avant toute chose. <strong>Agranulocytose :</strong> PNN &lt;<strong>0,5 G/L</strong>, cause médicamenteuse à rechercher, urgence si fièvre. <strong>Myélogramme</strong> = cytologie ; <strong>BOM</strong> = architecture/fibrose. <strong>Cytométrie</strong> : CD19/20 B, CD3 T, CD14 monocytes, CD15 granulocytes, CD41a/61a plaquettes, CD235a/36 érythroïdes. <strong>LMC</strong> : myélémie + PNN + splénomégalie → t(9;22) / BCR-ABL. <strong>Vaquez</strong> : JAK2 V617F, prurit aquagénique, Ht &gt;60 % = gravité. <strong>Leucoblastes circulants</strong> → leucémie aiguë jusqu’à caractérisation.</p>
+</section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « Méthodologies diagnostiques en hématologie cellulaire » fourni par l’utilisateur. Les données, seuils, formulations, QCM et incohérences sont conservés selon le support, sans ajout de connaissances extérieures.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+<div class="flash">
+  <div class="q">Dans ce cours, quels sont les trois grands groupes de pathologies lorsque la moelle osseuse dysfonctionne ?</div>
+  <div class="a">Les anomalies par excès de production, les anomalies par défaut de production et les maladies génétiques du globule rouge.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle distinction le cours fait-il entre « myéloïde » et « médullaire » ?</div>
+  <div class="a">Myéloïde signifie non lymphoïde ; cela ne signifie pas simplement « provenant de la moelle ».</div>
+</div>
+<div class="flash">
+  <div class="q">Quel mécanisme définit une leucémie aiguë dans le schéma du cours ?</div>
+  <div class="a">Un blocage de différenciation avec poursuite de la prolifération entraîne un envahissement médullaire par des cellules jeunes immatures appelées blastes.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment distingue-t-on leucémie aiguë myéloïde et leucémie aiguë lymphoïde dans le cours ?</div>
+  <div class="a">La leucémie aiguë myéloïde touche la branche myéloïde ; la leucémie aiguë lymphoïde touche la branche lymphoïde.</div>
+</div>
+<div class="flash">
+  <div class="q">Que signifient les termes « aiguë » et « chronique » dans la classification pédagogique du cours ?</div>
+  <div class="a">« Aiguë » renvoie à des cellules jeunes et immatures, les blastes ; « chronique » à des cellules plus matures.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels excès cellulaires sont associés à la maladie de Vaquez, à la thrombocytémie essentielle et à la LMC ?</div>
+  <div class="a">Maladie de Vaquez : excès de globules rouges ; thrombocytémie essentielle : excès de plaquettes ; LMC : excès de cellules granulocytaires avec myélémie.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle évolution d’une leucémie chronique non traitée est décrite dans le cours ?</div>
+  <div class="a">Une accumulation d’anomalies peut aboutir à un blocage de différenciation et à une transformation aiguë, plus grave.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles trois situations médullaires peuvent entraîner un défaut global de production sanguine ?</div>
+  <div class="a">Absence/défaillance des CSH avec aplasie, CSH présentes mais malades dans la myélodysplasie, ou moelle envahie/fibrosée empêchant l’hématopoïèse normale.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel retentissement hématologique le cours attribue-t-il à une carence en fer par rapport à une carence en B9/B12 ?</div>
+  <div class="a">La carence en fer donne surtout une anémie ; les carences B9/B12 peuvent donner une pancytopénie à prédominance érythroïde.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi un globule rouge de 7–8 µm peut-il franchir un capillaire d’environ 3 µm ?</div>
+  <div class="a">Grâce à sa forme biconcave, sa déformabilité membranaire et ses pompes dépendantes de l’ATP produit par la glycolyse.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel mécanisme relie un défaut d’ATP du globule rouge à l’hémolyse ?</div>
+  <div class="a">Sans ATP, les pompes membranaires fonctionnent mal, le GR perd sa déformabilité, devient plus sphérique, se bloque plus facilement et est recyclé par les macrophages.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles protéines membranaires sont citées dans la sphérocytose héréditaire de Minkowski-Chauffard ?</div>
+  <div class="a">Ankyrine, bande 3 et spectrine sont citées comme protéines pouvant être atteintes.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle différence faut-il retenir entre thalassémie et drépanocytose dans ce cours ?</div>
+  <div class="a">Thalassémie : hémoglobine quantitativement insuffisante par défaut de synthèse d’une chaîne ; drépanocytose : hémoglobine anormale liée à une mutation de la chaîne bêta.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le rôle respectif de la NFS automatisée et du frottis sanguin ?</div>
+  <div class="a">La NFS donne surtout une analyse quantitative ; le frottis coloré au MGG permet d’examiner les anomalies morphologiques cellulaires.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi les réticulocytes doivent-ils être prescrits séparément de la NFS standard ?</div>
+  <div class="a">Ils ne sont pas inclus automatiquement dans l’hémogramme ; leur numération renseigne sur la régénération médullaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Dans quelles situations le nombre de réticulocytes augmente-t-il selon le cours ?</div>
+  <div class="a">Lors d’une régénération, notamment après hémolyse ou hémorragie.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel aspect nucléaire d’un PNN normal est attendu, et quelle anomalie peut orienter vers un syndrome myélodysplasique ?</div>
+  <div class="a">Un PNN normal possède environ 3–4 lobes ; un noyau hyposegmenté à 1–2 lobes peut orienter vers une myélodysplasie.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels quatre grands syndromes cliniques doivent faire discuter une NFS en hématologie ?</div>
+  <div class="a">Syndrome anémique, syndrome hémorragique, syndrome infectieux et syndrome tumoral.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels signes sont associés dans le cours à une polyglobulie primitive ?</div>
+  <div class="a">Érythrose cutanée, prurit aquagénique et risque de thrombose ; une splénomégalie peut également être retrouvée.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels examens biochimiques le cours associe à une suspicion d’anémie hémolytique ?</div>
+  <div class="a">Bilirubine totale/non conjuguée/conjuguée, haptoglobine et LDH.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels examens biologiques sont privilégiés devant une anémie microcytaire ?</div>
+  <div class="a">Fer sérique, ferritine, transferrine/récepteurs solubles de la transferrine, et CRP selon le contexte inflammatoire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels dosages sont orientés par une anémie macrocytaire ou une cytopénie associée ?</div>
+  <div class="a">Vitamine B9 sérique/érythrocytaire et vitamine B12, avec selon le contexte GGT et transaminases.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle place l’EPO occupe-t-elle dans le bilan d’une polyglobulie ?</div>
+  <div class="a">Le dosage d’EPO aide à distinguer une polyglobulie primitive d’une cause secondaire stimulée par l’EPO.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel examen permet de détecter et distinguer les différents types d’hémoglobine dans une hémoglobinopathie ?</div>
+  <div class="a">L’isoélectrofocalisation/électrophorèse de l’hémoglobine identifie les sous-types, puis l’HPLC permet de les quantifier précisément.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle interprétation est donnée à une Hb S à environ 40 % dans l’exemple du cours ?</div>
+  <div class="a">Le cours l’interprète comme une drépanocytose hétérozygote.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel principe relie la taille d’un pic en HPLC à la quantité d’hémoglobine anormale ?</div>
+  <div class="a">La taille du pic est proportionnelle à la concentration de la molécule analysée.</div>
+</div>
+<div class="flash">
+  <div class="q">Que met en évidence un test de Coombs direct ?</div>
+  <div class="a">Des anticorps ou du complément fixés à la surface des globules rouges, utile notamment dans une anémie hémolytique auto-immune.</div>
+</div>
+<div class="flash">
+  <div class="q">Que recherche-t-on sur une électrophorèse des protéines sériques dans les hémopathies ?</div>
+  <div class="a">Une hypogammaglobulinémie, ou un pic monoclonal comme dans le myélome ou la maladie de Waldenström.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle immunoglobuline est surtout associée au pic monoclonal de Waldenström dans le cours ?</div>
+  <div class="a">Une IgM monoclonale.</div>
+</div>
+<div class="flash">
+  <div class="q">Dans quelles localisations peut-on réaliser un myélogramme selon le cours ?</div>
+  <div class="a">Au sternum ou aux épines/crêtes iliaques antérieures ou postérieures.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le type d’analyse fourni par le myélogramme ?</div>
+  <div class="a">Une analyse cytologique de la moelle au microscope optique, après étalement sur lame et coloration MGG.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi la présence de mégacaryocytes est-elle vérifiée sur un myélogramme ?</div>
+  <div class="a">Ils servent notamment de signature médullaire et confirment qu’on a bien prélevé de la moelle plutôt que seulement du sang.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels cinq points structurent la lecture d’un myélogramme physiologique dans le cours ?</div>
+  <div class="a">Richesse, présence de mégacaryocytes, répartition des populations, absence d’anomalies morphologiques et absence de cellules malignes.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle anomalie érythroblastique au myélogramme oriente vers une carence en B9/B12 ?</div>
+  <div class="a">La présence de mégaloblastes.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle anomalie des PNN au myélogramme oriente vers un syndrome myélodysplasique ?</div>
+  <div class="a">Des PNN hypogranulés ou hyposegmentés.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel profil de maturation granulocytaire oriente vers une agranulocytose médicamenteuse ?</div>
+  <div class="a">Un blocage avec excès de myéloblastes/promyélocytes et absence ou forte diminution des stades plus matures.</div>
+</div>
+<div class="flash">
+  <div class="q">Que met en évidence la coloration de Perls dans un syndrome myélodysplasique ?</div>
+  <div class="a">Des amas de fer autour du noyau des érythroblastes, donnant des sidéroblastes en couronne.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle différence essentielle faut-il retenir entre myélogramme et biopsie ostéo-médullaire ?</div>
+  <div class="a">Le myélogramme est cytologique ; la BOM est histologique et étudie l’architecture globale, la richesse et notamment la fibrose médullaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Dans quel site et avec quel type de prélèvement réalise-t-on une BOM ?</div>
+  <div class="a">À l’épine iliaque postérieure, avec un gros trocart permettant de prélever une carotte d’os contenant de la moelle.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles sont les principales indications de BOM citées dans le cours ?</div>
+  <div class="a">Échec du myélogramme, recherche de myélofibrose, leucémie à tricholeucocytes, cancers métastatiques osseux et envahissement nodulaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel retentissement périphérique peut donner une aplasie médullaire touchant les trois lignées ?</div>
+  <div class="a">Anémie, thrombopénie et neutropénie, donc pancytopénie.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le principe de l’immunophénotypage par cytométrie en flux ?</div>
+  <div class="a">Des cellules en suspension, marquées par des anticorps fluorescents, passent une à une devant un laser ; les fluorescences permettent d’identifier lignée et maturité.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels sont les trois grands systèmes d’un cytomètre en flux cités dans le cours ?</div>
+  <div class="a">Système fluidique, système optique et système électronique.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle vitesse d’analyse la cytométrie en flux permet-elle selon le support ?</div>
+  <div class="a">Plusieurs milliers de cellules par seconde.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi l’immunophénotypage est-il particulièrement utile dans les hémopathies lymphoïdes ?</div>
+  <div class="a">Il distingue des populations morphologiquement proches grâce à leur profil antigénique et est primordial dans les LAL, LLC et lymphomes.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels marqueurs faut-il associer aux principales lignées selon le tableau du cours ?</div>
+  <div class="a">CD34 progéniteurs ; CD19/CD20 B ; CD3 T ; CD235a/CD36 érythroïde ; CD41a/CD61a plaquettaire ; CD15 granulocytaire ; CD14 monocytaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi l’expression simultanée CD19+ CD5+ est-elle anormale dans l’exemple du cours ?</div>
+  <div class="a">CD19 est normalement B et CD5 surtout T ; une population B CD19+ exprimant aberramment CD5 est caractéristique de l’exemple de LLC.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels cinq marqueurs principaux sont cités pour le score de Matutes dans la LLC ?</div>
+  <div class="a">CD5+, CD23+, CD79b faible, FMC7− et immunoglobuline de surface faible.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels quatre examens de référence sont cités pour les hémopathies malignes ?</div>
+  <div class="a">Myélogramme, immunophénotypage, cytogénétique et biologie moléculaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le principe d’un caryotype en cytogénétique conventionnelle ?</div>
+  <div class="a">Cultiver des cellules capables de mitose, les bloquer en métaphase avec colchicine, puis colorer, classer et étudier les chromosomes.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi peut-on parfois réaliser un caryotype directement sur le sang dans une hémopathie ?</div>
+  <div class="a">En présence de myélémie, des cellules immatures circulantes encore capables de mitose peuvent être utilisées.</div>
+</div>
+<div class="flash">
+  <div class="q">Que signifie « myélémie » dans ce cours ?</div>
+  <div class="a">Présence anormale dans le sang de précurseurs immatures de la lignée granulocytaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le principe de la FISH ?</div>
+  <div class="a">Des sondes complémentaires d’un gène ou locus, marquées par fluorochromes, s’hybrident à la cible et produisent un signal fluorescent.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle translocation est associée à la LMC et quel gène de fusion en résulte ?</div>
+  <div class="a">t(9;22), donnant le réarrangement/transcrit BCR-ABL.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel chromosome est appelé chromosome de Philadelphie dans le cours ?</div>
+  <div class="a">Le chromosome 22 remanié dans la translocation t(9;22).</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle translocation est associée à la leucémie aiguë promyélocytaire et quel transcrit de fusion est cité en biologie moléculaire ?</div>
+  <div class="a">t(15;17), avec transcrit PML-RARA.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles translocations sont associées aux lymphomes folliculaire, de Burkitt et du manteau ?</div>
+  <div class="a">t(14;18) : folliculaire ; t(8;14) : Burkitt ; t(11;14) : manteau.</div>
+</div>
+<div class="flash">
+  <div class="q">Dans le cas clinique de LMC, quel trio d’arguments hématologiques fait suspecter le diagnostic ?</div>
+  <div class="a">Polynucléose neutrophile, myélémie avec myélocytes/métamyélocytes et hyperleucocytose, souvent associées à une splénomégalie.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel suivi moléculaire est réalisé pour BCR-ABL dans la LMC ?</div>
+  <div class="a">Le transcrit est quantifié au diagnostic puis au cours du traitement, notamment tous les trois mois au début pour apprécier la réponse.</div>
+</div>
+<div class="flash">
+  <div class="q">Dans quels syndromes myéloprolifératifs recherche-t-on notamment JAK2 V617F ?</div>
+  <div class="a">Polyglobulie primitive/maladie de Vaquez, thrombocytémie essentielle et myélofibrose.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel intérêt pronostique et thérapeutique le NGS apporte-t-il dans les leucémies aiguës ?</div>
+  <div class="a">Il analyse simultanément un panel d’environ 50 gènes et permet d’établir une signature moléculaire orientant pronostic et traitement.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel argument historique de culture de progéniteurs soutient le diagnostic de polyglobulie primitive ?</div>
+  <div class="a">Une croissance spontanée des progéniteurs érythroïdes sans ajout d’EPO.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels examens peuvent être réalisés à partir d’une biopsie ganglionnaire ?</div>
+  <div class="a">Anatomopathologie, cytologie, immunophénotypage, cytogénétique, biologie moléculaire et bactériologie selon le contexte.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel rôle l’échographie abdominale et le TEP-scan ont-ils dans l’imagerie hématologique ?</div>
+  <div class="a">L’échographie explore notamment une splénomégalie ; le TEP-scan repère les zones métaboliquement actives, notamment ganglionnaires.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels seuils d’hémoglobine définissent l’anémie chez femme, homme, nourrisson et femme enceinte dans le cours ?</div>
+  <div class="a">Femme &lt;120 g/L ; homme &lt;130 g/L ; nourrisson &lt;140 g/L ; femme enceinte &lt;105 g/L.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment une hémodilution peut-elle donner une fausse anémie ?</div>
+  <div class="a">L’augmentation du volume plasmatique diminue la concentration d’Hb sans diminution proportionnelle de la masse globulaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles situations pathologiques sont citées comme causes de fausse anémie par hémodilution ?</div>
+  <div class="a">Hypoprotidémie importante, insuffisance cardiaque et hypersplénisme.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment la déshydratation ou les diurétiques peuvent-ils masquer une anémie ?</div>
+  <div class="a">Par hémoconcentration, qui augmente artificiellement la concentration mesurée d’hémoglobine.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle valeur de VGM définit une microcytose, une normocytose et une macrocytose chez l’adulte ?</div>
+  <div class="a">&lt;80 fL : microcytose ; 80–100 fL : normocytose ; &gt;100 fL : macrocytose.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel seuil de VGM microcytaire est donné chez l’enfant ?</div>
+  <div class="a">&lt;72 fL dans le support.</div>
+</div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>

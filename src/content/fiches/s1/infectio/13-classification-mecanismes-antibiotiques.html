@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Classification et mécanismes d'action des antibiotiques</title>
+<style>
+:root{--g:#1a7a4a;--gs:#eaf7ef;--r:#b91c1c;--rs:#fee2e2;--o:#b45309;--os:#fff7ed;--b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--ink:#1c1c2e;--line:#d8dce8;--bg:#f6f7fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.58}
+.page{max-width:1180px;margin:auto;padding:32px 18px 72px}.hero{background:linear-gradient(135deg,#fff,#f0fdf4 54%,#eef9ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}h1{font-size:38px;line-height:1.08;margin:8px 0 12px}.subtitle{color:#374151;max-width:1080px}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}.green{background:var(--gs);color:#166534}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.blue{background:var(--bs);color:#1d4ed8}.purple{background:var(--ps);color:#5b21b6}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;margin:0;padding-left:20px;font-size:14px}nav li{margin:5px 0}nav a{color:inherit;text-decoration:none}section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(31,41,55,.035)}h2{font-size:25px;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}ul{padding-left:22px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:14px}.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,monospace;font-size:13px;white-space:pre-wrap}.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:840px;font-size:13.2px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}.recap{background:#111827;color:#fff}.recap h2{color:#fff}.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}.flash .q{font-weight:800;background:#f9fafb;padding:11px 12px;border-bottom:1px solid var(--line)}.flash .a{padding:11px 12px;color:#374151}.source-note{font-size:12.5px;color:#5b6474;margin:18px 4px}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{min-width:680px;font-size:12.1px}}@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none}}
+</style>
+</head>
+<body><main class="page">
+
+<header class="hero">
+<div class="kicker">Infectiologie</div>
+<h1>Classification et mécanismes d’action des antibiotiques</h1>
+<p class="subtitle">Fiche D1/EDN/QCM centrée sur les quatre grandes cibles, les familles, les molécules à connaître, leurs spectres, leur effet bactéricide/bactériostatique, leur pharmacodynamie et les pièges du corrigé.</p>
+<div class="tags"><span class="tag green">Paroi</span><span class="tag purple">Ribosome 30S / 50S</span><span class="tag blue">ADN / ARN / folates</span><span class="tag red">Membrane</span><span class="tag orange">Spectres & toxicités</span></div>
+<div class="actions"><button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button><button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button></div>
+</header>
+
+<nav><h2>Plan rapide</h2><ol>
+<li><a href="#generalites">Généralités</a></li><li><a href="#schema">Schéma à connaître par cœur</a></li><li><a href="#paroi">Paroi</a></li><li><a href="#betalact">β-lactamines</a></li><li><a href="#penicillines">Pénicillines</a></li><li><a href="#cephalo">Céphalosporines</a></li><li><a href="#mono-carba">Monobactames / carbapénèmes</a></li><li><a href="#glyco-fosfo">Glycopeptides / fosfomycine</a></li><li><a href="#aminosides">Aminosides</a></li><li><a href="#tetra">Tétracyclines</a></li><li><a href="#mls">MLS / autres 50S</a></li><li><a href="#quinolones">Quinolones</a></li><li><a href="#rifa-imi">Rifampicine / imidazolés</a></li><li><a href="#folates">Sulfamides / triméthoprime</a></li><li><a href="#membrane">Membrane</a></li><li><a href="#tableau-maitre">Tableau maître</a></li><li><a href="#pieges">Pièges</a></li><li><a href="#recap">Mini-récap</a></li><li><a href="#flashcards">Flashcards express</a></li>
+</ol></nav>
+
+<section id="generalites"><h2>1. Généralités</h2>
+<p>Un antibiotique peut être naturel, synthétique ou hémi-synthétique. Il se définit par son <strong>mode d’action</strong>, son <strong>spectre</strong> et son caractère <strong>bactériostatique ou bactéricide</strong>.</p>
+<div class="callout bluebox"><strong>Culture générale :</strong> l’histoire de l’antibiose et des premières découvertes est explicitement présentée comme non prioritaire à apprendre.</div>
+</section>
+
+<section id="schema"><h2>2. Schéma à connaître par cœur</h2>
+<div class="callout warn"><strong>La professeure insiste :</strong> ce schéma constitue la base du cours.</div>
+<div class="schema">PAROI
+→ β-lactamines
+→ glycopeptides
+→ fosfomycine
+
+SYNTHÈSE PROTÉIQUE
+30S → aminosides + tétracyclines
+50S → macrolides + lincosamides + streptogramines + oxazolidinones
+→ chloramphénicol : ribosome
+
+ACIDES NUCLÉIQUES
+→ quinolones : ADN gyrase
+→ rifampicine : ARN polymérase
+→ imidazolés : coupure ADN
+→ sulfamides + triméthoprime : voie des folates
+
+MEMBRANE CYTOPLASMIQUE
+→ polymyxines
+→ daptomycine</div></section>
+
+<section id="paroi"><h2>3. Cible : paroi bactérienne</h2>
+<p>Le peptidoglycane est la cible commune. Chez les Gram négatif, la membrane externe et les porines limitent l’accès de certaines molécules.</p>
+<div class="grid3"><div class="card"><strong>β-lactamines</strong><p>PLP/PBP → transpeptidation.</p></div><div class="card"><strong>Glycopeptides</strong><p>D-Ala-D-Ala → transpeptidases + transglycosylases.</p></div><div class="card"><strong>Fosfomycine</strong><p>Pyruvyl-transférase, étape précoce intracytoplasmique.</p></div></div></section>
+
+<section id="betalact"><h2>4. β-lactamines</h2>
+<ul><li><strong>Bactéricides.</strong></li><li>Activité <strong>temps-dépendante</strong>.</li><li>Faible toxicité selon le cours.</li><li>Noyau β-lactame commun.</li><li>Quatre sous-familles : pénicillines, céphalosporines, monobactames, carbapénèmes.</li></ul>
+<div class="callout"><strong>Mécanisme :</strong> inhibition de la transpeptidation en se liant aux PLP/PBP.</div></section>
+
+<section id="penicillines"><h2>5. Pénicillines</h2>
+<div class="tablewrap"><table><tr><th>Sous-famille</th><th>Exemple</th><th>Voie / particularité</th><th>Spectre / point clé</th></tr>
+<tr><td>Pénicilline G</td><td>PNG</td><td>IV toutes les 8 h</td><td>Streptocoques, pneumocoque, Listeria, Corynebacterium, Treponema ; staph sauvages seulement ; pas BGN aérobies</td></tr>
+<tr><td>Pénicilline V</td><td>-</td><td>Per os, acido-résistante</td><td>Dérivée de la PNG</td></tr>
+<tr><td>Benzathine pénicilline</td><td>-</td><td>IM, prolongée</td><td>Syphilis historique dans le support</td></tr>
+<tr><td>Groupe M</td><td>Oxacilline, cloxacilline</td><td>-</td><td>Antistaphylococciques résistantes aux pénicillinases</td></tr>
+<tr><td>Groupe A</td><td>Amoxicilline</td><td>IV ou per os</td><td>Élargie à certains BGN, ex. E. coli</td></tr>
+<tr><td>Anti-pyocyaniques</td><td>Ticarcilline, pipéracilline</td><td>Parentérale</td><td>Pseudomonas + E. coli</td></tr>
+<tr><td>Amidinopénicilline</td><td>Pivmécillinam</td><td>-</td><td>Entérobactéries ; cystite</td></tr>
+<tr><td>Inhibiteurs β-lactamases</td><td>Clavulanate, tazobactam</td><td>Associés</td><td>Augmentin ; Tazocilline</td></tr>
+</table></div></section>
+
+<section id="cephalo"><h2>6. Céphalosporines</h2>
+<div class="tablewrap"><table><tr><th>Génération</th><th>Exemple</th><th>À retenir</th></tr>
+<tr><td>C1G</td><td>Céfazoline</td><td>IV ; staphylocoques + certaines entérobactéries ; pas Pseudomonas</td></tr>
+<tr><td>C2G</td><td>Céfuroxime</td><td>Per os/IV ; proche C1G, un peu plus résistante aux céphalosporinases</td></tr>
+<tr><td>C3G</td><td>Céfotaxime, ceftriaxone, ceftazidime</td><td>BGN + streptocoques ; pas staphylocoque dans le cours ; ceftazidime = Pseudomonas</td></tr>
+<tr><td>C4G</td><td>Céfépime</td><td>Céphalosporinases haut niveau ; Pseudomonas</td></tr>
+<tr><td>C5G</td><td>Antistaphylococciques</td><td>SARM / staphylocoques multirésistants</td></tr>
+</table></div></section>
+
+<section id="mono-carba"><h2>7. Monobactames et carbapénèmes</h2>
+<div class="grid2"><div class="card"><strong>Aztréonam</strong><p>Uniquement Gram négatif : entérobactéries + Pseudomonas ; aucune action Gram positif.</p></div><div class="card"><strong>Carbapénèmes</strong><p>Imipénème, méropénème, ertapénème ; parentéraux, très large spectre, nombreux β-lactamases, dernier recours.</p></div></div>
+<div class="callout orangebox"><strong>Ertapénème :</strong> pas Pseudomonas, pas entérocoques.</div></section>
+
+<section id="glyco-fosfo"><h2>8. Glycopeptides et fosfomycine</h2>
+<div class="grid2"><div class="card"><strong>Vancomycine</strong><p>Gram+ uniquement ; D-Ala-D-Ala ; bactéricidie temps-dépendante ; néphrotoxique.</p></div><div class="card"><strong>Fosfomycine</strong><p>Pyruvyl-transférase ; Monuril dans la cystite de la femme ; E. coli sensible dans le cours, S. saprophyticus non.</p></div></div></section>
+
+<section id="aminosides"><h2>9. Aminosides - 30S</h2>
+<p>Gentamicine, tobramycine, amikacine. <strong>Bactéricides, concentration-dépendants, IV, néphrotoxiques et ototoxiques.</strong></p>
+<ul><li>BGN, staphylocoques, Listeria.</li><li>Streptocoques : uniquement en association avec β-lactamine/glycopeptide.</li><li>Pas d’activité en anaérobiose ; le support les dit aussi inefficaces dans le pus.</li><li>Exemple d’utilisation courte : <strong>48 h</strong>.</li></ul></section>
+
+<section id="tetra"><h2>10. Tétracyclines - 30S</h2>
+<p>Tétracycline, minocycline, doxycycline : inhibition de l’élongation, <strong>bactériostatiques</strong>, actives sur rickettsies, chlamydiales et mycoplasmes.</p>
+<div class="callout purplebox"><strong>Tigécycline :</strong> glycylcycline bactériostatique, spectre élargi aux SARM, E. faecium vancomycine-R et entérobactéries BLSE.</div></section>
+
+<section id="mls"><h2>11. MLS et autres inhibiteurs 50S</h2>
+<div class="tablewrap"><table><tr><th>Famille</th><th>Molécules</th><th>Spectre</th><th>Effet</th></tr>
+<tr><td>Macrolides</td><td>Érythromycine, clarithromycine, azithromycine, spiramycine</td><td>Gram+, intracellulaires, H. pylori, Campylobacter, Legionella ; pas entérobactéries/Pseudomonas</td><td>Bactériostatique</td></tr>
+<tr><td>Lincosamides</td><td>Clindamycine</td><td>Anaérobies + cocci Gram+</td><td>Bactériostatique</td></tr>
+<tr><td>Streptogramines</td><td>Pristinamycine = A + B</td><td>Excellent antistaphylococcique</td><td>Bactéricide si A+B actives</td></tr>
+<tr><td>Oxazolidinones</td><td>-</td><td>Gram+ seulement</td><td>Non précisé</td></tr>
+<tr><td>Chloramphénicol</td><td>-</td><td>Gram+ et Gram−</td><td>Toxique, peu utilisé</td></tr>
+</table></div></section>
+
+<section id="quinolones"><h2>12. Quinolones</h2>
+<p>ADN gyrase → blocage de la réplication. <strong>Bactéricides, concentration-dépendantes.</strong></p>
+<div class="tablewrap"><table><tr><th>Génération</th><th>Molécules</th><th>Diffusion / spectre</th></tr>
+<tr><td>1re</td><td>Acide nalidixique, acide pipémidique</td><td>Urines surtout ; entérobactéries</td></tr>
+<tr><td>2e</td><td>Ofloxacine, ciprofloxacine</td><td>Systémique ; Pseudomonas + entérobactéries + staphylocoques + intracellulaires + H. influenzae</td></tr>
+<tr><td>3e</td><td>Lévofloxacine, moxifloxacine</td><td>Extension pneumocoque + anaérobies</td></tr>
+</table></div>
+<div class="callout orangebox"><strong>Piège thérapeutique :</strong> résistances sélectionnées rapidement ; le cours insiste sur l’épargne.</div></section>
+
+<section id="rifa-imi"><h2>13. Rifampicine et imidazolés</h2>
+<div class="grid2"><div class="card"><strong>Rifampicine</strong><p>ARN polymérase ADN-dépendante → inhibition transcription ; large spectre ; tuberculose ; bactéricide ; toujours en association dans le cours.</p></div><div class="card"><strong>Métronidazole</strong><p>Coupure des brins d’ADN ; bactéricide ; anaérobies + activité antiparasitaire.</p></div></div></section>
+
+<section id="folates"><h2>14. Sulfamides + triméthoprime</h2>
+<div class="schema">Sulfamides → inhibent DHPS
+Triméthoprime → inhibe DHFR
+Association → cotrimoxazole / Bactrim
+→ potentialisation → bactéricide</div>
+<p>Bonne diffusion systémique, per os et IV. Spectre large dans le support, mais <strong>pas Pseudomonas ni anaérobies.</strong></p></section>
+
+<section id="membrane"><h2>15. Membrane cytoplasmique</h2>
+<div class="grid2"><div class="card"><strong>Polymyxines</strong><p>Polymyxine B, colistine ; désorganisation membranaire ; bactéricides ; BGN uniquement ; IV ; néphrotoxiques ; dernier recours.</p></div><div class="card"><strong>Daptomycine</strong><p>Lésions calcium-dépendantes, dépolarisation et fuite K+ ; bactéricide ; Gram+ uniquement ; IV.</p></div></div></section>
+
+<section id="tableau-maitre"><h2>16. Tableau maître</h2>
+<div class="tablewrap"><table><tr><th>Famille</th><th>Cible</th><th>Effet</th><th>Dépendance</th><th>Piège majeur</th></tr>
+<tr><td>β-lactamines</td><td>PLP / transpeptidation</td><td>Bactéricide</td><td>Temps</td><td>Nombreuses sous-familles</td></tr>
+<tr><td>Vancomycine</td><td>D-Ala-D-Ala</td><td>Bactéricide</td><td>Temps</td><td>Gram+ ; néphrotoxique</td></tr>
+<tr><td>Aminosides</td><td>30S</td><td>Bactéricide</td><td>Concentration</td><td>Pas anaérobies/pus ; néphro-oto</td></tr>
+<tr><td>Tétracyclines</td><td>30S</td><td>Bactériostatique</td><td>-</td><td>Intracellulaires</td></tr>
+<tr><td>Macrolides</td><td>50S</td><td>Bactériostatique</td><td>-</td><td>Pas entérobactéries/Pseudomonas</td></tr>
+<tr><td>Quinolones</td><td>ADN gyrase</td><td>Bactéricide</td><td>Concentration</td><td>Résistance rapide</td></tr>
+<tr><td>Rifampicine</td><td>ARN polymérase</td><td>Bactéricide</td><td>-</td><td>Association obligatoire dans le cours</td></tr>
+<tr><td>Métronidazole</td><td>ADN</td><td>Bactéricide</td><td>-</td><td>Anaérobies</td></tr>
+<tr><td>Cotrimoxazole</td><td>DHPS + DHFR</td><td>Bactéricide en association</td><td>-</td><td>Pas Pseudomonas / anaérobies</td></tr>
+<tr><td>Polymyxines</td><td>Membrane</td><td>Bactéricide</td><td>-</td><td>BGN ; néphrotoxiques</td></tr>
+<tr><td>Daptomycine</td><td>Membrane</td><td>Bactéricide</td><td>-</td><td>Gram+ uniquement</td></tr>
+</table></div></section>
+
+<section id="pieges"><h2>17. Pièges et incohérences internes</h2>
+<div class="callout warn"><strong>QRM 2 A :</strong> l’item sur les β-lactamines est vrai, mais la justification parle d’abord des glycopeptides : phrase de corrigé décalée.</div>
+<div class="callout warn"><strong>Pénicilline G / staphylocoque :</strong> le texte admet une activité sur les souches sauvages, mais le QRM considère l’affirmation générale fausse car les pénicillinases sont fréquentes.</div>
+<div class="callout warn"><strong>Benzathine pénicilline :</strong> le support juxtapose « efficace jusqu’à 12 semaines » et un exemple historique d’injections hebdomadaires répétées.</div>
+<div class="callout warn"><strong>Fosfomycine :</strong> première intention de cystite dans le cours, active sur E. coli, mais donnée inactive sur S. saprophyticus.</div>
+<div class="callout warn"><strong>QRM 8 :</strong> annoncé QRM puis corrigé comme un QRU, seule réponse C.</div>
+<div class="callout warn"><strong>C5G :</strong> le cours les présente avant tout comme antistaphylococciques avec perte d’activité BGN ; conserver cette simplification pour ses QCM.</div></section>
+
+<section id="recap" class="recap"><h2>Mini-récap ultra rentable</h2>
+<p><strong>Paroi :</strong> β-lactamines = PLP/transpeptidation, bactéricides temps-dépendantes ; vancomycine = D-Ala-D-Ala, Gram+ seulement, néphrotoxique ; fosfomycine = pyruvyl-transférase. <strong>30S :</strong> aminosides = bactéricides concentration-dépendants, néphro-/ototoxiques, pas anaérobies ; tétracyclines = bactériostatiques, intracellulaires. <strong>50S :</strong> macrolides, clindamycine, streptogramines, oxazolidinones. <strong>ADN/ARN :</strong> quinolones = ADN gyrase ; rifampicine = ARN polymérase ; métronidazole = coupure ADN ; cotrimoxazole = DHPS + DHFR. <strong>Membrane :</strong> colistine = BGN ; daptomycine = Gram+. À savoir : cefazoline C1G, C3G cefotaxime/ceftriaxone/ceftazidime, céfépime C4G, C5G anti-SARM, aztréonam Gram− uniquement, ertapénème sans Pseudomonas ni entérocoque.</p></section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « Classification et mécanisme d'action des antibiotiques ». Les spectres, voies, toxicités, formulations et incohérences signalées suivent le support.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+<div class="flash"><div class="q">Quels sont les trois éléments qui définissent chaque antibiotique dans le cours ?</div><div class="a">Son mode d’action, son spectre antibactérien et son caractère bactéricide ou bactériostatique.</div></div>
+<div class="flash"><div class="q">Quelle différence le cours fait-il entre une action bactériostatique et une action bactéricide ?</div><div class="a">Bactériostatique : inhibition de la multiplication bactérienne ; bactéricide : destruction des bactéries.</div></div>
+<div class="flash"><div class="q">Comment le cours définit-il le spectre antibactérien d’un antibiotique ?</div><div class="a">L’ensemble des espèces bactériennes sensibles sur lesquelles l’antibiotique est actif.</div></div>
+<div class="flash"><div class="q">Quels sont les quatre grands modes d’action des antibiotiques à connaître par cœur ?</div><div class="a">Inhibition de la synthèse de la paroi, inhibition de la synthèse protéique, inhibition de la synthèse des acides nucléiques ou de leurs précurseurs, et action sur la membrane cytoplasmique.</div></div>
+<div class="flash"><div class="q">Quelle différence de paroi entre Gram positif et Gram négatif conditionne l’accès au peptidoglycane ?</div><div class="a">Les Gram positif ont un peptidoglycane épais sans membrane externe ; les Gram négatif ont un peptidoglycane plus fin mais une membrane externe avec des porines.</div></div>
+<div class="flash"><div class="q">Quelles trois familles inhibent la synthèse de la paroi bactérienne ?</div><div class="a">Les β-lactamines, les glycopeptides et la fosfomycine.</div></div>
+<div class="flash"><div class="q">Quel mécanisme moléculaire explique l’action des β-lactamines ?</div><div class="a">Elles inhibent la transpeptidation du peptidoglycane en se liant aux PLP/PBP, qui sont les transpeptidases.</div></div>
+<div class="flash"><div class="q">Les β-lactamines sont-elles bactéricides ou bactériostatiques et leur activité est-elle temps- ou concentration-dépendante ?</div><div class="a">Elles sont bactéricides et leur activité est temps-dépendante.</div></div>
+<div class="flash"><div class="q">Pourquoi les β-lactamines sont-elles très utilisées selon le cours ?</div><div class="a">Elles ont globalement un spectre large et surtout une faible toxicité.</div></div>
+<div class="flash"><div class="q">Quel noyau chimique est commun à toutes les β-lactamines ?</div><div class="a">Le noyau β-lactame.</div></div>
+<div class="flash"><div class="q">Quels quatre grands sous-groupes de β-lactamines sont décrits ?</div><div class="a">Pénicillines, céphalosporines, monobactames et carbapénèmes.</div></div>
+<div class="flash"><div class="q">Quelle voie d’administration et quel rythme sont retenus pour la pénicilline G ?</div><div class="a">Voie parentérale/IV ; administration toutes les 8 heures, soit 3 fois par 24 h, du fait de l’activité temps-dépendante.</div></div>
+<div class="flash"><div class="q">Quel spectre majeur faut-il retenir pour la pénicilline G ?</div><div class="a">Surtout cocci Gram positif dont streptocoques/pneumocoque, certains bacilles Gram positif comme Listeria et Corynebacterium, et les spirochètes comme Treponema pallidum.</div></div>
+<div class="flash"><div class="q">Pourquoi la pénicilline G n’est-elle habituellement pas utilisée sur Staphylococcus aureus ?</div><div class="a">Beaucoup de staphylocoques ont acquis des pénicillinases ; seules les souches sauvages restent sensibles dans le support.</div></div>
+<div class="flash"><div class="q">Pourquoi la pénicilline G n’est-elle pas active sur les bacilles Gram négatif aérobies selon le cours ?</div><div class="a">Le support la décrit comme une grosse molécule ne traversant pas les porines de la membrane externe.</div></div>
+<div class="flash"><div class="q">Quelle différence essentielle oppose pénicilline G et pénicilline V ?</div><div class="a">La pénicilline V est acido-résistante et peut donc être administrée per os, contrairement à la pénicilline G.</div></div>
+<div class="flash"><div class="q">Quelle particularité caractérise la benzathine pénicilline ?</div><div class="a">C’est une pénicilline G à action prolongée administrée par voie intramusculaire ; le support la présente historiquement dans le traitement de la syphilis.</div></div>
+<div class="flash"><div class="q">Quels antibiotiques constituent les pénicillines antistaphylococciques du groupe M ?</div><div class="a">Oxacilline et cloxacilline ; elles sont résistantes aux pénicillinases du staphylocoque.</div></div>
+<div class="flash"><div class="q">Quel représentant du groupe A des aminopénicillines faut-il connaître et quelle extension de spectre apporte-t-il ?</div><div class="a">L’amoxicilline ; elle peut être IV ou per os et son spectre est élargi à certains Gram négatif, par exemple Escherichia coli.</div></div>
+<div class="flash"><div class="q">Quelles pénicillines sont dites anti-pyocyaniques et quels exemples sont cités ?</div><div class="a">Carboxypénicillines comme ticarcilline et uréidopénicillines comme pipéracilline ; elles sont actives sur Pseudomonas aeruginosa.</div></div>
+<div class="flash"><div class="q">Quel est le spectre du pivmécillinam et dans quelle situation est-il utilisé ?</div><div class="a">Spectre étroit sur certains bacilles Gram négatif, surtout entérobactéries ; il est utilisé dans certaines cystites de ville.</div></div>
+<div class="flash"><div class="q">Quel est le rôle de l’acide clavulanique lorsqu’il est associé à l’amoxicilline ?</div><div class="a">Il inhibe les pénicillinases et protège l’amoxicilline ; l’association correspond à l’Augmentin.</div></div>
+<div class="flash"><div class="q">Que contient la Tazocilline et quelle place le cours lui donne-t-il ?</div><div class="a">Pipéracilline + tazobactam ; association parentérale hospitalière à très large spectre, notamment en deuxième intention dans les infections nosocomiales.</div></div>
+<div class="flash"><div class="q">Quel exemple de C1G faut-il connaître et quel spectre lui associer ?</div><div class="a">Céfazoline IV : cocci Gram positif surtout staphylocoques et certaines entérobactéries ; inactive sur Pseudomonas aeruginosa.</div></div>
+<div class="flash"><div class="q">Quel exemple de C2G est cité et quelle différence générale avec les C1G est décrite ?</div><div class="a">Céfuroxime, per os ou IV ; profil proche des C1G mais avec léger gain d’activité et meilleure résistance à certaines céphalosporinases.</div></div>
+<div class="flash"><div class="q">Quels exemples de C3G injectables sont cités et quelle particularité distingue la ceftazidime ?</div><div class="a">Céfotaxime, ceftriaxone et ceftazidime ; la ceftazidime est active sur Pseudomonas aeruginosa.</div></div>
+<div class="flash"><div class="q">Quel spectre général faut-il retenir pour les C3G dans ce cours ?</div><div class="a">Meilleure activité sur les bacilles Gram négatif et les streptocoques, mais pas sur le staphylocoque dans la simplification du cours.</div></div>
+<div class="flash"><div class="q">Quel est le représentant de C4G cité et quelle propriété majeure faut-il retenir ?</div><div class="a">Céfépime : résistant aux céphalosporinases de haut niveau et actif sur Pseudomonas aeruginosa.</div></div>
+<div class="flash"><div class="q">À quoi sont destinées les C5G selon le cours ?</div><div class="a">À une activité antistaphylococcique, notamment sur les SARM résistants aux autres β-lactamines.</div></div>
+<div class="flash"><div class="q">Quel est le représentant des monobactames et quel est son spectre ?</div><div class="a">Aztréonam : uniquement Gram négatif, notamment entérobactéries et Pseudomonas aeruginosa, sans activité Gram positif.</div></div>
+<div class="flash"><div class="q">Quels trois carbapénèmes sont cités ?</div><div class="a">Imipénème, méropénème et ertapénème.</div></div>
+<div class="flash"><div class="q">Pourquoi les carbapénèmes sont-ils considérés comme des antibiotiques de dernier recours ?</div><div class="a">Ils ont un très large spectre et résistent à de nombreuses β-lactamases ; le cours les réserve à l’hôpital et aux situations sévères.</div></div>
+<div class="flash"><div class="q">Quelle particularité de spectre distingue l’ertapénème ?</div><div class="a">Il n’est actif ni sur Pseudomonas aeruginosa ni sur les entérocoques.</div></div>
+<div class="flash"><div class="q">Pourquoi la vancomycine n’agit-elle pas sur les Gram négatif ?</div><div class="a">C’est une grosse molécule hydrophile incapable de franchir les porines de la membrane externe des bacilles Gram négatif.</div></div>
+<div class="flash"><div class="q">Sur quelle cible la vancomycine se fixe-t-elle et quelles enzymes bloque-t-elle indirectement ?</div><div class="a">Elle se fixe sur D-Ala-D-Ala et bloque par encombrement stérique les transpeptidases et les transglycosylases.</div></div>
+<div class="flash"><div class="q">Quel profil pharmacodynamique et toxique faut-il retenir pour la vancomycine ?</div><div class="a">Bactéricide, temps-dépendante et néphrotoxique.</div></div>
+<div class="flash"><div class="q">Quelle enzyme est inhibée par la fosfomycine et à quel niveau intervient-elle ?</div><div class="a">La pyruvyl-transférase, lors d’une étape précoce intracytoplasmique de la synthèse du peptidoglycane.</div></div>
+<div class="flash"><div class="q">Dans quelle indication courante le cours place-t-il la fosfomycine Monuril ?</div><div class="a">En première intention dans la cystite de la femme, notamment pour Escherichia coli.</div></div>
+<div class="flash"><div class="q">Quelles résistances naturelles à la fosfomycine sont citées ?</div><div class="a">Streptocoques A/B, entérocoques et anaérobies ; le support indique aussi qu’elle n’agit pas sur Staphylococcus saprophyticus.</div></div>
+<div class="flash"><div class="q">Quelles familles inhibent la sous-unité 30S du ribosome ?</div><div class="a">Les aminosides et les tétracyclines.</div></div>
+<div class="flash"><div class="q">Quelles familles ou molécules inhibent la sous-unité 50S selon le cours ?</div><div class="a">Macrolides et apparentés, dont lincosamides et streptogramines, ainsi que les oxazolidinones.</div></div>
+<div class="flash"><div class="q">Quels trois aminosides sont testés classiquement sur l’antibiogramme ?</div><div class="a">Gentamicine, tobramycine et amikacine.</div></div>
+<div class="flash"><div class="q">Quel moyen mnémotechnique de nomenclature des aminosides naturels est donné ?</div><div class="a">Ils ont généralement un « y » dans « mycine », sauf la gentamicine ; l’amikacine, issue d’hémi-synthèse, n’en a pas.</div></div>
+<div class="flash"><div class="q">Pourquoi les aminosides sont-ils inactifs sur les bactéries anaérobies ?</div><div class="a">Leur pénétration jusqu’au ribosome nécessite de l’oxygène ; ils sont donc inactifs en anaérobiose.</div></div>
+<div class="flash"><div class="q">Pourquoi les aminosides sont-ils décrits comme inefficaces dans le pus d’un abcès ?</div><div class="a">Le cours relie cette inefficacité au manque d’oxygène nécessaire à leur pénétration.</div></div>
+<div class="flash"><div class="q">Quel profil pharmacodynamique et toxique caractérise les aminosides ?</div><div class="a">Ils sont bactéricides, concentration-dépendants, néphrotoxiques et ototoxiques.</div></div>
+<div class="flash"><div class="q">Quelle durée d’utilisation courte est donnée en exemple pour les aminosides ?</div><div class="a">Environ 48 heures au début d’un traitement.</div></div>
+<div class="flash"><div class="q">Sur quels germes les aminosides sont-ils utilisés en association obligatoire ?</div><div class="a">Sur les streptocoques, en association avec un antibiotique actif sur la paroi, β-lactamine ou glycopeptide.</div></div>
+<div class="flash"><div class="q">Quel mécanisme d’action des tétracyclines est décrit ?</div><div class="a">Inhibition de la phase d’élongation de la synthèse protéique par action sur la sous-unité 30S.</div></div>
+<div class="flash"><div class="q">Quels germes intracellulaires sont particulièrement ciblés par les tétracyclines ?</div><div class="a">Rickettsies, chlamydiales et mycoplasmes.</div></div>
+<div class="flash"><div class="q">Quel caractère bactéricide ou bactériostatique faut-il retenir pour les tétracyclines ?</div><div class="a">Elles sont bactériostatiques.</div></div>
+<div class="flash"><div class="q">Quel est l’intérêt principal de la tigécycline dans le cours ?</div><div class="a">Glycylcycline bactériostatique à spectre élargi aux SARM, E. faecium vancomycine-R et entérobactéries BLSE.</div></div>
+<div class="flash"><div class="q">Que signifie l’acronyme MLS ?</div><div class="a">Macrolides, Lincosamides et Streptogramines.</div></div>
+<div class="flash"><div class="q">Pourquoi les MLS sont-ils globalement inactifs sur les entérobactéries et Pseudomonas ?</div><div class="a">Ils traversent mal la membrane externe des Gram négatif et n’atteignent pas leur cible ribosomique.</div></div>
+<div class="flash"><div class="q">Quels macrolides sont cités comme les plus fréquents ?</div><div class="a">Érythromycine, clarithromycine, azithromycine et spiramycine.</div></div>
+<div class="flash"><div class="q">Sur quels bacilles Gram négatif particuliers les macrolides restent-ils actifs ?</div><div class="a">Helicobacter pylori, Campylobacter et Legionella pneumophila.</div></div>
+<div class="flash"><div class="q">Quel est le caractère bactéricide ou bactériostatique des macrolides ?</div><div class="a">Ils sont bactériostatiques.</div></div>
+<div class="flash"><div class="q">Quel lincosamide faut-il connaître et quelle particularité de spectre lui associer ?</div><div class="a">Clindamycine : très bonne activité sur les anaérobies et les cocci Gram positif ; bactériostatique.</div></div>
+<div class="flash"><div class="q">De quoi est constituée la pristinamycine et quand est-elle bactéricide ?</div><div class="a">Association synergistine A + synergistine B ; elle est bactéricide si les deux composés sont actifs, sinon elle devient bactériostatique.</div></div>
+<div class="flash"><div class="q">Quel spectre faut-il retenir pour les oxazolidinones ?</div><div class="a">Uniquement Gram positif, avec utilisation hospitalière.</div></div>
+<div class="flash"><div class="q">Quel mécanisme et quel profil pharmacodynamique caractérisent les quinolones ?</div><div class="a">Inhibition de l’ADN gyrase et de la réplication de l’ADN ; elles sont bactéricides et concentration-dépendantes.</div></div>
+<div class="flash"><div class="q">Quelle différence pharmacocinétique majeure oppose quinolones de 1re et 2e génération ?</div><div class="a">1re génération : diffusion surtout urinaire ; 2e génération fluoroquinolones : diffusion systémique et tissulaire.</div></div>
+<div class="flash"><div class="q">Quels exemples de fluoroquinolones de 2e génération sont cités ?</div><div class="a">Ofloxacine et ciprofloxacine ; le cours indique qu’on utilise surtout la ciprofloxacine.</div></div>
+<div class="flash"><div class="q">Quel ajout de spectre apporte la ciprofloxacine ?</div><div class="a">Activité notamment sur Pseudomonas aeruginosa, mais aussi staphylocoques, bactéries intracellulaires et H. influenzae selon le support.</div></div>
+<div class="flash"><div class="q">Quelles molécules sont classées comme fluoroquinolones de 3e génération et quel spectre supplémentaire apportent-elles ?</div><div class="a">Lévofloxacine et moxifloxacine ; extension vers les streptocoques, notamment pneumocoque, et vers les anaérobies.</div></div>
+<div class="flash"><div class="q">Quel est le mécanisme d’action de la rifampicine et pourquoi est-elle utilisée en association ?</div><div class="a">Elle inhibe l’ARN polymérase ADN-dépendante et donc la transcription ; la résistance apparaît rapidement, d’où l’utilisation en association.</div></div>
+<div class="flash"><div class="q">Quel mécanisme d’action et quel spectre faut-il retenir pour le métronidazole ?</div><div class="a">Coupure des brins d’ADN ; bactéricide actif sur les anaérobies, avec aussi une activité antiparasitaire.</div></div>
+<div class="flash"><div class="q">Quelles enzymes sont respectivement inhibées par les sulfamides et le triméthoprime ?</div><div class="a">Sulfamides : dihydroptéroate synthétase ; triméthoprime : dihydrofolate réductase.</div></div>
+<div class="flash"><div class="q">Comment s’appelle l’association sulfamide + triméthoprime et quel est son effet ?</div><div class="a">Cotrimoxazole, Bactrim ; l’association est potentialisée et devient bactéricide.</div></div>
+<div class="flash"><div class="q">Quelles lacunes de spectre du cotrimoxazole faut-il retenir ?</div><div class="a">Inactif sur Pseudomonas aeruginosa et sur les bactéries anaérobies.</div></div>
+  </div>
+</section>
+
+</main></body></html>

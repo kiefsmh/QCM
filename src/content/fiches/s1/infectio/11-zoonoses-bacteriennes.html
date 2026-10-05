@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche - Zoonoses bactériennes</title>
+<style>
+:root{--g:#1a7a4a;--gs:#eaf7ef;--r:#b91c1c;--rs:#fee2e2;--o:#b45309;--os:#fff7ed;--b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--t:#0f766e;--ts:#ecfeff;--ink:#1c1c2e;--muted:#596273;--line:#d8dce8;--bg:#f6f7fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}
+.page{max-width:1160px;margin:auto;padding:32px 18px 72px}
+.hero{background:linear-gradient(135deg,#fff,#f0fdf4 55%,#eef9ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}
+.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}h1{font-size:38px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}
+.subtitle{margin:0;color:#374151;max-width:1050px}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}
+.green{background:var(--gs);color:#166534}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.blue{background:var(--bs);color:#1d4ed8}.purple{background:var(--ps);color:#5b21b6}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--g);color:white}.secondary{background:white;color:var(--g);border:1px solid var(--line)}
+nav,section{background:white;border:1.5px solid var(--line);border-radius:18px}nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav li{margin:5px 0}nav a{color:inherit;text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(31,41,55,.035)}h2{font-size:25px;letter-spacing:-.02em;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}
+p{margin:8px 0}ul,ol{padding-left:22px;margin:8px 0 12px}li{margin:4px 0}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;white-space:pre-wrap;overflow-x:auto}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px;min-width:780px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}
+.recap{background:#111827;color:white}.recap h2{color:white}.recap strong{color:#bbf7d0}.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:white}.flash .q{background:#f9fafb;padding:11px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:11px 12px;color:#374151}.source-note{font-size:12.5px;color:var(--muted);margin:18px 4px}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{min-width:660px;font-size:12.4px}}
+@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="hero">
+<div class="kicker">UE4 - Infectiologie</div>
+<h1>Zoonoses bactériennes</h1>
+<p class="subtitle">Fiche complète D1/EDN/QCM : voies de transmission, panorama des agents, puis focus diagnostique et thérapeutique sur Pasteurella multocida, Bartonella henselae, maladie de Lyme et tularémie.</p>
+<div class="tags"><span class="tag green">5 voies de transmission</span><span class="tag red">Pasteurella / morsures</span><span class="tag purple">Bartonella / adénopathie</span><span class="tag blue">Lyme / neuroborréliose</span><span class="tag orange">Tularémie</span></div>
+<div class="actions"><button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button><button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button></div>
+</header>
+
+<nav><h2>Plan rapide</h2><ol>
+<li><a href="#definition">Définition</a></li><li><a href="#voies">5 voies de transmission</a></li><li><a href="#morsure">Morsure / griffure</a></li><li><a href="#vectorielle">Transmission vectorielle</a></li><li><a href="#cutanee">Voie cutanéo-muqueuse</a></li><li><a href="#respiratoire">Voie respiratoire</a></li><li><a href="#digestive">Voie digestive</a></li><li><a href="#tetanos">Cas tétanos</a></li><li><a href="#pasteurella">Pasteurella multocida</a></li><li><a href="#bartonella">Bartonella henselae</a></li><li><a href="#lyme">Maladie de Lyme</a></li><li><a href="#neuro">Neuroborréliose</a></li><li><a href="#tularemie">Tularémie</a></li><li><a href="#fievre">Fièvre / sueurs nocturnes</a></li><li><a href="#surveillance">Surveillance / déclaration</a></li><li><a href="#pieges">Pièges du support</a></li><li><a href="#recap">Mini-récap</a></li><li><a href="#flashcards">Flashcards express</a></li>
+</ol></nav>
+
+<section id="definition"><h2>1. Définition</h2>
+<p>Une <strong>zoonose</strong> est une maladie transmissible naturellement entre l’animal et l’Homme. L’animal joue un rôle de <strong>réservoir</strong> et peut être <strong>porteur sain</strong>. Le support emploie le terme <strong>anthropozoonose</strong> quand la transmission est spécifiquement de l’animal vers l’être humain.</p>
+<div class="callout"><strong>Agents concernés :</strong> bactéries, parasites et virus. Ce cours est centré sur les zoonoses bactériennes.</div>
+<p>La prévention décrite repose notamment sur les contrôles vétérinaires, la vaccination et l’hygiène dans les élevages et les abattoirs.</p></section>
+
+<section id="voies"><h2>2. Les 5 voies de transmission</h2>
+<div class="tablewrap"><table><tr><th>Voie</th><th>Agents / exemples cités</th><th>Idée-clé</th></tr>
+<tr><td>Morsure / griffure</td><td>Pasteurella multocida, Bartonella henselae, virus rabique</td><td>Voie présentée comme la plus fréquente</td></tr>
+<tr><td>Piqûre d’arthropode</td><td>Borrelia burgdorferi, rickettsies, Yersinia pestis ; leishmaniose comme parasite</td><td>Transmission vectorielle</td></tr>
+<tr><td>Cutanéo-muqueuse</td><td>Francisella tularensis, Leptospira interrogans</td><td>Contact peau/muqueuse ; effraction parfois non nécessaire</td></tr>
+<tr><td>Respiratoire</td><td>Coxiella burnetii, Chlamydophila psittaci, Bacillus anthracis</td><td>Aérosols, poussières, gouttelettes contaminées</td></tr>
+<tr><td>Digestive</td><td>Brucella, Listeria monocytogenes, Bacillus anthracis, Salmonella non typhiques, Campylobacter</td><td>Aliments contaminés / lait cru / viande</td></tr></table></div></section>
+
+<section id="morsure"><h2>3. Morsure ou griffure animale</h2>
+<h3>Pasteurella multocida</h3><p>Chiens et chats sont des réservoirs fréquents. La bactérie peut être commensale des voies aériennes supérieures et contaminer les griffes du chat lors du toilettage.</p>
+<h3>Bartonella henselae</h3><p>Responsable de la maladie des griffes du chat. Le tableau détaillé repose surtout sur une lésion d’inoculation discrète puis une adénopathie régionale.</p>
+<h3>Rage</h3><p>Le support décrit les cas français comme devenus exceptionnels et essentiellement importés.</p></section>
+
+<section id="vectorielle"><h2>4. Piqûre d’arthropode : transmission vectorielle</h2>
+<h3>Maladie de Lyme</h3><ul><li>Agent : <strong>Borrelia burgdorferi</strong>.</li><li>Vecteur : <strong>Ixodes</strong>.</li><li>Réservoirs : surtout rongeurs, puis oiseaux.</li><li>Prévention : vêtements couvrants, inspection du corps et retrait rapide avec tire-tique.</li></ul>
+<h3>Autres</h3><ul><li><strong>Rickettsies :</strong> tiques et poux.</li><li><strong>Yersinia pestis :</strong> peste bubonique ; foyer endémique cité à Madagascar.</li><li><strong>Leishmanioses :</strong> rappelées ici mais d’origine parasitaire.</li></ul></section>
+
+<section id="cutanee"><h2>5. Voie cutanéo-muqueuse</h2>
+<h3>Francisella tularensis</h3><p>Très infectieuse selon le support. Elle peut franchir la peau ou les muqueuses sans plaie franche et concerne notamment les personnes manipulant gibier, lièvres ou lapins morts.</p>
+<h3>Leptospira interrogans</h3><p>Rat = réservoir classique. Le cours insiste sur les eaux stagnantes ou naturelles potentiellement contaminées et sur l’exposition professionnelle des égoutiers.</p></section>
+
+<section id="respiratoire"><h2>6. Voie respiratoire</h2>
+<div class="tablewrap"><table><tr><th>Agent</th><th>Réservoir / exposition</th><th>À retenir</th></tr>
+<tr><td>Coxiella burnetii</td><td>Bovins, ovins, proximité d’élevages / paille souillée</td><td>Fièvre Q ; formes chroniques avec endocardite</td></tr>
+<tr><td>Chlamydophila psittaci</td><td>Oiseaux, pigeons, déjections</td><td>Psittacose par inhalation</td></tr>
+<tr><td>Bacillus anthracis</td><td>Spores environnementales</td><td>Gram + sporulant ; inhalation possible ; référence du bioterrorisme dans le cours</td></tr>
+</table></div></section>
+
+<section id="digestive"><h2>7. Voie digestive</h2>
+<h3>Brucellose</h3><p>Le cours insiste sur les cas importés après consommation de <strong>fromage de chèvre au lait cru</strong>, ainsi que sur certaines expositions de chasse.</p>
+<h3>Listeria monocytogenes</h3><div class="callout orangebox"><strong>Très tombable :</strong> bacille Gram positif capable de se multiplier à <strong>4 °C</strong>. Risque particulier chez les femmes enceintes et personnes immunodéprimées.</div>
+<h3>Autres</h3><p>Bacillus anthracis peut aussi être ingéré. Salmonella non typhiques et Campylobacter spp. sont cités, de même que plusieurs zoonoses parasitaires alimentaires.</p></section>
+
+<section id="tetanos"><h2>8. Cas clinique : morsure souillée et prévention du tétanos</h2>
+<div class="schema">Plaie profonde + terre + statut vaccinal inconnu
+→ test rapide anticorps si disponible
+→ si négatif OU test indisponible
+→ immunoglobulines antitétaniques + vaccination
+→ injections dans des bras différents
+→ rappels ultérieurs</div>
+<div class="callout warn"><strong>Piège :</strong> le tétanos n’est pas une zoonose. Le support le rappelle explicitement.</div></section>
+
+<section id="pasteurella"><h2>9. Pasteurella multocida</h2>
+<div class="grid2"><div class="card"><strong>Bactériologie</strong><p>Pathogène opportuniste, coccobacille Gram négatif, coloration bipolaire, catalase +, oxydase +, métabolisme aéro-anaérobie.</p></div>
+<div class="card"><strong>Réservoir / transmission</strong><p>Nombreux mammifères et oiseaux, surtout chiens et chats. Morsure surtout, mais aussi griffure ou contact d’une plaie avec des sécrétions animales.</p></div></div>
+<h3>Pasteurellose d’inoculation</h3><ul><li>Incubation <strong>quelques heures, toujours &lt;24 h</strong>.</li><li>Douleur <strong>très vive et disproportionnée</strong>.</li><li>Œdème et inflammation.</li><li>Écoulement séro-sanglant possible.</li><li>Lymphangite et adénopathies satellites possibles.</li></ul>
+<h3>Complications</h3><p>Formes pleuro-pulmonaires, méningées ou bactériémiques sur terrain fragilisé ; infections ostéoarticulaires de proximité possibles.</p>
+<h3>Diagnostic</h3><div class="schema">Plaie infectée
+→ prélèvement des sérosités
+→ examen direct + culture
+→ hémocultures si suspicion systémique / fièvre selon contexte
+PCR non nécessaire en routine dans le scénario du cours</div>
+<h3>Traitement</h3><div class="callout"><strong>1re intention : amoxicilline.</strong> En cas d’allergie, le cours cite une céphalosporine, la doxycycline à partir de 8 ans ou éventuellement une fluoroquinolone à partir de 15 ans.</div></section>
+
+<section id="bartonella"><h2>10. Bartonella henselae - maladie des griffes du chat</h2>
+<h3>Épidémiologie et transmission</h3><ul><li>Réservoir : chats, surtout <strong>chatons &lt;1 an</strong>.</li><li>Les chats peuvent être bactériémiques sans symptôme.</li><li>Les puces transmettent la bactérie entre chats ; leurs déjections contaminent pelage et griffes.</li></ul>
+<h3>Clinique</h3><div class="schema">Griffure
+→ petite lésion d'inoculation souvent indolore et peu inflammatoire
+→ adénopathie régionale
+   main/bras → axillaire
+   visage → cervicale / sous-maxillaire
+   jambe → inguinale
+→ fièvre inconstante</div>
+<h3>Diagnostic différentiel</h3><p>Chez une personne âgée, le cours insiste sur les diagnostics tumoraux (métastase, notamment sein, lymphome) en plus de Bartonella et de la tuberculose ganglionnaire.</p>
+<h3>Diagnostic microbiologique</h3><ul><li>Cytoponction ou biopsie ganglionnaire.</li><li>Culture <strong>difficile et lente</strong>.</li><li><strong>PCR spécifique</strong> en complément ; prévenir le laboratoire.</li><li>Sérologie par <strong>IFI</strong>.</li></ul>
+<h3>Traitement</h3><p>Forme typique bien tolérée : symptomatique + surveillance possibles. Le cours cite <strong>azithromycine</strong> ou <strong>doxycycline</strong>, avec efficacité non certaine.</p>
+<div class="callout warn"><strong>Formulation source-spécifique :</strong> le support affirme que les bêta-lactamines ne sont pas efficaces et justifie cela par l’absence de cible peptidoglycane. Cette justification est reproduite comme élément du cours, sans ajout extérieur.</div></section>
+
+<section id="lyme"><h2>11. Maladie de Lyme - Borrelia burgdorferi</h2>
+<div class="grid3"><div class="card"><strong>Agent</strong><p>Spirochète spiralé, flexible et mobile. B. burgdorferi à retenir ; B. afzelii et B. garinii également citées.</p></div><div class="card"><strong>Vecteur</strong><p>Tique du genre Ixodes.</p></div><div class="card"><strong>Réservoirs</strong><p>Rongeurs surtout, oiseaux dans une moindre mesure.</p></div></div>
+<h3>Phase primaire : érythème migrant</h3><ul><li>Présenté comme <strong>pathognomonique</strong>.</li><li>Indolore et parfois inaperçu.</li><li>Peut régresser en <strong>3 à 4 semaines</strong>.</li><li>Tableau typique : <strong>pas de prélèvement ni sérologie</strong>.</li><li>Traitement : <strong>amoxicilline</strong> ; doxycycline si allergie et âge compatible selon le cours.</li></ul>
+<h3>Phase secondaire</h3><ul><li>Neuroborréliose précoce.</li><li>Arthrite, notamment du genou.</li><li>Bloc auriculo-ventriculaire.</li></ul>
+<h3>Phase tertiaire</h3><p>Plusieurs mois ou années après infection non traitée : arthrites chroniques, neuroborréliose chronique, manifestations cutanées ou oculaires.</p></section>
+
+<section id="neuro"><h2>12. Neuroborréliose : LCR, diagnostic et traitement</h2>
+<h3>Cas clinique</h3><p>Diplégie faciale + paresthésies après un épisode compatible avec Lyme.</p>
+<h3>Profil du LCR</h3><div class="tablewrap"><table><tr><th>Paramètre</th><th>Cas</th><th>Interprétation</th></tr><tr><td>Aspect</td><td>Clair</td><td>Pas purulent</td></tr><tr><td>GB</td><td>100, dont 92 % lymphocytes</td><td>Pléiocytose lymphocytaire</td></tr><tr><td>Protéines</td><td>1,1 g/L</td><td>Augmentées, &gt;1 g/L</td></tr><tr><td>Glycorachie</td><td>3,2 mmol/L pour glycémie 6,8</td><td>Diminuée par rapport aux ~2/3 attendus</td></tr></table></div>
+<h3>Diagnostic</h3><div class="schema">Neuroborréliose suspectée
+→ ELISA sang + LCR
+→ confirmation Western blot selon le cours
+→ recherche synthèse intrathécale d'IgG spécifiques
+→ sérologie syphilitique en parallèle
+PCR LCR : sensibilité insuffisante, non 1re intention
+Culture LCR : non retenue</div>
+<h3>Traitement</h3><p><strong>Ceftriaxone</strong> pour sa bonne diffusion dans le LCR. Une tétracycline est citée en alternative en cas d’allergie.</p>
+<div class="callout bluebox"><strong>Paralysie faciale :</strong> protéger l’œil si la fermeture palpébrale est insuffisante.</div></section>
+
+<section id="tularemie"><h2>13. Tularémie - Francisella tularensis</h2>
+<div class="grid2"><div class="card"><strong>Agent / sécurité</strong><p>Pathogène strict, bacille Gram négatif, présenté comme agent biologique de classe 3.</p></div><div class="card"><strong>Réservoirs</strong><p>Lièvres, lapins, rongeurs ; arthropodes, sols et eaux également cités.</p></div></div>
+<h3>Transmission</h3><p>Principalement cutanée ou muqueuse ; la bactérie peut franchir la peau saine. Autres voies : inhalation, ingestion ou contamination oculaire.</p>
+<h3>Clinique</h3><ul><li>Incubation : <strong>3 à 4 jours</strong>.</li><li>Fièvre, syndrome pseudo-grippal, AEG.</li><li>Forme classique : <strong>ulcéro-ganglionnaire</strong>, avec escarre/ulcération et adénopathie du territoire de drainage.</li><li>Autres formes : ganglionnaire, pulmonaire, digestive.</li></ul>
+<h3>Diagnostic</h3><ul><li>Cytoponction ganglionnaire.</li><li>Hémocultures si fièvre.</li><li>Sérosités du point d’inoculation.</li><li>Sérologie.</li><li>PCR possible sur prélèvement ganglionnaire.</li><li>Culture lente/difficile → prévenir le laboratoire.</li></ul>
+<h3>Traitement</h3><p>Tétracyclines ou fluoroquinolones, éventuellement associées à un aminoside ; aminosides non utilisés seuls.</p></section>
+
+<section id="fievre"><h2>14. Fièvre + sueurs nocturnes + altération de l’état général</h2>
+<p>Chez le patient de 68 ans, chasseur/pêcheur vivant près d’un élevage bovin, les pistes retenues sont :</p>
+<div class="grid3"><div class="card"><strong>Brucellose</strong><p>Syndrome sudoro-algique et AEG.</p></div><div class="card"><strong>Fièvre Q</strong><p>Compatible avec exposition à l’élevage.</p></div><div class="card"><strong>Tuberculose</strong><p>Compatible avec sueurs nocturnes + AEG, mais bilan BK non retenu ici faute d’exposition connue.</p></div></div>
+<p>Bilan discuté : hémocultures, ECBU, sérologie fièvre Q et sérologie brucellose.</p></section>
+
+<section id="surveillance"><h2>15. Surveillance / déclaration selon le support</h2>
+<div class="callout orangebox"><strong>Liste donnée par la professeure :</strong> brucellose, maladie de Lyme, pasteurellose, tularémie et typhus exanthématique épidémique.</div>
+<p>La déclaration est décrite comme adressée à l’ARS, avec participation possible du biologiste en coordination avec le clinicien.</p>
+<div class="callout warn"><strong>Attention :</strong> le support recommande lui-même de se référer aux consignes en vigueur pour les obligations réglementaires actuelles.</div></section>
+
+<section id="pieges"><h2>16. Pièges QCM et formulations particulières</h2>
+<div class="callout warn"><strong>Tétanos :</strong> inclus dans un cas de morsure mais explicitement non zoonotique.</div>
+<div class="callout warn"><strong>Bartonella vs Pasteurella :</strong> Bartonella = évolution plus progressive avec ganglion souvent indolore ; Pasteurella = tableau aigu très douloureux et inflammatoire en &lt;24 h.</div>
+<div class="callout warn"><strong>Érythème migrant :</strong> diagnostic clinique dans ce support, sans prélèvement dans le cas typique.</div>
+<div class="callout warn"><strong>Neuroborréliose :</strong> anticorps sang + LCR et synthèse intrathécale d’IgG ; PCR LCR non privilégiée.</div>
+<div class="callout warn"><strong>Francisella :</strong> une plaie n’est pas indispensable à la transmission cutanéo-muqueuse.</div>
+<div class="callout warn"><strong>Déclarations obligatoires :</strong> retenir la liste pour les QCM du cours, mais ne pas l’utiliser comme référence réglementaire actuelle sans vérification.</div>
+<div class="callout warn"><strong>Terminologie :</strong> le support signale qu’il préfère « bactériémie » à « septicémie » dans la partie Pasteurella.</div></section>
+
+<section id="recap" class="recap"><h2>Mini-récap ultra rentable</h2>
+<p><strong>Pasteurella :</strong> morsure/griffure chien-chat, &lt;24 h, douleur disproportionnée, culture de sérosités, amoxicilline. <strong>Bartonella :</strong> chaton + griffure → petite inoculation puis adénopathie régionale indolore ; PCR/culture ganglionnaire + sérologie ; symptomatique ± azithro/doxy. <strong>Lyme :</strong> Ixodes, érythème migrant = diagnostic clinique dans le cours ; amoxicilline ; phases secondaire/tertiaire possibles. <strong>Neuroborréliose :</strong> LCR clair lymphocytaire, protéines ↑, glucose ↓ ; anticorps sang/LCR + synthèse intrathécale ; ceftriaxone. <strong>Tularémie :</strong> lièvre/lapin/rongeur, peau saine possible, incubation 3–4 j, ulcération + adénopathie + fièvre, culture difficile/PCR possible, tétracycline ou fluoroquinolone. <strong>Fièvre Q :</strong> aérosols d’élevage, endocardite chronique possible. <strong>Listeria :</strong> pousse à 4 °C. <strong>Anthrax :</strong> spores, voies respiratoire et digestive.</p></section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « Zoonose Bactérienne » fourni par l’utilisateur. Les choix diagnostiques, traitements, listes de surveillance et formulations particulières suivent le support ; les points dépendant de la réglementation actuelle sont explicitement présentés comme tels.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+    <div class="flash">
+      <div class="q">Comment le cours définit-il une zoonose et quel rôle peut jouer l’animal ?</div>
+      <div class="a">Une zoonose est une maladie transmissible naturellement entre l’animal et l’Homme ; l’animal joue le rôle de réservoir et peut être porteur sain.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel terme le cours utilise-t-il lorsque la transmission se fait spécifiquement de l’animal vers l’être humain ?</div>
+      <div class="a">Le terme d’anthropozoonose est utilisé dans le support.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quels trois grands types d’agents peuvent être responsables de zoonoses ?</div>
+      <div class="a">Des agents bactériens, parasitaires et viraux.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelles sont les cinq grandes voies de transmission des zoonoses organisant le cours ?</div>
+      <div class="a">Morsure/griffure animale, piqûre d’arthropode, voie cutanéo-muqueuse, voie respiratoire et voie digestive.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelle est la voie de transmission zoonotique présentée comme la plus fréquente ?</div>
+      <div class="a">La morsure ou la griffure animale.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quels animaux sont les réservoirs fréquents de Pasteurella multocida ?</div>
+      <div class="a">Les chiens et les chats, chez lesquels la bactérie peut coloniser les voies aériennes supérieures sans symptôme.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Comment une griffure de chat peut-elle transmettre Pasteurella multocida ?</div>
+      <div class="a">Le chat peut contaminer ses griffes en se léchant les pattes avec une flore oropharyngée contenant Pasteurella multocida.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel agent est responsable de la maladie des griffes du chat ?</div>
+      <div class="a">Bartonella henselae.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelle situation épidémiologique de rage est décrite en France dans le cours ?</div>
+      <div class="a">La rage est devenue exceptionnelle sur le territoire ; les cas humains sont surtout présentés comme importés après exposition à l’étranger ou introduction illégale d’un animal.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel vecteur transmet classiquement Borrelia burgdorferi ?</div>
+      <div class="a">Une tique du genre Ixodes.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelles mesures de prévention de Lyme sont explicitement citées ?</div>
+      <div class="a">Vêtements couvrants, inspection de tout le corps après l’activité, y compris le cuir chevelu, et retrait immédiat de la tique avec un tire-tique.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Pourquoi faut-il utiliser un tire-tique selon le cours ?</div>
+      <div class="a">Pour retirer rapidement la tique sans la casser ni laisser le rostre dans la peau.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quels vecteurs de rickettsioses sont cités ?</div>
+      <div class="a">Les tiques et les poux.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel agent est responsable de la peste bubonique et à quelle famille le cours le rattache-t-il ?</div>
+      <div class="a">Yersinia pestis, présentée comme une entérobactérie.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelle situation géographique de la peste est donnée dans le cours ?</div>
+      <div class="a">Elle n’est plus présente en France mais persiste dans certains foyers endémiques, notamment à Madagascar.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelle particularité de transmission de Francisella tularensis faut-il retenir ?</div>
+      <div class="a">La bactérie peut franchir la peau ou les muqueuses sans nécessiter de plaie ouverte ; de simples micro-abrasions peuvent suffire.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quels sujets sont particulièrement exposés à la tularémie dans le cours ?</div>
+      <div class="a">Chasseurs, vétérinaires, gardes forestiers, éleveurs, équarrisseurs, personnes manipulant du gibier ou des animaux morts et personnels de laboratoire.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel réservoir est central dans la leptospirose selon le cours ?</div>
+      <div class="a">Le rat, à l’origine de l’expression « maladie des égoutiers ».</div>
+    </div>
+    <div class="flash">
+      <div class="q">Dans quel environnement Leptospira interrogans est-elle retrouvée dans le cours ?</div>
+      <div class="a">Dans l’eau stagnante ou des eaux naturelles potentiellement contaminées, notamment lacs et rivières.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelle voie de transmission caractérise Coxiella burnetii dans le support ?</div>
+      <div class="a">La voie respiratoire par inhalation d’aérosols ou poussières contaminés.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quels animaux sont cités comme réservoirs de Coxiella burnetii ?</div>
+      <div class="a">Principalement bovins et ovins.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelle complication chronique importante de la fièvre Q est citée ?</div>
+      <div class="a">Une endocardite chronique.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelle exposition oriente vers Chlamydophila psittaci ?</div>
+      <div class="a">L’exposition aux oiseaux, notamment élevage d’oiseaux ou proximité de pigeons et de leurs déjections.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelles caractéristiques de Bacillus anthracis sont mises en avant ?</div>
+      <div class="a">Bacille Gram positif sporulant, très résistant dans le milieu extérieur grâce à ses spores.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelles voies de contamination humaine par Bacillus anthracis sont citées ?</div>
+      <div class="a">Voie respiratoire par inhalation de spores et voie digestive après ingestion de viande contaminée.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Pourquoi Bacillus anthracis est-il associé au bioterrorisme dans le cours ?</div>
+      <div class="a">Le support rappelle les courriers contaminés par des spores envoyés aux États-Unis en 2001, responsables de formes pulmonaires graves.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel mode de contamination est classiquement cité pour la brucellose chez le voyageur ?</div>
+      <div class="a">Consommation de produits au lait cru, notamment fromage de chèvre, lors de séjours dans des zones où la maladie persiste.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelle particularité microbiologique de Listeria monocytogenes est importante pour la prévention alimentaire ?</div>
+      <div class="a">C’est un bacille Gram positif capable de se multiplier à 4 °C, donc dans un réfrigérateur.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quels sujets sont particulièrement à risque de listériose dans le cours ?</div>
+      <div class="a">Les personnes immunodéprimées et les femmes enceintes.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelles zoonoses bactériennes digestives supplémentaires sont citées sans développement ?</div>
+      <div class="a">Les salmonelloses non typhiques et les infections à Campylobacter spp.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quels parasites sont cités dans le panorama des zoonoses alimentaires ?</div>
+      <div class="a">Toxoplasmose, distomatose, trichinellose et échinococcose.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Dans le cas de plaie profonde souillée avec statut vaccinal antitétanique inconnu, quelle conduite est retenue dans le Wooclap ?</div>
+      <div class="a">Test rapide des anticorps si disponible ; s’il est négatif ou indisponible, immunoglobulines antitétaniques et vaccination dans deux bras différents, avec rappels.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Le tétanos est-il une zoonose selon le support ?</div>
+      <div class="a">Non. Le cours rappelle que Clostridium tetani est une bactérie tellurique anaérobie et que le tétanos n’est pas une zoonose.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel délai d’incubation caractérise la pasteurellose d’inoculation ?</div>
+      <div class="a">Quelques heures et toujours moins de 24 heures selon le cours.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel signe douloureux est particulièrement évocateur de pasteurellose d’inoculation ?</div>
+      <div class="a">Une douleur très vive, décrite comme disproportionnée par rapport à l’importance apparente de la plaie.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quels autres signes locaux peuvent accompagner la pasteurellose d’inoculation ?</div>
+      <div class="a">Plaie inflammatoire et œdématiée, écoulement séro-sanglant, lymphangite et adénopathies satellites.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelles formes sévères de pasteurellose sont citées ?</div>
+      <div class="a">Atteintes pleuro-pulmonaires, méningées ou bactériémiques et infections ostéoarticulaires de proximité, surtout sur terrain fragilisé.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel prélèvement est privilégié devant une plaie infectée à Pasteurella multocida ?</div>
+      <div class="a">Un prélèvement des sérosités de la plaie pour culture bactérienne.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Pourquoi la PCR n’est-elle pas retenue en première intention pour Pasteurella multocida ?</div>
+      <div class="a">Parce que la bactérie pousse bien en culture selon le cours.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel aspect microbiologique caractérise Pasteurella multocida ?</div>
+      <div class="a">Coccobacille Gram négatif à coloration bipolaire, catalase positif, oxydase positif et à métabolisme aéro-anaérobie.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel antibiotique est le traitement de référence d’une infection aiguë à Pasteurella multocida ?</div>
+      <div class="a">L’amoxicilline.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelles alternatives sont citées en cas d’allergie à l’amoxicilline pour une pasteurellose ?</div>
+      <div class="a">Une céphalosporine, la doxycycline à partir de 8 ans ou éventuellement une fluoroquinolone à partir de 15 ans.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel est le réservoir principal de Bartonella henselae ?</div>
+      <div class="a">Le chat, surtout les chatons de moins d’un an ; ils peuvent être bactériémiques sans symptômes.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel rôle jouent les puces dans la transmission de Bartonella henselae ?</div>
+      <div class="a">Elles transmettent la bactérie entre chats ; leurs déjections contaminent le pelage puis les griffes lors du toilettage.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel tableau clinique typique évoque la maladie des griffes du chat ?</div>
+      <div class="a">Une petite lésion d’inoculation souvent discrète puis une adénopathie régionale, souvent indolore, avec fièvre inconstante et état général parfois conservé.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Comment la localisation de l’adénopathie dépend-elle du site de griffure dans la maladie des griffes du chat ?</div>
+      <div class="a">Main/bras → axillaire ; visage → sous-maxillaire ou cervicale ; jambe → inguinale.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quels diagnostics différentiels importants doivent être évoqués devant une adénopathie axillaire isolée chez une personne âgée ?</div>
+      <div class="a">Métastase de cancer du sein, lymphome/hémopathie, Bartonella henselae et tuberculose ganglionnaire.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel prélèvement permet le diagnostic direct de Bartonella henselae ?</div>
+      <div class="a">Cytoponction ou biopsie ganglionnaire, avec culture et surtout PCR spécifique en complément.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Pourquoi faut-il prévenir le laboratoire en cas de suspicion de Bartonella henselae ?</div>
+      <div class="a">Parce que la culture est difficile, lente et peut nécessiter plusieurs semaines.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelle place la sérologie occupe-t-elle dans le diagnostic de Bartonella henselae ?</div>
+      <div class="a">Elle est utilisée en complément comme diagnostic indirect, notamment par immunofluorescence indirecte, mais est moins performante que la PCR selon le cours.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel traitement peut suffire dans une forme typique bien tolérée de maladie des griffes du chat ?</div>
+      <div class="a">Un traitement symptomatique avec surveillance de la régression ganglionnaire peut suffire.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quels antibiotiques peuvent être proposés dans la maladie des griffes du chat ?</div>
+      <div class="a">Azithromycine ou doxycycline sont citées, avec une efficacité présentée comme non certaine.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelle caractéristique morphologique définit Borrelia ?</div>
+      <div class="a">Un spirochète : bactérie spiralée, flexible et mobile.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelles trois espèces majeures de Borrelia sont citées en France ?</div>
+      <div class="a">Borrelia burgdorferi, B. afzelii et B. garinii ; le cours demande surtout de retenir B. burgdorferi.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Borrelia peut-elle être portée de manière asymptomatique selon le cours ?</div>
+      <div class="a">Non. Elle est présentée comme un pathogène strict sans portage sain.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quels réservoirs animaux de Borrelia sont cités ?</div>
+      <div class="a">Surtout les rongeurs et, dans une moindre mesure, les oiseaux.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Pourquoi l’érythème migrant dispense-t-il d’examens complémentaires dans le cours ?</div>
+      <div class="a">Parce qu’il est présenté comme pathognomonique/caractéristique de la maladie de Lyme dans le tableau clinique typique.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Combien de temps l’érythème migrant peut-il mettre à régresser spontanément ?</div>
+      <div class="a">Environ 3 à 4 semaines.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Pourquoi faut-il traiter un érythème migrant même s’il régresse spontanément ?</div>
+      <div class="a">Parce que l’infection peut évoluer vers des manifestations secondaires ou tardives.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelles manifestations secondaires de la maladie de Lyme sont citées ?</div>
+      <div class="a">Neuroborréliose précoce, arthrite notamment du genou et atteinte cardiaque comme un bloc auriculo-ventriculaire.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelles manifestations tardives de Lyme sont citées ?</div>
+      <div class="a">Arthrites chroniques, neuroborréliose chronique, manifestations cutanées et oculaires plusieurs mois ou années après l’infection.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel traitement est cité pour l’érythème migrant ?</div>
+      <div class="a">Amoxicilline ; en cas d’allergie, doxycycline chez les patients de plus de 8 ans selon le cours.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel tableau neurologique doit faire penser à une neuroborréliose dans le cas clinique ?</div>
+      <div class="a">Une diplégie faciale associée à des paresthésies des orteils après un épisode compatible avec Lyme.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel profil de LCR est décrit dans la neuroborréliose du cas clinique ?</div>
+      <div class="a">LCR clair, pléiocytose lymphocytaire, protéinorachie &gt;1 g/L et hypoglycorachie relative.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quelle relation normale entre glycorachie et glycémie est donnée dans le cours ?</div>
+      <div class="a">La glycorachie normale est présentée comme environ les deux tiers de la glycémie.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Pourquoi la PCR de Borrelia sur le LCR n’est-elle pas utilisée en première intention ?</div>
+      <div class="a">Elle est considérée comme insuffisamment sensible sur le LCR.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Sur quoi repose principalement le diagnostic de neuroborréliose ?</div>
+      <div class="a">Diagnostic indirect : anticorps anti-Borrelia dans sang et LCR, ELISA puis confirmation par Western blot selon le cours, avec recherche d’une synthèse intrathécale d’IgG spécifiques.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Pourquoi une sérologie syphilitique est-elle réalisée en parallèle dans le cours ?</div>
+      <div class="a">Parce qu’il peut exister des réactions croisées avec d’autres spirochètes ; une sérologie syphilitique négative renforce l’orientation Lyme.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel antibiotique est retenu pour traiter une neuroborréliose ?</div>
+      <div class="a">La ceftriaxone, notamment pour sa bonne diffusion dans le LCR.</div>
+    </div>
+    <div class="flash">
+      <div class="q">Quel tableau clinique classique de tularémie faut-il reconnaître ?</div>
+      <div class="a">Fièvre avec ulcération ou escarre au point d’inoculation et adénopathie inflammatoire dans le territoire de drainage, après contact avec un animal sauvage.</div>
+    </div>
+  </div>
+</section>
+</main>
+</body>
+</html>

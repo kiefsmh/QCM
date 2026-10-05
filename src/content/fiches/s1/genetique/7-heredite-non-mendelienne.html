@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiche - Hérédité non mendélienne</title>
+<style>
+:root{
+  --g:#1a7a4a;--gs:#eaf7ef;--red:#b91c1c;--reds:#fee2e2;--o:#b45309;--os:#fff7ed;
+  --b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--t:#0f766e;--ts:#ecfeff;
+  --ink:#1c1c2e;--muted:#5b6474;--line:#d8dce8;--bg:#f6f7fb
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}
+.page{max-width:1160px;margin:auto;padding:32px 18px 70px}
+.hero{background:linear-gradient(135deg,#fff 0%,#f0fdf4 54%,#eef9ff 100%);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}
+.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}
+h1{font-size:38px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}
+.subtitle{margin:0;color:#374151;max-width:1050px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px} .tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}
+.green{background:var(--gs);color:#166534} .red{background:var(--reds);color:#991b1b} .orange{background:var(--os);color:#92400e}
+.blue{background:var(--bs);color:#1d4ed8} .purple{background:var(--ps);color:#5b21b6}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}
+.primary{background:var(--g);color:white} .secondary{background:white;color:var(--g);border:1px solid var(--line)}
+nav,section{background:white;border:1.5px solid var(--line);border-radius:18px}
+nav{padding:18px;margin:18px 0 26px} nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}
+nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px} nav li{margin:5px 0} nav a{color:inherit;text-decoration:none} nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(31,41,55,.035)}
+h2{font-size:25px;letter-spacing:-.02em;margin:0 0 16px} h3{font-size:18px;color:var(--g);margin:22px 0 10px}
+p{margin:8px 0} ul,ol{padding-left:22px;margin:8px 0 12px} li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}
+.warn{border-left-color:var(--red);background:var(--reds)} .orangebox{border-left-color:var(--o);background:var(--os)}
+.bluebox{border-left-color:var(--b);background:var(--bs)} .purplebox{border-left-color:var(--p);background:var(--ps)} .tealbox{border-left-color:var(--t);background:var(--ts)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;white-space:pre-wrap;overflow-x:auto}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px;min-width:760px}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top} th{background:#f3f4f6;text-align:left}
+.recap{background:#111827;color:white} .recap h2{color:white} .recap strong{color:#bbf7d0}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:white}
+.flash .q{background:#f9fafb;padding:11px 12px;font-weight:800;border-bottom:1px solid var(--line)}
+.flash .a{padding:11px 12px;color:#374151}
+.source-note{font-size:12.5px;color:var(--muted);margin:18px 4px}
+@media(max-width:780px){
+  h1{font-size:29px} .grid2,.grid3,.flashgrid{grid-template-columns:1fr} nav ol{columns:1}
+  section,.hero{padding:18px} table{min-width:650px;font-size:12.4px}
+}
+@media print{body{background:#fff} .page{max-width:none;padding:0} nav,.actions{display:none} section,.hero{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<main class="page">
+
+<header class="hero">
+<div class="kicker">UE5 - Génétique médicale</div>
+<h1>Hérédité non mendélienne et exemples de pathologies</h1>
+<p class="subtitle">Fiche complète orientée D1/EDN/QCM : hérédité mitochondriale, hétéroplasmie, empreinte parentale, disomies uniparentales, syndromes liés à l’empreinte et hérédité multifactorielle.</p>
+<div class="tags">
+<span class="tag green">Mitochondries</span>
+<span class="tag purple">Empreinte parentale</span>
+<span class="tag orange">DUP / épimutations</span>
+<span class="tag red">Syndromes à connaître</span>
+<span class="tag blue">Multifactoriel / RR</span>
+</div>
+<div class="actions">
+<button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+<button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+</div>
+</header>
+
+<nav>
+<h2>Plan rapide</h2>
+<ol>
+<li><a href="#mito-rappels">Rappels mitochondriaux</a></li>
+<li><a href="#adnmt">ADN mitochondrial</a></li>
+<li><a href="#maladies-mito">Maladies mitochondriales</a></li>
+<li><a href="#transmission-mito">Transmission / hétéroplasmie</a></li>
+<li><a href="#conseil-mito">Conseil génétique mitochondrial</a></li>
+<li><a href="#epigenetique">Épigénétique</a></li>
+<li><a href="#empreinte">Empreinte parentale</a></li>
+<li><a href="#lecture">Lecture de l’empreinte</a></li>
+<li><a href="#cycle">Cycle de l’empreinte</a></li>
+<li><a href="#dup">Epimutations / DUP</a></li>
+<li><a href="#bws">Beckwith-Wiedemann</a></li>
+<li><a href="#srs">Silver-Russell</a></li>
+<li><a href="#pws">Prader-Willi</a></li>
+<li><a href="#angelman">Angelman</a></li>
+<li><a href="#temple">Temple / Kagami-Ogata</a></li>
+<li><a href="#autres">Autres empreintes</a></li>
+<li><a href="#transmission-empreinte">Transmission familiale</a></li>
+<li><a href="#mlid">MLID</a></li>
+<li><a href="#multifactoriel">Hérédité multifactorielle</a></li>
+<li><a href="#preuves">Arguments épidémiologiques</a></li>
+<li><a href="#seuil">Modèle à seuil</a></li>
+<li><a href="#rr">Risque relatif</a></li>
+<li><a href="#pieges">Pièges du support</a></li>
+<li><a href="#recap">Mini-récap</a></li>
+<li><a href="#flashcards">Flashcards express</a></li>
+</ol>
+</nav>
+
+<section id="mito-rappels">
+<h2>1. Hérédité maternelle : rappels sur la mitochondrie</h2>
+<div class="grid3">
+<div class="card"><strong>Structure</strong><p>Membrane externe, membrane interne, matrice.</p></div>
+<div class="card"><strong>Dynamique</strong><p>Fusion ↔ fission : formes filamenteuses, fragmentées et intermédiaires.</p></div>
+<div class="card"><strong>Origine</strong><p>Endosymbiose avec transfert progressif de matériel génétique vers le noyau.</p></div>
+</div>
+<h3>Rôles cités</h3>
+<ul>
+<li>Phosphorylation oxydative / chaîne respiratoire → ATP.</li>
+<li>Cycle de l’urée.</li>
+<li>β-oxydation des acides gras.</li>
+<li>Apoptose.</li>
+<li>Homéostasie du calcium.</li>
+</ul>
+</section>
+
+<section id="adnmt">
+<h2>2. ADN mitochondrial</h2>
+<div class="tablewrap"><table>
+<tr><th>Caractéristique</th><th>Valeur / formulation du cours</th></tr>
+<tr><td>Forme</td><td>Circulaire, bicaténaire</td></tr>
+<tr><td>Taille</td><td>16 659 pb dans le support</td></tr>
+<tr><td>Introns</td><td>Absents</td></tr>
+<tr><td>ARN</td><td>2 ARNr + 22 ARNt</td></tr>
+<tr><td>Gènes de structure</td><td>13</td></tr>
+<tr><td>Copies</td><td>2 à 10 molécules d’ADNmt par mitochondrie</td></tr>
+<tr><td>Chaîne respiratoire</td><td>≈20 % codée ADNmt ; ≈80 % codée ADN nucléaire</td></tr>
+<tr><td>Complexe II</td><td>Entièrement codé par l’ADN nucléaire selon le support</td></tr>
+</table></div>
+
+<div class="callout orangebox"><strong>Code génétique mitochondrial :</strong> le cours cite TGA → tryptophane dans la mitochondrie, et AGA/AGG → STOP.</div>
+<div class="callout warn"><strong>Formulation source à conserver avec prudence :</strong> le support écrit « brin lourd riche en guanine et alanine ». « Alanine » apparaît tel quel dans le ronéo ; ne pas le transformer silencieusement.</div>
+</section>
+
+<section id="maladies-mito">
+<h2>3. Maladies mitochondriales : grande complexité</h2>
+<div class="callout"><strong>Distinction fondamentale :</strong> toute maladie d’hérédité mitochondriale est une maladie mitochondriale, mais une maladie mitochondriale peut être due à une mutation nucléaire et donc ne pas suivre une transmission maternelle.</div>
+
+<ul>
+<li>Anomalies ADNmt : <strong>10–15 %</strong> des maladies mitochondriales dans le support.</li>
+<li>Environ <strong>500–800 gènes nucléaires</strong> codent des protéines intervenant dans la mitochondrie.</li>
+<li>Taux de mutation ADNmt : environ <strong>10×</strong> celui de l’ADN nucléaire dans le cours.</li>
+</ul>
+
+<h3>Hétérogénéité</h3>
+<div class="grid2">
+<div class="card"><strong>1 génotype → plusieurs phénotypes</strong><p>Ex. m.7445A&gt;G MT-TS1 : surdité isolée ou kératodermie palmoplantaire + surdité.</p></div>
+<div class="card"><strong>1 phénotype → plusieurs génotypes</strong><p>Ex. syndrome de Leigh : nombreuses causes mitochondriales et nucléaires.</p></div>
+</div>
+
+<h3>Exemples classiques</h3>
+<div class="tablewrap"><table>
+<tr><th>Syndrome</th><th>Élément génétique / clinique cité</th></tr>
+<tr><td>NARP</td><td>m.8993T&gt;G, MT-ATP6 ; neuropathie, ataxie, rétinite pigmentaire</td></tr>
+<tr><td>MELAS</td><td>MT-TL1 cité ; pseudo-AVC non systématisés par territoire vasculaire</td></tr>
+<tr><td>Leber</td><td>Gènes du complexe I ; atteinte du nerf optique</td></tr>
+<tr><td>Leigh</td><td>Encéphalopathie sévère, noyaux gris centraux / tronc cérébral, forte hétérogénéité génétique</td></tr>
+</table></div>
+</section>
+
+<section id="transmission-mito">
+<h2>4. Transmission maternelle, hétéroplasmie et effet seuil</h2>
+<div class="schema">Ovocyte = mitochondries transmises au zygote
+Spermatozoïde = mitochondries non transmises selon le modèle du cours
+
+Femme porteuse → fils et filles peuvent hériter l’ADNmt muté
+Fille porteuse → peut transmettre
+Homme atteint → ne transmet pas</div>
+
+<h3>Hétéroplasmie</h3>
+<p>La coexistence d’ADN mitochondrial sauvage et muté est appelée <strong>hétéroplasmie</strong>. La ségrégation est aléatoire lors des divisions : les proportions peuvent donc varier entre tissus et entre descendants.</p>
+<div class="callout bluebox"><strong>Effet seuil :</strong> les signes cliniques apparaissent au-delà d’un certain pourcentage d’ADNmt muté. Le taux mesuré dans le sang ne reflète pas forcément le taux musculaire ou cérébral.</div>
+
+<h3>Neuropathie optique de Leber</h3>
+<ul>
+<li>Pénétrance : <strong>50–80 % chez les hommes</strong>.</li>
+<li>Environ <strong>20 % chez les femmes</strong>.</li>
+<li>Le cours insiste : <strong>ce n’est pas une maladie liée à l’X</strong>.</li>
+<li>Alcool et tabac sont cités comme facteurs exogènes délétères.</li>
+</ul>
+</section>
+
+<section id="conseil-mito">
+<h2>5. Conseil génétique mitochondrial</h2>
+<div class="grid2">
+<div class="card"><strong>Homme atteint</strong><p>Situation rassurante pour la descendance : pas de transmission mitochondriale paternelle.</p></div>
+<div class="card"><strong>Femme porteuse</strong><p>Transmission possible/attendue de mitochondries mutées, mais pronostic clinique difficile en raison de l’hétéroplasmie et de l’effet seuil.</p></div>
+</div>
+<ul>
+<li>Le test chez un sujet à risque asymptomatique est présenté comme souvent peu informatif.</li>
+<li>Le diagnostic prénatal moléculaire est possible mais son interprétation est compliquée car l’hétéroplasmie varie selon les tissus.</li>
+<li>Le support décrit aussi le principe d’un don cytoplasmique/mitochondrial pratiqué au Royaume-Uni.</li>
+</ul>
+</section>
+
+<section id="epigenetique">
+<h2>6. Rappels d’épigénétique</h2>
+<p>L’épigénétique régule l’expression des gènes <strong>sans modifier la séquence d’ADN</strong>.</p>
+<div class="grid2">
+<div class="card"><strong>ADN / ARN</strong><p>Méthylation de l’ADN, méthylation de l’ARN, ARN non codants.</p></div>
+<div class="card"><strong>Histones</strong><p>Acétylation, désacétylation, méthylation, phosphorylation, ubiquitination.</p></div>
+</div>
+</section>
+
+<section id="empreinte">
+<h2>7. Définition et découverte de l’empreinte parentale</h2>
+<div class="callout"><strong>Définition :</strong> un seul des deux allèles est exprimé, l’autre étant réprimé selon son origine parentale → <strong>hémizygotie fonctionnelle</strong>.</div>
+<div class="callout warn"><strong>Piège de vocabulaire :</strong> une <em>empreinte maternelle</em> signifie que l’allèle maternel est réprimé ; l’allèle paternel s’exprime. Inversement pour une empreinte paternelle.</div>
+
+<h3>Expériences fondatrices</h3>
+<div class="tablewrap"><table>
+<tr><th>Embryon</th><th>Taille embryon</th><th>Trophoblaste</th></tr>
+<tr><td>Normal</td><td>Normale</td><td>Normal</td></tr>
+<tr><td>Gynogénote / parthénogénote</td><td>Petit</td><td>Petit</td></tr>
+<tr><td>Androgénote</td><td>Petit</td><td>Gros</td></tr>
+</table></div>
+<p>Conclusion du cours : un génome diploïde n’est pas suffisant ; il faut une contribution maternelle et paternelle pour un développement harmonieux.</p>
+</section>
+
+<section id="lecture">
+<h2>8. Lecture de l’empreinte génomique</h2>
+<p>Les gènes soumis à empreinte sont souvent regroupés en <strong>clusters</strong> sous contrôle d’un <strong>ICR</strong>. Environ <strong>90 %</strong> possèdent des îlots CpG au niveau promoteur.</p>
+
+<div class="tablewrap"><table>
+<tr><th>Mécanisme</th><th>Logique du support</th></tr>
+<tr><td>Méthylation du promoteur</td><td>Méthylé → chromatine compactée → pas de transcription</td></tr>
+<tr><td>Méthylation d’une séquence régulatrice</td><td>Peut empêcher la fixation d’un inhibiteur → favoriser l’expression</td></tr>
+<tr><td>Élément isolant CTCF</td><td>CTCF peut empêcher un enhancer d’activer un promoteur</td></tr>
+<tr><td>ARN antisens direct</td><td>ARN sens + antisens se neutralisent</td></tr>
+<tr><td>ARN antisens indirect</td><td>Peut limiter l’accès des enhancers au promoteur</td></tr>
+<tr><td>Compétition pour séquence régulatrice</td><td>Le promoteur ayant la meilleure affinité capte l’enhancer</td></tr>
+</table></div>
+
+<div class="callout bluebox"><strong>Méthyltransférases :</strong> DNMT1 = maintien au cours des divisions ; DNMT3A/3B = méthylation de novo.</div>
+</section>
+
+<section id="cycle">
+<h2>9. Cycle de l’empreinte</h2>
+<div class="schema">Lignée germinale
+→ effacement des anciennes empreintes
+→ ré-établissement selon le sexe de l'individu
+→ fécondation
+→ maintien des marques des gènes soumis à empreinte
+→ lecture dans les tissus somatiques
+→ variabilité possible selon tissu et période de développement</div>
+</section>
+
+<section id="dup">
+<h2>10. Maladies liées à l’empreinte : épimutations et DUP</h2>
+<div class="grid3">
+<div class="card"><strong>Épimutation</strong><p>Séquence d’ADN inchangée ; anomalie des marques épigénétiques, souvent sporadique.</p></div>
+<div class="card"><strong>Variation d’un GSE</strong><p>Séquence modifiée ; potentiellement transmissible, phénotype dépendant du parent transmetteur.</p></div>
+<div class="card"><strong>DUP</strong><p>Deux exemplaires d’un chromosome ou segment hérités d’un même parent.</p></div>
+</div>
+
+<h3>Isodisomie vs hétérodisomie</h3>
+<ul>
+<li><strong>Isodisomie :</strong> deux copies du même chromosome parental.</li>
+<li><strong>Hétérodisomie :</strong> deux homologues différents provenant du même parent.</li>
+</ul>
+
+<h3>Mécanismes d’origine d’une DUP</h3>
+<ol>
+<li>Complémentation gamétique : gamète disomique + gamète nullosomique.</li>
+<li>Duplication d’un chromosome dans un zygote monosomique.</li>
+<li><strong>Correction d’une trisomie</strong> : présentée comme la plus fréquente ; si perte au hasard, une DUP peut apparaître dans environ <strong>1/3</strong> des corrections.</li>
+</ol>
+<div class="callout orangebox"><strong>Autre conséquence :</strong> une isodisomie peut révéler une maladie autosomique récessive en dupliquant un allèle pathogène d’un parent hétérozygote.</div>
+</section>
+
+<section id="bws">
+<h2>11. Syndrome de Beckwith-Wiedemann</h2>
+<p><strong>Région : 11p15.5</strong>. Syndrome de croissance excessive débutant souvent in utero.</p>
+<div class="grid2">
+<div class="card"><strong>Clinique</strong><p>Macrosomie &gt;97e percentile, macroglossie, asymétrie corporelle, omphalocèle, viscéromégalie, hypoglycémies néonatales.</p></div>
+<div class="card"><strong>Risque tumoral</strong><p>≈5 % : néphroblastome, hépatoblastome, neuroblastome. Surveillance échographique tous les 3 mois pendant l’enfance.</p></div>
+</div>
+
+<div class="tablewrap"><table>
+<tr><th>Mécanisme</th><th>Fréquence du support</th></tr>
+<tr><td>Hypométhylation IC2 maternel</td><td>≈50 %</td></tr>
+<tr><td>DUP paternelle</td><td>≈20 %</td></tr>
+<tr><td>Hyperméthylation IC1 paternel</td><td>≈5 %</td></tr>
+<tr><td>Mutation CDKN1C maternelle</td><td>≈5 %</td></tr>
+<tr><td>Remaniements chromosomiques</td><td>≈1 %</td></tr>
+<tr><td>Aucune anomalie retrouvée</td><td>≈20 %</td></tr>
+</table></div>
+</section>
+
+<section id="srs">
+<h2>12. Syndrome de Silver-Russell</h2>
+<div class="callout"><strong>Miroir du Beckwith-Wiedemann :</strong> même grande région d’empreinte possible, mais phénotype de défaut de croissance.</div>
+<ul>
+<li>Retard de croissance anténatal puis postnatal.</li>
+<li>Macrocéphalie <strong>relative</strong>.</li>
+<li>Front bombé, visage triangulaire.</li>
+<li>Difficultés alimentaires sévères.</li>
+<li>Parfois asymétrie, hypospadias, taches café au lait, clinodactylie.</li>
+</ul>
+<p>Mécanismes cités : perte de méthylation d’IC1 paternel, duplication d’un domaine maternel 11p15.5, gain de fonction de CDKN1C, perte de fonction IGF2/PLAG1/HMGA2 ; <strong>DUP maternelle du chromosome 7</strong> possible.</p>
+</section>
+
+<section id="pws">
+<h2>13. Syndrome de Prader-Willi</h2>
+<p>Maladie rare, environ <strong>1/20 000 naissances</strong>, région <strong>15q11.2-q13</strong>.</p>
+
+<div class="tablewrap"><table>
+<tr><th>Période</th><th>Éléments clés</th></tr>
+<tr><td>Grossesse</td><td>Parfois mouvements fœtaux diminués, RCIU, polyhydramnios ; signes non constants</td></tr>
+<tr><td>Naissance</td><td>Hypotonie majeure, difficultés succion-déglutition, acromicrie, front étroit, yeux en amande</td></tr>
+<tr><td>Enfance/adolescence</td><td>Retard développemental, troubles cognitifs, comportementaux et alimentaires → obésité</td></tr>
+<tr><td>Adulte</td><td>Persistance de nombreux troubles ; conduite alimentaire parfois moins marquée</td></tr>
+</table></div>
+
+<h3>Atteinte endocrinienne</h3>
+<ul><li>Déficit GH.</li><li>Hypogonadisme.</li><li>Autres axes possibles cités dans le ronéo.</li></ul>
+
+<h3>Mécanismes</h3>
+<ul>
+<li>Délétion paternelle : <strong>70 %</strong>.</li>
+<li>DUP maternelle : <strong>28 %</strong>.</li>
+<li>Défaut du centre d’empreinte : <strong>≈2 %</strong>.</li>
+</ul>
+</section>
+
+<section id="angelman">
+<h2>14. Syndrome d’Angelman</h2>
+<p>Même grande région chromosomique que Prader-Willi, mais mécanismes inverses.</p>
+<ul>
+<li>Déficit intellectuel sévère, patients souvent non verbaux.</li>
+<li>Très expressifs et souriants.</li>
+<li>Troubles de marche/équilibre, épilepsie, troubles du sommeil.</li>
+<li>Fréquence donnée : environ 1/20 000 à 1/10 000 naissances.</li>
+</ul>
+<div class="callout purplebox"><strong>Mécanismes :</strong> délétion maternelle, DUP paternelle, défaut d’empreinte maternel, mutation de <strong>UBE3A</strong> sur l’allèle maternel.</div>
+<div class="schema">Prader-Willi = il manque le Père
+AngelMan = il manque la Mère</div>
+</section>
+
+<section id="temple">
+<h2>15. Temple et Kagami-Ogata</h2>
+<p>Région <strong>14q32</strong>.</p>
+<div class="grid2">
+<div class="card"><strong>Temple</strong><p>Défaut d’empreinte d’origine paternelle → surexpression maternelle. Début Silver-Russell-like puis évolution possible vers hyperphagie/obésité de type Prader-Willi.</p></div>
+<div class="card"><strong>Kagami-Ogata</strong><p>Défaut d’empreinte maternelle ; forme plus malformative, avec retard psychomoteur et côtes « en portemanteau ».</p></div>
+</div>
+</section>
+
+<section id="autres">
+<h2>16. Autres pathologies liées à l’empreinte</h2>
+<h3>Diabète néonatal transitoire</h3>
+<p>Le cours cite des gènes soumis à empreinte du chromosome 6.</p>
+
+<h3>Pseudo-hypoparathyroïdie</h3>
+<p>Défaut d’empreinte du chromosome 20 impliquant <strong>GNAS</strong>.</p>
+<div class="tablewrap"><table>
+<tr><th>Critères</th><th>Manifestations</th></tr>
+<tr><td>Majeurs</td><td>Résistance à la PTH, ossifications ectopiques, brachydactylie de type E</td></tr>
+<tr><td>Mineurs</td><td>Résistance TSH et autres hormones, atteinte cognitive/motrice, retard de croissance, surpoids, signes morphologiques</td></tr>
+<tr><td>Atypiques</td><td>Perte auditive, Chiari, cataracte, SAOS, otites, asthme…</td></tr>
+</table></div>
+<div class="callout orangebox"><strong>Piège :</strong> la brachydactylie n’est pas forcément présente à la naissance ; elle apparaît typiquement vers <strong>4–5 ans</strong>.</div>
+</section>
+
+<section id="transmission-empreinte">
+<h2>17. Transmission des pathologies de l’empreinte</h2>
+<p>La plupart des formes sont <strong>sporadiques</strong>, mais des formes familiales existent en cas de mutation du centre d’empreinte, mutation d’un GSE ou anomalie cytogénétique.</p>
+<div class="callout bluebox"><strong>Principe :</strong> dans la lignée germinale, l’épigénotype doit normalement être effacé puis réécrit selon le sexe. Une mutation d’un centre d’empreinte peut empêcher ce changement et produire des syndromes différents selon le parent transmetteur.</div>
+<p>Le support illustre ainsi des familles où une anomalie du centre PWS/AS peut conduire selon les générations à un Prader-Willi ou à un Angelman, et une délétion de 14q32 à Temple puis Kagami-Ogata selon l’origine parentale.</p>
+</section>
+
+<section id="mlid">
+<h2>18. Trouble de l’empreinte multilocus (MLID)</h2>
+<p>Altération de méthylation touchant plusieurs loci soumis à empreinte dans le génome. Le tableau clinique est souvent <strong>mixte et peu spécifique</strong>, combinant des éléments de plusieurs syndromes.</p>
+<p>Le cours relie les MLID à des anomalies de gènes impliqués dans la mise en place des marques épigénétiques au développement précoce.</p>
+</section>
+
+<section id="multifactoriel">
+<h2>19. Hérédité multifactorielle</h2>
+<div class="callout"><strong>Définition :</strong> déterminisme polygénique + environnement. Chaque variant isolé est généralement insuffisant ; leurs effets s’additionnent avec les facteurs environnementaux.</div>
+<p>La part génétique est appelée <strong>susceptibilité</strong> ou <strong>prédisposition génétique</strong>.</p>
+
+<h3>Continuum génétique ↔ environnement</h3>
+<div class="tablewrap"><table>
+<tr><th>Position</th><th>Description</th></tr>
+<tr><td>Monogénique pur</td><td>Un seul gène en cause</td></tr>
+<tr><td>Monogénique modulé</td><td>Un gène majeur dont le phénotype est modifié par d’autres gènes</td></tr>
+<tr><td>Polygénique à gènes majeurs</td><td>Plusieurs gènes, dont certains à effet important</td></tr>
+<tr><td>Polygénique pur</td><td>Nombreuses susceptibilités de faible effet</td></tr>
+<tr><td>Environnemental</td><td>Pas de facteur génétique identifié dans le modèle présenté</td></tr>
+</table></div>
+
+<h3>Exemple de l’obésité</h3>
+<p>Le support va d’obésités monogéniques (leptine, récepteur leptine, POMC, MC4R) à des formes polygéniques majoritaires, puis à des formes essentiellement environnementales.</p>
+</section>
+
+<section id="preuves">
+<h2>20. Arguments en faveur d’une maladie génétique complexe</h2>
+<ol>
+<li><strong>Agrégation familiale</strong> supérieure à la population générale sans schéma mendélien.</li>
+<li><strong>Concordance jumeaux :</strong> monozygotes 80–90 % vs dizygotes 15–40 % dans l’exemple pédagogique.</li>
+<li><strong>Fréquence élevée dans certaines populations :</strong> diabète de type 2 chez les Pimas d’Arizona ≈50 % dans le support.</li>
+</ol>
+
+<div class="tablewrap"><table>
+<tr><th>Maladie</th><th>Risque apparenté 1er degré</th><th>Population générale</th><th>RR fratrie</th></tr>
+<tr><td>Fente labiale</td><td>3 %</td><td>0,1 %</td><td>30</td></tr>
+<tr><td>Autisme</td><td>5 %</td><td>0,5 %</td><td>10</td></tr>
+</table></div>
+</section>
+
+<section id="seuil">
+<h2>21. Modèle à seuil</h2>
+<div class="schema">Susceptibilité génétique
++ facteurs environnementaux
++ interactions diverses
+→ charge totale de risque
+→ si seuil critique dépassé
+→ phénotype / maladie</div>
+<p>Exemple du cours : anomalies de fermeture du tube neural. L’acide folique diminue une composante environnementale du risque mais ne garantit pas que le seuil ne sera pas franchi.</p>
+</section>
+
+<section id="rr">
+<h2>22. Risque relatif et facteurs de susceptibilité</h2>
+<div class="callout"><strong>Formule :</strong> RR = prévalence chez les apparentés / prévalence dans la population générale.</div>
+<ul>
+<li>Plus le lien de parenté est proche, plus le risque peut être élevé.</li>
+<li>Un RR élevé suggère une composante génétique importante.</li>
+<li>Le RR dépend également de la prévalence de la maladie.</li>
+<li>Un excès familial peut aussi refléter un environnement familial commun.</li>
+</ul>
+
+<h3>Exemples</h3>
+<div class="tablewrap"><table>
+<tr><th>Facteur</th><th>Effet cité</th></tr>
+<tr><td>APOE E4 ×1</td><td>RR Alzheimer ≈3</td></tr>
+<tr><td>APOE E4 ×2</td><td>RR Alzheimer ≈8</td></tr>
+<tr><td>APOE E3</td><td>Neutre</td></tr>
+<tr><td>APOE E2</td><td>Plutôt protecteur</td></tr>
+<tr><td>HLA / spondylarthrite ankylosante</td><td>RR ≈80</td></tr>
+<tr><td>HLA / diabète de type 1</td><td>RR ≈15</td></tr>
+</table></div>
+</section>
+
+<section id="pieges">
+<h2>23. Pièges et incohérences internes du support</h2>
+<div class="callout warn"><strong>Transmission mitochondriale, page 2 :</strong> le ronéo écrit « dans le cas de l’hérédité mendélienne, seules les femmes peuvent transmettre » puis « pas du tout d’enfant garçon atteint ». Cela contredit le reste du cours : le modèle mitochondrial présenté ensuite montre que garçons et filles peuvent être atteints, mais seuls les descendants des femmes reçoivent l’ADN mitochondrial. Formulation à considérer comme incohérente dans le support.</div>
+<div class="callout warn"><strong>Brin lourd mitochondrial :</strong> le support écrit « riche en guanine et alanine ». Cette formulation est conservée telle quelle dans la source et doit être repérée comme suspecte plutôt que corrigée silencieusement.</div>
+<div class="callout warn"><strong>QCS mitochondrie :</strong> la correction affiche « QCS 1 : B » alors que le détail qui suit marque A, B, C, D et E comme faux. Incohérence interne du corrigé.</div>
+<div class="callout warn"><strong>QCM empreinte de la prof :</strong> l’item « différences épigénétiques entre les deux allèles » est corrigé faux alors que le corps du cours décrit précisément des différences de méthylation parentales. Conserver ce conflit en tête pour les annales.</div>
+<div class="callout warn"><strong>Terminologie :</strong> le cours emploie parfois « mutation » et « variation pathogène » de façon interchangeable dans la partie Silver-Russell ; garder la terminologie du support pour ses QCM.</div>
+</section>
+
+<section id="recap" class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>Mitochondrial :</strong> transmission maternelle, hommes non transmetteurs, hétéroplasmie + ségrégation aléatoire + effet seuil = expressivité variable. Maladie mitochondriale ≠ forcément hérédité mitochondriale. <strong>Empreinte :</strong> un seul allèle exprimé selon l’origine parentale ; empreinte maternelle = allèle maternel éteint. ICR + méthylation + CTCF + antisens. <strong>DUP :</strong> deux copies d’un même parent ; iso = même homologue, hétéro = deux homologues. <strong>BWS</strong> = excès de croissance, 11p15.5, risque tumoral 5 %. <strong>Silver-Russell</strong> = miroir avec retard de croissance. <strong>PWS</strong> = manque d’expression paternelle 15q11.2-q13, hypotonie puis hyperphagie. <strong>Angelman</strong> = manque d’expression maternelle, UBE3A, déficit intellectuel sévère. <strong>Temple/Kagami</strong> = 14q32. <strong>Multifactoriel :</strong> polygénique + environnement + modèle à seuil ; RR = prévalence apparentés / population générale.</p>
+</section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « Hérédité non mendélienne (maladies mitochondriales, empreinte parentale, maladies multifactorielles) et exemples de pathologies ». Les chiffres, formulations et incohérences signalées sont ceux du support.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+<div class="flash">
+  <div class="q">Quelle différence fondamentale le cours fait-il entre maladie mitochondriale et hérédité mitochondriale ?</div>
+  <div class="a">Une maladie mitochondriale est une atteinte du fonctionnement mitochondrial ; elle peut être due à l’ADN mitochondrial ou à des gènes nucléaires. Une hérédité mitochondriale correspond spécifiquement à une anomalie de l’ADN mitochondrial et suit une transmission maternelle.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi une maladie d’hérédité mitochondriale est-elle forcément une maladie mitochondriale, alors que l’inverse n’est pas vrai ?</div>
+  <div class="a">Parce que l’ADN mitochondrial ne code que des éléments impliqués dans la mitochondrie, tandis que de nombreuses protéines mitochondriales sont codées par des gènes nucléaires.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels sont les trois compartiments structuraux de la mitochondrie rappelés dans le cours ?</div>
+  <div class="a">Une membrane externe, une membrane interne et une matrice contenant notamment l’ADN mitochondrial.</div>
+</div>
+<div class="flash">
+  <div class="q">Que signifie la dynamique mitochondriale décrite par les termes fusion et fission ?</div>
+  <div class="a">Les mitochondries peuvent fusionner en réseaux filamenteux ou se fragmenter en petits éléments ; leur morphologie est donc continuellement dynamique.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle origine évolutive de la mitochondrie est proposée dans le cours ?</div>
+  <div class="a">Une origine endosymbiotique : une cellule ancestrale aurait intégré une bactérie aérobie, avec transfert progressif d’une partie du matériel génétique mitochondrial vers le noyau.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels grands rôles mitochondriaux sont cités dans le cours ?</div>
+  <div class="a">Synthèse d’ATP par phosphorylation oxydative, cycle de l’urée, β-oxydation des acides gras, apoptose et homéostasie du calcium.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles caractéristiques structurales de l’ADN mitochondrial faut-il retenir selon le support ?</div>
+  <div class="a">ADN circulaire, bicaténaire, sans introns, avec 2 ARNr, 22 ARNt, 13 gènes de structure et plusieurs copies par mitochondrie.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle taille d’ADN mitochondrial est donnée dans le support ?</div>
+  <div class="a">Le support indique 16 659 paires de bases.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles différences de code génétique mitochondrial sont citées ?</div>
+  <div class="a">TGA est donné comme codant le tryptophane dans la mitochondrie alors qu’il est STOP dans le code nucléaire ; AGA et AGG sont donnés comme STOP dans le code mitochondrial.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle proportion des protéines de la chaîne respiratoire est attribuée à l’ADN mitochondrial et nucléaire dans le cours ?</div>
+  <div class="a">Environ 20 % sont codées par l’ADN mitochondrial et 80 % par l’ADN nucléaire ; le complexe II est présenté comme entièrement nucléaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle proportion des maladies mitochondriales est attribuée à une anomalie de l’ADN mitochondrial ?</div>
+  <div class="a">Le cours indique environ 10 à 15 % ; les autres peuvent être liées à des gènes nucléaires.</div>
+</div>
+<div class="flash">
+  <div class="q">Combien de gènes nucléaires sont indiqués comme codant des protéines intervenant dans la mitochondrie ?</div>
+  <div class="a">Environ 500 à 800 gènes nucléaires selon le support.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi l’ADN mitochondrial est-il décrit comme plus mutagène que l’ADN nucléaire ?</div>
+  <div class="a">Le cours évoque un taux de mutation environ 10 fois supérieur, l’absence d’histones, des systèmes de réparation moins robustes et une forte exposition aux radicaux libres.</div>
+</div>
+<div class="flash">
+  <div class="q">Que signifie l’énoncé « un génotype, plusieurs phénotypes » dans les maladies mitochondriales ?</div>
+  <div class="a">Une même mutation mitochondriale peut produire des tableaux cliniques différents chez différents individus.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel exemple illustre qu’une même mutation mitochondriale peut donner plusieurs phénotypes ?</div>
+  <div class="a">La mutation m.7445A&gt;G du gène MT-TS1 peut donner une surdité neurosensorielle isolée ou une kératodermie palmoplantaire associée à une surdité.</div>
+</div>
+<div class="flash">
+  <div class="q">Que signifie l’énoncé « un syndrome clinique, plusieurs génotypes » ?</div>
+  <div class="a">Un même syndrome peut être provoqué par différentes anomalies de l’ADN mitochondrial ou de l’ADN nucléaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel syndrome illustre particulièrement l’hétérogénéité génétique mitochondriale dans le cours ?</div>
+  <div class="a">Le syndrome de Leigh, qui peut être lié à moins de 15 gènes mitochondriaux et à de nombreux gènes nucléaires, le support citant jusqu’à 98 gènes nucléaires.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels organes sont particulièrement évocateurs d’une maladie mitochondriale lorsqu’ils sont atteints ensemble ?</div>
+  <div class="a">Le cours insiste sur les atteintes multisystémiques, notamment neurologiques, musculaires, cardiaques, visuelles, auditives, endocriniennes, digestives et hématologiques.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel tableau mutationnel est associé au syndrome NARP dans le support ?</div>
+  <div class="a">Une mutation fréquente m.8993T&gt;G du gène MT-ATP6, avec neuropathie, ataxie et rétinite pigmentaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel gène mitochondrial est particulièrement cité pour le syndrome MELAS ?</div>
+  <div class="a">MT-TL1, codant un ARNt-leucine, avec encéphalomyopathie, acidose lactique et épisodes pseudo-AVC non systématisés sur un territoire vasculaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle atteinte caractérise la neuropathie optique de Leber ?</div>
+  <div class="a">Une atteinte du nerf optique liée à des anomalies de gènes mitochondriaux du complexe I.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi la transmission de l’ADN mitochondrial est-elle maternelle ?</div>
+  <div class="a">Les mitochondries du zygote proviennent de l’ovocyte ; les mitochondries du spermatozoïde ne sont pas transmises lors de la fécondation selon le modèle du cours.</div>
+</div>
+<div class="flash">
+  <div class="q">Dans un pedigree d’hérédité mitochondriale, qui peut transmettre la mutation ?</div>
+  <div class="a">Une femme porteuse peut transmettre à ses enfants ; un homme atteint ne transmet pas son ADN mitochondrial à sa descendance.</div>
+</div>
+<div class="flash">
+  <div class="q">Les garçons peuvent-ils être atteints dans une maladie d’hérédité mitochondriale ?</div>
+  <div class="a">Oui. Le mécanisme décrit dans le reste du cours implique que garçons et filles peuvent être atteints, mais seuls les descendants de femmes peuvent recevoir la mutation mitochondriale.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle pénétrance est donnée pour la neuropathie optique de Leber chez les hommes et les femmes ?</div>
+  <div class="a">Environ 50 à 80 % chez les hommes et autour de 20 % chez les femmes.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels facteurs exogènes sont particulièrement cités comme aggravants de la neuropathie optique de Leber ?</div>
+  <div class="a">La consommation d’alcool et de tabac est décrite comme particulièrement délétère.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment définit-on l’hétéroplasmie mitochondriale ?</div>
+  <div class="a">La coexistence, dans une cellule ou un tissu, de molécules d’ADN mitochondrial différentes, notamment d’ADNmt sauvage et muté.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment la ségrégation aléatoire des mitochondries contribue-t-elle à la variabilité clinique ?</div>
+  <div class="a">Lors des divisions cellulaires, les mitochondries mutées se répartissent de façon aléatoire, donnant des proportions variables d’ADNmt muté selon les cellules, tissus et individus.</div>
+</div>
+<div class="flash">
+  <div class="q">Que signifie l’effet seuil dans les maladies mitochondriales ?</div>
+  <div class="a">Les signes cliniques apparaissent généralement lorsque la proportion d’ADN mitochondrial muté dépasse un certain seuil dans un tissu.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi le sang n’est-il pas toujours le meilleur prélèvement pour rechercher une mutation mitochondriale ?</div>
+  <div class="a">Le taux d’hétéroplasmie peut varier d’un tissu à l’autre ; une mutation peut être peu ou pas détectable dans le sang mais présente dans le muscle ou d’autres tissus.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels prélèvements alternatifs au sang sont cités pour étudier l’ADN mitochondrial ?</div>
+  <div class="a">Muscle selon la maladie, cellules urinaires et frottis buccaux sont cités dans le cours.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi le conseil génétique des maladies mitochondriales est-il plus simple pour un homme atteint ?</div>
+  <div class="a">Parce qu’un homme atteint ne transmet pas ses mitochondries à sa descendance.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi le conseil génétique est-il difficile pour une femme porteuse d’une mutation mitochondriale ?</div>
+  <div class="a">Elle peut transmettre l’ADNmt muté, mais l’hétéroplasmie et l’effet seuil rendent difficile la prédiction de la sévérité et même de l’apparition des symptômes chez les enfants.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi le diagnostic prénatal des maladies mitochondriales est-il décrit comme difficile ?</div>
+  <div class="a">Le taux d’hétéroplasmie dans les villosités choriales ou les amniocytes ne prédit pas forcément celui du cerveau, du muscle ou des autres tissus.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment le cours définit-il l’épigénétique ?</div>
+  <div class="a">L’étude des mécanismes qui modulent l’expression des gènes sans modifier la séquence d’ADN.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels mécanismes épigénétiques sont cités ?</div>
+  <div class="a">Méthylation de l’ADN, méthylation de l’ARN, ARN non codants et modifications des histones telles qu’acétylation, désacétylation, méthylation, phosphorylation et ubiquitination.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment définit-on l’empreinte parentale ?</div>
+  <div class="a">Un seul des deux allèles homologues est exprimé tandis que l’autre est réprimé en fonction de son origine parentale.</div>
+</div>
+<div class="flash">
+  <div class="q">Que signifie « gène soumis à empreinte maternelle » dans le cours ?</div>
+  <div class="a">L’allèle d’origine maternelle est réprimé ; c’est l’allèle paternel qui s’exprime.</div>
+</div>
+<div class="flash">
+  <div class="q">Que signifie l’hémizygotie fonctionnelle dans l’empreinte parentale ?</div>
+  <div class="a">Un seul des deux allèles est fonctionnellement exprimé alors que les deux copies génétiques sont présentes.</div>
+</div>
+<div class="flash">
+  <div class="q">Que montrent les expériences de gynogénotes et d’androgénotes chez la souris ?</div>
+  <div class="a">Un génome diploïde provenant d’un seul parent ne suffit pas au développement normal : gynogénote = petit embryon et petit trophoblaste ; androgénote = petit embryon et gros trophoblaste.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle différence est décrite entre tératome ovarien mature et môle hydatiforme complète ?</div>
+  <div class="a">Le tératome ovarien est d’origine maternelle par activation d’un ovocyte ; la môle hydatiforme complète est d’origine paternelle avec prolifération trophoblastique et absence d’embryon.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle idée résume la théorie du conflit parental de Moore et Haig ?</div>
+  <div class="a">Les gènes paternels exprimés favoriseraient la croissance fœtale et l’utilisation des ressources maternelles, tandis que les gènes maternels tendraient à limiter cette croissance pour préserver les ressources.</div>
+</div>
+<div class="flash">
+  <div class="q">Qu’est-ce qu’un ICR dans l’empreinte génomique ?</div>
+  <div class="a">Une imprinting control region, ou centre d’empreinte, qui contrôle l’expression d’un cluster de gènes soumis à empreinte.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle proportion des gènes soumis à empreinte possède des îlots CpG promoteurs selon le cours ?</div>
+  <div class="a">Environ 90 %.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles enzymes assurent la méthylation de maintenance et la méthylation de novo ?</div>
+  <div class="a">DNMT1 pour le maintien de la méthylation au cours des divisions ; DNMT3A et DNMT3B pour la méthylation de novo.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel effet général la méthylation d’un promoteur produit-elle sur l’expression génique ?</div>
+  <div class="a">Dans le modèle simple du cours, méthylation du promoteur → chromatine compactée → gène non transcrit.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi la méthylation d’une séquence régulatrice peut-elle au contraire favoriser l’expression ?</div>
+  <div class="a">Dans l’exemple du cours, la méthylation empêche la fixation de protéines inhibitrices ; le gène peut alors être transcrit.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel rôle joue CTCF dans l’exemple d’interposition d’un élément isolant ?</div>
+  <div class="a">CTCF se fixe sur une région non méthylée et peut empêcher un enhancer d’activer un promoteur voisin.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment un ARN antisens peut-il inactiver directement un gène ?</div>
+  <div class="a">Un ARN antisens peut s’apparier avec l’ARN sens et le neutraliser, empêchant l’expression de l’allèle.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles sont les deux grandes étapes de l’empreinte parentale rappelées dans le cours ?</div>
+  <div class="a">Le marquage dans les cellules germinales puis la lecture de ce marquage dans les cellules somatiques, éventuellement de façon tissu-spécifique.</div>
+</div>
+<div class="flash">
+  <div class="q">Que se passe-t-il pour l’empreinte au cours de la gamétogenèse ?</div>
+  <div class="a">Les anciennes empreintes sont effacées puis de nouvelles empreintes sont établies selon le sexe de l’individu avant d’être maintenues après fécondation.</div>
+</div>
+<div class="flash">
+  <div class="q">Qu’est-ce qu’une épimutation dans une maladie d’empreinte ?</div>
+  <div class="a">Une anomalie de marque épigénétique sans modification de la séquence d’ADN, souvent sporadique dans le support.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle conséquence a un gain de méthylation anormal sur les deux allèles dans l’exemple du cours ?</div>
+  <div class="a">Les deux allèles peuvent être réprimés, entraînant une absence d’expression.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle conséquence a une perte de méthylation anormale sur les deux allèles dans l’exemple du cours ?</div>
+  <div class="a">Les deux allèles peuvent s’exprimer alors qu’un seul devrait l’être, entraînant un excès d’expression.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment définit-on une disomie uniparentale ?</div>
+  <div class="a">Chez un individu diploïde, les deux copies d’un chromosome ou d’un segment chromosomique proviennent du même parent.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle différence distingue isodisomie et hétérodisomie uniparentales ?</div>
+  <div class="a">Isodisomie : duplication du même exemplaire parental ; hétérodisomie : héritage des deux homologues différents d’un même parent.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel mécanisme de formation d’une DUP est présenté comme probablement le plus fréquent ?</div>
+  <div class="a">La correction ou réduction d’une trisomie : un zygote trisomique perd un chromosome et peut conserver les deux chromosomes du même parent.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle probabilité de DUP est donnée si la correction d’une trisomie est aléatoire ?</div>
+  <div class="a">Une fois sur trois, si le chromosome perdu est celui provenant du parent initialement monosomique.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment une DUP peut-elle révéler une maladie autosomique récessive ?</div>
+  <div class="a">Une isodisomie peut dupliquer un allèle pathogène provenant d’un parent hétérozygote, rendant l’enfant homozygote pour cet allèle.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle région chromosomique est impliquée dans le syndrome de Beckwith-Wiedemann ?</div>
+  <div class="a">La région 11p15.5, contenant deux centres d’empreinte.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels signes cliniques majeurs caractérisent Beckwith-Wiedemann ?</div>
+  <div class="a">Croissance excessive/macrosomie, macroglossie, asymétrie corporelle, omphalocèle, viscéromégalie et hypoglycémies néonatales.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel risque tumoral est donné dans Beckwith-Wiedemann et quelle surveillance est citée ?</div>
+  <div class="a">Environ 5 % de tumeurs embryonnaires, notamment néphroblastome, hépatoblastome et neuroblastome ; surveillance échographique tous les 3 mois pendant l’enfance.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le mécanisme le plus fréquent du syndrome de Beckwith-Wiedemann ?</div>
+  <div class="a">Une perte de méthylation/hypométhylation d’IC2 sur l’allèle maternel, environ 50 % des cas.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels autres mécanismes de Beckwith-Wiedemann sont chiffrés dans le cours ?</div>
+  <div class="a">DUP paternelle ≈20 %, gain de méthylation d’IC1 ≈5 %, mutation ponctuelle de CDKN1C maternel ≈5 %, remaniements chromosomiques ≈1 %, et environ 20 % sans anomalie identifiée.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi Silver-Russell est-il présenté comme le miroir de Beckwith-Wiedemann ?</div>
+  <div class="a">Il associe au contraire un retard de croissance anté- et postnatal, avec des mécanismes d’empreinte souvent inverses dans la région 11p15.5.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels signes cliniques majeurs sont décrits dans le syndrome de Silver-Russell ?</div>
+  <div class="a">Retard de croissance, macrocéphalie relative, front bombé, visage triangulaire, difficultés alimentaires sévères, parfois asymétrie corporelle, hypospadias, taches café au lait et clinodactylie.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel autre chromosome que le 11 peut être impliqué dans Silver-Russell ?</div>
+  <div class="a">Une disomie uniparentale maternelle du chromosome 7 peut produire un phénotype identique.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels sont les principaux mécanismes du syndrome de Prader-Willi ?</div>
+  <div class="a">Délétion paternelle de 15q11.2-q13 ≈70 %, DUP maternelle ≈28 %, anomalies du centre d’empreinte ≈2 %.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle évolution alimentaire est typique du syndrome de Prader-Willi ?</div>
+  <div class="a">D’abord difficultés de succion-alimentation et faible prise de poids, puis amélioration, puis switch vers hyperphagie, prise de poids et obésité.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels signes néonataux et endocriniens caractérisent Prader-Willi ?</div>
+  <div class="a">Hypotonie majeure, difficultés alimentaires, puis dysfonction hypothalamique avec notamment déficit en GH et hypogonadisme.</div>
+</div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>
