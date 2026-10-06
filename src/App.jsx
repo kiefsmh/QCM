@@ -282,8 +282,8 @@ function SubjectView({ semester, subject, onOpenCourse, onOpenProfAnnales, onOpe
           <p></p>
         </div>
       ) : (
-        <div className="course-grid">
-          {subject.courses.map((course) => (
+        <div className="course-grid course-list">
+  {subject.courses.map((course) => (
             <button
               key={course.id}
               className="course-card"
