@@ -1004,3 +1004,42 @@ h2 {
     padding-left: 14px;
   }
 }
+
+.course-list {
+  grid-template-columns: 1fr !important;
+}
+
+.course-list .course-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 22px;
+  border-radius: 20px;
+}
+
+.course-list .course-card strong {
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.course-list .course-card small {
+  margin-top: 0;
+  white-space: nowrap;
+  font-weight: 750;
+}
+
+@media (max-width: 700px) {
+  .course-list .course-card {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .course-list .course-card small {
+    white-space: normal;
+  }
+}
