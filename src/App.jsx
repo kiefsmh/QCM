@@ -361,7 +361,7 @@ function ProfAnnalesView({ semester, subject, onOpenProfAnnale }) {
           </p>
         </div>
       ) : (
-        <div className="course-grid">
+        <div className="course-grid course-list">
           {profAnnales.map((annale) => (
             <button
               key={annale.id}

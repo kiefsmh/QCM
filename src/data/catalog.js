@@ -72,6 +72,49 @@ function extractTitleFromHtml(html) {
   return cleanHtmlTitle(h1Match?.[1]) || cleanHtmlTitle(titleMatch?.[1])
 }
 
+function extractChapterNumber(value) {
+  if (!value) return null
+
+  const normalized = String(value).trim()
+
+  const startMatch = normalized.match(/^(\d+)(?:[\s._-]+|$)/)
+  if (startMatch) return Number(startMatch[1])
+
+  const chapterMatch = normalized.match(/(?:chapitre|cours)\s*(\d+)/i)
+  if (chapterMatch) return Number(chapterMatch[1])
+
+  return null
+}
+
+function removeLeadingChapterNumber(value) {
+  return String(value)
+    .replace(/^fiche\s*[-–—:]\s*/i, '')
+    .replace(/^\s*(?:chapitre|cours)?\s*\d+\s*[-–—.:)]*\s*/i, '')
+    .trim()
+}
+
+function formatCourseTitle(rawTitle, chapterNumber) {
+  const cleanTitle = removeLeadingChapterNumber(rawTitle || '')
+  const upperTitle = cleanTitle.toLocaleUpperCase('fr-FR')
+
+  if (!upperTitle) {
+    return chapterNumber ? `${chapterNumber}. COURS` : 'COURS'
+  }
+
+  return chapterNumber ? `${chapterNumber}. ${upperTitle}` : upperTitle
+}
+
+function compareCourses(a, b) {
+  const aNumber = a.chapterNumber ?? Number.POSITIVE_INFINITY
+  const bNumber = b.chapterNumber ?? Number.POSITIVE_INFINITY
+
+  if (aNumber !== bNumber) {
+    return aNumber - bNumber
+  }
+
+  return a.id.localeCompare(b.id, 'fr', { numeric: true })
+}
+
 function extractQuestions(module) {
   if (Array.isArray(module.default)) return module.default
   if (Array.isArray(module.questions)) return module.questions
@@ -91,7 +134,7 @@ function createSubject(subjectId) {
 
   return {
     id: subjectId,
-    title: meta?.title ?? titleFromSlug(subjectId),
+    title: meta?.title ?? titleFromSlug(subjectId).toLocaleUpperCase('fr-FR'),
     icon: meta?.icon ?? '📘',
     profAnnales: [],
     courses: [],
@@ -111,13 +154,15 @@ function subjectKey(semesterId, subjectId) {
 
 function getOrCreateCourse(semesterId, subjectId, courseId) {
   const key = courseKey(semesterId, subjectId, courseId)
+  const chapterNumber = extractChapterNumber(courseId)
 
   if (!courseMap.has(key)) {
     courseMap.set(key, {
       id: courseId,
       semesterId,
       subjectId,
-      title: titleFromSlug(courseId),
+      chapterNumber,
+      title: formatCourseTitle(titleFromSlug(courseId), chapterNumber),
       ficheHtml: null,
       questions: [],
     })
@@ -133,9 +178,16 @@ for (const [path, html] of Object.entries(ficheModules)) {
 
   const [, semesterId, subjectId, courseId] = match
   const course = getOrCreateCourse(semesterId, subjectId, courseId)
+  const htmlTitle = extractTitleFromHtml(html)
+  const htmlChapterNumber = extractChapterNumber(htmlTitle)
 
   course.ficheHtml = html
-  course.title = extractTitleFromHtml(html) || course.title
+
+  if (!course.chapterNumber && htmlChapterNumber) {
+    course.chapterNumber = htmlChapterNumber
+  }
+
+  course.title = formatCourseTitle(htmlTitle || titleFromSlug(courseId), course.chapterNumber)
 }
 
 for (const [path, module] of Object.entries(qcmModules)) {
@@ -145,9 +197,16 @@ for (const [path, module] of Object.entries(qcmModules)) {
 
   const [, semesterId, subjectId, courseId] = match
   const course = getOrCreateCourse(semesterId, subjectId, courseId)
+  const qcmTitle = extractQcmTitle(module, course.title)
+  const qcmChapterNumber = extractChapterNumber(qcmTitle)
 
   course.questions = extractQuestions(module)
-  course.title = extractQcmTitle(module, course.title)
+
+  if (!course.chapterNumber && qcmChapterNumber) {
+    course.chapterNumber = qcmChapterNumber
+  }
+
+  course.title = formatCourseTitle(qcmTitle, course.chapterNumber)
 }
 
 for (const [path, url] of Object.entries(profAnnaleModules)) {
@@ -164,7 +223,7 @@ for (const [path, url] of Object.entries(profAnnaleModules)) {
 
   profAnnalesBySubject.get(key).push({
     id: annaleId,
-    title: titleFromSlug(annaleId),
+    title: titleFromSlug(annaleId).toLocaleUpperCase('fr-FR'),
     type: extension.toUpperCase(),
     path: url,
   })
@@ -200,12 +259,13 @@ export const catalog = {
         const subject = createSubject(subjectId)
 
         subject.courses = [...courseMap.values()]
-  .filter((course) => course.semesterId === semester.id && course.subjectId === subjectId)
-  .sort((a, b) => a.id.localeCompare(b.id, 'fr', { numeric: true }))
+          .filter((course) => course.semesterId === semester.id && course.subjectId === subjectId)
+          .sort(compareCourses)
 
-        subject.profAnnales = profAnnalesBySubject
-          .get(subjectKey(semester.id, subjectId))
-          ?.sort((a, b) => a.title.localeCompare(b.title, 'fr')) ?? []
+        subject.profAnnales =
+          profAnnalesBySubject
+            .get(subjectKey(semester.id, subjectId))
+            ?.sort((a, b) => a.title.localeCompare(b.title, 'fr', { numeric: true })) ?? []
 
         return subject
       }),
