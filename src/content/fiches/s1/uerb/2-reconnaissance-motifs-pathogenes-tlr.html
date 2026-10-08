@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reconnaissance des motifs pathogènes par les TLR</title>
+<style>
+:root{--g:#1a7a4a;--gs:#eaf7ef;--r:#b91c1c;--rs:#fee2e2;--o:#b45309;--os:#fff7ed;--b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--ink:#1c1c2e;--line:#d8dce8;--bg:#f6f7fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.58}.page{max-width:1180px;margin:auto;padding:32px 18px 72px}.hero{background:linear-gradient(135deg,#fff,#f0fdf4 54%,#eef9ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}h1{font-size:38px;line-height:1.08;margin:8px 0 12px}.subtitle{color:#374151;max-width:1080px}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}.green{background:var(--gs);color:#166534}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.blue{background:var(--bs);color:#1d4ed8}.purple{background:var(--ps);color:#5b21b6}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;margin:0;padding-left:20px;font-size:14px}nav li{margin:5px 0}nav a{color:inherit;text-decoration:none}section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(31,41,55,.035)}h2{font-size:25px;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}ul,ol{padding-left:22px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:14px}.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,monospace;font-size:13px;white-space:pre-wrap}.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:820px;font-size:13.2px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}.recap{background:#111827;color:#fff}.recap h2{color:#fff}.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}.flash .q{font-weight:800;background:#f9fafb;padding:11px 12px;border-bottom:1px solid var(--line)}.flash .a{padding:11px 12px;color:#374151}.source-note{font-size:12.5px;color:#5b6474;margin:18px 4px}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{min-width:680px;font-size:12.1px}}@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none}}
+</style>
+</head>
+<body><main class="page">
+<header class="hero"><div class="kicker">Immunologie / Infectiologie</div><h1>Reconnaissance des motifs pathogènes par les TLR</h1>
+<p class="subtitle">Fiche complète D1/EDN/QCM : immunité innée et adaptative, PRR/TLR, structure, ligands, dimérisation, voies MyD88/TRIF, NF-κB/IRF, réponse à Toxoplasma gondii, GPI parasitaires, méthodes expérimentales et applications médicales.</p>
+<div class="tags"><span class="tag green">PRR / PAMP</span><span class="tag purple">TLR / MyD88 / TRIF</span><span class="tag blue">NF-κB / IRF</span><span class="tag red">Toxoplasma / GPI</span><span class="tag orange">Applications</span></div>
+<div class="actions"><button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button><button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button></div></header>
+
+<nav><h2>Plan rapide</h2><ol>
+<li><a href="#inne">Innée vs adaptative</a></li><li><a href="#prr">PRR / découverte</a></li><li><a href="#structure">Structure des TLR</a></li><li><a href="#ligands">Ligands</a></li><li><a href="#signal">Signalisation</a></li><li><a href="#toxo">Toxoplasma</a></li><li><a href="#gpi">GPI</a></li><li><a href="#methods">Méthodes</a></li><li><a href="#tlr24">TLR2/TLR4</a></li><li><a href="#tlr4">Deux voies TLR4</a></li><li><a href="#applications">Applications</a></li><li><a href="#pieges">Pièges</a></li><li><a href="#recap">Mini-récap</a></li><li><a href="#flashcards">Flashcards express</a></li>
+</ol></nav>
+
+<section id="inne"><h2>1. Immunité innée et adaptative</h2>
+<div class="tablewrap"><table><tr><th>Innée</th><th>Adaptative</th></tr><tr><td>Conservée, immédiatement active, motifs conservés et nombre limité d’antigènes reconnus</td><td>Plus récente, amorçage nécessaire, millions de combinaisons antigéniques</td></tr><tr><td>Présente chez les organismes pluricellulaires</td><td>Uniquement chez les vertébrés</td></tr></table></div>
+<div class="callout"><strong>CPA :</strong> professionnelles = macrophages + cellules dendritiques ; non professionnelles moins efficaces = LB et neutrophiles.</div>
+<div class="schema">Reconnaissance innée → cytokines / molécules effectrices → CMH + CD80/CD86 → activation LT → réponse adaptative → Ac et/ou cytotoxicité</div></section>
+
+<section id="prr"><h2>2. PRR et découverte des TLR</h2>
+<p>Les CPA portent des PRR reconnaissant PAMPs/MAMPs. Le support cite CD1, MR, NOD, RIG-1 et TLR.</p>
+<div class="grid2"><div class="card"><strong>Drosophile</strong><p>Toll : embryogenèse puis défense anti-infectieuse. Infection à A. fumigatus : ~1/3 mortalité sauvage contre 100 % chez Toll -/-.</p></div><div class="card"><strong>Souris</strong><p>TLR4 : ligand = LPS des Gram négatif ; absence de signalisation = prédisposition à infection/septicémie Gram−.</p></div></div>
+<div class="callout bluebox"><strong>TLR hors infectieux :</strong> douleur, fibrose, néphropathie, psoriasis, diabète, cancer, allergies.</div></section>
+
+<section id="structure"><h2>3. Structure des TLR</h2>
+<div class="grid2"><div class="card"><strong>Extracellulaire</strong><p>Répétitions riches en leucine, LRR, participant à la reconnaissance du ligand.</p></div><div class="card"><strong>Intracellulaire</strong><p>Domaine TIR commun au récepteur de l’IL-1.</p></div></div>
+<p>La fixation du ligand déclenche une cascade conduisant à l’activation de facteurs de transcription.</p></section>
+
+<section id="ligands"><h2>4. Compartimentalisation et ligands</h2>
+<div class="tablewrap"><table><tr><th>TLR</th><th>Localisation</th><th>Ligand / particularité</th></tr>
+<tr><td>TLR1/2</td><td>Surface</td><td>Triacyl-lipopeptide</td></tr><tr><td>TLR2/6</td><td>Surface</td><td>Diacyl-glycopeptides</td></tr><tr><td>TLR4</td><td>Surface</td><td>LPS ; MyD88 ou TRIF</td></tr><tr><td>TLR5</td><td>Surface</td><td>Flagelline</td></tr><tr><td>TLR3</td><td>Endosome</td><td>ARN double brin ; TRIF</td></tr><tr><td>TLR7/8</td><td>Endosome</td><td>ARN simple brin / imidazoquinolines</td></tr><tr><td>TLR9</td><td>Endosome</td><td>ADN CpG dans le résumé final</td></tr><tr><td>TLR11</td><td>Endosome, souris</td><td>Profiline de T. gondii ; non exprimé chez l’Homme</td></tr>
+</table></div>
+<div class="callout purplebox"><strong>Dimérisation :</strong> nécessaire à la signalisation. TLR2 peut former des hétérodimères avec TLR1 ou TLR6 ; les autres sont présentés comme homodimères.</div></section>
+
+<section id="signal"><h2>5. Signalisation TLR</h2>
+<div class="schema">Ligand → dimérisation → TIR → adaptateur
+MyD88 (majoritaire) → IRAK4 → IRAK1 → TRAF6 → TAB1/TAB2 → phosphorylation de l'inhibiteur de NF-κB → protéasome → NF-κB nucléaire → IL-1 / IL-6 / IL-8
+TRIF → IRF3/5/7 → IFN de type I, notamment IFN-β</div>
+<div class="grid2"><div class="card"><strong>TLR3</strong><p>TRIF uniquement.</p></div><div class="card"><strong>TLR4</strong><p>MyD88 ou TRIF.</p></div></div>
+<p>Le cours cite aussi une voie MAP kinase et des régulations négatives à plusieurs niveaux.</p></section>
+
+<section id="toxo"><h2>6. Toxoplasma gondii et immunité</h2>
+<div class="schema">T. gondii → cellules dendritiques / neutrophiles / macrophages → IL-12 → NK + Th1 → IFN-γ → activation macrophages
+Th1 → LT CD8 cytotoxiques + LB → IgG</div>
+<div class="callout orangebox"><strong>À retenir :</strong> IL-12, IFN-γ et TNF-α.</div>
+<p>Le support donne au TNF-α un rôle important dans la résistance à T. gondii et l’enkystement.</p></section>
+
+<section id="gpi"><h2>7. GPI parasitaires</h2>
+<p>Les glycosylphosphatidylinositols servent d’ancres à de nombreuses protéines membranaires.</p>
+<div class="grid2"><div class="card"><strong>Partie lipidique</strong><p>Ancrage membranaire, variable selon l’espèce.</p></div><div class="card"><strong>Partie glucidique</strong><p>Le support cite phosphoinositol, N-acétyl-galactosamine, 3 mannoses et éthanolamine-phosphate.</p></div></div>
+<ul><li>Biosynthèse dans le réticulum endoplasmique avec ~20 enzymes.</li><li>Transit par le Golgi puis membrane.</li><li>GPI libres ou sécrétés possibles.</li><li>Quantité donnée : ~10^7 chez certains parasites contre ~10^5 chez les mammifères.</li></ul></section>
+
+<section id="methods"><h2>8. Méthodes expérimentales autour des GPI</h2>
+<h3>Extraction / chromatographie</h3><p>Culture sur cellules Vero, marquage radioactif de glucosamine, extraction par solvants organiques, chromatographie sur couche mince, lecture par bio-imager ou Berthold Linear Analyser.</p>
+<div class="callout"><strong>T. gondii :</strong> 6 GPI distincts dans l’expérience.</div>
+<h3>ELISA sandwich TNF-α</h3><div class="schema">Macrophages + GPI, 24 h à 37 °C → surnageant → Ac de capture → TNF-α → 2e Ac → biotine / streptavidine-HRP → substrat coloré</div>
+<p>Résultat : les 6 GPI induisent du TNF-α.</p>
+<h3>NF-κB</h3><p>Retard sur gel : complexe facteur de transcription–ADN plus lent qu’une sonde libre ; activation plus nette à 30 min et 1 h.</p></section>
+
+<section id="tlr24"><h2>9. Expérience TLR2 / TLR4</h2>
+<p>Cellules CHO avec statuts TLR2/TLR4 contrôlés et <strong>CD25</strong> utilisé comme gène rapporteur sous contrôle de NF-κB.</p>
+<div class="tablewrap"><table><tr><th>Stimulus</th><th>Interprétation dans le support</th></tr><tr><td>LPS</td><td>Témoin positif TLR4</td></tr><tr><td>Extrait de Staphylococcus aureus</td><td>Témoin positif TLR2</td></tr><tr><td>GPI / glycane synthétique</td><td>Activation TLR4 dans les résultats page 12</td></tr><tr><td>Diacylglycérol</td><td>Activation TLR2 et TLR4</td></tr></table></div>
+<div class="callout bluebox"><strong>Cytométrie :</strong> anticorps fluorescent anti-CD25 → laser → fluorescence mesurée ; contrôle isotypique pour le marquage non spécifique.</div></section>
+
+<section id="tlr4"><h2>10. Les deux voies de TLR4</h2>
+<div class="grid2"><div class="card"><strong>MyD88-dépendante</strong><p>NF-κB → cytokines inflammatoires, dont TNF-α et IL-12 ; voie directe.</p></div><div class="card"><strong>Indépendante de MyD88</strong><p>TRIF → IRF3 → IFN-β → récepteur IFN → STAT1 → gènes inductibles par IFN-β.</p></div></div>
+<p>IFN-β : action autocrine ou paracrine.</p>
+<div class="callout purplebox"><strong>GPI / matrice :</strong> dans des macrophages dérivés de THP1, les GPI induisent MMP-9, qui dégrade le collagène.</div></section>
+
+<section id="applications"><h2>11. Applications médicales</h2>
+<ul><li><strong>MPL</strong> = Monophosphoryl Lipid A, dérivé détoxifié du LPS ciblant TLR4.</li><li>Vaccins cités : hépatite B et papillomavirus.</li><li>Stratégie antitumorale : peptides tumoraux + agonistes TLR1/TLR2.</li><li>TLR9 cité comme cible d’immunothérapie dans les allergies.</li><li>GPI vaccinaux : partie glycanique privilégiée car le GPI entier est trop inflammatoire.</li></ul>
+<div class="callout orangebox"><strong>Limite des stratégies GPI :</strong> amélioration des symptômes, mais la multiplication parasitaire peut persister.</div></section>
+
+<section id="pieges"><h2>12. Pièges et incohérences internes du support</h2>
+<div class="callout warn"><strong>« Protozoaires (pluricellulaires) » :</strong> ce titre coexiste avec la définition de Toxoplasma comme parasite unicellulaire.</div>
+<div class="callout warn"><strong>Trypanosome / baignade :</strong> une phrase de transmission par l’eau et pénétration cutanée est placée juste après la transmission par réduve ; elle ne s’intègre pas au mécanisme décrit juste avant.</div>
+<div class="callout warn"><strong>GPI 4-5-6 :</strong> le corps du texte les décrit comme précurseurs de 1-2-3 puis une note affirme l’inverse.</div>
+<div class="callout warn"><strong>GPI et TLR2/TLR4 :</strong> page 12, GPI entier/glycane → TLR4 ; page 13, une phrase dit que la partie glycanique active TLR2 et TLR4.</div>
+<div class="callout warn"><strong>CD14 :</strong> présenté comme nécessaire pour le LPS/TLR4, mais l’expérience GPI montre que CD14 négatif ne modifie pas le TNF-α.</div>
+<div class="callout warn"><strong>IL-2 / IL-12 :</strong> une phrase page 10 cite « IL2 » alors que l’IL-12 est la cytokine centrale des pages 6-7.</div>
+<div class="callout warn"><strong>TLR11 :</strong> ne pas extrapoler à l’Homme : le cours précise qu’il n’y est pas exprimé.</div></section>
+
+<section id="recap" class="recap"><h2>Mini-récap ultra rentable</h2>
+<p><strong>TLR = PRR transmembranaires</strong> avec LRR extracellulaires et domaine TIR intracellulaire. Ligand → dimérisation → adaptateur → kinases → facteur de transcription. <strong>MyD88</strong> principal ; <strong>TLR3 = TRIF</strong> ; <strong>TLR4 = MyD88 + TRIF</strong>. <strong>NF-κB</strong> → inflammation ; <strong>IRF</strong> → IFN de type I. Ligands : TLR1/2 triacyl, TLR2/6 diacyl, TLR4 LPS, TLR5 flagelline, TLR3 ARN db, TLR7/8 ARN sb, TLR9 CpG. <strong>T. gondii</strong> : IL-12 → NK/Th1 → IFN-γ ; TNF-α important. Les <strong>GPI</strong> peuvent activer NF-κB/TNF-α et sont étudiés comme adjuvants ou antigènes vaccinaux.</p></section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « Reconnaissance des motifs pathogènes par les TLR ». Les formulations expérimentales et incohérences sont conservées selon le support.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+<div class="flash"><div class="q">Quelles différences fondamentales le cours oppose-t-il entre immunité innée et immunité adaptative ?</div><div class="a">L’innée est ancienne, conservée, présente chez les organismes pluricellulaires, immédiatement active et reconnaît un nombre limité de motifs conservés ; l’adaptative est plus récente, propre aux vertébrés, nécessite un amorçage et reconnaît des millions de combinaisons antigéniques.</div></div>
+<div class="flash"><div class="q">Quelles cellules sont considérées comme CPA professionnelles dans le cours ?</div><div class="a">Les macrophages et les cellules dendritiques.</div></div>
+<div class="flash"><div class="q">Quelles cellules sont citées comme CPA non professionnelles moins efficaces ?</div><div class="a">Les lymphocytes B et les neutrophiles.</div></div>
+<div class="flash"><div class="q">Que devient un antigène capté par une cellule présentatrice d’antigène ?</div><div class="a">Il est apprêté, découpé en fragments puis présenté aux lymphocytes ; la maturation de la CPA augmente notamment les molécules de CMH.</div></div>
+<div class="flash"><div class="q">Quelles molécules de costimulation sont induites lors du passage de l’immunité innée à l’immunité adaptative ?</div><div class="a">CD80 et CD86.</div></div>
+<div class="flash"><div class="q">Quelle séquence relie reconnaissance innée et réponse adaptative dans le cours ?</div><div class="a">Reconnaissance de l’agent infectieux → cytokines inflammatoires et molécules effectrices → induction CD80/CD86 → activation des LT → anticorps et/ou molécules cytotoxiques.</div></div>
+<div class="flash"><div class="q">Que signifie PRR et que reconnaissent globalement ces récepteurs ?</div><div class="a">Pattern Recognition Receptors ; ils reconnaissent des motifs moléculaires conservés comme les PAMPs et MAMPs.</div></div>
+<div class="flash"><div class="q">Quels grands types de PRR sont cités en plus des TLR ?</div><div class="a">CD1 pour des glycolipides, MR pour les mannoses, NOD intracellulaires et RIG-1 intracellulaires.</div></div>
+<div class="flash"><div class="q">Les TLR sont-ils uniquement impliqués dans les infections selon le cours ?</div><div class="a">Non. Le support les implique aussi dans des maladies non transmissibles comme douleur, fibrose ou néphropathies.</div></div>
+<div class="flash"><div class="q">Quel rôle historique de Toll a été mis en évidence chez la drosophile avant son rôle immunitaire ?</div><div class="a">Un rôle essentiel dans l’embryogenèse.</div></div>
+<div class="flash"><div class="q">Que montre l’expérience de Jules Hoffmann avec Aspergillus fumigatus chez la drosophile ?</div><div class="a">Environ un tiers de mortalité chez les drosophiles sauvages contre 100 % chez les drosophiles Toll -/-, montrant un rôle majeur de Toll dans la défense anti-infectieuse.</div></div>
+<div class="flash"><div class="q">Quel couple ligand-récepteur est illustré par les expériences de Beutler chez la souris ?</div><div class="a">Le LPS des bactéries Gram négatif est reconnu par TLR4.</div></div>
+<div class="flash"><div class="q">Quelle conséquence le cours associe-t-il à une absence de signalisation TLR4 lors d’une infection à Gram négatif ?</div><div class="a">Une prédisposition accrue à la septicémie à Gram négatif.</div></div>
+<div class="flash"><div class="q">Quel domaine intracellulaire est commun aux TLR et au récepteur de l’IL-1 ?</div><div class="a">Le domaine TIR, Toll/Interleukin-1 Receptor.</div></div>
+<div class="flash"><div class="q">Quelle structure extracellulaire caractérise les TLR ?</div><div class="a">Des répétitions riches en leucine, ou LRR, dont l’organisation varie selon le TLR.</div></div>
+<div class="flash"><div class="q">Quels TLR sont classés à la membrane plasmique dans le cours ?</div><div class="a">TLR1, TLR2, TLR4, TLR5 et TLR6.</div></div>
+<div class="flash"><div class="q">Quels TLR sont classés dans les compartiments endosomaux/endolysosomaux ?</div><div class="a">TLR3, TLR7, TLR8, TLR9 et, dans le support, TLR11, TLR12 et TLR13.</div></div>
+<div class="flash"><div class="q">Quelle molécule adaptatrice est utilisée par la majorité des TLR ?</div><div class="a">MyD88.</div></div>
+<div class="flash"><div class="q">Quel TLR n’utilise pas MyD88 dans le cours ?</div><div class="a">TLR3, qui utilise TRIF.</div></div>
+<div class="flash"><div class="q">Quelle particularité de signalisation distingue TLR4 ?</div><div class="a">TLR4 peut signaler par une voie dépendante de MyD88 ou par une voie dépendante de TRIF.</div></div>
+<div class="flash"><div class="q">Quel événement structural est nécessaire au déclenchement de la signalisation des TLR ?</div><div class="a">La dimérisation du récepteur après reconnaissance du ligand.</div></div>
+<div class="flash"><div class="q">Quel TLR peut former des hétérodimères et avec quels partenaires ?</div><div class="a">TLR2 peut former des hétérodimères avec TLR1 ou TLR6.</div></div>
+<div class="flash"><div class="q">Quel ligand est reconnu par l’hétérodimère TLR1/TLR2 ?</div><div class="a">Le triacyl-lipopeptide.</div></div>
+<div class="flash"><div class="q">Quel ligand est associé dans le cours à l’hétérodimère TLR6/TLR2 ?</div><div class="a">Des diacyl-glycopeptides.</div></div>
+<div class="flash"><div class="q">Quel ligand classique est reconnu par TLR5 ?</div><div class="a">La flagelline.</div></div>
+<div class="flash"><div class="q">Quel ligand est reconnu par TLR3 ?</div><div class="a">L’ARN double brin.</div></div>
+<div class="flash"><div class="q">Quels ligands sont reconnus par TLR7 et TLR8 ?</div><div class="a">L’ARN simple brin et les imidazoquinolines comme R848 dans le support.</div></div>
+<div class="flash"><div class="q">Quel ligand parasitaire est reconnu par TLR11 chez la souris ?</div><div class="a">La profiline de Toxoplasma gondii.</div></div>
+<div class="flash"><div class="q">Pourquoi le modèle TLR11 murin ne peut-il pas être extrapolé directement à l’Homme ?</div><div class="a">Le cours précise que TLR11 n’est pas exprimé chez l’Homme en raison d’un codon stop.</div></div>
+<div class="flash"><div class="q">Quels facteurs de transcription sont principalement activés en aval des TLR ?</div><div class="a">NF-κB et des IRF, notamment IRF3, IRF5 et IRF7.</div></div>
+<div class="flash"><div class="q">Quelle grande différence fonctionnelle le cours associe-t-il à NF-κB et aux IRF ?</div><div class="a">NF-κB est surtout associé à la voie inflammatoire ; les IRF sont associés à l’induction d’interférons de type I, notamment IFN-β.</div></div>
+<div class="flash"><div class="q">Quels interférons sont mentionnés comme produits en aval des voies TLR ?</div><div class="a">IFN-α ou IFN-β, mais pas IFN-γ dans cette partie de signalisation.</div></div>
+<div class="flash"><div class="q">Quelle cascade proximale MyD88-dépendante est décrite après activation d’un TLR ?</div><div class="a">MyD88 → IRAK4 → IRAK1 phosphorylée → TRAF6 → complexes TAB1/TAB2 → phosphorylations successives.</div></div>
+<div class="flash"><div class="q">Quel est l’objectif final de la cascade MyD88/NF-κB ?</div><div class="a">Phosphoryler l’inhibiteur de NF-κB, provoquer sa dégradation par le protéasome puis permettre la translocation nucléaire de NF-κB.</div></div>
+<div class="flash"><div class="q">Quelles cytokines inflammatoires sont citées comme gènes cibles de NF-κB ?</div><div class="a">IL-1, IL-6 et IL-8.</div></div>
+<div class="flash"><div class="q">Quel autre grand axe de kinase est cité en parallèle de la voie NF-κB ?</div><div class="a">La voie des MAP kinases.</div></div>
+<div class="flash"><div class="q">Quelles trois molécules le cours demande-t-il surtout de retenir dans la réponse anti-Toxoplasma ?</div><div class="a">IL-12, IFN-γ et TNF-α.</div></div>
+<div class="flash"><div class="q">Quelles cellules de l’immunité innée produisent IL-12 après infection par Toxoplasma gondii ?</div><div class="a">Cellules dendritiques, neutrophiles et macrophages.</div></div>
+<div class="flash"><div class="q">Quelles cellules sont activées par l’IL-12 dans le schéma de réponse à Toxoplasma gondii ?</div><div class="a">Les cellules NK et la maturation des LT helper vers un profil Th1.</div></div>
+<div class="flash"><div class="q">Quelle cytokine majeure est produite par les cellules NK et les Th1 ?</div><div class="a">IFN-γ.</div></div>
+<div class="flash"><div class="q">Quels effecteurs adaptatifs sont activés secondairement par les Th1 dans le schéma du cours ?</div><div class="a">Les LT CD8 cytotoxiques et les LB produisant des IgG.</div></div>
+<div class="flash"><div class="q">Quel rôle le cours attribue-t-il au TNF-α dans la résistance à Toxoplasma gondii ?</div><div class="a">Un rôle important, associé à l’enkystement du parasite après son action.</div></div>
+<div class="flash"><div class="q">Que sont les GPI sur le plan fonctionnel général ?</div><div class="a">Des glycosylphosphatidylinositols servant d’ancrage à de nombreuses protéines à la surface de la membrane plasmique.</div></div>
+<div class="flash"><div class="q">Quelles grandes parties structurales d’un GPI sont décrites ?</div><div class="a">Une partie lipidique d’ancrage membranaire et une partie glucidique extracellulaire contenant notamment phosphoinositol, sucres et éthanolamine-phosphate.</div></div>
+<div class="flash"><div class="q">Pourquoi les GPI sont-ils essentiels à la survie de certains parasites selon le cours ?</div><div class="a">Une très grande partie de leurs protéines de surface sont ancrées via les GPI et participent notamment à l’invasion des cellules hôtes.</div></div>
+<div class="flash"><div class="q">Où a lieu la biosynthèse des GPI ?</div><div class="a">Dans le réticulum endoplasmique, avec intervention d’environ une vingtaine d’enzymes selon le support.</div></div>
+<div class="flash"><div class="q">Quel rôle joue l’appareil de Golgi dans la biogenèse des protéines ancrées par GPI ?</div><div class="a">Le complexe GPI-protéine transite par le Golgi avant d’atteindre la membrane plasmique.</div></div>
+<div class="flash"><div class="q">Pourquoi des GPI libres peuvent-ils directement stimuler des cellules immunitaires ?</div><div class="a">Certains GPI peuvent être exprimés ou sécrétés sans être liés à une protéine, permettant un contact direct avec les cellules immunitaires.</div></div>
+<div class="flash"><div class="q">Quel ordre de grandeur de quantité de GPI est donné pour les parasites et les mammifères ?</div><div class="a">Environ 10^7 GPI chez certains parasites contre environ 10^5 par cellule chez les mammifères dans le support.</div></div>
+<div class="flash"><div class="q">Combien de GPI différents sont détectés chez Toxoplasma gondii dans l’expérience décrite ?</div><div class="a">Six GPI différents.</div></div>
+<div class="flash"><div class="q">Que reflète la hauteur d’un pic lors de l’analyse des GPI marqués radioactivement ?</div><div class="a">La quantité de matériel radioactif détecté : plus il y en a, plus le pic est élevé.</div></div>
+<div class="flash"><div class="q">Quels GPI de Toxoplasma sont décrits comme précurseurs dans le corps du texte ?</div><div class="a">Les GPI 4, 5 et 6 sont décrits comme des précurseurs des GPI 1, 2 et 3.</div></div>
+<div class="flash"><div class="q">Quel principe général permet le dosage du TNF-α par ELISA sandwich ?</div><div class="a">Un premier anticorps capture le TNF-α, un second reconnaît un autre épitope puis un système de révélation enzymatique transforme un substrat coloré.</div></div>
+<div class="flash"><div class="q">Combien de temps les macrophages sont-ils incubés avec les GPI avant dosage du TNF-α ?</div><div class="a">24 heures à 37 °C.</div></div>
+<div class="flash"><div class="q">Quel résultat général est obtenu avec les six GPI de Toxoplasma sur les macrophages ?</div><div class="a">Les six GPI sont décrits comme capables d’induire une production de TNF-α.</div></div>
+<div class="flash"><div class="q">Quel principe expérimental permet de détecter l’activation de NF-κB par retard sur gel ?</div><div class="a">Un complexe protéine-ADN migre moins vite qu’une sonde libre ; l’ajout d’un anticorps peut provoquer un retard supplémentaire.</div></div>
+<div class="flash"><div class="q">À quels temps l’activation de NF-κB en réponse aux GPI devient-elle nettement visible ?</div><div class="a">Surtout après 30 minutes et 1 heure, alors qu’à 15 minutes la différence est faible.</div></div>
+<div class="flash"><div class="q">Quel résultat global relie GPI de Toxoplasma et NF-κB ?</div><div class="a">Les GPI de T. gondii activent NF-κB dans les macrophages.</div></div>
+<div class="flash"><div class="q">Quel rôle expérimental joue CD25 dans l’étude CHO des voies TLR2/TLR4 ?</div><div class="a">CD25 sert de gène rapporteur sous contrôle de NF-κB ; son expression en surface indique que la voie a été activée.</div></div>
+<div class="flash"><div class="q">Quel contrôle positif est utilisé pour la voie TLR4 dans l’expérience CHO ?</div><div class="a">Le LPS.</div></div>
+<div class="flash"><div class="q">Quel contrôle positif est utilisé pour la voie TLR2 dans cette expérience ?</div><div class="a">Un extrait de Staphylococcus aureus.</div></div>
+<div class="flash"><div class="q">Que montrent les résultats concernant les GPI entiers et TLR2/TLR4 ?</div><div class="a">Dans les résultats page 12, les GPI entiers et le glycane synthétique activent surtout TLR4, alors que la partie lipidique de type diacylglycérol peut activer TLR2 et TLR4.</div></div>
+<div class="flash"><div class="q">Pourquoi la partie lipidique seule peut-elle activer TLR2 alors que le GPI entier ne le fait pas ?</div><div class="a">Le cours propose qu’une conformation du GPI entier masque l’accès de la partie lipidique à TLR2.</div></div>
+<div class="flash"><div class="q">Quelle voie de TLR4 conduit directement à NF-κB et aux cytokines inflammatoires ?</div><div class="a">La voie dépendante de MyD88, qui conduit notamment au TNF-α et à l’IL-12.</div></div>
+<div class="flash"><div class="q">Quelle voie de TLR4 conduit à l’IFN-β ?</div><div class="a">La voie indépendante de MyD88 passant par TRIF et IRF3.</div></div>
+<div class="flash"><div class="q">Comment l’IFN-β agit-il secondairement dans le schéma de signalisation TLR4 ?</div><div class="a">Il se fixe à son récepteur en autocrine ou paracrine, active STAT1 puis des gènes inductibles par IFN-β.</div></div>
+<div class="flash"><div class="q">Quel effet des GPI sur la matrice extracellulaire est étudié avec les cellules THP1 ?</div><div class="a">Les GPI induisent la production de MMP-9 par les macrophages ; MMP-9 dégrade le collagène.</div></div>
+<div class="flash"><div class="q">Quel agoniste dérivé du LPS est déjà utilisé comme adjuvant vaccinal selon le cours ?</div><div class="a">Le MPL, Monophosphoryl Lipid A, décrit comme un LPS détoxifié ciblant TLR4.</div></div>
+<div class="flash"><div class="q">Quels vaccins sont cités comme contenant un adjuvant de type MPL ciblant TLR4 ?</div><div class="a">Des vaccins contre l’hépatite B et le papillomavirus.</div></div>
+<div class="flash"><div class="q">Quel TLR est cité comme cible d’une immunothérapie dans les allergies ?</div><div class="a">TLR9.</div></div>
+  </div>
+</section>
+</main></body></html>

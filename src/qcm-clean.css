@@ -454,3 +454,44 @@
     min-height: 210px;
   }
 }
+
+.course-grid.course-list {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 12px !important;
+}
+
+.course-grid.course-list .course-card {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+  padding: 18px 22px !important;
+  border-radius: 20px !important;
+}
+
+.course-grid.course-list .course-card strong {
+  font-size: 18px !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.02em !important;
+  text-transform: uppercase !important;
+}
+
+.course-grid.course-list .course-card small {
+  margin-top: 0 !important;
+  white-space: nowrap !important;
+  font-weight: 750 !important;
+}
+
+@media (max-width: 700px) {
+  .course-grid.course-list .course-card {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .course-grid.course-list .course-card small {
+    white-space: normal !important;
+  }
+}
