@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react'
 import { catalog } from './data/catalog.js'
 import QcmPanel from './components/QcmPanel.jsx'
-import FlashcardsPanel from './components/FlashcardsPanel.jsx'
 
 function makeResponsiveFicheHtml(html) {
   if (!html) return ''
@@ -331,11 +330,6 @@ function CourseView({ semester, subject, course }) {
     questions={course.questions ?? []}
     courseTitle={course.title}
     maxQuestions={25}
-  />
-
-  <FlashcardsPanel
-    html={course.ficheHtml}
-    courseTitle={course.title}
   />
 </section>
         </aside>
