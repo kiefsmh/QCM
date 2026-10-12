@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiche - Résistance aux antibiotiques</title>
+<style>
+:root{
+ --g:#1a7a4a;--gs:#eaf7ef;--r:#b91c1c;--rs:#fee2e2;--o:#b45309;--os:#fff7ed;
+ --b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--t:#0f766e;--ts:#ecfeff;
+ --ink:#1c1c2e;--muted:#5b6474;--line:#d8dce8;--bg:#f6f7fb
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}
+.page{max-width:1180px;margin:auto;padding:32px 18px 72px}
+.hero{background:linear-gradient(135deg,#fff,#f0fdf4 55%,#eef9ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}
+.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}
+h1{font-size:39px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}
+.subtitle{margin:0;color:#374151;max-width:1080px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}
+.green{background:var(--gs);color:#166534}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.blue{background:var(--bs);color:#1d4ed8}.purple{background:var(--ps);color:#5b21b6}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}
+nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav li{margin:5px 0}nav a{color:inherit;text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(31,41,55,.035)}
+h2{font-size:25px;letter-spacing:-.02em;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}
+p{margin:8px 0}ul,ol{padding-left:22px;margin:8px 0 12px}li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}
+.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}.tealbox{border-left-color:var(--t);background:var(--ts)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;white-space:pre-wrap;overflow-x:auto}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.2px;min-width:820px}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}
+.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.flash .q{background:#f9fafb;padding:11px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:11px 12px;color:#374151}
+.source-note{font-size:12.5px;color:var(--muted);margin:18px 4px}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{min-width:680px;font-size:12.1px}}
+@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<main class="page">
+
+<header class="hero">
+<div class="kicker">UE Agents infectieux</div>
+<h1>Résistance aux antibiotiques</h1>
+<p class="subtitle">Fiche complète D1/EDN/QCM : définition de la résistance, résistance naturelle vs acquise, supports génétiques, mécanismes biochimiques, résistances par familles d’antibiotiques, phénotypes de Staphylococcus aureus, entérobactéries et pneumocoque, puis BMR, SARM, BLSE et BHR.</p>
+<div class="tags">
+<span class="tag green">Naturelle vs acquise</span>
+<span class="tag blue">Mutation / plasmides</span>
+<span class="tag purple">β-lactamases</span>
+<span class="tag red">SARM / BLSE / BHR</span>
+<span class="tag orange">Phénotypes</span>
+</div>
+<div class="actions">
+<button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+<button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+</div>
+</header>
+
+<nav>
+<h2>Plan rapide</h2>
+<ol>
+<li><a href="#definition">Définition</a></li>
+<li><a href="#types">Types de résistance</a></li>
+<li><a href="#supports">Supports génétiques</a></li>
+<li><a href="#mecanismes">4 mécanismes biochimiques</a></li>
+<li><a href="#permeabilite">Perméabilité / efflux</a></li>
+<li><a href="#cible-enzyme">Cible / inactivation enzymatique</a></li>
+<li><a href="#betalactamines">Résistance aux β-lactamines</a></li>
+<li><a href="#aminosides">Aminosides</a></li>
+<li><a href="#macrolides">Macrolides / lincosamides</a></li>
+<li><a href="#quinolones">Quinolones</a></li>
+<li><a href="#sau">Staphylococcus aureus</a></li>
+<li><a href="#enterobacteries">Entérobactéries sauvages</a></li>
+<li><a href="#entero-acquise">Entérobactéries acquises</a></li>
+<li><a href="#pneumocoque">Pneumocoque</a></li>
+<li><a href="#bmr">BMR</a></li>
+<li><a href="#sarm">SARM</a></li>
+<li><a href="#blse">BLSE</a></li>
+<li><a href="#bhr">BHR</a></li>
+<li><a href="#tableau">Tableau maître</a></li>
+<li><a href="#pieges">Pièges du support</a></li>
+<li><a href="#recap">Mini-récap</a></li>
+<li><a href="#flashcards">Flashcards express</a></li>
+</ol>
+</nav>
+
+<section id="definition">
+<h2>1. Définition de la résistance</h2>
+<p>Une bactérie est dite résistante à un antibiotique lorsque sa <strong>CMI</strong> (concentration minimale inhibitrice) est supérieure à la concentration sanguine maximale de l’antibiotique pouvant être atteinte avec une posologie standard.</p>
+<div class="callout"><strong>Conséquence :</strong> un antibiotique peut paraître actif <em>in vitro</em> mais ne pas être utilisable <em>in vivo</em> si la concentration nécessaire n’est pas tolérable ou atteignable chez le patient.</div>
+</section>
+
+<section id="types">
+<h2>2. Résistance naturelle vs résistance acquise</h2>
+<div class="tablewrap"><table>
+<tr><th></th><th>Résistance naturelle</th><th>Résistance acquise</th></tr>
+<tr><td>Population concernée</td><td>Toutes les souches d’une espèce / phénotype sauvage</td><td>Seulement une fraction des souches d’une même espèce</td></tr>
+<tr><td>Support</td><td>Chromosomique</td><td>Mutation d’un gène existant ou acquisition d’un gène étranger</td></tr>
+<tr><td>Exemple logique</td><td>Absence de cible, imperméabilité intrinsèque, enzyme naturellement produite</td><td>mecA, BLSE, mutation ADN gyrase…</td></tr>
+</table></div>
+<div class="callout bluebox"><strong>Phénotype sauvage :</strong> correspond au profil naturel de sensibilité/résistance d’une espèce avant sélection de résistances acquises.</div>
+</section>
+
+<section id="supports">
+<h2>3. Supports génétiques de la résistance acquise</h2>
+<h3>A. Mutation chromosomique</h3>
+<ul>
+<li>Événement rare : fréquence indiquée à <strong>1 × 10<sup>-8</sup></strong>.</li>
+<li>Transmission uniquement <strong>verticale</strong>.</li>
+<li>Touche en général <strong>une famille d’antibiotiques</strong>.</li>
+<li>Résistance <strong>stable</strong>.</li>
+<li>Mutation <strong>spontanée en l’absence de pression de sélection</strong>.</li>
+</ul>
+<div class="callout warn"><strong>Phrase à savoir :</strong> l’antibiotique <strong>sélectionne</strong> la mutation résistante ; il <strong>ne l’induit pas</strong>.</div>
+
+<h3>B. Acquisition de gènes étrangers</h3>
+<ul>
+<li>Transfert <strong>horizontal</strong>, y compris entre espèces différentes.</li>
+<li>Éléments mobiles : <strong>plasmides</strong> et <strong>transposons</strong>.</li>
+<li>Mécanisme très fréquent : <strong>80-90 %</strong> des acquisitions de résistance selon le cours.</li>
+<li>Peut conférer plusieurs résistances simultanément car un plasmide peut porter plusieurs gènes.</li>
+<li>Conservation dépendante de la pression de sélection, car le plasmide représente un coût énergétique.</li>
+</ul>
+<div class="schema">Mutation chromosomique
+→ rare
+→ verticale
+→ souvent 1 famille
+→ stable
+
+Gène étranger
+→ fréquent
+→ horizontal
+→ plusieurs familles possibles
+→ conservation favorisée par la pression de sélection</div>
+</section>
+
+<section id="mecanismes">
+<h2>4. Les 4 mécanismes biochimiques de résistance</h2>
+<div class="grid2">
+<div class="card"><strong>1. Diminution de perméabilité</strong><p>Modification quantitative ou qualitative des porines.</p></div>
+<div class="card"><strong>2. Efflux</strong><p>Pompes expulsant activement l’antibiotique.</p></div>
+<div class="card"><strong>3. Modification de la cible</strong><p>PLP, ARN ribosomal, ADN gyrase…</p></div>
+<div class="card"><strong>4. Inactivation enzymatique</strong><p>β-lactamases, enzymes modifiant les aminosides…</p></div>
+</div>
+<div class="callout orangebox"><strong>Le plus fréquent dans le support :</strong> l’inactivation enzymatique.</div>
+</section>
+
+<section id="permeabilite">
+<h2>5. Imperméabilité et efflux</h2>
+<h3>Diminution de perméabilité</h3>
+<p>Chez les bactéries Gram négatif, des molécules hydrophiles de faible poids moléculaire traversent normalement la membrane externe via les porines. Une modification qualitative ou quantitative des porines peut empêcher l’antibiotique d’atteindre sa cible.</p>
+<div class="callout"><strong>Exemple acquis :</strong> modification d’une porine de <em>Pseudomonas aeruginosa</em> pouvant entraîner une résistance aux carbapénèmes.</div>
+
+<h3>Efflux</h3>
+<p>Les pompes à extrusion décrites associent <strong>3 protéines</strong> : membrane cytoplasmique, espace périplasmique et membrane/paroi externe.</p>
+<ul>
+<li>Expulsent l’antibiotique qui a pénétré.</li>
+<li>Résistance souvent non spécifique et pas forcément de haut niveau.</li>
+<li>Peut donner une résistance croisée à plusieurs familles.</li>
+</ul>
+<div class="callout purplebox"><strong>Familles citées :</strong> fluoroquinolones, chloramphénicol, tétracyclines et β-lactamines.</div>
+</section>
+
+<section id="cible-enzyme">
+<h2>6. Modification de la cible et inactivation enzymatique</h2>
+<h3>Modification de cible</h3>
+<ul>
+<li><strong>PLP</strong> : faible affinité pour les β-lactamines.</li>
+<li><strong>Méthylation ARN ribosomal</strong> : résistance à des antibiotiques ciblant le ribosome.</li>
+<li><strong>Altération ADN gyrase</strong> : résistance aux quinolones.</li>
+</ul>
+
+<h3>Inactivation enzymatique</h3>
+<p>Mécanisme présenté comme le plus fréquent. L’exemple majeur est l’hydrolyse des β-lactamines par des <strong>β-lactamases</strong>.</p>
+<ul>
+<li>Gram négatif : β-lactamases dans l’<strong>espace périplasmique</strong>.</li>
+<li>Gram positif : β-lactamases décrites à l’<strong>extérieur du peptidoglycane</strong>.</li>
+<li>Autre exemple : inactivation enzymatique des <strong>aminosides</strong>.</li>
+</ul>
+</section>
+
+<section id="betalactamines">
+<h2>7. Résistance aux β-lactamines</h2>
+
+<h3>Résistance naturelle</h3>
+<div class="tablewrap"><table>
+<tr><th>Mécanisme</th><th>Exemple du cours</th></tr>
+<tr><td>Imperméabilité</td><td>BGN résistants aux pénicillines G et M car elles ne traversent pas les porines selon le support</td></tr>
+<tr><td>Faible affinité / absence de cible</td><td>Entérocoques et Listeria naturellement résistants aux C3G ; mycoplasmes résistants à toutes les β-lactamines car « pas de PLP » dans le support</td></tr>
+<tr><td>β-lactamase naturelle</td><td>Pénicillinase chromosomique, inhibée par acide clavulanique</td></tr>
+</table></div>
+
+<h3>Céphalosporinase naturelle</h3>
+<ul>
+<li>Hydrolyse aminopénicillines, C1G et certaines C2G.</li>
+<li>Support chromosomique.</li>
+<li><strong>Non inhibée par l’acide clavulanique.</strong></li>
+<li>Synthèse inductible dans le raisonnement du cours.</li>
+</ul>
+<div class="callout warn"><strong>Association de deux β-lactamines :</strong> le support déconseille cette association car une β-lactamine peut induire la céphalosporinase et antagoniser l’autre.</div>
+
+<h3>Résistance acquise</h3>
+<ul>
+<li>Imperméabilité.</li>
+<li>Efflux.</li>
+<li>Modification des PLP.</li>
+<li>β-lactamases acquises.</li>
+</ul>
+</section>
+
+<section id="aminosides">
+<h2>8. Résistance aux aminosides</h2>
+<div class="grid2">
+<div class="card"><strong>Naturelle</strong><p>Imperméabilité. L’entrée de l’aminoside dépend de voies métaboliques nécessitant de l’oxygène.</p></div>
+<div class="card"><strong>Acquise</strong><p>Inactivation enzymatique, le plus souvent via acquisition de gènes étrangers portés par des transposons.</p></div>
+</div>
+<ul>
+<li>Anaérobies stricts : naturellement résistants.</li>
+<li>Streptocoques : bas niveau de résistance ; aminosides actifs seulement en association avec β-lactamine ou glycopeptide dans le cours.</li>
+</ul>
+</section>
+
+<section id="macrolides">
+<h2>9. Résistance aux macrolides / lincosamides</h2>
+<div class="tablewrap"><table>
+<tr><th>Type</th><th>Mécanisme</th><th>Exemple</th></tr>
+<tr><td>Naturelle</td><td>Imperméabilité</td><td>Tous les BGN sauf Legionella et Haemophilus dans le support</td></tr>
+<tr><td>Naturelle</td><td>Modification de cible</td><td>Certains entérocoques</td></tr>
+<tr><td>Acquise</td><td>Modification de cible</td><td>Cocci Gram positif</td></tr>
+<tr><td>Acquise</td><td>Inactivation enzymatique</td><td>Staphylococcus aureus</td></tr>
+</table></div>
+</section>
+
+<section id="quinolones">
+<h2>10. Résistance aux quinolones</h2>
+<h3>Naturelle</h3>
+<ul>
+<li>1re génération : CGP et <em>P. aeruginosa</em> naturellement résistants dans le cours.</li>
+<li>Rappel du support : 1re génération active surtout sur entérobactéries.</li>
+<li>Fluoroquinolones de 2e génération : anaérobies stricts, entérocoques et Listeria résistants à ciprofloxacine/ofloxacine.</li>
+<li>Lévofloxacine et moxifloxacine présentées comme actives dans ces situations.</li>
+</ul>
+
+<h3>Acquise</h3>
+<p>Mutations du gène codant l’<strong>ADN gyrase</strong>. Plus les mutations s’accumulent, plus la <strong>CMI augmente</strong>, jusqu’à une résistance de haut niveau.</p>
+<div class="callout orangebox"><strong>Épargne :</strong> le support insiste sur la sélection rapide de résistances sous fluoroquinolones et recommande de les conserver autant que possible.</div>
+</section>
+
+<section id="sau">
+<h2>11. Phénotypes de résistance de Staphylococcus aureus</h2>
+<ul>
+<li>Souche sauvage : sensible à toutes les β-lactamines selon le cours.</li>
+<li>Environ <strong>90 %</strong> des souches acquièrent une pénicillinase → résistance pénicillines G et A, mais sensibilité à pénicilline M.</li>
+<li><strong>15-17 %</strong> des souches deviennent résistantes à la méticilline → SARM.</li>
+<li>SARM : résistance à toutes les β-lactamines sauf exception de C5G comme la <strong>ceftaroline</strong> dans le corrigé.</li>
+<li><strong>80 %</strong> des SARM auraient une résistance associée fréquente aux aminosides et fluoroquinolones selon le support.</li>
+</ul>
+<div class="callout bluebox"><strong>Chiffre local du cours :</strong> environ <strong>13 %</strong> de souches résistantes à la méticilline en région tourangelle.</div>
+</section>
+
+<section id="enterobacteries">
+<h2>12. Entérobactéries : phénotypes sauvages simplifiés</h2>
+<p>Le cours regroupe les entérobactéries en phénotypes simplifiés pour les β-lactamines.</p>
+<div class="tablewrap"><table>
+<tr><th>Groupe</th><th>Exemples</th><th>Mécanisme naturel</th><th>Profil clé</th></tr>
+<tr><td>0/1</td><td>E. coli, Salmonella, Proteus mirabilis, Shigella</td><td>Pas de β-lactamase naturelle dans le cours</td><td>Sensibles aux β-lactamines présentées sauf pénicillines G et M</td></tr>
+<tr><td>2</td><td>Klebsiella pneumoniae</td><td>Pénicillinase naturelle</td><td>Résistance amoxicilline/ticarcilline ; récupérée par clavulanate ; céphalosporines sensibles</td></tr>
+<tr><td>3</td><td>Enterobacter spp., Serratia</td><td>Céphalosporinase bas niveau</td><td>Hydrolyse amoxicilline et C1G ; non inhibée par clavulanate ; ticarcilline et C3G encore actives dans ce tableau</td></tr>
+</table></div>
+</section>
+
+<section id="entero-acquise">
+<h2>13. Entérobactéries : résistances acquises aux β-lactamines</h2>
+<div class="tablewrap"><table>
+<tr><th>Mécanisme</th><th>Effet principal selon le cours</th><th>Carbapénèmes</th></tr>
+<tr><td>Pénicillinase plasmidique</td><td>Phénotype proche groupe 2</td><td>Sensibles</td></tr>
+<tr><td>BLSE</td><td>Hydrolyse pénicillines + céphalosporines à spectre étendu ; récupération partielle par clavulanate</td><td>Non hydrolysés</td></tr>
+<tr><td>Céphalosporinase acquise/hyperproduite</td><td>Amoxicilline + céphalosporines ; clavulanate inefficace</td><td>Restent sensibles dans le tableau</td></tr>
+<tr><td>Carbapénémase</td><td>Hydrolyse toutes les β-lactamines</td><td>Résistants</td></tr>
+</table></div>
+<div class="callout warn"><strong>BLSE :</strong> la souche devient une BMR et présente fréquemment des co-résistances aux aminosides et fluoroquinolones, notamment via le même plasmide.</div>
+</section>
+
+<section id="pneumocoque">
+<h2>14. Streptococcus pneumoniae</h2>
+<p>Responsable notamment de pneumonies, otites de l’enfant et méningites.</p>
+<h3>Résistances naturelles</h3>
+<ul>
+<li>Bas niveau de résistance aux fluoroquinolones de 2e génération comme ciprofloxacine.</li>
+<li>Sensibilité meilleure à la lévofloxacine dans le support.</li>
+<li>Bas niveau de résistance aux aminosides par imperméabilité → association nécessaire.</li>
+</ul>
+<h3>Résistances acquises</h3>
+<ul>
+<li>β-lactamines : acquisition de gènes de PLP de streptocoques résistants → <strong>gènes mosaïques</strong> → baisse d’affinité.</li>
+<li>Résistance pas forcément de haut niveau : une augmentation de posologie peut parfois rester efficace.</li>
+<li>Macrolides : résistance acquise possible.</li>
+</ul>
+<div class="callout"><strong>Antibiogramme :</strong> le cours indique des CMI par e-test pour pénicilline G, amoxicilline et céfotaxime.</div>
+</section>
+
+<section id="bmr">
+<h2>15. BMR : bactéries multirésistantes</h2>
+<p>Une BMR cumule des résistances acquises à plusieurs familles d’antibiotiques et peut mener à une <strong>impasse thérapeutique</strong>. Elle peut être hospitalière ou communautaire.</p>
+<div class="tablewrap"><table>
+<tr><th>BMR citée</th><th>Repère du cours</th></tr>
+<tr><td>SARM</td><td>13 % en Touraine dans le support ; ville + hôpital</td></tr>
+<tr><td>Entérobactéries BLSE</td><td>7 % des souches d’E. coli dans le cours ; ville + hôpital</td></tr>
+<tr><td>Entérocoques résistants à la vancomycine</td><td>~2 souches/an au CHU dans le support</td></tr>
+<tr><td>PAMR</td><td>Pseudomonas aeruginosa multirésistant</td></tr>
+<tr><td>ABMR</td><td>Acinetobacter baumannii multirésistant</td></tr>
+</table></div>
+</section>
+
+<section id="sarm">
+<h2>16. SARM</h2>
+<div class="schema">mecA / mecC
+→ intégration chromosomique
+→ nouvelle PLP : PLP2a / PLP2c
+→ faible affinité pour les β-lactamines
+→ synthèse du peptidoglycane maintenue
+→ résistance à la méticilline et aux β-lactamines</div>
+<div class="callout purplebox"><strong>Exception du cours :</strong> certaines C5G comme la ceftaroline peuvent rester actives.</div>
+</section>
+
+<section id="blse">
+<h2>17. BLSE</h2>
+<ul>
+<li>Support génétique surtout <strong>plasmidique</strong>.</li>
+<li>Transmission horizontale d’une bactérie à l’autre.</li>
+<li>Hydrolyse des pénicillines et de nombreuses céphalosporines à spectre étendu.</li>
+<li>Pas d’hydrolyse des carbapénèmes dans le cours.</li>
+<li>Inhibition par l’acide clavulanique, au moins partielle selon le support.</li>
+</ul>
+<div class="callout bluebox"><strong>Antibiogramme :</strong> une image de synergie entre acide clavulanique et C3G est présentée comme signant la présence d’une BLSE.</div>
+</section>
+
+<section id="bhr">
+<h2>18. BHR : bactéries hautement résistantes</h2>
+<p>Le cours classe notamment comme BHR :</p>
+<ul>
+<li><strong>Entérobactéries productrices de carbapénémase</strong>.</li>
+<li><strong>Enterococcus faecium résistant à la vancomycine</strong>.</li>
+</ul>
+<div class="callout warn"><strong>Passage BMR → BHR :</strong> la production d’une carbapénémase chez une entérobactérie ou Pseudomonas modifie le niveau de résistance et les mesures de prise en charge.</div>
+</section>
+
+<section id="tableau">
+<h2>19. Tableau maître des mécanismes par famille</h2>
+<div class="tablewrap"><table>
+<tr><th>Famille</th><th>Résistance naturelle</th><th>Résistance acquise</th></tr>
+<tr><td>β-lactamines</td><td>Imperméabilité ; faible affinité/absence de cible ; β-lactamases</td><td>Imperméabilité ; efflux ; modification PLP ; β-lactamases</td></tr>
+<tr><td>Aminosides</td><td>Imperméabilité +++</td><td>Inactivation enzymatique +++</td></tr>
+<tr><td>Macrolides / lincosamides</td><td>Imperméabilité ; modification de cible</td><td>Modification de cible ; inactivation enzymatique</td></tr>
+<tr><td>Quinolones</td><td>Défaut d’inhibition de la cible / sensibilité intrinsèque de l’ADN gyrase</td><td>Altération de l’ADN gyrase par mutations ++</td></tr>
+</table></div>
+</section>
+
+<section id="pieges">
+<h2>20. Pièges et formulations internes du support</h2>
+<div class="callout warn"><strong>1. Pression de sélection :</strong> le tableau oppose « mutation chromosomique : pression de sélection non » à « gènes étrangers : oui ». Le texte précise pourtant surtout que la mutation apparaît spontanément et que l’antibiotique la sélectionne ; pour les plasmides, la pression favorise leur conservation.</div>
+<div class="callout warn"><strong>2. Mycoplasmes :</strong> le cours explique leur résistance aux β-lactamines par l’absence de PLP. Cette formulation est conservée telle quelle.</div>
+<div class="callout warn"><strong>3. Classification des pénicillines :</strong> la page des entérobactéries écrit que « l’amoxicilline et la ticarcilline sont des carboxypénicillines ». Formulation du support conservée sans correction extérieure.</div>
+<div class="callout warn"><strong>4. SARM :</strong> le texte dit « résistance à toutes les β-lactamines » puis fait l’exception de certaines C5G comme la ceftaroline ; en QCM, penser à cette exception.</div>
+<div class="callout warn"><strong>5. BLSE :</strong> une ligne dit « hydrolyse toutes les β-lactamines » puis précise qu’il n’y a pas d’hydrolyse des carbapénèmes. Le tableau et le corrigé retiennent bien la conservation des carbapénèmes.</div>
+<div class="callout warn"><strong>6. Céphalosporinase naturelle :</strong> le cours la décrit comme inductible et non inhibée par clavulanate ; c’est un point récurrent dans les QCM.</div>
+<div class="callout warn"><strong>7. Chiffres épidémiologiques :</strong> 13 % de SARM en Touraine, 7 % d’E. coli BLSE et ~2 ERV/an au CHU sont les chiffres du support de 2026, à apprendre ici comme données du cours.</div>
+</section>
+
+<section id="recap" class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>Résistance naturelle</strong> = fond génétique de l’espèce, phénotype sauvage, chromosomique. <strong>Acquise</strong> = mutation ou gène étranger. Mutation : rare, verticale, stable, antibiotique sélectionne mais n’induit pas. Gène étranger : fréquent, horizontal, plasmides/transposons, souvent multirésistance. 4 mécanismes : <strong>imperméabilité, efflux, modification de cible, inactivation enzymatique</strong>. β-lactamines : PLP + β-lactamases + porines. Aminosides : naturel = imperméabilité, acquis = enzymes. Quinolones : mutations ADN gyrase. <strong>SARM = mecA/mecC → PLP2a/c</strong>. <strong>BLSE = plasmidique, C3G/pénicillines hydrolysées, carbapénèmes conservés</strong>. <strong>Carbapénémase = BHR</strong>. Entérobactéries sauvages : groupe 0/1 sans β-lactamase naturelle ; K. pneumoniae = pénicillinase ; Enterobacter/Serratia = céphalosporinase bas niveau.</p>
+</section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « Résistance aux antibiotiques ». Les chiffres, phénotypes, mécanismes, formulations et incohérences signalées suivent le support fourni.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+<div class="flash">
+  <div class="q">Comment le cours définit-il une bactérie résistante à un antibiotique à partir de la CMI ?</div>
+  <div class="a">La CMI de l’antibiotique est supérieure à la concentration sanguine maximale atteignable avec une posologie standard.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi une souche peut-elle paraître sensible in vitro mais rester résistante in vivo ?</div>
+  <div class="a">Parce que la concentration d’antibiotique nécessaire pour l’inhiber peut être impossible à atteindre ou à tolérer chez le patient.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle différence fondamentale oppose résistance naturelle et résistance acquise ?</div>
+  <div class="a">La résistance naturelle appartient au fond génétique de l’espèce et définit le phénotype sauvage ; la résistance acquise ne concerne qu’une fraction des souches d’une même espèce.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le support génétique de la résistance naturelle dans le cours ?</div>
+  <div class="a">Un support chromosomique.</div>
+</div>
+<div class="flash">
+  <div class="q">Par quels deux grands mécanismes une résistance acquise peut-elle apparaître ?</div>
+  <div class="a">Par mutation d’un gène déjà présent chez la bactérie ou par acquisition d’un gène étranger.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle fréquence approximative de mutation chromosomique est donnée dans le support ?</div>
+  <div class="a">Environ 1 × 10^-8.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel type de transmission caractérise une mutation chromosomique de résistance ?</div>
+  <div class="a">Une transmission verticale de la bactérie à sa descendance.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi une mutation chromosomique touche-t-elle généralement une seule famille d’antibiotiques ?</div>
+  <div class="a">Parce qu’elle affecte typiquement le gène codant une cible particulière d’une famille d’antibiotiques.</div>
+</div>
+<div class="flash">
+  <div class="q">Une résistance acquise par mutation chromosomique est-elle stable ou instable ?</div>
+  <div class="a">Elle est présentée comme stable une fois acquise.</div>
+</div>
+<div class="flash">
+  <div class="q">Les antibiotiques provoquent-ils directement les mutations de résistance ?</div>
+  <div class="a">Non. Les mutations apparaissent spontanément ; l’antibiotique sélectionne ensuite les clones mutants résistants.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle phrase résume le rôle de l’antibiotique dans la mutation de résistance ?</div>
+  <div class="a">L’antibiotique sélectionne la mutation mais ne l’induit pas.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels éléments génétiques mobiles permettent l’acquisition de gènes étrangers ?</div>
+  <div class="a">Les plasmides et les transposons.</div>
+</div>
+<div class="flash">
+  <div class="q">Qu’est-ce qu’un plasmide selon le cours ?</div>
+  <div class="a">Un ADN bactérien circulaire libre pouvant diffuser horizontalement d’une bactérie à une autre.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment le cours définit-il un transposon ?</div>
+  <div class="a">Comme un « gène sauteur ».</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle proportion des acquisitions de résistance est attribuée aux gènes étrangers dans le support ?</div>
+  <div class="a">Environ 80 à 90 %.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel type de transmission caractérise l’acquisition de gènes étrangers ?</div>
+  <div class="a">Un transfert horizontal, possible entre bactéries de même espèce ou d’espèces différentes.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi un plasmide peut-il conférer une multirésistance ?</div>
+  <div class="a">Parce qu’il peut porter simultanément plusieurs gènes de résistance à différentes familles d’antibiotiques.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi la conservation d’un plasmide dépend-elle de la pression de sélection ?</div>
+  <div class="a">Le plasmide coûte de l’énergie à entretenir ; sans avantage sélectif il peut être perdu, alors qu’en présence d’antibiotique il favorise la survie.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels sont les quatre grands mécanismes biochimiques de résistance aux antibiotiques ?</div>
+  <div class="a">Diminution de perméabilité, efflux, modification de la cible et inactivation enzymatique.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel mécanisme biochimique est présenté comme le plus fréquent ?</div>
+  <div class="a">L’inactivation enzymatique.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment une modification de porine entraîne-t-elle une résistance ?</div>
+  <div class="a">Une modification qualitative ou quantitative de la porine empêche l’antibiotique de pénétrer suffisamment pour atteindre sa cible.</div>
+</div>
+<div class="flash">
+  <div class="q">Chez quelles bactéries le rôle des porines est-il particulièrement important ?</div>
+  <div class="a">Chez les bactéries à Gram négatif, qui possèdent une membrane externe avec des porines.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel exemple de résistance acquise par modification de porine est donné avec Pseudomonas aeruginosa ?</div>
+  <div class="a">Une modification de porine pouvant rendre Pseudomonas aeruginosa résistant à un carbapénème.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment fonctionnent les pompes d’efflux ?</div>
+  <div class="a">Elles expulsent activement l’antibiotique hors de la bactérie après sa pénétration, diminuant sa concentration au contact de la cible.</div>
+</div>
+<div class="flash">
+  <div class="q">Combien de protéines composent les pompes à extrusion décrites dans le cours ?</div>
+  <div class="a">Trois protéines, situées dans la membrane cytoplasmique, l’espace périplasmique et la membrane/paroi externe.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi l’efflux peut-il donner des résistances croisées ?</div>
+  <div class="a">Les pompes ne sont pas toujours spécifiques d’une seule famille et peuvent expulser plusieurs antibiotiques différents.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles familles sont citées comme pouvant être concernées par l’efflux ?</div>
+  <div class="a">Fluoroquinolones, chloramphénicol, tétracyclines et β-lactamines.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles trois cibles peuvent être modifiées selon les exemples du cours ?</div>
+  <div class="a">Les PLP, l’ARN ribosomal et l’ADN gyrase.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel mécanisme de résistance aux β-lactamines résulte d’une modification des PLP ?</div>
+  <div class="a">Une diminution de l’affinité des PLP pour les β-lactamines, qui ne peuvent plus inhiber efficacement la synthèse du peptidoglycane.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel mécanisme de résistance aux antibiotiques ribosomiques est cité ?</div>
+  <div class="a">La méthylation de l’ARN ribosomal.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel mécanisme de résistance aux quinolones est cité ?</div>
+  <div class="a">L’altération de l’ADN gyrase.</div>
+</div>
+<div class="flash">
+  <div class="q">Où se trouvent les β-lactamases chez les bactéries Gram négatif ?</div>
+  <div class="a">Dans l’espace périplasmique.</div>
+</div>
+<div class="flash">
+  <div class="q">Où les β-lactamases sont-elles décrites chez les bactéries Gram positif ?</div>
+  <div class="a">À l’extérieur du peptidoglycane.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est l’exemple majeur d’inactivation enzymatique des β-lactamines ?</div>
+  <div class="a">L’hydrolyse des β-lactamines par les β-lactamases.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel autre groupe d’antibiotiques est classiquement inactivé par des enzymes dans le cours ?</div>
+  <div class="a">Les aminosides.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi les bacilles Gram négatif sont-ils naturellement résistants aux pénicillines G et M selon le support ?</div>
+  <div class="a">Par imperméabilité : le support les décrit comme de grosses molécules ne franchissant pas les porines.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels exemples illustrent une résistance naturelle aux β-lactamines par faible affinité ou absence de cible ?</div>
+  <div class="a">Entérocoques et Listeria résistants aux C3G ; mycoplasmes résistants à toutes les β-lactamines car le support indique une absence de PLP.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle β-lactamase naturelle est inhibée par l’acide clavulanique ?</div>
+  <div class="a">La pénicillinase.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle enzyme naturelle n’est pas inhibée par l’acide clavulanique ?</div>
+  <div class="a">La céphalosporinase.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles β-lactamines sont hydrolysées par une céphalosporinase de bas niveau dans le cours ?</div>
+  <div class="a">Les aminopénicillines, les C1G et certaines C2G.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi l’association de deux β-lactamines peut-elle être antagoniste dans le raisonnement du cours ?</div>
+  <div class="a">Une β-lactamine peut induire la production de céphalosporinase, qui hydrolyse alors partiellement l’autre β-lactamine.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel gène est responsable de la résistance acquise de Staphylococcus aureus à la méticilline ?</div>
+  <div class="a">mecA, ou mecC dans la partie SARM du support.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle nouvelle PLP est codée par mecA/mecC ?</div>
+  <div class="a">Une PLP2a ou PLP2c à faible affinité pour les β-lactamines.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle conséquence entraîne l’acquisition de mecA chez S. aureus ?</div>
+  <div class="a">Une résistance à la méticilline et, dans le cours, à pratiquement toutes les β-lactamines.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle exception aux β-lactamines est citée pour le SARM ?</div>
+  <div class="a">Certaines céphalosporines de 5e génération, notamment la ceftaroline.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment le pneumocoque acquiert-il une sensibilité diminuée aux β-lactamines ?</div>
+  <div class="a">Par acquisition et recombinaison de gènes de PLP provenant de streptocoques résistants, formant des gènes mosaïques.</div>
+</div>
+<div class="flash">
+  <div class="q">La résistance du pneumocoque aux β-lactamines est-elle forcément de haut niveau ?</div>
+  <div class="a">Non. Le cours indique qu’elle peut rester modérée et parfois être surmontée par une augmentation de posologie.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels types de β-lactamases acquises sont cités ?</div>
+  <div class="a">Pénicillinases acquises, BLSE, céphalosporinase hyperproduite et carbapénémases.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi les anaérobies stricts sont-ils naturellement résistants aux aminosides ?</div>
+  <div class="a">La pénétration des aminosides dépend de voies métaboliques nécessitant de l’oxygène.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi les aminosides doivent-ils être associés à une β-lactamine ou un glycopeptide chez les streptocoques ?</div>
+  <div class="a">Les streptocoques ont un bas niveau de résistance par faible pénétration ; l’association facilite l’activité de l’aminoside.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le principal mécanisme de résistance acquise aux aminosides ?</div>
+  <div class="a">L’inactivation enzymatique.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel mécanisme naturel explique la résistance des bacilles Gram négatif aux macrolides/lincosamides dans le cours ?</div>
+  <div class="a">L’imperméabilité, sauf exceptions citées comme Legionella et Haemophilus.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels mécanismes acquis concernent les macrolides/lincosamides ?</div>
+  <div class="a">Modification de la cible chez les cocci Gram positif et inactivation enzymatique notamment chez S. aureus.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles bactéries sont naturellement résistantes aux quinolones de 1re génération dans le cours ?</div>
+  <div class="a">Les cocci Gram positif et Pseudomonas aeruginosa.</div>
+</div>
+<div class="flash">
+  <div class="q">Sur quelles bactéries les quinolones de 1re génération sont-elles surtout actives selon le support ?</div>
+  <div class="a">Les entérobactéries.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles bactéries sont naturellement résistantes à la ciprofloxacine et à l’ofloxacine dans le cours ?</div>
+  <div class="a">Les anaérobies stricts, les entérocoques et Listeria.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle relation existe entre nombre de mutations de l’ADN gyrase et niveau de résistance aux fluoroquinolones ?</div>
+  <div class="a">Plus les mutations s’accumulent, plus la CMI augmente, pouvant conduire à une résistance de haut niveau.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le phénotype de S. aureus sauvage vis-à-vis des β-lactamines dans le cours ?</div>
+  <div class="a">Il est présenté comme sensible à toutes les β-lactamines.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle proportion de S. aureus acquiert une pénicillinase selon le support ?</div>
+  <div class="a">Environ 90 %.</div>
+</div>
+<div class="flash">
+  <div class="q">Que devient le profil de S. aureus après acquisition d’une pénicillinase ?</div>
+  <div class="a">Résistance aux pénicillines G et A, mais maintien de la sensibilité à la pénicilline M.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle proportion de souches de S. aureus devient résistante à la méticilline dans le cours ?</div>
+  <div class="a">Environ 15 à 17 %.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle proportion des SARM présente une résistance associée fréquente aux aminosides et fluoroquinolones selon le support ?</div>
+  <div class="a">Environ 80 %.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel chiffre local de SARM est donné pour la région tourangelle ?</div>
+  <div class="a">Environ 13 % des souches dans le support.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels germes sont classés dans le groupe 0/1 des entérobactéries sauvages ?</div>
+  <div class="a">E. coli, Salmonella, Proteus mirabilis et Shigella.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel profil β-lactamase naturel est attribué au groupe 0/1 ?</div>
+  <div class="a">Pas de β-lactamase naturelle dans le cours, avec résistance naturelle seulement aux pénicillines G et M.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel phénotype naturel caractérise Klebsiella pneumoniae ?</div>
+  <div class="a">Production d’une pénicillinase naturelle, responsable d’une résistance à l’amoxicilline et à la ticarcilline, récupérée par le clavulanate.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel phénotype naturel caractérise Enterobacter spp. et Serratia ?</div>
+  <div class="a">Production d’une céphalosporinase de bas niveau, non inhibée par l’acide clavulanique.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles molécules restent actives sur le phénotype 3 dans le tableau simplifié du cours ?</div>
+  <div class="a">La ticarcilline et la céfotaxime restent actives dans le tableau présenté.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel effet a une pénicillinase plasmidique acquise par E. coli ?</div>
+  <div class="a">Elle donne un phénotype proche de Klebsiella pneumoniae, correspondant au groupe 2.</div>
+</div>
+<div class="flash">
+  <div class="q">Qu’est-ce qu’une BLSE selon le support ?</div>
+  <div class="a">Une β-lactamase acquise, généralement plasmidique, hydrolysant les pénicillines et de nombreuses céphalosporines à spectre étendu.</div>
+</div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>

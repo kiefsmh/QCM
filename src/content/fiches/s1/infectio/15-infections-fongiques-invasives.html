@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiche - Infections fongiques invasives</title>
+<style>
+:root{
+ --g:#1a7a4a;--gs:#eaf7ef;--r:#b91c1c;--rs:#fee2e2;--o:#b45309;--os:#fff7ed;
+ --b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--t:#0f766e;--ts:#ecfeff;
+ --ink:#1c1c2e;--muted:#5b6474;--line:#d8dce8;--bg:#f6f7fb
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}
+.page{max-width:1180px;margin:auto;padding:32px 18px 72px}
+.hero{background:linear-gradient(135deg,#fff,#f0fdf4 55%,#eef9ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}
+.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}
+h1{font-size:39px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}
+.subtitle{margin:0;color:#374151;max-width:1080px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}
+.green{background:var(--gs);color:#166534}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.blue{background:var(--bs);color:#1d4ed8}.purple{background:var(--ps);color:#5b21b6}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}
+nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav li{margin:5px 0}nav a{color:inherit;text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(31,41,55,.035)}
+h2{font-size:25px;letter-spacing:-.02em;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}
+p{margin:8px 0}ul,ol{padding-left:22px;margin:8px 0 12px}li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}
+.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}.tealbox{border-left-color:var(--t);background:var(--ts)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;white-space:pre-wrap;overflow-x:auto}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.2px;min-width:820px}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}
+.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.flash .q{background:#f9fafb;padding:11px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:11px 12px;color:#374151}
+.source-note{font-size:12.5px;color:var(--muted);margin:18px 4px}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{min-width:680px;font-size:12.1px}}
+@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<main class="page">
+
+<header class="hero">
+<div class="kicker">UE Agents infectieux</div>
+<h1>Infections fongiques invasives</h1>
+<p class="subtitle">Fiche complète D1/EDN/QCM : diagnostic mycologique, biomarqueurs, PCR ciblées, aspergillose pulmonaire invasive, candidoses invasives et pneumocystose, avec facteurs de risque, imagerie, microbiologie, traitement, prophylaxie et pièges du support.</p>
+<div class="tags">
+<span class="tag green">Diagnostic mycologique</span>
+<span class="tag blue">Aspergillus</span>
+<span class="tag purple">Candida</span>
+<span class="tag red">Pneumocystis</span>
+<span class="tag orange">Biomarqueurs / PCR</span>
+</div>
+<div class="actions">
+<button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+<button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+</div>
+</header>
+
+<nav>
+<h2>Plan rapide</h2>
+<ol>
+<li><a href="#generalites">Généralités</a></li>
+<li><a href="#diagnostic">Diagnostic global</a></li>
+<li><a href="#direct-culture">Examen direct / culture</a></li>
+<li><a href="#biomarqueurs">Biomarqueurs</a></li>
+<li><a href="#pcr">PCR ciblées</a></li>
+<li><a href="#aspergillose">Aspergillose : généralités</a></li>
+<li><a href="#asper-fdr">Aspergillose : physiopath / FDR</a></li>
+<li><a href="#asper-imagerie">Aspergillose : clinique / scanner</a></li>
+<li><a href="#asper-diagnostic">Aspergillose : diagnostic</a></li>
+<li><a href="#asper-traitement">Aspergillose : traitement / prévention</a></li>
+<li><a href="#candida">Candidoses invasives</a></li>
+<li><a href="#candida-fdr">Candida : FDR / épidémiologie</a></li>
+<li><a href="#candida-diagnostic">Candida : diagnostic</a></li>
+<li><a href="#candida-pec">Candida : prise en charge</a></li>
+<li><a href="#pneumocystose">Pneumocystose</a></li>
+<li><a href="#pneumo-fdr">Pneumocystose : FDR</a></li>
+<li><a href="#pneumo-diagnostic">Pneumocystose : diagnostic</a></li>
+<li><a href="#pneumo-traitement">Pneumocystose : traitement / prophylaxie</a></li>
+<li><a href="#comparatif">Comparatif</a></li>
+<li><a href="#pieges">Pièges QCM</a></li>
+<li><a href="#recap">Mini-récap</a></li>
+<li><a href="#flashcards">Flashcards express</a></li>
+</ol>
+</nav>
+
+<section id="generalites">
+<h2>1. Généralités</h2>
+<div class="grid3">
+<div class="card"><strong>France</strong><p>≈ <strong>3 700 cas/an</strong> d’infections fongiques invasives, probablement sous-estimés.</p></div>
+<div class="card"><strong>Gravité</strong><p>Mortalité globale à 3 mois ≈ <strong>40 %</strong>.</p></div>
+<div class="card"><strong>Principe</strong><p>Diagnostic fondé sur un <strong>faisceau d’arguments</strong>, jamais sur un seul test isolé.</p></div>
+</div>
+</section>
+
+<section id="diagnostic">
+<h2>2. Diagnostic global des infections fongiques invasives</h2>
+<div class="schema">OUTILS DIRECTS
+→ examen direct
+→ culture
+→ PCR ciblée
+
+OUTILS INDIRECTS
+→ biomarqueurs
+
+Diagnostic final
+= clinique + terrain + imagerie + microbiologie + biomarqueurs + biologie moléculaire</div>
+<div class="callout bluebox"><strong>Formule du cours :</strong> examen direct + culture + biomarqueurs + PCR ciblées.</div>
+</section>
+
+<section id="direct-culture">
+<h2>3. Examen mycologique standard</h2>
+<h3>A. Examen direct</h3>
+<ul>
+<li>Prélèvement observé entre lame et lamelle, à l’état frais.</li>
+<li>Peut montrer des filaments mycéliens ou des levures.</li>
+<li>Des techniques d’imprégnation et fluorescence peuvent être ajoutées.</li>
+<li><strong>Sensibilité faible</strong> : un examen direct négatif <strong>n’exclut pas</strong> l’infection.</li>
+</ul>
+
+<h3>B. Culture</h3>
+<ul>
+<li>Si le champignon est cultivable, la culture augmente la sensibilité diagnostique.</li>
+<li>Sensibilité indiquée : <strong>30 à 85 %</strong>.</li>
+<li>Identification possible par microscopie, spectrométrie de masse ou séquençage.</li>
+</ul>
+
+<div class="callout purplebox"><strong>MALDI-TOF :</strong> nécessite d’abord une <strong>croissance en culture</strong>. Le spectre obtenu dépend du temps de vol des particules et est comparé à une banque de données.</div>
+</section>
+
+<section id="biomarqueurs">
+<h2>4. Biomarqueurs</h2>
+<div class="tablewrap"><table>
+<tr><th>Biomarqueur</th><th>Association dans le cours</th></tr>
+<tr><td>β-(1,3)-D-glucane</td><td>Panfongique, retrouvé chez la majorité des champignons</td></tr>
+<tr><td>Galactomannane</td><td>Plutôt spécifique d’Aspergillus</td></tr>
+<tr><td>Mannane</td><td>Associé à Candida</td></tr>
+<tr><td>Glucuronoxylomannane</td><td>Associé à Cryptococcus</td></tr>
+</table></div>
+<div class="callout warn"><strong>Piège majeur :</strong> faux positifs et faux négatifs possibles. Les biomarqueurs ne doivent jamais être interprétés seuls.</div>
+<div class="callout orangebox"><strong>Post-opératoire :</strong> dans les <strong>5 jours</strong> suivant une chirurgie lourde, des compresses peuvent provoquer un faux positif du β-(1,3)-D-glucane.</div>
+</section>
+
+<section id="pcr">
+<h2>5. PCR ciblées</h2>
+<ul>
+<li>Recherche directe de l’ADN d’un champignon suspecté.</li>
+<li>Exemple : PCR <em>Aspergillus</em> sanguine.</li>
+<li>Une PCR ciblée ne recherche <strong>pas tous les champignons</strong>.</li>
+<li>Sensibilité <strong>non égale à 100 %</strong> : un résultat négatif n’exclut pas l’infection.</li>
+</ul>
+</section>
+
+<section id="aspergillose">
+<h2>6. Aspergillose pulmonaire invasive : généralités</h2>
+<p>Infection fongique opportuniste à transmission <strong>environnementale</strong>, due à des moisissures cosmopolites du genre <em>Aspergillus</em>.</p>
+<div class="grid3">
+<div class="card"><strong>Monde</strong><p>≈ <strong>250 000 cas/an</strong>.</p></div>
+<div class="card"><strong>France</strong><p>≈ <strong>300-400 cas/an</strong>.</p></div>
+<div class="card"><strong>Tours</strong><p>≈ <strong>15 cas/an</strong> dans le support.</p></div>
+</div>
+<p>Les spores sont partout : faux plafonds, fruits pourris, plantes, poussières de travaux. Taille ≈ <strong>2-3 µm</strong>.</p>
+</section>
+
+<section id="asper-fdr">
+<h2>7. Aspergillose : physiopathologie et facteurs de risque</h2>
+<div class="schema">Spore inhalée
+→ clairance mucociliaire
+→ macrophages / cellules dendritiques / PNN
+
+Si immunodépression :
+absence d'élimination
+→ germination
+→ filamentation
+→ invasion du parenchyme pulmonaire</div>
+<div class="callout warn"><strong>Facteur de risque majeur : neutropénie sévère.</strong> Les PNN jouent un rôle central dans la défense anti-Aspergillus.</div>
+<ul>
+<li>Hémopathies.</li>
+<li>Lymphomes.</li>
+<li>Leucémies aiguës.</li>
+<li>Cancers solides.</li>
+<li>Transplantations d’organes solides.</li>
+<li>Déficits immunitaires congénitaux.</li>
+</ul>
+</section>
+
+<section id="asper-imagerie">
+<h2>8. Aspergillose : clinique et scanner</h2>
+<p>Clinique non spécifique : douleur thoracique, dyspnée, toux, hémoptysie, insuffisance respiratoire, fièvre.</p>
+<div class="callout bluebox"><strong>Scanner :</strong> nodule pulmonaire avec <strong>signe du halo</strong>, correspondant dans le support à une hyperdensité centrale entourée d’une opacité périphérique.</div>
+<div class="callout purplebox"><strong>Croissant gazeux :</strong> signe tardif apparaissant après plusieurs semaines, notamment lors de la restauration de l’immunité et de la correction de la neutropénie.</div>
+<p>Le visuel de la page 7 oppose clairement : <strong>signe du halo → condensation alvéolaire → croissant gazeux</strong>.</p>
+</section>
+
+<section id="asper-diagnostic">
+<h2>9. Aspergillose : diagnostic microbiologique et anatomopathologique</h2>
+<ul>
+<li>Examen direct : filaments mycéliens.</li>
+<li>Culture : croissance en environ <strong>2-3 jours</strong>, observation macroscopique et têtes aspergillaires.</li>
+<li>Galactomannane sérique.</li>
+<li>PCR Aspergillus sanguine.</li>
+</ul>
+<div class="callout orangebox"><strong>Anatomopathologie :</strong> rarement réalisée chez un patient aplasique fébrile en détresse respiratoire. Peut montrer des filaments mycéliens cloisonnés avec ramifications à angles plutôt aigus.</div>
+</section>
+
+<section id="asper-traitement">
+<h2>10. Aspergillose : traitement et prévention</h2>
+<div class="callout"><strong>Traitement de première ligne :</strong> <strong>voriconazole IV</strong>, puis relais per os dès que possible, pendant plusieurs semaines.</div>
+<p>Prévention : diminuer au maximum l’exposition aux spores chez les patients à haut risque, notamment en aplasie ; le cours cite l’utilisation de <strong>filtres dans les chambres</strong>.</p>
+</section>
+
+<section id="candida">
+<h2>11. Candidoses invasives</h2>
+<p><em>Candida</em> regroupe des champignons levuriformes opportunistes et commensaux.</p>
+<div class="grid2">
+<div class="card"><strong>Candidémie</strong><p>Présence de levures <em>Candida</em> dans le sang.</p></div>
+<div class="card"><strong>Candidose disséminée</strong><p>Invasion tissulaire, généralement secondaire à une dissémination hématogène.</p></div>
+</div>
+<div class="callout"><strong>Terminologie :</strong> toute candidémie est une fongémie, mais toute fongémie n’est pas une candidémie.</div>
+</section>
+
+<section id="candida-fdr">
+<h2>12. Candida : facteurs de risque et épidémiologie</h2>
+<p>Le commensalisme repose sur un équilibre entre Candida, système immunitaire, microbiote et barrières mécaniques.</p>
+<ul>
+<li>Immunodépression / déficit immunitaire.</li>
+<li>Chirurgie, surtout digestive.</li>
+<li>Plaies profondes / brûlures.</li>
+<li>Cathéters.</li>
+<li>Altération des barrières cutanées.</li>
+<li>Iatrogénie, notamment antibiothérapie modifiant le microbiote.</li>
+</ul>
+<div class="grid3">
+<div class="card"><strong>Monde</strong><p>≈ <strong>700 000 cas/an</strong>.</p></div>
+<div class="card"><strong>France</strong><p>&gt; <strong>1 000 cas/an</strong>.</p></div>
+<div class="card"><strong>Mortalité</strong><p>≈ <strong>30 %</strong>.</p></div>
+</div>
+<p>Le support présente les candidoses invasives comme la <strong>1re infection fongique invasive</strong>.</p>
+</section>
+
+<section id="candida-diagnostic">
+<h2>13. Candida : diagnostic</h2>
+<h3>Candidémie</h3>
+<div class="schema">Hémoculture
+→ incubation à 37 °C
+→ multiplication microbienne
+→ production de CO₂
+→ signal automatisé
+→ examen direct
+→ culture sur gélose
+→ identification, éventuellement MALDI-TOF</div>
+<p>Au microscope : éléments bourgeonnants d’environ <strong>6-8 µm</strong>.</p>
+<p>Les géloses chromogéniques peuvent aider ; le support indique que certaines identifient <em>C. albicans</em> par une couleur bleue.</p>
+
+<h3>Candidose disséminée</h3>
+<ul>
+<li>Biopsies et prélèvements profonds.</li>
+<li>Examen direct + culture.</li>
+<li>Mannane : plus spécifique de Candida.</li>
+<li>β-(1,3)-D-glucane : panfongique, donc non spécifique.</li>
+</ul>
+</section>
+
+<section id="candida-pec">
+<h2>14. Candida : prise en charge</h2>
+<div class="callout warn"><strong>Toute candidémie ou candidose profonde doit être traitée par un antifongique.</strong></div>
+<ul>
+<li>Retirer si possible les cathéters vasculaires, potentielle porte d’entrée ou foyer persistant.</li>
+<li>Traitement poursuivi au moins <strong>15 jours après la dernière hémoculture positive</strong>.</li>
+<li>Durée ajustée selon l’évolution clinique et la disparition des signes.</li>
+</ul>
+<h3>Localisations secondaires à rechercher après candidémie</h3>
+<div class="grid2">
+<div class="card"><strong>Œil</strong><p>Endophtalmie → <strong>fond d’œil</strong>.</p></div>
+<div class="card"><strong>Cœur</strong><p>Endocardite → ETT, idéalement <strong>ETO</strong>.</p></div>
+</div>
+</section>
+
+<section id="pneumocystose">
+<h2>15. Pneumocystose</h2>
+<p>Infection fongique pulmonaire opportuniste à transmission <strong>interhumaine</strong>.</p>
+<ul>
+<li>Deux formes : <strong>asques</strong> et <strong>formes trophiques</strong>.</li>
+<li>Réservoir <strong>strictement humain</strong>.</li>
+<li>Non retrouvé dans l’environnement.</li>
+<li>Possibilité de contaminations répétées au cours de la vie sans maladie si l’immunité est normale.</li>
+</ul>
+<div class="callout bluebox"><strong>Scanner :</strong> <strong>verre dépoli bilatéral</strong>, sans nodule dans le cas clinique. Cela aide à différencier la pneumocystose de l’aspergillose nodulaire.</div>
+</section>
+
+<section id="pneumo-fdr">
+<h2>16. Pneumocystose : facteurs de risque et pronostic</h2>
+<ul>
+<li>Hémopathies malignes.</li>
+<li>Tumeurs solides.</li>
+<li>VIH, surtout si <strong>CD4 &lt;200/mm³</strong>.</li>
+<li>Transplantation d’organe solide.</li>
+<li>Maladies immunosuppressives.</li>
+<li>Corticothérapie et autres immunosuppresseurs.</li>
+</ul>
+<div class="grid3">
+<div class="card"><strong>Monde</strong><p>≈ <strong>500 000 cas/an</strong>.</p></div>
+<div class="card"><strong>France</strong><p>≈ <strong>600 cas/an</strong>.</p></div>
+<div class="card"><strong>Survie</strong><p>≈ <strong>80 %</strong>.</p></div>
+</div>
+
+<h3>VIH vs non-VIH</h3>
+<div class="tablewrap"><table>
+<tr><th></th><th>VIH</th><th>Non-VIH</th></tr>
+<tr><td>Installation</td><td>Progressive, semaines/mois</td><td>Plus rapide et agressive</td></tr>
+<tr><td>Charge fongique</td><td>Élevée</td><td>Plus faible</td></tr>
+<tr><td>Diagnostic</td><td>Plus facile</td><td>Plus difficile</td></tr>
+<tr><td>Pronostic</td><td>Meilleur</td><td>Mortalité plus élevée</td></tr>
+</table></div>
+</section>
+
+<section id="pneumo-diagnostic">
+<h2>17. Pneumocystose : mise en évidence</h2>
+<div class="callout"><strong>Prélèvement de choix :</strong> <strong>lavage broncho-alvéolaire (LBA)</strong>, car la charge fongique augmente en profondeur et est maximale dans les alvéoles.</div>
+<ul>
+<li>Examen direct avec coloration MGG.</li>
+<li>Aspect en <strong>« nuage spumeux »</strong>.</li>
+<li>Fluorescence possible pour visualiser les asques.</li>
+<li>β-(1,3)-D-glucane utile pour orienter, mais non spécifique.</li>
+<li>PCR possible.</li>
+</ul>
+<div class="callout warn"><strong>Point capital :</strong> <em>Pneumocystis</em> <strong>n’est pas cultivable</strong>. Aucun milieu de culture utilisable n’est disponible dans le cadre du cours.</div>
+</section>
+
+<section id="pneumo-traitement">
+<h2>18. Pneumocystose : traitement et prophylaxie</h2>
+<div class="callout"><strong>Curatif :</strong> cotrimoxazole = triméthoprime + sulfaméthoxazole pendant <strong>3 semaines</strong>.</div>
+<ul>
+<li>Voie orale si possible.</li>
+<li>Sinon IV puis relais per os dès que possible.</li>
+<li>Effets indésirables cités : allergies, cytopénies, insuffisance rénale.</li>
+</ul>
+<div class="callout purplebox"><strong>VIH + hypoxie :</strong> corticothérapie adjuvante pour améliorer le pronostic ; le support précise que ce bénéfice concerne uniquement les patients VIH.</div>
+
+<h3>Prophylaxie</h3>
+<ul>
+<li>Reposant aussi sur le cotrimoxazole, à doses plus faibles.</li>
+<li><strong>Primaire</strong> : avant tout épisode chez un patient à risque.</li>
+<li><strong>Secondaire</strong> : après un premier épisode si l’immunosuppression persiste.</li>
+</ul>
+</section>
+
+<section id="comparatif">
+<h2>19. Comparatif ultra rentable</h2>
+<div class="tablewrap"><table>
+<tr><th></th><th>Aspergillose invasive</th><th>Candidose invasive</th><th>Pneumocystose</th></tr>
+<tr><td>Agent / forme</td><td>Moisissure Aspergillus</td><td>Levure Candida</td><td>Pneumocystis jirovecii</td></tr>
+<tr><td>Réservoir / transmission</td><td>Environnement ; spores inhalées</td><td>Commensal humain opportuniste</td><td>Strictement humain ; interhumaine</td></tr>
+<tr><td>Terrain clé</td><td>Neutropénie sévère</td><td>Fragilité, chirurgie, cathéter, antibiothérapie</td><td>Immunodépression, VIH CD4 &lt;200</td></tr>
+<tr><td>Imagerie</td><td>Nodule + halo ; croissant gazeux tardif</td><td>Pas d’imagerie unique spécifique dans ce cours</td><td>Verre dépoli bilatéral</td></tr>
+<tr><td>Biomarqueur utile</td><td>Galactomannane</td><td>Mannane ± β-glucane</td><td>β-glucane</td></tr>
+<tr><td>Prélèvement phare</td><td>Respiratoire / sérum selon outil</td><td>Hémoculture ou prélèvement profond</td><td>LBA</td></tr>
+<tr><td>Culture</td><td>Oui, ~2-3 jours</td><td>Oui</td><td><strong>Impossible</strong></td></tr>
+<tr><td>Traitement</td><td>Voriconazole</td><td>Antifongique systémique + contrôle porte d’entrée</td><td>Cotrimoxazole 3 semaines</td></tr>
+</table></div>
+</section>
+
+<section id="pieges">
+<h2>20. Pièges QCM et points du support à ne pas mélanger</h2>
+<div class="callout warn"><strong>1. Examen mycologique standard :</strong> = <strong>examen direct + culture</strong>, pas biomarqueurs.</div>
+<div class="callout warn"><strong>2. MALDI-TOF :</strong> nécessite une croissance préalable en culture.</div>
+<div class="callout warn"><strong>3. β-(1,3)-D-glucane :</strong> panfongique, donc pas spécifique d’Aspergillus, Candida ou Pneumocystis. Faux positif possible dans les 5 jours post-opératoires.</div>
+<div class="callout warn"><strong>4. Aspergillose :</strong> le signe du halo est radiologique, pas clinique, et n’est pas pathognomonique. Le croissant gazeux est tardif.</div>
+<div class="callout warn"><strong>5. Cas Aspergillus QCM 4 :</strong> l’item « spore → filaments puis germination » est faux dans le corrigé car le cours donne l’ordre <strong>germination puis filamentation</strong>.</div>
+<div class="callout warn"><strong>6. Candida :</strong> candidémie = fongémie à Candida ; l’inverse est faux.</div>
+<div class="callout warn"><strong>7. Candidémie :</strong> hémocultures, pas biopsie comme examen principal. Biopsie plutôt pour candidose disséminée.</div>
+<div class="callout warn"><strong>8. Pneumocystose :</strong> pas de nodule typique ; verre dépoli bilatéral. Réservoir humain, pas environnemental. Non cultivable.</div>
+<div class="callout warn"><strong>9. Pneumocystose VIH vs non-VIH :</strong> charge fongique plus élevée chez VIH mais pronostic meilleur ; charge plus faible chez non-VIH mais maladie plus agressive.</div>
+</section>
+
+<section id="recap" class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>Diagnostic IFI = examen direct + culture + biomarqueurs + PCR ciblées.</strong> β-(1,3)-D-glucane = panfongique ; galactomannane = Aspergillus ; mannane = Candida. <strong>Aspergillus</strong> : environnement, spores 2-3 µm, neutropénie ++, nodule + halo, croissant gazeux tardif, culture 2-3 j, voriconazole IV puis PO. <strong>Candida</strong> : commensal opportuniste ; candidémie = Candida dans le sang ; candidose disséminée = tissu ; facteurs de risque chirurgie/cathéter/antibiothérapie ; toute candidémie doit être traitée ; retirer cathéter si possible ; traiter au moins 15 j après dernière hémoculture positive ; chercher œil + cœur. <strong>Pneumocystis</strong> : humain uniquement, verre dépoli bilatéral, VIH CD4 &lt;200, LBA, nuage spumeux, β-glucane, PCR, non cultivable, cotrimoxazole 3 semaines + prophylaxie.</p>
+</section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « Infections fongiques invasives ». Les chiffres, seuils, schémas diagnostiques, traitements et formulations suivent le support fourni.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+<div class="flash">
+  <div class="q">Quels sont les deux grands types d’outils diagnostiques utilisés dans les infections fongiques invasives ?</div>
+  <div class="a">Les outils directs, qui mettent en évidence le champignon, et les outils indirects ou biomarqueurs, qui détectent des éléments libérés par le champignon.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le principe général du diagnostic d’une infection fongique invasive ?</div>
+  <div class="a">Il repose sur un faisceau d’arguments associant terrain, clinique, imagerie et plusieurs outils microbiologiques ; aucun test isolé n’est suffisant.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles sont les deux étapes de l’examen mycologique standard ?</div>
+  <div class="a">L’examen direct et la culture.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi un examen direct négatif n’exclut-il pas une infection fongique invasive ?</div>
+  <div class="a">Parce que sa sensibilité est relativement faible.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle plage de sensibilité est donnée pour la culture fongique lorsqu’elle est possible ?</div>
+  <div class="a">Environ 30 à 85 %.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles méthodes peuvent identifier un champignon après culture ?</div>
+  <div class="a">La microscopie, la spectrométrie de masse MALDI-TOF et éventuellement le séquençage.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi le MALDI-TOF ne peut-il pas identifier directement un champignon avant culture dans ce cours ?</div>
+  <div class="a">Parce qu’il nécessite une colonie ayant préalablement poussé en culture.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le principe général du MALDI-TOF décrit dans le support ?</div>
+  <div class="a">Une colonie est ionisée par laser, les particules traversent un tube de vol à des vitesses liées à leur taille et charge, puis le spectre obtenu est comparé à une base de données.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel biomarqueur faut-il retenir comme panfongique ?</div>
+  <div class="a">Le β-(1,3)-D-glucane.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel biomarqueur est plutôt spécifique d’Aspergillus ?</div>
+  <div class="a">Le galactomannane.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel biomarqueur est associé à Candida ?</div>
+  <div class="a">Le mannane.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel biomarqueur est associé à Cryptococcus ?</div>
+  <div class="a">Le glucuronoxylomannane.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi les biomarqueurs fongiques ne doivent-ils pas être utilisés seuls ?</div>
+  <div class="a">Parce qu’ils peuvent donner des faux positifs et des faux négatifs et doivent être interprétés avec les autres données diagnostiques.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel contexte peut provoquer un faux positif du β-(1,3)-D-glucane dans les 5 jours suivant une intervention ?</div>
+  <div class="a">Une chirurgie lourde, notamment via des compresses libérant des éléments sucrés ressemblant au β-glucane.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le principe d’une PCR ciblée fongique ?</div>
+  <div class="a">Rechercher directement l’ADN d’un champignon précis que l’on suspecte.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi une PCR ciblée négative n’exclut-elle pas une infection fongique invasive ?</div>
+  <div class="a">Parce que sa sensibilité n’est pas de 100 %.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle PCR ciblée peut être réalisée dans le sang en cas de suspicion d’aspergillose ?</div>
+  <div class="a">Une PCR Aspergillus.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels quatre outils sont combinés dans le résumé diagnostique du cours ?</div>
+  <div class="a">Examen direct, culture, biomarqueurs et PCR ciblées.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle infection doit être évoquée chez un patient en aplasie avec nodule pulmonaire et fièvre persistante malgré antibiothérapie large spectre ?</div>
+  <div class="a">Une aspergillose pulmonaire invasive.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle est la nature d’Aspergillus dans le cours ?</div>
+  <div class="a">Une moisissure cosmopolite responsable d’une infection opportuniste à transmission environnementale.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel ordre de grandeur de cas d’aspergillose pulmonaire invasive est donné dans le monde ?</div>
+  <div class="a">Environ 250 000 cas par an.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel ordre de grandeur est donné en France pour l’aspergillose pulmonaire invasive ?</div>
+  <div class="a">Environ 300 à 400 cas par an.</div>
+</div>
+<div class="flash">
+  <div class="q">Combien de cas annuels d’aspergillose pulmonaire invasive sont indiqués au CHU de Tours ?</div>
+  <div class="a">Environ 15 cas par an.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle taille ont les spores d’Aspergillus selon le support ?</div>
+  <div class="a">Environ 2 à 3 µm.</div>
+</div>
+<div class="flash">
+  <div class="q">Dans quels environnements Aspergillus peut-il être retrouvé selon le Wooclap ?</div>
+  <div class="a">Faux plafonds, fruits pourris, plantes et poussières dégagées lors de travaux.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels mécanismes éliminent normalement les spores inhalées chez l’immunocompétent ?</div>
+  <div class="a">Clairance mucociliaire puis action des macrophages, cellules dendritiques et surtout polynucléaires neutrophiles.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le facteur de risque majeur d’aspergillose invasive mis en avant ?</div>
+  <div class="a">La neutropénie sévère.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle séquence physiopathologique faut-il retenir pour l’aspergillose chez l’immunodéprimé ?</div>
+  <div class="a">Spore inhalée → absence d’élimination → germination → filamentation → invasion du parenchyme pulmonaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels terrains favorisants sont cités pour l’aspergillose invasive ?</div>
+  <div class="a">Hémopathies, lymphomes, leucémies aiguës, cancers solides, transplantations d’organes solides et certains déficits immunitaires congénitaux.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels symptômes cliniques peuvent accompagner une aspergillose pulmonaire invasive ?</div>
+  <div class="a">Douleur thoracique, dyspnée, toux, hémoptysie, insuffisance respiratoire et fièvre, sans signe clinique pathognomonique.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel aspect scanographique est particulièrement évocateur d’aspergillose pulmonaire invasive dans le cours ?</div>
+  <div class="a">Un nodule pulmonaire entouré d’un signe du halo.</div>
+</div>
+<div class="flash">
+  <div class="q">Que représente le signe du halo dans le support ?</div>
+  <div class="a">Une hyperdensité centrale entourée d’une opacité périphérique correspondant à des alvéoles remplies de liquide.</div>
+</div>
+<div class="flash">
+  <div class="q">Que signifie l’apparition secondaire d’un croissant gazeux ?</div>
+  <div class="a">Un signe tardif, souvent après plusieurs semaines, pouvant traduire une restauration immunitaire notamment après résolution de la neutropénie.</div>
+</div>
+<div class="flash">
+  <div class="q">En combien de temps Aspergillus peut-il pousser en culture dans le cours ?</div>
+  <div class="a">Environ 2 à 3 jours.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels éléments morphologiques peuvent être observés en culture ou microscopie d’Aspergillus ?</div>
+  <div class="a">Croissance macroscopique et têtes aspergillaires à la microscopie.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi une biopsie pulmonaire est-elle rarement réalisée dans l’aspergillose invasive ?</div>
+  <div class="a">Parce que ces patients sont souvent aplasiques, fébriles et insuffisants respiratoires, rendant le geste difficile et risqué.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel aspect anatomopathologique fongique est cité pour Aspergillus ?</div>
+  <div class="a">Des filaments mycéliens cloisonnés avec des ramifications formant des angles plutôt aigus.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le traitement de première ligne de l’aspergillose pulmonaire invasive ?</div>
+  <div class="a">Le voriconazole.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle séquence d’administration du voriconazole est décrite ?</div>
+  <div class="a">Début par voie intraveineuse puis relais oral dès que l’état le permet, pendant plusieurs semaines.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle mesure de prévention est citée chez les patients aplasiques à haut risque aspergillaire ?</div>
+  <div class="a">Réduire l’exposition aux spores, notamment avec des filtres dans les chambres.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment définir une candidémie ?</div>
+  <div class="a">Présence de levures Candida dans le sang.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment définir une candidose disséminée ?</div>
+  <div class="a">Invasion tissulaire, généralement secondaire à une dissémination hématogène.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle relation existe entre fongémie et candidémie ?</div>
+  <div class="a">Une candidémie est une fongémie à Candida ; toute fongémie n’est pas une candidémie.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi Candida peut-il être présent sans être pathogène ?</div>
+  <div class="a">Parce qu’il s’agit d’un commensal pouvant coloniser notamment tube digestif, flore génitale ou oreilles.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels facteurs peuvent rompre l’équilibre du commensalisme de Candida ?</div>
+  <div class="a">Déficit immunitaire, atteinte des barrières, chirurgie, cathéter, antibiothérapie et altération du microbiote.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels sont les principaux facteurs de risque de candidose invasive ?</div>
+  <div class="a">Immunodépression, chirurgie surtout digestive, plaies profondes, cathéters, atteinte des barrières et antibiothérapie altérant le microbiote.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel symptôme non spécifique doit faire évoquer une candidose invasive chez un patient à risque ?</div>
+  <div class="a">Une fièvre persistante malgré une antibiothérapie à large spectre.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel rang occupent les candidoses invasives parmi les infections fongiques invasives dans le cours ?</div>
+  <div class="a">Le 1er rang.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel nombre annuel mondial de candidoses invasives est indiqué ?</div>
+  <div class="a">Environ 700 000 cas par an.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel nombre annuel français de candidoses invasives est indiqué ?</div>
+  <div class="a">Plus de 1 000 cas par an.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle mortalité est donnée pour les candidoses invasives ?</div>
+  <div class="a">Environ 30 %.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment fonctionne le système automatisé de détection d’une hémoculture positive ?</div>
+  <div class="a">Le micro-organisme se multiplie, produit du CO₂ et l’automate détecte une augmentation anormale de la courbe de CO₂.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel aspect microscopique est décrit dans une candidémie ?</div>
+  <div class="a">Des éléments bourgeonnants d’environ 6 à 8 µm.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel examen est central pour diagnostiquer une candidémie ?</div>
+  <div class="a">L’hémoculture, suivie de l’examen direct et de la culture sur gélose.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels prélèvements sont privilégiés pour une candidose disséminée ?</div>
+  <div class="a">Biopsies tissulaires et prélèvements de liquides profonds.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel biomarqueur est plutôt associé à Candida et lequel est panfongique ?</div>
+  <div class="a">Mannane pour Candida ; β-(1,3)-D-glucane comme marqueur panfongique.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle règle thérapeutique absolue est donnée pour les candidoses invasives ?</div>
+  <div class="a">Toute candidémie ou candidose profonde doit être traitée par un antifongique.</div>
+</div>
+<div class="flash">
+  <div class="q">Que faut-il faire d’un cathéter vasculaire impliqué dans une candidémie lorsqu’on le peut ?</div>
+  <div class="a">Le retirer, car il peut être une porte d’entrée ou un foyer persistant.</div>
+</div>
+<div class="flash">
+  <div class="q">Combien de temps au minimum poursuivre le traitement d’une candidémie après la dernière hémoculture positive ?</div>
+  <div class="a">Au moins 15 jours.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles deux localisations secondaires faut-il rechercher après une candidémie ?</div>
+  <div class="a">Une localisation oculaire et une localisation cardiaque.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel examen recherche une endophtalmie après candidémie ?</div>
+  <div class="a">Un fond d’œil.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel examen recherche une endocardite après candidémie ?</div>
+  <div class="a">Une échographie cardiaque transthoracique ou, idéalement, transœsophagienne.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel type de transmission caractérise la pneumocystose ?</div>
+  <div class="a">Une transmission interhumaine.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le réservoir de Pneumocystis dans le cours ?</div>
+  <div class="a">Strictement humain.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles sont les deux formes de Pneumocystis ?</div>
+  <div class="a">Les asques et les formes trophiques.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel aspect radiologique est typique de pneumocystose dans le cas clinique ?</div>
+  <div class="a">Un verre dépoli bilatéral sans nodule.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel biomarqueur est fortement positif dans le cas de pneumocystose présenté et avec quelle valeur ?</div>
+  <div class="a">Le β-(1,3)-D-glucane à 517 pg/mL pour un seuil de 80 pg/mL.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel seuil de CD4 est particulièrement important pour le risque de pneumocystose chez un patient VIH ?</div>
+  <div class="a">CD4 &lt; 200/mm³.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle différence oppose généralement pneumocystose VIH et non-VIH en termes de charge fongique et pronostic ?</div>
+  <div class="a">Chez VIH : charge plus élevée, évolution plus progressive et meilleur pronostic ; chez non-VIH : charge plus faible, évolution plus agressive et mortalité plus élevée.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel prélèvement faut-il privilégier pour mettre en évidence Pneumocystis jirovecii ?</div>
+  <div class="a">Le lavage broncho-alvéolaire.</div>
+</div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>

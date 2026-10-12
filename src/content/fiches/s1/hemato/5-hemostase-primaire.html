@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiche - Hémostase primaire</title>
+<style>
+:root{
+ --g:#1a7a4a;--gs:#eaf7ef;--r:#b91c1c;--rs:#fee2e2;--o:#b45309;--os:#fff7ed;
+ --b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--t:#0f766e;--ts:#ecfeff;
+ --ink:#1c1c2e;--muted:#5b6474;--line:#d8dce8;--bg:#f6f7fb
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}
+.page{max-width:1180px;margin:auto;padding:32px 18px 72px}
+.hero{background:linear-gradient(135deg,#fff,#f0fdf4 55%,#eef9ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}
+.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}
+h1{font-size:39px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}
+.subtitle{margin:0;color:#374151;max-width:1080px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}
+.green{background:var(--gs);color:#166534}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.blue{background:var(--bs);color:#1d4ed8}.purple{background:var(--ps);color:#5b21b6}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}
+nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav li{margin:5px 0}nav a{color:inherit;text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(31,41,55,.035)}
+h2{font-size:25px;letter-spacing:-.02em;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}
+p{margin:8px 0}ul,ol{padding-left:22px;margin:8px 0 12px}li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}
+.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}.tealbox{border-left-color:var(--t);background:var(--ts)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;white-space:pre-wrap;overflow-x:auto}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.2px;min-width:820px}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}
+.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.flash .q{background:#f9fafb;padding:11px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:11px 12px;color:#374151}
+.source-note{font-size:12.5px;color:var(--muted);margin:18px 4px}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{min-width:680px;font-size:12.1px}}
+@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<main class="page">
+
+<header class="hero">
+<div class="kicker">UE 13 - Tissu sanguin</div>
+<h1>Hémostase primaire</h1>
+<p class="subtitle">Fiche complète D1/EDN/QCM : physiologie de l’hémostase primaire, vaisseau, plaquettes, VWF, fibrinogène, adhésion-activation-agrégation, sémiologie, thrombopénies, maladie de Willebrand, thrombopathies, exploration fonctionnelle et antiagrégants plaquettaires.</p>
+<div class="tags">
+<span class="tag green">Plaquettes</span>
+<span class="tag blue">VWF / fibrinogène</span>
+<span class="tag purple">GPIb / GPIIbIIIa</span>
+<span class="tag red">Thrombopénies</span>
+<span class="tag orange">Antiagrégants</span>
+</div>
+<div class="actions">
+<button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+<button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+</div>
+</header>
+
+<nav>
+<h2>Plan rapide</h2>
+<ol>
+<li><a href="#definition">Définition et étapes</a></li>
+<li><a href="#acteurs">4 acteurs</a></li>
+<li><a href="#vaisseau">Vaisseau</a></li>
+<li><a href="#plaquettes">Plaquettes</a></li>
+<li><a href="#granules">Granules</a></li>
+<li><a href="#vwf">VWF</a></li>
+<li><a href="#fibrinogene">Fibrinogène</a></li>
+<li><a href="#etapes">Étapes de l’HP</a></li>
+<li><a href="#adhesion">Adhésion</a></li>
+<li><a href="#activation">Activation</a></li>
+<li><a href="#txa2">TXA2 / flip-flop</a></li>
+<li><a href="#agregation">Agrégation</a></li>
+<li><a href="#semiologie">Sémiologie</a></li>
+<li><a href="#thrombopenies">Thrombopénies</a></li>
+<li><a href="#exploration">Exploration</a></li>
+<li><a href="#willebrand">Maladie de Willebrand</a></li>
+<li><a href="#thrombopathies">Thrombopathies</a></li>
+<li><a href="#bs-glanzmann">Bernard-Soulier / Glanzmann</a></li>
+<li><a href="#antiagregants">Antiagrégants</a></li>
+<li><a href="#pieges">Pièges du support</a></li>
+<li><a href="#recap">Mini-récap</a></li>
+<li><a href="#flashcards">Flashcards express</a></li>
+</ol>
+</nav>
+
+<section id="definition">
+<h2>1. Qu’est-ce que l’hémostase ?</h2>
+<p>L’hémostase vise à <strong>limiter voire arrêter les pertes sanguines</strong> lors d’une brèche vasculaire, tout en empêchant l’excès de coagulation pouvant conduire à une thrombose. C’est donc une balance entre mécanismes prothrombotiques et anticoagulants.</p>
+<div class="schema">Brèche vasculaire
+→ hémostase primaire : thrombus / clou plaquettaire
+→ coagulation : fibrine insoluble qui consolide le thrombus
+→ cicatrisation du vaisseau
+→ fibrinolyse : dissolution du caillot après réparation</div>
+<div class="callout bluebox"><strong>Piège pédagogique :</strong> les étapes sont souvent présentées successivement mais l’hémostase primaire et la coagulation sont en réalité presque simultanées ; la fibrinolyse vient plus tard.</div>
+<div class="callout orangebox"><strong>Wooclap :</strong> l’hémostase primaire <strong>limite</strong> le saignement par un bouchon plaquettaire transitoire ; la coagulation stabilise durablement le caillot.</div>
+</section>
+
+<section id="acteurs">
+<h2>2. Les 4 acteurs de l’hémostase primaire</h2>
+<div class="grid2">
+<div class="card"><strong>Vaisseau sanguin</strong><p>Endothélium sain thromborésistant ; sous-endothélium lésé thrombogène.</p></div>
+<div class="card"><strong>Plaquettes</strong><p>Adhésion, activation, sécrétion puis agrégation.</p></div>
+<div class="card"><strong>Facteur de Willebrand (VWF)</strong><p>Adhésion, agrégation sous forte contrainte de cisaillement, protection du facteur VIII.</p></div>
+<div class="card"><strong>Fibrinogène</strong><p>Ponts interplaquettaires via GPIIbIIIa et substrat de la fibrine.</p></div>
+</div>
+<div class="callout"><strong>Rôle mixte :</strong> VWF et fibrinogène interviennent à la fois dans l’hémostase primaire et la coagulation.</div>
+</section>
+
+<section id="vaisseau">
+<h2>3. Vaisseau sain vs vaisseau lésé</h2>
+<div class="grid2">
+<div class="card"><strong>Endothélium sain = thromborésistant</strong>
+<ul><li>Inhibiteurs solubles de l’activation plaquettaire, dont NO.</li><li>Glycosaminoglycanes / héparines sulfates anticoagulantes.</li><li>Stimulation de la fibrinolyse.</li></ul></div>
+<div class="card"><strong>Sous-endothélium = thrombogène</strong>
+<ul><li>Collagène.</li><li>Facteur de Willebrand.</li><li>Facteur tissulaire pour la coagulation.</li></ul></div>
+</div>
+<div class="callout warn"><strong>Très tombable :</strong> une brèche expose le sous-endothélium au sang. Le collagène et le VWF permettent alors aux plaquettes de s’arrêter sur la lésion.</div>
+</section>
+
+<section id="plaquettes">
+<h2>4. Plaquettes : formation et caractéristiques</h2>
+<div class="schema">Cellule souche multipotente
+→ mégacaryoblaste
+→ mégacaryocytopoïèse (~7 jours)
+→ endomitoses : réplication sans division
+→ très gros mégacaryocyte
+→ fragmentation membranaire sous l'effet du flux sanguin
+→ milliers de plaquettes</div>
+<ul>
+<li>Facteur de croissance majeur : <strong>thrombopoïétine (TPO)</strong>.</li>
+<li>Forme : <strong>discoïde</strong> au repos.</li>
+<li><strong>Anucléées</strong>.</li>
+<li>Durée de vie : <strong>7 jours</strong>.</li>
+<li>Numération normale : <strong>150-400 G/L</strong>.</li>
+</ul>
+<h3>Récepteurs membranaires à connaître</h3>
+<div class="tablewrap"><table>
+<tr><th>Récepteur</th><th>Ligand naturel</th><th>Moment clé</th></tr>
+<tr><td>GPIb-IX-V</td><td>Facteur de Willebrand</td><td>Adhésion initiale / rolling</td></tr>
+<tr><td>GPIa-IIa</td><td>Collagène</td><td>Adhésion stabilisée</td></tr>
+<tr><td>GPIIb-IIIa</td><td>Fibrinogène</td><td>Agrégation après activation</td></tr>
+</table></div>
+<div class="callout purplebox"><strong>Mnémo du cours :</strong> GPI<strong>b</strong> et GPI<strong>a-IIa</strong> interviennent dans la première étape d’adhésion ; GPIIbIIIa arrive secondairement pour l’agrégation.</div>
+</section>
+
+<section id="granules">
+<h2>5. Contenu cytoplasmique des plaquettes</h2>
+<div class="tablewrap"><table>
+<tr><th>Granules</th><th>Contenu cité</th></tr>
+<tr><td>Granules α</td><td>VWF, fibrinogène, facteur V, facteur IV plaquettaire</td></tr>
+<tr><td>Granules denses</td><td>Sérotonine, calcium, ADP, ATP</td></tr>
+</table></div>
+<p>Les plaquettes agissent donc à la fois via leurs <strong>récepteurs membranaires</strong> et par <strong>sécrétion de molécules</strong> lors de leur activation.</p>
+</section>
+
+<section id="vwf">
+<h2>6. Facteur de Willebrand</h2>
+<ul>
+<li>Très grosse protéine <strong>multimérique</strong>.</li>
+<li>Produite majoritairement par l’endothélium ; le support attribue <strong>30 %</strong> de la production aux mégacaryocytes.</li>
+<li>Présente dans le sous-endothélium et dans le plasma.</li>
+<li>Point d’accroche des plaquettes via <strong>GPIb</strong>.</li>
+<li>Participe aussi à l’agrégation lorsque les forces de cisaillement sont importantes.</li>
+<li>Transporte et protège le <strong>facteur VIII</strong>.</li>
+</ul>
+<div class="callout bluebox"><strong>Forces de cisaillement :</strong> dans les petits vaisseaux, le VWF se déroule sous l’effet du flux et devient particulièrement efficace pour accrocher les plaquettes.</div>
+<div class="callout"><strong>Facteur VIII :</strong> sans VWF, le support indique une durée de vie de quelques minutes ; protégé par le VWF, elle passe à environ <strong>8-12 h</strong>.</div>
+</section>
+
+<section id="fibrinogene">
+<h2>7. Fibrinogène</h2>
+<p>Le fibrinogène est présenté comme formé de fibrilles α, β et γ et comportant plusieurs domaines fonctionnels.</p>
+<ul>
+<li>Les <strong>domaines D</strong> distaux participent aux ponts entre plaquettes pendant l’agrégation.</li>
+<li>Lors de la coagulation, le fibrinogène soluble est transformé en <strong>fibrine insoluble</strong>, qui stabilise le thrombus.</li>
+</ul>
+</section>
+
+<section id="etapes">
+<h2>8. Ordre des événements de l’hémostase primaire</h2>
+<div class="schema">1. Vasoconstriction réflexe
+→ 2. Adhésion des plaquettes
+→ 3. Activation + sécrétion des granules
+→ 4. Agrégation des plaquettes</div>
+<p>La vasoconstriction réduit les pertes sanguines et ralentit localement le flux, favorisant la margination et la rencontre entre plaquettes et sous-endothélium.</p>
+</section>
+
+<section id="adhesion">
+<h2>9. Accrochage et adhésion plaquettaire</h2>
+<div class="schema">GPIb-IX-V plaquettaire
+↔ VWF du sous-endothélium
+→ premier ancrage, peu solide = "rolling"
+
+Puis
+GPIa-IIa
+↔ collagène
+→ stabilisation de l'adhésion</div>
+<div class="callout"><strong>GPIb est le récepteur majeur demandé au Wooclap</strong>, même si le cours reconnaît que GPIa-IIa participe aussi réellement à l’adhésion.</div>
+</section>
+
+<section id="activation">
+<h2>10. Activation plaquettaire</h2>
+<p>L’activation entraîne plusieurs modifications coordonnées :</p>
+<ul>
+<li><strong>Changement de forme</strong> : discoïde → pseudopodes / bourgeonnement par réarrangement du cytosquelette.</li>
+<li><strong>Augmentation du Ca²⁺ intracellulaire</strong> → sécrétion rapide des granules.</li>
+<li>Migration des granules vers la membrane via les microtubules puis exocytose.</li>
+<li><strong>Ouverture de GPIIbIIIa</strong> qui peut alors lier le fibrinogène.</li>
+</ul>
+<div class="tablewrap"><table>
+<tr><th>Molécule libérée</th><th>Rôle attribué</th></tr>
+<tr><td>VWF</td><td>Enrichit l’environnement de la brèche</td></tr>
+<tr><td>Fibrinogène</td><td>Ponts interplaquettaires ; futur substrat de fibrine</td></tr>
+<tr><td>Sérotonine</td><td>Maintient la vasoconstriction</td></tr>
+<tr><td>Calcium</td><td>Participe à la coagulation</td></tr>
+<tr><td>ADP</td><td>Agoniste important maintenant l’activation plaquettaire</td></tr>
+</table></div>
+</section>
+
+<section id="txa2">
+<h2>11. Thromboxane A2 et flip-flop membranaire</h2>
+<h3>Synthèse du TXA2</h3>
+<div class="schema">Phospholipides membranaires
+→ phospholipase A2
+→ acide arachidonique
+→ cyclo-oxygénase (COX)
+→ endoperoxydes
+→ TXA2 synthétase
+→ thromboxane A2</div>
+<div class="callout orangebox"><strong>ADP + TXA2 = amplification de l’activation</strong>. Ce sont les deux voies majeures ciblées par les antiagrégants du cours.</div>
+
+<h3>Flip-flop phospholipidique</h3>
+<p>Au repos, les charges négatives sont confinées au feuillet interne. Lors de l’activation, elles basculent vers le feuillet externe : la surface plaquettaire devient <strong>négative et procoagulante</strong>, favorisant la concentration des facteurs de coagulation.</p>
+</section>
+
+<section id="agregation">
+<h2>12. Agrégation plaquettaire</h2>
+<p>Après activation, GPIIbIIIa adopte une conformation ouverte et se lie au fibrinogène au niveau de ses domaines D.</p>
+<div class="schema">Plaquette — GPIIbIIIa ↔ fibrinogène ↔ GPIIbIIIa — Plaquette
+→ ponts interplaquettaires
+→ thrombus / clou plaquettaire</div>
+<div class="callout"><strong>Nombre donné :</strong> environ <strong>50 000 à 70 000 GPIIbIIIa</strong> à la surface de chaque plaquette.</div>
+</section>
+
+<section id="semiologie">
+<h2>13. Sémiologie d’une anomalie de l’hémostase primaire</h2>
+<div class="grid2">
+<div class="card"><strong>Congénitale</strong><p>Rare, début précoce parfois dès la naissance, antécédents familiaux.</p></div>
+<div class="card"><strong>Acquise</strong><p>Beaucoup plus fréquente, plutôt chez l’adulte, contexte clinique ou étiologie sous-jacente.</p></div>
+</div>
+<h3>Phénotype hémorragique typique</h3>
+<ul>
+<li>Saignements des <strong>petits vaisseaux</strong>.</li>
+<li>Atteinte <strong>cutanéo-muqueuse</strong> : ecchymoses, épistaxis, gingivorragies.</li>
+<li>Chez la femme : métrorragies et ménorragies.</li>
+<li>Purpura pétéchial/ecchymotique possible lorsque les plaquettes sont <strong>&lt;50 G/L</strong>.</li>
+<li>Saignements profonds/articulaires : plutôt coagulation, <strong>exception possible dans Willebrand sévère</strong>.</li>
+</ul>
+</section>
+
+<section id="thrombopenies">
+<h2>14. Numération plaquettaire et thrombopénies</h2>
+<div class="tablewrap"><table>
+<tr><th>Plaquettes</th><th>Interprétation du support</th><th>Risque hémorragique</th></tr>
+<tr><td>150-400 G/L</td><td>Normal</td><td>-</td></tr>
+<tr><td>100-150 G/L</td><td>Thrombopénie légère</td><td>Très faible</td></tr>
+<tr><td>50-100 G/L</td><td>Thrombopénie modérée</td><td>Généralement faible, mais sur-risque péri-opératoire</td></tr>
+<tr><td>20-50 G/L</td><td>Thrombopénie sévère</td><td>Risque accru, surtout traumatisme/intervention</td></tr>
+<tr><td>&lt;20 G/L</td><td>Très sévère</td><td>Hémorragies spontanées possibles, notamment muqueuses</td></tr>
+</table></div>
+
+<div class="callout warn"><strong>Fausse thrombopénie EDTA :</strong> des agrégats peuvent ne pas être comptés par l’automate. Si agrégats : refaire sur <strong>tube citraté</strong>.</div>
+
+<h3>Causes périphériques</h3>
+<ul>
+<li>Séquestration/répartition : ex. splénomégalie.</li>
+<li>Consommation : CIVD.</li>
+<li>Destruction excessive : mécanique, médicaments avec anticorps antiplaquettes, infection, maladies auto-immunes.</li>
+</ul>
+<h3>Causes centrales</h3>
+<ul>
+<li>Aplasie médullaire.</li>
+<li>Envahissement médullaire métastatique.</li>
+<li>Myélodysplasie.</li>
+<li>Le support cite aussi une thrombopathie congénitale par mutation d’un acteur de la thrombopoïèse.</li>
+</ul>
+</section>
+
+<section id="exploration">
+<h2>15. Exploration de l’hémostase primaire</h2>
+<h3>Temps de saignement</h3>
+<p>Incision standardisée sous brassard, buvard toutes les 30 s ; arrêt physiologique en <strong>&lt;8 min</strong>. Le test n’est plus réalisé depuis <strong>2011</strong> dans le cadre décrit : invasif, peu reproductible, peu sensible et peu spécifique.</p>
+
+<h3>PFA - temps d’occlusion in vitro</h3>
+<p>Le sang traverse une membrane trouée recouverte de collagène et d’un activateur (adrénaline ou ADP). Les plaquettes et le VWF forment un agrégat qui obture la brèche artificielle.</p>
+<ul>
+<li>Explore surtout l’interaction VWF / GPIb et l’intégrité de GPIIbIIIa.</li>
+<li>Allongé dans la plupart des maladies de Willebrand et les thrombopathies majeures GPIb/GPIIbIIIa.</li>
+<li>Peu sensible aux autres thrombopathies.</li>
+<li>Dans la pratique décrite, le dosage du VWF est préféré pour exclure Willebrand.</li>
+</ul>
+</section>
+
+<section id="willebrand">
+<h2>16. Maladie de Willebrand</h2>
+<p>Déficit <strong>quantitatif ou qualitatif</strong> en VWF. Le cours la présente comme l’anomalie congénitale la plus fréquente de l’hémostase primaire.</p>
+<ul>
+<li>Environ <strong>1 %</strong> de la population aurait un déficit en VWF.</li>
+<li>Seulement <strong>1/1 000 à 1/10 000</strong> seraient symptomatiques.</li>
+<li>Transmission présentée comme <strong>autosomique dominante</strong>.</li>
+<li>Activité VWF considérée normale si <strong>&gt;50 %</strong> dans le test historique à la ristocétine.</li>
+</ul>
+<h3>Conséquences biologiques</h3>
+<ul>
+<li>Temps de saignement allongé.</li>
+<li>PFA / temps d’occlusion allongé.</li>
+<li>TCA pouvant s’allonger par diminution secondaire du facteur VIII.</li>
+</ul>
+<div class="callout bluebox"><strong>Ristocétine :</strong> favorise l’interaction GPIb-Willebrand. Plaquettes réactives + ristocétine + plasma du patient → agglutination si VWF présent et actif.</div>
+</section>
+
+<section id="thrombopathies">
+<h2>17. Thrombopathies et test d’agrégation plaquettaire</h2>
+<p>La grande majorité des thrombopathies sont <strong>acquises</strong>.</p>
+<h3>Causes acquises citées</h3>
+<ul>
+<li>Médicaments : antiagrégants, mais aussi certains antibiotiques, antidépresseurs, bêtabloquants, phytothérapie.</li>
+<li>Insuffisance rénale ou hépatocellulaire.</li>
+<li>Circulation extracorporelle.</li>
+<li>Hémopathies, notamment syndromes myéloprolifératifs.</li>
+</ul>
+<div class="callout orangebox"><strong>Thrombocytémie essentielle :</strong> le cours donne l’exemple d’une numération pouvant dépasser <strong>1 000 G/L</strong>, avec nombreuses plaquettes mais certaines qualitativement anormales.</div>
+
+<h3>Test d’agrégation</h3>
+<div class="schema">Centrifugation lente
+→ plasma riche en plaquettes (PRP), opaque
+→ cuvettes à 37 °C sous agitation
+→ ajout ADP / adrénaline / acide arachidonique...
+→ si activation : agrégation + sédimentation
+→ éclaircissement du PRP
+→ augmentation de la transmission lumineuse</div>
+<p>Sujet sain : transmission pouvant aller de 0 à 100 %. Thrombopathie modérée : réponse diminuée, parfois réversible. Glanzmann sévère : absence d’agrégation, PRP reste opaque.</p>
+</section>
+
+<section id="bs-glanzmann">
+<h2>18. Bernard-Soulier vs thrombasthénie de Glanzmann</h2>
+<div class="tablewrap"><table>
+<tr><th></th><th>Bernard-Soulier</th><th>Glanzmann</th></tr>
+<tr><td>Déficit</td><td>GPIb-IX-V</td><td>GPIIbIIIa</td></tr>
+<tr><td>Étape atteinte</td><td>Adhésion au VWF</td><td>Agrégation via fibrinogène</td></tr>
+<tr><td>Transmission</td><td>Autosomique récessive</td><td>Autosomique récessive</td></tr>
+<tr><td>NFS</td><td>Plaquettes géantes + thrombopénie</td><td>Taille/morphologie normales, pas de thrombopénie caractéristique</td></tr>
+<tr><td>Exploration</td><td>Aspect NFS + contexte</td><td>Test d’agrégation plaquettaire</td></tr>
+<tr><td>Gravité</td><td>Très sévère</td><td>Gravissime, absence de thrombus plaquettaire</td></tr>
+</table></div>
+</section>
+
+<section id="antiagregants">
+<h2>19. Antiagrégants plaquettaires</h2>
+<div class="tablewrap"><table>
+<tr><th>Cible</th><th>Médicament</th><th>Action</th><th>Durée donnée dans le cours</th></tr>
+<tr><td>COX1 / TXA2</td><td>Aspirine</td><td>Inhibition irréversible</td><td>Effet jusqu’à ~7 jours</td></tr>
+<tr><td>COX1 / TXA2</td><td>AINS, ex. ibuprofène</td><td>Inhibition réversible</td><td>~3 jours dans le support</td></tr>
+<tr><td>P2Y12 / ADP</td><td>Clopidogrel, prasugrel</td><td>Thiénopyridines, métabolites actifs, irréversible</td><td>~7 jours</td></tr>
+<tr><td>P2Y12 / ADP</td><td>Ticagrélor</td><td>Direct, réversible</td><td>3-4 jours</td></tr>
+<tr><td>P2Y12 / ADP</td><td>Cangrélor</td><td>Très bref</td><td>30-60 min</td></tr>
+<tr><td>GPIIbIIIa</td><td>Abciximab</td><td>Fragment d’anticorps bloquant GPIIbIIIa</td><td>Ponctuel</td></tr>
+<tr><td>GPIIbIIIa</td><td>Tirofiban</td><td>Petit peptide de synthèse bloquant GPIIbIIIa</td><td>Ponctuel</td></tr>
+</table></div>
+<div class="callout"><strong>Risque thrombotique majeur :</strong> le cours indique que les voies TXA2 et P2Y12 peuvent être combinées.</div>
+</section>
+
+<section id="pieges">
+<h2>20. Pièges et formulations internes du support</h2>
+<div class="callout warn"><strong>1. But de l’hémostase primaire :</strong> le début dit qu’elle participe à l’arrêt du saignement, mais le Wooclap insiste sur la formulation « limite le saignement » tandis que la coagulation assure la stabilisation durable.</div>
+<div class="callout warn"><strong>2. PFA en première intention :</strong> le tableau du Wooclap le qualifie d’« ambigu selon la professeure » dans une suspicion de Willebrand ; la correction retient surtout NFS + activité cofacteur de la ristocétine.</div>
+<div class="callout warn"><strong>3. Maladie de Willebrand :</strong> le support la présente globalement comme autosomique dominante ; cette formulation est conservée telle quelle.</div>
+<div class="callout warn"><strong>4. VWF :</strong> le support attribue 30 % de la production aux mégacaryocytes ; chiffre conservé tel quel.</div>
+<div class="callout warn"><strong>5. GPIa-IIa :</strong> lors du Wooclap, répondre GPIa-IIa à « glycoprotéine majeure de l’adhésion » est dit « faux sans être faux » : elle participe bien à l’adhésion au collagène mais GPIb est la réponse mise en avant.</div>
+<div class="callout warn"><strong>6. Durée d’action des AINS :</strong> le support indique « 3 jours » pour l’inhibition réversible de COX1 par exemple avec l’ibuprofène ; valeur conservée sans correction extérieure.</div>
+<div class="callout warn"><strong>7. Terminologie plaquettaire :</strong> le support parle parfois de « cellules » plaquettaires tout en rappelant qu’elles sont anucléées et issues de fragments de mégacaryocyte ; les formulations du cours sont conservées.</div>
+</section>
+
+<section id="recap" class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>HP = vasoconstriction → adhésion → activation → agrégation.</strong> Endothélium sain thromborésistant ; sous-endothélium thrombogène. <strong>GPIb ↔ VWF</strong> et <strong>GPIa-IIa ↔ collagène</strong> pour l’adhésion. Activation : Ca²⁺, sécrétion, TXA2, ADP, flip-flop négatif et ouverture de <strong>GPIIbIIIa</strong>. Agrégation : <strong>GPIIbIIIa ↔ fibrinogène ↔ GPIIbIIIa</strong>. Plaquettes normales <strong>150-400 G/L</strong>, risque spontané surtout <strong>&lt;20 G/L</strong>. Willebrand : déficit quantitatif/qualitatif, activité normale >50 %, VWF protège FVIII. <strong>Bernard-Soulier = GPIb, plaquettes géantes + thrombopénie</strong>. <strong>Glanzmann = GPIIbIIIa, pas d’agrégation</strong>. Antiagrégants : aspirine/COX1, clopidogrel-prasugrel-ticagrélor-cangrélor/P2Y12, abciximab-tirofiban/GPIIbIIIa.</p>
+</section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « Hémostase primaire ». Les chiffres, seuils, mécanismes, traitements et formulations signalées suivent le support fourni.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+<div class="flash">
+  <div class="q">Quel est l’objectif général de l’hémostase selon le cours ?</div>
+  <div class="a">Limiter voire arrêter les pertes sanguines après une brèche vasculaire tout en évitant un excès de coagulation responsable de thrombose.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles sont les trois grandes étapes de l’hémostase présentées pédagogiquement ?</div>
+  <div class="a">Hémostase primaire, coagulation puis fibrinolyse.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi l’hémostase primaire ne suffit-elle pas à elle seule à arrêter durablement un saignement ?</div>
+  <div class="a">Elle forme un thrombus plaquettaire peu solide ; la coagulation doit ensuite produire de la fibrine pour le consolider.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle est la fonction de la fibrinolyse ?</div>
+  <div class="a">Dissoudre le caillot lorsque la brèche est réparée afin de repermettre un flux sanguin normal.</div>
+</div>
+<div class="flash">
+  <div class="q">Les différentes étapes de l’hémostase sont-elles réellement strictement successives ?</div>
+  <div class="a">Non. Le cours précise que l’hémostase primaire et la coagulation surviennent presque simultanément, alors que la fibrinolyse est plus tardive.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels sont les quatre grands acteurs de l’hémostase primaire ?</div>
+  <div class="a">Le vaisseau sanguin, les plaquettes, le facteur de Willebrand et le fibrinogène.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels deux acteurs ont un rôle à la fois dans l’hémostase primaire et la coagulation ?</div>
+  <div class="a">Le facteur de Willebrand et le fibrinogène.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi l’endothélium sain est-il dit thromborésistant ?</div>
+  <div class="a">Il s’oppose à l’activation plaquettaire et à la coagulation, notamment via le NO et des glycosaminoglycanes, et stimule la fibrinolyse.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel médiateur soluble de l’endothélium sain inhibe l’activation plaquettaire dans le support ?</div>
+  <div class="a">Le monoxyde d’azote.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels composés endothéliaux sont cités comme naturellement anticoagulants ?</div>
+  <div class="a">Les glycosaminoglycanes, notamment les héparines sulfates.</div>
+</div>
+<div class="flash">
+  <div class="q">Que devient l’interface sang-paroi lorsque l’endothélium est lésé ?</div>
+  <div class="a">Le sang entre en contact avec le sous-endothélium, qui est fortement thrombogène.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels composants du sous-endothélium sont explicitement cités ?</div>
+  <div class="a">Le collagène, le facteur de Willebrand et le facteur tissulaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels éléments du sous-endothélium jouent directement un rôle dans l’accrochage plaquettaire ?</div>
+  <div class="a">Le collagène et le facteur de Willebrand.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle durée est donnée pour la mégacaryocytopoïèse ?</div>
+  <div class="a">Environ 7 jours.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel facteur de croissance régule la mégacaryocytopoïèse ?</div>
+  <div class="a">La thrombopoïétine, ou TPO.</div>
+</div>
+<div class="flash">
+  <div class="q">Qu’est-ce que l’endomitose au cours de la mégacaryocytopoïèse ?</div>
+  <div class="a">Une réplication du matériel génétique sans division cellulaire, conduisant à un mégacaryocyte géant.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment les plaquettes sont-elles libérées à partir du mégacaryocyte ?</div>
+  <div class="a">Le flux sanguin décroche des fragments de membrane plasmique du mégacaryocyte, qui deviennent des plaquettes.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles sont les caractéristiques morphologiques et biologiques de base des plaquettes ?</div>
+  <div class="a">Elles sont discoïdes au repos, anucléées, vivent environ 7 jours et circulent normalement entre 150 et 400 G/L.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle particularité de charge présente la membrane plaquettaire au repos ?</div>
+  <div class="a">Les charges négatives sont confinées au feuillet interne.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels trois grands complexes glycoprotéiques plaquettaires faut-il connaître ?</div>
+  <div class="a">GPIb-IX-V, GPIa-IIa et GPIIb-IIIa.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel ligand naturel se fixe à GPIb-IX-V ?</div>
+  <div class="a">Le facteur de Willebrand.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel ligand naturel se fixe à GPIa-IIa ?</div>
+  <div class="a">Le collagène.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel ligand naturel se fixe à GPIIb-IIIa ?</div>
+  <div class="a">Le fibrinogène.</div>
+</div>
+<div class="flash">
+  <div class="q">Que contiennent les granules alpha des plaquettes ?</div>
+  <div class="a">Notamment VWF, fibrinogène, facteur V et facteur IV plaquettaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Que contiennent les granules denses ?</div>
+  <div class="a">Sérotonine, calcium, ADP et ATP.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle est la principale origine cellulaire du facteur de Willebrand ?</div>
+  <div class="a">Les cellules endothéliales ; le support attribue également 30 % de la production aux mégacaryocytes.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels sont les trois grands rôles du facteur de Willebrand ?</div>
+  <div class="a">Adhésion plaquettaire au sous-endothélium, participation à l’agrégation sous fort cisaillement et transport/protection du facteur VIII.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi le facteur de Willebrand est-il particulièrement important dans les petits vaisseaux ?</div>
+  <div class="a">Les fortes forces de cisaillement le déroulent, ce qui facilite son interaction avec les plaquettes.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle durée de vie du facteur VIII est donnée sans protection par le VWF, puis avec VWF ?</div>
+  <div class="a">Quelques minutes sans VWF, contre environ 8 à 12 heures lorsqu’il est protégé.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel rôle du fibrinogène est spécifique de l’hémostase primaire ?</div>
+  <div class="a">Ses domaines D permettent de former des ponts entre les plaquettes lors de l’agrégation.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel rôle du fibrinogène appartient à la coagulation ?</div>
+  <div class="a">Il est transformé en fibrine insoluble, qui consolide le thrombus.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est l’ordre des quatre événements de l’hémostase primaire ?</div>
+  <div class="a">Vasoconstriction réflexe → adhésion → activation avec sécrétion → agrégation.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels sont les deux effets principaux de la vasoconstriction réflexe ?</div>
+  <div class="a">Réduire la perte sanguine et ralentir localement le flux pour favoriser la margination et le contact des plaquettes avec la lésion.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle interaction réalise le premier ancrage plaquettaire à la brèche ?</div>
+  <div class="a">GPIb-IX-V avec le facteur de Willebrand.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi ce premier ancrage est-il qualifié de rolling ?</div>
+  <div class="a">Il est peu stable et permet encore aux plaquettes de se décrocher facilement.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle interaction stabilise ensuite l’adhésion plaquettaire ?</div>
+  <div class="a">GPIa-IIa avec le collagène.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels changements de forme accompagnent l’activation plaquettaire ?</div>
+  <div class="a">La plaquette discoïde devient bourgeonnante avec des pseudopodes et peut s’étaler sur la lésion.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel ion intracellulaire augmente lors de l’activation plaquettaire ?</div>
+  <div class="a">Le calcium.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel effet immédiat de l’augmentation du calcium intracellulaire est décrit ?</div>
+  <div class="a">Le déclenchement de la sécrétion des granules plaquettaires.</div>
+</div>
+<div class="flash">
+  <div class="q">Que devient GPIIbIIIa pendant l’activation ?</div>
+  <div class="a">Il change de conformation, s’ouvre et devient capable de lier le fibrinogène.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel rôle est attribué à l’ADP libéré par les plaquettes ?</div>
+  <div class="a">Maintenir une activation plaquettaire durable.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel rôle est attribué à la sérotonine plaquettaire ?</div>
+  <div class="a">Maintenir la vasoconstriction.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le rôle du calcium libéré par les granules dans le cours ?</div>
+  <div class="a">Participer à la coagulation.</div>
+</div>
+<div class="flash">
+  <div class="q">À partir de quelle structure le thromboxane A2 est-il synthétisé ?</div>
+  <div class="a">À partir des phospholipides membranaires de la plaquette.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle enzyme transforme les phospholipides en acide arachidonique ?</div>
+  <div class="a">La phospholipase A2.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle enzyme transforme ensuite l’acide arachidonique en endoperoxydes ?</div>
+  <div class="a">La cyclo-oxygénase.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle enzyme produit finalement le thromboxane A2 à partir des endoperoxydes ?</div>
+  <div class="a">La thromboxane A2 synthétase.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le rôle du thromboxane A2 dans l’hémostase primaire ?</div>
+  <div class="a">Maintenir et amplifier l’état d’activation plaquettaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles sont les deux grandes voies d’amplification ciblées par les antiagrégants du cours ?</div>
+  <div class="a">La voie du thromboxane A2 et la voie de l’ADP via P2Y12.</div>
+</div>
+<div class="flash">
+  <div class="q">Que se passe-t-il lors du flip-flop phospholipidique ?</div>
+  <div class="a">Les phospholipides négatifs passent du feuillet interne au feuillet externe de la membrane plaquettaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle conséquence fonctionnelle a le flip-flop ?</div>
+  <div class="a">Il rend la surface plaquettaire négative et procoagulante, ce qui concentre les facteurs de coagulation.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel récepteur est indispensable à l’agrégation plaquettaire finale ?</div>
+  <div class="a">GPIIbIIIa.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment le fibrinogène réalise-t-il l’agrégation des plaquettes ?</div>
+  <div class="a">Il se fixe par ses domaines D aux GPIIbIIIa de deux plaquettes différentes et forme des ponts interplaquettaires.</div>
+</div>
+<div class="flash">
+  <div class="q">Combien de GPIIbIIIa environ sont présents à la surface d’une plaquette selon le cours ?</div>
+  <div class="a">Environ 50 000 à 70 000.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle différence de contexte oppose les anomalies congénitales et acquises de l’hémostase primaire ?</div>
+  <div class="a">Les congénitales sont rares, précoces et familiales ; les acquises sont plus fréquentes, surviennent plutôt chez l’adulte et s’intègrent dans un contexte étiologique.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels types de saignements orientent vers un trouble de l’hémostase primaire ?</div>
+  <div class="a">Des saignements cutanéo-muqueux spontanés : ecchymoses, épistaxis, gingivorragies, ménorragies ou métrorragies.</div>
+</div>
+<div class="flash">
+  <div class="q">À partir de quel seuil plaquettaire le cours associe-t-il un purpura pétéchial/ecchymotique ?</div>
+  <div class="a">En dessous de 50 G/L.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels saignements sont plutôt évocateurs d’une anomalie de la coagulation ?</div>
+  <div class="a">Les saignements profonds, notamment articulaires.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle exception peut donner des saignements profonds malgré une atteinte de l’hémostase primaire ?</div>
+  <div class="a">Une maladie de Willebrand très sévère, du fait de la diminution secondaire du facteur VIII.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle est la numération plaquettaire normale ?</div>
+  <div class="a">150 à 400 G/L.</div>
+</div>
+<div class="flash">
+  <div class="q">À partir de quelle valeur parle-t-on de thrombopénie ?</div>
+  <div class="a">En dessous de 150 G/L.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel niveau de thrombopénie correspond à environ 80 G/L ?</div>
+  <div class="a">Une thrombopénie modérée dans le cours.</div>
+</div>
+<div class="flash">
+  <div class="q">À partir de quel seuil le risque hémorragique devient-il sévère dans le tableau du support ?</div>
+  <div class="a">En dessous de 50 G/L.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel seuil expose à un risque d’hémorragies spontanées ?</div>
+  <div class="a">Moins de 20 G/L.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel artefact peut entraîner une fausse thrombopénie sur tube EDTA ?</div>
+  <div class="a">La formation d’agrégats plaquettaires non comptés par l’automate.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel tube faut-il utiliser pour contrôler une suspicion de fausse thrombopénie liée à l’EDTA ?</div>
+  <div class="a">Un tube citraté.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles grandes catégories de thrombopénies périphériques sont citées ?</div>
+  <div class="a">Séquestration, consommation et destruction excessive.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment une splénomégalie provoque-t-elle une thrombopénie périphérique ?</div>
+  <div class="a">Les plaquettes sont séquestrées dans la rate et deviennent moins nombreuses dans le sang circulant.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi la CIVD peut-elle associer thrombose et risque hémorragique ?</div>
+  <div class="a">Elle entraîne une activation excessive de la coagulation avec consommation des plaquettes, aggravée par une hyperfibrinolyse.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles causes centrales de thrombopénie sont citées ?</div>
+  <div class="a">Aplasie médullaire, envahissement médullaire métastatique et myélodysplasie, avec aussi une thrombopathie congénitale citée dans le support.</div>
+</div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiche - Génétique et cancers</title>
+<style>
+:root{
+ --g:#1a7a4a;--gs:#eaf7ef;--r:#b91c1c;--rs:#fee2e2;--o:#b45309;--os:#fff7ed;
+ --b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--t:#0f766e;--ts:#ecfeff;
+ --ink:#1c1c2e;--muted:#5b6474;--line:#d8dce8;--bg:#f6f7fb
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,"DM Sans",Arial,sans-serif;line-height:1.58}
+.page{max-width:1180px;margin:auto;padding:32px 18px 72px}
+.hero{background:linear-gradient(135deg,#fff,#f0fdf4 55%,#eef9ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}
+.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}
+h1{font-size:39px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}
+.subtitle{margin:0;color:#374151;max-width:1080px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}
+.green{background:var(--gs);color:#166534}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.blue{background:var(--bs);color:#1d4ed8}.purple{background:var(--ps);color:#5b21b6}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}
+nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav li{margin:5px 0}nav a{color:inherit;text-decoration:none}nav a:hover{color:var(--g);text-decoration:underline}
+section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(31,41,55,.035)}
+h2{font-size:25px;letter-spacing:-.02em;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}
+p{margin:8px 0}ul,ol{padding-left:22px;margin:8px 0 12px}li{margin:4px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}.tealbox{border-left-color:var(--t);background:var(--ts)}
+.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;white-space:pre-wrap;overflow-x:auto}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.2px;min-width:820px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}
+.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}
+.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.flash .q{background:#f9fafb;padding:11px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:11px 12px;color:#374151}
+.source-note{font-size:12.5px;color:var(--muted);margin:18px 4px}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{min-width:680px;font-size:12.1px}}
+@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<main class="page">
+
+<header class="hero">
+<div class="kicker">UE Génétique</div>
+<h1>Génétique et cancers</h1>
+<p class="subtitle">Fiche complète D1/EDN/QCM : cellule cancéreuse, oncogènes et suppresseurs de tumeur, génétique tumorale diagnostique et thérapeutique, modèle de Knudson et principales prédispositions héréditaires : tumeurs rhabdoïdes, rétinoblastome, Li-Fraumeni, BRCA et syndrome de Lynch.</p>
+<div class="tags">
+<span class="tag green">Oncogènes / suppresseurs</span>
+<span class="tag blue">Génétique tumorale</span>
+<span class="tag purple">Prédispositions</span>
+<span class="tag red">BRCA / TP53 / RB1</span>
+<span class="tag orange">Lynch / MMR</span>
+</div>
+<div class="actions">
+<button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button>
+<button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button>
+</div>
+</header>
+
+<nav>
+<h2>Plan rapide</h2>
+<ol>
+<li><a href="#intro">Oncogénétique</a></li>
+<li><a href="#cellule">Cellule cancéreuse</a></li>
+<li><a href="#oncogenes">Oncogènes</a></li>
+<li><a href="#suppresseurs">Suppresseurs de tumeur</a></li>
+<li><a href="#hallmarks">Caractéristiques tumorales</a></li>
+<li><a href="#somatique">Génétique tumorale acquise</a></li>
+<li><a href="#lmc">LMC : BCR-ABL</a></li>
+<li><a href="#rhabdoide-dx">Tumeur rhabdoïde</a></li>
+<li><a href="#therapies">Thérapies ciblées</a></li>
+<li><a href="#predisposition">Prédisposition / Knudson</a></li>
+<li><a href="#consult">Quand suspecter ?</a></li>
+<li><a href="#rhabdoide">SMARCB1</a></li>
+<li><a href="#retino">Rétinoblastome</a></li>
+<li><a href="#lifraumeni">Li-Fraumeni</a></li>
+<li><a href="#brca">BRCA / sein-ovaire</a></li>
+<li><a href="#surveillance-brca">Surveillance BRCA</a></li>
+<li><a href="#lynch">Syndrome de Lynch</a></li>
+<li><a href="#comparatif">Comparatif</a></li>
+<li><a href="#pieges">Pièges du support</a></li>
+<li><a href="#recap">Mini-récap</a></li>
+<li><a href="#flashcards">Flashcards express</a></li>
+</ol>
+</nav>
+
+<section id="intro">
+<h2>1. Oncogénétique : objectif général</h2>
+<p>L’oncogénétique vise à identifier les familles présentant une <strong>prédisposition génétique au cancer</strong>, afin de proposer une surveillance et, lorsque c’est possible, des mesures préventives adaptées.</p>
+<div class="callout"><strong>Chiffre du cours :</strong> les prédispositions expliquent environ <strong>5 %</strong> des cancers fréquents de l’adulte. Elles sont rares mais peuvent conférer un risque très élevé, souvent à un âge précoce.</div>
+<div class="callout bluebox"><strong>Idée-clé :</strong> le cancer est présenté comme une <strong>maladie génétique d’une cellule</strong> : cela ne signifie pas qu’il est systématiquement héréditaire.</div>
+</section>
+
+<section id="cellule">
+<h2>2. La cellule cancéreuse : accumulation d’altérations</h2>
+<p>Le support distingue :</p>
+<ul>
+<li><strong>Altération importante</strong> touchant un gène clé → mort cellulaire.</li>
+<li><strong>Altération faible</strong> compatible avec la survie → transmission aux cellules filles.</li>
+</ul>
+<div class="callout orangebox"><strong>Ordre de grandeur :</strong> le cours estime qu’il faut environ <strong>une dizaine de mutations</strong> pour passer d’une cellule normale à une cellule cancéreuse.</div>
+<p>Les gènes clés contrôlant division et croissance se répartissent en <strong>oncogènes</strong> et <strong>gènes suppresseurs de tumeur</strong>.</p>
+</section>
+
+<section id="oncogenes">
+<h2>3. Proto-oncogènes → oncogènes</h2>
+<p>Les proto-oncogènes sont physiologiques et codent notamment pour des facteurs de croissance, leurs récepteurs ou des molécules de signalisation. Une <strong>mutation activatrice</strong> peut les transformer en oncogènes.</p>
+<div class="callout"><strong>Une seule copie altérée suffit</strong> dans le modèle du cours : c’est un gain de fonction.</div>
+<div class="tablewrap"><table>
+<tr><th>Mécanisme activateur</th><th>Principe</th></tr>
+<tr><td>Mutation ponctuelle</td><td>Activation permanente de la fonction / transcription selon le support.</td></tr>
+<tr><td>Réarrangement chromosomique</td><td>Rapproche des gènes normalement distants et peut créer une activation ou une protéine hybride.</td></tr>
+<tr><td>Amplification</td><td>Duplication/triplication du gène → davantage de protéine et d’activité.</td></tr>
+</table></div>
+</section>
+
+<section id="suppresseurs">
+<h2>4. Gènes suppresseurs de tumeur</h2>
+<p>Ils freinent physiologiquement la croissance et la division cellulaire : ce sont des <strong>régulateurs négatifs de la prolifération</strong>.</p>
+<div class="schema">1re copie perdue
+→ l'autre copie compense encore
+→ 2e événement perte de fonction
+→ perte complète du gène suppresseur
+→ frein prolifératif supprimé</div>
+<div class="callout warn"><strong>À ne pas confondre :</strong> oncogène = activation d’une seule copie ; suppresseur de tumeur = perte fonctionnelle des <strong>deux copies</strong>.</div>
+</section>
+
+<section id="hallmarks">
+<h2>5. Propriétés acquises par la cellule cancéreuse</h2>
+<p>La figure du support reprend les grandes caractéristiques tumorales : maintien du signal prolifératif, détournement des suppresseurs de croissance, échappement immunitaire, immortalité réplicative, inflammation favorisant la tumeur, invasion/métastases, angiogenèse, instabilité génomique, résistance à la mort cellulaire et dérégulation du métabolisme.</p>
+<div class="callout purplebox"><strong>Conséquences soulignées dans le texte :</strong> résistance à l’apoptose, angiogenèse pour nourrir la tumeur, puis capacité d’invasion locale et métastatique.</div>
+</section>
+
+<section id="somatique">
+<h2>6. Anomalies génétiques acquises dans les tissus tumoraux</h2>
+<p>L’analyse de l’ADN tumoral sert à :</p>
+<div class="grid3">
+<div class="card"><strong>Classifier</strong><p>Préciser le type de tumeur.</p></div>
+<div class="card"><strong>Diagnostiquer</strong><p>Identifier une anomalie caractéristique.</p></div>
+<div class="card"><strong>Traiter</strong><p>Choisir une thérapie ciblée selon le profil moléculaire.</p></div>
+</div>
+<div class="callout"><strong>95 % des cas selon le support :</strong> pas de prédisposition héréditaire ; les mutations sont acquises au cours des divisions dans un tissu donné.</div>
+</section>
+
+<section id="lmc">
+<h2>7. Exemple diagnostique : leucémie myéloïde chronique</h2>
+<p>Cas du cours : homme de 67 ans, leucocytes à <strong>258 G/L</strong> pour une norme indiquée à 4-10, blastes/myélémie et splénomégalie.</p>
+<div class="schema">Caryotype médullaire
+→ translocation t(9;22)
+→ gène/protéine de fusion BCR-ABL
+→ activation constitutive
+→ diagnostic de leucémie myéloïde chronique</div>
+</section>
+
+<section id="rhabdoide-dx">
+<h2>8. Exemple diagnostique : tumeur rhabdoïde et SMARCB1</h2>
+<p>Chez un nourrisson de 2 mois avec masse rénale, l’immunohistochimie montre une <strong>absence de SMARCB1</strong>. L’analyse de l’ADN tumoral retrouve une <strong>délétion homozygote des exons 4 à 6</strong> de SMARCB1.</p>
+<div class="callout"><strong>Logique :</strong> perte de protéine en immunohistochimie → recherche de l’altération moléculaire responsable → confirmation diagnostique.</div>
+</section>
+
+<section id="therapies">
+<h2>9. Intérêt thérapeutique de la génétique tumorale</h2>
+<h3>Cancer colorectal métastatique : KRAS / anti-EGFR</h3>
+<div class="schema">EGF → EGFR → KRAS → croissance cellulaire
+Anti-EGFR → bloque EGFR → freine KRAS si KRAS reste dépendant du récepteur
+
+Mais :
+mutation activatrice KRAS → KRAS s'autoactive
+→ anti-EGFR inutile</div>
+<div class="callout orangebox"><strong>Chiffre du cours :</strong> environ <strong>40 %</strong> des cancers du côlon présentent une mutation activatrice de KRAS.</div>
+
+<h3>Cancer de l’ovaire : BRCA1/BRCA2 et anti-PARP</h3>
+<ul>
+<li>BRCA1/BRCA2 : réparation des <strong>cassures double brin</strong>.</li>
+<li>PARP : réparation des <strong>cassures simple brin</strong>.</li>
+<li>Anti-PARP → accumulation de cassures simple brin → cassures double brin.</li>
+<li>Si BRCA1/BRCA2 sont déficients, les cassures double brin ne sont plus réparées → mort cellulaire.</li>
+</ul>
+<div class="callout"><strong>Conséquence :</strong> les anti-PARP sont présentés comme efficaces lorsque la tumeur comporte une altération de BRCA1/BRCA2, qu’elle soit constitutionnelle ou acquise.</div>
+</section>
+
+<section id="predisposition">
+<h2>10. Prédispositions héréditaires et modèle de Knudson</h2>
+<p>Une mutation constitutionnelle est présente dans l’ensemble du patrimoine génétique et peut être transmise à la descendance. Les prédispositions concernent, dans le cours, quasi exclusivement des <strong>gènes suppresseurs de tumeur</strong>.</p>
+<div class="schema">Prédisposition :
+1er événement = déjà présent constitutionnellement sur une copie
+→ dans une cellule cible : 2e événement somatique
+→ perte des 2 copies
+→ cancérogenèse facilitée
+
+Sans prédisposition :
+aucune copie altérée au départ
+→ 1er événement somatique
+→ puis 2e événement somatique
+→ perte complète du suppresseur</div>
+<div class="callout purplebox"><strong>Knudson :</strong> la prédisposition ne signifie pas que la tumeur est déjà présente ; elle réduit le nombre d’événements supplémentaires nécessaires dans le tissu cible.</div>
+</section>
+
+<section id="consult">
+<h2>11. Quand suspecter une prédisposition ?</h2>
+<ul>
+<li><strong>Âge de survenue précoce</strong> : ex. côlon à 35 ans, sein à 30 ans.</li>
+<li><strong>Atteintes multiples</strong> d’un même organe : côlon droit puis sigmoïde, ou cancers mammaires bilatéraux.</li>
+<li><strong>Récurrence familiale</strong> de tumeurs du même organe ou d’un même spectre tumoral.</li>
+</ul>
+<p>Le mode de transmission est présenté comme <strong>majoritairement autosomique dominant</strong> : risque de transmission de <strong>50 % à chaque enfant</strong>, quel que soit son sexe.</p>
+<div class="callout bluebox"><strong>Cas index :</strong> il faut tester en premier la personne dont la probabilité d’une prédisposition est la plus forte, idéalement un sujet atteint jeune ou avec un phénotype très évocateur.</div>
+</section>
+
+<section id="rhabdoide">
+<h2>12. Prédisposition aux tumeurs rhabdoïdes : SMARCB1</h2>
+<p>Dans le cas clinique, l’enfant a une délétion constitutionnelle des exons 4 à 6 de <strong>SMARCB1</strong>, retrouvée après deux tumeurs rhabdoïdes indépendantes, rénale puis cérébrale.</p>
+<ul>
+<li>Surveillance accrue si mutation constitutionnelle.</li>
+<li>Le support indique que le risque tumoral rhabdoïde devient nul après environ <strong>6-7 ans</strong>.</li>
+<li>Parents à tester pour évaluer le risque de récurrence familiale.</li>
+<li>Dans le cas décrit, les deux parents sont négatifs → mutation <strong>de novo</strong>.</li>
+</ul>
+<div class="callout"><strong>Projet parental si parent porteur :</strong> risque de transmission de 50 % ; le cours cite DPN, DPI et don de gamètes parmi les options possibles.</div>
+</section>
+
+<section id="retino">
+<h2>13. Rétinoblastome : RB1</h2>
+<p>Tumeur de la rétine de l’enfant. Le support insiste sur la <strong>leucocorie</strong>, la <strong>mydriase</strong> et la confirmation au <strong>fond d’œil</strong>.</p>
+<div class="tablewrap"><table>
+<tr><th></th><th>Sporadique</th><th>Mutation constitutionnelle RB1</th></tr>
+<tr><td>Répartition</td><td>60 %</td><td>40 %</td></tr>
+<tr><td>Âge moyen</td><td>30 mois</td><td>14 mois</td></tr>
+<tr><td>Atteinte</td><td>Unilatérale</td><td>Souvent bilatérale ; unilatérale 10-15 %</td></tr>
+<tr><td>Caractère</td><td>Unifocal</td><td>Plurifocal</td></tr>
+</table></div>
+<div class="schema">Démarche :
+1. Étudier RB1 dans la tumeur → rechercher les 2 altérations
+2. Chercher dans le sang si l'une des altérations est constitutionnelle</div>
+<h3>Surveillance de l’enfant porteur</h3>
+<ul>
+<li>Fond d’œil toutes les <strong>2 semaines jusqu’à 8 semaines</strong>.</li>
+<li>Puis <strong>mensuel jusqu’à 1 an</strong>.</li>
+<li>Puis tous les <strong>2 mois jusqu’à 2 ans</strong>.</li>
+<li>Puis tous les <strong>3 mois jusqu’à 3 ans</strong>.</li>
+</ul>
+</section>
+
+<section id="lifraumeni">
+<h2>14. Syndrome de Li-Fraumeni : TP53</h2>
+<p>Mutation de <strong>TP53</strong> avec spectre tumoral très large, cancers précoces et récurrence familiale.</p>
+<div class="grid2">
+<div class="card"><strong>Spectre étroit mis en avant</strong><p>Sarcomes des tissus mous, ostéosarcome, tumeurs cérébrales, corticosurrénalome, cancer du sein préménopausique.</p></div>
+<div class="card"><strong>Autres tumeurs citées</strong><p>Leucémie, lymphome, cancer gastrique, tumeur germinale, cancers colorectaux et du poumon.</p></div>
+</div>
+<div class="callout orangebox"><strong>Mosaïque germinale :</strong> le cours illustre la possibilité d’une mutation présente dans les gamètes d’un parent alors que sang, salive et peau sont négatifs.</div>
+<h3>Surveillance</h3>
+<ul>
+<li>Chez l’enfant : <strong>IRM corps entier annuelle</strong> + <strong>IRM cérébrale annuelle</strong>.</li>
+<li>Chez la femme adulte : ajout d’une <strong>IRM mammaire annuelle</strong>.</li>
+<li>DPN/DPI possibles pour un projet parental.</li>
+</ul>
+</section>
+
+<section id="brca">
+<h2>15. Prédisposition héréditaire sein-ovaire</h2>
+<p>Le support cite principalement <strong>BRCA1, BRCA2</strong> et écrit <strong>PALP2</strong> pour un gène partenaire de BRCA2.</p>
+<div class="callout"><strong>Fréquence :</strong> environ <strong>1 personne sur 500</strong> porterait une mutation BRCA1 ou BRCA2. Risque cumulé de cancer du sein en population générale : <strong>1 femme sur 8</strong>.</div>
+<div class="tablewrap"><table>
+<tr><th>Risque cumulé</th><th>BRCA1</th><th>BRCA2</th><th>Population générale</th></tr>
+<tr><td>Cancer du sein</td><td>70 %</td><td>45 %</td><td>12 %</td></tr>
+<tr><td>Cancer de l’ovaire</td><td>39 %</td><td>11 %</td><td>1 %</td></tr>
+<tr><td>Cancer du sein chez l’homme</td><td>/</td><td>5 %</td><td>0,1 %</td></tr>
+<tr><td>Cancer de la prostate</td><td>/</td><td>20 %</td><td>10 %</td></tr>
+</table></div>
+<div class="callout purplebox"><strong>Transmission :</strong> un homme peut porter et transmettre une prédisposition au cancer du sein. Le sexe du porteur ne change pas le risque de transmission mendélienne.</div>
+</section>
+
+<section id="surveillance-brca">
+<h2>16. Surveillance et prévention sein-ovaire</h2>
+<h3>Sein</h3>
+<ul>
+<li>Population générale dans le cours : mammographie tous les <strong>2 ans à partir de 50 ans</strong>.</li>
+<li>Prédisposition : <strong>IRM mammaire annuelle à partir de 30 ans</strong> + mammographie annuelle.</li>
+<li>Mastectomie prophylactique possible ; risque résiduel indiqué à <strong>&lt;3 %</strong>.</li>
+</ul>
+<h3>Ovaire</h3>
+<p>Le support indique qu’il n’existe pas de dépistage efficace et met donc en avant la chirurgie préventive :</p>
+<ul>
+<li><strong>BRCA1 : 40 ans</strong>.</li>
+<li><strong>BRCA2 : 45 ans</strong>.</li>
+<li><strong>PALP2 : 50 ans</strong> dans le support.</li>
+</ul>
+<div class="callout bluebox"><strong>Arbre généalogique &gt; test isolé :</strong> si l’histoire familiale est très évocatrice malgré l’absence de mutation identifiée, la surveillance peut rester renforcée.</div>
+<p>Premier cas index : panel complet, délai indiqué <strong>4-6 mois</strong>. Apparentés : test ciblé sur la mutation familiale, délai <strong>1-2 mois</strong>.</p>
+</section>
+
+<section id="lynch">
+<h2>17. Syndrome de Lynch</h2>
+<p>Ancien HNPCC. Prédispose surtout aux cancers du <strong>côlon</strong> et de l’<strong>endomètre</strong>.</p>
+<div class="callout"><strong>Gènes MMR :</strong> MLH1, MSH2, MSH6, PMS2. Le complexe MMR corrige les erreurs de copie de l’ADN pendant les divisions cellulaires.</div>
+<div class="tablewrap"><table>
+<tr><th>Risque avant 75 ans</th><th>Syndrome de Lynch</th><th>Population générale</th></tr>
+<tr><td>Cancer colorectal</td><td>Femme 24-52 % ; Homme 28-75 %</td><td>Femme 3,5 % ; Homme 4,6 %</td></tr>
+<tr><td>Endomètre</td><td>27-71 %</td><td>1,5 %</td></tr>
+<tr><td>Estomac</td><td>2-13 %</td><td>&lt;1 %</td></tr>
+<tr><td>Ovaire</td><td>3-13 %</td><td>1,3 %</td></tr>
+<tr><td>Voies urinaires</td><td>1-12 %</td><td>&lt;1 %</td></tr>
+<tr><td>Intestin grêle</td><td>4-7 %</td><td>&lt;1 %</td></tr>
+</table></div>
+<p>Le risque dépend du gène et de l’histoire familiale ; <strong>PMS2</strong> est présenté comme associé à un risque moindre. Le cours souligne aussi l’existence de variants modificateurs.</p>
+<h3>Surveillance</h3>
+<ul>
+<li><strong>Coloscopie à partir de 25 ans</strong> chez les porteurs.</li>
+<li><strong>Échographie de l’endomètre vers 35 ans</strong> chez les femmes porteuses.</li>
+<li>Chirurgie préventive utérus/ovaires possible.</li>
+</ul>
+</section>
+
+<section id="comparatif">
+<h2>18. Tableau comparatif des grandes prédispositions du cours</h2>
+<div class="tablewrap"><table>
+<tr><th>Syndrome</th><th>Gène(s)</th><th>Signal d’alerte</th><th>Surveillance / prévention phare</th></tr>
+<tr><td>Tumeurs rhabdoïdes</td><td>SMARCB1</td><td>Nourrisson, tumeurs multiples indépendantes</td><td>Surveillance pédiatrique jusqu’à ~6-7 ans</td></tr>
+<tr><td>Rétinoblastome</td><td>RB1</td><td>Précoce, bilatéral, plurifocal</td><td>Fonds d’œil très rapprochés jusqu’à 3 ans</td></tr>
+<tr><td>Li-Fraumeni</td><td>TP53</td><td>Nombreux cancers précoces, spectre large</td><td>IRM corps entier + cerveau annuelles</td></tr>
+<tr><td>Sein / ovaire</td><td>BRCA1, BRCA2, « PALP2 » dans le support</td><td>Sein précoce/bilatéral, ovaire, récurrence familiale</td><td>IRM + mammographie annuelles ; chirurgies prophylactiques</td></tr>
+<tr><td>Lynch</td><td>MLH1, MSH2, MSH6, PMS2</td><td>Côlon + endomètre précoces / familiaux</td><td>Coloscopie dès 25 ans ; surveillance endométriale</td></tr>
+</table></div>
+</section>
+
+<section id="pieges">
+<h2>19. Pièges et incohérences du support</h2>
+<div class="callout warn"><strong>1. Cancer sporadique :</strong> une phrase affirme que « toutes les cellules présentent une altération génétique », alors que le même cours décrit ailleurs les mutations sporadiques comme acquises dans un tissu/tumeur. Formulations contradictoires à ne pas fusionner silencieusement.</div>
+<div class="callout warn"><strong>2. QCM prédisposition / Knudson :</strong> l’item D est coté vrai (« un unique événement suffit » chez un sujet prédisposé), mais sa justification décrit ensuite la situation sans prédisposition nécessitant deux événements.</div>
+<div class="callout warn"><strong>3. Rétinoblastome QCM :</strong> un corrigé indique vrai à l’item « 60 % des rétinoblastomes sporadiques sont liés à une prédisposition », alors que le tableau du cours donne <strong>60 % sporadiques / 40 % constitutionnels</strong>. Contradiction du corrigé.</div>
+<div class="callout warn"><strong>4. Anti-EGF / anti-EGFR :</strong> l’item du QCM écrit « anti-EGF » mais l’explication et le corps du cours parlent d’<strong>anti-EGFR</strong>.</div>
+<div class="callout warn"><strong>5. Hommes et prédisposition mammaire :</strong> la première partie dit que cela a « quasi aucune conséquence » pour les hommes, mais la seconde donne un risque mammaire de 5 % et prostatique de 20 % avec BRCA2.</div>
+<div class="callout warn"><strong>6. « PALP2 » :</strong> cette orthographe est celle du support ; elle est conservée ici au lieu d’être remplacée silencieusement.</div>
+<div class="callout warn"><strong>7. Surveillance rétinoblastome :</strong> la première correction résume mensuel jusqu’à 12 mois, puis 2 mois jusqu’à 2 ans et 3 mois jusqu’à 3 ans ; la seconde partie ajoute une surveillance toutes les 2 semaines jusqu’à 8 semaines.</div>
+</section>
+
+<section id="recap" class="recap">
+<h2>Mini-récap ultra rentable</h2>
+<p><strong>Cancer = maladie génétique d’une cellule, pas forcément héréditaire.</strong> Oncogène : gain de fonction, <strong>1 copie</strong>. Suppresseur : perte de fonction, <strong>2 copies</strong>. Génétique tumorale : diagnostic (BCR-ABL, SMARCB1) + traitement (KRAS/anti-EGFR, BRCA/anti-PARP). Prédispositions ≈ <strong>5 %</strong> des cancers fréquents adultes, le plus souvent autosomiques dominantes à <strong>50 %</strong> de transmission. Knudson : le 1er « hit » est constitutionnel, il reste un 2e hit somatique. <strong>RB1</strong> : rétinoblastome précoce/bilatéral/plurifocal. <strong>TP53</strong> : Li-Fraumeni, spectre large, IRM corps entier/cérébrale annuelles. <strong>BRCA1/2</strong> : sein/ovaire, IRM mammaire dès 30 ans ; chirurgie ovarienne 40 ans BRCA1, 45 ans BRCA2. <strong>Lynch</strong> : MLH1/MSH2/MSH6/PMS2, côlon + endomètre, coloscopie dès 25 ans.</p>
+</section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « Génétique et cancers » fourni. Les chiffres, seuils, stratégies de surveillance et incohérences indiquées suivent le support ; aucune correction extérieure n’a été substituée silencieusement.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+<div class="flash">
+  <div class="q">Quel est l’objectif principal de l’oncogénétique selon le cours ?</div>
+  <div class="a">Identifier les familles ayant une prédisposition génétique au cancer afin de proposer une surveillance et, si possible, des mesures préventives adaptées.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle proportion des cancers fréquents de l’adulte est expliquée par une prédisposition héréditaire dans le support ?</div>
+  <div class="a">Environ 5 %.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi les prédispositions héréditaires sont-elles importantes malgré leur rareté ?</div>
+  <div class="a">Elles exposent à un risque tumoral élevé sur certains organes et à des cancers souvent plus précoces.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi dire que « le cancer est génétique » peut-il prêter à confusion ?</div>
+  <div class="a">Le cours précise que le cancer est lié à l’accumulation d’altérations génétiques dans une cellule, ce qui ne signifie pas qu’il soit systématiquement héréditaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels sont les deux grands types d’altérations cellulaires décrits lors des divisions ?</div>
+  <div class="a">Une altération importante peut entraîner la mort cellulaire ; une altération plus faible peut être compatible avec la survie et être transmise aux cellules filles.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel ordre de grandeur de mutations est donné pour transformer une cellule normale en cellule cancéreuse ?</div>
+  <div class="a">Environ une dizaine de mutations selon le support.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels sont les deux grands groupes de gènes clés de la cancérogenèse ?</div>
+  <div class="a">Les oncogènes et les gènes suppresseurs de tumeur.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle est la fonction normale des proto-oncogènes ?</div>
+  <div class="a">Ils participent physiologiquement au contrôle du cycle cellulaire et codent notamment des facteurs de croissance, leurs récepteurs ou des molécules de signalisation.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle modification transforme un proto-oncogène en oncogène ?</div>
+  <div class="a">Une mutation activatrice entraînant un gain de fonction et une activation excessive ou permanente.</div>
+</div>
+<div class="flash">
+  <div class="q">Combien de copies d’un proto-oncogène doivent être activées pour obtenir un effet oncogénique dans le modèle du cours ?</div>
+  <div class="a">Une seule copie altérée suffit.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels trois mécanismes de mutation activatrice des oncogènes sont explicitement cités ?</div>
+  <div class="a">Mutation ponctuelle, réarrangement chromosomique et amplification génique.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le principe d’une amplification oncogénique ?</div>
+  <div class="a">Duplication ou triplication du gène, augmentant la quantité de protéine produite et donc son activité.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle est la fonction physiologique d’un gène suppresseur de tumeur ?</div>
+  <div class="a">Freiner la croissance et la division cellulaire ; c’est un régulateur négatif de la prolifération.</div>
+</div>
+<div class="flash">
+  <div class="q">Combien d’événements perte de fonction sont nécessaires pour abolir un gène suppresseur de tumeur dans le cours ?</div>
+  <div class="a">Deux, un sur chacune des deux copies.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi une seule copie restante d’un suppresseur de tumeur peut-elle encore assurer la fonction ?</div>
+  <div class="a">Parce qu’après la première perte de fonction, l’autre copie intacte peut compenser.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle différence fondamentale oppose oncogènes et suppresseurs de tumeur en QCM ?</div>
+  <div class="a">Oncogène : gain de fonction sur une seule copie ; suppresseur : perte de fonction des deux copies.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles propriétés tumorales sont explicitement soulignées dans le texte autour des « hallmarks » ?</div>
+  <div class="a">Résistance à l’apoptose, instabilité génomique, angiogenèse, croissance autonome et capacités d’invasion/métastases.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi une tumeur doit-elle développer une angiogenèse ?</div>
+  <div class="a">Pour attirer des vaisseaux et assurer l’apport nutritif nécessaire à sa croissance.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels sont les deux grands intérêts de l’étude génétique d’une tumeur ?</div>
+  <div class="a">Un intérêt diagnostique puis de plus en plus thérapeutique pour guider des traitements ciblés.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle proportion des cancers est présentée comme sans prédisposition héréditaire ?</div>
+  <div class="a">Environ 95 % selon le cours.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel profil clinique et biologique du premier cas oriente vers une leucémie myéloïde chronique ?</div>
+  <div class="a">Homme de 67 ans, leucocytes à 258 G/L, blastes/myélémie et splénomégalie.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle anomalie chromosomique signe la LMC dans le cas clinique ?</div>
+  <div class="a">Une translocation entre les chromosomes 9 et 22.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle protéine hybride résulte de la translocation t(9;22) dans le support ?</div>
+  <div class="a">BCR-ABL, décrite comme activée de façon constitutive.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le rôle de l’immunohistochimie dans le cas de tumeur rhabdoïde ?</div>
+  <div class="a">Rechercher la protéine SMARCB1 ; son absence de marquage suggère une perte de cette protéine dans la tumeur.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle anomalie moléculaire de SMARCB1 est retrouvée dans la tumeur rhabdoïde du nourrisson ?</div>
+  <div class="a">Une délétion homozygote des exons 4 à 6.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment l’analyse de SMARCB1 confirme-t-elle le diagnostic de tumeur rhabdoïde ?</div>
+  <div class="a">La délétion homozygote explique l’absence de protéine en immunohistochimie et confirme l’anomalie moléculaire tumorale.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le rôle normal d’EGFR dans la voie de croissance décrite pour le cancer colorectal ?</div>
+  <div class="a">EGF se fixe à EGFR, qui stimule KRAS, puis la croissance cellulaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi un anti-EGFR peut-il ralentir la croissance d’un cancer colorectal sans mutation KRAS activatrice ?</div>
+  <div class="a">En bloquant EGFR, il empêche la stimulation de KRAS et freine ainsi la croissance cellulaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle proportion des cancers du côlon présente une mutation activatrice de KRAS dans le support ?</div>
+  <div class="a">Environ 40 %.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi un anti-EGFR n’est-il pas indiqué si KRAS est muté de façon activatrice ?</div>
+  <div class="a">KRAS s’autoactive indépendamment d’EGFR ; bloquer le récepteur ne coupe donc pas la voie de signalisation.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles lésions de l’ADN sont réparées respectivement par BRCA1/BRCA2 et PARP ?</div>
+  <div class="a">BRCA1/BRCA2 réparent les cassures double brin ; PARP répare les cassures simple brin.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi les anti-PARP sont-ils efficaces dans une tumeur déficiente en BRCA1/BRCA2 selon le mécanisme du cours ?</div>
+  <div class="a">Le blocage de PARP laisse persister des cassures simple brin qui deviennent des cassures double brin ; celles-ci ne sont plus réparées si BRCA est déficient, conduisant à la mort cellulaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Une mutation BRCA tumorale doit-elle obligatoirement être constitutionnelle pour permettre un anti-PARP ?</div>
+  <div class="a">Non. Le cours précise qu’elle peut correspondre à une prédisposition constitutionnelle ou à une mutation acquise de la tumeur.</div>
+</div>
+<div class="flash">
+  <div class="q">Qu’est-ce qu’une mutation constitutionnelle dans le contexte d’une prédisposition au cancer ?</div>
+  <div class="a">Une mutation présente dans le patrimoine génétique germinal, donc potentiellement dans l’ensemble des cellules et transmissible à la descendance.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels gènes sont quasi exclusivement concernés par les prédispositions héréditaires dans le modèle du cours ?</div>
+  <div class="a">Les gènes suppresseurs de tumeur.</div>
+</div>
+<div class="flash">
+  <div class="q">Que décrit le modèle de Knudson dans une situation de prédisposition ?</div>
+  <div class="a">Une première perte de fonction est constitutionnelle sur une copie ; un second événement somatique dans une cellule cible inactive l’autre copie et favorise la cancérogenèse.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi une prédisposition héréditaire accélère-t-elle la cancérogenèse d’un tissu cible ?</div>
+  <div class="a">Parce qu’un premier événement perte de fonction est déjà présent avant toute mutation somatique du tissu.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels trois signes familiaux doivent faire suspecter une prédisposition héréditaire ?</div>
+  <div class="a">Âge précoce, atteintes multiples/bilatérales ou multifocales, et récurrence familiale de cancers similaires ou appartenant au même spectre.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel mode de transmission est majoritaire pour les prédispositions au cancer dans le cours ?</div>
+  <div class="a">Autosomique dominant.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le risque de transmission d’une prédisposition autosomique dominante à chaque enfant ?</div>
+  <div class="a">50 %, quel que soit le sexe de l’enfant.</div>
+</div>
+<div class="flash">
+  <div class="q">Pourquoi un homme peut-il transmettre une prédisposition au cancer du sein ?</div>
+  <div class="a">Parce que le gène de prédisposition se transmet indépendamment du sexe et peut être porté par un homme.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel principe guide le choix de la première personne à tester dans une famille ?</div>
+  <div class="a">Choisir le meilleur cas index, c’est-à-dire la personne atteinte ayant la plus forte probabilité d’une prédisposition : âge jeune, tumeur évocatrice, bilatéralité ou multiplicité.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle anomalie constitutionnelle caractérise le cas de prédisposition aux tumeurs rhabdoïdes ?</div>
+  <div class="a">Une délétion constitutionnelle des exons 4 à 6 du gène SMARCB1.</div>
+</div>
+<div class="flash">
+  <div class="q">Que montre l’apparition d’une tumeur rhabdoïde cérébrale après une première tumeur rénale chez l’enfant du cas clinique ?</div>
+  <div class="a">Il s’agit d’une deuxième tumeur indépendante, argumentant fortement pour une prédisposition constitutionnelle.</div>
+</div>
+<div class="flash">
+  <div class="q">Jusqu’à quel âge le support indique-t-il un risque de tumeur rhabdoïde chez un porteur SMARCB1 ?</div>
+  <div class="a">Environ 6 à 7 ans.</div>
+</div>
+<div class="flash">
+  <div class="q">Que signifie le fait que les deux parents soient négatifs pour la mutation SMARCB1 retrouvée chez l’enfant ?</div>
+  <div class="a">Le cas est interprété comme une mutation de novo.</div>
+</div>
+<div class="flash">
+  <div class="q">Si un parent était porteur de la mutation SMARCB1, quel serait le risque de transmission à chaque enfant ?</div>
+  <div class="a">50 %.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles options de projet parental sont citées lorsque l’un des parents porte une mutation à risque ?</div>
+  <div class="a">DPN, DPI et éventuellement don de sperme ou d’ovocyte selon le support.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel gène est impliqué dans la prédisposition héréditaire au rétinoblastome ?</div>
+  <div class="a">RB1.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels signes ophtalmologiques doivent faire évoquer un rétinoblastome ?</div>
+  <div class="a">Leucocorie et mydriase ; le diagnostic est confirmé au fond d’œil.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle proportion des rétinoblastomes est associée à une mutation constitutionnelle selon la deuxième partie du cours ?</div>
+  <div class="a">Environ 40 %.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel âge moyen de révélation oppose rétinoblastome constitutionnel et sporadique ?</div>
+  <div class="a">Environ 14 mois pour la forme constitutionnelle contre 30 mois pour la forme sporadique.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels caractères tumoraux orientent vers une mutation constitutionnelle RB1 ?</div>
+  <div class="a">Atteinte souvent bilatérale et caractère plurifocal.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle démarche génétique est proposée devant un rétinoblastome ?</div>
+  <div class="a">Étudier RB1 dans la tumeur pour retrouver les deux altérations, puis rechercher dans le sang si l’une est constitutionnelle.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel rythme de fond d’œil est donné chez un enfant porteur de RB1 pendant les 8 premières semaines ?</div>
+  <div class="a">Toutes les 2 semaines.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel rythme de surveillance ophtalmologique est indiqué ensuite entre 8 semaines et 1 an ?</div>
+  <div class="a">Un fond d’œil tous les mois.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel gène est responsable du syndrome de Li-Fraumeni ?</div>
+  <div class="a">TP53.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le profil clinique général du syndrome de Li-Fraumeni ?</div>
+  <div class="a">Spectre tumoral très large, cancers précoces et récurrence de tumeurs au sein d’une même famille.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelles tumeurs appartiennent au spectre étroit de Li-Fraumeni dans le tableau du cours ?</div>
+  <div class="a">Sarcomes des tissus mous, ostéosarcome, tumeurs cérébrales, corticosurrénalome et cancer du sein préménopausique.</div>
+</div>
+<div class="flash">
+  <div class="q">Comment une mosaïque germinale parentale peut-elle expliquer plusieurs enfants atteints alors que le sang parental est négatif ?</div>
+  <div class="a">La mutation peut être présente seulement dans une partie des gamètes et absente des tissus somatiques testés.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle surveillance annuelle est recommandée chez l’enfant atteint de Li-Fraumeni ?</div>
+  <div class="a">IRM corps entier annuelle et IRM cérébrale annuelle.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle surveillance supplémentaire est citée chez la femme adulte avec Li-Fraumeni ?</div>
+  <div class="a">Une IRM mammaire annuelle.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels gènes sont principalement cités dans la prédisposition héréditaire sein-ovaire ?</div>
+  <div class="a">BRCA1, BRCA2 et « PALP2 » selon l’orthographe du support.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle fréquence de portage BRCA1 ou BRCA2 est donnée dans la population ?</div>
+  <div class="a">Environ 1 personne sur 500.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel est le risque cumulé de cancer du sein dans la population générale selon le support ?</div>
+  <div class="a">Environ 12 %, soit 1 femme sur 8.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels risques de cancer du sein et de l’ovaire sont donnés pour BRCA1 ?</div>
+  <div class="a">Environ 70 % pour le sein et 39 % pour l’ovaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels risques de cancer du sein et de l’ovaire sont donnés pour BRCA2 ?</div>
+  <div class="a">Environ 45 % pour le sein et 11 % pour l’ovaire.</div>
+</div>
+<div class="flash">
+  <div class="q">Quels risques masculins sont associés à BRCA2 dans le tableau du cours ?</div>
+  <div class="a">Environ 5 % de cancer du sein chez l’homme et 20 % de cancer de la prostate.</div>
+</div>
+<div class="flash">
+  <div class="q">Quelle surveillance mammaire est proposée aux femmes avec prédisposition génétique ?</div>
+  <div class="a">IRM mammaire annuelle à partir de 30 ans, associée à une mammographie annuelle.</div>
+</div>
+<div class="flash">
+  <div class="q">Quel risque résiduel de cancer mammaire après mastectomie prophylactique est indiqué ?</div>
+  <div class="a">Moins de 3 % selon le support.</div>
+</div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>
