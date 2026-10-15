@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reconnaissance antigénique, CMH et sélection thymique</title>
+<style>
+:root{--g:#1a7a4a;--gs:#eaf7ef;--r:#b91c1c;--rs:#fee2e2;--o:#b45309;--os:#fff7ed;--b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--t:#0f766e;--ts:#ecfeff;--ink:#1c1c2e;--muted:#5b6474;--line:#d8dce8;--bg:#f6f7fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.58}
+.page{max-width:1180px;margin:auto;padding:32px 18px 72px}.hero{background:linear-gradient(135deg,#fff,#f0fdf4 55%,#eef9ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}h1{font-size:39px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}.subtitle{margin:0;color:#374151;max-width:1080px}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}.green{background:var(--gs);color:#166534}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.blue{background:var(--bs);color:#1d4ed8}.purple{background:var(--ps);color:#5b21b6}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav li{margin:5px 0}nav a{color:inherit;text-decoration:none}section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(31,41,55,.035)}h2{font-size:25px;letter-spacing:-.02em;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}p{margin:8px 0}ul,ol{padding-left:22px;margin:8px 0 12px}li{margin:4px 0}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,monospace;font-size:13px;white-space:pre-wrap;overflow-x:auto}.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.2px;min-width:820px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.flash .q{background:#f9fafb;padding:11px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:11px 12px;color:#374151}.source-note{font-size:12.5px;color:var(--muted);margin:18px 4px}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{min-width:680px;font-size:12.1px}}@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none}}
+</style></head>
+<body><main class="page">
+
+<header class="hero">
+<div class="kicker">Immunologie - Cours 2 Baron</div>
+<h1>Reconnaissance antigénique, CMH et sélection thymique</h1>
+<p class="subtitle">Fiche complète D1/EDN/QCM à partir du support : expérience LCMV et restriction au CMH du soi, cellules présentatrices d’antigène, activation des LT, coopération LT/LB, reconnaissance BCR vs TCR, rôle du CMH, diversité du répertoire T, sélection positive/négative thymique et alloréactivité/transplantation.</p>
+<div class="tags"><span class="tag green">Restriction CMH</span><span class="tag purple">CPA / LT</span><span class="tag blue">LB / TFH</span><span class="tag red">Sélection thymique</span><span class="tag orange">Alloréactivité</span></div>
+<div class="actions"><button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button><button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button></div>
+</header>
+
+<nav><h2>Plan rapide</h2><ol>
+<li><a href="#experience">Expérience LCMV</a></li><li><a href="#hypotheses">Hypothèses de reconnaissance</a></li><li><a href="#restriction">Restriction au CMH</a></li><li><a href="#apc">CPA</a></li><li><a href="#dc">Cellule dendritique</a></li><li><a href="#reponse">Réponse adaptative</a></li><li><a href="#signaux">3 signaux LT</a></li><li><a href="#tcr-bcr">TCR vs BCR</a></li><li><a href="#cd4-cd8">CD4 / CD8</a></li><li><a href="#lb">LB / TFH</a></li><li><a href="#plasmocyte">Plasmocytes</a></li><li><a href="#cmh">Fonctions du CMH</a></li><li><a href="#diversite">Diversité TCR</a></li><li><a href="#selection-positive">Sélection positive</a></li><li><a href="#selection-negative">Sélection négative</a></li><li><a href="#tolerance">Tolérance centrale</a></li><li><a href="#greffes">Greffes</a></li><li><a href="#alloreactivite">Alloréactivité</a></li><li><a href="#pieges">Pièges du cours</a></li><li><a href="#recap">Mini-récap</a></li><li><a href="#flashcards">Flashcards express</a></li>
+</ol></nav>
+
+<section id="experience"><h2>1. Expérience fondatrice avec LCMV</h2>
+<p>Des souris <strong>inbred</strong> sont utilisées pour obtenir des animaux génétiquement identiques et donc améliorer la reproductibilité. Elles sont infectées par LCMV puis on prélève les cellules de la rate.</p>
+<div class="tablewrap"><table>
+<tr><th>Splénocytes</th><th>Fibroblastes cibles</th><th>Résultat</th><th>Interprétation</th></tr>
+<tr><td>H2K anti-LCMV</td><td>H2K non infectés</td><td>Pas ou très peu de lyse</td><td>Pas d’attaque du soi non infecté</td></tr>
+<tr><td>H2K anti-LCMV</td><td>H2K infectés par LCMV</td><td>Lyse</td><td>Reconnaissance d’une cible infectée partageant H2K</td></tr>
+<tr><td>H2K anti-LCMV</td><td>H2B infectés par LCMV</td><td>Pas de lyse</td><td>L’antigène viral seul ne suffit pas : le contexte H2 compte</td></tr>
+</table></div>
+<div class="callout"><strong>Conclusion clé :</strong> pour obtenir une lyse, le lymphocyte et la cible doivent partager un élément du soi en plus de l’antigène viral.</div>
+</section>
+
+<section id="hypotheses"><h2>2. Hypothèses proposées</h2>
+<div class="grid3"><div class="card"><strong>Double reconnaissance indépendante</strong><p>Deux récepteurs séparés : l’un pour le virus, l’autre pour le soi.</p></div><div class="card"><strong>Soi modifié</strong><p>Le virus modifierait la conformation d’une molécule du soi créant un nouvel antigène.</p></div><div class="card"><strong>Reconnaissance associative</strong><p>Un seul récepteur reconnaît l’association d’un élément du soi et d’un peptide viral.</p></div></div>
+<div class="callout purplebox"><strong>Modèle retenu :</strong> le soi n’est pas modifié ; le LT reconnaît un complexe associant <strong>soi + non-soi</strong>.</div>
+</section>
+
+<section id="restriction"><h2>3. Restriction de la reconnaissance au CMH du soi</h2>
+<p>Les LT cytotoxiques reconnaissent des antigènes du non-soi seulement lorsqu’ils sont présentés avec des molécules du soi compatibles, polymorphes entre individus.</p>
+<div class="schema">TCR
+→ reconnaît simultanément :
+   peptide du non-soi
+   +
+   molécule du CMH du soi
+→ reconnaissance associative
+→ restriction au CMH</div>
+<div class="callout warn"><strong>Piège QCM :</strong> le LT ne reconnaît pas l’antigène viral libre. Il reconnaît un <strong>complexe peptide-CMH</strong>.</div>
+</section>
+
+<section id="apc"><h2>4. Cellules présentatrices d’antigène</h2>
+<p>Le cours cite trois grandes familles :</p>
+<ul><li><strong>Cellules dendritiques</strong> +++++</li><li><strong>Lymphocytes B</strong> +++++</li><li><strong>Macrophages</strong></li></ul>
+</section>
+
+<section id="dc"><h2>5. Cellule dendritique : pont innée → adaptative</h2>
+<p>Au repos, la cellule dendritique est quiescente. Elle est activée par les signaux de danger détectés notamment via les <strong>TLR</strong>, puis devient une très bonne CPA.</p>
+<div class="schema">Danger / TLR
+→ activation DC
+→ capture + apprêtement Ag
+→ peptides sur CMH
+→ migration vers organes lymphoïdes secondaires
+→ activation des LT</div>
+<div class="callout orangebox"><strong>Vaccination :</strong> le support insiste sur la nécessité d’activer l’immunité innée pour obtenir une réponse T efficace.</div>
+</section>
+
+<section id="reponse"><h2>6. Organisation de la réponse adaptative</h2>
+<ol><li>La DC apprête l’antigène et le présente via <strong>CMH I</strong> (endogène) ou surtout <strong>CMH II</strong> (exogène).</li>
+<li>Dans les organes lymphoïdes secondaires, elle active des LT CD4 ou CD8 via le TCR.</li>
+<li>Les LT CD8 peuvent migrer vers les tissus cibles et exercer leur cytotoxicité.</li>
+<li>Les TFH coopèrent avec les LB.</li>
+<li>Les LB finissent leur maturation et deviennent plasmocytes producteurs d’anticorps.</li></ol>
+<div class="grid2"><div class="card"><strong>Réponse cellulaire</strong><p>LT CD8 : perforines + granzymes, cytotoxicité.</p></div><div class="card"><strong>Réponse humorale</strong><p>LB → plasmocytes → anticorps.</p></div></div>
+</section>
+
+<section id="signaux"><h2>7. Les 3 signaux nécessaires à l’activation complète d’un LT</h2>
+<div class="tablewrap"><table><tr><th>Signal</th><th>Contenu</th><th>Rôle</th></tr>
+<tr><td>1</td><td>TCR reconnaît peptide-CMH</td><td>Spécificité antigénique</td></tr>
+<tr><td>2</td><td>CD80/CD86 (B7) ↔ CD28</td><td>Costimulation, renforcement du signal 1</td></tr>
+<tr><td>3</td><td>Cytokines</td><td>Amplification et orientation de la différenciation</td></tr>
+</table></div>
+<div class="callout bluebox"><strong>Thérapeutique :</strong> le blocage de la costimulation peut diminuer l’activation des LT, avec l’inconvénient de réduire aussi la réponse immunitaire globale.</div>
+</section>
+
+<section id="tcr-bcr"><h2>8. TCR vs BCR : ne surtout pas confondre</h2>
+<div class="tablewrap"><table><tr><th>LT / TCR</th><th>LB / BCR-Ig</th></tr>
+<tr><td>Reconnaît un peptide linéaire</td><td>Reconnaît une structure 3D / épitope natif</td></tr>
+<tr><td>Peptide obligatoirement présenté par CMH</td><td>Antigène soluble ou membranaire directement accessible</td></tr>
+<tr><td>Besoin d’une CPA</td><td>Pas besoin d’une CPA pour la reconnaissance initiale</td></tr>
+</table></div>
+<div class="callout warn"><strong>Très tombable :</strong> une Ig/BCR ne reconnaît pas « un peptide sur CMH I ou II » ; elle reconnaît directement une structure antigénique tridimensionnelle.</div>
+</section>
+
+<section id="cd4-cd8"><h2>9. CD4 et CD8</h2>
+<div class="grid2"><div class="card"><strong>LT CD4</strong><p>Reconnaît un peptide <strong>exogène</strong> présenté par un <strong>CMH II</strong>.</p></div><div class="card"><strong>LT CD8</strong><p>Reconnaît un peptide <strong>endogène</strong> présenté par un <strong>CMH I</strong>.</p></div></div>
+</section>
+
+<section id="lb"><h2>10. LB, TFH et coopération T/B</h2>
+<div class="schema">BCR reconnaît Ag natif
+→ internalisation BCR-Ag
+→ dégradation en peptides
+→ présentation sur CMH II
+→ rencontre TFH
+→ cytokines / signaux
+→ activation complète du LB
+→ plasmocyte + mémoire
+→ hypermutation somatique / maturation de l'affinité</div>
+<div class="callout"><strong>Hypermutation somatique :</strong> décrite dans le cours comme propre aux LB et permettant d’obtenir un BCR de plus forte affinité.</div>
+</section>
+
+<section id="plasmocyte"><h2>11. Plasmocytes</h2>
+<ul><li>Stade final de différenciation du LB.</li><li>Produisent de grandes quantités d’anticorps solubles.</li><li>Incapables de proliférer selon le support.</li><li>Présentés comme localisés dans les tissus, et non dans le sang ou la lymphe.</li></ul>
+<div class="callout purplebox"><strong>Effet carrier :</strong> le peptide présenté au LT et l’antigène reconnu par le BCR peuvent être différents, tout en appartenant au même ensemble antigénique.</div>
+</section>
+
+<section id="cmh"><h2>12. Propriétés fonctionnelles du CMH</h2>
+<ul><li>Permet la reconnaissance associative des antigènes par les LT.</li><li>Historique : découvert via le <strong>rejet de greffe</strong>.</li><li>Participe à l’alloréactivité.</li><li>Impliqué dans la GvHD.</li><li>Impliqué dans la cytotoxicité in vitro.</li><li>Impliqué dans la culture mixte lymphocytaire/MLR.</li></ul>
+<div class="callout orangebox"><strong>Pourquoi autant d’alloréactivité ?</strong> Le CMH est extrêmement polymorphe ; le cours précise qu’au moins <strong>12 gènes du CMH</strong> sont exprimés.</div>
+</section>
+
+<section id="diversite"><h2>13. Diversité du répertoire T</h2>
+<p>Le support attribue la diversité du répertoire à une <strong>recombinaison génétique stochastique</strong>, qui casse puis réassemble l’ADN.</p>
+<div class="callout"><strong>Diversité théorique :</strong> ≈ <strong>10<sup>15</sup></strong> spécificités.</div>
+</section>
+
+<section id="selection-positive"><h2>14. Sélection positive thymique</h2>
+<p>Elle se déroule surtout dans le <strong>cortex thymique</strong>.</p>
+<ul><li>Thymocytes <strong>CD4+ CD8+</strong> = doubles positifs.</li><li>Cellules épithéliales corticales riches en CMH I et II.</li><li>Reconnaissance du CMH du soi → signal de survie.</li><li>Absence de reconnaissance du CMH du soi → apoptose.</li></ul>
+<div class="schema">TCR reconnaît CMH I
+→ perte CD4
+→ LT CD8 simple positif
+
+TCR reconnaît CMH II
+→ perte CD8
+→ LT CD4 simple positif</div>
+</section>
+
+<section id="selection-negative"><h2>15. Sélection négative thymique</h2>
+<p>Elle élimine les thymocytes ayant une trop forte affinité pour les peptides du soi présentés par le CMH du soi.</p>
+<div class="grid2"><div class="card"><strong>Faible affinité</strong><p>Clone considéré comme acceptable ; pas de signal de mort.</p></div><div class="card"><strong>Forte affinité</strong><p>Clone délétère pour le soi → signal de mort / délétion clonale.</p></div></div>
+<div class="callout bluebox"><strong>Localisation :</strong> surtout dans la médulla, mais le support précise qu’elle débute aussi dans le cortex pour certains antigènes ubiquitaires.</div>
+</section>
+
+<section id="tolerance"><h2>16. Tolérance centrale et antigènes de tissus</h2>
+<p>Pour éviter l’auto-immunité, le thymus doit présenter des peptides provenant aussi de protéines normalement spécifiques d’autres organes.</p>
+<div class="callout orangebox"><strong>Exemple du cours :</strong> l’<strong>insuline</strong> doit être représentée dans le thymus afin d’éliminer les clones fortement anti-insuline.</div>
+<p>Le support désigne un régulateur « R » permettant l’expression thymique de gènes normalement restreints à d’autres tissus.</p>
+<div class="callout warn"><strong>Tolérance imparfaite :</strong> tous les clones autoréactifs ne sont pas éliminés. Le cours évoque une petite fraction résiduelle, contrôlée notamment par les <strong>LT régulateurs</strong>.</div>
+</section>
+
+<section id="greffes"><h2>17. Types de greffes</h2>
+<div class="tablewrap"><table><tr><th>Type</th><th>Définition du support</th></tr>
+<tr><td>Xénogreffe</td><td>Greffe entre espèces différentes</td></tr>
+<tr><td>Allogreffe</td><td>Greffe entre individus différents d’une même espèce</td></tr>
+<tr><td>Isogreffe</td><td>Greffe entre individus génétiquement identiques</td></tr>
+<tr><td>Autogreffe</td><td>Greffe d’un individu sur lui-même</td></tr>
+</table></div>
+</section>
+
+<section id="alloreactivite"><h2>18. Alloréactivité</h2>
+<p>L’alloréactivité est l’activation du système immunitaire par des motifs <strong>allogéniques</strong> présents chez le donneur et différents de ceux du receveur.</p>
+<ul><li><strong>In vitro :</strong> cytotoxicité lymphocytaire + MLR.</li><li><strong>In vivo :</strong> rejet de greffe.</li><li>Cible majeure : <strong>CMH</strong>, extrêmement polymorphe.</li></ul>
+<div class="callout purplebox"><strong>Restriction au soi ≠ absence d’alloréactivité :</strong> un TCR sélectionné pour reconnaître le CMH du soi peut malgré tout interagir fortement avec certains complexes peptide-CMH allogéniques.</div>
+</section>
+
+<section id="pieges"><h2>19. Pièges et formulations internes du support</h2>
+<div class="callout warn"><strong>1. Splénocytes :</strong> le texte dit qu’il s’agit d’un « mélange de cellules présentatrices d’antigène », alors que les splénocytes incluent aussi de nombreux lymphocytes ; conserver l’idée expérimentale sans réduire les splénocytes aux seules CPA.</div>
+<div class="callout warn"><strong>2. CD80/CD86-CD28 :</strong> le support écrit à un endroit que CD28 est « des cellules dendritiques » ; le schéma montre bien CD80/CD86 sur la DC et CD28 sur le LT. Contradiction de formulation signalée.</div>
+<div class="callout warn"><strong>3. CMH I / II :</strong> le support résume CMH I = endogène, CMH II = exogène. La fiche conserve cette logique du cours sans ajouter les exceptions hors programme.</div>
+<div class="callout warn"><strong>4. Plasmocytes :</strong> le support affirme qu’ils sont uniquement présents dans les tissus, « ni dans le sang ni dans la lymphe » ; formulation conservée telle quelle.</div>
+<div class="callout warn"><strong>5. Sélection négative :</strong> le texte la place surtout en médullaire mais précise ensuite qu’elle débute aussi dans la corticale pour les antigènes ubiquitaires.</div>
+<div class="callout warn"><strong>6. Régulateur « R » :</strong> le support ne donne pas son nom explicite ; la fiche conserve donc la désignation « R » au lieu de la remplacer par un nom extérieur.</div>
+<div class="callout warn"><strong>7. Hypermutation somatique :</strong> le support la rapproche de « recombinaisons génétiques similaire au TCR » ; formulation conservée sans correction extérieure.</div>
+</section>
+
+<section id="recap" class="recap"><h2>Mini-récap ultra rentable</h2>
+<p><strong>Expérience LCMV :</strong> un LT anti-virus ne lyse que si la cible présente le peptide viral dans un contexte de <strong>CMH compatible</strong> → restriction au CMH du soi. <strong>CPA majeures :</strong> DC, LB, macrophages. DC activée par TLR → apprêtement Ag → CMH → ganglion → activation LT. LT naïf : <strong>3 signaux</strong> = TCR/peptide-CMH + CD80/86-CD28 + cytokines. <strong>TCR</strong> reconnaît peptide linéaire + CMH ; <strong>BCR</strong> reconnaît structure 3D directement. <strong>CD4 ↔ CMH II/exogène</strong>, <strong>CD8 ↔ CMH I/endogène</strong>. LB + TFH → plasmocyte + mémoire + hypermutation. CMH : reconnaissance associative + alloréactivité. Répertoire T ≈ <strong>10^15</strong>. Sélection positive cortex = reconnaître CMH soi ; sélection négative surtout médullaire = éliminer forte autoréactivité. Greffes : xéno / allo / iso / auto. Alloréactivité = cible majeure CMH.</p></section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « COURS 2 BARON ». Les éléments expérimentaux, schémas, chiffres, formulations et incohérences sont conservés selon le support, sans ajout de notions absentes.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+<div class="flash"><div class="q">Pourquoi les souris inbred sont-elles utiles dans l’expérience LCMV décrite ?</div><div class="a">Elles sont homozygotes et génétiquement identiques entre elles, sauf au niveau du chromosome sexuel, ce qui améliore la reproductibilité expérimentale.</div></div>
+<div class="flash"><div class="q">Pourquoi la rate est-elle choisie comme source de cellules dans l’expérience LCMV ?</div><div class="a">Parce qu’elle est très vascularisée et riche en lymphocytes B, lymphocytes T et cellules présentatrices d’antigène.</div></div>
+<div class="flash"><div class="q">Quel résultat obtient-on lorsque des splénocytes d’une souris H2K immunisée contre LCMV sont mis avec des fibroblastes H2K non infectés ?</div><div class="a">Il n’y a pratiquement pas de lyse, ce qui illustre dans l’expérience une tolérance vis-à-vis du soi non infecté.</div></div>
+<div class="flash"><div class="q">Quel résultat obtient-on avec des splénocytes H2K anti-LCMV et des fibroblastes H2K infectés par LCMV ?</div><div class="a">Une lyse importante, montrant que les lymphocytes peuvent détruire des cellules infectées partageant le même contexte H2.</div></div>
+<div class="flash"><div class="q">Quel résultat surprenant est obtenu avec des splénocytes H2K anti-LCMV et des fibroblastes H2B infectés ?</div><div class="a">Il n’y a pas de lyse malgré la présence de LCMV.</div></div>
+<div class="flash"><div class="q">Quelle hypothèse est retenue pour expliquer l’absence de lyse des fibroblastes H2B infectés ?</div><div class="a">Les splénocytes anti-LCMV H2K ne peuvent pas reconnaître correctement l’antigène viral lorsqu’il est présenté dans un contexte H2 différent.</div></div>
+<div class="flash"><div class="q">Quelles trois hypothèses de reconnaissance sont discutées dans le cours après l’expérience LCMV ?</div><div class="a">Double reconnaissance indépendante, reconnaissance du soi modifié, et reconnaissance associative du soi + non-soi.</div></div>
+<div class="flash"><div class="q">Quelle hypothèse générale finit par être retenue pour la reconnaissance par les LT ?</div><div class="a">La reconnaissance associative : un seul TCR reconnaît simultanément un peptide du non-soi associé à une molécule du soi non modifiée.</div></div>
+<div class="flash"><div class="q">Que montre l’échec de lyse lorsqu’un LT présensibilisé voit l’antigène viral sur une autre lignée H2 ?</div><div class="a">Que la réactivation du LT nécessite un motif allospécifique de la lignée en plus de l’antigène viral.</div></div>
+<div class="flash"><div class="q">Comment appelle-t-on le motif du soi polymorphe entre lignées nécessaire à la reconnaissance par le LT ?</div><div class="a">Le complexe majeur d’histocompatibilité, CMH.</div></div>
+<div class="flash"><div class="q">Quelle phrase résume la reconnaissance des lymphocytes cytotoxiques dans le cours ?</div><div class="a">Ils reconnaissent des antigènes du non-soi en association avec des motifs du soi non modifiés mais polymorphes au sein de l’espèce.</div></div>
+<div class="flash"><div class="q">Quels sont les trois grands types de cellules présentatrices d’antigène cités ?</div><div class="a">Cellules dendritiques, lymphocytes B et macrophages.</div></div>
+<div class="flash"><div class="q">Quelle cellule présentatrice d’antigène est particulièrement mise en avant comme lien entre immunité innée et adaptative ?</div><div class="a">La cellule dendritique.</div></div>
+<div class="flash"><div class="q">Par quels récepteurs les cellules dendritiques sont-elles activées dans le cours ?</div><div class="a">Par les récepteurs de type TLR, qui détectent les signaux de danger.</div></div>
+<div class="flash"><div class="q">Quel est l’état fonctionnel d’une cellule dendritique en l’absence de signal de danger ?</div><div class="a">Elle est quiescente.</div></div>
+<div class="flash"><div class="q">Pourquoi les cellules dendritiques sont-elles capitales pour la vaccination selon le cours ?</div><div class="a">Parce qu’il faut activer l’immunité innée afin de permettre une réponse T efficace.</div></div>
+<div class="flash"><div class="q">Quel rôle attribue le cours aux ARN vaccinaux vis-à-vis des TLR ?</div><div class="a">Ils codent une protéine et participent aussi au signal de danger via les récepteurs TLR selon la formulation du support.</div></div>
+<div class="flash"><div class="q">Que font les cellules dendritiques des antigènes captés ?</div><div class="a">Elles les maturent/apprêtent en peptides puis les présentent à leur surface via le CMH.</div></div>
+<div class="flash"><div class="q">Quel type d’antigène est associé au CMH I dans le cours ?</div><div class="a">Un antigène endogène, provenant de l’intérieur de la cellule.</div></div>
+<div class="flash"><div class="q">Quel type d’antigène est surtout associé au CMH II dans le cours ?</div><div class="a">Un antigène exogène, provenant de l’extérieur de la cellule.</div></div>
+<div class="flash"><div class="q">Vers quels organes les cellules dendritiques migrent-elles après activation ?</div><div class="a">Vers les organes lymphoïdes secondaires comme les ganglions et la rate.</div></div>
+<div class="flash"><div class="q">Par quel récepteur le lymphocyte T reconnaît-il le complexe peptide-CMH ?</div><div class="a">Par son TCR.</div></div>
+<div class="flash"><div class="q">Quels lymphocytes T peuvent être activés par les cellules dendritiques selon le cours ?</div><div class="a">Des LT CD4+ ou CD8+ selon la classe de CMH et le peptide présenté.</div></div>
+<div class="flash"><div class="q">Quels effecteurs cytotoxiques sont cités pour les LT CD8 ?</div><div class="a">Les perforines, qui perforent la membrane, et les granzymes, qui participent à la protéolyse cellulaire.</div></div>
+<div class="flash"><div class="q">Quelle branche de la réponse adaptative correspond à l’action des LT cytotoxiques ?</div><div class="a">La réponse adaptative cellulaire.</div></div>
+<div class="flash"><div class="q">Quel sous-type de LT CD4 intervient dans la coopération avec les LB ?</div><div class="a">Les lymphocytes T follicular helper, ou TFH.</div></div>
+<div class="flash"><div class="q">Que permet la coopération TFH-LB ?</div><div class="a">La maturation terminale du LB en plasmocyte producteur d’anticorps et la mise en place de mécanismes de maturation de l’affinité.</div></div>
+<div class="flash"><div class="q">Quelle branche de l’immunité adaptative correspond à la production d’anticorps ?</div><div class="a">La réponse adaptative humorale.</div></div>
+<div class="flash"><div class="q">Combien de types de signaux sont nécessaires à l’activation complète d’un LT naïf selon le cours ?</div><div class="a">Trois types de signaux.</div></div>
+<div class="flash"><div class="q">Quel est le signal 1 de l’activation T ?</div><div class="a">Le signal transmis par le TCR après reconnaissance du complexe peptide-CMH.</div></div>
+<div class="flash"><div class="q">Quel est le signal 2 de l’activation T ?</div><div class="a">La costimulation, notamment via CD80/CD86 sur la CPA se liant à CD28 sur le LT.</div></div>
+<div class="flash"><div class="q">Quel est le signal 3 de l’activation T ?</div><div class="a">Un signal cytokine qui renforce et oriente le type de réponse immunitaire.</div></div>
+<div class="flash"><div class="q">Pourquoi le cours présente-t-il les trois signaux comme un système de sécurité ?</div><div class="a">Parce qu’ils limitent l’activation inappropriée des LT et permettent une activation complète seulement dans un contexte adapté.</div></div>
+<div class="flash"><div class="q">Quelle conséquence thérapeutique peut avoir le blocage du signal 2 ?</div><div class="a">Diminuer l’activation des LT, stratégie évoquée notamment en contexte d’auto-immunité ou de greffe.</div></div>
+<div class="flash"><div class="q">Comment les LT reconnaissent-ils les antigènes ?</div><div class="a">Ils reconnaissent des peptides linéaires présentés par le CMH sur une cellule présentatrice d’antigène.</div></div>
+<div class="flash"><div class="q">Comment les immunoglobulines/BCR reconnaissent-ils les antigènes ?</div><div class="a">Ils reconnaissent directement des structures tridimensionnelles, solubles ou membranaires, sans nécessité de présentation préalable par le CMH.</div></div>
+<div class="flash"><div class="q">Pourquoi certains médicaments peuvent-ils devenir des cibles de LT dans le cours ?</div><div class="a">Parce que certains peuvent se loger dans le CMH et modifier le complexe reconnu par le TCR.</div></div>
+<div class="flash"><div class="q">Quel type de peptide est reconnu par un LT CD4 ?</div><div class="a">Un peptide exogène présenté par le CMH de classe II.</div></div>
+<div class="flash"><div class="q">Quel type de peptide est reconnu par un LT CD8 ?</div><div class="a">Un peptide endogène présenté par le CMH de classe I.</div></div>
+<div class="flash"><div class="q">Pourquoi les lymphocytes mémoire s’activent-ils plus rapidement ?</div><div class="a">Le cours indique qu’ils nécessitent moins de signaux et deviennent rapidement effecteurs.</div></div>
+<div class="flash"><div class="q">Que fait un LB après reconnaissance de son antigène par le BCR ?</div><div class="a">Il internalise le complexe BCR-antigène, le dégrade en peptides puis présente ces peptides sur le CMH II.</div></div>
+<div class="flash"><div class="q">Pourquoi la présentation sur CMH II par le LB est-elle importante ?</div><div class="a">Elle permet au LB de rencontrer un LT CD4/TFH spécifique et de recevoir les signaux nécessaires à son activation complète.</div></div>
+<div class="flash"><div class="q">Quel est le rôle des TFH vis-à-vis des LB ?</div><div class="a">Ils produisent des cytokines et des signaux qui favorisent la différenciation des LB en plasmocytes et la maturation de la réponse humorale.</div></div>
+<div class="flash"><div class="q">Que signifie l’hypermutation somatique dans le cours ?</div><div class="a">Un mécanisme propre aux LB permettant de modifier leur récepteur afin d’obtenir une meilleure affinité pour l’antigène.</div></div>
+<div class="flash"><div class="q">Dans quelles cellules l’hypermutation somatique a-t-elle lieu selon le support ?</div><div class="a">Uniquement dans les lymphocytes B.</div></div>
+<div class="flash"><div class="q">Quelle différence oppose le LB au plasmocyte ?</div><div class="a">Le LB porte des immunoglobulines membranaires/BCR et peut présenter l’antigène ; le plasmocyte est le stade terminal spécialisé dans la production massive d’anticorps solubles.</div></div>
+<div class="flash"><div class="q">Que deviennent les LB matures après activation ?</div><div class="a">Ils peuvent se différencier en plasmocytes producteurs d’anticorps et en lymphocytes B mémoire.</div></div>
+<div class="flash"><div class="q">Où les plasmocytes sont-ils localisés selon le support ?</div><div class="a">Dans les tissus, et non dans le sang ni la lymphe selon la formulation du cours.</div></div>
+<div class="flash"><div class="q">Que désigne l’effet carrier dans le cours ?</div><div class="a">Le fait que le peptide présenté au LT et l’antigène reconnu par le BCR ne soient pas nécessairement identiques, permettant une coopération sur des déterminants différents d’un même complexe.</div></div>
+<div class="flash"><div class="q">Que reconnaissent les LT αβ selon le cours ?</div><div class="a">Uniquement des motifs peptidiques associés à des molécules de CMH, c’est-à-dire des complexes peptide-CMH.</div></div>
+<div class="flash"><div class="q">Quelle propriété évolutive est attribuée au TCR et au CMH ?</div><div class="a">Ils ont coévolué et sont prédisposés à interagir l’un avec l’autre.</div></div>
+<div class="flash"><div class="q">Quelle fonction historique a conduit à la découverte du CMH ?</div><div class="a">Le contrôle du rejet de greffe, donc l’alloréactivité.</div></div>
+<div class="flash"><div class="q">Qu’est-ce que la GvHD selon la formulation du cours ?</div><div class="a">La réaction du greffon contre l’hôte : un système immunitaire provenant d’un autre individu attaque les tissus du receveur.</div></div>
+<div class="flash"><div class="q">Qu’est-ce qu’une culture mixte lymphocytaire, MLR ?</div><div class="a">Une réaction de prolifération lymphocytaire face à des cellules allogéniques, dans laquelle les CD4 figurent parmi les premiers lymphocytes à proliférer selon le support.</div></div>
+<div class="flash"><div class="q">Pourquoi le CMH est-il une cible majeure de l’alloréactivité ?</div><div class="a">Parce qu’il est extrêmement polymorphe entre individus.</div></div>
+<div class="flash"><div class="q">Quelle diversité théorique du répertoire est donnée dans le cours ?</div><div class="a">Environ 10^15 spécificités théoriques.</div></div>
+<div class="flash"><div class="q">Quel mécanisme génétique est présenté comme à l’origine de cette immense diversité ?</div><div class="a">La recombinaison génétique stochastique, avec cassure et réassemblage de segments d’ADN.</div></div>
+<div class="flash"><div class="q">Quel est le rôle de la sélection positive thymique ?</div><div class="a">Conserver les thymocytes capables de reconnaître le CMH du soi.</div></div>
+<div class="flash"><div class="q">Où se déroule principalement la sélection positive ?</div><div class="a">Dans le cortex thymique.</div></div>
+<div class="flash"><div class="q">Quel est le phénotype des thymocytes au moment de la sélection positive ?</div><div class="a">Ils sont doubles positifs CD4+ CD8+ et expriment un TCR.</div></div>
+<div class="flash"><div class="q">Que devient un thymocyte qui ne reconnaît aucune molécule de CMH du soi ?</div><div class="a">Il ne reçoit pas de signal de survie et meurt par apoptose.</div></div>
+<div class="flash"><div class="q">Que devient un thymocyte dont le TCR reconnaît préférentiellement le CMH I ?</div><div class="a">Il diminue CD4 et devient LT CD8 simple positif.</div></div>
+<div class="flash"><div class="q">Que devient un thymocyte dont le TCR reconnaît préférentiellement le CMH II ?</div><div class="a">Il diminue CD8 et devient LT CD4 simple positif.</div></div>
+<div class="flash"><div class="q">Quel est le rôle principal de la sélection négative thymique ?</div><div class="a">Éliminer les thymocytes ayant une forte affinité pour les peptides du soi présentés par le CMH du soi.</div></div>
+<div class="flash"><div class="q">Où se déroule principalement la sélection négative décrite ?</div><div class="a">Surtout dans la médulla thymique, tout en débutant aussi dans le cortex pour certains antigènes ubiquitaires.</div></div>
+<div class="flash"><div class="q">Que devient un thymocyte reconnaissant un peptide du soi avec faible affinité ?</div><div class="a">Il est considéré comme acceptable et ne reçoit pas de signal de mort dans le modèle présenté.</div></div>
+<div class="flash"><div class="q">Que devient un thymocyte reconnaissant fortement un peptide du soi ?</div><div class="a">Il est sélectionné négativement et reçoit un signal de mort.</div></div>
+<div class="flash"><div class="q">Pourquoi le thymus doit-il présenter des protéines normalement spécifiques de certains tissus ?</div><div class="a">Pour éliminer les clones T qui seraient fortement autoréactifs contre ces protéines en périphérie.</div></div>
+<div class="flash"><div class="q">Quel exemple de protéine spécifique de tissu est utilisé pour illustrer cette tolérance centrale ?</div><div class="a">L’insuline.</div></div>
+<div class="flash"><div class="q">Quel mécanisme général est attribué au régulateur thymique appelé « R » dans le support ?</div><div class="a">Il permet l’expression dans le thymus de gènes normalement spécifiques d’autres tissus afin de présenter leurs peptides pour la sélection négative.</div></div>
+  </div>
+</section>
+
+</main></body></html>
