@@ -1,0 +1,188 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gestion du risque infectieux</title><style>
+:root{--g:#1a7a4a;--gs:#eaf7ef;--r:#b91c1c;--rs:#fee2e2;--o:#b45309;--os:#fff7ed;--b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--ink:#1c1c2e;--line:#d8dce8;--bg:#f6f7fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.58}.page{max-width:1180px;margin:auto;padding:32px 18px 72px}
+.hero{background:linear-gradient(135deg,#fff,#f0fdf4 55%,#eef9ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}h1{font-size:39px;line-height:1.08;margin:8px 0 12px}.subtitle{margin:0;color:#374151}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}.green{background:var(--gs);color:#166534}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.blue{background:var(--bs);color:#1d4ed8}.purple{background:var(--ps);color:#5b21b6}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav li{margin:5px 0}nav a{color:inherit;text-decoration:none}section{padding:24px;margin:18px 0}h2{font-size:25px;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}p{margin:8px 0}ul,ol{padding-left:22px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:14px}.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,monospace;white-space:pre-wrap}.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:13.2px;min-width:820px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}.flash .q{background:#f9fafb;padding:11px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:11px 12px;color:#374151}.source-note{font-size:12.5px;color:#5b6474}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{min-width:680px}}@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}}
+</style></head><body><main class="page">
+<header class="hero"><div class="kicker">UE Agents infectieux - Hygiène</div><h1>Gestion du risque infectieux</h1><p class="subtitle">Fiche complète D1/EDN/QCM : prévention des infections associées aux soins, antibiorésistance, asepsie/antisepsie/désinfection, organisation nationale-régionale-locale, REPIA, CLIN/EPRI, AES et précautions standard, environnement hospitalier, signalements, indicateurs HAS et certification.</p><div class="tags"><span class="tag green">PRI</span><span class="tag purple">REPIA / CPias</span><span class="tag blue">Précautions standard</span><span class="tag orange">HAS</span><span class="tag red">Antibiorésistance</span></div><div class="actions"><button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button><button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button></div></header>
+
+<nav><h2>Plan rapide</h2><ol>
+<li><a href="#enjeux">Enjeux</a></li><li><a href="#piliers">3 piliers</a></li><li><a href="#histoire">Histoire</a></li><li><a href="#definitions">Asepsie / antisepsie</a></li><li><a href="#prescription">Prévention dès la prescription</a></li><li><a href="#organisation">Organisation France</a></li><li><a href="#repia">REPIA</a></li><li><a href="#local">CLIN / EPRI</a></li><li><a href="#ps">AES / PS</a></li><li><a href="#missions">Missions EPRI</a></li><li><a href="#environnement">Environnement</a></li><li><a href="#ged">GED / signalements</a></li><li><a href="#indicateurs">Indicateurs HAS</a></li><li><a href="#certification">Certification</a></li><li><a href="#patient">Patient acteur</a></li><li><a href="#pieges">Pièges QCM</a></li><li><a href="#recap">Mini-récap</a></li><li><a href="#flashcards">Flashcards express</a></li></ol></nav>
+
+<section id="enjeux"><h2>1. Enjeux de la prévention du risque infectieux</h2>
+<p>La PRI concerne tous les professionnels de santé et tous les lieux de soins. Elle ne se limite pas au nettoyage : elle inclut hygiène, prévention de la transmission, prévention des IAS et bon usage des antibiotiques.</p>
+<div class="callout warn"><strong>Enjeu de santé publique :</strong> la prof souligne une mortalité des IAS supérieure à celle des accidents de la route.</div>
+</section>
+
+<section id="piliers"><h2>2. Les 3 piliers de lutte</h2>
+<div class="grid3"><div class="card"><strong>Vaccination</strong><p>Prévenir certaines infections.</p></div><div class="card"><strong>Prévention du risque infectieux</strong><p>Hygiène, maîtrise de la transmission, sécurité des soins.</p></div><div class="card"><strong>Anti-infectieux</strong><p>Traitements ciblant les micro-organismes ; antibiotiques pour les bactéries.</p></div></div>
+<div class="callout"><strong>Antibiorésistance :</strong> prévention + bon usage des antibiotiques sont complémentaires.</div>
+</section>
+
+<section id="histoire"><h2>3. Repères historiques</h2>
+<div class="tablewrap"><table><tr><th>Personnalité</th><th>Repère</th></tr><tr><td>Semmelweis</td><td>Mortalité ≈15 % chez les médecins vs 5 % sages-femmes ; lavage chloré des mains</td></tr><tr><td>Pasteur</td><td>Micro-organismes</td></tr><tr><td>Lister</td><td>Antisepsie chirurgicale</td></tr><tr><td>Fleming</td><td>Pénicilline, 1928</td></tr></table></div>
+</section>
+
+<section id="definitions"><h2>4. Asepsie, antisepsie, désinfection</h2>
+<div class="tablewrap"><table><tr><th>Notion</th><th>Définition</th></tr><tr><td>Asepsie</td><td>Empêcher l’introduction de micro-organismes dans un site protégé.</td></tr><tr><td>Antisepsie</td><td>Antiseptique sur tissus vivants.</td></tr><tr><td>Désinfection</td><td>Élimination/inactivation sur surfaces ou objets inertes.</td></tr></table></div>
+<div class="callout warn"><strong>Piège QCM :</strong> antisepsie = vivant ; désinfection = inerte.</div>
+</section>
+
+<section id="prescription"><h2>5. La prévention commence dès la prescription</h2>
+<p>Le médecin doit questionner la pertinence des dispositifs invasifs et de la voie d’administration.</p>
+<div class="schema">Traitement possible per os ?
+→ OUI : éviter IV si adaptée
+→ moins de cathéter
+→ moins d’exposition au risque infectieux</div>
+<div class="callout bluebox"><strong>Cathéter périphérique :</strong> peut aller de l’infection locale à la septicémie.</div>
+</section>
+
+<section id="organisation"><h2>6. Organisation en France</h2>
+<div class="tablewrap"><table><tr><th>Niveau</th><th>Acteurs / rôle</th></tr><tr><td>National</td><td>Ministère, Santé publique France, agences et sociétés savantes</td></tr><tr><td>Régional</td><td>ARS + CPias</td></tr><tr><td>Local</td><td>Établissements, médico-social, ville, CLIN/EPRI</td></tr></table></div>
+<p>Les alertes descendent vers les établissements ; les signalements remontent depuis les professionnels et structures de soins.</p>
+</section>
+
+<section id="repia"><h2>7. REPIA et 5 missions nationales</h2>
+<div class="tablewrap"><table><tr><th>Mission</th><th>Champ</th></tr><tr><td>PRIMO</td><td>Ville + médico-social : IAS et antibiorésistance</td></tr><tr><td>SPARES</td><td>Antibiorésistance en établissements de santé</td></tr><tr><td>SPICMI</td><td>Chirurgie et médecine interventionnelle</td></tr><tr><td>SPIADI</td><td>Dispositifs invasifs</td></tr><tr><td>MATIS</td><td>Appui transversal, outils, vidéos, audits, données</td></tr></table></div>
+<div class="callout purplebox"><strong>Repère :</strong> REPIA = réseau national ; CPias = centres régionaux ; 5 missions spécialisées.</div>
+</section>
+
+<section id="local"><h2>8. CLIN, EPRI et correspondants en hygiène</h2>
+<h3>CLIN</h3><p>Organise la prévention du risque infectieux au sein de l’établissement.</p>
+<h3>EPRI</h3><p>Accompagne les professionnels dans l’application des procédures. Au CHU de Tours : praticiens hospitaliers, pharmaciens, infirmières, cadre, secrétaire.</p>
+<h3>Correspondants</h3><p>Relais dans les services. Le cours cite ≈<strong>60 médecins</strong> et <strong>200 paramédicaux</strong>.</p>
+</section>
+
+<section id="ps"><h2>9. AES et précautions standard</h2>
+<p>Les précautions standard ont deux buts :</p>
+<ul><li>éviter la transmission croisée patients ↔ professionnels ;</li><li>protéger les soignants contre les AES.</li></ul>
+<div class="callout"><strong>Historique :</strong> anciennement « précautions universelles », développées dans le contexte du VIH.</div>
+</section>
+
+<section id="missions"><h2>10. Les 9 missions de l’EPRI : logique du cours</h2>
+<ul><li>Élaborer/promouvoir des procédures.</li><li>Gérer les épidémies.</li><li>Réaliser les signalements.</li><li>Assurer la surveillance épidémiologique.</li><li>Faire des audits de pratiques.</li><li>Former.</li><li>Gérer les risques environnementaux air/eau/surfaces.</li><li>Conseiller lors de nouveaux bâtiments/travaux.</li><li>Prévenir l’antibiorésistance.</li></ul>
+<div class="callout bluebox"><strong>Référentiel cité :</strong> depuis 2018.</div>
+</section>
+
+<section id="environnement"><h2>11. Risques liés à l’environnement hospitalier</h2>
+<div class="tablewrap"><table><tr><th>Milieu</th><th>Risque majeur du cours</th></tr><tr><td>Eau chaude</td><td>Legionella</td></tr><tr><td>Eau froide</td><td>Pseudomonas aeruginosa</td></tr><tr><td>Air / poussières</td><td>Aspergillus</td></tr></table></div>
+<div class="callout orangebox"><strong>Legionella :</strong> transmission par aérosols/micro-gouttelettes d’eau contaminée.</div>
+<div class="callout warn"><strong>Aspergillus :</strong> travaux et poussières = risque majeur pour patients en aplasie et transplantés.</div>
+</section>
+
+<section id="ged"><h2>12. GED et signalements</h2>
+<p>La GED regroupe les procédures : précautions standard, AES, environnement, matériel, soins, bionettoyage, précautions complémentaires et protectrices.</p>
+<div class="callout"><strong>Signalement :</strong> infection inhabituelle par germe, résistance, localisation, caractère épidémique ou décès.</div>
+<p>Exemple : légionellose nosocomiale, également maladie à déclaration obligatoire.</p>
+</section>
+
+<section id="indicateurs"><h2>13. Indicateurs qualité HAS</h2>
+<div class="tablewrap"><table>
+<tr><th>Indicateur</th><th>Ce qu’il mesure</th><th>Chiffre du cours</th></tr>
+<tr><td>ICSHA</td><td>Consommation SHA, indicateur indirect hygiène mains</td><td>Objectif 80 %</td></tr>
+<tr><td>PCC</td><td>Prescription PCC + information patient</td><td>Moyenne 37 %</td></tr>
+<tr><td>ATBIR</td><td>Juste prescription/durée ATB infection respiratoire</td><td>Moyenne 84 %, objectif 80 %</td></tr>
+<tr><td>VAG</td><td>Vaccination antigrippale des professionnels</td><td>≈20 % vaccinés</td></tr>
+</table></div>
+<div class="callout bluebox"><strong>ATBIR :</strong> ≤7 jours, ou >7 jours si durée justifiée.</div>
+</section>
+
+<section id="certification"><h2>14. Certification HAS</h2>
+<p>Certification environ tous les <strong>4 ans</strong>.</p>
+<h3>3 critères impératifs cités</h3>
+<ul><li>Respect des précautions standard.</li><li>Maîtrise des risques infectieux dans les secteurs interventionnels.</li><li>Pertinence des prescriptions d’antibiotiques, argumentée et réévaluée.</li></ul>
+</section>
+
+<section id="patient"><h2>15. Patients et visiteurs acteurs de la prévention</h2>
+<ul><li>Friction hydroalcoolique à l’entrée et avant certains moments de soins/vie.</li><li>Après les toilettes ou si mains souillées : <strong>eau + savon</strong>.</li><li>Visiteur : friction avant et après la chambre.</li><li>Visiteur malade/rhume : ne pas venir.</li></ul>
+</section>
+
+<section id="pieges"><h2>16. Pièges QCM</h2>
+<div class="callout warn"><strong>1.</strong> PRI ≠ simple nettoyage des locaux.</div>
+<div class="callout warn"><strong>2.</strong> ARS ≠ CPias : ARS = gestion sanitaire/alertes ; CPias = expertise, formation, audits.</div>
+<div class="callout warn"><strong>3.</strong> CLIN = local, pas national.</div>
+<div class="callout warn"><strong>4.</strong> Antisepsie ≠ asepsie ; tissus vivants ≠ prévention de l’introduction.</div>
+<div class="callout warn"><strong>5.</strong> Une contamination peut précéder une infection de plusieurs jours.</div>
+<div class="callout warn"><strong>6.</strong> ICSHA est un indicateur <strong>indirect</strong>, pas une observation individuelle de chaque friction.</div>
+<div class="callout warn"><strong>7.</strong> PCC nécessite prescription et information du patient selon le cours.</div>
+<div class="callout warn"><strong>8.</strong> En sortant des toilettes : eau + savon, pas SHA seule.</div>
+</section>
+
+<section id="recap" class="recap"><h2>Mini-récap ultra rentable</h2>
+<p><strong>3 piliers :</strong> vaccination + PRI + anti-infectieux. <strong>Asepsie</strong> = empêcher contamination ; <strong>antisepsie</strong> = tissus vivants ; <strong>désinfection</strong> = surfaces/objets. La prévention commence à la <strong>prescription</strong> : éviter dispositifs invasifs inutiles. Organisation : <strong>national → régional ARS/CPias → local CLIN/EPRI</strong>. REPIA : <strong>PRIMO, SPARES, SPICMI, SPIADI, MATIS</strong>. PS : transmission croisée + protection AES. Eau chaude = <strong>Legionella</strong>, eau froide = <strong>Pseudomonas</strong>, travaux/poussières = <strong>Aspergillus</strong>. Indicateurs HAS : <strong>ICSHA 80 %, PCC 37 %, ATBIR 84 %, VAG 20 %</strong>. Certification ≈ tous les 4 ans. Mains souillées/toilettes = <strong>eau + savon</strong>.</p></section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « Gestion du risque infectieux ». Les chiffres, définitions, structures et recommandations sont ceux du support fourni.</p>
+
+<section id="flashcards"><h2>Flashcards express</h2><div class="flashgrid"><div class="flash"><div class="q">Quelles composantes la prévention du risque infectieux inclut-elle selon l’introduction du cours ?</div><div class="a">Mesures d’hygiène, prévention de la transmission des micro-organismes, prévention des infections associées aux soins et bon usage des antibiotiques.</div></div>
+<div class="flash"><div class="q">Pourquoi le risque infectieux peut-il être sous-estimé ?</div><div class="a">Parce que les micro-organismes sont invisibles à l’œil nu et que les conséquences d’une erreur de prévention peuvent être différées.</div></div>
+<div class="flash"><div class="q">Quels sont les trois piliers de la lutte contre les maladies infectieuses ?</div><div class="a">Vaccination, prévention du risque infectieux et anti-infectieux.</div></div>
+<div class="flash"><div class="q">Quel lien le cours fait-il entre prévention du risque infectieux et antibiorésistance ?</div><div class="a">Les mesures d’hygiène limitent la transmission des micro-organismes résistants et complètent le bon usage des antibiotiques.</div></div>
+<div class="flash"><div class="q">Que signifie BMR ?</div><div class="a">Bactérie multirésistante aux antibiotiques.</div></div>
+<div class="flash"><div class="q">Que signifie BHRe ?</div><div class="a">Bactérie hautement résistante émergente.</div></div>
+<div class="flash"><div class="q">Quelle observation historique de Semmelweis est rapportée ?</div><div class="a">Une mortalité post-partum proche de 15 % dans la maternité des médecins contre environ 5 % chez les sages-femmes.</div></div>
+<div class="flash"><div class="q">Quelle intervention de Semmelweis a réduit la mortalité ?</div><div class="a">Le lavage des mains avec une solution chlorée.</div></div>
+<div class="flash"><div class="q">Quel principe historique majeur faut-il retenir de Semmelweis ?</div><div class="a">L’hygiène des mains est fondamentale pour limiter la transmission des micro-organismes.</div></div>
+<div class="flash"><div class="q">Quel apport de Joseph Lister est cité ?</div><div class="a">Le développement de l’antisepsie en chirurgie.</div></div>
+<div class="flash"><div class="q">Quelle découverte de Fleming est rappelée ?</div><div class="a">La pénicilline en 1928.</div></div>
+<div class="flash"><div class="q">Comment définir l’asepsie ?</div><div class="a">Ensemble des mesures destinées à empêcher l’introduction de micro-organismes dans un site ou milieu qui doit rester protégé.</div></div>
+<div class="flash"><div class="q">Comment définir l’antisepsie ?</div><div class="a">Utilisation d’un antiseptique sur des tissus vivants, par exemple la peau.</div></div>
+<div class="flash"><div class="q">Comment définir la désinfection ?</div><div class="a">Élimination ou inactivation de micro-organismes sur des milieux inertes, notamment surfaces et objets.</div></div>
+<div class="flash"><div class="q">Quel piège classique oppose antisepsie et désinfection ?</div><div class="a">Antisepsie = tissus vivants ; désinfection = surfaces et objets inertes.</div></div>
+<div class="flash"><div class="q">Pourquoi les patients futurs sont-ils décrits comme plus à risque infectieux ?</div><div class="a">Parce qu’ils auront davantage de comorbidités, notamment obésité et diabète, et seront plus exposés aux dispositifs invasifs.</div></div>
+<div class="flash"><div class="q">Quel dispositif invasif est particulièrement discuté ?</div><div class="a">Le cathéter veineux périphérique.</div></div>
+<div class="flash"><div class="q">Quel risque majeur est associé aux cathéters périphériques ?</div><div class="a">Des infections allant de l’infection locale à une septicémie.</div></div>
+<div class="flash"><div class="q">Comment prévenir un risque infectieux lié à un cathéter dès la prescription ?</div><div class="a">Éviter de poser le cathéter s’il n’est pas nécessaire, par exemple préférer la voie orale si elle est adaptée.</div></div>
+<div class="flash"><div class="q">Pourquoi la prévention commence-t-elle dès la décision médicale ?</div><div class="a">Parce que le choix d’un dispositif ou d’une voie d’administration modifie directement l’exposition au risque infectieux.</div></div>
+<div class="flash"><div class="q">Quels sont les trois niveaux d’organisation de la prévention du risque infectieux en France ?</div><div class="a">National, régional et local.</div></div>
+<div class="flash"><div class="q">Quel rôle général le ministère de la Santé joue-t-il ?</div><div class="a">Il définit les grandes orientations de la politique de santé.</div></div>
+<div class="flash"><div class="q">Quel rôle de Santé publique France est cité ?</div><div class="a">Surveillance, prévention et diffusion d’informations sur les risques sanitaires.</div></div>
+<div class="flash"><div class="q">Quel rôle de l’ARS est cité ?</div><div class="a">Mise en œuvre régionale de la politique de santé, gestion des risques sanitaires et des signalements.</div></div>
+<div class="flash"><div class="q">Quel est le rôle principal des CPias ?</div><div class="a">Accompagner les professionnels et établissements par formation, audits, surveillance, prévention et diffusion de recommandations.</div></div>
+<div class="flash"><div class="q">Que signifie REPIA ?</div><div class="a">Réseau de prévention des infections et de l’antibiorésistance.</div></div>
+<div class="flash"><div class="q">Sur combien de CPias le REPIA s’appuie-t-il dans le support ?</div><div class="a">17 CPias.</div></div>
+<div class="flash"><div class="q">Quelles sont les cinq missions nationales du REPIA ?</div><div class="a">PRIMO, SPARES, SPICMI, SPIADI et MATIS.</div></div>
+<div class="flash"><div class="q">Quel secteur couvre PRIMO ?</div><div class="a">Ville et secteur médico-social, pour la prévention/surveillance des IAS et de l’antibiorésistance.</div></div>
+<div class="flash"><div class="q">Quel secteur couvre SPARES ?</div><div class="a">Les établissements de santé, pour la surveillance et la prévention de l’antibiorésistance.</div></div>
+<div class="flash"><div class="q">Que couvre SPICMI ?</div><div class="a">Les infections en chirurgie et en médecine interventionnelle.</div></div>
+<div class="flash"><div class="q">Que couvre SPIADI ?</div><div class="a">Les infections associées aux dispositifs invasifs, notamment les cathéters.</div></div>
+<div class="flash"><div class="q">Quel rôle joue MATIS ?</div><div class="a">Mission transversale d’appui avec outils pédagogiques, vidéos, audits et diffusion de données.</div></div>
+<div class="flash"><div class="q">Quel est le rôle du CLIN ?</div><div class="a">Organiser la prévention du risque infectieux au sein d’un établissement de santé.</div></div>
+<div class="flash"><div class="q">À quel niveau agit principalement le CLIN ?</div><div class="a">Au niveau local, dans l’établissement de santé.</div></div>
+<div class="flash"><div class="q">Quel est le rôle de l’EPRI ?</div><div class="a">Accompagner les professionnels dans l’application des recommandations et procédures de prévention du risque infectieux.</div></div>
+<div class="flash"><div class="q">Quels professionnels composent l’EPRI du CHU de Tours dans le cours ?</div><div class="a">Praticiens hospitaliers dont pharmaciens, infirmières, cadre et secrétaire.</div></div>
+<div class="flash"><div class="q">Pourquoi les microbiologistes sont-ils importants pour l’EPRI ?</div><div class="a">Ils apportent les informations nécessaires à la compréhension des micro-organismes impliqués.</div></div>
+<div class="flash"><div class="q">Quel est le rôle des correspondants en hygiène ?</div><div class="a">Relayer procédures, informations et recommandations entre l’EPRI et les professionnels du service.</div></div>
+<div class="flash"><div class="q">Combien de correspondants en hygiène sont mentionnés au CHU de Tours ?</div><div class="a">Environ 60 médecins et 200 paramédicaux.</div></div>
+<div class="flash"><div class="q">Que signifie AES ?</div><div class="a">Accident d’exposition au sang.</div></div>
+<div class="flash"><div class="q">Quels sont les deux objectifs des précautions standard ?</div><div class="a">Éviter la transmission croisée et protéger les soignants contre les AES.</div></div>
+<div class="flash"><div class="q">Quel ancien nom portaient les précautions standard ?</div><div class="a">Précautions universelles.</div></div>
+<div class="flash"><div class="q">Dans quel contexte historique ont-elles été développées ?</div><div class="a">Dans le contexte de l’épidémie de VIH, pour protéger les soignants exposés au sang.</div></div>
+<div class="flash"><div class="q">Depuis quelle année un référentiel des 9 missions de l’EPRI est-il cité ?</div><div class="a">Depuis 2018.</div></div>
+<div class="flash"><div class="q">Pourquoi les procédures écrites sont-elles importantes ?</div><div class="a">Elles harmonisent les pratiques et sécurisent les soins.</div></div>
+<div class="flash"><div class="q">Quels exemples de procédures sont cités ?</div><div class="a">Ponction d’ascite et pose de cathéter périphérique.</div></div>
+<div class="flash"><div class="q">Pourquoi la détection précoce d’une épidémie est-elle importante ?</div><div class="a">Plus elle est rapide, plus vite des mesures peuvent être mises en place pour stopper la transmission.</div></div>
+<div class="flash"><div class="q">À qui doivent être signalés les événements infectieux inhabituels selon le cours ?</div><div class="a">À l’ARS et à Santé publique France ; le CPias peut aussi être impliqué selon la situation.</div></div>
+<div class="flash"><div class="q">Quel exemple de surveillance épidémiologique annuelle est cité ?</div><div class="a">La surveillance des infections du site opératoire.</div></div>
+<div class="flash"><div class="q">Quel est l’objectif d’un audit de pratiques ?</div><div class="a">Évaluer la conformité des pratiques aux recommandations et corriger les écarts.</div></div>
+<div class="flash"><div class="q">Quel audit est cité comme exemple ?</div><div class="a">L’hygiène des mains dans plusieurs services.</div></div>
+<div class="flash"><div class="q">Quelles bactéries liées à l’eau hospitalière faut-il connaître ?</div><div class="a">Legionella dans l’eau chaude sanitaire et Pseudomonas aeruginosa dans l’eau froide.</div></div>
+<div class="flash"><div class="q">Comment Legionella se transmet-elle dans l’exemple hospitalier ?</div><div class="a">Par inhalation de micro-gouttelettes ou aérosols d’eau contaminée.</div></div>
+<div class="flash"><div class="q">Pourquoi Pseudomonas aeruginosa est-il particulièrement dangereux en réanimation ?</div><div class="a">Il peut infecter des patients très fragiles, notamment au niveau pulmonaire ou cutané.</div></div>
+<div class="flash"><div class="q">Pourquoi des filtres peuvent-ils être placés sur les robinets en réanimation ?</div><div class="a">Pour empêcher l’exposition à Pseudomonas aeruginosa.</div></div>
+<div class="flash"><div class="q">Quels secteurs nécessitent particulièrement des prélèvements de l’air et des surfaces ?</div><div class="a">Les secteurs avec patients en aplasie et le bloc opératoire.</div></div>
+<div class="flash"><div class="q">Quel champignon est particulièrement redouté lors de travaux poussiéreux ?</div><div class="a">Aspergillus.</div></div>
+<div class="flash"><div class="q">Pourquoi les travaux peuvent-ils favoriser une aspergillose ?</div><div class="a">Ils remettent en suspension des spores contenues dans la poussière.</div></div>
+<div class="flash"><div class="q">Quels patients sont particulièrement vulnérables à Aspergillus ?</div><div class="a">Patients en aplasie et transplantés, notamment cardiaques.</div></div>
+<div class="flash"><div class="q">Pourquoi peut-on arroser un chantier à proximité d’un hôpital ?</div><div class="a">Pour limiter la remise en suspension de poussières contenant des spores fongiques.</div></div>
+<div class="flash"><div class="q">Que contient la GED hospitalière selon le cours ?</div><div class="a">Les procédures de prévention : précautions standard, AES, environnement, matériel, soins, bionettoyage, précautions complémentaires et protectrices.</div></div>
+<div class="flash"><div class="q">Dans quel cas une infection doit-elle être signalée ?</div><div class="a">Si elle est inhabituelle par son germe, sa résistance, sa localisation, son caractère épidémique ou sa gravité, notamment décès.</div></div>
+<div class="flash"><div class="q">Quel exemple d’infection à déclaration obligatoire est cité ?</div><div class="a">La légionellose.</div></div>
+<div class="flash"><div class="q">Que signifie ICSHA ?</div><div class="a">Indicateur de consommation des solutions hydroalcooliques.</div></div>
+<div class="flash"><div class="q">Que mesure réellement l’ICSHA ?</div><div class="a">La consommation de solutions hydroalcooliques comme indicateur indirect de l’hygiène des mains.</div></div>
+<div class="flash"><div class="q">Quel objectif ICSHA est donné ?</div><div class="a">80 %.</div></div>
+<div class="flash"><div class="q">Quel ordre de grandeur de frictions/jour/patient est donné en réanimation ?</div><div class="a">Environ 40.</div></div>
+<div class="flash"><div class="q">Quel ordre de grandeur est donné en médecine ?</div><div class="a">Environ 10 frictions par jour et par patient.</div></div>
+<div class="flash"><div class="q">Que signifie PCC dans les indicateurs HAS ?</div><div class="a">Précautions complémentaires contact.</div></div></div></section>
+</main></body></html>

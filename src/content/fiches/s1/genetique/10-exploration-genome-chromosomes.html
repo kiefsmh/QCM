@@ -1,0 +1,239 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Exploration du génome à l'échelle des chromosomes</title><style>
+:root{--g:#1a7a4a;--gs:#eaf7ef;--r:#b91c1c;--rs:#fee2e2;--o:#b45309;--os:#fff7ed;--b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--ink:#1c1c2e;--line:#d8dce8;--bg:#f6f7fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.58}.page{max-width:1180px;margin:auto;padding:32px 18px 72px}
+.hero{background:linear-gradient(135deg,#fff,#f0fdf4 55%,#eef9ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}h1{font-size:38px;line-height:1.08;margin:8px 0 12px}.subtitle{margin:0;color:#374151}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}.green{background:var(--gs);color:#166534}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.blue{background:var(--bs);color:#1d4ed8}.purple{background:var(--ps);color:#5b21b6}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav li{margin:5px 0}nav a{color:inherit;text-decoration:none}section{padding:24px;margin:18px 0}h2{font-size:25px;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}p{margin:8px 0}ul,ol{padding-left:22px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:14px}.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,monospace;white-space:pre-wrap}.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}table{width:100%;border-collapse:collapse;font-size:13.2px;min-width:820px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}.flash .q{background:#f9fafb;padding:11px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:11px 12px;color:#374151}.source-note{font-size:12.5px;color:#5b6474}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{min-width:680px}}@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}}
+</style></head><body><main class="page">
+<header class="hero"><div class="kicker">UE Génétique - Cytogénétique</div><h1>Méthodes d’exploration du génome à l’échelle des chromosomes</h1><p class="subtitle">Fiche complète D1/EDN/QCM : morphologie et nomenclature chromosomique, aneuploïdies/polyploïdies, anomalies de structure, indications de cytogénétique, caryotype, FISH, CGH-array et principaux syndromes chromosomiques.</p><div class="tags"><span class="tag green">Caryotype</span><span class="tag purple">FISH</span><span class="tag blue">CGH-array</span><span class="tag orange">Aneuploïdies</span><span class="tag red">Pièges QCM</span></div><div class="actions"><button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button><button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button></div></header>
+
+<nav><h2>Plan rapide</h2><ol>
+<li><a href="#morpho">Morphologie / ISCN</a></li><li><a href="#nombre">Anomalies de nombre</a></li><li><a href="#meiose">Non-disjonctions</a></li><li><a href="#poly">Polyploïdies</a></li><li><a href="#structure">Anomalies de structure</a></li><li><a href="#translo">Translocations</a></li><li><a href="#autres">Inversions / insertions</a></li><li><a href="#des">Délétions / duplications</a></li><li><a href="#indications">Indications</a></li><li><a href="#caryotype">Caryotype</a></li><li><a href="#fish">FISH</a></li><li><a href="#sondes">Sondes FISH</a></li><li><a href="#cgh">CGH-array</a></li><li><a href="#comparatif">Comparatif techniques</a></li><li><a href="#syndromes">Syndromes</a></li><li><a href="#pieges">Pièges du support</a></li><li><a href="#recap">Mini-récap</a></li><li><a href="#flashcards">Flashcards express</a></li>
+</ol></nav>
+
+<section id="morpho"><h2>1. Morphologie chromosomique et nomenclature</h2>
+<ul><li>Chromosome métaphasique = <strong>2 chromatides</strong> reliées au centromère.</li><li>Extrémités = télomères.</li><li>Bras court = <strong>p</strong> ; bras long = <strong>q</strong>.</li><li>Bandes numérotées <strong>du centromère vers le télomère</strong>.</li><li>Nomenclature internationale = <strong>ISCN</strong>.</li></ul>
+<div class="callout"><strong>Exemple :</strong> 1q25.3 = chromosome 1, bras q, région 2, bande 5, sous-bande 3.</div>
+<div class="tablewrap"><table><tr><th>Type</th><th>Définition</th></tr><tr><td>Métacentrique</td><td>p ≈ q</td></tr><tr><td>Submétacentrique</td><td>p &lt; q</td></tr><tr><td>Acrocentrique</td><td>p quasi inexistant : 13, 14, 15, 21, 22</td></tr></table></div>
+</section>
+
+<section id="nombre"><h2>2. Anomalies de nombre</h2>
+<div class="grid2"><div class="card"><strong>Aneuploïdie</strong><p>Gain ou perte d’un ou plusieurs chromosomes : trisomie, monosomie.</p></div><div class="card"><strong>Polyploïdie</strong><p>Gain d’un lot haploïde entier : 3N, 4N…</p></div></div>
+<ul><li>Trisomies autosomiques homogènes viables : <strong>13, 18, 21</strong>.</li><li>Trisomies 8/9 : viables seulement en mosaïque dans le cours.</li><li>Monosomies autosomiques complètes homogènes : létales.</li><li>Seule monosomie complète viable : <strong>45,X</strong>.</li></ul>
+</section>
+
+<section id="meiose"><h2>3. Mécanismes des aneuploïdies</h2>
+<div class="tablewrap"><table>
+<tr><th>Mécanisme</th><th>Moment</th><th>Conséquence</th></tr>
+<tr><td>Non-disjonction méiose I</td><td>Prézygotique</td><td>Homologues dans la même cellule</td></tr>
+<tr><td>Non-disjonction méiose II</td><td>Prézygotique</td><td>Chromatides sœurs dans la même cellule</td></tr>
+<tr><td>Non-disjonction mitotique</td><td>Postzygotique</td><td>Mosaïcisme</td></tr>
+</table></div>
+<div class="callout bluebox"><strong>Plus l’accident postzygotique est précoce, plus le taux de mosaïcisme peut être élevé.</strong></div>
+</section>
+
+<section id="poly"><h2>4. Polyploïdies</h2>
+<ul><li><strong>Triploïdie = 69 chromosomes = 3N.</strong></li><li><strong>Tétraploïdie = 92 chromosomes = 4N.</strong></li><li>Polyploïdies décrites comme non viables dans le cours.</li></ul>
+<h3>Triploïdie</h3>
+<ul><li>Diandrie : excès paternel.</li><li>Dyspermie ≈66 % des cas de diandrie.</li><li>Diplospermie ≈24 %.</li><li>Digynie : ovule diploïde par non-expulsion du globule polaire.</li></ul>
+</section>
+
+<section id="structure"><h2>5. Anomalies de structure</h2>
+<p>Résultent d’une ou plusieurs cassures suivies de recollements anormaux.</p>
+<div class="tablewrap"><table><tr><th>Équilibrées</th><th>Déséquilibrées</th></tr><tr><td>Translocations, inversions, insertions</td><td>Délétions, duplications, chromosomes en anneau</td></tr></table></div>
+</section>
+
+<section id="translo"><h2>6. Translocations</h2>
+<h3>Réciproques</h3>
+<p>Échange entre deux chromosomes <strong>non homologues</strong> dans le corps du cours. Souvent équilibrées et asymptomatiques chez le porteur.</p>
+<div class="callout warn"><strong>Risque reproductif :</strong> gamètes déséquilibrés → fausses couches, monosomies/trisomies partielles.</div>
+<p>En méiose : tétravalent avec ségrégations 2:2, 3:1, voire 4:0.</p>
+<h3>Robertsoniennes</h3>
+<ul><li>Uniquement acrocentriques : 13, 14, 15, 21, 22.</li><li>Fusion de deux chromosomes avec perte des petits bras.</li><li>Porteur équilibré possible avec <strong>45 chromosomes</strong>.</li><li>Exemple : rob(13;14)(q10;q10).</li></ul>
+</section>
+
+<section id="autres"><h2>7. Inversions et insertions</h2>
+<div class="grid2"><div class="card"><strong>Inversion paracentrique</strong><p>N’implique pas le centromère.</p></div><div class="card"><strong>Inversion péricentrique</strong><p>Inclut le centromère.</p></div></div>
+<p>Insertions : 2 chromosomes impliqués, <strong>3 points de cassure</strong>.</p>
+</section>
+
+<section id="des"><h2>8. Délétions, duplications et anneaux</h2>
+<ul><li>Délétion interstitielle : fragment interne perdu.</li><li>Délétion terminale : extrémité perdue.</li><li>Duplication : gain de matériel.</li><li>Si taille sous la résolution du caryotype : CNV / microdélétion / microduplication.</li><li>Chromosome en anneau : toujours déséquilibré dans le support car perte terminale.</li></ul>
+<div class="callout"><strong>Résolution du caryotype : ≈5–10 Mb.</strong></div>
+</section>
+
+<section id="indications"><h2>9. Quand prescrire une analyse chromosomique ?</h2>
+<h3>Constitutionnelle</h3>
+<ul><li>Prénatal : signes échographiques, clarté nucale/risque combiné, anomalie familiale, âge maternel ≥38 ans selon le texte.</li><li>Postnatal : syndrome polymalformatif, trouble du neurodéveloppement, enquête familiale.</li><li>Infertilité/fausses couches répétées.</li><li>Ambiguïté sexuelle.</li></ul>
+<h3>Acquise</h3>
+<p>Cancers : intérêt diagnostique, pronostique et thérapeutique.</p>
+</section>
+
+<section id="caryotype"><h2>10. Caryotype</h2>
+<div class="schema">Culture cellulaire
+→ PHA = stimulation mitotique
+→ colcémide = blocage métaphase
+→ choc hypotonique
+→ fixation acide acétique + alcool
+→ étalement
+→ dénaturation + Giemsa
+→ capture / classement / analyse</div>
+<ul><li>Technique de référence en cytogénétique.</li><li>Analyse <strong>pangénomique</strong>.</li><li>Détecte anomalies de nombre + grandes anomalies structurales, équilibrées ou déséquilibrées.</li><li>Résolution : <strong>5–10 Mb</strong>.</li><li>Limites : culture, temps, qualité du prélèvement, résolution faible.</li></ul>
+</section>
+
+<section id="fish"><h2>11. FISH</h2>
+<p><strong>Fluorescence In Situ Hybridization</strong> : technique ciblée utilisant une sonde fluorescente complémentaire.</p>
+<div class="schema">Digestion enzymatique
+→ dénaturation ADN + sonde
+→ hybridation
+→ lavages
+→ détection en épifluorescence (DAPI)</div>
+<ul><li>Possible en métaphase ou interphase.</li><li>Plus rapide que le caryotype.</li><li>Très utile si anomalie précise déjà suspectée.</li></ul>
+</section>
+
+<section id="sondes"><h2>12. Types de sondes FISH</h2>
+<div class="tablewrap"><table>
+<tr><th>Sonde</th><th>Utilité</th></tr>
+<tr><td>Centromérique</td><td>Comptage chromosomique / aneuploïdies</td></tr>
+<tr><td>Subtélomérique</td><td>Extrémités / remaniements / contrôle</td></tr>
+<tr><td>Spécifique de locus</td><td>Microdélétion ou microduplication connue</td></tr>
+<tr><td>Peinture chromosomique</td><td>Chromosome entier / translocations</td></tr>
+</table></div>
+<div class="callout purplebox"><strong>Mosaïque :</strong> analyse d’environ 100 cellules → détection possible de mosaïcismes de l’ordre de <strong>5–10 %</strong>.</div>
+<div class="callout bluebox"><strong>Résolution :</strong> délétions ≈100–300 kb ; duplications généralement &gt;1 Mb dans la deuxième partie du cours.</div>
+</section>
+
+<section id="cgh"><h2>13. CGH-array / ACPA</h2>
+<p>Technique comparative et quantitative utilisant des milliers de sondes sur une puce.</p>
+<div class="schema">ADN patient + ADN référence
+→ fragmentation
+→ marquages fluorescents différents
+→ hybridation sur puce ~24 h
+→ scanner
+→ profil de variation de copies</div>
+<ul><li>Déviation négative = <strong>délétion</strong>.</li><li>Déviation positive = <strong>duplication</strong>.</li><li>Détecte CNV et aneuploïdies.</li><li>Pas de culture cellulaire.</li><li>Peut être globale ou ciblée.</li></ul>
+<div class="callout warn"><strong>Ne voit pas :</strong> translocations/inversions/insertions équilibrées et, selon le cours, <strong>polyploïdies</strong>.</div>
+</section>
+
+<section id="comparatif"><h2>14. Caryotype vs FISH vs CGH-array</h2>
+<div class="tablewrap"><table>
+<tr><th></th><th>Caryotype</th><th>FISH</th><th>CGH-array</th></tr>
+<tr><td>Global ?</td><td>Oui</td><td>Non, ciblée</td><td>Oui ou ciblée</td></tr>
+<tr><td>Résolution</td><td>5–10 Mb</td><td>≈100–300 kb délétions ; &gt;1 Mb duplications</td><td>Très élevée ; schéma p.36 ≈30–50 kb</td></tr>
+<tr><td>Équilibré</td><td>Oui</td><td>Oui si ciblé</td><td>Non</td></tr>
+<tr><td>Pertes / gains</td><td>Oui si assez grands</td><td>Oui si ciblés</td><td>Oui +++</td></tr>
+<tr><td>Aneuploïdie</td><td>Oui</td><td>Oui ciblée</td><td>Oui</td></tr>
+<tr><td>Polyploïdie</td><td>Oui</td><td>Selon cible</td><td>Non dans le cours</td></tr>
+<tr><td>Culture nécessaire</td><td>Oui</td><td>Pas toujours</td><td>Non</td></tr>
+</table></div>
+</section>
+
+<section id="syndromes"><h2>15. Syndromes chromosomiques du cours</h2>
+<div class="tablewrap"><table>
+<tr><th>Syndrome</th><th>Anomalie</th><th>Repères</th></tr>
+<tr><td>Patau</td><td>Trisomie 13</td><td>≈1/10 000, sévère, polydactylie</td></tr>
+<tr><td>Edwards</td><td>Trisomie 18</td><td>≈1/8 000, survie souvent &lt;6 mois</td></tr>
+<tr><td>Trisomie 21</td><td>+21</td><td>≈1/1 600 en France ; risque ↑ âge maternel</td></tr>
+<tr><td>Turner</td><td>45,X</td><td>≈1/2 500 filles ; homogène ou mosaïque</td></tr>
+<tr><td>Klinefelter</td><td>47,XXY</td><td>≈1/700–1 000 garçons ; azoospermie</td></tr>
+<tr><td>Trisomie X</td><td>47,XXX</td><td>≈1/1 000 ; souvent peu symptomatique</td></tr>
+<tr><td>Williams-Beuren</td><td>del 7q11.23</td><td>ELN ; FISH/CGH</td></tr>
+<tr><td>Smith-Magenis</td><td>del 17p11.2</td><td>≈3,5–5 Mb</td></tr>
+<tr><td>DiGeorge</td><td>del 22q11.2</td><td>TBX1 ; cœur/thymus</td></tr>
+</table></div>
+<div class="callout orangebox"><strong>Note :</strong> la partie microdélétions/microduplications est indiquée comme non exigible par l’enseignante dans le ronéo.</div>
+</section>
+
+<section id="pieges"><h2>16. Pièges et incohérences du support</h2>
+<div class="callout warn"><strong>1.</strong> Les bandes/régions sont TOUJOURS numérotées du centromère vers le télomère.</div>
+<div class="callout warn"><strong>2.</strong> Corps du cours : translocation réciproque entre chromosomes <strong>non homologues</strong>. Le corrigé du QCM 4 écrit à tort « homologues » : incohérence du support.</div>
+<div class="callout warn"><strong>3.</strong> Le corrigé du QCM 1 contient une phrase contradictoire sur la position p/q autour du centromère ; retenir les définitions initiales du cours.</div>
+<div class="callout warn"><strong>4.</strong> Caryotype = global mais 5–10 Mb ; FISH = ciblée ; CGH = quantitative, pertes/gains seulement.</div>
+<div class="callout warn"><strong>5.</strong> FISH : meilleure résolution pour les délétions que les duplications dans le corrigé.</div>
+<div class="callout warn"><strong>6.</strong> CGH-array ne détecte pas les remaniements équilibrés ni les polyploïdies dans ce cours.</div>
+<div class="callout warn"><strong>7.</strong> Le QCM 8 de la première heure annonce « ABCDE » alors que sa correction indique que l’item âge maternel ≥36 ans est faux et retient ≥38 ans : correction incohérente.</div>
+<div class="callout warn"><strong>8.</strong> Une translocation robertsonienne peut être équilibrée malgré 45 chromosomes.</div>
+</section>
+
+<section id="recap" class="recap"><h2>Mini-récap ultra rentable</h2>
+<p><strong>p = court, q = long</strong>, numérotation centromère → télomère. Acrocentriques = <strong>13,14,15,21,22</strong>. Aneuploïdie homogène = non-disjonction méiotique ; mosaïque = mitotique postzygotique. Triploïdie = 69 ; tétraploïdie = 92. Structure équilibrée : translocation/inversion/insertion ; déséquilibrée : délétion/duplication/anneau. <strong>Caryotype</strong> = global, équilibré + déséquilibré, résolution <strong>5–10 Mb</strong>. <strong>FISH</strong> = ciblée, interphase ou métaphase, ≈100–300 kb pour délétions, mosaïque 5–10 %. <strong>CGH-array</strong> = quantitative, très résolutive, pertes/gains/CNV, pas équilibré ni polyploïdie dans le cours. Turner 45,X ; Klinefelter 47,XXY ; trisomie X 47,XXX ; Williams 7q11.23 ; DiGeorge 22q11.2.</p></section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « Méthodes d’exploration du génome à l’échelle des chromosomes ». Les deux heures du cours ont été intégrées, y compris les tableaux et schémas de comparaison des techniques ; les incohérences du corrigé sont signalées explicitement.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+<div class="flash"><div class="q">Comment sont reliées les deux chromatides d’un chromosome métaphasique ?</div><div class="a">Elles sont reliées au niveau du centromère.</div></div>
+<div class="flash"><div class="q">Comment sont notés les bras court et long d’un chromosome ?</div><div class="a">Le bras court est noté p et le bras long q.</div></div>
+<div class="flash"><div class="q">Dans quel sens les régions et bandes chromosomiques sont-elles numérotées ?</div><div class="a">Toujours du centromère vers le télomère.</div></div>
+<div class="flash"><div class="q">Comment décomposer la notation 1q25.3 ?</div><div class="a">Chromosome 1, bras long q, région 2, bande 5, sous-bande 3.</div></div>
+<div class="flash"><div class="q">Quel est le rôle de l’ISCN ?</div><div class="a">Fournir une nomenclature internationale homogène pour décrire les anomalies chromosomiques.</div></div>
+<div class="flash"><div class="q">Pourquoi les bandes chromosomiques sont-elles utiles ?</div><div class="a">Elles constituent un motif propre à chaque chromosome et permettent de les identifier au-delà de leur seule taille.</div></div>
+<div class="flash"><div class="q">Qu’est-ce qu’un chromosome métacentrique ?</div><div class="a">Un chromosome dont les bras p et q ont approximativement la même taille.</div></div>
+<div class="flash"><div class="q">Qu’est-ce qu’un chromosome submétacentrique ?</div><div class="a">Un chromosome dont le bras p est plus court que le bras q.</div></div>
+<div class="flash"><div class="q">Quels sont les cinq chromosomes acrocentriques humains cités ?</div><div class="a">13, 14, 15, 21 et 22.</div></div>
+<div class="flash"><div class="q">Pourquoi la perte des petits bras des chromosomes acrocentriques peut-elle être sans phénotype dans le cours ?</div><div class="a">Parce qu’ils sont décrits comme constitués d’hétérochromatine ne contenant pas de gènes codants.</div></div>
+<div class="flash"><div class="q">Quelle différence oppose aneuploïdie et polyploïdie ?</div><div class="a">L’aneuploïdie correspond au gain ou à la perte d’un ou plusieurs chromosomes ; la polyploïdie concerne des lots haploïdes entiers.</div></div>
+<div class="flash"><div class="q">Quelles trisomies autosomiques complètes et homogènes sont viables ?</div><div class="a">Les trisomies 13, 18 et 21.</div></div>
+<div class="flash"><div class="q">Dans quelles conditions les trisomies 8 et 9 sont-elles viables selon le cours ?</div><div class="a">Uniquement sous forme mosaïque.</div></div>
+<div class="flash"><div class="q">Quelle monosomie complète est viable ?</div><div class="a">La monosomie X, syndrome de Turner.</div></div>
+<div class="flash"><div class="q">Quel mécanisme produit le plus souvent une aneuploïdie homogène ?</div><div class="a">Une non-disjonction méiotique prézygotique lors de la méiose I ou II.</div></div>
+<div class="flash"><div class="q">Que se passe-t-il lors d’une non-disjonction en méiose I ?</div><div class="a">Les deux chromosomes homologues migrent vers la même cellule fille.</div></div>
+<div class="flash"><div class="q">Que se passe-t-il lors d’une non-disjonction en méiose II ?</div><div class="a">Les chromatides sœurs ne se séparent pas dans l’une des cellules issues de méiose I.</div></div>
+<div class="flash"><div class="q">Quel mécanisme produit une aneuploïdie en mosaïque ?</div><div class="a">Une non-disjonction mitotique postzygotique.</div></div>
+<div class="flash"><div class="q">Comment le moment de survenue d’une anomalie postzygotique influence-t-il le mosaïcisme ?</div><div class="a">Plus elle survient tôt, plus la proportion de cellules anormales peut être importante.</div></div>
+<div class="flash"><div class="q">Qu’est-ce qu’une triploïdie ?</div><div class="a">Une formule à 3N, soit 69 chromosomes.</div></div>
+<div class="flash"><div class="q">Qu’est-ce qu’une tétraploïdie ?</div><div class="a">Une formule à 4N, soit 92 chromosomes.</div></div>
+<div class="flash"><div class="q">Quels sont les deux grands mécanismes parentaux de triploïdie ?</div><div class="a">Diandrie si l’excès vient du père ; digynie s’il vient de la mère.</div></div>
+<div class="flash"><div class="q">Qu’est-ce qu’une dyspermie dans le cadre de la triploïdie ?</div><div class="a">La fécondation d’un ovule par deux spermatozoïdes haploïdes ; environ 66 % des diandries dans le cours.</div></div>
+<div class="flash"><div class="q">Qu’est-ce qu’une diplospermie ?</div><div class="a">La fécondation par un spermatozoïde diploïde ; environ 24 % des diandries dans le support.</div></div>
+<div class="flash"><div class="q">Comment survient une digynie selon le cours ?</div><div class="a">Le globule polaire de l’ovule n’est pas expulsé, donnant un ovule diploïde.</div></div>
+<div class="flash"><div class="q">Les anomalies de nombre sont-elles équilibrées ou déséquilibrées ?</div><div class="a">Toujours déséquilibrées, puisqu’il existe une perte ou un gain chromosomique.</div></div>
+<div class="flash"><div class="q">Quelles anomalies de structure sont classiquement équilibrées ?</div><div class="a">Translocations, inversions et insertions.</div></div>
+<div class="flash"><div class="q">Quelles anomalies de structure sont classiquement déséquilibrées ?</div><div class="a">Délétions, duplications et chromosomes en anneau.</div></div>
+<div class="flash"><div class="q">Comment définir une translocation réciproque ?</div><div class="a">Échange de fragments entre deux chromosomes non homologues selon le corps du cours.</div></div>
+<div class="flash"><div class="q">Pourquoi un porteur de translocation réciproque équilibrée est-il souvent asymptomatique ?</div><div class="a">Parce qu’il n’y a généralement ni perte ni gain de matériel génétique.</div></div>
+<div class="flash"><div class="q">Comment une translocation équilibrée peut-elle néanmoins provoquer un phénotype ?</div><div class="a">Exceptionnellement, si un point de cassure interrompt un gène important.</div></div>
+<div class="flash"><div class="q">Quel est le principal risque reproductif d’une translocation réciproque équilibrée ?</div><div class="a">La production de gamètes déséquilibrés pouvant entraîner fausses couches, trisomies partielles ou monosomies partielles.</div></div>
+<div class="flash"><div class="q">Quelle structure d’appariement peut se former en méiose chez un porteur de translocation réciproque ?</div><div class="a">Un tétravalent.</div></div>
+<div class="flash"><div class="q">Quels types de ségrégation d’un tétravalent sont cités ?</div><div class="a">2:2, 3:1 et plus rarement 4:0.</div></div>
+<div class="flash"><div class="q">Quels chromosomes peuvent participer à une translocation robertsonienne ?</div><div class="a">Uniquement les chromosomes acrocentriques 13, 14, 15, 21 et 22.</div></div>
+<div class="flash"><div class="q">Pourquoi un porteur de translocation robertsonienne équilibrée peut-il avoir 45 chromosomes ?</div><div class="a">Deux chromosomes acrocentriques ont fusionné ; leurs petits bras sont perdus sans perte de matériel codant significatif dans la logique du cours.</div></div>
+<div class="flash"><div class="q">Quelle notation de translocation robertsonienne est donnée en exemple ?</div><div class="a">45,X,rob(13;14)(q10;q10) dans l’exemple du support.</div></div>
+<div class="flash"><div class="q">Quelle différence oppose inversion paracentrique et péricentrique ?</div><div class="a">La paracentrique n’inclut pas le centromère ; la péricentrique l’inclut.</div></div>
+<div class="flash"><div class="q">Combien de points de cassure sont nécessaires à une insertion équilibrée ?</div><div class="a">Trois points de cassure : deux dans le chromosome donneur et un dans le chromosome receveur.</div></div>
+<div class="flash"><div class="q">Quelle différence oppose délétion terminale et interstitielle ?</div><div class="a">La terminale touche une extrémité ; l’interstitielle retire un fragment interne.</div></div>
+<div class="flash"><div class="q">Quelle est la résolution approximative du caryotype ?</div><div class="a">Environ 5 à 10 Mb.</div></div>
+<div class="flash"><div class="q">Quand parle-t-on de CNV ou microdélétion/microduplication dans le cours ?</div><div class="a">Pour des pertes ou gains trop petits pour être visibles au caryotype.</div></div>
+<div class="flash"><div class="q">Pourquoi un chromosome en anneau est-il déséquilibré ?</div><div class="a">Sa formation implique une perte de matériel aux extrémités chromosomiques.</div></div>
+<div class="flash"><div class="q">Quelle question faut-il se poser devant une délétion terminale au caryotype ?</div><div class="a">S’il existe un chromosome en anneau associé.</div></div>
+<div class="flash"><div class="q">Quelles grandes indications prénatales de cytogénétique sont citées ?</div><div class="a">Signes échographiques, risque combiné du 1er trimestre, antécédent chromosomique familial et âge maternel élevé selon les critères du cours.</div></div>
+<div class="flash"><div class="q">Quel seuil d’âge maternel isolé est donné pour justifier une analyse chromosomique ?</div><div class="a">≥38 ans dans le texte du cours.</div></div>
+<div class="flash"><div class="q">Quelles indications postnatales constitutionnelles sont citées ?</div><div class="a">Syndrome polymalformatif, trouble du neurodéveloppement, enquête familiale, infertilité/fausses couches répétées et ambiguïté sexuelle.</div></div>
+<div class="flash"><div class="q">Quels sont les trois grands intérêts de la cytogénétique acquise en cancérologie ?</div><div class="a">Diagnostic/classification, pronostic et adaptation thérapeutique.</div></div>
+<div class="flash"><div class="q">Pourquoi le caryotype nécessite-t-il une culture cellulaire ?</div><div class="a">Les chromosomes doivent être obtenus au stade métaphasique, où ils sont condensés et visibles.</div></div>
+<div class="flash"><div class="q">Quel est le rôle de la PHA lors d’un caryotype sanguin ?</div><div class="a">Stimuler la division des lymphocytes ; c’est un mitogène.</div></div>
+<div class="flash"><div class="q">Quel est le rôle du colcémide ?</div><div class="a">Bloquer les cellules en métaphase en inhibant le fuseau mitotique.</div></div>
+<div class="flash"><div class="q">Quel est le but du choc hypotonique ?</div><div class="a">Faire entrer l’eau dans les cellules, les gonfler et disperser les chromosomes.</div></div>
+<div class="flash"><div class="q">Quel mélange est utilisé pour la fixation dans le caryotype ?</div><div class="a">Acide acétique et alcool.</div></div>
+<div class="flash"><div class="q">Quel est le bon ordre des étapes du caryotype ?</div><div class="a">Culture → blocage métaphase → choc hypotonique → fixation → étalement → dénaturation/coloration → capture et analyse.</div></div>
+<div class="flash"><div class="q">Quel colorant fait apparaître les bandes chromosomiques ?</div><div class="a">Le Giemsa, fixé sur les régions non dénaturées.</div></div>
+<div class="flash"><div class="q">Quels sont les avantages majeurs du caryotype ?</div><div class="a">Analyse pangénomique, technique de référence, détecte anomalies de nombre et grandes anomalies de structure, y compris équilibrées.</div></div>
+<div class="flash"><div class="q">Quelle est la principale limite du caryotype ?</div><div class="a">Sa faible résolution, environ 5–10 Mb, avec nécessité de culture.</div></div>
+<div class="flash"><div class="q">Comment définir la FISH ?</div><div class="a">Technique ciblée reposant sur l’hybridation d’une sonde fluorescente complémentaire d’une séquence d’ADN.</div></div>
+<div class="flash"><div class="q">La FISH nécessite-t-elle toujours des chromosomes en métaphase ?</div><div class="a">Non, elle peut être réalisée sur cellules en métaphase ou en interphase.</div></div>
+<div class="flash"><div class="q">Quelles sont les grandes étapes techniques de la FISH ?</div><div class="a">Digestion enzymatique → dénaturation cible/sonde → hybridation → lavages → détection en épifluorescence.</div></div>
+<div class="flash"><div class="q">Quel colorant est utilisé pour visualiser l’ADN en bleu en FISH ?</div><div class="a">Le DAPI.</div></div>
+<div class="flash"><div class="q">Combien de signaux attend-on normalement en FISH interphasique pour une région autosomique diploïde ?</div><div class="a">Deux signaux, un pour chaque homologue.</div></div>
+<div class="flash"><div class="q">Pourquoi peut-on voir deux signaux côte à côte sur un chromosome métaphasique ?</div><div class="a">Parce que le chromosome métaphasique possède deux chromatides.</div></div>
+<div class="flash"><div class="q">À quoi servent les sondes centromériques ?</div><div class="a">Principalement au comptage chromosomique et au diagnostic rapide d’aneuploïdies.</div></div>
+<div class="flash"><div class="q">Quelles sondes centromériques ne permettent pas de distinguer certaines paires ?</div><div class="a">13/21 et 14/22 partagent les mêmes sondes centromériques dans le cours.</div></div>
+<div class="flash"><div class="q">À quoi servent les sondes subtélomériques ?</div><div class="a">À explorer les régions proches des télomères, servir de contrôle et détecter certains remaniements.</div></div>
+<div class="flash"><div class="q">À quoi sert une sonde spécifique de locus ?</div><div class="a">À rechercher une anomalie précise dans une région chromosomique connue, notamment une microdélétion ou microduplication.</div></div>
+<div class="flash"><div class="q">À quoi servent les sondes de peinture chromosomique ?</div><div class="a">À colorer un chromosome entier et visualiser certains échanges entre chromosomes.</div></div>
+<div class="flash"><div class="q">Quelle résolution de FISH est donnée pour les délétions ?</div><div class="a">Environ 100 à 300 kb dans la deuxième partie du cours.</div></div>
+<div class="flash"><div class="q">Quelle taille de duplication est généralement nécessaire pour être détectée en FISH selon le cours ?</div><div class="a">Environ &gt;1 Mb.</div></div>
+  </div>
+</section>
+</main></body></html>

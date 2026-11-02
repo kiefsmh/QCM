@@ -13,6 +13,9 @@ const profAnnaleModules = import.meta.glob('../content/annales/profs/**/*.{pdf,h
   import: 'default',
   eager: true,
 })
+const profAnnaleJsModules = import.meta.glob('./annales/profs/**/*.js', {
+  eager: true,
+})
 
 const SEMESTERS = [
   {
@@ -226,6 +229,28 @@ for (const [path, url] of Object.entries(profAnnaleModules)) {
     title: titleFromSlug(annaleId).toLocaleUpperCase('fr-FR'),
     type: extension.toUpperCase(),
     path: url,
+  })
+}
+for (const [path, module] of Object.entries(profAnnaleJsModules)) {
+  const match = path.match(
+    /\.\/annales\/profs\/([^/]+)\/([^/]+)\/([^/]+)\.js$/
+  )
+
+  if (!match) continue
+
+  const [, semesterId, subjectId, annaleId] = match
+  const key = subjectKey(semesterId, subjectId)
+
+  if (!profAnnalesBySubject.has(key)) {
+    profAnnalesBySubject.set(key, [])
+  }
+
+  profAnnalesBySubject.get(key).push({
+    id: annaleId,
+    title: (module.meta?.title || titleFromSlug(annaleId))
+      .toLocaleUpperCase('fr-FR'),
+    type: 'QCM',
+    questions: extractQuestions(module),
   })
 }
 

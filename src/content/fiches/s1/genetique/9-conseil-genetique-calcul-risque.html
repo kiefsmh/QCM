@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Conseil génétique et calculs de risque</title>
+<style>
+:root{--g:#1a7a4a;--gs:#eaf7ef;--r:#b91c1c;--rs:#fee2e2;--o:#b45309;--os:#fff7ed;--b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--ink:#1c1c2e;--muted:#5b6474;--line:#d8dce8;--bg:#f6f7fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.58}
+.page{max-width:1180px;margin:auto;padding:32px 18px 72px}.hero{background:linear-gradient(135deg,#fff,#f0fdf4 55%,#eef9ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}h1{font-size:39px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}.subtitle{margin:0;color:#374151;max-width:1080px}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}.green{background:var(--gs);color:#166534}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.blue{background:var(--bs);color:#1d4ed8}.purple{background:var(--ps);color:#5b21b6}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav li{margin:5px 0}nav a{color:inherit;text-decoration:none}section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(31,41,55,.035)}h2{font-size:25px;letter-spacing:-.02em;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}p{margin:8px 0}ul,ol{padding-left:22px;margin:8px 0 12px}li{margin:4px 0}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,monospace;font-size:13px;white-space:pre-wrap;overflow-x:auto}.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.2px;min-width:820px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.flash .q{background:#f9fafb;padding:11px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:11px 12px;color:#374151}.source-note{font-size:12.5px;color:var(--muted);margin:18px 4px}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{min-width:680px;font-size:12.1px}}@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none}}
+</style></head>
+<body><main class="page">
+
+<header class="hero">
+<div class="kicker">UE 05 - Génétique</div>
+<h1>Conseil génétique et calculs de risque</h1>
+<p class="subtitle">Fiche complète D1/EDN/QCM : conseil génétique, pénétrance et expressivité, lecture d’arbres, modes de transmission, statut du consultant, Hardy-Weinberg, consanguinité, Bayes et cas pratiques de calcul de risque.</p>
+<div class="tags"><span class="tag green">Conseil génétique</span><span class="tag purple">Arbres</span><span class="tag blue">Hardy-Weinberg</span><span class="tag orange">Bayes</span><span class="tag red">Calculs de risque</span></div>
+<div class="actions"><button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button><button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button></div>
+</header>
+
+<nav><h2>Plan rapide</h2><ol>
+<li><a href="#defs">Définitions</a></li><li><a href="#penetrance">Pénétrance / expressivité</a></li><li><a href="#objectif">Conseil génétique</a></li><li><a href="#demarche">4 étapes</a></li><li><a href="#transmissions">Modes de transmission</a></li><li><a href="#statut">Statut du consultant</a></li><li><a href="#hw">Hardy-Weinberg</a></li><li><a href="#consanguinite">Consanguinité</a></li><li><a href="#bayes">Bayes</a></li><li><a href="#cas">Cas pratiques</a></li><li><a href="#methodo">Méthode</a></li><li><a href="#pieges">Pièges</a></li><li><a href="#recap">Mini-récap</a></li><li><a href="#flashcards">Flashcards express</a></li></ol></nav>
+
+<section id="defs"><h2>1. Définitions</h2>
+<div class="tablewrap"><table><tr><th>Terme</th><th>Définition</th></tr>
+<tr><td>Génotype</td><td>Composition génétique.</td></tr><tr><td>Phénotype</td><td>Caractères observables/exprimés.</td></tr><tr><td>Hétérozygote</td><td>Deux allèles différents.</td></tr><tr><td>Homozygote</td><td>Deux allèles identiques.</td></tr><tr><td>Hémizygote</td><td>Une seule copie d’un gène, notamment sur X chez l’homme lorsqu’il n’existe pas d’homologue sur Y.</td></tr></table></div>
+</section>
+
+<section id="penetrance"><h2>2. Pénétrance et expressivité</h2>
+<div class="grid3"><div class="card"><strong>Complète</strong><p>Tous les porteurs expriment le phénotype.</p></div><div class="card"><strong>Incomplète</strong><p>Certains porteurs restent asymptomatiques.</p></div><div class="card"><strong>Retardée</strong><p>Expression tardive, ex. Huntington vers 40-50 ans.</p></div></div>
+<div class="callout bluebox"><strong>Expressivité variable :</strong> même mutation, manifestations différentes. Exemples du cours : CVDA et NF1.</div>
+</section>
+
+<section id="objectif"><h2>3. Conseil génétique</h2>
+<p>Le conseil génétique vise à <strong>informer et accompagner sans diriger</strong>.</p>
+<ul><li>Risque d’être atteint.</li><li>Risque de transmission.</li><li>Risque de récidive.</li><li>Caractéristiques, traitements et prise en charge.</li><li>Options de planification familiale et de prévention de transmission.</li></ul>
+<div class="callout"><strong>Principe éthique :</strong> permettre une décision autonome et éclairée.</div>
+<h3>Qui consulte ?</h3>
+<ul><li>Famille avec enfant atteint.</li><li>Anomalies échographiques fœtales.</li><li>Consultant lui-même atteint.</li><li>Antécédent familial.</li><li>Couple apparenté.</li><li>Risque de maladie tardive avec test présymptomatique/prédictif.</li></ul>
+<h3>Qui réalise la consultation ?</h3>
+<p>Médecin généticien, spécialiste d’organe en lien avec une équipe de génétique, ou conseiller en génétique (métier créé en France en 2004).</p>
+</section>
+
+<section id="demarche"><h2>4. Les 4 étapes</h2>
+<ol><li>Établir un <strong>diagnostic précis</strong>.</li><li>Définir le <strong>mode de transmission</strong>.</li><li>Définir le <strong>statut du consultant</strong>.</li><li>Évaluer le <strong>risque pour la descendance</strong>.</li></ol>
+<div class="callout warn"><strong>À retenir :</strong> diagnostic ancien à revérifier si nécessaire ; consentement signé pour les examens ; secret médical ; information de la parentèle présentée comme obligation légale dans le cours.</div>
+</section>
+
+<section id="transmissions"><h2>5. Reconnaître le mode de transmission</h2>
+<div class="tablewrap"><table><tr><th>Mode</th><th>Profil</th></tr>
+<tr><td>Autosomique dominant</td><td>Toutes générations, 2 sexes, père-fils possible.</td></tr>
+<tr><td>Autosomique récessif</td><td>Parents sains, fratrie atteinte, 2 sexes, consanguinité possible.</td></tr>
+<tr><td>Récessif lié à l’X</td><td>Garçons atteints, mères saines/conductrices.</td></tr>
+<tr><td>Dominant lié à l’X létal garçon</td><td>Filles atteintes, nombreuses fausses couches masculines.</td></tr>
+<tr><td>Mitochondrial</td><td>Pas de transmission père-enfant.</td></tr>
+</table></div>
+<div class="callout orangebox"><strong>Arbre :</strong> toujours partir de l’individu atteint et raisonner de proche en proche.</div>
+</section>
+
+<section id="statut"><h2>6. Définir le statut du consultant</h2>
+<ul><li>AR : parent sain de plusieurs enfants atteints → hétérozygote obligatoire.</li><li>XLR : fille d’un père atteint → conductrice obligatoire dans le modèle du cours.</li><li>AD à pénétrance incomplète : un asymptomatique peut malgré tout être porteur.</li></ul>
+</section>
+
+<section id="hw"><h2>7. Hardy-Weinberg</h2>
+<div class="schema">p = fréquence allèle sauvage
+q = fréquence allèle morbide
+p + q = 1
+
+Pour une maladie autosomique récessive rare :
+prévalence des malades = q²
+fréquence des hétérozygotes ≈ 2√(q²)</div>
+<div class="callout"><strong>Exemple :</strong> 1/10 000 malades → q = 1/100 → porteurs ≈ 2/100 = <strong>1/50</strong>.</div>
+<div class="callout bluebox"><strong>Mucoviscidose :</strong> portage CFTR = <strong>1/34</strong> dans la population générale française selon le cours.</div>
+<div class="callout warn"><strong>Piège du ronéo :</strong> `f(AA)` est écrit « p·q » à plusieurs endroits, notation incohérente avec le reste. La fiche conserve les relations réellement utilisées dans les exercices : q² et fréquence des hétérozygotes.</div>
+</section>
+
+<section id="consanguinite"><h2>8. Consanguinité</h2>
+<p>Deux individus sont <strong>apparentés</strong> s’ils ont un ancêtre commun ; leurs enfants sont dits <strong>consanguins</strong>.</p>
+<p>Le coefficient estime la probabilité de recevoir deux copies identiques d’un allèle par un ancêtre commun.</p>
+<div class="callout orangebox"><strong>Exemple du support :</strong> le calcul illustré donne <strong>(1/2)<sup>7</sup> = 1/128</strong>.</div>
+<div class="callout warn">Les formules générales du coefficient sont retranscrites de manière ambiguë dans le ronéo ; je conserve donc surtout l’exemple chiffré enseigné.</div>
+</section>
+
+<section id="bayes"><h2>9. Théorème de Bayes</h2>
+<p>Il met à jour une probabilité <strong>a priori</strong> grâce à une nouvelle information.</p>
+<div class="schema">1. Probabilité a priori
+2. Probabilité conditionnelle
+3. Probabilité conjointe
+4. Probabilité a posteriori
+
+P(A|B) =
+[P(A) × P(B|A)]
+────────────────────────────────────────
+[P(A) × P(B|A)] + [P(non-A) × P(B|non-A)]</div>
+<div class="callout"><strong>Exemple du cours :</strong> risque de portage 1/50, test détectant 90 % des mutations → après test négatif, risque résiduel calculé = <strong>1/491</strong>.</div>
+<h3>Pénétrance</h3>
+<div class="schema">Pénétrance =
+nombre d'individus phénotypiquement atteints
+────────────────────────────────────────────
+nombre d'individus génotypiquement atteints</div>
+</section>
+
+<section id="cas"><h2>10. Cas pratiques à connaître</h2>
+<div class="tablewrap"><table><tr><th>Situation</th><th>Calcul</th><th>Résultat</th></tr>
+<tr><td>AR : sujet sain de deux porteurs + conjoint population générale</td><td>2/3 × 1/34 × 1/4</td><td><strong>1/204</strong></td></tr>
+<tr><td>AR : apparenté plus éloigné</td><td>1/2 × 1/34 × 1/4</td><td><strong>1/272</strong></td></tr>
+<tr><td>Ataxie de Friedreich</td><td>2/3 × 1/100 × 1/4</td><td><strong>1/600</strong></td></tr>
+<tr><td>Cas familial éloigné</td><td>1/8 × 1/2 × 1/34 × 1/2</td><td><strong>1/1088</strong></td></tr>
+<tr><td>Cas avec apparentement</td><td>1/2 × 1/8 × 1/4</td><td><strong>1/64</strong></td></tr>
+</table></div>
+<div class="callout bluebox"><strong>Règle AR :</strong> enfant sain de deux parents hétérozygotes = <strong>2/3</strong> de risque d’être porteur. Deux parents porteurs → <strong>1/4</strong> de risque d’enfant malade.</div>
+
+<h3>Duchenne / maladie récessive liée à l’X</h3>
+<p>Si la mère de Madame X est conductrice obligatoire : risque a priori <strong>1/2</strong>. Après deux garçons sains, le cours obtient un risque a posteriori de <strong>1/5</strong>.</p>
+<p>Pour les cas sporadiques XLR, le support donne <strong>9/10</strong> de probabilité qu’une mère soit hétérozygote, puis multiplie par <strong>1/2</strong> à chaque génération.</p>
+<div class="callout purplebox"><strong>Cas 8 :</strong> père atteint → fille conductrice obligatoire → jeune femme à 1/4 de risque d’être conductrice → fils à <strong>1/8</strong> de risque d’être atteint.</div>
+
+<h3>Autosomique dominant tardif</h3>
+<p>Le cas pratique présenté aboutit à un risque de <strong>1/4</strong> pour la personne A en remontant puis redescendant l’arbre.</p>
+</section>
+
+<section id="methodo"><h2>11. Méthode de calcul de risque</h2>
+<ol><li>Identifier le mode de transmission.</li><li>Partir de l’individu atteint.</li><li>Identifier les porteurs obligatoires.</li><li>Remonter puis redescendre l’arbre avec les facteurs 1/2 adaptés.</li><li>En AR, calculer le risque de portage de chaque parent.</li><li>Pour un conjoint extérieur, utiliser si besoin la fréquence populationnelle.</li><li>Multiplier par le risque mendélien final : souvent 1/4 en AR.</li><li>Si nouvelle information : appliquer Bayes.</li></ol>
+</section>
+
+<section id="pieges"><h2>12. Pièges / incohérences du support</h2>
+<div class="callout warn"><strong>Hardy-Weinberg :</strong> `f(AA)=p·q` apparaît dans le ronéo/QCM ; notation incohérente avec les calculs AR utilisés ensuite.</div>
+<div class="callout warn"><strong>Consanguinité :</strong> les exposants des formules générales sont retranscrits de manière contradictoire ; l’exemple 1/128 est celui à conserver ici.</div>
+<div class="callout warn"><strong>Cas XLR 7 :</strong> le texte calcule 9/40 × 1/2 = <strong>9/80</strong>, alors que la correction finale affiche <strong>9/160</strong>. Contradiction interne signalée.</div>
+<div class="callout warn"><strong>QCM « inceste » :</strong> formulation maladroite du corrigé. Le corps du cours distingue surtout parents apparentés et enfant consanguin.</div>
+<div class="callout warn"><strong>Conseil génétique :</strong> informer n’est jamais imposer un projet parental.</div>
+</section>
+
+<section id="recap" class="recap"><h2>Mini-récap ultra rentable</h2>
+<p><strong>Conseil génétique = informer + accompagner sans diriger.</strong> 4 étapes : diagnostic → transmission → statut → calcul de risque. <strong>AD</strong> vertical, deux sexes, père-fils possible. <strong>AR</strong> fratrie, parents sains ; enfant sain de deux porteurs = <strong>2/3</strong> de risque d’être HZ. <strong>XLR</strong> : garçons atteints, femmes conductrices. Hardy-Weinberg utilisé dans le cours : maladie AR = <strong>q²</strong> ; prévalence 1/10 000 → porteurs ≈ <strong>1/50</strong>. CFTR = <strong>1/34</strong>. Risque AR = risque mère × risque père × <strong>1/4</strong>. Bayes : a priori → conditionnelle → conjointe → a posteriori. Cas clés : <strong>1/204, 1/272, 1/600, 1/1088, 1/64</strong>. Toujours raisonner de proche en proche à partir de l’individu atteint.</p></section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « Conseil génétique et Calculs de risque ». Les chiffres, cas pratiques et formulations sont conservés selon le support ; les incohérences internes sont signalées.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+<div class="flash"><div class="q">Comment le cours définit-il une pénétrance complète ?</div><div class="a">Tous les individus porteurs d’un même génotype expriment le phénotype associé.</div></div>
+<div class="flash"><div class="q">Comment le cours définit-il une pénétrance incomplète ?</div><div class="a">Certains individus porteurs du génotype pathogène restent asymptomatiques.</div></div>
+<div class="flash"><div class="q">Qu’est-ce qu’une pénétrance retardée ?</div><div class="a">Une maladie dont la pénétrance peut être complète mais dont les symptômes apparaissent tardivement, comme Huntington vers 40-50 ans dans l’exemple du cours.</div></div>
+<div class="flash"><div class="q">Comment définir l’expressivité variable ?</div><div class="a">Des individus porteurs de la même mutation peuvent présenter des manifestations cliniques différentes en nature ou en sévérité.</div></div>
+<div class="flash"><div class="q">Quel exemple illustre la pénétrance incomplète dans le support ?</div><div class="a">La cardiomyopathie ventriculaire droite arythmogène, avec une mère porteuse asymptomatique à 60 ans.</div></div>
+<div class="flash"><div class="q">Quel exemple illustre l’expressivité variable dans le support ?</div><div class="a">La CVDA, avec des formes très différentes au sein d’une même famille, et la neurofibromatose de type 1.</div></div>
+<div class="flash"><div class="q">Quel est le but éthique central du conseil génétique ?</div><div class="a">Informer et accompagner sans imposer de choix, afin de permettre une décision autonome et éclairée.</div></div>
+<div class="flash"><div class="q">Pourquoi le terme « conseil » génétique est-il jugé imparfait ?</div><div class="a">Parce qu’il peut suggérer qu’on oriente le patient vers une décision, alors que la consultation doit rester non directive.</div></div>
+<div class="flash"><div class="q">Quels risques le conseil génétique cherche-t-il notamment à évaluer ?</div><div class="a">Risque pour le consultant d’être atteint, risque de transmission à la descendance et risque de récidive dans la famille.</div></div>
+<div class="flash"><div class="q">Quelles informations non probabilistes doivent aussi être données en conseil génétique ?</div><div class="a">Caractéristiques de la maladie, traitements, moyens de prévention de récidive et options de planification de vie/familiale.</div></div>
+<div class="flash"><div class="q">Quels professionnels peuvent réaliser un conseil génétique ?</div><div class="a">Médecin généticien, spécialiste d’organe en lien avec une équipe de génétique clinique, et conseiller en génétique sous supervision.</div></div>
+<div class="flash"><div class="q">Depuis quelle année le métier de conseiller en génétique existe-t-il en France selon le cours ?</div><div class="a">Depuis 2004.</div></div>
+<div class="flash"><div class="q">Le conseil génétique est-il réservé aux maladies rares et sévères ?</div><div class="a">Non. Il peut concerner des maladies rares ou fréquentes, sévères ou non, chromosomiques ou géniques.</div></div>
+<div class="flash"><div class="q">Quels sont les quatre temps de la démarche de conseil génétique ?</div><div class="a">Établir un diagnostic précis, définir le mode de transmission/mécanisme, définir le statut génétique du consultant, puis calculer le risque de transmission.</div></div>
+<div class="flash"><div class="q">Pourquoi faut-il parfois réévaluer un ancien diagnostic familial ?</div><div class="a">Parce que les connaissances et les techniques génétiques ont évolué et qu’un ancien diagnostic peut être incomplet ou non prouvé.</div></div>
+<div class="flash"><div class="q">Quel document est indispensable avant des examens génétiques selon le cours ?</div><div class="a">Le consentement signé du patient.</div></div>
+<div class="flash"><div class="q">Quelle contrainte importante peut compliquer l’enquête familiale ?</div><div class="a">Le secret médical, qui interdit de divulguer des informations du dossier d’un apparenté sans cadre approprié.</div></div>
+<div class="flash"><div class="q">Quelle obligation légale concernant la famille est soulignée dans le cours ?</div><div class="a">L’information de la parentèle est présentée comme une obligation légale.</div></div>
+<div class="flash"><div class="q">Quel profil d’arbre évoque une transmission autosomique dominante à pénétrance complète ?</div><div class="a">Atteinte dans toutes les générations, hommes et femmes, transmissions maternelles et paternelles, y compris père-fils.</div></div>
+<div class="flash"><div class="q">Quel profil évoque une transmission autosomique récessive ?</div><div class="a">Parents sains, atteinte souvent dans une seule fratrie, deux sexes touchés ; la consanguinité renforce l’hypothèse sans la prouver.</div></div>
+<div class="flash"><div class="q">Quel profil évoque une transmission récessive liée à l’X ?</div><div class="a">Principalement des garçons atteints avec des mères cliniquement saines/conductrices.</div></div>
+<div class="flash"><div class="q">Quel profil évoque une transmission dominante liée à l’X létale chez le garçon ?</div><div class="a">Seules les filles sont atteintes avec nombreuses fausses couches de fœtus masculins.</div></div>
+<div class="flash"><div class="q">Quel profil évoque une transmission mitochondriale ?</div><div class="a">Pas de transmission père-enfant ; les deux sexes peuvent être atteints.</div></div>
+<div class="flash"><div class="q">Pourquoi plusieurs enfants atteints de parents sains ne prouvent-ils pas toujours une transmission autosomique récessive ?</div><div class="a">Une transmission autosomique dominante peut aussi être évoquée en cas de mosaïque germinale ou de pénétrance incomplète.</div></div>
+<div class="flash"><div class="q">Dans une maladie autosomique récessive, quel statut est obligatoire pour un parent sain ayant plusieurs enfants atteints ?</div><div class="a">Il est hétérozygote obligatoire.</div></div>
+<div class="flash"><div class="q">Dans une maladie liée à l’X récessive, pourquoi la fille d’un père atteint peut-elle être conductrice obligatoire ?</div><div class="a">Parce qu’elle reçoit nécessairement son chromosome X paternel porteur de la mutation.</div></div>
+<div class="flash"><div class="q">Dans une maladie autosomique dominante avec pénétrance incomplète, pourquoi un sujet sain peut-il être hétérozygote obligatoire ?</div><div class="a">Parce que son ascendance/descendance peut démontrer la transmission de l’allèle malgré l’absence de symptômes.</div></div>
+<div class="flash"><div class="q">Que signifie la fréquence allélique ?</div><div class="a">La fréquence à laquelle un allèle est retrouvé dans une population.</div></div>
+<div class="flash"><div class="q">Quelle relation générale doit respecter la somme des fréquences alléliques d’un gène ?</div><div class="a">La somme des fréquences de tous les allèles d’un gène est égale à 1.</div></div>
+<div class="flash"><div class="q">Que représentent p et q dans le modèle simplifié du cours ?</div><div class="a">p = fréquence de l’allèle sauvage A ; q = fréquence de l’allèle morbide B.</div></div>
+<div class="flash"><div class="q">Dans une maladie autosomique récessive rare, quelle quantité représente la prévalence des malades ?</div><div class="a">q², la fréquence des homozygotes malades BB.</div></div>
+<div class="flash"><div class="q">Quelle approximation le cours utilise-t-il pour la fréquence des hétérozygotes dans une maladie autosomique récessive rare ?</div><div class="a">f(AB) ≈ 2√(q²), ce qui revient à environ 2q lorsque q est petit.</div></div>
+<div class="flash"><div class="q">Dans l’exemple d’une maladie AR touchant 1 enfant sur 10 000, quelle fréquence d’hétérozygotes est obtenue ?</div><div class="a">1/50.</div></div>
+<div class="flash"><div class="q">Quelle fréquence de portage CFTR en population générale française faut-il connaître selon le cours ?</div><div class="a">1/34.</div></div>
+<div class="flash"><div class="q">Pourquoi le risque de portage d’un conjoint sans antécédent familial doit-il quand même être pris en compte ?</div><div class="a">Parce que son risque correspond à la fréquence des hétérozygotes en population générale.</div></div>
+<div class="flash"><div class="q">Dans une fratrie issue de deux parents hétérozygotes pour une maladie AR, quel est le risque d’être hétérozygote sachant qu’on est non malade ?</div><div class="a">2/3.</div></div>
+<div class="flash"><div class="q">Pourquoi le risque conditionnel de portage chez un enfant sain de deux hétérozygotes vaut-il 2/3 ?</div><div class="a">Parmi les trois génotypes non malades possibles après exclusion du malade homozygote, deux sont hétérozygotes et un homozygote sain.</div></div>
+<div class="flash"><div class="q">Dans le cas mucoviscidose du cours, quel risque a le couple si la femme a 2/3 de risque d’être porteuse et l’homme 1/34 ?</div><div class="a">2/3 × 1/34 × 1/4 = 1/204 pour un enfant atteint.</div></div>
+<div class="flash"><div class="q">Pourquoi multiplie-t-on par 1/4 lorsque les deux parents peuvent être hétérozygotes pour une maladie AR ?</div><div class="a">Parce que si les deux sont porteurs, chacun transmet l’allèle muté avec probabilité 1/2, soit 1/2 × 1/2 = 1/4.</div></div>
+<div class="flash"><div class="q">Dans le cas 3 de mucoviscidose, quel risque final est calculé ?</div><div class="a">1/2 × 1/34 × 1/4 = 1/272.</div></div>
+<div class="flash"><div class="q">Dans le cas d’ataxie de Friedreich avec 2/3 de risque de portage et conjoint à 1/100, quel risque pour l’enfant ?</div><div class="a">2/3 × 1/100 × 1/4 = 1/600.</div></div>
+<div class="flash"><div class="q">Dans le cas éloigné présenté, quel risque final est obtenu avec 1/8 × 1/2 × 1/34 × 1/2 ?</div><div class="a">1/1088.</div></div>
+<div class="flash"><div class="q">Dans le cas consanguin présenté, quel risque final est calculé ?</div><div class="a">1/2 × 1/8 × 1/4 = 1/64.</div></div>
+<div class="flash"><div class="q">Quel enseignement compare les cas 5 et 6 ?</div><div class="a">L’apparentement augmente nettement le risque pour une maladie récessive : 1/64 est beaucoup plus élevé que 1/1088.</div></div>
+<div class="flash"><div class="q">Comment le cours distingue-t-il apparentement et consanguinité ?</div><div class="a">Deux personnes ayant un ancêtre commun sont apparentées ; leurs enfants issus de cette union sont dits consanguins.</div></div>
+<div class="flash"><div class="q">À quoi sert le coefficient de consanguinité ?</div><div class="a">À estimer la probabilité qu’un individu reçoive deux copies identiques d’un allèle du fait d’un ancêtre commun.</div></div>
+<div class="flash"><div class="q">Quel coefficient est donné pour l’exemple de cousins germains du cours ?</div><div class="a">Le calcul illustré donne (1/2)^7 = 1/128 pour l’union décrite.</div></div>
+<div class="flash"><div class="q">Quel est l’objectif du théorème de Bayes en conseil génétique ?</div><div class="a">Mettre à jour une probabilité a priori en intégrant une nouvelle information pour obtenir une probabilité a posteriori.</div></div>
+<div class="flash"><div class="q">Quel ordre de calcul Bayésien est retenu dans le QCM ?</div><div class="a">Probabilité a priori → probabilité conditionnelle → probabilité conjointe → probabilité a posteriori.</div></div>
+<div class="flash"><div class="q">Quelle formule générale du cours donne la probabilité a posteriori de A après B ?</div><div class="a">P(A|B) = [P(A) × P(B|A)] / {[P(A) × P(B|A)] + [P(non-A) × P(B|non-A)]}.</div></div>
+<div class="flash"><div class="q">Quel exemple de Bayes est donné avec une maladie AR de prévalence 1/10 000 ?</div><div class="a">Le portage a priori vaut 1/50 ; après un test négatif de sensibilité 90 %, le risque résiduel devient 1/491 dans le calcul du support.</div></div>
+<div class="flash"><div class="q">Quelle notion permet de convertir un risque génotypique en risque phénotypique ?</div><div class="a">La pénétrance.</div></div>
+<div class="flash"><div class="q">Quelle formule de pénétrance est donnée ?</div><div class="a">Nombre d’individus phénotypiquement atteints / nombre d’individus génotypiquement atteints.</div></div>
+<div class="flash"><div class="q">Dans le cas Duchenne, quel risque a priori a Madame X d’être conductrice si sa mère est conductrice obligatoire ?</div><div class="a">1/2.</div></div>
+<div class="flash"><div class="q">Comment deux fils sains modifient-ils le risque de conductrice dans l’exemple Duchenne ?</div><div class="a">Le risque a posteriori devient 1/5 dans le calcul du cours.</div></div>
+<div class="flash"><div class="q">Dans les maladies liées à l’X récessives sporadiques du cours, quelle probabilité est donnée qu’une mère d’un cas isolé soit hétérozygote ?</div><div class="a">9/10.</div></div>
+<div class="flash"><div class="q">Dans le cas XLR avec mère à 9/10 puis deux transmissions à 1/2, quel risque de conductrice atteint III-1 ?</div><div class="a">9/10 × 1/2 × 1/2 = 9/40.</div></div>
+<div class="flash"><div class="q">Dans ce même cas, quel risque final d’enfant atteint est donné ?</div><div class="a">9/40 × 1/2 = 9/80 selon le raisonnement d’un garçon recevant l’X muté ; toutefois le QCM final du support affiche 9/160, ce qui est signalé comme incohérence.</div></div>
+<div class="flash"><div class="q">Dans le cas d’hémophilie où une femme a un père atteint, quel est son statut ?</div><div class="a">Elle est conductrice obligatoire/hétérozygote obligatoire.</div></div>
+<div class="flash"><div class="q">Si une conductrice obligatoire transmet le risque de proche en proche sur deux générations à 1/2, quel risque de portage obtient la jeune femme du cas 8 ?</div><div class="a">1/4.</div></div>
+<div class="flash"><div class="q">Quel risque son fils a-t-il alors d’être atteint dans le cas 8 ?</div><div class="a">1/4 × 1/2 = 1/8.</div></div>
+<div class="flash"><div class="q">Dans une maladie autosomique dominante à révélation tardive, quel réflexe de calcul recommande la professeure ?</div><div class="a">Remonter l’arbre de proche en proche depuis l’individu concerné et multiplier les probabilités de transmission.</div></div>
+<div class="flash"><div class="q">Dans le cas pratique dominant présenté, quel risque final est attribué à la personne A ?</div><div class="a">1/4.</div></div>
+<div class="flash"><div class="q">Pourquoi un arbre généalogique détaillé est-il central en conseil génétique ?</div><div class="a">Il permet d’identifier le mode de transmission, les apparentés à risque et les individus informatifs pour le calcul.</div></div>
+<div class="flash"><div class="q">Quelle attitude relationnelle est recommandée lors de l’enquête familiale ?</div><div class="a">Beaucoup de tact et de bienveillance, avec du temps, car les histoires familiales peuvent être lourdes.</div></div>
+<div class="flash"><div class="q">Pourquoi le soutien psychologique doit-il être proposé systématiquement ?</div><div class="a">Parce que l’annonce d’un risque génétique et les décisions familiales peuvent avoir un impact psychologique important.</div></div>
+<div class="flash"><div class="q">Quel rôle peuvent jouer les associations de patients ?</div><div class="a">Apporter information, témoignages et soutien.</div></div>
+<div class="flash"><div class="q">Quelles options de prévention de transmission sont fréquemment citées dans le cours ?</div><div class="a">DPN, DPI, et dans le résumé aussi don de gamètes ou adoption.</div></div>
+<div class="flash"><div class="q">Quel principe doit guider la décision du patient après information génétique ?</div><div class="a">Une décision autonome et éclairée, sans conduite directive du professionnel.</div></div>
+<div class="flash"><div class="q">Pourquoi la consanguinité augmente-t-elle surtout le risque de maladies récessives ?</div><div class="a">Parce que deux apparentés ont davantage de probabilité de partager le même allèle pathogène hérité d’un ancêtre commun.</div></div>
+  </div>
+</section>
+
+</main></body></html>

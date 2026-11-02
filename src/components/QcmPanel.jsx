@@ -13,21 +13,34 @@ function shuffle(array) {
   return copy
 }
 
-function prepareQuestions(rawQuestions, maxQuestions) {
+function prepareQuestions(
+  rawQuestions,
+  maxQuestions,
+  shuffleQuestions = true,
+  shuffleOptions = true,
+) {
+  const orderedQuestions = shuffleQuestions
+    ? shuffle(rawQuestions)
+    : [...rawQuestions]
+
   const pickedQuestions = maxQuestions
-    ? shuffle(rawQuestions).slice(0, maxQuestions)
-    : shuffle(rawQuestions)
+    ? orderedQuestions.slice(0, maxQuestions)
+    : orderedQuestions
 
   return pickedQuestions.map((question) => {
-    const shuffledOptions = shuffle(question.options).map((option, index) => ({
+    const options = shuffleOptions
+      ? shuffle(question.options)
+      : [...question.options]
+
+    const preparedOptions = options.map((option, index) => ({
       ...option,
       letter: LETTERS[index],
     }))
 
     return {
       ...question,
-      options: shuffledOptions,
-      correctLetters: shuffledOptions
+      options: preparedOptions,
+      correctLetters: preparedOptions
         .filter((option) => option.correct)
         .map((option) => option.letter),
     }
@@ -38,7 +51,13 @@ function sameAnswers(selectedAnswers, correctAnswers) {
   return [...selectedAnswers].sort().join(',') === [...correctAnswers].sort().join(',')
 }
 
-export default function QcmPanel({ questions = [], courseTitle = 'QCM', maxQuestions }) {
+export default function QcmPanel({
+  questions = [],
+  courseTitle = 'QCM',
+  maxQuestions,
+  shuffleQuestions = true,
+  shuffleOptions = true,
+}) {
   const [sessionId, setSessionId] = useState(0)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [selectedAnswers, setSelectedAnswers] = useState([])
@@ -47,10 +66,15 @@ export default function QcmPanel({ questions = [], courseTitle = 'QCM', maxQuest
   const [finished, setFinished] = useState(false)
   const [results, setResults] = useState([])
 
-  const preparedQuestions = useMemo(
-    () => prepareQuestions(questions, maxQuestions),
-    [questions, maxQuestions, sessionId],
-  )
+const preparedQuestions = useMemo(
+  () => prepareQuestions(
+    questions,
+    maxQuestions,
+    shuffleQuestions,
+    shuffleOptions,
+  ),
+  [questions, maxQuestions, shuffleQuestions, shuffleOptions, sessionId],
+)
 
   useEffect(() => {
     setSessionId((value) => value + 1)
@@ -60,7 +84,7 @@ export default function QcmPanel({ questions = [], courseTitle = 'QCM', maxQuest
     setScore(0)
     setFinished(false)
     setResults([])
-  }, [questions, courseTitle, maxQuestions])
+  }, [questions, courseTitle, maxQuestions, shuffleQuestions, shuffleOptions])
 
   const total = preparedQuestions.length
   const currentQuestion = preparedQuestions[currentIndex]

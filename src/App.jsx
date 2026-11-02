@@ -376,13 +376,30 @@ function ProfAnnaleReader({ semester, subject, annale }) {
   return (
     <section>
       <header className="page-header">
-        <p className="eyebrow">{semester.shortTitle} · {subject.title} · Annale prof</p>
+        <p className="eyebrow">
+          {semester.shortTitle} · {subject.title} · Annale prof
+        </p>
         <h1>{annale.title}</h1>
       </header>
 
-      <div className="viewer-card">
-        <iframe className="fiche-frame" title={annale.title} src={annale.path} />
-      </div>
+      {annale.type === 'QCM' ? (
+        <div className="qcm-dock">
+          <QcmPanel
+            questions={annale.questions ?? []}
+            courseTitle={annale.title}
+            shuffleQuestions={false}
+            shuffleOptions={false}
+          />
+        </div>
+      ) : (
+        <div className="viewer-card">
+          <iframe
+            className="fiche-frame"
+            title={annale.title}
+            src={annale.path}
+          />
+        </div>
+      )}
     </section>
   )
 }

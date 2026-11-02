@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Coagulation et fibrinolyse</title>
+<style>
+:root{--g:#1a7a4a;--gs:#eaf7ef;--r:#b91c1c;--rs:#fee2e2;--o:#b45309;--os:#fff7ed;--b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--ink:#1c1c2e;--muted:#5b6474;--line:#d8dce8;--bg:#f6f7fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.58}
+.page{max-width:1180px;margin:auto;padding:32px 18px 72px}.hero{background:linear-gradient(135deg,#fff,#f0fdf4 55%,#eef9ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}h1{font-size:39px;line-height:1.08;margin:8px 0 12px;letter-spacing:-.035em}.subtitle{margin:0;color:#374151;max-width:1080px}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}.green{background:var(--gs);color:#166534}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.blue{background:var(--bs);color:#1d4ed8}.purple{background:var(--ps);color:#5b21b6}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav li{margin:5px 0}nav a{color:inherit;text-decoration:none}section{padding:24px;margin:18px 0;box-shadow:0 10px 28px rgba(31,41,55,.035)}h2{font-size:25px;letter-spacing:-.02em;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}p{margin:8px 0}ul,ol{padding-left:22px;margin:8px 0 12px}li{margin:4px 0}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,monospace;font-size:13px;white-space:pre-wrap;overflow-x:auto}.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.2px;min-width:820px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.flash .q{background:#f9fafb;padding:11px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:11px 12px;color:#374151}.source-note{font-size:12.5px;color:var(--muted);margin:18px 4px}
+@media(max-width:780px){h1{font-size:29px}.grid2,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{min-width:680px;font-size:12.1px}}@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}section,.hero{box-shadow:none}}
+</style></head>
+<body><main class="page">
+
+<header class="hero">
+<div class="kicker">Hématologie - Hémostase séance 2</div>
+<h1>Coagulation et fibrinolyse</h1>
+<p class="subtitle">Fiche complète D1/EDN/QCM : facteur tissulaire, facteurs de coagulation et vitamine K, génération de thrombine, formation de fibrine, sémiologie, TP/TCA, test du mélange, fibrinolyse, D-dimères, hyperfibrinolyse et CIVD.</p>
+<div class="tags"><span class="tag green">Facteur tissulaire</span><span class="tag purple">Vitamine K</span><span class="tag blue">TP / TCA</span><span class="tag orange">Fibrinolyse</span><span class="tag red">CIVD</span></div>
+<div class="actions"><button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button><button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button></div>
+</header>
+
+<nav><h2>Plan rapide</h2><ol>
+<li><a href="#generalites">Généralités</a></li><li><a href="#ft">Facteur tissulaire</a></li><li><a href="#facteurs">Facteurs</a></li><li><a href="#vitk">Vitamine K</a></li><li><a href="#surface">Surface plaquettaire</a></li><li><a href="#thrombine">Thrombine</a></li><li><a href="#fibrine">Fibrine</a></li><li><a href="#semiologie">Sémiologie</a></li><li><a href="#tp">TP</a></li><li><a href="#tca">TCA</a></li><li><a href="#interpretation">Interprétation</a></li><li><a href="#melange">Test du mélange</a></li><li><a href="#fibrinolyse">Fibrinolyse</a></li><li><a href="#ddimeres">D-dimères</a></li><li><a href="#hyperfibrinolyse">Hyperfibrinolyse</a></li><li><a href="#civd">CIVD</a></li><li><a href="#tableau">Tableau maître</a></li><li><a href="#pieges">Pièges</a></li><li><a href="#recap">Mini-récap</a></li><li><a href="#flashcards">Flashcards express</a></li></ol></nav>
+
+<section id="generalites"><h2>1. Généralités</h2>
+<div class="schema">Hémostase primaire → thrombus plaquettaire instable
+Coagulation → fibrine → thrombus fibrino-plaquettaire stable
+Fibrinolyse → dissolution du caillot après réparation</div>
+<div class="callout"><strong>But :</strong> la coagulation consolide le thrombus plaquettaire grâce à la fibrine ; la fibrinolyse remet ensuite le vaisseau dans son état initial.</div>
+</section>
+
+<section id="ft"><h2>2. Facteur tissulaire</h2>
+<ul><li>Normalement hors contact du sang.</li><li>Présent dans le sous-endothélium, notamment les fibroblastes de la paroi externe et certaines capsules d’organes.</li><li>Exposé lors d’une brèche vasculaire.</li><li>Peut être exprimé par monocytes activés et endothélium lésé/activé.</li></ul>
+<div class="schema">Brèche → exposition FT → FT + FVII/FVIIa → cascade → thrombine</div>
+<div class="callout warn"><strong>CIVD :</strong> l’excès de FT est le point de départ majeur du cours.</div>
+</section>
+
+<section id="facteurs"><h2>3. Facteurs de coagulation</h2>
+<div class="tablewrap"><table><tr><th>Facteur</th><th>Repère</th></tr>
+<tr><td>I</td><td>Fibrinogène</td></tr><tr><td>II</td><td>Prothrombine → thrombine</td></tr><tr><td>V</td><td>Cofacteur ; marqueur d’hépatopathie sévère</td></tr><tr><td>VII</td><td>Exploré surtout par TP</td></tr><tr><td>VIII</td><td>Anti-hémophilique A</td></tr><tr><td>IX</td><td>Anti-hémophilique B</td></tr><tr><td>X, XI, XII</td><td>Facteurs de cascade</td></tr><tr><td>XIII</td><td>Stabilise la fibrine</td></tr></table></div>
+</section>
+
+<section id="vitk"><h2>4. Vitamine K</h2>
+<ul><li>Sources : légumes verts + microbiote intestinal.</li><li>Absorption : iléon → système porte → foie.</li><li>Carences : nouveau-né, dénutrition, antibiothérapie large spectre, cholestase/malabsorption.</li></ul>
+<div class="schema">Vit K oxydée inactive → VKOR → Vit K réduite active
+→ gamma-carboxylase → II, VII, IX, X gamma-carboxylés
+→ résidus Gla négatifs → Ca2+ → fixation aux phospholipides négatifs</div>
+</section>
+
+<section id="surface"><h2>5. Surface plaquettaire</h2>
+<p>Le flip-flop des plaquettes activées expose des phospholipides négatifs. Les facteurs gamma-carboxylés s’y concentrent via le calcium.</p>
+<div class="callout bluebox"><strong>Conséquence :</strong> accélération locale de la cascade et génération rapide de thrombine au niveau de la brèche.</div>
+</section>
+
+<section id="thrombine"><h2>6. Thrombine</h2>
+<ul><li>Thrombine = <strong>FIIa</strong>.</li><li>Fibrinogène → fibrine.</li><li>Activation FV, FVIII, FXI et FXIII selon les Wooclap.</li></ul>
+<div class="callout"><strong>La cascade doit rester localisée.</strong> Une génération diffuse de thrombine favorise la thrombose.</div>
+</section>
+
+<section id="fibrine"><h2>7. Formation et stabilisation de la fibrine</h2>
+<div class="schema">Fibrinogène D-E-D
+→ thrombine retire fibrinopeptides A et B
+→ monomères de fibrine
+→ polymérisation spontanée
+→ FXIIIa
+→ liaisons covalentes croisées
+→ fibrine stable</div>
+</section>
+
+<section id="semiologie"><h2>8. Sémiologie</h2>
+<div class="tablewrap"><table><tr><th>Hémostase primaire</th><th>Coagulation</th></tr>
+<tr><td>Petits vaisseaux</td><td>Gros vaisseaux</td></tr><tr><td>Cutaneo-muqueux</td><td>Tissus profonds</td></tr><tr><td>Spontané</td><td>Traumatisme minime</td></tr><tr><td>Purpura</td><td>Hémarthrose</td></tr></table></div>
+<div class="callout orangebox"><strong>Congénital :</strong> rare, souvent précoce. <strong>Acquis :</strong> plus fréquent, plutôt adulte et associé à une pathologie sous-jacente.</div>
+</section>
+
+<section id="tp"><h2>9. Temps de Quick / TP</h2>
+<p>Plasma citraté + calcium + facteur tissulaire + phospholipides.</p>
+<ul><li>Quick normal ≈ <strong>12 s</strong>.</li><li>TP normal : <strong>≥70 %</strong>.</li><li>Explore : <strong>VII, X, V, II, fibrinogène</strong>.</li></ul>
+</section>
+
+<section id="tca"><h2>10. TCA</h2>
+<p>Plasma citraté recalcifié + céphaline/phospholipides + activateur de phase contact.</p>
+<ul><li>Ratio malade/témoin.</li><li>Normal : <strong>&lt;1,2</strong>.</li><li>Explore : <strong>XII, XI, IX, VIII</strong> + X, V, II.</li></ul>
+<div class="callout warn"><strong>FXII :</strong> son déficit peut allonger le TCA sans syndrome hémorragique selon le support.</div>
+</section>
+
+<section id="interpretation"><h2>11. Interprétation TP / TCA</h2>
+<div class="tablewrap"><table><tr><th>TP</th><th>TCA</th><th>Orientation</th></tr>
+<tr><td>↓</td><td>Normal</td><td>FVII</td></tr>
+<tr><td>Normal</td><td>↑</td><td>FVIII, FIX, FXI, FXII ou anticoagulant circulant</td></tr>
+<tr><td>↓</td><td>↑</td><td>FII, FV, FX et/ou fibrinogène</td></tr></table></div>
+<div class="callout"><strong>Valeurs :</strong> fibrinogène 2-4 g/L ; II/V/X 70-150 % ; VIII/IX/XI 50-150 %.</div>
+</section>
+
+<section id="melange"><h2>12. Test du mélange</h2>
+<div class="schema">50 % plasma patient + 50 % plasma témoin → TCA
+Correction → déficit factoriel
+Pas de correction → inhibiteur / ACC</div>
+<div class="tablewrap"><table><tr><th>Situation</th><th>Interprétation</th></tr>
+<tr><td>ACC absent + 1 facteur ↓</td><td>Déficit factoriel congénital → hémorragique</td></tr>
+<tr><td>ACC présent + 1 facteur ↓</td><td>ACC anti-facteur, anti-FVIII +++ → hémorragique ++</td></tr>
+<tr><td>ACC présent + facteurs normaux</td><td>ACC lupique/antiphospholipide → thrombotique</td></tr></table></div>
+</section>
+
+<section id="fibrinolyse"><h2>13. Fibrinolyse</h2>
+<div class="schema">Endothélium → t-PA → plasminogène → plasmine
+→ dégradation fibrine → PDF / D-dimères
+
+PAI ┤ t-PA
+α2-antiplasmine ┤ plasmine</div>
+</section>
+
+<section id="ddimeres"><h2>14. D-dimères</h2>
+<ul><li>Jusqu’à 50 ans : <strong>&lt;500 ng/mL</strong>.</li><li>Après 50 ans : <strong>&lt; âge ×10 ng/mL</strong>.</li></ul>
+<div class="callout warn"><strong>Non spécifiques :</strong> âge, infections, grossesse, cancer, affections hépatiques peuvent les augmenter.</div>
+<div class="callout bluebox"><strong>Très utile pour exclure :</strong> un taux sous le seuil dans un contexte adapté a une excellente valeur prédictive négative pour une thrombose veineuse.</div>
+</section>
+
+<section id="hyperfibrinolyse"><h2>15. Hyperfibrinolyse</h2>
+<p>Excès d’activation de la plasmine → destruction excessive de fibrine et risque hémorragique.</p>
+<ul><li>Fibrinogène ↓</li><li>FVIII ↓</li><li>FV ↓</li><li>GPIb plaquettaire dégradée dans le support</li></ul>
+</section>
+
+<section id="civd"><h2>16. CIVD</h2>
+<div class="schema">FT ↑↑ → coagulation diffuse → thrombine ↑↑
+→ microthrombi + consommation facteurs/plaquettes
+→ fibrinolyse/plasmine ↑
+→ D-dimères/PDF ↑
+→ hémorragie + thrombose</div>
+<div class="tablewrap"><table><tr><th>Paramètre</th><th>CIVD</th></tr>
+<tr><td>TP</td><td>↓</td></tr><tr><td>TCA</td><td>↑</td></tr><tr><td>Fibrinogène</td><td>↓</td></tr><tr><td>Plaquettes</td><td>↓</td></tr><tr><td>D-dimères / PDF</td><td>↑</td></tr><tr><td>FV / FVIII</td><td>↓</td></tr></table></div>
+</section>
+
+<section id="tableau"><h2>17. Tableau maître</h2>
+<div class="tablewrap"><table>
+<tr><th>Situation</th><th>TP</th><th>TCA</th><th>Fibrinogène</th><th>Orientation</th></tr>
+<tr><td>Déficit FVII</td><td>↓</td><td>N</td><td>N</td><td>FVII</td></tr>
+<tr><td>Hémophilie A/B</td><td>N</td><td>↑</td><td>N</td><td>FVIII / FIX</td></tr>
+<tr><td>ACC anti-FVIII</td><td>N</td><td>↑ non corrigé</td><td>N</td><td>Hémophilie acquise</td></tr>
+<tr><td>ACC lupique</td><td>N</td><td>↑ non corrigé</td><td>N</td><td>Risque thrombotique</td></tr>
+<tr><td>Hypovit K / hépatopathie modérée</td><td>↓</td><td>±↑</td><td>N</td><td>II/X ↓, V normal</td></tr>
+<tr><td>Hépatopathie sévère</td><td>↓</td><td>↑</td><td>N ou ↓</td><td>II/V/X ↓</td></tr>
+<tr><td>CIVD</td><td>↓</td><td>↑</td><td>↓</td><td>D-dimères ↑, plaquettes ↓</td></tr>
+</table></div>
+</section>
+
+<section id="pieges"><h2>18. Pièges / incohérences du ronéo</h2>
+<div class="callout warn"><strong>1.</strong> Un passage cite « XIII, IX, XI, XII » pour le TCA isolé alors que l’ensemble du cours et les Wooclap retiennent surtout <strong>VIII, IX, XI, XII</strong>.</div>
+<div class="callout warn"><strong>2.</strong> Les seuils hémostatiques sont formulés de façon variable : le corrigé retient surtout VII ≈15-20 % et VIII/IX ≈30-50 %, alors que les valeurs usuelles sont données séparément.</div>
+<div class="callout warn"><strong>3.</strong> Le cours intègre la CIVD à la partie hyperfibrinolyse, mais décrit bien un démarrage par coagulation diffuse et génération excessive de thrombine.</div>
+<div class="callout warn"><strong>4.</strong> D-dimères : très bons pour exclure lorsqu’ils sont bas dans un contexte adapté, mais non spécifiques lorsqu’ils sont élevés.</div>
+<div class="callout warn"><strong>5.</strong> Le Wooclap corrige explicitement « gamma-hydroxylase » en <strong>gamma-carboxylase</strong>.</div>
+</section>
+
+<section id="recap" class="recap"><h2>Mini-récap ultra rentable</h2>
+<p><strong>FT + FVIIa</strong> démarre la coagulation. <strong>FIIa = thrombine</strong> : fibrinogène → fibrine + activation V/VIII/XI/XIII. <strong>Vit K : II/VII/IX/X</strong>, VKOR + gamma-carboxylase + Ca²⁺ + phospholipides négatifs. <strong>TP</strong> : VII/X/V/II/fibrinogène, normal ≥70 %. <strong>TCA</strong> : XII/XI/IX/VIII + X/V/II, normal &lt;1,2. TP↓ isolé = VII ; TCA↑ isolé = VIII/IX/XI/XII ou ACC ; TP↓ + TCA↑ = II/V/X/fibrinogène. Mélange corrigé = déficit ; non corrigé = inhibiteur. <strong>Fibrinolyse :</strong> t-PA → plasminogène → plasmine → D-dimères. <strong>CIVD :</strong> FT↑ → thrombine↑ → microthrombi + consommation + plasmine↑ → TP↓, TCA↑, fibrinogène↓, plaquettes↓, D-dimères↑.</p></section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « 6 - COAGULATION ET FIBRINOLYSE ». Les chiffres, seuils, interprétations et incohérences sont conservés selon le support.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+<div class="flash"><div class="q">Quelles sont les trois grandes étapes de l’hémostase selon le cours ?</div><div class="a">Hémostase primaire, coagulation ou hémostase secondaire, puis fibrinolyse.</div></div>
+<div class="flash"><div class="q">Quel est le rôle principal de la coagulation ?</div><div class="a">Consolider le thrombus plaquettaire instable grâce à la formation d’un réseau de fibrine.</div></div>
+<div class="flash"><div class="q">De quelle protéine dérive la fibrine ?</div><div class="a">Du fibrinogène.</div></div>
+<div class="flash"><div class="q">Quel est le rôle de la fibrinolyse ?</div><div class="a">Dissoudre le caillot devenu inutile après réparation du vaisseau et permettre la reperméabilisation.</div></div>
+<div class="flash"><div class="q">Où se trouve physiologiquement le facteur tissulaire ?</div><div class="a">Dans le sous-endothélium, notamment les fibroblastes de la paroi externe, ainsi que certaines cellules d’organes et couches épithéliales.</div></div>
+<div class="flash"><div class="q">Pourquoi le facteur tissulaire n’est-il normalement pas au contact du sang ?</div><div class="a">Parce que son contact avec les facteurs de coagulation circulants pourrait déclencher une coagulation inappropriée.</div></div>
+<div class="flash"><div class="q">Dans quelles situations pathologiques le facteur tissulaire peut-il être exprimé ?</div><div class="a">Par des monocytes activés ou des cellules endothéliales lésées/activées, notamment lors d’une CIVD.</div></div>
+<div class="flash"><div class="q">Quel complexe initie la cascade de coagulation dans le cours ?</div><div class="a">Le complexe facteur tissulaire-FVIIa.</div></div>
+<div class="flash"><div class="q">Quel organe synthétise la majorité des facteurs de coagulation ?</div><div class="a">Le foie.</div></div>
+<div class="flash"><div class="q">Quel facteur est synthétisé par le système réticulo-endothélial selon le support ?</div><div class="a">Le facteur VIII.</div></div>
+<div class="flash"><div class="q">Quels facteurs sont vitamine K-dépendants ?</div><div class="a">Les facteurs II, VII, IX et X.</div></div>
+<div class="flash"><div class="q">Quelle source alimentaire de vitamine K est citée ?</div><div class="a">Les légumes verts.</div></div>
+<div class="flash"><div class="q">Quelle source endogène de vitamine K est citée ?</div><div class="a">La production par les bactéries du microbiote intestinal.</div></div>
+<div class="flash"><div class="q">Où la vitamine K est-elle absorbée ?</div><div class="a">Au niveau de l’iléon, puis elle rejoint le foie par le système porte.</div></div>
+<div class="flash"><div class="q">Quelles situations peuvent entraîner une carence en vitamine K ?</div><div class="a">Nouveau-né, dénutrition, antibiothérapie à large spectre et troubles d’absorption comme la cholestase.</div></div>
+<div class="flash"><div class="q">Quelle forme de la vitamine K est active ?</div><div class="a">La forme réduite.</div></div>
+<div class="flash"><div class="q">Quelle enzyme régénère la vitamine K réduite ?</div><div class="a">La vitamine K époxyde réductase, VKOR.</div></div>
+<div class="flash"><div class="q">Quelle enzyme utilise la vitamine K réduite pour rendre les facteurs fonctionnels ?</div><div class="a">La gamma-carboxylase.</div></div>
+<div class="flash"><div class="q">Que fait la gamma-carboxylation ?</div><div class="a">Elle ajoute un groupement carboxyle sur des résidus glutamate, formant des résidus Gla chargés négativement.</div></div>
+<div class="flash"><div class="q">Pourquoi les résidus Gla sont-ils importants ?</div><div class="a">Ils permettent aux facteurs vitamine K-dépendants de se fixer aux phospholipides négatifs via un pont calcique.</div></div>
+<div class="flash"><div class="q">Quel phénomène plaquettaire expose des phospholipides négatifs en surface ?</div><div class="a">Le flip-flop membranaire des plaquettes activées.</div></div>
+<div class="flash"><div class="q">Quel rôle joue le calcium dans l’assemblage des complexes de coagulation ?</div><div class="a">Il fait le pont entre les facteurs gamma-carboxylés chargés négativement et les phospholipides plaquettaires eux aussi négatifs.</div></div>
+<div class="flash"><div class="q">Pourquoi la coagulation se déroule-t-elle préférentiellement à la surface des plaquettes activées ?</div><div class="a">Parce que leurs phospholipides négatifs concentrent les facteurs et accélèrent les réactions enzymatiques.</div></div>
+<div class="flash"><div class="q">Quelle est la séquence simplifiée de l’hémostase primaire avant la coagulation ?</div><div class="a">Vasoconstriction, adhésion, activation puis agrégation plaquettaire.</div></div>
+<div class="flash"><div class="q">Quel couple assure l’agrégation plaquettaire finale rappelée dans ce cours ?</div><div class="a">Fibrinogène reliant deux récepteurs GPIIb/IIIa.</div></div>
+<div class="flash"><div class="q">Qu’est-ce que la thrombine ?</div><div class="a">Le facteur II activé, FIIa.</div></div>
+<div class="flash"><div class="q">Pourquoi la thrombine est-elle l’enzyme clé de la coagulation ?</div><div class="a">Elle transforme le fibrinogène en fibrine et amplifie plusieurs étapes de la cascade.</div></div>
+<div class="flash"><div class="q">Quels facteurs sont activés par la thrombine selon les Wooclap du cours ?</div><div class="a">Les facteurs V, VIII, XI et XIII.</div></div>
+<div class="flash"><div class="q">Quel rôle joue le facteur XIII ?</div><div class="a">Il stabilise le réseau de fibrine en créant des liaisons covalentes entre les monomères.</div></div>
+<div class="flash"><div class="q">Quels domaines structuraux du fibrinogène sont cités ?</div><div class="a">Deux domaines D périphériques et un domaine central E.</div></div>
+<div class="flash"><div class="q">Que clive la thrombine sur le fibrinogène ?</div><div class="a">Les fibrinopeptides A et B.</div></div>
+<div class="flash"><div class="q">Que devient le fibrinogène après clivage par la thrombine ?</div><div class="a">Des monomères de fibrine qui polymérisent spontanément.</div></div>
+<div class="flash"><div class="q">Pourquoi la fibrine polymérisée doit-elle encore être stabilisée ?</div><div class="a">Parce que le réseau initial est encore instable jusqu’à l’action du FXIIIa.</div></div>
+<div class="flash"><div class="q">Quels éléments orientent vers un déficit congénital de coagulation ?</div><div class="a">Début souvent précoce, rareté et antécédents familiaux possibles.</div></div>
+<div class="flash"><div class="q">Quelle proportion d’hémophilie A peut être due à une nouvelle mutation selon le cours ?</div><div class="a">Environ 30 %.</div></div>
+<div class="flash"><div class="q">Quels éléments orientent vers un déficit acquis ?</div><div class="a">Survenue plus fréquente chez l’adulte et association à une maladie sous-jacente.</div></div>
+<div class="flash"><div class="q">Quel profil hémorragique évoque un trouble de l’hémostase primaire ?</div><div class="a">Petits vaisseaux, saignements cutanéo-muqueux spontanés, purpura.</div></div>
+<div class="flash"><div class="q">Quel profil hémorragique évoque plutôt un trouble de la coagulation ?</div><div class="a">Atteinte des gros vaisseaux, tissus profonds, saignements après traumatisme minime et hémarthroses.</div></div>
+<div class="flash"><div class="q">Quels examens constituent le bilan biologique initial de la coagulation ?</div><div class="a">Hémogramme, TP et TCA.</div></div>
+<div class="flash"><div class="q">Quel anticoagulant est utilisé dans le tube de coagulation ?</div><div class="a">Le citrate, dans un tube à bouchon bleu clair.</div></div>
+<div class="flash"><div class="q">Pourquoi ajoute-t-on des phospholipides dans les tests de coagulation ?</div><div class="a">Parce que la centrifugation élimine les plaquettes, donc leur surface phospholipidique doit être remplacée artificiellement.</div></div>
+<div class="flash"><div class="q">Quels réactifs sont ajoutés pour mesurer le TP ?</div><div class="a">Calcium, facteur tissulaire et phospholipides.</div></div>
+<div class="flash"><div class="q">Quel temps de Quick normal approximatif est donné ?</div><div class="a">Environ 12 secondes.</div></div>
+<div class="flash"><div class="q">Quelle valeur de TP est considérée normale ?</div><div class="a">Généralement supérieure ou égale à 70 %.</div></div>
+<div class="flash"><div class="q">Quels facteurs sont explorés par le TP ?</div><div class="a">VII, X, V, II et fibrinogène.</div></div>
+<div class="flash"><div class="q">Comment le TCA est-il exprimé dans le cours ?</div><div class="a">Sous forme d’un ratio temps malade / temps témoin.</div></div>
+<div class="flash"><div class="q">Quelle valeur normale du ratio TCA est donnée chez l’adulte ?</div><div class="a">Inférieure à 1,2.</div></div>
+<div class="flash"><div class="q">Quels facteurs sont principalement explorés par le TCA ?</div><div class="a">XII, XI, IX, VIII, ainsi que X, V et II en commun avec le TP.</div></div>
+<div class="flash"><div class="q">Quel facteur allonge le TCA sans entraîner réellement de problème hémorragique selon la professeure ?</div><div class="a">Le facteur XII.</div></div>
+<div class="flash"><div class="q">Vers quel déficit oriente un TP diminué isolé avec TCA normal ?</div><div class="a">Un déficit en facteur VII.</div></div>
+<div class="flash"><div class="q">Quels facteurs faut-il évoquer devant un TCA allongé isolé ?</div><div class="a">VIII, IX, XI et XII, ainsi qu’un anticoagulant circulant.</div></div>
+<div class="flash"><div class="q">Quel est le principe du test du mélange ?</div><div class="a">Mélanger 50 % de plasma patient et 50 % de plasma témoin puis refaire le TCA.</div></div>
+<div class="flash"><div class="q">Que signifie la correction du TCA après test du mélange ?</div><div class="a">Elle oriente vers un déficit en facteur.</div></div>
+<div class="flash"><div class="q">Que signifie l’absence de correction du TCA après test du mélange ?</div><div class="a">Elle oriente vers la présence d’un inhibiteur ou anticoagulant circulant.</div></div>
+<div class="flash"><div class="q">Quelle situation associe anticoagulant circulant et facteur diminué avec risque hémorragique important ?</div><div class="a">Un ACC anti-facteur, notamment anti-FVIII dans l’hémophilie A acquise.</div></div>
+<div class="flash"><div class="q">Que signifie ACC avec facteurs normaux selon le cours ?</div><div class="a">Un anticoagulant lupique/antiphospholipide associé à un risque thrombotique.</div></div>
+<div class="flash"><div class="q">Quels facteurs sont à rechercher si TP diminué et TCA allongé avec fibrinogène normal ?</div><div class="a">Facteurs II, V et X.</div></div>
+<div class="flash"><div class="q">Quelle est la valeur normale du fibrinogène ?</div><div class="a">2 à 4 g/L.</div></div>
+<div class="flash"><div class="q">Quelles valeurs usuelles sont données pour les facteurs II, V et X ?</div><div class="a">70 à 150 %.</div></div>
+<div class="flash"><div class="q">Quelles valeurs usuelles sont données pour les facteurs VIII, IX et XI ?</div><div class="a">50 à 150 %.</div></div>
+<div class="flash"><div class="q">Quel profil biologique oriente vers une hypovitaminose K ou une hépatopathie modérée ?</div><div class="a">Facteurs II et X diminués avec facteur V normal, dans un contexte TP/TCA perturbés et fibrinogène normal.</div></div>
+<div class="flash"><div class="q">Quel facteur est considéré comme marqueur d’hépatopathie sévère ?</div><div class="a">Le facteur V.</div></div>
+<div class="flash"><div class="q">Quel profil suggère une hépatopathie sévère ?</div><div class="a">Diminution des facteurs II, V et X, avec fibrinogène pouvant commencer à diminuer.</div></div>
+<div class="flash"><div class="q">Quelles causes évoquer devant un fibrinogène &lt;2 g/L avec II, V, X normaux ?</div><div class="a">Hypofibrinogénémie quantitative ou dysfibrinogénémie qualitative.</div></div>
+<div class="flash"><div class="q">Quelles causes évoquer devant fibrinogène &lt;2 g/L avec II, V et X abaissés ?</div><div class="a">Hépatopathie sévère ou CIVD.</div></div>
+<div class="flash"><div class="q">Quel est le précurseur inactif de la plasmine ?</div><div class="a">Le plasminogène.</div></div>
+<div class="flash"><div class="q">Quelle est l’enzyme active de la fibrinolyse ?</div><div class="a">La plasmine.</div></div>
+<div class="flash"><div class="q">Quel est l’activateur principal du plasminogène ?</div><div class="a">Le t-PA, tissue plasminogen activator.</div></div>
+<div class="flash"><div class="q">Quelle cellule synthétise et stocke le t-PA ?</div><div class="a">La cellule endothéliale.</div></div>
+<div class="flash"><div class="q">Quel inhibiteur bloque les activateurs du plasminogène ?</div><div class="a">Le PAI, plasminogen activator inhibitor.</div></div>
+  </div>
+</section>
+
+</main></body></html>
