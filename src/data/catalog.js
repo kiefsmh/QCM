@@ -176,8 +176,8 @@ function getOrCreateCourse(semesterId, subjectId, courseId) {
 
 for (const [path, html] of Object.entries(ficheModules)) {
   const match = path.match(
-  /\.\.\/content\/annales\/profs\/([^/]+)\/([^/]+)\/([^/]+)\.js$/
-)
+    /\.\.\/content\/fiches\/([^/]+)\/([^/]+)\/([^/]+)\.html$/
+  )
 
   if (!match) continue
 
@@ -235,7 +235,7 @@ for (const [path, url] of Object.entries(profAnnaleModules)) {
 }
 for (const [path, module] of Object.entries(profAnnaleJsModules)) {
   const match = path.match(
-    /\.\/annales\/profs\/([^/]+)\/([^/]+)\/([^/]+)\.js$/
+    /\.\.\/content\/annales\/profs\/([^/]+)\/([^/]+)\/([^/]+)\.js$/
   )
 
   if (!match) continue
