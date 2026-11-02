@@ -13,7 +13,7 @@ const profAnnaleModules = import.meta.glob('../content/annales/profs/**/*.{pdf,h
   import: 'default',
   eager: true,
 })
-const profAnnaleJsModules = import.meta.glob('./annales/profs/**/*.js', {
+const profAnnaleJsModules = import.meta.glob('../content/annales/profs/**/*.js', {
   eager: true,
 })
 
@@ -175,7 +175,9 @@ function getOrCreateCourse(semesterId, subjectId, courseId) {
 }
 
 for (const [path, html] of Object.entries(ficheModules)) {
-  const match = path.match(/\.\.\/content\/fiches\/([^/]+)\/([^/]+)\/([^/]+)\.html$/)
+  const match = path.match(
+  /\.\.\/content\/annales\/profs\/([^/]+)\/([^/]+)\/([^/]+)\.js$/
+)
 
   if (!match) continue
 
