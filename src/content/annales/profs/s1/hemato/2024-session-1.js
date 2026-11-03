@@ -1,6 +1,6 @@
 
 export const meta = {
-  title: 'UE13 Tissu sanguin — Annales 2024 — Session 1',
+  title: 'Annales 2024 — Session 1',
 };
 
 const annale = [

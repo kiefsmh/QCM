@@ -1,6 +1,6 @@
 
 export const meta = {
-  title: 'UE5 Génétique médicale — Annales 2024 — Session 1',
+  title: 'Annales 2024 — Session 1',
 };
 
 // Réponses STRICTEMENT conformes à la grille officielle.

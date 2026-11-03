@@ -1,6 +1,6 @@
 
 export const meta = {
-  title: 'UE13 Tissu sanguin — Annales 2024 — Session 2',
+  title: 'Annales 2024 — Session 2',
 };
 
 // Les réponses sont reprises STRICTEMENT de la grille officielle.

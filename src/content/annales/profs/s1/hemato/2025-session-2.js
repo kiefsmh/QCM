@@ -1,6 +1,6 @@
 
 export const meta = {
-  title: 'UE Tissu sanguin — Annales 2025 — Session 2',
+  title: 'Annales 2025 — Session 2',
 };
 
 // Réponses strictement conformes à la grille officielle.
