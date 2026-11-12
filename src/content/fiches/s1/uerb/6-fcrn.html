@@ -1,0 +1,230 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FcRn - Récepteur néonatal du Fc des IgG</title><style>
+:root{--g:#1a7a4a;--gs:#eaf7ef;--r:#b91c1c;--rs:#fee2e2;--o:#b45309;--os:#fff7ed;--b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--teal:#0f766e;--ts:#ecfeff;--ink:#1c1c2e;--line:#d8dce8;--bg:#f6f7fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.58}.page{max-width:1180px;margin:auto;padding:32px 18px 72px}
+.hero{background:linear-gradient(135deg,#fff,#f0fdf4 52%,#eef9ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}h1{font-size:38px;line-height:1.08;margin:8px 0 12px}.subtitle{margin:0;color:#374151}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}.green{background:var(--gs);color:#166534}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.blue{background:var(--bs);color:#1d4ed8}.purple{background:var(--ps);color:#5b21b6}.teal{background:var(--ts);color:#0f766e}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav li{margin:5px 0}nav a{color:inherit;text-decoration:none}section{padding:24px;margin:18px 0}h2{font-size:25px;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}p{margin:8px 0}ul,ol{padding-left:22px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:14px}.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}.tealbox{border-left-color:var(--teal);background:var(--ts)}.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,monospace;white-space:pre-wrap}.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}table{width:100%;border-collapse:collapse;font-size:13.2px;min-width:820px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}.flash .q{background:#f9fafb;padding:11px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:11px 12px;color:#374151}.source-note{font-size:12.5px;color:#5b6474}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{min-width:680px}}@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}}
+</style></head><body><main class="page">
+<header class="hero"><div class="kicker">UERB - Immunologie</div><h1>FcRn - Récepteur néonatal du Fc des IgG</h1><p class="subtitle">Fiche complète orientée recherche : structure/fonctions du FcRn, liaison pH-dépendante aux IgG et à l’albumine, recyclage/transcytose, ingénierie d’anticorps thérapeutiques, modèles KO/transgéniques, allotypes IgG1, fonctions immunitaires et anti-tumorales, VNTR de FCGRT et impact pharmacocinétique.</p><div class="tags"><span class="tag green">Recyclage</span><span class="tag purple">Transcytose</span><span class="tag blue">IgG / Albumine</span><span class="tag orange">PK/PD</span><span class="tag red">Recherche expérimentale</span><span class="tag teal">FcRn & cancer</span></div><div class="actions"><button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button><button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button></div></header>
+
+<nav><h2>Plan rapide</h2><ol>
+<li><a href="#intro">IgG et FcRn</a></li><li><a href="#decouverte">Découverte</a></li><li><a href="#fonctions">Fonctions</a></li><li><a href="#recyclage">Recyclage</a></li><li><a href="#transcytose">Transcytose</a></li><li><a href="#variabilite">Variabilité PK/PD</a></li><li><a href="#structure">Structure</a></li><li><a href="#igg">Interaction IgG-FcRn</a></li><li><a href="#albumine">Albumine-FcRn</a></li><li><a href="#outils">Modèles expérimentaux</a></li><li><a href="#engineering">Ingénierie des Ac</a></li><li><a href="#allotypes">Allotypes IgG1</a></li><li><a href="#transcytose-test">Tests fonctionnels</a></li><li><a href="#ri">Fonctions immunitaires</a></li><li><a href="#cancer">Réponse anti-tumorale</a></li><li><a href="#vntr">VNTR FCGRT</a></li><li><a href="#pieges">Pièges / nuances</a></li><li><a href="#recap">Mini-récap</a></li><li><a href="#flashcards">Flashcards express</a></li></ol></nav>
+
+<section id="intro"><h2>1. Introduction : où se place le FcRn ?</h2>
+<div class="grid2"><div class="card"><strong>Fab</strong><p>Reconnaît l’antigène : spécificité de l’anticorps.</p></div><div class="card"><strong>Fc</strong><p>Recrute récepteurs/complement et porte des fonctions effectrices ainsi qu’une partie de la pharmacocinétique.</p></div></div>
+<p>Le FcRn appartient aux récepteurs des IgG mais se distingue des Fcγ-récepteurs classiques par sa localisation <strong>majoritairement intracellulaire/endosomale</strong> et sa liaison aux ligands à <strong>pH acide</strong>.</p>
+<div class="callout"><strong>Deux rôles majeurs :</strong> transcytose + recyclage/catabolisme des IgG.</div>
+</section>
+
+<section id="decouverte"><h2>2. Découverte du FcRn</h2>
+<p>Le concept est attribué à <strong>Brambell</strong>, qui avait proposé un récepteur capable à la fois de prolonger la vie des IgG et d’assurer leur transfert maternel.</p>
+<ul><li>Souris : passage intestinal des IgG du lait maternel au nouveau-né.</li><li>Homme : passage <strong>transplacentaire</strong> des IgG maternelles.</li><li>Conséquence : immunité passive du fœtus puis du nouveau-né.</li></ul>
+</section>
+
+<section id="fonctions"><h2>3. Fonctions générales du FcRn</h2>
+<div class="grid2"><div class="card"><strong>Recyclage</strong><p>Protège IgG et albumine de la dégradation lysosomale → longue demi-vie.</p></div><div class="card"><strong>Transcytose</strong><p>Permet le passage d’un compartiment à l’autre et participe à la biodistribution.</p></div></div>
+<p>Le cours décrit le FcRn comme ≈<strong>95 % intracellulaire</strong>, surtout dans les endosomes.</p>
+</section>
+
+<section id="recyclage"><h2>4. Recyclage : le mécanisme central</h2>
+<div class="schema">Endocytose non spécifique
+→ acidification endosome (pH ≈6)
+→ IgG/albumine se fixent au FcRn
+→ protection contre lysosome
+→ retour vers membrane
+→ pH extracellulaire ≈7,4
+→ dissociation / relargage</div>
+<div class="callout bluebox"><strong>Dépendance au pH :</strong> liaison en acide, libération au neutre.</div>
+<p>Ce mécanisme explique la longue demi-vie des IgG (~<strong>21 j</strong>) et de l’albumine (~20 j dans le cours).</p>
+</section>
+
+<section id="transcytose"><h2>5. Transcytose et biodistribution</h2>
+<p>Après liaison au FcRn, une IgG peut être relarguée dans un autre compartiment : placenta, épithélium, endothélium…</p>
+<div class="callout"><strong>Anticorps thérapeutiques :</strong> puisqu’ils ont une structure d’IgG, le FcRn influence directement leur biodistribution et leur pharmacocinétique.</div>
+</section>
+
+<section id="variabilite"><h2>6. Variabilité interindividuelle de la relation dose-effet</h2>
+<p>Le cours insiste sur une PK/PD particulière des anticorps thérapeutiques, grandes molécules qui interagissent avec différents récepteurs.</p>
+<div class="tablewrap"><table>
+<tr><th>Facteurs de variabilité</th><th>Exemples du cours</th></tr>
+<tr><td>Patient</td><td>Sexe, poids</td></tr>
+<tr><td>Pathologie</td><td>Masse antigénique, inflammation</td></tr>
+<tr><td>Traitements</td><td>Co-médications</td></tr>
+<tr><td>Immunogénétique</td><td>Polymorphismes Fcγ, allotypes IgG1, VNTR FCGRT</td></tr>
+</table></div>
+</section>
+
+<section id="structure"><h2>7. Distribution et structure du FcRn</h2>
+<ul><li>Expression ubiquitaire : endothélium, intestin, placenta, CPA, rein, BHE, cellules hématopoïétiques.</li><li>Chaîne α codée par le <strong>chromosome 19</strong> chez l’Homme.</li><li>Structure « <strong>CMH I-like</strong> » associée à la <strong>β2-microglobuline</strong>.</li><li>Ne présente pas les peptides aux LT malgré cette parenté structurale.</li></ul>
+<div class="callout purplebox"><strong>BHE :</strong> le cours propose un rôle de « refoulement » des IgG du LCR vers le sang périphérique.</div>
+</section>
+
+<section id="igg"><h2>8. Interaction Fc des IgG - FcRn</h2>
+<ul><li>Site IgG : interface <strong>CH2-CH3</strong>.</li><li>Liaison pH-dépendante et réversible.</li><li>Histidines importantes : <strong>His310, His433, His435</strong>.</li><li>À pH acide : protonation → liaison favorisée.</li><li>Deux FcRn peuvent se fixer sur une IgG, un par chaîne lourde dans le modèle présenté.</li></ul>
+<div class="callout orangebox"><strong>Principe d’ingénierie :</strong> modifier certains AA du Fc peut augmenter ou diminuer l’affinité pour FcRn et donc changer la PK.</div>
+</section>
+
+<section id="albumine"><h2>9. Interaction albumine - FcRn</h2>
+<p>L’albumine utilise un site distinct des IgG :</p>
+<ul><li>Domaine <strong>DIII</strong> de l’albumine important.</li><li>Histidine 166 du FcRn citée.</li><li>Pas de compétition avec les IgG.</li><li>Fixation simultanée théoriquement possible.</li></ul>
+<div class="callout"><strong>Application :</strong> fusionner une protéine thérapeutique à un Fc d’IgG ou un domaine d’albumine peut prolonger sa demi-vie.</div>
+<p>Exemples : facteurs VIII/IX, cytokines.</p>
+</section>
+
+<section id="outils"><h2>10. Outils expérimentaux</h2>
+<div class="grid2">
+<div class="card"><strong>Souris FcRn KO</strong><p>Pas de transfert maternel normal d’IgG, IgG/albumine basses, demi-vie IgG raccourcie, altérations de fonctions immunitaires.</p></div>
+<div class="card"><strong>Souris transgénique hFcRn</strong><p>Exprime FcRn humain : permet d’étudier liaison, demi-vie et effets des IgG humaines.</p></div>
+</div>
+</section>
+
+<section id="engineering"><h2>11. Ingénierie d’anticorps thérapeutiques</h2>
+<h3>Augmenter la demi-vie</h3>
+<p>Les figures du cours comparent plusieurs mutants de Fc, dont <strong>YTE</strong> et <strong>LS/Xtend</strong>. Une meilleure affinité (Kd plus faible) s’associe à une meilleure persistance circulante.</p>
+<div class="callout bluebox"><strong>Exemple :</strong> dans le support, une mutation fait passer la demi-vie d’environ <strong>8–9 j à 30 j</strong>.</div>
+<h3>ABDEG</h3>
+<p>Stratégie inverse : anticorps à forte affinité FcRn destinés à concurrencer les IgG endogènes et favoriser leur élimination, notamment dans les maladies auto-immunes.</p>
+</section>
+
+<section id="allotypes"><h2>12. Allotypes d’IgG1</h2>
+<p>Un allotype = polymorphisme de séquence, avec changement d’acides aminés, présent dans certains groupes d’individus.</p>
+<div class="tablewrap"><table>
+<tr><th>Allotype</th><th>Repères du cours</th></tr>
+<tr><td>G1m17,1</td><td>Très fréquent chez les Africains ; présent chez ~50 % des Asiatiques</td></tr>
+<tr><td>G1m3,-1</td><td>Plus fréquent chez les Caucasiens</td></tr>
+<tr><td>G1m3,1</td><td>Très bonne affinité dans les variants adalimumab ; davantage retrouvé chez les Asiatiques</td></tr>
+</table></div>
+<p>Hypothèse testée : l’allotype du patient et celui de l’anticorps thérapeutique peuvent modifier la compétition pour FcRn et donc la demi-vie.</p>
+</section>
+
+<section id="transcytose-test"><h2>13. Tests fonctionnels : comment démontrer une différence d’affinité ?</h2>
+<h3>Transcytose sur monocouche</h3>
+<div class="schema">Cellules exprimant hFcRn en monocouche
+→ pH 6 dans le compartiment de départ
+→ IgG ajoutées
+→ 2 h
+→ mesure de l’IgG passée de l’autre côté</div>
+<p>Le cours rapporte un meilleur effet compétiteur de <strong>G1m17,1</strong> par rapport à <strong>G1m3,-1</strong>.</p>
+<h3>Cytométrie en flux</h3>
+<p>FcRn tronqué pour rester en surface + anticorps fluorescent + anticorps « froids » compétiteurs. Le déplacement du signal permet de comparer les affinités relatives.</p>
+<div class="callout warn"><strong>Nuance méthodologique :</strong> les résultats peuvent varier selon le contexte cellulaire ; charnière et partie variable peuvent aussi influencer la liaison.</div>
+</section>
+
+<section id="ri"><h2>14. Fonctions immunitaires du FcRn</h2>
+<ul><li>Gestion des complexes immuns.</li><li>Présentation antigénique.</li><li>Phagocytose.</li><li>Coopération avec les Fcγ-récepteurs.</li><li>Potentialisation de la réponse humorale.</li></ul>
+<div class="callout"><strong>Souris surexprimant FcRn :</strong> hyperalbuminémie, hyper-IgG, réponse anti-ovalbumine augmentée et phénomène d’<em>epitope spreading</em>.</div>
+</section>
+
+<section id="cancer"><h2>15. FcRn et réponse anti-tumorale</h2>
+<h3>Cancer du côlon</h3>
+<div class="schema">Complexes immuns
+→ cellules dendritiques + FcRn
+→ IL-12
+→ cross-présentation
+→ activation CD8
+→ réponse anti-tumorale</div>
+<p>Dans le modèle murin, les FcRn KO développent davantage de cancer du côlon.</p>
+<h3>Cancer pulmonaire / métastases</h3>
+<ul><li>Expression FcRn plus faible dans la zone tumorale que saine.</li><li>Forte expression associée à une meilleure survie dans les études citées.</li><li>FcRn KO : neutrophiles ↑, NK ↓.</li><li>Défaut de maturation des NK et ↓ dégranulation / ↓ IFN-γ.</li></ul>
+</section>
+
+<section id="vntr"><h2>16. Régulation de FCGRT : VNTR et pharmacocinétique</h2>
+<p>Le gène <strong>FCGRT</strong> présente un polymorphisme VNTR avec <strong>1 à 6 répétitions</strong> par allèle.</p>
+<div class="callout bluebox"><strong>VNTR 3/3 :</strong> davantage d’expression de FcRn et meilleur rendement dans certaines expériences du cours.</div>
+<h3>IgIV / DICV</h3>
+<ul><li>Voie SC : meilleures concentrations résiduelles dans le protocole décrit.</li><li>Hypothèse : le pic IV peut saturer FcRn.</li><li>Voie SC : distribution plus lente, saturation moindre.</li></ul>
+<h3>Cetuximab</h3>
+<p>Dans le protocole de cancer colorectal métastatique, VNTR 3/3 est associé à une distribution plus lente et une persistance périphérique plus longue.</p>
+</section>
+
+<section id="pieges"><h2>17. Pièges / formulations à ne pas avaler sans recul</h2>
+<div class="callout warn"><strong>1.</strong> Le cours écrit « concentration d’IgG dans le cerveau : 12 g/L » alors que les lignes suivantes parlent d’homéostasie sérique des IgG à 12 g/L : formulation interne probablement incohérente, à ne pas généraliser.</div>
+<div class="callout warn"><strong>2.</strong> Le FcRn est dit « intra-cytosolique » à un endroit ; la logique du cours est surtout <strong>intracellulaire/endosomal</strong>.</div>
+<div class="callout warn"><strong>3.</strong> Structure CMH I-like ≠ fonction de présentation peptide/LT.</div>
+<div class="callout warn"><strong>4.</strong> Affinité FcRn ne dépend pas uniquement du site CH2-CH3 : le cours montre que contexte cellulaire, charnière et partie variable peuvent aussi modifier le résultat.</div>
+<div class="callout warn"><strong>5.</strong> Une meilleure affinité à pH acide n’est utile que si l’anticorps peut encore être relargué à pH neutre ; le principe général du cours est la réversibilité pH-dépendante.</div>
+<div class="callout warn"><strong>6.</strong> Les expériences d’allotypes décrivent parfois des résultats différents selon la méthode ; retenir la logique expérimentale avant de mémoriser un classement absolu.</div>
+</section>
+
+<section id="recap" class="recap"><h2>Mini-récap ultra rentable</h2>
+<p><strong>FcRn = récepteur néonatal du Fc des IgG.</strong> Majoritairement <strong>endosomal</strong>. Deux fonctions : <strong>recyclage</strong> + <strong>transcytose</strong>. Lie IgG et albumine à <strong>pH ≈6</strong>, les relargue à <strong>pH ≈7,4</strong>. IgG : site <strong>CH2-CH3</strong>, histidines 310/433/435 ; albumine : domaine DIII, site distinct. FcRn = structure <strong>CMH I-like + β2m</strong>, mais ne présente pas d’Ag aux LT. KO : IgG/albumine ↓, transfert maternel ↓, fonctions immunitaires altérées. hFcRn transgénique : modèle pour Ac humains. Ingénierie du Fc (YTE/LS) → Kd ↓ → demi-vie ↑ → effet ↑. Allotypes/VNTR peuvent modifier la PK. FcRn participe aussi à la réponse humorale, la phagocytose, la cross-présentation et la maturation/activité des NK. <strong>FCGRT VNTR 3/3</strong> = expression plus forte dans le cours.</p></section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « UERB FcRn ». Le cours étant orienté recherche, les expériences, modèles, hypothèses et limites méthodologiques ont été conservés comme éléments centraux.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+<div class="flash"><div class="q">Quelle différence de vocabulaire le cours fait-il entre une immunoglobuline et un anticorps ?</div><div class="a">« Immunoglobuline » décrit surtout la structure, tandis qu’« anticorps » est utilisé lorsqu’une spécificité de ciblage connue est définie.</div></div>
+<div class="flash"><div class="q">Quelles sont les deux grandes parties fonctionnelles d’une IgG ?</div><div class="a">Le Fab, qui porte la spécificité antigénique, et le Fc, qui recrute des récepteurs et fonctions effectrices.</div></div>
+<div class="flash"><div class="q">Quelle particularité distingue le FcRn des Fcγ-récepteurs classiques ?</div><div class="a">Le FcRn est majoritairement intracellulaire, notamment endosomal, alors que les Fcγ-récepteurs classiques sont surtout membranaires.</div></div>
+<div class="flash"><div class="q">Quels sont les deux grands rôles du FcRn décrits dans le cours ?</div><div class="a">La transcytose des IgG/albumine et leur recyclage, qui limite leur catabolisme et augmente leur demi-vie.</div></div>
+<div class="flash"><div class="q">Quel rôle du FcRn explique la protection passive du nouveau-né humain ?</div><div class="a">Le passage transplacentaire des IgG maternelles vers le fœtus.</div></div>
+<div class="flash"><div class="q">Quel mécanisme permet au FcRn de redistribuer une IgG d’un compartiment à un autre ?</div><div class="a">La transcytose.</div></div>
+<div class="flash"><div class="q">Quel mécanisme du FcRn augmente la demi-vie des IgG ?</div><div class="a">Le recyclage endosomal qui les soustrait à la dégradation lysosomale.</div></div>
+<div class="flash"><div class="q">À quel pH les IgG et l’albumine se lient-elles au FcRn ?</div><div class="a">À pH acide, autour de 6 dans le cours.</div></div>
+<div class="flash"><div class="q">À quel pH les ligands sont-ils relargués par le FcRn ?</div><div class="a">À pH physiologique/neutre, autour de 7,4.</div></div>
+<div class="flash"><div class="q">Pourquoi la liaison FcRn-IgG est-elle réversible ?</div><div class="a">Parce qu’elle dépend du pH : fixation en milieu acide, dissociation en milieu neutre.</div></div>
+<div class="flash"><div class="q">Quelle demi-vie des IgG est donnée dans le cours ?</div><div class="a">Environ 21 jours.</div></div>
+<div class="flash"><div class="q">Quelle autre protéine plasmatique possède une longue demi-vie grâce au FcRn ?</div><div class="a">L’albumine, avec une demi-vie proche d’une vingtaine de jours.</div></div>
+<div class="flash"><div class="q">Quelle proportion du FcRn est décrite comme endosomale/intracellulaire ?</div><div class="a">Environ 95 % dans le cours.</div></div>
+<div class="flash"><div class="q">Que deviennent les IgG internalisées qui se fixent au FcRn dans l’endosome acide ?</div><div class="a">Elles sont protégées de la dégradation, recyclées vers la membrane puis relarguées en extracellulaire.</div></div>
+<div class="flash"><div class="q">Que deviennent les protéines internalisées qui ne se fixent pas au FcRn ?</div><div class="a">Elles suivent la voie de dégradation lysosomale.</div></div>
+<div class="flash"><div class="q">Quelle sous-classe d’IgG est signalée comme ne bénéficiant pas de la même augmentation de demi-vie ?</div><div class="a">Les IgG3 selon le cours.</div></div>
+<div class="flash"><div class="q">Pourquoi le FcRn est-il important pour les anticorps thérapeutiques ?</div><div class="a">Ils ont une structure de type IgG et sont donc pris en charge par le FcRn, ce qui influence leur pharmacocinétique et leur biodistribution.</div></div>
+<div class="flash"><div class="q">Quelle conséquence thérapeutique peut avoir l’augmentation du recyclage d’un anticorps ?</div><div class="a">Une demi-vie plus longue, une concentration circulante plus durable et potentiellement moins d’injections.</div></div>
+<div class="flash"><div class="q">Quelles sources de variabilité interindividuelle de réponse aux anticorps thérapeutiques sont citées ?</div><div class="a">Sexe, poids, médicaments associés, masse antigénique, inflammation et variabilité des récepteurs Fc.</div></div>
+<div class="flash"><div class="q">Quel polymorphisme de récepteur Fc classique est cité comme pouvant modifier l’effet des anticorps ?</div><div class="a">Le polymorphisme de CD16/FcγRIII.</div></div>
+<div class="flash"><div class="q">Où se situe le site de liaison du FcRn sur le Fc d’une IgG ?</div><div class="a">À l’interface des domaines CH2 et CH3.</div></div>
+<div class="flash"><div class="q">Quelle partie de l’anticorps assure la reconnaissance de l’épitope ?</div><div class="a">Le paratope porté par la partie Fab.</div></div>
+<div class="flash"><div class="q">Quelle partie de l’anticorps recrute les fonctions effectrices et influence la pharmacocinétique ?</div><div class="a">Le fragment Fc.</div></div>
+<div class="flash"><div class="q">Dans quels tissus/cellules le FcRn est-il exprimé selon le cours ?</div><div class="a">Endothélium vasculaire, épithélium intestinal, placenta, CPA, rein/podocytes, BHE et cellules hématopoïétiques, surtout myéloïdes.</div></div>
+<div class="flash"><div class="q">Quel rôle du FcRn est proposé au niveau de la barrière hémato-encéphalique ?</div><div class="a">Limiter l’accumulation d’IgG dans le cerveau en favorisant leur retour du LCR vers le sang périphérique.</div></div>
+<div class="flash"><div class="q">Quelle chaîne du FcRn est codée par le chromosome 19 chez l’Homme ?</div><div class="a">La chaîne α.</div></div>
+<div class="flash"><div class="q">À quelle famille structurale ressemble le FcRn ?</div><div class="a">Aux molécules de CMH de classe I : structure « class I-like ».</div></div>
+<div class="flash"><div class="q">Avec quelle petite protéine le FcRn est-il associé ?</div><div class="a">La β2-microglobuline.</div></div>
+<div class="flash"><div class="q">Le FcRn présente-t-il des peptides aux lymphocytes T ?</div><div class="a">Non. Malgré sa structure de type CMH I, ses niches de liaison peptidique sont non fonctionnelles.</div></div>
+<div class="flash"><div class="q">Quels résidus d’IgG sont essentiels à la liaison pH-dépendante au FcRn ?</div><div class="a">Des histidines, notamment His310, His433 et His435 selon le cours.</div></div>
+<div class="flash"><div class="q">Pourquoi les histidines favorisent-elles la liaison en milieu acide ?</div><div class="a">Elles sont protonées à pH acide, ce qui favorise les interactions électrostatiques avec le FcRn.</div></div>
+<div class="flash"><div class="q">Quelles régions du FcRn participent à l’interaction avec l’IgG ?</div><div class="a">Les domaines α1, α2 et la portion N-terminale de la β2-microglobuline selon le cours.</div></div>
+<div class="flash"><div class="q">Combien de FcRn peuvent se fixer sur une IgG ?</div><div class="a">Jusqu’à deux, un par chaîne lourde dans le modèle présenté.</div></div>
+<div class="flash"><div class="q">Quel est le principe de la technologie ABDEG décrite ?</div><div class="a">Créer des IgG à très forte affinité pour FcRn afin de concurrencer les IgG endogènes et favoriser leur élimination, notamment des auto-anticorps.</div></div>
+<div class="flash"><div class="q">Quel effet sur les IgG endogènes est rapporté avec l’approche ABDEG chez le sujet sain ?</div><div class="a">Une diminution d’environ moitié de la concentration d’IgG endogènes dans l’exemple cité.</div></div>
+<div class="flash"><div class="q">Quelle maladie auto-immune est citée pour illustrer l’utilisation clinique de cette stratégie ?</div><div class="a">La myasthénie avec auto-anticorps dirigés contre le récepteur de l’acétylcholine.</div></div>
+<div class="flash"><div class="q">Pourquoi les premiers anticorps monoclonaux murins avaient-ils une courte demi-vie chez l’Homme selon le cours ?</div><div class="a">Les IgG murines ont peu ou pas d’affinité pour le FcRn humain.</div></div>
+<div class="flash"><div class="q">Quel bénéfice l’humanisation des anticorps apporte-t-elle dans ce contexte ?</div><div class="a">Une meilleure interaction avec le FcRn humain et donc une demi-vie prolongée.</div></div>
+<div class="flash"><div class="q">Le FcRn humain lie-t-il les IgG de souris selon le cours ?</div><div class="a">Non, contrairement au FcRn murin qui peut lier des IgG de plusieurs espèces.</div></div>
+<div class="flash"><div class="q">Où l’albumine se lie-t-elle par rapport au site de liaison des IgG ?</div><div class="a">Sur un site distinct, notamment via son domaine DIII, presque opposé au site de liaison des IgG.</div></div>
+<div class="flash"><div class="q">Les IgG et l’albumine sont-elles en compétition pour le FcRn ?</div><div class="a">Non, leurs sites de liaison sont distincts et les deux ligands peuvent théoriquement se fixer simultanément.</div></div>
+<div class="flash"><div class="q">Quel résidu du FcRn est cité comme important pour la liaison de l’albumine ?</div><div class="a">L’histidine 166.</div></div>
+<div class="flash"><div class="q">Comment le FcRn peut-il être exploité pour prolonger la demi-vie d’autres protéines thérapeutiques ?</div><div class="a">En fusionnant la protéine à un fragment Fc d’IgG ou à un domaine d’albumine reconnu par FcRn.</div></div>
+<div class="flash"><div class="q">Quels facteurs de coagulation sont cités comme exemples de protéines dont la demi-vie a été prolongée via FcRn ?</div><div class="a">Les facteurs VIII et IX.</div></div>
+<div class="flash"><div class="q">Qu’observe-t-on chez une souris FcRn KO concernant les IgG maternelles ?</div><div class="a">Absence de transfert normal des IgG de la mère au petit.</div></div>
+<div class="flash"><div class="q">Qu’observe-t-on chez une souris FcRn KO concernant IgG et albumine circulantes ?</div><div class="a">Déficit en IgG et hypoalbuminémie par dégradation trop rapide.</div></div>
+<div class="flash"><div class="q">Quelle autre fonction immunitaire est altérée chez les souris FcRn KO selon le cours ?</div><div class="a">La phagocytose, suggérant un rôle immunologique au-delà du recyclage/transcytose.</div></div>
+<div class="flash"><div class="q">Pourquoi utilise-t-on des souris transgéniques exprimant le FcRn humain ?</div><div class="a">Pour étudier la liaison et la pharmacocinétique d’IgG humaines dans un modèle pertinent.</div></div>
+<div class="flash"><div class="q">Que se passe-t-il quand l’affinité d’un anticorps thérapeutique pour FcRn augmente dans les modèles présentés ?</div><div class="a">Sa demi-vie et sa concentration persistent davantage, avec une augmentation de l’effet thérapeutique.</div></div>
+<div class="flash"><div class="q">Que traduit une diminution du Kd pour l’interaction anticorps-FcRn ?</div><div class="a">Une augmentation de l’affinité.</div></div>
+<div class="flash"><div class="q">Quelle mutation d’ingénierie du Fc est citée dans les figures ?</div><div class="a">La mutation YTE.</div></div>
+<div class="flash"><div class="q">Quel autre variant d’ingénierie du Fc est cité dans les figures ?</div><div class="a">Le variant LS/Xtend.</div></div>
+<div class="flash"><div class="q">Quel gain de demi-vie est donné pour un anticorps anti-VEGF modifié ?</div><div class="a">Passage d’environ 8–9 jours à environ 30 jours dans l’exemple cité.</div></div>
+<div class="flash"><div class="q">Comment l’efficacité anti-tumorale d’un mutant à meilleure affinité FcRn est-elle évaluée expérimentalement ?</div><div class="a">Par xénogreffe tumorale chez des souris immunodéficientes puis suivi de la taille tumorale sous traitement.</div></div>
+<div class="flash"><div class="q">Qu’est-ce qu’un allotype d’IgG1 dans ce cours ?</div><div class="a">Un polymorphisme de séquence de l’IgG1, correspondant à des changements d’acides aminés présents dans certains groupes d’individus.</div></div>
+<div class="flash"><div class="q">Quels allotypes IgG1 majeurs sont cités ?</div><div class="a">G1m17,1 et G1m3,-1, avec d’autres combinaisons étudiées expérimentalement.</div></div>
+<div class="flash"><div class="q">Quelle répartition ethnique de G1m17,1 est donnée dans le cours ?</div><div class="a">Très fréquent chez les Africains (~95 %) et présent chez environ 50 % des Asiatiques ; les Caucasiens ont davantage G1m3,-1.</div></div>
+<div class="flash"><div class="q">Pourquoi s’intéresser aux allotypes pour les anticorps thérapeutiques ?</div><div class="a">Ils peuvent modifier la pharmacocinétique, la compétition pour FcRn et éventuellement l’immunogénicité.</div></div>
+<div class="flash"><div class="q">Quel anticorps anti-TNF est utilisé pour étudier l’impact des allotypes du patient ?</div><div class="a">L’infliximab.</div></div>
+<div class="flash"><div class="q">Quelle hypothèse est formulée pour expliquer des demi-vies différentes d’infliximab selon l’allotype du patient ?</div><div class="a">Une compétition différente pour le FcRn entre l’anticorps thérapeutique G1m17,1 et les IgG endogènes du patient.</div></div>
+<div class="flash"><div class="q">Quel allotype est décrit comme meilleur compétiteur pour FcRn dans les tests de transcytose ?</div><div class="a">G1m17,1 est meilleur compétiteur que G1m3,-1 dans l’expérience décrite.</div></div>
+<div class="flash"><div class="q">Comment est réalisé le test fonctionnel de transcytose in vitro ?</div><div class="a">Une monocouche de cellules exprimant FcRn sépare deux compartiments ; un pH acide favorise la liaison puis on mesure le passage des IgG vers l’autre compartiment.</div></div>
+<div class="flash"><div class="q">Quel pH est utilisé dans le compartiment favorisant la liaison au FcRn dans ce test ?</div><div class="a">pH 6.</div></div>
+<div class="flash"><div class="q">Quel résultat de compétition est rapporté entre infliximab et rituximab dans le test présenté ?</div><div class="a">Environ 50 % de compétition dans l’exemple décrit.</div></div>
+<div class="flash"><div class="q">Quel résultat est observé avec le cetuximab G1m3,-1 dans ce test ?</div><div class="a">Une compétition moins importante, interprétée comme une moindre affinité pour FcRn.</div></div>
+<div class="flash"><div class="q">Quelles sous-classes ne concurrencent pas les IgG1 dans le test cité ?</div><div class="a">IgG2 et IgG4.</div></div>
+<div class="flash"><div class="q">Pourquoi un FcRn tronqué est-il utilisé dans l’expérience de cytométrie en flux ?</div><div class="a">Pour le maintenir à la surface cellulaire et rendre l’interaction avec les anticorps plus facile à mesurer.</div></div>
+<div class="flash"><div class="q">Que mesure la cytométrie en flux dans cette expérience de compétition ?</div><div class="a">La fluorescence associée à la fixation de l’anticorps marqué sur les cellules exprimant FcRn.</div></div>
+<div class="flash"><div class="q">Que montre un anticorps mutant incapable de se fixer au FcRn dans le test de cytométrie ?</div><div class="a">L’absence de fixation/compétition attendue.</div></div>
+<div class="flash"><div class="q">Quel allotype d’adalimumab est présenté comme particulièrement affin dans la série de variants testée ?</div><div class="a">La combinaison G1m3,1.</div></div>
+  </div>
+</section>
+</main></body></html>

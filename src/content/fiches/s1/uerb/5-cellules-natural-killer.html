@@ -1,0 +1,236 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cellules Natural Killer</title><style>
+:root{--g:#1a7a4a;--gs:#eaf7ef;--r:#b91c1c;--rs:#fee2e2;--o:#b45309;--os:#fff7ed;--b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--teal:#0f766e;--ts:#ecfeff;--ink:#1c1c2e;--line:#d8dce8;--bg:#f6f7fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.58}.page{max-width:1180px;margin:auto;padding:32px 18px 72px}
+.hero{background:linear-gradient(135deg,#fff,#f0fdf4 52%,#eef9ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}h1{font-size:38px;line-height:1.08;margin:8px 0 12px}.subtitle{margin:0;color:#374151}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}.green{background:var(--gs);color:#166534}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.blue{background:var(--bs);color:#1d4ed8}.purple{background:var(--ps);color:#5b21b6}.teal{background:var(--ts);color:#0f766e}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav li{margin:5px 0}nav a{color:inherit;text-decoration:none}section{padding:24px;margin:18px 0}h2{font-size:25px;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}p{margin:8px 0}ul,ol{padding-left:22px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:14px}.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}.tealbox{border-left-color:var(--teal);background:var(--ts)}.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,monospace;white-space:pre-wrap}.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}table{width:100%;border-collapse:collapse;font-size:13.2px;min-width:820px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}.flash .q{background:#f9fafb;padding:11px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:11px 12px;color:#374151}.source-note{font-size:12.5px;color:#5b6474}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{min-width:680px}}@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}}
+</style></head><body><main class="page">
+<header class="hero"><div class="kicker">UERB Immunologie</div><h1>Cellules Natural Killer (NK) humaines & immunothérapies antitumorales</h1><p class="subtitle">Fiche D1/UERB : phénotype et maturation NK, CD56bright/dim, balance activation-inhibition, KIR/NKG2A, CD16A et ADCC, polymorphisme FCGR3A V158F, ADAM17 et clivage de CD16, IL-15/RLI, stratégies d’optimisation et Neospora caninum comme outil antitumoral expérimental.</p><div class="tags"><span class="tag green">NK</span><span class="tag purple">CD16A</span><span class="tag blue">KIR / NKG2A</span><span class="tag orange">ADAM17</span><span class="tag red">ADCC</span><span class="tag teal">IL-15 / RLI</span></div><div class="actions"><button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button><button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button></div></header>
+
+<nav><h2>Plan rapide</h2><ol>
+<li><a href="#generalites">Généralités NK</a></li><li><a href="#brightdim">CD56bright vs dim</a></li><li><a href="#balance">Activation / inhibition</a></li><li><a href="#education">Éducation NK</a></li><li><a href="#ri">KIR / NKG2A</a></li><li><a href="#fonctions">Fonctions effectrices</a></li><li><a href="#cd16">CD16A</a></li><li><a href="#polym">FCGR3A V158F</a></li><li><a href="#clivage">Clivage de CD16</a></li><li><a href="#moleculaire">Approche moléculaire</a></li><li><a href="#cellulaire">Approche cellulaire</a></li><li><a href="#maturation">Maturation / fonctions</a></li><li><a href="#il15">IL-15 / RLI</a></li><li><a href="#strategies">Optimisation</a></li><li><a href="#celltherapy">Thérapie cellulaire NK</a></li><li><a href="#neospora">Neospora caninum</a></li><li><a href="#pieges">Pièges / nuances</a></li><li><a href="#recap">Mini-récap</a></li><li><a href="#flashcards">Flashcards express</a></li></ol></nav>
+
+<section id="generalites"><h2>1. Généralités sur les cellules NK</h2>
+<ul><li>Origine lymphoïde à partir des cellules souches.</li><li>≈<strong>5–20 %</strong> des cellules lymphoïdes du sang périphérique.</li><li>Présentes aussi dans les tissus : utérus, foie…</li><li>Renouvellement ≈<strong>2 semaines</strong>.</li><li>Phénotype : <strong>CD3− CD56+</strong>, souvent CD16+, NKp46+.</li></ul>
+<div class="callout"><strong>Fonctions :</strong> cytotoxicité naturelle, ADCC et production de cytokines à propriétés antivirales/antitumorales.</div>
+</section>
+
+<section id="brightdim"><h2>2. NK CD56bright vs CD56dim</h2>
+<div class="tablewrap"><table>
+<tr><th></th><th>CD56bright</th><th>CD56dim</th></tr>
+<tr><td>Proportion</td><td>≈10 %</td><td>≈90–95 % des NK circulantes</td></tr>
+<tr><td>Fonction dominante</td><td>Cytokines</td><td>Cytotoxicité</td></tr>
+<tr><td>NKG2A</td><td>++</td><td>+/−</td></tr>
+<tr><td>KIR</td><td>−</td><td>+/−</td></tr>
+<tr><td>CD16A</td><td>Faible/variable</td><td>Fortement exprimé</td></tr>
+</table></div>
+</section>
+
+<section id="balance"><h2>3. Balance activation / inhibition</h2>
+<div class="schema">Signaux inhibiteurs > activateurs
+→ tolérance du soi
+
+Signaux activateurs > inhibiteurs
+→ activation NK
+→ cytotoxicité / cytokines</div>
+<p>Les NK intègrent des signaux issus des cytokines, ligands activateurs, récepteurs inhibiteurs, anticorps et molécules HLA-I.</p>
+</section>
+
+<section id="education"><h2>4. Éducation et fonctionnalité des NK</h2>
+<p>Une NK fonctionnelle doit avoir acquis une reconnaissance du soi via au moins un récepteur inhibiteur reconnaissant une molécule HLA-I.</p>
+<div class="callout purplebox"><strong>Si cette éducation est insuffisante :</strong> état d’anergie/hyporéactivité dans la logique du cours.</div>
+<p>Le cours indique que les capacités effectrices augmentent avec le nombre de récepteurs inhibiteurs spécifiques du CMH-I du soi.</p>
+</section>
+
+<section id="ri"><h2>5. Récepteurs inhibiteurs : KIR et NKG2A</h2>
+<div class="tablewrap"><table>
+<tr><th>Récepteur</th><th>Ligand</th><th>Repère</th></tr>
+<tr><td>KIR / CD158a-b</td><td>HLA-C</td><td>Forte variabilité génétique et d’expression</td></tr>
+<tr><td>NKG2A</td><td>HLA-E</td><td>Hétérodimère inhibiteur</td></tr>
+</table></div>
+<div class="callout bluebox"><strong>Variabilité :</strong> intra-individuelle entre sous-populations NK et inter-individuelle entre donneurs.</div>
+</section>
+
+<section id="fonctions"><h2>6. Fonctions effectrices</h2>
+<div class="grid3">
+<div class="card"><strong>Cytotoxicité naturelle</strong><p>Contre cellules anormales/stressées.</p></div>
+<div class="card"><strong>ADCC</strong><p>Via CD16A et système perforine-granzyme.</p></div>
+<div class="card"><strong>Récepteurs de mort</strong><p>Fas/FasL, TNF…</p></div>
+</div>
+<h3>Cytokines</h3>
+<ul><li>IFN-γ : antiviral et antitumoral.</li><li>G-CSF / GM-CSF.</li><li>IL-10, TGF-β.</li></ul>
+<div class="callout orangebox"><strong>Activation complète :</strong> co-engagement de deux récepteurs activateurs dans le modèle présenté.</div>
+</section>
+
+<section id="cd16"><h2>7. CD16A / FcγRIIIA</h2>
+<ul><li>Récepteur Fc de faible à modérée affinité pour IgG1/IgG3.</li><li>Codé par <strong>FCGR3A</strong>.</li><li>Exprimé surtout par les NK CD56dim.</li><li>Essentiel à l’ADCC avec anticorps thérapeutiques.</li></ul>
+<div class="callout red"><strong>Activation via CD16 → perte secondaire de CD16 membranaire.</strong></div>
+</section>
+
+<section id="polym"><h2>8. Polymorphisme FCGR3A V158F</h2>
+<p>Le cours décrit une meilleure affinité pour les IgG en présence de la <strong>valine</strong>.</p>
+<div class="tablewrap"><table>
+<tr><th>Génotype</th><th>Réponse clinique décrite</th></tr>
+<tr><td>V/V</td><td>Meilleure</td></tr>
+<tr><td>V/F</td><td>Intermédiaire / moins bonne</td></tr>
+<tr><td>F/F</td><td>Moins favorable dans la logique générale du cours précédent</td></tr>
+</table></div>
+<p>Intérêt : expliquer une partie de la variabilité interindividuelle aux anticorps thérapeutiques.</p>
+</section>
+
+<section id="clivage"><h2>9. Pourquoi CD16 disparaît-il après activation ?</h2>
+<p>Le récepteur est clivé dans sa région juxtamembranaire par une métalloprotéase zinc-dépendante.</p>
+<div class="callout"><strong>Enzyme principale identifiée : ADAM17.</strong></div>
+<p>ADAM10 est testée mais ne reproduit pas le clivage dans les expériences décrites.</p>
+</section>
+
+<section id="moleculaire"><h2>10. Approche moléculaire du clivage</h2>
+<ol>
+<li>Récepteur recombinant orienté grâce à une queue histidine.</li>
+<li>ELISA : perte d’absorbance après clivage.</li>
+<li>Peptide fluorophore + quencher : clivage = fluorescence.</li>
+<li>Spectrométrie de masse : localisation du site.</li>
+</ol>
+<div class="callout bluebox"><strong>Site identifié :</strong> ADAM17 clive entre une <strong>alanine et une valine</strong>.</div>
+</section>
+
+<section id="cellulaire"><h2>11. Approche cellulaire</h2>
+<ul><li>Western blot : proforme + forme catalytique d’ADAM17.</li><li>Cytométrie : expression sur plusieurs populations immunitaires.</li><li>Activation → perte CD16 membranaire.</li><li>Perte CD16 corrélée à dégranulation.</li><li>Clivage en <strong>cis</strong>.</li></ul>
+<div class="callout warn"><strong>shRNA ADAM17 :</strong> ≈90 % d’extinction des transcrits mais pas inhibition complète du mécanisme selon le cours.</div>
+</section>
+
+<section id="maturation"><h2>12. Maturation, récepteurs et dichotomie fonctionnelle</h2>
+<ul><li>CD16 ↑ → NKG2A ↓.</li><li>CD16 ↑ → KIR CD158a/b ↑.</li><li>KIR élevé = NK plus mature.</li></ul>
+<div class="tablewrap"><table>
+<tr><th>Phénotype</th><th>Fonction associée dans le cours</th></tr>
+<tr><td>NKG2A+</td><td>Cytotoxicité davantage représentée</td></tr>
+<tr><td>KIR+++</td><td>Production d’IFN-γ davantage représentée</td></tr>
+</table></div>
+<p>CD107 est utilisé comme marqueur de dégranulation.</p>
+</section>
+
+<section id="il15"><h2>13. IL-15 et RLI</h2>
+<p>L’IL-15 soutient activation et survie des <strong>NK, T CD8+ et NKT</strong>.</p>
+<div class="schema">IL-15 + chaîne α de son récepteur
+→ complexe RLI
+→ trans-présentation mimée
+→ activation NK ↑
+→ ADCC ↑</div>
+<p>Le RLI est couplé à un anti-CD20/rituximab sans empêcher l’interaction du Fc avec CD16A.</p>
+</section>
+
+<section id="strategies"><h2>14. Stratégies pour optimiser l’immunothérapie NK</h2>
+<ul><li>Bloquer ADAM17 → maintenir CD16.</li><li>Protéger le site de clivage de CD16.</li><li>Apporter IL-15/RLI.</li><li>Bloquer un récepteur inhibiteur / checkpoint.</li><li>Tenir compte du génotype FCGR3A V158F.</li><li>Phénotyper KIR/NKG2A et mesurer ADCC/IFN-γ.</li></ul>
+<div class="callout purplebox"><strong>Exemple :</strong> monalizumab, anticorps anti-NKG2A cité comme stratégie de levée d’inhibition.</div>
+</section>
+
+<section id="celltherapy"><h2>15. Thérapie cellulaire NK</h2>
+<p>Stratégie évoquée :</p>
+<div class="schema">Prélèvement NK
+→ stimulation par cytokines
+→ activation / expansion ex vivo
+→ réinjection au patient</div>
+<p>Limite majeure citée : la difficulté de culture/expansion des NK.</p>
+</section>
+
+<section id="neospora"><h2>16. Neospora caninum : parasite comme outil antitumoral</h2>
+<p>Protozoaire intracellulaire obligatoire, décrit comme non pathogène pour l’Homme dans le cours.</p>
+<div class="grid2">
+<div class="card"><strong>Effet direct</strong><p>Capacité oncolytique sur cellules tumorales.</p></div>
+<div class="card"><strong>Effet immunitaire</strong><p>Recrutement macrophages, LT CD8, NK et forte production d’IFN-γ.</p></div>
+</div>
+<ul><li>Injection intratumorale : inhibition importante de croissance.</li><li>À distance : inhibition également, moins importante.</li><li>Parasite tué par chaleur : perte de l’effet → parasite vivant nécessaire.</li><li>Effet aussi observé sur modèles métastatiques par plusieurs voies.</li></ul>
+<div class="callout tealbox"><strong>Ingénierie :</strong> Neospora peut être modifié pour sécréter IL-15 ou des anticorps, augmentant encore l’effet antitumoral dans les modèles présentés.</div>
+</section>
+
+<section id="pieges"><h2>17. Pièges / nuances du ronéo</h2>
+<div class="callout warn"><strong>1.</strong> Le texte écrit « immunité innée dite acquise » : formulation contradictoire ; la fiche retient NK = immunité innée.</div>
+<div class="callout warn"><strong>2.</strong> Une phrase dit que rituximab/trastuzumab sont « incapables d’éliminer des tumeurs » puis la suite montre précisément le rôle de FcγR dans leur efficacité : formulation tronquée/incomplète du ronéo.</div>
+<div class="callout warn"><strong>3.</strong> À un endroit, l’expérience avec inhibiteur ADAM17 est décrite comme entraînant une « perte d’expression » alors que la logique expérimentale attend une préservation de CD16 : incohérence textuelle du support.</div>
+<div class="callout warn"><strong>4.</strong> Le cours mélange parfois TNF et IFN-γ dans la lecture fonctionnelle des expériences ; retenir le principe de dichotomie cytotoxicité vs production de cytokines.</div>
+<div class="callout warn"><strong>5.</strong> « immuno-checkpoint » = ici blocage de récepteurs inhibiteurs comme NKG2A ; ne pas confondre avec activation directe.</div>
+<div class="callout warn"><strong>6.</strong> Neospora = modèle expérimental antitumoral du cours ; ne pas extrapoler à une thérapie clinique validée chez l’Homme.</div>
+</section>
+
+<section id="recap" class="recap"><h2>Mini-récap ultra rentable</h2>
+<p><strong>NK = CD3− CD56+</strong>, 5–20 % des lymphocytes sanguins. <strong>Bright</strong> ≈10 %, cytokines, NKG2A++; <strong>dim</strong> ≈90–95 %, cytotoxicité, CD16A/KIR. Activation = balance récepteurs activateurs/inhibiteurs. KIR ↔ HLA-C ; NKG2A ↔ HLA-E. ADCC via <strong>CD16A/FcγRIIIA</strong>, codé par <strong>FCGR3A</strong>. Polymorphisme <strong>V158F</strong> : V/V meilleure affinité/réponse dans le cours. Activation → clivage CD16 par <strong>ADAM17</strong>, en cis, site Ala-Val. CD16 ↑ ↔ KIR ↑ / NKG2A ↓ = maturation. KIR+++ → IFN-γ ; NKG2A+ → cytotoxicité davantage. <strong>IL-15/RLI</strong> augmente activation NK et ADCC. Optimisation : anti-ADAM17, protection du site de clivage, anti-NKG2A, génotypage, thérapie cellulaire NK. <strong>Neospora caninum</strong> : modèle oncolytique/immunostimulant recrutant NK/CD8/macrophages et IFN-γ.</p></section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « Les cellules Natural Killer ». Les mécanismes expérimentaux, résultats et formulations particulières du ronéo sont conservés ; les incohérences internes sont signalées explicitement.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+<div class="flash"><div class="q">Quel phénotype général définit les cellules NK humaines dans le cours ?</div><div class="a">CD3− CD56+, avec fréquemment CD16+ et NKp46+ selon les sous-populations.</div></div>
+<div class="flash"><div class="q">Quelle proportion des cellules lymphoïdes du sang périphérique représente la population NK ?</div><div class="a">Environ 5 à 20 %.</div></div>
+<div class="flash"><div class="q">Quel temps de renouvellement des cellules NK est donné ?</div><div class="a">Environ 2 semaines.</div></div>
+<div class="flash"><div class="q">Dans quels tissus les cellules NK sont-elles notamment retrouvées ?</div><div class="a">Dans le sang périphérique mais aussi dans des tissus comme l’utérus et le foie.</div></div>
+<div class="flash"><div class="q">À quelle immunité appartiennent principalement les cellules NK ?</div><div class="a">À l’immunité innée, avec des propriétés fonctionnelles pouvant aussi s’intégrer à des réponses adaptatives selon le contexte.</div></div>
+<div class="flash"><div class="q">Quelle sous-population représente 90 à 95 % des NK circulantes ?</div><div class="a">Les NK CD56dim.</div></div>
+<div class="flash"><div class="q">Quel récepteur Fcγ est fortement exprimé par les NK CD56dim ?</div><div class="a">FcγRIIIA, aussi appelé CD16A.</div></div>
+<div class="flash"><div class="q">Quelle est la fonction dominante des NK CD56bright ?</div><div class="a">La production de cytokines.</div></div>
+<div class="flash"><div class="q">Quelle est la fonction dominante des NK CD56dim ?</div><div class="a">La cytotoxicité.</div></div>
+<div class="flash"><div class="q">Quel profil de récepteurs inhibiteurs caractérise les NK CD56bright ?</div><div class="a">NKG2A++ et KIR− dans le cours.</div></div>
+<div class="flash"><div class="q">Quel profil de récepteurs inhibiteurs caractérise les NK CD56dim ?</div><div class="a">NKG2A +/− et KIR +/−.</div></div>
+<div class="flash"><div class="q">Quels grands types de récepteurs les NK utilisent-elles pour sonder leur environnement ?</div><div class="a">Récepteurs aux cytokines, récepteurs activateurs, récepteurs inhibiteurs et points de contrôle immunitaire.</div></div>
+<div class="flash"><div class="q">De quoi dépend l’activation finale d’une cellule NK ?</div><div class="a">De la balance entre signaux activateurs et inhibiteurs reçus par ses différents récepteurs.</div></div>
+<div class="flash"><div class="q">Que se passe-t-il si les signaux inhibiteurs dominent ?</div><div class="a">La cellule NK tolère la cellule du soi.</div></div>
+<div class="flash"><div class="q">Que se passe-t-il si les signaux activateurs dominent ?</div><div class="a">La NK s’active et peut détruire la cellule cible.</div></div>
+<div class="flash"><div class="q">Quel concept décrit la reconnaissance d’une cellule anormale ayant perdu des molécules du CMH-I ?</div><div class="a">Le principe du « missing self » sous-jacent à la balance entre signaux activateurs et inhibiteurs.</div></div>
+<div class="flash"><div class="q">Pourquoi une NK mal éduquée peut-elle être anergique ?</div><div class="a">Elle doit acquérir une interaction fonctionnelle avec au moins un récepteur inhibiteur reconnaissant une molécule HLA-I du soi.</div></div>
+<div class="flash"><div class="q">Quel lien est fait entre nombre de récepteurs inhibiteurs du soi et capacité effectrice ?</div><div class="a">Les capacités effectrices augmentent avec le nombre de récepteurs inhibiteurs spécifiques du CMH-I du soi dans le modèle du cours.</div></div>
+<div class="flash"><div class="q">Quels sont les deux grands récepteurs inhibiteurs cités ?</div><div class="a">Les KIR et NKG2A.</div></div>
+<div class="flash"><div class="q">Quel ligand HLA est reconnu par NKG2A ?</div><div class="a">HLA-E.</div></div>
+<div class="flash"><div class="q">Quel ligand est reconnu par les KIR CD158a/CD158b dans le cours ?</div><div class="a">Des molécules HLA-C.</div></div>
+<div class="flash"><div class="q">Pourquoi existe-t-il une forte variabilité des KIR entre individus ?</div><div class="a">Le locus KIR est génétiquement très polymorphe et l’expression varie aussi d’une cellule NK à l’autre.</div></div>
+<div class="flash"><div class="q">Quelle variabilité intra-individuelle est décrite pour les KIR ?</div><div class="a">Toutes les NK d’un même individu n’expriment pas les mêmes KIR.</div></div>
+<div class="flash"><div class="q">Quelle variabilité inter-individuelle est décrite pour les récepteurs inhibiteurs ?</div><div class="a">Le pourcentage de cellules NK positives pour un récepteur donné varie d’un individu à l’autre.</div></div>
+<div class="flash"><div class="q">Quels mécanismes de cytotoxicité NK sont cités ?</div><div class="a">Cytotoxicité naturelle, ADCC via perforine/granzymes et induction d’apoptose via récepteurs de mort comme Fas/FasL ou TNF.</div></div>
+<div class="flash"><div class="q">Quelles cytokines produites par les NK sont citées ?</div><div class="a">IFN-γ, facteurs de croissance comme G-CSF/GM-CSF et cytokines immunosuppressives comme IL-10 et TGF-β.</div></div>
+<div class="flash"><div class="q">Quelle cytokine produite par les NK a des propriétés antivirales et antitumorales majeures ?</div><div class="a">L’IFN-γ.</div></div>
+<div class="flash"><div class="q">Quel niveau de co-engagement est nécessaire à une activation complète selon le cours ?</div><div class="a">Le co-engagement de deux récepteurs activateurs.</div></div>
+<div class="flash"><div class="q">Que peut provoquer l’engagement d’un seul récepteur activateur ?</div><div class="a">Une activation partielle orientée soit vers la cytotoxicité, soit vers la production de cytokines.</div></div>
+<div class="flash"><div class="q">Qu’est-ce qui conditionne l’hétérogénéité fonctionnelle des NK ?</div><div class="a">Le répertoire des récepteurs activateurs et inhibiteurs exprimés.</div></div>
+<div class="flash"><div class="q">Quel récepteur de faible à modérée affinité pour le Fc des IgG1/IgG3 est central pour l’ADCC ?</div><div class="a">CD16A/FcγRIIIA.</div></div>
+<div class="flash"><div class="q">Quel gène code CD16A ?</div><div class="a">FCGR3A.</div></div>
+<div class="flash"><div class="q">Sur quelles cellules CD16 est-il cité comme exprimé ?</div><div class="a">NK CD56dim, certains lymphocytes T, monocytes, macrophages et cellules dendritiques.</div></div>
+<div class="flash"><div class="q">Quel polymorphisme de FCGR3A est étudié ?</div><div class="a">V158F.</div></div>
+<div class="flash"><div class="q">Quel variant du polymorphisme V158F est associé à une meilleure affinité pour les IgG ?</div><div class="a">La valine V158.</div></div>
+<div class="flash"><div class="q">Quel génotype est associé à la meilleure réponse clinique dans le cours ?</div><div class="a">Le génotype V/V.</div></div>
+<div class="flash"><div class="q">Pourquoi le polymorphisme FCGR3A V158F est-il intéressant en thérapeutique ?</div><div class="a">Il peut modifier l’affinité de CD16 pour les anticorps thérapeutiques et donc la réponse clinique.</div></div>
+<div class="flash"><div class="q">Que se passe-t-il à la surface de la NK après engagement de CD16 ?</div><div class="a">Une modulation négative avec perte de CD16 membranaire par clivage.</div></div>
+<div class="flash"><div class="q">Quelle métalloprotéase est identifiée comme responsable principale du clivage de CD16A ?</div><div class="a">ADAM17.</div></div>
+<div class="flash"><div class="q">ADAM10 est-elle impliquée dans le clivage de CD16 dans les expériences du cours ?</div><div class="a">Non, les expériences montrent un clivage par ADAM17 mais pas par ADAM10.</div></div>
+<div class="flash"><div class="q">Quel type d’enzyme est ADAM17 ?</div><div class="a">Une métalloprotéase zinc-dépendante.</div></div>
+<div class="flash"><div class="q">Quel mécanisme d’activation de nombreuses métalloprotéases est cité ?</div><div class="a">Le mécanisme de type « cysteine switch ».</div></div>
+<div class="flash"><div class="q">Comment l’approche ELISA montre-t-elle un clivage de CD16 ?</div><div class="a">La présence de protéase entraîne une perte d’absorbance compatible avec la perte du récepteur intact.</div></div>
+<div class="flash"><div class="q">Quel outil fluorescent est utilisé pour localiser fonctionnellement un site de clivage ?</div><div class="a">Un peptide portant un fluorophore et un quencher : le clivage libère la fluorescence.</div></div>
+<div class="flash"><div class="q">Quelle technique permet d’identifier précisément le site de clivage ?</div><div class="a">La spectrométrie de masse.</div></div>
+<div class="flash"><div class="q">Entre quels acides aminés ADAM17 clive-t-elle CD16 selon le cours ?</div><div class="a">Entre une alanine et une valine.</div></div>
+<div class="flash"><div class="q">Comment a-t-on confirmé la présence d’ADAM17 sous forme catalytique dans les cellules ?</div><div class="a">Par western blot montrant proforme et forme catalytique.</div></div>
+<div class="flash"><div class="q">Quelle méthode a permis de montrer ADAM17 à la surface de différents leucocytes ?</div><div class="a">La cytométrie en flux.</div></div>
+<div class="flash"><div class="q">Quel lien est observé entre activation cellulaire et expression de CD16 ?</div><div class="a">Les cellules activées perdent CD16 membranaire.</div></div>
+<div class="flash"><div class="q">Quel lien est observé entre dégranulation et perte de CD16 ?</div><div class="a">La perte de CD16 est fortement corrélée à l’activation/dégranulation.</div></div>
+<div class="flash"><div class="q">Le clivage de CD16 par ADAM17 se fait-il en cis ou en trans ?</div><div class="a">En cis : la cellule activée clive son propre CD16.</div></div>
+<div class="flash"><div class="q">Quel type d’expérience permet de distinguer clivage en cis et en trans ?</div><div class="a">Une co-culture avec cellules T activées portant ADAM17 et cellules NK portant CD16 ; seule la cellule activée clive son propre récepteur.</div></div>
+<div class="flash"><div class="q">Que signifie une extinction de 90 % des transcrits ADAM17 par shRNA dans le cours ?</div><div class="a">Une forte réduction de l’ARNm, mais jugée insuffisante pour abolir complètement le mécanisme de clivage.</div></div>
+<div class="flash"><div class="q">Quel lien est observé entre expression de CD16 et NKG2A ?</div><div class="a">Plus CD16 augmente, plus NKG2A tend à diminuer.</div></div>
+<div class="flash"><div class="q">Quel lien est observé entre expression de CD16 et KIR CD158a/CD158b ?</div><div class="a">Plus CD16 augmente, plus l’expression des KIR augmente.</div></div>
+<div class="flash"><div class="q">Que traduit l’association CD16 élevé + KIR élevé ?</div><div class="a">Un phénotype de NK plus mature dans le cours.</div></div>
+<div class="flash"><div class="q">Quel marqueur est utilisé pour mesurer la dégranulation des NK ?</div><div class="a">CD107.</div></div>
+<div class="flash"><div class="q">Quelle cytokine est utilisée comme lecture fonctionnelle dans certaines expériences ?</div><div class="a">TNF, et le cours discute aussi fortement l’IFN-γ.</div></div>
+<div class="flash"><div class="q">Qu’est-ce que la dichotomie fonctionnelle des NK décrite ?</div><div class="a">Certaines sous-populations répondent plutôt par cytotoxicité, d’autres plutôt par production de cytokines, avec variabilité entre individus.</div></div>
+<div class="flash"><div class="q">Quel profil est davantage associé à la production d’IFN-γ ?</div><div class="a">Les NK KIR+++ les plus matures.</div></div>
+<div class="flash"><div class="q">Quel profil est davantage associé à la cytotoxicité dans le cours ?</div><div class="a">Les cellules NKG2A+ sont davantage associées à la cytotoxicité.</div></div>
+<div class="flash"><div class="q">Quelle cytokine est utilisée pour potentialiser l’activité des NK dans le microenvironnement tumoral ?</div><div class="a">L’IL-15.</div></div>
+<div class="flash"><div class="q">Quelles cellules sont activées/soutenues par l’IL-15 selon le cours ?</div><div class="a">NK, T CD8+ et NKT.</div></div>
+<div class="flash"><div class="q">Comment l’IL-15 est-elle normalement présentée ?</div><div class="a">Par trans-présentation via sa chaîne alpha de récepteur sur une cellule présentatrice.</div></div>
+<div class="flash"><div class="q">Qu’est-ce que le RLI dans ce cours ?</div><div class="a">Un complexe/fusion d’IL-15 associée à la chaîne alpha de son récepteur pour mimer une trans-présentation à forte affinité.</div></div>
+<div class="flash"><div class="q">Quel anticorps est combiné au RLI dans les expériences ?</div><div class="a">Le rituximab anti-CD20.</div></div>
+<div class="flash"><div class="q">Le couplage RLI au Fc d’un anti-CD20 empêche-t-il l’interaction avec CD16A ?</div><div class="a">Non, le cours indique que l’interaction FcγRIIIA/CD16 reste possible.</div></div>
+<div class="flash"><div class="q">Quel effet fonctionnel du RLI est observé ?</div><div class="a">Potentialisation de l’activation NK et de l’ADCC.</div></div>
+<div class="flash"><div class="q">Quelle stratégie vise directement ADAM17 pour augmenter l’ADCC ?</div><div class="a">Utiliser des anticorps/inhibiteurs dirigés contre ADAM17 afin de limiter la perte de CD16.</div></div>
+<div class="flash"><div class="q">Quelle autre stratégie vise directement le site de clivage de CD16 ?</div><div class="a">Des anticorps protégeant le site de clivage afin de maintenir CD16 à la surface.</div></div>
+  </div>
+</section>
+</main></body></html>

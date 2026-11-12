@@ -1,0 +1,230 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mécanismes d'action des anticorps thérapeutiques</title><style>
+:root{--g:#1a7a4a;--gs:#eaf7ef;--r:#b91c1c;--rs:#fee2e2;--o:#b45309;--os:#fff7ed;--b:#1d4ed8;--bs:#eff6ff;--p:#6d28d9;--ps:#f3e8ff;--teal:#0f766e;--ts:#ecfeff;--ink:#1c1c2e;--line:#d8dce8;--bg:#f6f7fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.58}.page{max-width:1180px;margin:auto;padding:32px 18px 72px}
+.hero{background:linear-gradient(135deg,#fff,#f0fdf4 52%,#eef9ff);border:1.5px solid var(--line);border-radius:22px;padding:30px;box-shadow:0 16px 42px rgba(31,41,55,.06)}.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--g)}h1{font-size:38px;line-height:1.08;margin:8px 0 12px}.subtitle{margin:0;color:#374151}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.tag{font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}.green{background:var(--gs);color:#166534}.red{background:var(--rs);color:#991b1b}.orange{background:var(--os);color:#92400e}.blue{background:var(--bs);color:#1d4ed8}.purple{background:var(--ps);color:#5b21b6}.teal{background:var(--ts);color:#0f766e}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{border:0;border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.primary{background:var(--g);color:#fff}.secondary{background:#fff;color:var(--g);border:1px solid var(--line)}
+nav,section{background:#fff;border:1.5px solid var(--line);border-radius:18px}nav{padding:18px;margin:18px 0 26px}nav h2{font-size:16px;margin:0 0 10px;color:var(--g)}nav ol{columns:2;column-gap:34px;margin:0;padding-left:20px;font-size:14px}nav li{margin:5px 0}nav a{color:inherit;text-decoration:none}section{padding:24px;margin:18px 0}h2{font-size:25px;margin:0 0 16px}h3{font-size:18px;color:var(--g);margin:22px 0 10px}p{margin:8px 0}ul,ol{padding-left:22px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{border:1px solid var(--line);border-radius:14px;padding:14px}.callout{border-left:5px solid var(--g);background:var(--gs);padding:12px 14px;border-radius:12px;margin:14px 0}.warn{border-left-color:var(--r);background:var(--rs)}.orangebox{border-left-color:var(--o);background:var(--os)}.bluebox{border-left-color:var(--b);background:var(--bs)}.purplebox{border-left-color:var(--p);background:var(--ps)}.tealbox{border-left-color:var(--teal);background:var(--ts)}.schema{background:#fbfcff;border:1px dashed #b7c0d4;border-radius:14px;padding:14px;margin:12px 0;font-family:ui-monospace,monospace;white-space:pre-wrap}.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}table{width:100%;border-collapse:collapse;font-size:13.2px;min-width:820px}th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}th{background:#f3f4f6;text-align:left}.recap{background:#111827;color:#fff}.recap h2{color:#fff}.recap strong{color:#bbf7d0}.flashgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.flash{border:1px solid var(--line);border-radius:14px;overflow:hidden}.flash .q{background:#f9fafb;padding:11px 12px;font-weight:800;border-bottom:1px solid var(--line)}.flash .a{padding:11px 12px;color:#374151}.source-note{font-size:12.5px;color:#5b6474}
+@media(max-width:780px){h1{font-size:29px}.grid2,.grid3,.flashgrid{grid-template-columns:1fr}nav ol{columns:1}section,.hero{padding:18px}table{min-width:680px}}@media print{body{background:#fff}.page{max-width:none;padding:0}nav,.actions{display:none}}
+</style></head><body><main class="page">
+<header class="hero"><div class="kicker">UERB Immunologie</div><h1>Mécanismes d’action des anticorps thérapeutiques chez l’Homme</h1><p class="subtitle">Fiche D1/UERB : structure-fonction des IgG, FcγR et FcRn, humanisation et formats thérapeutiques, neutralisation/antagonisme/checkpoints, complément, ADCC, phagocytose, apoptose directe et stratégies d’optimisation des anticorps.</p><div class="tags"><span class="tag green">IgG</span><span class="tag purple">FcγR / FcRn</span><span class="tag blue">Humanisation</span><span class="tag orange">ADCC / CDC</span><span class="tag red">ADC</span><span class="tag teal">Ingénierie</span></div><div class="actions"><button class="primary" onclick="window.print()">🖨️ Imprimer / Exporter en PDF</button><button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Retour en haut</button></div></header>
+
+<nav><h2>Plan rapide</h2><ol>
+<li><a href="#generalites">Ig et anticorps</a></li><li><a href="#classes">Classes d’Ig</a></li><li><a href="#structure">Structure IgG</a></li><li><a href="#glyco">Glycosylation / charnière</a></li><li><a href="#fcr">Fcγ-récepteurs</a></li><li><a href="#modeles">Modèles précliniques</a></li><li><a href="#polymorphisme">Polymorphismes FcγR</a></li><li><a href="#humanisation">Humanisation</a></li><li><a href="#formats">Formats thérapeutiques</a></li><li><a href="#neutralisation">Neutralisation</a></li><li><a href="#antagonisme">Antagonisme</a></li><li><a href="#checkpoints">Checkpoints</a></li><li><a href="#effecteurs">Mécanismes effecteurs</a></li><li><a href="#rituximab">Rituximab</a></li><li><a href="#optimisation">Optimisation</a></li><li><a href="#adc">ADC</a></li><li><a href="#microenvironnement">Microenvironnement</a></li><li><a href="#pieges">Pièges</a></li><li><a href="#recap">Mini-récap</a></li><li><a href="#flashcards">Flashcards express</a></li></ol></nav>
+
+<section id="generalites"><h2>1. Immunoglobulines et anticorps</h2>
+<p>Les immunoglobulines sont produites par les <strong>plasmocytes</strong>, issus de la différenciation terminale des LB. Elles participent à l’immunité humorale.</p>
+<div class="callout"><strong>Vocabulaire du cours :</strong> une Ig décrit une structure moléculaire ; on parle d’anticorps quand la cible antigénique est connue.</div>
+<div class="grid2"><div class="card"><strong>Polyclonal</strong><p>Plusieurs clones de LB → plusieurs anticorps dirigés contre différents épitopes.</p></div><div class="card"><strong>Monoclonal</strong><p>Un seul clone → anticorps identiques dirigés contre la même structure.</p></div></div>
+</section>
+
+<section id="classes"><h2>2. Classes et sous-classes d’Ig</h2>
+<div class="tablewrap"><table>
+<tr><th>Classe</th><th>Repère du cours</th></tr>
+<tr><td>IgG</td><td>Sang, complément classique, NK, phagocytose</td></tr>
+<tr><td>IgA</td><td>Muqueuses, forme dimérique sécrétée</td></tr>
+<tr><td>IgM</td><td>Pentamère sérique, première ligne de défense</td></tr>
+<tr><td>IgD</td><td>Rôle moins développé</td></tr>
+<tr><td>IgE</td><td>Hypersensibilité de type I / parasites</td></tr>
+</table></div>
+<p>IgG : 4 sous-classes. Demi-vie ≈<strong>23 j</strong>, sauf IgG3 ≈<strong>8 j</strong>. En thérapeutique : surtout IgG1, IgG2, IgG4.</p>
+</section>
+
+<section id="structure"><h2>3. Relation structure-fonction d’une IgG</h2>
+<ul><li>2 chaînes lourdes + 2 chaînes légères.</li><li>Chaîne lourde : 1 domaine variable + 3 constants.</li><li>Chaîne légère : 1 variable + 1 constant.</li><li>Ponts disulfure = région charnière.</li></ul>
+<div class="grid2"><div class="card"><strong>Fab</strong><p>Reconnaissance antigénique par le paratope.</p></div><div class="card"><strong>Fc</strong><p>Recrutement C1q, FcγR et FcRn.</p></div></div>
+<h3>Paratope</h3>
+<p>Chaque domaine variable possède <strong>3 CDR</strong> et 4 régions charpentes → 6 CDR participent au paratope complet.</p>
+</section>
+
+<section id="glyco"><h2>4. Glycosylation et région charnière</h2>
+<ul><li>Les glycosylations acquises dans RE/Golgi sont importantes pour l’interaction avec les effecteurs.</li><li>Aglycosylation → recrutement effecteur fortement réduit dans le cours.</li><li>IgG1/IgG3 = bons recruteurs.</li><li>IgG2/IgG4 = recrutement plus faible.</li></ul>
+<div class="callout bluebox"><strong>Charnière :</strong> mobilité des Fab + présentation correcte du Fc aux effecteurs.</div>
+</section>
+
+<section id="fcr"><h2>5. Fcγ-récepteurs et fonctions effectrices</h2>
+<p>Les FcγR sont exprimés par différentes cellules immunitaires et reconnaissent le Fc des IgG.</p>
+<div class="tablewrap"><table>
+<tr><th>Récepteur</th><th>Repère</th></tr>
+<tr><td>FcγRIII / CD16</td><td>ADCC, notamment NK</td></tr>
+<tr><td>FcγRI / CD64</td><td>Récepteur de haute affinité cité</td></tr>
+<tr><td>FcγRII / CD32</td><td>Plusieurs isoformes, certaines activatrices, d’autres inhibitrices</td></tr>
+</table></div>
+</section>
+
+<section id="modeles"><h2>6. Pourquoi les modèles précliniques doivent être interprétés avec prudence ?</h2>
+<ul><li>Isotypes murins ≠ isotypes humains.</li><li>FcγR murins ≠ FcγR humains.</li><li>Une IgG1 murine n’a pas forcément l’équivalent fonctionnel direct d’une IgG1 humaine.</li><li>Des modèles humanisés, sphéroïdes et organoïdes sont utilisés pour se rapprocher du contexte humain.</li></ul>
+</section>
+
+<section id="polymorphisme"><h2>7. Polymorphismes des FcγR</h2>
+<p>Le cours présente un polymorphisme <strong>Val/Phe</strong> au niveau du site d’interaction avec les IgG.</p>
+<div class="callout purplebox"><strong>Conséquence :</strong> certains patients ont une meilleure affinité et une meilleure réponse thérapeutique que d’autres.</div>
+<p>Les génotypes VF/FF sont décrits comme moins répondeurs que les profils favorisant la valine.</p>
+</section>
+
+<section id="humanisation"><h2>8. Humanisation des anticorps thérapeutiques</h2>
+<div class="tablewrap"><table>
+<tr><th>Format</th><th>Principe historique du cours</th><th>Exemple</th></tr>
+<tr><td>Murin</td><td>100 % murin</td><td>Muromonab</td></tr>
+<tr><td>Chimérique</td><td>Variables murines + constantes humaines</td><td>Infliximab</td></tr>
+<tr><td>Humanisé</td><td>Quasi humain, CDR murines</td><td>Trastuzumab</td></tr>
+<tr><td>Humain</td><td>Quasi/intégralement humain</td><td>Adalimumab</td></tr>
+</table></div>
+<div class="callout"><strong>Objectifs :</strong> ↓ immunogénicité, ↑ demi-vie, meilleure interaction avec FcRn et effecteurs humains.</div>
+</section>
+
+<section id="formats"><h2>9. Formats thérapeutiques</h2>
+<ul><li><strong>IgG entière :</strong> Fab + Fc, longue demi-vie et fonctions effectrices.</li><li><strong>Protéine de fusion Fc :</strong> prolongation de demi-vie.</li><li><strong>Fab :</strong> plus petit, diffusion rapide, demi-vie courte.</li><li><strong>scFv :</strong> domaines variables reliés par linker, ≈30 kDa.</li><li><strong>Formats bispécifiques :</strong> rapprochement cellule effectrice / cellule cible.</li><li><strong>Anticorps armés :</strong> radioéléments, cytokines, toxines, médicaments.</li></ul>
+</section>
+
+<section id="neutralisation"><h2>10. Neutralisation d’une cible soluble</h2>
+<div class="schema">Ac + cible soluble
+→ complexe immun
+→ empêche interaction cible/récepteur
+→ neutralisation
+→ élimination du complexe</div>
+<p><strong>Exemple VEGF :</strong> bevacizumab = IgG complète ; ranibizumab = Fab utilisé localement dans l’œil.</p>
+</section>
+
+<section id="antagonisme"><h2>11. Antagonisme d’un récepteur</h2>
+<p><strong>Cetuximab</strong> : IgG1 chimérique anti-EGFR.</p>
+<div class="schema">Cetuximab se fixe EGFR
+→ empêche EGF
+→ empêche dimérisation
+→ empêche activation kinase
+→ ↓ prolifération / invasion / angiogenèse</div>
+</section>
+
+<section id="checkpoints"><h2>12. Immune checkpoint inhibitors</h2>
+<p>Les cellules tumorales peuvent exploiter des signaux inhibiteurs pour rendre les LT fonctionnellement anergiques.</p>
+<ul><li>Anti-PD-1</li><li>Anti-PD-L1</li><li>Anti-CTLA-4</li></ul>
+<div class="callout orangebox"><strong>Principe :</strong> bloquer le frein immunitaire pour restaurer l’activité anti-tumorale des LT.</div>
+</section>
+
+<section id="effecteurs"><h2>13. Recrutement des effecteurs</h2>
+<div class="grid3">
+<div class="card"><strong>CDC</strong><p>Complément classique via C1q après agrégation d’Ig à la surface cible.</p></div>
+<div class="card"><strong>ADCC</strong><p>NK reconnaissent le Fc via CD16 et dégranulent.</p></div>
+<div class="card"><strong>ADCP</strong><p>Phagocytose dépendante des anticorps par cellules phagocytaires.</p></div>
+</div>
+</section>
+
+<section id="rituximab"><h2>14. Rituximab : modèle multi-mécanismes</h2>
+<p>Le rituximab anti-CD20 peut combiner :</p>
+<ol><li>ADCC via NK.</li><li>Apoptose directe après fixation CD20.</li><li>Phagocytose.</li><li>Activation du complément.</li></ol>
+<div class="callout red"><strong>Expérience clé :</strong> sans Fcγ-récepteurs activateurs, le contrôle tumoral par rituximab disparaît dans le modèle murin décrit.</div>
+</section>
+
+<section id="optimisation"><h2>15. Comment améliorer un anticorps existant ?</h2>
+<h3>Modifier le Fc</h3>
+<p><strong>Obinutuzumab :</strong> anti-CD20 humanisé, Fc défucosylé → meilleure interaction avec FcγRIIIa/CD16A → ADCC ↑.</p>
+<h3>Modifier le Fab</h3>
+<p><strong>Ofatumumab :</strong> modifications du Fab → meilleure interaction avec CD20 et activité pro-apoptotique augmentée.</p>
+<h3>Ajouter une cytokine</h3>
+<p>Exemple du cours : IL-15 pour stimuler les NK, présentée comme plus efficace et moins toxique que l’IL-2.</p>
+</section>
+
+<section id="adc"><h2>16. Antibody-Drug Conjugates (ADC)</h2>
+<div class="schema">Paratope reconnaît antigène tumoral
+→ internalisation
+→ compartiments endo-lysosomaux
+→ libération intracellulaire de la drogue
+→ toxicité ciblée sur la cellule d’intérêt</div>
+<p>Objectif : augmenter la spécificité d’exposition de la drogue et limiter les effets systémiques.</p>
+</section>
+
+<section id="microenvironnement"><h2>17. Microenvironnement et stabilité des anticorps</h2>
+<p>La réponse thérapeutique dépend aussi du contexte local.</p>
+<ul><li>Protéases pouvant cliver la charnière.</li><li>Clivage variable selon pathologie et sous-classe d’IgG.</li><li>Le cours évoque la polyarthrite rhumatoïde et une métalloprotéase notée « MLP 12 » dans le ronéo.</li><li>Approche proposée : concevoir une IgG1 avec une charnière plus résistante inspirée d’IgG2.</li></ul>
+</section>
+
+<section id="pieges"><h2>18. Pièges / formulations du support</h2>
+<div class="callout warn"><strong>1.</strong> Le BCR n’est pas « un seul » au sens d’une seule molécule sur le LB ; le ronéo semble vouloir dire une spécificité clonale unique. La fiche conserve la logique du cours sans étendre cette formulation.</div>
+<div class="callout warn"><strong>2.</strong> Les pourcentages de sous-classes IgG donnés dans l’introduction totalisent plus de 100 % : incohérence numérique du ronéo.</div>
+<div class="callout warn"><strong>3.</strong> Le tableau page 2 indique un passage placentaire faible ou absent pour certaines sous-classes ; retenir les différences de propriétés, pas extrapoler au-delà du support.</div>
+<div class="callout warn"><strong>4.</strong> Le cours décrit à un endroit FcγR2b comme activateur alors que d’autres lignes disent qu’il existe des isoformes inhibitrices/activatrices : formulation interne incohérente.</div>
+<div class="callout warn"><strong>5.</strong> Les suffixes -ximab/-zumab/-numab sont utilisés ici comme repères historiques du cours.</div>
+<div class="callout warn"><strong>6.</strong> « ERF2 » dans le ronéo correspond au marqueur ciblé par trastuzumab tel qu’écrit ; ne pas corriger silencieusement hors support.</div>
+<div class="callout warn"><strong>7.</strong> « DLNA » apparaît dans le passage ranibizumab ; la fiche conserve surtout la logique d’administration locale oculaire et de neutralisation du VEGF.</div>
+</section>
+
+<section id="recap" class="recap"><h2>Mini-récap ultra rentable</h2>
+<p><strong>IgG = Fab + Fc.</strong> Fab : 6 CDR/paratope → reconnaissance antigénique. Fc : C1q + FcγR + FcRn. Glycosylation et charnière modulent l’effet. IgG1/IgG3 recrutent mieux les effecteurs ; IgG3 = demi-vie courte. Humanisation : murin → chimérique → humanisé → humain, avec ↓ immunogénicité et ↑ compatibilité Fc humaine. Mécanismes : <strong>neutralisation, antagonisme, checkpoint blockade, CDC, ADCC, phagocytose, apoptose directe</strong>. Rituximab = modèle multi-mécanismes. Obinutuzumab : Fc défucosylé → CD16A/ADCC ↑. Ofatumumab : Fab optimisé. ADC = anticorps + drogue, internalisation puis libération intracellulaire. Polymorphismes FcγR et microenvironnement/protéases peuvent expliquer la variabilité clinique.</p></section>
+
+<p class="source-note">Fiche construite uniquement à partir du PDF « Mécanismes d’action des anticorps thérapeutiques chez l’Homme ». Les formulations particulières et incohérences internes du ronéo sont signalées explicitement.</p>
+
+<section id="flashcards">
+  <h2>Flashcards express</h2>
+  <div class="flashgrid">
+<div class="flash"><div class="q">Quelle différence de définition le cours fait-il entre immunoglobuline et anticorps ?</div><div class="a">Une immunoglobuline désigne la structure moléculaire ; on parle d’anticorps lorsqu’une spécificité antigénique connue est définie.</div></div>
+<div class="flash"><div class="q">Quelle cellule sécrète les immunoglobulines ?</div><div class="a">Le plasmocyte, stade terminal de différenciation d’un lymphocyte B activé.</div></div>
+<div class="flash"><div class="q">Quel récepteur antigénique porte le lymphocyte B ?</div><div class="a">Le BCR, structure de type immunoglobuline membranaire.</div></div>
+<div class="flash"><div class="q">À quelle branche de l’immunité appartiennent les immunoglobulines ?</div><div class="a">À l’immunité humorale de l’immunité adaptative.</div></div>
+<div class="flash"><div class="q">Quelle différence oppose anticorps polyclonaux et monoclonaux ?</div><div class="a">Les polyclonaux proviennent de plusieurs clones de LB et reconnaissent plusieurs épitopes ; les monoclonaux proviennent d’un clone unique et reconnaissent la même structure.</div></div>
+<div class="flash"><div class="q">Quels usages de recherche des anticorps sont cités ?</div><div class="a">Immunophénotypage, tests fonctionnels, cartographie épitopique, ELISA, western blot, cytométrie en flux et imagerie couplée à des radioéléments.</div></div>
+<div class="flash"><div class="q">Quelle classe d’Ig domine dans le sérum selon le cours ?</div><div class="a">Les IgG, autour de 95 % dans la distribution décrite.</div></div>
+<div class="flash"><div class="q">Quelle sous-classe d’IgG est majoritaire dans le sérum ?</div><div class="a">IgG1, environ 70 % des IgG selon le cours.</div></div>
+<div class="flash"><div class="q">Quelles fonctions majeures des IgG sont citées ?</div><div class="a">Activation du complément classique, recrutement de cellules cytotoxiques comme les NK et recrutement de cellules phagocytaires.</div></div>
+<div class="flash"><div class="q">Quelle classe d’Ig est surtout associée aux muqueuses ?</div><div class="a">Les IgA.</div></div>
+<div class="flash"><div class="q">Quelle classe d’Ig est surtout associée à l’hypersensibilité de type I ?</div><div class="a">Les IgE.</div></div>
+<div class="flash"><div class="q">Quelle organisation possède l’IgA sécrétée ?</div><div class="a">Une forme dimérique facilitant son passage à travers les muqueuses.</div></div>
+<div class="flash"><div class="q">Quelle organisation possède l’IgM sérique ?</div><div class="a">Une forme pentamérique.</div></div>
+<div class="flash"><div class="q">Quelle demi-vie générale des IgG est donnée ?</div><div class="a">Environ 23 jours.</div></div>
+<div class="flash"><div class="q">Quelle exception de demi-vie concerne les IgG3 ?</div><div class="a">Les IgG3 ont une demi-vie d’environ 8 jours dans le cours.</div></div>
+<div class="flash"><div class="q">Quelles sous-classes d’IgG sont représentées en thérapeutique selon le cours ?</div><div class="a">IgG1, IgG2 et IgG4.</div></div>
+<div class="flash"><div class="q">Quel poids moléculaire approximatif possède une IgG ?</div><div class="a">Environ 150 kDa.</div></div>
+<div class="flash"><div class="q">Quel poids moléculaire approximatif possède une IgM pentamérique ?</div><div class="a">Environ 970 kDa.</div></div>
+<div class="flash"><div class="q">Combien de chaînes lourdes et légères possède une IgG ?</div><div class="a">Deux chaînes lourdes et deux chaînes légères identiques deux à deux.</div></div>
+<div class="flash"><div class="q">Combien de domaines constants possède une chaîne lourde d’IgG ?</div><div class="a">Trois domaines constants, en plus d’un domaine variable.</div></div>
+<div class="flash"><div class="q">Combien de domaines possède une chaîne légère ?</div><div class="a">Un domaine variable et un domaine constant.</div></div>
+<div class="flash"><div class="q">Qu’est-ce que le paratope ?</div><div class="a">La partie des domaines variables qui reconnaît spécifiquement l’épitope antigénique.</div></div>
+<div class="flash"><div class="q">Combien de régions hypervariables possède chaque domaine variable ?</div><div class="a">Trois régions hypervariables ou CDR.</div></div>
+<div class="flash"><div class="q">Combien de CDR participent donc à un paratope complet ?</div><div class="a">Six CDR au total : trois sur VH et trois sur VL.</div></div>
+<div class="flash"><div class="q">Quel est le rôle des régions charpentes entre les CDR ?</div><div class="a">Stabiliser la structure des domaines variables.</div></div>
+<div class="flash"><div class="q">Quelle partie de l’IgG recrute les effecteurs de l’immunité ?</div><div class="a">La portion Fc constituée des domaines constants des chaînes lourdes.</div></div>
+<div class="flash"><div class="q">Quelle molécule du complément se lie au Fc des IgG ?</div><div class="a">C1q, première molécule de la voie classique du complément.</div></div>
+<div class="flash"><div class="q">Quels récepteurs cellulaires reconnaissent le Fc des IgG ?</div><div class="a">Les récepteurs Fcγ.</div></div>
+<div class="flash"><div class="q">Quel récepteur du Fc est surtout impliqué dans la demi-vie et le recyclage des IgG ?</div><div class="a">Le FcRn.</div></div>
+<div class="flash"><div class="q">Pourquoi les glycosylations du Fc sont-elles importantes ?</div><div class="a">Elles conditionnent la liaison aux effecteurs ; des IgG aglycosylées recrutent beaucoup moins ou plus du tout les effecteurs selon le cours.</div></div>
+<div class="flash"><div class="q">Quelles sous-classes d’IgG recrutent bien les effecteurs ?</div><div class="a">IgG1 et IgG3.</div></div>
+<div class="flash"><div class="q">Quelles sous-classes recrutent peu ou pas certains effecteurs dans le cours ?</div><div class="a">IgG2 et IgG4.</div></div>
+<div class="flash"><div class="q">Pourquoi les IgG3 sont-elles peu utilisées en clinique selon le cours ?</div><div class="a">Leur longue région charnière est associée à une faible demi-vie.</div></div>
+<div class="flash"><div class="q">Quel rôle joue la région charnière de l’IgG ?</div><div class="a">Elle donne de la mobilité aux bras Fab et influence l’exposition du Fc et donc les interactions avec les effecteurs.</div></div>
+<div class="flash"><div class="q">Pourquoi faut-il être prudent en extrapolant les modèles murins à l’Homme ?</div><div class="a">Les isotypes et Fcγ-récepteurs diffèrent entre espèces, donc les équivalences fonctionnelles ne sont pas directes.</div></div>
+<div class="flash"><div class="q">Quel modèle alternatif plus proche du microenvironnement humain est évoqué ?</div><div class="a">Les modèles cellulaires 3D comme les sphéroïdes et organoïdes.</div></div>
+<div class="flash"><div class="q">Quel mécanisme expérimental montre l’importance des Fcγ-récepteurs pour le rituximab ?</div><div class="a">Chez des souris dépourvues de Fcγ-récepteurs activateurs, le rituximab ne contrôle plus correctement la croissance de tumeurs CD20+.</div></div>
+<div class="flash"><div class="q">Quel récepteur humain correspond au FcγRIII impliqué dans l’ADCC ?</div><div class="a">CD16.</div></div>
+<div class="flash"><div class="q">Quel récepteur Fcγ est associé au CD64 ?</div><div class="a">FcγRI.</div></div>
+<div class="flash"><div class="q">Quel polymorphisme de Fcγ-récepteur est évoqué comme modifiant la réponse clinique ?</div><div class="a">Un polymorphisme valine/phénylalanine dans le site d’interaction avec les IgG.</div></div>
+<div class="flash"><div class="q">Quel génotype est décrit comme généralement moins répondeur dans ce polymorphisme ?</div><div class="a">Les patients VF ou FF sont décrits comme moins répondeurs que ceux exposant une valine favorable.</div></div>
+<div class="flash"><div class="q">Quel était le premier anticorps monoclonal thérapeutique mis sur le marché selon le cours ?</div><div class="a">Un anticorps anti-CD3 murin commercialisé en 1986 pour prévenir le rejet de greffe.</div></div>
+<div class="flash"><div class="q">Quel problème majeur posaient les premiers anticorps murins ?</div><div class="a">Courte demi-vie, mauvais recrutement des effecteurs humains et forte immunogénicité avec anticorps anti-anticorps.</div></div>
+<div class="flash"><div class="q">Quel est le nom de l’anticorps anti-CD3 murin cité ?</div><div class="a">Muromonab.</div></div>
+<div class="flash"><div class="q">Que signifie le suffixe « -ximab » dans la classification historique présentée ?</div><div class="a">Un anticorps chimérique avec régions variables murines et régions constantes humaines.</div></div>
+<div class="flash"><div class="q">Quel exemple d’anticorps chimérique est cité ?</div><div class="a">Infliximab, anti-TNF.</div></div>
+<div class="flash"><div class="q">Que signifie le suffixe « -zumab » dans le cours ?</div><div class="a">Un anticorps humanisé conservant surtout des CDR murines sur une structure majoritairement humaine.</div></div>
+<div class="flash"><div class="q">Quel exemple d’anticorps humanisé est cité ?</div><div class="a">Trastuzumab.</div></div>
+<div class="flash"><div class="q">Que signifie le suffixe « -numab » dans le cours ?</div><div class="a">Un anticorps présenté comme quasiment ou intégralement humain.</div></div>
+<div class="flash"><div class="q">Quel exemple d’anticorps humain est cité ?</div><div class="a">Adalimumab.</div></div>
+<div class="flash"><div class="q">Pourquoi l’humanisation améliore-t-elle souvent l’efficacité des anticorps thérapeutiques ?</div><div class="a">Elle réduit l’immunogénicité et améliore les interactions du Fc humain avec FcRn et les Fcγ-récepteurs humains.</div></div>
+<div class="flash"><div class="q">Quel avantage d’une protéine de fusion avec un fragment Fc est cité ?</div><div class="a">Augmenter la demi-vie de la molécule.</div></div>
+<div class="flash"><div class="q">Quel inconvénient majeur d’un simple fragment Fab est cité ?</div><div class="a">Une demi-vie plus courte car il ne possède pas de fragment Fc et est plus petit.</div></div>
+<div class="flash"><div class="q">Quel avantage peut avoir un fragment Fab plus petit ?</div><div class="a">Une diffusion plus rapide et la possibilité de concevoir des formats multispécifiques.</div></div>
+<div class="flash"><div class="q">Que sont les scFv/SLV décrits dans le cours ?</div><div class="a">De petits fragments associant uniquement les domaines variables lourds et légers par un linker peptidique, autour de 30 kDa.</div></div>
+<div class="flash"><div class="q">Pourquoi les petits fragments d’anticorps persistent-ils peu dans l’organisme ?</div><div class="a">Ils n’ont pas de fragment Fc, donc moins de recyclage via FcRn et une élimination plus rapide.</div></div>
+<div class="flash"><div class="q">Qu’est-ce qu’un anticorps armé ?</div><div class="a">Un anticorps conjugué à un radioélément, une toxine, une drogue ou une cytokine pour délivrer ou potentialiser un effet thérapeutique.</div></div>
+<div class="flash"><div class="q">Qu’est-ce qu’une immunocytokine ?</div><div class="a">Un anticorps couplé à une cytokine, permettant de cibler l’antigène tout en apportant localement le signal cytokine.</div></div>
+<div class="flash"><div class="q">Qu’est-ce qu’un ADC ?</div><div class="a">Un antibody-drug conjugate : anticorps conjugué à une drogue cytotoxique délivrée à la cellule cible après fixation et internalisation.</div></div>
+<div class="flash"><div class="q">Quel mécanisme général correspond à la neutralisation d’une cible soluble ?</div><div class="a">L’anticorps se lie à la cible et empêche son interaction avec son récepteur ou sa cellule cible.</div></div>
+<div class="flash"><div class="q">Quel exemple anti-VEGF complet est cité ?</div><div class="a">Le bevacizumab.</div></div>
+<div class="flash"><div class="q">Quel fragment Fab anti-VEGF est cité pour une utilisation locale oculaire ?</div><div class="a">Le ranibizumab.</div></div>
+<div class="flash"><div class="q">Pourquoi le ranibizumab peut-il se passer du Fc dans l’exemple du cours ?</div><div class="a">Il est injecté localement dans l’œil et l’objectif principal est la neutralisation du VEGF.</div></div>
+<div class="flash"><div class="q">Quel mécanisme correspond à l’antagonisme d’un récepteur membranaire ?</div><div class="a">L’anticorps occupe le récepteur et empêche la liaison du ligand et/ou son activation.</div></div>
+<div class="flash"><div class="q">Quel exemple d’antagoniste de récepteur est cité ?</div><div class="a">Le cetuximab ciblant EGFR dans les cancers colorectaux.</div></div>
+<div class="flash"><div class="q">Comment le cetuximab empêche-t-il l’activation d’EGFR dans le cours ?</div><div class="a">En bloquant la fixation d’EGF et la dimérisation du récepteur, empêchant l’activation kinase en aval.</div></div>
+<div class="flash"><div class="q">Quels immune checkpoint inhibitors sont cités ?</div><div class="a">Anticorps anti-PD-1, anti-PD-L1 et anti-CTLA-4.</div></div>
+<div class="flash"><div class="q">Quel est le principe thérapeutique des immune checkpoint inhibitors ?</div><div class="a">Bloquer des signaux inhibiteurs qui maintiennent les LT en anergie fonctionnelle afin de restaurer leur activité anti-tumorale.</div></div>
+<div class="flash"><div class="q">Quels mécanismes effecteurs dépendant du Fc sont cités ?</div><div class="a">Activation du complément, ADCC, phagocytose dépendante des anticorps et recrutement de cellules effectrices.</div></div>
+<div class="flash"><div class="q">Quelle cellule est la principale effectrice de l’ADCC dans le cours ?</div><div class="a">La cellule NK via CD16/FcγRIII.</div></div>
+  </div>
+</section>
+</main></body></html>
